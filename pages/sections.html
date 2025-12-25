@@ -483,16 +483,18 @@
                     .on('drag', dragging)
                     .on('end', dragEnd));
             
-            // Labels for larger graphs
+            // Labels for all nodes
             const labels = g.append('g')
                 .selectAll('text')
-                .data(nodes.filter(n => n.type === 'subgraph'))
+                .data(nodes)
                 .join('text')
-                .attr('font-size', '10px')
-                .attr('fill', '#8b949e')
+                .attr('class', 'node-label')
+                .attr('font-size', '9px')
+                .attr('fill', '#c9d1d9')
                 .attr('text-anchor', 'middle')
-                .attr('dy', 20)
-                .text(d => d.label.length > 20 ? d.label.slice(0, 20) + '...' : d.label);
+                .attr('dy', 16)
+                .attr('pointer-events', 'none')
+                .text(d => d.label.length > 18 ? d.label.slice(0, 16) + '...' : d.label);
             
             // Simulation
             simulation = d3.forceSimulation(nodes)
