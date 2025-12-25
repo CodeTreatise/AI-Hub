@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 36,
+    "title": "Adversarial ML & Robustness",
+    "description": "Attacks, Defenses, Model Security",
+    "slug": "adversarial-ml-robustness",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 36,
+      "title": "Adversarial ML & Robustness",
+      "slug": "36-adversarial-ml--robustness",
+      "description": "Attacks, Defenses, Model Security",
+      "line": 2773
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s36_b42_ADVERSARIAL",
+      "label": "ADVERSARIAL ML & ROBUSTNESS",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/",
+      "tooltip": "ART Toolbox",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ADVERSARIAL"
+    },
+    {
+      "id": "s36_b42_EVASION",
+      "label": "Evasion Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/attacks/evasion.html",
+      "tooltip": "Evasion Attacks",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EVASION"
+    },
+    {
+      "id": "s36_b42_POISON",
+      "label": "Poisoning Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/attacks/poisoning.html",
+      "tooltip": "Poisoning Attacks",
+      "style": "fill:#E53935,stroke:#C62828,color:#FFFFFF",
+      "parent": null,
+      "original_id": "POISON"
+    },
+    {
+      "id": "s36_b42_DEFENSE",
+      "label": "Defenses",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/defences.html",
+      "tooltip": "Defenses",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DEFENSE"
+    },
+    {
+      "id": "s36_b42_SUPPLY",
+      "label": "Supply Chain",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://slsa.dev/",
+      "tooltip": "SLSA Framework",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SUPPLY"
+    },
+    {
+      "id": "s36_b42_EV1",
+      "label": "Adversarial Examples",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1312.6199",
+      "tooltip": "Adversarial Examples Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "EV1"
+    },
+    {
+      "id": "s36_b42_EV2",
+      "label": "FGSM/PGD",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1706.06083",
+      "tooltip": "PGD Attack Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "EV2"
+    },
+    {
+      "id": "s36_b42_EV3",
+      "label": "Patch Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1712.09665",
+      "tooltip": "Adversarial Patch",
+      "style": null,
+      "parent": null,
+      "original_id": "EV3"
+    },
+    {
+      "id": "s36_b42_EV4",
+      "label": "Black-box Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1611.02770",
+      "tooltip": "Black-box Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "EV4"
+    },
+    {
+      "id": "s36_b42_PO1",
+      "label": "Data Poisoning",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1804.00792",
+      "tooltip": "Data Poisoning Survey",
+      "style": null,
+      "parent": null,
+      "original_id": "PO1"
+    },
+    {
+      "id": "s36_b42_PO2",
+      "label": "Backdoor Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1708.06733",
+      "tooltip": "Backdoor Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "PO2"
+    },
+    {
+      "id": "s36_b42_PO3",
+      "label": "Model Trojans",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1712.05526",
+      "tooltip": "Neural Trojans",
+      "style": null,
+      "parent": null,
+      "original_id": "PO3"
+    },
+    {
+      "id": "s36_b42_PO4",
+      "label": "Label Flipping",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/2006.07589",
+      "tooltip": "Label Poisoning",
+      "style": null,
+      "parent": null,
+      "original_id": "PO4"
+    },
+    {
+      "id": "s36_b42_DE1",
+      "label": "Adversarial Training",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1706.06083",
+      "tooltip": "Adversarial Training",
+      "style": null,
+      "parent": null,
+      "original_id": "DE1"
+    },
+    {
+      "id": "s36_b42_DE2",
+      "label": "Certified Robustness",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1902.04557",
+      "tooltip": "Certified Defenses",
+      "style": null,
+      "parent": null,
+      "original_id": "DE2"
+    },
+    {
+      "id": "s36_b42_DE3",
+      "label": "Input Preprocessing",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1711.00117",
+      "tooltip": "Input Transformations",
+      "style": null,
+      "parent": null,
+      "original_id": "DE3"
+    },
+    {
+      "id": "s36_b42_DE4",
+      "label": "Ensemble Methods",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1709.00200",
+      "tooltip": "Ensemble Adversarial",
+      "style": null,
+      "parent": null,
+      "original_id": "DE4"
+    },
+    {
+      "id": "s36_b42_SU1",
+      "label": "Model Provenance",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://huggingface.co/docs/hub/security",
+      "tooltip": "HF Model Security",
+      "style": null,
+      "parent": null,
+      "original_id": "SU1"
+    },
+    {
+      "id": "s36_b42_SU2",
+      "label": "Weights Verification",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://github.com/sigstore/cosign",
+      "tooltip": "Cosign Verification",
+      "style": null,
+      "parent": null,
+      "original_id": "SU2"
+    },
+    {
+      "id": "s36_b42_SU3",
+      "label": "Dataset Auditing",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://datadreamer.dev/",
+      "tooltip": "Dataset Auditing",
+      "style": null,
+      "parent": null,
+      "original_id": "SU3"
+    },
+    {
+      "id": "s36_b42_SU4",
+      "label": "Dependency Scanning",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://snyk.io/",
+      "tooltip": "Snyk Dependency Scan",
+      "style": null,
+      "parent": null,
+      "original_id": "SU4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_EVASION",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_POISON",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_DEFENSE",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_SUPPLY",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    }
+  ]
+}

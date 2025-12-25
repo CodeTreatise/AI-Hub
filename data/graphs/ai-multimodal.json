@@ -1,0 +1,1818 @@
+{
+  "meta": {
+    "id": "ai-multimodal",
+    "title": "Multimodal & Generative AI",
+    "description": "Vision, audio, video, and multimodal models",
+    "icon": "\ud83c\udfa8",
+    "totalNodes": 97,
+    "totalEdges": 85,
+    "totalSections": 6
+  },
+  "sections": [
+    {
+      "id": 3,
+      "title": "Generative AI Ecosystem",
+      "slug": "3-generative-ai-ecosystem",
+      "description": "Models, tools, databases, apps",
+      "line": 206
+    },
+    {
+      "id": 7,
+      "title": "NLP Evolution Timeline",
+      "slug": "7-nlp-evolution-timeline",
+      "description": "From rule-based to LLMs",
+      "line": 445
+    },
+    {
+      "id": 8,
+      "title": "Computer Vision Tasks",
+      "slug": "8-computer-vision-tasks",
+      "description": "Detection, Segmentation, Gen",
+      "line": 504
+    },
+    {
+      "id": 11,
+      "title": "GenAI Application Types",
+      "slug": "11-genai-application-types",
+      "description": "Text, Image, Code, Audio",
+      "line": 651
+    },
+    {
+      "id": 20,
+      "title": "Multimodal AI",
+      "slug": "20-multimodal-ai",
+      "description": "Vision, Audio, Video models",
+      "line": 1306
+    },
+    {
+      "id": 32,
+      "title": "Speech & Audio AI",
+      "slug": "32-speech--audio-ai",
+      "description": "ASR, TTS, Voice Cloning, Music Gen",
+      "line": 2397
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s3_b3_Foundation",
+      "label": "FOUNDATION MODELS",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://huggingface.co/models",
+      "tooltip": "Foundation Models",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Foundation"
+    },
+    {
+      "id": "s3_b3_GPT",
+      "label": "GPT-4",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://platform.openai.com/docs",
+      "tooltip": "OpenAI API Docs",
+      "style": null,
+      "parent": "s3_b3_Foundation",
+      "original_id": "GPT"
+    },
+    {
+      "id": "s3_b3_CLAUDE",
+      "label": "Claude",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.anthropic.com/",
+      "tooltip": "Anthropic Claude Docs",
+      "style": null,
+      "parent": "s3_b3_Foundation",
+      "original_id": "CLAUDE"
+    },
+    {
+      "id": "s3_b3_LLAMA",
+      "label": "Llama",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Meta Llama",
+      "style": null,
+      "parent": "s3_b3_Foundation",
+      "original_id": "LLAMA"
+    },
+    {
+      "id": "s3_b3_Orchestration",
+      "label": "ORCHESTRATION",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://python.langchain.com/",
+      "tooltip": "Orchestration Frameworks",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Orchestration"
+    },
+    {
+      "id": "s3_b3_LC",
+      "label": "LangChain",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://python.langchain.com/docs/",
+      "tooltip": "LangChain Docs",
+      "style": null,
+      "parent": "s3_b3_Orchestration",
+      "original_id": "LC"
+    },
+    {
+      "id": "s3_b3_LI",
+      "label": "LlamaIndex",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.llamaindex.ai/",
+      "tooltip": "LlamaIndex Docs",
+      "style": null,
+      "parent": "s3_b3_Orchestration",
+      "original_id": "LI"
+    },
+    {
+      "id": "s3_b3_VectorDB",
+      "label": "VECTOR DBs",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://www.pinecone.io/learn/vector-database/",
+      "tooltip": "Vector Databases",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VectorDB"
+    },
+    {
+      "id": "s3_b3_PC",
+      "label": "Pinecone",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.pinecone.io/",
+      "tooltip": "Pinecone Docs",
+      "style": null,
+      "parent": "s3_b3_VectorDB",
+      "original_id": "PC"
+    },
+    {
+      "id": "s3_b3_CH",
+      "label": "ChromaDB",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.trychroma.com/",
+      "tooltip": "ChromaDB Docs",
+      "style": null,
+      "parent": "s3_b3_VectorDB",
+      "original_id": "CH"
+    },
+    {
+      "id": "s3_b3_Apps",
+      "label": "APPLICATIONS",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "GenAI Applications",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Apps"
+    },
+    {
+      "id": "s3_b3_RAG",
+      "label": "RAG",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://www.promptingguide.ai/techniques/rag",
+      "tooltip": "RAG Guide",
+      "style": null,
+      "parent": "s3_b3_Apps",
+      "original_id": "RAG"
+    },
+    {
+      "id": "s3_b3_AGENTS",
+      "label": "Agents",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "tooltip": "LLM Agents Guide",
+      "style": null,
+      "parent": "s3_b3_Apps",
+      "original_id": "AGENTS"
+    },
+    {
+      "id": "s7_b7_Classic",
+      "label": "1950s-1990s",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://en.wikipedia.org/wiki/Natural_language_processing#History",
+      "tooltip": "Classic NLP History",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Classic"
+    },
+    {
+      "id": "s7_b7_C1",
+      "label": "Rule-based",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://en.wikipedia.org/wiki/Rule-based_machine_translation",
+      "tooltip": "Rule-based NLP",
+      "style": null,
+      "parent": "s7_b7_Classic",
+      "original_id": "C1"
+    },
+    {
+      "id": "s7_b7_C2",
+      "label": "Bag of Words",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#the-bag-of-words-representation",
+      "tooltip": "Bag of Words",
+      "style": null,
+      "parent": "s7_b7_Classic",
+      "original_id": "C2"
+    },
+    {
+      "id": "s7_b7_Statistical",
+      "label": "2000s",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://web.stanford.edu/~jurafsky/slp3/",
+      "tooltip": "Statistical NLP - Jurafsky",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Statistical"
+    },
+    {
+      "id": "s7_b7_S1",
+      "label": "Word2Vec",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://radimrehurek.com/gensim/models/word2vec.html",
+      "tooltip": "Word2Vec Gensim",
+      "style": null,
+      "parent": "s7_b7_Statistical",
+      "original_id": "S1"
+    },
+    {
+      "id": "s7_b7_S2",
+      "label": "TF-IDF",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf",
+      "tooltip": "TF-IDF Guide",
+      "style": null,
+      "parent": "s7_b7_Statistical",
+      "original_id": "S2"
+    },
+    {
+      "id": "s7_b7_Neural",
+      "label": "2014-2017",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://www.deeplearning.ai/resources/natural-language-processing/",
+      "tooltip": "Neural NLP",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Neural"
+    },
+    {
+      "id": "s7_b7_N1",
+      "label": "Seq2Seq",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Seq2Seq Visualization",
+      "style": null,
+      "parent": "s7_b7_Neural",
+      "original_id": "N1"
+    },
+    {
+      "id": "s7_b7_N2",
+      "label": "Attention",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Attention Mechanism",
+      "style": null,
+      "parent": "s7_b7_Neural",
+      "original_id": "N2"
+    },
+    {
+      "id": "s7_b7_Transformer",
+      "label": "2017-2020",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "tooltip": "Transformer Architecture",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Transformer"
+    },
+    {
+      "id": "s7_b7_T1",
+      "label": "BERT",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://huggingface.co/docs/transformers/model_doc/bert",
+      "tooltip": "BERT Docs",
+      "style": null,
+      "parent": "s7_b7_Transformer",
+      "original_id": "T1"
+    },
+    {
+      "id": "s7_b7_T2",
+      "label": "GPT-2",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://huggingface.co/docs/transformers/model_doc/gpt2",
+      "tooltip": "GPT-2 Docs",
+      "style": null,
+      "parent": "s7_b7_Transformer",
+      "original_id": "T2"
+    },
+    {
+      "id": "s7_b7_LLM",
+      "label": "2020+",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "LLM Era",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLM"
+    },
+    {
+      "id": "s7_b7_L1",
+      "label": "GPT-4",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://platform.openai.com/docs/models/gpt-4",
+      "tooltip": "GPT-4 API",
+      "style": null,
+      "parent": "s7_b7_LLM",
+      "original_id": "L1"
+    },
+    {
+      "id": "s7_b7_L2",
+      "label": "Claude",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://docs.anthropic.com/",
+      "tooltip": "Claude Docs",
+      "style": null,
+      "parent": "s7_b7_LLM",
+      "original_id": "L2"
+    },
+    {
+      "id": "s8_b8_CV",
+      "label": "COMPUTER VISION",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://www.coursera.org/learn/convolutional-neural-networks",
+      "tooltip": "Stanford CV Course",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CV"
+    },
+    {
+      "id": "s8_b8_IC",
+      "label": "Classification",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/image-classification",
+      "tooltip": "Image Classification Papers",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "IC"
+    },
+    {
+      "id": "s8_b8_OD",
+      "label": "Object Detection",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/object-detection",
+      "tooltip": "Object Detection Papers",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OD"
+    },
+    {
+      "id": "s8_b8_SEG",
+      "label": "Segmentation",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/semantic-segmentation",
+      "tooltip": "Segmentation Papers",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SEG"
+    },
+    {
+      "id": "s8_b8_GEN",
+      "label": "Generation",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/image-generation",
+      "tooltip": "Image Generation Papers",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GEN"
+    },
+    {
+      "id": "s8_b8_VGG",
+      "label": "VGG",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1409.1556",
+      "tooltip": "VGG Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "VGG"
+    },
+    {
+      "id": "s8_b8_RES",
+      "label": "ResNet",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1512.03385",
+      "tooltip": "ResNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "RES"
+    },
+    {
+      "id": "s8_b8_EFF",
+      "label": "EfficientNet",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1905.11946",
+      "tooltip": "EfficientNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "EFF"
+    },
+    {
+      "id": "s8_b8_YOLO",
+      "label": "YOLO",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://docs.ultralytics.com/",
+      "tooltip": "YOLO Ultralytics",
+      "style": null,
+      "parent": null,
+      "original_id": "YOLO"
+    },
+    {
+      "id": "s8_b8_RCNN",
+      "label": "R-CNN",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://github.com/facebookresearch/detectron2",
+      "tooltip": "Detectron2",
+      "style": null,
+      "parent": null,
+      "original_id": "RCNN"
+    },
+    {
+      "id": "s8_b8_UNET",
+      "label": "U-Net",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1505.04597",
+      "tooltip": "U-Net Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "UNET"
+    },
+    {
+      "id": "s8_b8_DEEPLAB",
+      "label": "DeepLab",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://github.com/google-research/deeplab2",
+      "tooltip": "DeepLab",
+      "style": null,
+      "parent": null,
+      "original_id": "DEEPLAB"
+    },
+    {
+      "id": "s8_b8_GANV",
+      "label": "GANs",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1406.2661",
+      "tooltip": "GANs Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "GANV"
+    },
+    {
+      "id": "s8_b8_DIFFV",
+      "label": "Diffusion",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/2006.11239",
+      "tooltip": "Diffusion Models Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DIFFV"
+    },
+    {
+      "id": "s11_b11_GENAI",
+      "label": "GENERATIVE AI APPS",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI Courses",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GENAI"
+    },
+    {
+      "id": "s11_b11_TEXT",
+      "label": "Text",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Text Generation",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TEXT"
+    },
+    {
+      "id": "s11_b11_IMAGE",
+      "label": "Image",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-to-image",
+      "tooltip": "Image Generation",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "IMAGE"
+    },
+    {
+      "id": "s11_b11_CODE",
+      "label": "Code",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Code Generation",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CODE"
+    },
+    {
+      "id": "s11_b11_AV",
+      "label": "Audio/Video",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-to-speech",
+      "tooltip": "Audio/Video Generation",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AV"
+    },
+    {
+      "id": "s11_b11_T1",
+      "label": "Chatbots",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://platform.openai.com/docs/guides/chat",
+      "tooltip": "OpenAI Chat API",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s11_b11_T2",
+      "label": "Summarization",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/docs/transformers/tasks/summarization",
+      "tooltip": "HF Summarization",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s11_b11_I1",
+      "label": "AI Art",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://stability.ai/",
+      "tooltip": "Stability AI",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s11_b11_I2",
+      "label": "Image Edit",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://openai.com/dall-e-3",
+      "tooltip": "DALL-E 3",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s11_b11_CD1",
+      "label": "Copilot",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://github.com/features/copilot",
+      "tooltip": "GitHub Copilot",
+      "style": null,
+      "parent": null,
+      "original_id": "CD1"
+    },
+    {
+      "id": "s11_b11_CD2",
+      "label": "Debugging",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://docs.cursor.com/",
+      "tooltip": "Cursor AI",
+      "style": null,
+      "parent": null,
+      "original_id": "CD2"
+    },
+    {
+      "id": "s11_b11_A1",
+      "label": "TTS",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://elevenlabs.io/docs",
+      "tooltip": "ElevenLabs TTS",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s11_b11_A2",
+      "label": "Music Gen",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://www.suno.ai/",
+      "tooltip": "Suno AI Music",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s20_b21_MULTI",
+      "label": "MULTIMODAL AI",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/models?pipeline_tag=image-text-to-text",
+      "tooltip": "HF Multimodal",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MULTI"
+    },
+    {
+      "id": "s20_b21_INPUT",
+      "label": "Inputs",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks",
+      "tooltip": "Input Modalities",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INPUT"
+    },
+    {
+      "id": "s20_b21_OUTPUT",
+      "label": "Outputs",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks",
+      "tooltip": "Output Modalities",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OUTPUT"
+    },
+    {
+      "id": "s20_b21_MODELS",
+      "label": "Models",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/models?pipeline_tag=image-text-to-text",
+      "tooltip": "Multimodal Models",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MODELS"
+    },
+    {
+      "id": "s20_b21_TEXT",
+      "label": "Text",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Text Processing",
+      "style": null,
+      "parent": null,
+      "original_id": "TEXT"
+    },
+    {
+      "id": "s20_b21_IMG",
+      "label": "Image",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/image-to-text",
+      "tooltip": "Image Understanding",
+      "style": null,
+      "parent": null,
+      "original_id": "IMG"
+    },
+    {
+      "id": "s20_b21_AUD",
+      "label": "Audio",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/docs/transformers/model_doc/whisper",
+      "tooltip": "Whisper",
+      "style": null,
+      "parent": null,
+      "original_id": "AUD"
+    },
+    {
+      "id": "s20_b21_VID",
+      "label": "Video",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/video-classification",
+      "tooltip": "Video Processing",
+      "style": null,
+      "parent": null,
+      "original_id": "VID"
+    },
+    {
+      "id": "s20_b21_GEN_T",
+      "label": "Text Gen",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Text Generation",
+      "style": null,
+      "parent": null,
+      "original_id": "GEN_T"
+    },
+    {
+      "id": "s20_b21_GEN_I",
+      "label": "Image Gen",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/docs/diffusers/",
+      "tooltip": "Diffusers",
+      "style": null,
+      "parent": null,
+      "original_id": "GEN_I"
+    },
+    {
+      "id": "s20_b21_GEN_A",
+      "label": "Audio Gen",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/docs/transformers/model_doc/bark",
+      "tooltip": "Audio Generation - Bark",
+      "style": null,
+      "parent": null,
+      "original_id": "GEN_A"
+    },
+    {
+      "id": "s20_b21_GPT4V",
+      "label": "GPT-4 Vision",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://platform.openai.com/docs/guides/vision",
+      "tooltip": "GPT-4 Vision",
+      "style": null,
+      "parent": null,
+      "original_id": "GPT4V"
+    },
+    {
+      "id": "s20_b21_GEMINI",
+      "label": "Gemini",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://ai.google.dev/",
+      "tooltip": "Google AI",
+      "style": null,
+      "parent": null,
+      "original_id": "GEMINI"
+    },
+    {
+      "id": "s20_b21_CLAUDE_V",
+      "label": "Claude Vision",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+      "tooltip": "Claude Vision",
+      "style": null,
+      "parent": null,
+      "original_id": "CLAUDE_V"
+    },
+    {
+      "id": "s20_b21_CLIP",
+      "label": "CLIP",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://openai.com/research/clip",
+      "tooltip": "CLIP Research",
+      "style": null,
+      "parent": null,
+      "original_id": "CLIP"
+    },
+    {
+      "id": "s32_b37_AUDIO",
+      "label": "SPEECH & AUDIO AI",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/tasks/audio-classification",
+      "tooltip": "Audio Tasks",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AUDIO"
+    },
+    {
+      "id": "s32_b37_ASR",
+      "label": "Speech Recognition",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/tasks/automatic-speech-recognition",
+      "tooltip": "ASR",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ASR"
+    },
+    {
+      "id": "s32_b37_TTS",
+      "label": "Text-to-Speech",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/tasks/text-to-speech",
+      "tooltip": "TTS",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TTS"
+    },
+    {
+      "id": "s32_b37_SPEAKER",
+      "label": "Speaker Analysis",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://pyannote.github.io/",
+      "tooltip": "pyannote",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SPEAKER"
+    },
+    {
+      "id": "s32_b37_MUSIC",
+      "label": "Audio Generation",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/tasks/text-to-speech",
+      "tooltip": "Audio Gen",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MUSIC"
+    },
+    {
+      "id": "s32_b37_A1",
+      "label": "Whisper",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://openai.com/research/whisper",
+      "tooltip": "OpenAI Whisper",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s32_b37_A2",
+      "label": "Wav2Vec 2.0",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/facebook/wav2vec2-large-960h",
+      "tooltip": "Wav2Vec 2.0",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s32_b37_A3",
+      "label": "Conformer",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://arxiv.org/abs/2005.08100",
+      "tooltip": "Conformer Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s32_b37_A4",
+      "label": "AssemblyAI/Deepgram",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://www.assemblyai.com/",
+      "tooltip": "AssemblyAI",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s32_b37_T1",
+      "label": "VITS/XTTS",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/coqui/XTTS-v2",
+      "tooltip": "XTTS",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s32_b37_T2",
+      "label": "Bark",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://github.com/suno-ai/bark",
+      "tooltip": "Bark",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s32_b37_T3",
+      "label": "Tortoise-TTS",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://github.com/neonbjb/tortoise-tts",
+      "tooltip": "Tortoise-TTS",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s32_b37_T4",
+      "label": "ElevenLabs",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://elevenlabs.io/",
+      "tooltip": "ElevenLabs",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    },
+    {
+      "id": "s32_b37_SP1",
+      "label": "Speaker Diarization",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/pyannote/speaker-diarization",
+      "tooltip": "Speaker Diarization",
+      "style": null,
+      "parent": null,
+      "original_id": "SP1"
+    },
+    {
+      "id": "s32_b37_SP2",
+      "label": "Voice Cloning",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://github.com/CorentinJ/Real-Time-Voice-Cloning",
+      "tooltip": "Voice Cloning",
+      "style": null,
+      "parent": null,
+      "original_id": "SP2"
+    },
+    {
+      "id": "s32_b37_SP3",
+      "label": "Emotion Recognition",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition",
+      "tooltip": "Emotion Recognition",
+      "style": null,
+      "parent": null,
+      "original_id": "SP3"
+    },
+    {
+      "id": "s32_b37_SP4",
+      "label": "Speaker Verification",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb",
+      "tooltip": "Speaker Verification",
+      "style": null,
+      "parent": null,
+      "original_id": "SP4"
+    },
+    {
+      "id": "s32_b37_M1",
+      "label": "AudioLM",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://arxiv.org/abs/2209.03143",
+      "tooltip": "AudioLM Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s32_b37_M2",
+      "label": "MusicGen",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://huggingface.co/facebook/musicgen-large",
+      "tooltip": "MusicGen",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s32_b37_M3",
+      "label": "Stable Audio",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://stability.ai/stable-audio",
+      "tooltip": "Stable Audio",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s32_b37_M4",
+      "label": "Suno AI",
+      "type": "node",
+      "section_id": 32,
+      "block_id": 37,
+      "url": "https://suno.ai/",
+      "tooltip": "Suno AI",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s11_b121_Cursor",
+      "label": "Cursor",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 121,
+      "url": "https://cursor.sh/",
+      "tooltip": "AI-first code editor",
+      "style": null,
+      "parent": null,
+      "original_id": "Cursor"
+    },
+    {
+      "id": "s11_b122_Cody",
+      "label": "Cody",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 122,
+      "url": "https://sourcegraph.com/cody",
+      "tooltip": "Sourcegraph AI assistant",
+      "style": null,
+      "parent": null,
+      "original_id": "Cody"
+    },
+    {
+      "id": "s11_b123_Continue",
+      "label": "Continue",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 123,
+      "url": "https://continue.dev/",
+      "tooltip": "Open-source AI code assistant",
+      "style": null,
+      "parent": null,
+      "original_id": "Continue"
+    },
+    {
+      "id": "s11_b124_Aider",
+      "label": "Aider",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 124,
+      "url": "https://aider.chat/",
+      "tooltip": "AI pair programming",
+      "style": null,
+      "parent": null,
+      "original_id": "Aider"
+    },
+    {
+      "id": "s11_b125_Devin",
+      "label": "Devin",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 125,
+      "url": "https://www.cognition.ai/",
+      "tooltip": "AI software engineer",
+      "style": null,
+      "parent": null,
+      "original_id": "Devin"
+    },
+    {
+      "id": "s11_b126_Codium",
+      "label": "Codium",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 126,
+      "url": "https://www.codium.ai/",
+      "tooltip": "AI code generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Codium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_Orchestration",
+      "type": "thick",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Orchestration",
+      "target": "s3_b3_VectorDB",
+      "type": "thick",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_VectorDB",
+      "target": "s3_b3_Apps",
+      "type": "thick",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_GPT",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_CLAUDE",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_LLAMA",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Orchestration",
+      "target": "s3_b3_LC",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Orchestration",
+      "target": "s3_b3_LI",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_VectorDB",
+      "target": "s3_b3_PC",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_VectorDB",
+      "target": "s3_b3_CH",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Apps",
+      "target": "s3_b3_RAG",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Apps",
+      "target": "s3_b3_AGENTS",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s7_b7_Classic",
+      "target": "s7_b7_Statistical",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Statistical",
+      "target": "s7_b7_Neural",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Neural",
+      "target": "s7_b7_Transformer",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Transformer",
+      "target": "s7_b7_LLM",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Classic",
+      "target": "s7_b7_C1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Classic",
+      "target": "s7_b7_C2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Statistical",
+      "target": "s7_b7_S1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Statistical",
+      "target": "s7_b7_S2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Neural",
+      "target": "s7_b7_N1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Neural",
+      "target": "s7_b7_N2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Transformer",
+      "target": "s7_b7_T1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Transformer",
+      "target": "s7_b7_T2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_LLM",
+      "target": "s7_b7_L1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_LLM",
+      "target": "s7_b7_L2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_IC",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_OD",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_SEG",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_GEN",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_IC",
+      "target": "s8_b8_VGG",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_IC",
+      "target": "s8_b8_RES",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_IC",
+      "target": "s8_b8_EFF",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_OD",
+      "target": "s8_b8_YOLO",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_OD",
+      "target": "s8_b8_RCNN",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_SEG",
+      "target": "s8_b8_UNET",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_SEG",
+      "target": "s8_b8_DEEPLAB",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_GEN",
+      "target": "s8_b8_GANV",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_GEN",
+      "target": "s8_b8_DIFFV",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_TEXT",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_IMAGE",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_CODE",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_AV",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_TEXT",
+      "target": "s11_b11_T1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_TEXT",
+      "target": "s11_b11_T2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_IMAGE",
+      "target": "s11_b11_I1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_IMAGE",
+      "target": "s11_b11_I2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_CODE",
+      "target": "s11_b11_CD1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_CODE",
+      "target": "s11_b11_CD2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_AV",
+      "target": "s11_b11_A1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_AV",
+      "target": "s11_b11_A2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s20_b21_MULTI",
+      "target": "s20_b21_INPUT",
+      "type": "thick",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MULTI",
+      "target": "s20_b21_OUTPUT",
+      "type": "thick",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MULTI",
+      "target": "s20_b21_MODELS",
+      "type": "thick",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_TEXT",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_IMG",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_AUD",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_VID",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_OUTPUT",
+      "target": "s20_b21_GEN_T",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_OUTPUT",
+      "target": "s20_b21_GEN_I",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_OUTPUT",
+      "target": "s20_b21_GEN_A",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_GPT4V",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_GEMINI",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_CLAUDE_V",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_CLIP",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s32_b37_AUDIO",
+      "target": "s32_b37_ASR",
+      "type": "thick",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_AUDIO",
+      "target": "s32_b37_TTS",
+      "type": "thick",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_AUDIO",
+      "target": "s32_b37_SPEAKER",
+      "type": "thick",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_AUDIO",
+      "target": "s32_b37_MUSIC",
+      "type": "thick",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_ASR",
+      "target": "s32_b37_A1",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_ASR",
+      "target": "s32_b37_A2",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_ASR",
+      "target": "s32_b37_A3",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_ASR",
+      "target": "s32_b37_A4",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_TTS",
+      "target": "s32_b37_T1",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_TTS",
+      "target": "s32_b37_T2",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_TTS",
+      "target": "s32_b37_T3",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_TTS",
+      "target": "s32_b37_T4",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_SPEAKER",
+      "target": "s32_b37_SP1",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_SPEAKER",
+      "target": "s32_b37_SP2",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_SPEAKER",
+      "target": "s32_b37_SP3",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_SPEAKER",
+      "target": "s32_b37_SP4",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_MUSIC",
+      "target": "s32_b37_M1",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_MUSIC",
+      "target": "s32_b37_M2",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_MUSIC",
+      "target": "s32_b37_M3",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    },
+    {
+      "source": "s32_b37_MUSIC",
+      "target": "s32_b37_M4",
+      "type": "regular",
+      "section_id": 32,
+      "block_id": 37
+    }
+  ]
+}

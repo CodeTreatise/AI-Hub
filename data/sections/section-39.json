@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 39,
+    "title": "Explainability & XAI",
+    "description": "SHAP, LIME, Mechanistic Interp",
+    "slug": "explainability-xai",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 39,
+      "title": "Explainability & XAI",
+      "slug": "39-explainability--xai",
+      "description": "SHAP, LIME, Mechanistic Interp",
+      "line": 3145
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s39_b47_XAI",
+      "label": "EXPLAINABILITY & XAI",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://christophm.github.io/interpretable-ml-book/",
+      "tooltip": "Interpretable ML Book",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "XAI"
+    },
+    {
+      "id": "s39_b47_LOCAL",
+      "label": "Local Explanations",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://github.com/marcotcr/lime",
+      "tooltip": "Local Explanations",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LOCAL"
+    },
+    {
+      "id": "s39_b47_GLOBAL",
+      "label": "Global Explanations",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://shap.readthedocs.io/",
+      "tooltip": "Global Explanations",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GLOBAL"
+    },
+    {
+      "id": "s39_b47_CONCEPT",
+      "label": "Concept-Based",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1711.11279",
+      "tooltip": "Concept-Based",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CONCEPT"
+    },
+    {
+      "id": "s39_b47_MECH",
+      "label": "Mechanistic",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://transformer-circuits.pub/",
+      "tooltip": "Mechanistic Interp",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MECH"
+    },
+    {
+      "id": "s39_b47_L1",
+      "label": "LIME",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://github.com/marcotcr/lime",
+      "tooltip": "LIME",
+      "style": null,
+      "parent": null,
+      "original_id": "L1"
+    },
+    {
+      "id": "s39_b47_L2",
+      "label": "SHAP",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://shap.readthedocs.io/",
+      "tooltip": "SHAP",
+      "style": null,
+      "parent": null,
+      "original_id": "L2"
+    },
+    {
+      "id": "s39_b47_L3",
+      "label": "Anchors",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://github.com/marcotcr/anchor",
+      "tooltip": "Anchors",
+      "style": null,
+      "parent": null,
+      "original_id": "L3"
+    },
+    {
+      "id": "s39_b47_L4",
+      "label": "Counterfactuals",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://docs.seldon.io/projects/alibi/en/stable/methods/CFProto.html",
+      "tooltip": "Counterfactuals",
+      "style": null,
+      "parent": null,
+      "original_id": "L4"
+    },
+    {
+      "id": "s39_b47_G1",
+      "label": "Feature Importance",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+      "tooltip": "Permutation Importance",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s39_b47_G2",
+      "label": "Partial Dependence",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://scikit-learn.org/stable/modules/partial_dependence.html",
+      "tooltip": "Partial Dependence",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s39_b47_G3",
+      "label": "SHAP Summary",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/plots/beeswarm.html",
+      "tooltip": "SHAP Summary",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s39_b47_G4",
+      "label": "Global Surrogates",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://christophm.github.io/interpretable-ml-book/global.html",
+      "tooltip": "Global Surrogates",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s39_b47_CO1",
+      "label": "TCAV",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1711.11279",
+      "tooltip": "TCAV Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "CO1"
+    },
+    {
+      "id": "s39_b47_CO2",
+      "label": "Concept Bottleneck",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/2007.04612",
+      "tooltip": "Concept Bottleneck",
+      "style": null,
+      "parent": null,
+      "original_id": "CO2"
+    },
+    {
+      "id": "s39_b47_CO3",
+      "label": "Prototype Networks",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1904.11483",
+      "tooltip": "Prototypes",
+      "style": null,
+      "parent": null,
+      "original_id": "CO3"
+    },
+    {
+      "id": "s39_b47_CO4",
+      "label": "Concept Activation",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1711.11279",
+      "tooltip": "Concept Activation",
+      "style": null,
+      "parent": null,
+      "original_id": "CO4"
+    },
+    {
+      "id": "s39_b47_M1",
+      "label": "TransformerLens",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://transformerlensorg.github.io/TransformerLens/",
+      "tooltip": "TransformerLens",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s39_b47_M2",
+      "label": "Activation Patching",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/2211.00593",
+      "tooltip": "Activation Patching",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s39_b47_M3",
+      "label": "Circuit Analysis",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://transformer-circuits.pub/",
+      "tooltip": "Circuits",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s39_b47_M4",
+      "label": "Probing Classifiers",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1909.03368",
+      "tooltip": "Probing",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_LOCAL",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_GLOBAL",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_CONCEPT",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_MECH",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    }
+  ]
+}

@@ -1,0 +1,1816 @@
+{
+  "meta": {
+    "id": "ai-future",
+    "title": "Emerging & Future AI",
+    "description": "Cutting-edge trends and future directions",
+    "icon": "\ud83d\ude80",
+    "totalNodes": 98,
+    "totalEdges": 86,
+    "totalSections": 3
+  },
+  "sections": [
+    {
+      "id": 18,
+      "title": "Emerging AI Technologies (2024-2025)",
+      "slug": "18-emerging-ai-technologies-2024-2025",
+      "description": "MCP, Function Calling, Small LLMs",
+      "line": 1042
+    },
+    {
+      "id": 28,
+      "title": "Future Trends (2025+)",
+      "slug": "28-future-trends-2025",
+      "description": "AGI, Embodied AI, Neuromorphic",
+      "line": 2044
+    },
+    {
+      "id": 35,
+      "title": "Data-Centric AI",
+      "slug": "35-data-centric-ai",
+      "description": "Labeling, Weak Supervision, Feature Stores",
+      "line": 2624
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s18_b18_EMERGING",
+      "label": "EMERGING TECH",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "tooltip": "AI News - The Batch",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EMERGING"
+    },
+    {
+      "id": "s18_b18_MCP",
+      "label": "MCP",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://modelcontextprotocol.io/",
+      "tooltip": "MCP Documentation",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MCP"
+    },
+    {
+      "id": "s18_b18_FC",
+      "label": "Function Calling",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://platform.openai.com/docs/guides/function-calling",
+      "tooltip": "OpenAI Function Calling",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FC"
+    },
+    {
+      "id": "s18_b18_STRUCT",
+      "label": "Structured Output",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://python.useinstructor.com/",
+      "tooltip": "Structured Output",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "STRUCT"
+    },
+    {
+      "id": "s18_b18_SMALL",
+      "label": "Small LLMs",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3",
+      "tooltip": "Small LLMs",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SMALL"
+    },
+    {
+      "id": "s18_b18_M1",
+      "label": "Model Context Protocol",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://modelcontextprotocol.io/introduction",
+      "tooltip": "MCP Introduction",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s18_b18_M2",
+      "label": "Tool Standardization",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://modelcontextprotocol.io/docs/concepts/tools",
+      "tooltip": "MCP Tool Standardization",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s18_b18_M3",
+      "label": "Anthropic Standard",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://www.anthropic.com/news/model-context-protocol",
+      "tooltip": "Anthropic MCP Announcement",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s18_b18_F1",
+      "label": "OpenAI Functions",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://platform.openai.com/docs/guides/function-calling",
+      "tooltip": "Function Calling Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s18_b18_F2",
+      "label": "Tool Use",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "tooltip": "Claude Tool Use",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s18_b18_F3",
+      "label": "JSON Mode",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://platform.openai.com/docs/guides/structured-outputs",
+      "tooltip": "JSON Mode",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s18_b18_S1",
+      "label": "Pydantic",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://docs.pydantic.dev/",
+      "tooltip": "Pydantic Docs",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s18_b18_S2",
+      "label": "Instructor",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://python.useinstructor.com/",
+      "tooltip": "Instructor Library",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s18_b18_S3",
+      "label": "Outlines",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://dottxt-ai.github.io/outlines/",
+      "tooltip": "Outlines Docs",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s18_b18_SM1",
+      "label": "Phi-3",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://azure.microsoft.com/en-us/products/phi-3",
+      "tooltip": "Microsoft Phi-3",
+      "style": null,
+      "parent": null,
+      "original_id": "SM1"
+    },
+    {
+      "id": "s18_b18_SM2",
+      "label": "Gemma",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://ai.google.dev/gemma",
+      "tooltip": "Google Gemma",
+      "style": null,
+      "parent": null,
+      "original_id": "SM2"
+    },
+    {
+      "id": "s18_b18_SM3",
+      "label": "Llama 3.2",
+      "type": "node",
+      "section_id": 18,
+      "block_id": 18,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Meta Llama",
+      "style": null,
+      "parent": null,
+      "original_id": "SM3"
+    },
+    {
+      "id": "s28_b32_Near",
+      "label": "\ud83d\udd2e 2025-2026: Near Term",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.gartner.com/en/articles/what-s-new-in-artificial-intelligence-from-the-2024-gartner-hype-cycle",
+      "tooltip": "Near-Term AI Trends",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Near"
+    },
+    {
+      "id": "s28_b32_N1",
+      "label": "Agentic AI Mainstream",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "tooltip": "LLM Agents",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N1"
+    },
+    {
+      "id": "s28_b32_N2",
+      "label": "Small Language Models",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://azure.microsoft.com/en-us/products/phi-3",
+      "tooltip": "Microsoft Phi",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N2"
+    },
+    {
+      "id": "s28_b32_N3",
+      "label": "On-Device AI",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://developer.apple.com/machine-learning/core-ml/",
+      "tooltip": "Apple Core ML",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N3"
+    },
+    {
+      "id": "s28_b32_N4",
+      "label": "Enterprise RAG",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "GraphRAG",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N4"
+    },
+    {
+      "id": "s28_b32_N5",
+      "label": "AI Regulation",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://artificialintelligenceact.eu/",
+      "tooltip": "EU AI Act",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N5"
+    },
+    {
+      "id": "s28_b32_Mid",
+      "label": "\ud83d\ude80 2027-2028: Mid Term",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://hai.stanford.edu/news/ai-index-state-ai-14-charts",
+      "tooltip": "Mid-Term AI Outlook",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Mid"
+    },
+    {
+      "id": "s28_b32_M1",
+      "label": "AGI Progress",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://openai.com/",
+      "tooltip": "OpenAI",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M1"
+    },
+    {
+      "id": "s28_b32_M2",
+      "label": "Embodied AI / Robotics",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.figure.ai/",
+      "tooltip": "Figure Robotics",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M2"
+    },
+    {
+      "id": "s28_b32_M3",
+      "label": "Neuromorphic Computing",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html",
+      "tooltip": "Intel Neuromorphic",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M3"
+    },
+    {
+      "id": "s28_b32_M4",
+      "label": "AI-Native Applications",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://a16z.com/emerging-architectures-for-llm-applications/",
+      "tooltip": "AI-Native Apps",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M4"
+    },
+    {
+      "id": "s28_b32_M5",
+      "label": "Synthetic Data Dominance",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://gretel.ai/",
+      "tooltip": "Synthetic Data",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M5"
+    },
+    {
+      "id": "s28_b32_Long",
+      "label": "\ud83c\udf0c 2029-2030+: Long Term",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
+      "tooltip": "Long-Term AI Future",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Long"
+    },
+    {
+      "id": "s28_b32_L1",
+      "label": "Artificial General Intelligence?",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://deepmind.google/",
+      "tooltip": "DeepMind",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L1"
+    },
+    {
+      "id": "s28_b32_L2",
+      "label": "Brain-Computer Interfaces",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://neuralink.com/",
+      "tooltip": "Neuralink",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L2"
+    },
+    {
+      "id": "s28_b32_L3",
+      "label": "Quantum AI",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.ibm.com/quantum",
+      "tooltip": "IBM Quantum",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L3"
+    },
+    {
+      "id": "s28_b32_L4",
+      "label": "AI Consciousness Debate",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://plato.stanford.edu/entries/consciousness-higher/",
+      "tooltip": "AI Consciousness",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L4"
+    },
+    {
+      "id": "s28_b32_L5",
+      "label": "Post-Transformer Architectures",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://arxiv.org/abs/2312.00752",
+      "tooltip": "Mamba Paper",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L5"
+    },
+    {
+      "id": "s28_b33_Past",
+      "label": "\ud83d\udcdc Past Paradigms",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.britannica.com/technology/artificial-intelligence",
+      "tooltip": "AI History",
+      "style": "fill:#455A64,stroke:#263238,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Past"
+    },
+    {
+      "id": "s28_b33_P1",
+      "label": "Rule-Based Expert Systems",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.britannica.com/technology/expert-system",
+      "tooltip": "Expert Systems",
+      "style": null,
+      "parent": "s28_b33_Past",
+      "original_id": "P1"
+    },
+    {
+      "id": "s28_b33_P2",
+      "label": "Statistical ML",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://scikit-learn.org/",
+      "tooltip": "Scikit-learn",
+      "style": null,
+      "parent": "s28_b33_Past",
+      "original_id": "P2"
+    },
+    {
+      "id": "s28_b33_P3",
+      "label": "Deep Learning",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://pytorch.org/",
+      "tooltip": "PyTorch",
+      "style": null,
+      "parent": "s28_b33_Past",
+      "original_id": "P3"
+    },
+    {
+      "id": "s28_b33_Present",
+      "label": "\u26a1 Current (2025)",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.nvidia.com/en-us/glossary/large-language-models/",
+      "tooltip": "Current AI",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Present"
+    },
+    {
+      "id": "s28_b33_C1",
+      "label": "Foundation Models",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://huggingface.co/",
+      "tooltip": "Hugging Face",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C1"
+    },
+    {
+      "id": "s28_b33_C2",
+      "label": "Prompt Engineering",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "Prompting Guide",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C2"
+    },
+    {
+      "id": "s28_b33_C3",
+      "label": "RAG & Retrieval",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://docs.llamaindex.ai/",
+      "tooltip": "LlamaIndex",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C3"
+    },
+    {
+      "id": "s28_b33_C4",
+      "label": "Agentic Workflows",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "LangGraph",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C4"
+    },
+    {
+      "id": "s28_b33_Future",
+      "label": "\ud83c\udf1f Future",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://deepmind.google/",
+      "tooltip": "Future AI",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Future"
+    },
+    {
+      "id": "s28_b33_F1",
+      "label": "World Models",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://ai.meta.com/",
+      "tooltip": "JEPA",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F1"
+    },
+    {
+      "id": "s28_b33_F2",
+      "label": "Continuous Learning",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://arxiv.org/abs/1706.10295",
+      "tooltip": "Continual Learning",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F2"
+    },
+    {
+      "id": "s28_b33_F3",
+      "label": "Embodied Intelligence",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.figure.ai/",
+      "tooltip": "Figure AI",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F3"
+    },
+    {
+      "id": "s28_b33_F4",
+      "label": "Collective AI Systems",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://arxiv.org/abs/2305.11206",
+      "tooltip": "Collective AI",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F4"
+    },
+    {
+      "id": "s35_b40_DATACENTRIC",
+      "label": "DATA-CENTRIC AI",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://dcai.csail.mit.edu/",
+      "tooltip": "MIT Data-Centric AI",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DATACENTRIC"
+    },
+    {
+      "id": "s35_b40_LABEL",
+      "label": "Labeling & Annotation",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://labelstud.io/",
+      "tooltip": "Labeling Tools",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LABEL"
+    },
+    {
+      "id": "s35_b40_QUALITY",
+      "label": "Data Quality",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://greatexpectations.io/",
+      "tooltip": "Data Quality",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "QUALITY"
+    },
+    {
+      "id": "s35_b40_AUGMENT",
+      "label": "Data Augmentation",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://albumentations.ai/",
+      "tooltip": "Data Augmentation",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AUGMENT"
+    },
+    {
+      "id": "s35_b40_INFRA",
+      "label": "Data Infrastructure",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://feast.dev/",
+      "tooltip": "Data Infrastructure",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INFRA"
+    },
+    {
+      "id": "s35_b40_L1",
+      "label": "Label Studio",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://labelstud.io/",
+      "tooltip": "Label Studio",
+      "style": null,
+      "parent": null,
+      "original_id": "L1"
+    },
+    {
+      "id": "s35_b40_L2",
+      "label": "Prodigy",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://prodi.gy/",
+      "tooltip": "Prodigy",
+      "style": null,
+      "parent": null,
+      "original_id": "L2"
+    },
+    {
+      "id": "s35_b40_L3",
+      "label": "Weak Supervision/Snorkel",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://github.com/snorkel-team/snorkel",
+      "tooltip": "Snorkel",
+      "style": null,
+      "parent": null,
+      "original_id": "L3"
+    },
+    {
+      "id": "s35_b40_L4",
+      "label": "Active Learning",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.utils.multiclass.type_of_target.html",
+      "tooltip": "Active Learning Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "L4"
+    },
+    {
+      "id": "s35_b40_Q1",
+      "label": "Great Expectations",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://greatexpectations.io/",
+      "tooltip": "Great Expectations",
+      "style": null,
+      "parent": null,
+      "original_id": "Q1"
+    },
+    {
+      "id": "s35_b40_Q2",
+      "label": "Data Contracts",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://datacontract.com/",
+      "tooltip": "Data Contracts",
+      "style": null,
+      "parent": null,
+      "original_id": "Q2"
+    },
+    {
+      "id": "s35_b40_Q3",
+      "label": "Data Validation",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://docs.pydantic.dev/",
+      "tooltip": "Pydantic Validation",
+      "style": null,
+      "parent": null,
+      "original_id": "Q3"
+    },
+    {
+      "id": "s35_b40_Q4",
+      "label": "Drift Detection",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://docs.evidentlyai.com/",
+      "tooltip": "Evidently AI",
+      "style": null,
+      "parent": null,
+      "original_id": "Q4"
+    },
+    {
+      "id": "s35_b40_A1",
+      "label": "Albumentations",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://albumentations.ai/",
+      "tooltip": "Albumentations",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s35_b40_A2",
+      "label": "nlpaug",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://github.com/makcedward/nlpaug",
+      "tooltip": "nlpaug",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s35_b40_A3",
+      "label": "Synthetic Data",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://gretel.ai/",
+      "tooltip": "Gretel Synthetic",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s35_b40_A4",
+      "label": "Mixup/CutMix",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://arxiv.org/abs/1710.09412",
+      "tooltip": "Mixup Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s35_b40_I1",
+      "label": "Feature Stores/Feast",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://feast.dev/",
+      "tooltip": "Feast Feature Store",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s35_b40_I2",
+      "label": "Data Versioning/DVC",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://dvc.org/",
+      "tooltip": "DVC",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s35_b40_I3",
+      "label": "Data Lineage",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://www.datahubproject.io/",
+      "tooltip": "DataHub Lineage",
+      "style": null,
+      "parent": null,
+      "original_id": "I3"
+    },
+    {
+      "id": "s35_b40_I4",
+      "label": "Data Catalogs",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 40,
+      "url": "https://www.amundsen.io/",
+      "tooltip": "Amundsen Catalog",
+      "style": null,
+      "parent": null,
+      "original_id": "I4"
+    },
+    {
+      "id": "s35_b41_DOC",
+      "label": "DATASET DOCUMENTATION",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/1803.09010",
+      "tooltip": "Datasheets Paper",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DOC"
+    },
+    {
+      "id": "s35_b41_SHEET",
+      "label": "Datasheets",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/1803.09010",
+      "tooltip": "Datasheets for Datasets",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SHEET"
+    },
+    {
+      "id": "s35_b41_CARD",
+      "label": "Dataset Cards",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://huggingface.co/docs/datasets/dataset_card",
+      "tooltip": "HF Dataset Cards",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CARD"
+    },
+    {
+      "id": "s35_b41_RISK",
+      "label": "Risk Assessment",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/2108.07258",
+      "tooltip": "Dataset Risk",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RISK"
+    },
+    {
+      "id": "s35_b41_GOV",
+      "label": "Data Governance",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://www.datahubproject.io/",
+      "tooltip": "Data Governance",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GOV"
+    },
+    {
+      "id": "s35_b41_S1",
+      "label": "Motivation",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/1803.09010",
+      "tooltip": "Motivation Section",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s35_b41_S2",
+      "label": "Composition",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/1803.09010",
+      "tooltip": "Composition Section",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s35_b41_S3",
+      "label": "Collection Process",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/1803.09010",
+      "tooltip": "Collection Process",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s35_b41_S4",
+      "label": "Preprocessing",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/1803.09010",
+      "tooltip": "Preprocessing Section",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s35_b41_C1",
+      "label": "HuggingFace Dataset Card",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://huggingface.co/docs/datasets/dataset_card",
+      "tooltip": "HF Dataset Card",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s35_b41_C2",
+      "label": "Croissant Format",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://mlcommons.org/croissant/",
+      "tooltip": "Croissant ML",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s35_b41_C3",
+      "label": "Data Nutrition Labels",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://datanutrition.org/",
+      "tooltip": "Data Nutrition Project",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s35_b41_C4",
+      "label": "FAIR Principles",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://www.go-fair.org/fair-principles/",
+      "tooltip": "FAIR Principles",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s35_b41_R1",
+      "label": "Bias Assessment",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/2108.07258",
+      "tooltip": "Bias in Datasets",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s35_b41_R2",
+      "label": "Privacy Risks",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/2012.05345",
+      "tooltip": "Dataset Privacy",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s35_b41_R3",
+      "label": "Representation Gaps",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://arxiv.org/abs/2110.01963",
+      "tooltip": "Representation Analysis",
+      "style": null,
+      "parent": null,
+      "original_id": "R3"
+    },
+    {
+      "id": "s35_b41_R4",
+      "label": "Legal Compliance",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/",
+      "tooltip": "GDPR Article 9",
+      "style": null,
+      "parent": null,
+      "original_id": "R4"
+    },
+    {
+      "id": "s35_b41_G1",
+      "label": "Data Catalogs",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://www.amundsen.io/",
+      "tooltip": "Amundsen Catalog",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s35_b41_G2",
+      "label": "Lineage Tracking",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://openlineage.io/",
+      "tooltip": "OpenLineage",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s35_b41_G3",
+      "label": "Access Control",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://www.datahubproject.io/",
+      "tooltip": "DataHub Access",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s35_b41_G4",
+      "label": "Retention Policies",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 41,
+      "url": "https://cloud.google.com/dlp",
+      "tooltip": "Data Retention",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s35_b127_Labelbox",
+      "label": "Labelbox",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 127,
+      "url": "https://labelbox.com/",
+      "tooltip": "Data labeling platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Labelbox"
+    },
+    {
+      "id": "s35_b128_Scale_AI",
+      "label": "Scale AI",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 128,
+      "url": "https://scale.com/",
+      "tooltip": "Data annotation platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Scale_AI"
+    },
+    {
+      "id": "s35_b129_Argilla",
+      "label": "Argilla",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 129,
+      "url": "https://argilla.io/",
+      "tooltip": "Open-source data curation",
+      "style": null,
+      "parent": null,
+      "original_id": "Argilla"
+    },
+    {
+      "id": "s35_b130_Cleanlab",
+      "label": "Cleanlab",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 130,
+      "url": "https://cleanlab.ai/",
+      "tooltip": "Data-centric AI tools",
+      "style": null,
+      "parent": null,
+      "original_id": "Cleanlab"
+    },
+    {
+      "id": "s35_b131_Gretel",
+      "label": "Gretel",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 131,
+      "url": "https://gretel.ai/",
+      "tooltip": "Synthetic data generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Gretel"
+    },
+    {
+      "id": "s35_b132_Mostly_AI",
+      "label": "Mostly AI",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 132,
+      "url": "https://mostly.ai/",
+      "tooltip": "Synthetic data platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Mostly_AI"
+    },
+    {
+      "id": "s35_b133_Synthetic_",
+      "label": "Synthetic Data Vault",
+      "type": "node",
+      "section_id": 35,
+      "block_id": 133,
+      "url": "https://sdv.dev/",
+      "tooltip": "Open-source synthetic data",
+      "style": null,
+      "parent": null,
+      "original_id": "Synthetic_Data_Vault"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s18_b18_EMERGING",
+      "target": "s18_b18_MCP",
+      "type": "thick",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_EMERGING",
+      "target": "s18_b18_FC",
+      "type": "thick",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_EMERGING",
+      "target": "s18_b18_STRUCT",
+      "type": "thick",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_EMERGING",
+      "target": "s18_b18_SMALL",
+      "type": "thick",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_MCP",
+      "target": "s18_b18_M1",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_MCP",
+      "target": "s18_b18_M2",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_MCP",
+      "target": "s18_b18_M3",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_FC",
+      "target": "s18_b18_F1",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_FC",
+      "target": "s18_b18_F2",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_FC",
+      "target": "s18_b18_F3",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_STRUCT",
+      "target": "s18_b18_S1",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_STRUCT",
+      "target": "s18_b18_S2",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_STRUCT",
+      "target": "s18_b18_S3",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_SMALL",
+      "target": "s18_b18_SM1",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_SMALL",
+      "target": "s18_b18_SM2",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s18_b18_SMALL",
+      "target": "s18_b18_SM3",
+      "type": "regular",
+      "section_id": 18,
+      "block_id": 18
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_Mid",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_Long",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N5",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M5",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L5",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_Present",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_Future",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_P1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_P2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_P3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s35_b40_DATACENTRIC",
+      "target": "s35_b40_LABEL",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_DATACENTRIC",
+      "target": "s35_b40_QUALITY",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_DATACENTRIC",
+      "target": "s35_b40_AUGMENT",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_DATACENTRIC",
+      "target": "s35_b40_INFRA",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_LABEL",
+      "target": "s35_b40_L1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_LABEL",
+      "target": "s35_b40_L2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_LABEL",
+      "target": "s35_b40_L3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_LABEL",
+      "target": "s35_b40_L4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_QUALITY",
+      "target": "s35_b40_Q1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_QUALITY",
+      "target": "s35_b40_Q2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_QUALITY",
+      "target": "s35_b40_Q3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_QUALITY",
+      "target": "s35_b40_Q4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_AUGMENT",
+      "target": "s35_b40_A1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_AUGMENT",
+      "target": "s35_b40_A2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_AUGMENT",
+      "target": "s35_b40_A3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_AUGMENT",
+      "target": "s35_b40_A4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_INFRA",
+      "target": "s35_b40_I1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_INFRA",
+      "target": "s35_b40_I2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_INFRA",
+      "target": "s35_b40_I3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b40_INFRA",
+      "target": "s35_b40_I4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 40
+    },
+    {
+      "source": "s35_b41_DOC",
+      "target": "s35_b41_SHEET",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_DOC",
+      "target": "s35_b41_CARD",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_DOC",
+      "target": "s35_b41_RISK",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_DOC",
+      "target": "s35_b41_GOV",
+      "type": "thick",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_SHEET",
+      "target": "s35_b41_S1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_SHEET",
+      "target": "s35_b41_S2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_SHEET",
+      "target": "s35_b41_S3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_SHEET",
+      "target": "s35_b41_S4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_CARD",
+      "target": "s35_b41_C1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_CARD",
+      "target": "s35_b41_C2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_CARD",
+      "target": "s35_b41_C3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_CARD",
+      "target": "s35_b41_C4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_RISK",
+      "target": "s35_b41_R1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_RISK",
+      "target": "s35_b41_R2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_RISK",
+      "target": "s35_b41_R3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_RISK",
+      "target": "s35_b41_R4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_GOV",
+      "target": "s35_b41_G1",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_GOV",
+      "target": "s35_b41_G2",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_GOV",
+      "target": "s35_b41_G3",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    },
+    {
+      "source": "s35_b41_GOV",
+      "target": "s35_b41_G4",
+      "type": "regular",
+      "section_id": 35,
+      "block_id": 41
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "title": "AI Landscape Graphs",
+  "description": "Split views of the AI landscape for focused exploration",
+  "graphs": [
+    {
+      "id": "ai-fundamentals",
+      "title": "AI Fundamentals & History",
+      "icon": "\ud83d\udcda",
+      "nodes": 136,
+      "edges": 131,
+      "sections": 7
+    },
+    {
+      "id": "ai-llm-models",
+      "title": "LLM Models & Customization",
+      "icon": "\ud83e\udd16",
+      "nodes": 200,
+      "edges": 156,
+      "sections": 6
+    },
+    {
+      "id": "ai-rag-retrieval",
+      "title": "RAG & Retrieval Systems",
+      "icon": "\ud83d\udd0d",
+      "nodes": 75,
+      "edges": 61,
+      "sections": 4
+    },
+    {
+      "id": "ai-agents",
+      "title": "AI Agents & Automation",
+      "icon": "\ud83e\udd1d",
+      "nodes": 65,
+      "edges": 53,
+      "sections": 2
+    },
+    {
+      "id": "ai-multimodal",
+      "title": "Multimodal & Generative AI",
+      "icon": "\ud83c\udfa8",
+      "nodes": 97,
+      "edges": 85,
+      "sections": 6
+    },
+    {
+      "id": "ai-mlops-infra",
+      "title": "MLOps & Infrastructure",
+      "icon": "\u2699\ufe0f",
+      "nodes": 126,
+      "edges": 113,
+      "sections": 6
+    },
+    {
+      "id": "ai-safety-governance",
+      "title": "AI Safety & Governance",
+      "icon": "\ud83d\udee1\ufe0f",
+      "nodes": 167,
+      "edges": 152,
+      "sections": 6
+    },
+    {
+      "id": "ai-applications",
+      "title": "AI Applications & Domains",
+      "icon": "\ud83d\udcbc",
+      "nodes": 133,
+      "edges": 128,
+      "sections": 4
+    },
+    {
+      "id": "ai-ecosystem",
+      "title": "Global AI Ecosystem",
+      "icon": "\ud83c\udf0d",
+      "nodes": 96,
+      "edges": 93,
+      "sections": 3
+    },
+    {
+      "id": "ai-future",
+      "title": "Emerging & Future AI",
+      "icon": "\ud83d\ude80",
+      "nodes": 98,
+      "edges": 86,
+      "sections": 3
+    }
+  ]
+}

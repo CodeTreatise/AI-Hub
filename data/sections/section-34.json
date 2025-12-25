@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 34,
+    "title": "Model Optimization & Compilers",
+    "description": "XLA, TVM, ONNX, Quantization",
+    "slug": "model-optimization-compilers",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 34,
+      "title": "Model Optimization & Compilers",
+      "slug": "34-model-optimization--compilers",
+      "description": "XLA, TVM, ONNX, Quantization",
+      "line": 2548
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s34_b39_COMPILE",
+      "label": "MODEL OPTIMIZATION",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html",
+      "tooltip": "torch.compile",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COMPILE"
+    },
+    {
+      "id": "s34_b39_GRAPH",
+      "label": "Graph Optimization",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/fx.html",
+      "tooltip": "PyTorch FX",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GRAPH"
+    },
+    {
+      "id": "s34_b39_QUANT",
+      "label": "Quantization",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://huggingface.co/docs/transformers/quantization",
+      "tooltip": "HF Quantization",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "QUANT"
+    },
+    {
+      "id": "s34_b39_COMPILERS",
+      "label": "Compilers",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://openxla.org/",
+      "tooltip": "OpenXLA",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COMPILERS"
+    },
+    {
+      "id": "s34_b39_FORMATS",
+      "label": "Exchange Formats",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://onnx.ai/",
+      "tooltip": "ONNX",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FORMATS"
+    },
+    {
+      "id": "s34_b39_GR1",
+      "label": "Operator Fusion",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/fx.html#module-torch.fx",
+      "tooltip": "Operator Fusion",
+      "style": null,
+      "parent": null,
+      "original_id": "GR1"
+    },
+    {
+      "id": "s34_b39_GR2",
+      "label": "Constant Folding",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://onnxruntime.ai/docs/performance/graph-optimizations.html",
+      "tooltip": "ONNX Runtime Opts",
+      "style": null,
+      "parent": null,
+      "original_id": "GR2"
+    },
+    {
+      "id": "s34_b39_GR3",
+      "label": "Memory Planning",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://tvm.apache.org/docs/",
+      "tooltip": "TVM Memory",
+      "style": null,
+      "parent": null,
+      "original_id": "GR3"
+    },
+    {
+      "id": "s34_b39_GR4",
+      "label": "Layout Optimization",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://tvm.apache.org/docs/",
+      "tooltip": "Layout Optimization",
+      "style": null,
+      "parent": null,
+      "original_id": "GR4"
+    },
+    {
+      "id": "s34_b39_Q1",
+      "label": "Post-Training Quant",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/quantization.html",
+      "tooltip": "PyTorch Quantization",
+      "style": null,
+      "parent": null,
+      "original_id": "Q1"
+    },
+    {
+      "id": "s34_b39_Q2",
+      "label": "Quantization-Aware Training",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/quantization.html#quantization-aware-training",
+      "tooltip": "QAT",
+      "style": null,
+      "parent": null,
+      "original_id": "Q2"
+    },
+    {
+      "id": "s34_b39_Q3",
+      "label": "INT8/INT4/FP8",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://huggingface.co/docs/transformers/main/quantization/overview",
+      "tooltip": "Quantization Types",
+      "style": null,
+      "parent": null,
+      "original_id": "Q3"
+    },
+    {
+      "id": "s34_b39_Q4",
+      "label": "GGUF/AWQ/GPTQ",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "tooltip": "GGUF/llama.cpp",
+      "style": null,
+      "parent": null,
+      "original_id": "Q4"
+    },
+    {
+      "id": "s34_b39_C1",
+      "label": "XLA",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://openxla.org/xla",
+      "tooltip": "XLA",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s34_b39_C2",
+      "label": "TVM",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://tvm.apache.org/",
+      "tooltip": "Apache TVM",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s34_b39_C3",
+      "label": "TensorRT",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://developer.nvidia.com/tensorrt",
+      "tooltip": "TensorRT",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s34_b39_C4",
+      "label": "torch.compile",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/torch.compiler.html",
+      "tooltip": "torch.compile",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s34_b39_F1",
+      "label": "ONNX",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://onnx.ai/",
+      "tooltip": "ONNX",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s34_b39_F2",
+      "label": "TorchScript",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/jit.html",
+      "tooltip": "TorchScript",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s34_b39_F3",
+      "label": "SavedModel TF",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://www.tensorflow.org/guide/saved_model",
+      "tooltip": "TF SavedModel",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s34_b39_F4",
+      "label": "Core ML",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://coremltools.readme.io/",
+      "tooltip": "Core ML Tools",
+      "style": null,
+      "parent": null,
+      "original_id": "F4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_GRAPH",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_QUANT",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_COMPILERS",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_FORMATS",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    }
+  ]
+}

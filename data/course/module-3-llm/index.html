@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: LLM Fundamentals | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 3: LLM Fundamentals</h1>
+            <p>Master Large Language Models, the OpenAI API, and prompt engineering</p>
+            <div class="module-meta">
+                <span>⏱️ ~75 minutes</span>
+                <span>📊 Beginner</span>
+                <span>📚 Module 3</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Understand what LLMs are and how they work (at a high level)</li>
+            <li>Master the OpenAI API for chat completions</li>
+            <li>Learn prompt engineering fundamentals</li>
+            <li>Understand tokens, context windows, and model parameters</li>
+            <li>Build a simple chatbot with Node.js</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section prerequisites">
+            <h2>📋 Prerequisites</h2>
+            
+        <p>Before starting this module, you should have:</p>
+        <ul>
+            <li>Completed Modules 1-2 (Docker + Database running)</li>
+            <li>An OpenAI API key (get one at <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com</a>)</li>
+            <li>Basic JavaScript/TypeScript knowledge</li>
+        </ul>
+        <div class="callout callout-warning">
+            <strong>API Costs:</strong> OpenAI charges for API usage. For this course, expect to spend $1-5 total. Set a spending limit in your OpenAI dashboard!
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🧠 Understanding LLMs</h2>
+            
+        <h3>What is a Large Language Model?</h3>
+        <p>A Large Language Model (LLM) is a neural network trained on massive amounts of text to predict the next word in a sequence. But this simple objective leads to remarkable capabilities:</p>
+        
+        <ul>
+            <li><strong>Understanding:</strong> Grasping context, nuance, and intent</li>
+            <li><strong>Generation:</strong> Writing coherent, contextually appropriate text</li>
+            <li><strong>Reasoning:</strong> Following logical chains of thought</li>
+            <li><strong>Translation:</strong> Converting between languages and formats</li>
+        </ul>
+        
+        <h3>How LLMs Work (Simplified)</h3>
+        <div style="background: #161b22; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <p style="font-family: monospace; margin: 0;">
+                Input: "The capital of France is"<br><br>
+                Model predicts probabilities:<br>
+                → "Paris" (92%)<br>
+                → "located" (3%)<br>
+                → "a" (2%)<br>
+                → ... thousands more options<br><br>
+                Output: "Paris"
+            </p>
+        </div>
+        
+        <p>The model does this one token at a time, using all previous tokens as context. This is why LLMs are called "autoregressive" - each prediction depends on all previous predictions.</p>
+        
+        <h3>Key Terminology</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Term</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Meaning</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>Token</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">A piece of text (roughly 4 characters or 3/4 of a word)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>Context Window</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Maximum tokens the model can "see" at once (e.g., 128K for GPT-4)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>Temperature</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Randomness control (0 = deterministic, 1 = creative)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>Prompt</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">The input text you send to the model</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>Completion</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">The output text the model generates</td>
+            </tr>
+        </table>
+        
+        <div class="callout callout-tip">
+            <strong>Token Counting:</strong> A rough rule: 1 token ≈ 4 characters in English. "Hello world" is 2 tokens. Use OpenAI's <a href="https://platform.openai.com/tokenizer" target="_blank">tokenizer tool</a> to count exactly.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🔌 The OpenAI API</h2>
+            
+        <h3>Setting Up OpenAI</h3>
+        <p>First, let's install the OpenAI SDK and set up authentication:</p>
+        
+        <pre><code># Install the OpenAI package
+npm install openai
+
+# Add your API key to .env
+echo "OPENAI_API_KEY=sk-your-key-here" >> .env</code></pre>
+        
+        <h4>Basic API Call</h4>
+        <pre><code>// src/llm.ts
+import OpenAI from 'openai';
+import 'dotenv/config';
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY
+});
+
+async function chat(userMessage: string): Promise&lt;string&gt; {
+    const response = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',  // Fast and cheap
+        messages: [
+            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'user', content: userMessage }
+        ]
+    });
+    
+    return response.choices[0].message.content || '';
+}
+
+// Test it
+const answer = await chat('What is RAG in AI?');
+console.log(answer);</code></pre>
+        
+        <h3>Understanding the Messages Array</h3>
+        <p>Chat models use a conversation format with three roles:</p>
+        
+        <pre><code>const messages = [
+    // SYSTEM: Sets the AI's behavior (hidden from user)
+    { 
+        role: 'system', 
+        content: 'You are a helpful coding tutor. Be concise.' 
+    },
+    
+    // USER: What the human says
+    { 
+        role: 'user', 
+        content: 'Explain async/await in JavaScript' 
+    },
+    
+    // ASSISTANT: What the AI says (for conversation history)
+    { 
+        role: 'assistant', 
+        content: 'Async/await is syntax sugar for Promises...' 
+    },
+    
+    // More USER messages continue the conversation
+    { 
+        role: 'user', 
+        content: 'Can you show an example?' 
+    }
+];</code></pre>
+        
+        <h3>Model Parameters</h3>
+        <pre><code>const response = await openai.chat.completions.create({
+    model: 'gpt-4o-mini',
+    messages: messages,
+    
+    // Temperature: 0-2, controls randomness
+    // 0 = deterministic, 1 = balanced, 2 = very random
+    temperature: 0.7,
+    
+    // Max tokens to generate in response
+    max_tokens: 1000,
+    
+    // Stop generating at these sequences
+    stop: ['\n\n', 'END'],
+    
+    // Return multiple completions
+    n: 1
+});</code></pre>
+        
+        <div class="callout callout-info">
+            <strong>Model Selection:</strong><br>
+            • <code>gpt-4o-mini</code> - Fast, cheap, good for most tasks ($0.15/1M input tokens)<br>
+            • <code>gpt-4o</code> - More capable, better reasoning ($2.50/1M input tokens)<br>
+            • <code>gpt-4-turbo</code> - Legacy, still good ($10/1M input tokens)
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>✍️ Prompt Engineering</h2>
+            
+        <h3>What is Prompt Engineering?</h3>
+        
+        <blockquote style="border-left: 4px solid #818cf8; padding-left: 1rem; color: #c9d1d9; margin: 1rem 0;">
+            "Prompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models (LMs) for a wide variety of applications and research topics. Prompt engineering skills help to better understand the capabilities and limitations of large language models (LLMs)."
+            <footer style="color: #8b949e; margin-top: 0.5rem;">— Prompt Engineering Guide</footer>
+        </blockquote>
+        
+        <h3>Core Prompting Techniques</h3>
+        
+        <h4>1. Be Specific and Clear</h4>
+        <pre><code>// ❌ Vague
+"Write about dogs"
+
+// ✅ Specific
+"Write a 100-word paragraph about the health benefits of 
+walking dogs daily, targeting first-time dog owners."</code></pre>
+        
+        <h4>2. Provide Context</h4>
+        <pre><code>// ❌ No context
+"Fix this code: const x = await getData()"
+
+// ✅ With context
+"I'm using Node.js with TypeScript. This function runs but 
+returns undefined. Here's the full function:
+[code]
+The getData() function should return a User object."</code></pre>
+        
+        <h4>3. Use Examples (Few-Shot Prompting)</h4>
+        <pre><code>const systemPrompt = `
+You classify customer feedback as positive, negative, or neutral.
+
+Examples:
+- "Love this product!" → positive
+- "Worst purchase ever" → negative  
+- "It works as expected" → neutral
+
+Now classify the following:
+`;</code></pre>
+        
+        <h4>4. Chain of Thought (CoT)</h4>
+        <pre><code>// Ask the model to think step by step
+const prompt = `
+Solve this problem step by step:
+
+A store has 50 apples. They sell 23 in the morning and 
+receive a shipment of 30 in the afternoon. How many 
+apples do they have at the end of the day?
+
+Think through this step by step before giving the final answer.
+`;</code></pre>
+        
+        <h4>5. Role Assignment</h4>
+        <pre><code>const systemPrompt = `
+You are an expert TypeScript developer with 10 years of experience.
+You always:
+- Write clean, well-documented code
+- Follow best practices
+- Explain your reasoning
+- Consider edge cases
+`;</code></pre>
+        
+        <h3>The System Prompt Pattern</h3>
+        <p>A well-structured system prompt has these components:</p>
+        
+        <pre><code>const systemPrompt = `
+# Role
+You are a technical documentation assistant for a Node.js project.
+
+# Context  
+You help developers understand and use our RAG API.
+
+# Guidelines
+- Be concise but thorough
+- Include code examples when relevant
+- If unsure, say "I don't know" rather than guessing
+- Format responses in Markdown
+
+# Constraints
+- Only answer questions about our API
+- Don't provide information about competitors
+- Keep responses under 500 words unless asked for more
+`;</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>⚡ Advanced API Usage</h2>
+            
+        <h3>Streaming Responses</h3>
+        <p>For better UX, stream responses instead of waiting for the complete answer:</p>
+        
+        <pre><code>async function streamChat(userMessage: string) {
+    const stream = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [
+            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'user', content: userMessage }
+        ],
+        stream: true  // Enable streaming
+    });
+    
+    // Process chunks as they arrive
+    for await (const chunk of stream) {
+        const content = chunk.choices[0]?.delta?.content || '';
+        process.stdout.write(content);  // Print without newline
+    }
+    console.log();  // Final newline
+}
+
+await streamChat('Tell me a short story about a robot.');</code></pre>
+        
+        <h3>Handling Errors</h3>
+        <pre><code>import OpenAI from 'openai';
+
+async function safeChatCall(message: string) {
+    try {
+        const response = await openai.chat.completions.create({
+            model: 'gpt-4o-mini',
+            messages: [{ role: 'user', content: message }]
+        });
+        return response.choices[0].message.content;
+        
+    } catch (error) {
+        if (error instanceof OpenAI.APIError) {
+            console.error('API Error:', error.status, error.message);
+            
+            if (error.status === 429) {
+                // Rate limited - wait and retry
+                console.log('Rate limited, waiting...');
+                await new Promise(r => setTimeout(r, 5000));
+                return safeChatCall(message);  // Retry
+            }
+            
+            if (error.status === 401) {
+                throw new Error('Invalid API key');
+            }
+        }
+        throw error;
+    }
+}</code></pre>
+        
+        <h3>Token Counting</h3>
+        <p>Before sending large prompts, estimate token count to stay within limits:</p>
+        
+        <pre><code># Install tiktoken for accurate counting
+npm install tiktoken</code></pre>
+        
+        <pre><code>import { encoding_for_model } from 'tiktoken';
+
+function countTokens(text: string, model = 'gpt-4o-mini'): number {
+    const encoder = encoding_for_model(model);
+    const tokens = encoder.encode(text);
+    encoder.free();  // Clean up
+    return tokens.length;
+}
+
+const text = "Hello, how are you doing today?";
+console.log(`Token count: ${countTokens(text)}`);  // ~7 tokens</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💻 Hands-On: Build a Chatbot</h2>
+            
+        <h3>Exercise: Build a Simple Chatbot</h3>
+        <p>Let's create a command-line chatbot that maintains conversation history:</p>
+        
+        <h4>Step 1: Create the Chat Module</h4>
+        <pre><code>// src/chatbot.ts
+import OpenAI from 'openai';
+import * as readline from 'readline';
+import 'dotenv/config';
+
+const openai = new OpenAI();
+
+interface Message {
+    role: 'system' | 'user' | 'assistant';
+    content: string;
+}
+
+// Conversation history
+const messages: Message[] = [
+    {
+        role: 'system',
+        content: `You are a helpful AI assistant. You are:
+- Friendly and conversational
+- Concise in your responses
+    - Honest when you don't know something`
+    }
+];
+
+async function chat(userInput: string): Promise&lt;string&gt; {
+    // Add user message to history
+    messages.push({ role: 'user', content: userInput });
+    
+    // Get AI response
+    const response = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: messages,
+        temperature: 0.7
+    });
+    
+    const assistantMessage = response.choices[0].message.content || '';
+    
+    // Add assistant response to history
+    messages.push({ role: 'assistant', content: assistantMessage });
+    
+    return assistantMessage;
+}
+
+// Main loop
+async function main() {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    
+    console.log('🤖 Chatbot ready! Type "quit" to exit.\n');
+    
+    const askQuestion = () => {
+        rl.question('You: ', async (input) => {
+            if (input.toLowerCase() === 'quit') {
+                console.log('Goodbye!');
+                rl.close();
+                return;
+            }
+            
+            try {
+                const response = await chat(input);
+                console.log(`\n🤖 Assistant: ${response}\n`);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+            
+            askQuestion();  // Continue the loop
+        });
+    };
+    
+    askQuestion();
+}
+
+main();</code></pre>
+        
+        <h4>Step 2: Run the Chatbot</h4>
+        <pre><code># Run with ts-node or after compiling
+npx ts-node src/chatbot.ts</code></pre>
+        
+        <h4>Step 3: Test Conversation Memory</h4>
+        <pre><code>🤖 Chatbot ready! Type "quit" to exit.
+
+You: My name is Alex
+
+🤖 Assistant: Nice to meet you, Alex! How can I help you today?
+
+You: What's my name?
+
+🤖 Assistant: Your name is Alex! You just told me that. 😊
+
+You: quit
+Goodbye!</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Why does it remember?</strong> We store all messages in the <code>messages</code> array and send the full history with each request. The model uses this context to maintain continuity.
+        </div>
+    
+        </section>
+    
+        <section class="section gotchas">
+            <h2>⚠️ Common Gotchas & Tips</h2>
+            
+        <h3>Common LLM Mistakes</h3>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Exposing API Keys:</strong> NEVER commit your OpenAI key to git! Use environment variables and add .env to .gitignore.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Context Window Overflow:</strong> If your conversation history grows too long, you'll hit token limits. Implement a sliding window or summarization strategy.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Ignoring Costs:</strong> Set spending limits in OpenAI dashboard. Log token usage in production. Use gpt-4o-mini for most tasks.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Trusting Output Blindly:</strong> LLMs can hallucinate (make things up). Always validate critical information, especially for code or facts.
+        </div>
+        
+        <h3>Temperature Guide</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Temperature</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Use Case</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>0</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Factual answers, code generation, data extraction</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>0.3-0.5</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Balanced responses, Q&A, summaries</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>0.7-0.9</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Creative writing, brainstorming</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>1.0+</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Highly creative, experimental (can be incoherent)</td>
+            </tr>
+        </table>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Check Your Understanding</h2>
+            
+        <div class="quiz-question">
+            <p>1. What is a "token" in the context of LLMs?</p>
+            <ul class="quiz-options">
+                <li>A) A security credential</li>
+                <li>B) A piece of text (roughly 4 characters)</li>
+                <li>C) A complete sentence</li>
+                <li>D) A paragraph</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. What does a temperature of 0 mean?</p>
+            <ul class="quiz-options">
+                <li>A) The model won't respond</li>
+                <li>B) Maximum creativity</li>
+                <li>C) Deterministic/consistent output</li>
+                <li>D) Faster responses</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. Which role sets the AI's behavior in chat completions?</p>
+            <ul class="quiz-options">
+                <li>A) user</li>
+                <li>B) assistant</li>
+                <li>C) system</li>
+                <li>D) admin</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>4. What prompting technique asks the model to explain its reasoning?</p>
+            <ul class="quiz-options">
+                <li>A) Few-shot prompting</li>
+                <li>B) Chain of Thought (CoT)</li>
+                <li>C) Zero-shot prompting</li>
+                <li>D) Role prompting</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-C, 3-C, 4-B</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://platform.openai.com/docs" target="_blank">
+                    OpenAI API Documentation
+                </a>
+                <span style="color: #8b949e;"> - Official API reference</span>
+            </li>
+            <li>
+                <a href="https://cookbook.openai.com/" target="_blank">
+                    OpenAI Cookbook
+                </a>
+                <span style="color: #8b949e;"> - Example code and use cases</span>
+            </li>
+            <li>
+                <a href="https://www.promptingguide.ai/" target="_blank">
+                    Prompt Engineering Guide
+                </a>
+                <span style="color: #8b949e;"> - Comprehensive prompting techniques</span>
+            </li>
+            <li>
+                <a href="https://platform.openai.com/tokenizer" target="_blank">
+                    OpenAI Tokenizer
+                </a>
+                <span style="color: #8b949e;"> - Count tokens in your prompts</span>
+            </li>
+            <li>
+                <a href="https://github.com/openai/openai-node" target="_blank">
+                    OpenAI Node.js SDK
+                </a>
+                <span style="color: #8b949e;"> - Official Node.js client</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../module-2-postgres/index.html">← Previous: Database Foundations</a>
+            <a href="../module-4-embeddings/index.html">Next: Embeddings & Vectors →</a>
+        </nav>
+    </div>
+</body>
+</html>

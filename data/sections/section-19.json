@@ -1,0 +1,672 @@
+{
+  "meta": {
+    "id": 19,
+    "title": "LLM Customization Approaches",
+    "description": "Prompting, RAG, Fine-tuning",
+    "slug": "llm-customization-approaches",
+    "totalNodes": 36,
+    "totalEdges": 31
+  },
+  "sections": [
+    {
+      "id": 19,
+      "title": "LLM Customization Approaches",
+      "slug": "19-llm-customization-approaches",
+      "description": "Prompting, RAG, Fine-tuning",
+      "line": 1114
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s19_b19_CUSTOM",
+      "label": "LLM CUSTOMIZATION",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI Courses",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CUSTOM"
+    },
+    {
+      "id": "s19_b19_PROMPT",
+      "label": "Prompting",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "Prompting Guide",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROMPT"
+    },
+    {
+      "id": "s19_b19_RAG",
+      "label": "RAG",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://docs.llamaindex.ai/",
+      "tooltip": "LlamaIndex RAG",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RAG"
+    },
+    {
+      "id": "s19_b19_PEFT",
+      "label": "PEFT",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/",
+      "tooltip": "HuggingFace PEFT",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PEFT"
+    },
+    {
+      "id": "s19_b19_ALIGN",
+      "label": "Alignment",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/trl/",
+      "tooltip": "TRL Library",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ALIGN"
+    },
+    {
+      "id": "s19_b19_ADV",
+      "label": "Advanced",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Advanced Techniques",
+      "style": "fill:#00695C,stroke:#004D40,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ADV"
+    },
+    {
+      "id": "s19_b19_P1",
+      "label": "Zero/Few-shot",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.promptingguide.ai/techniques/fewshot",
+      "tooltip": "Few-Shot Prompting",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s19_b19_P2",
+      "label": "Chain-of-Thought",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.promptingguide.ai/techniques/cot",
+      "tooltip": "Chain-of-Thought",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s19_b19_P3",
+      "label": "System Prompts",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "tooltip": "System Prompts",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s19_b19_R1",
+      "label": "Vector RAG",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "Vector RAG",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s19_b19_R2",
+      "label": "GraphRAG",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Microsoft GraphRAG",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s19_b19_F1",
+      "label": "LoRA/QLoRA",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/lora",
+      "tooltip": "LoRA Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s19_b19_F2",
+      "label": "Adapters",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/adapter",
+      "tooltip": "Adapters",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s19_b19_F3",
+      "label": "Prefix Tuning",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/prompting",
+      "tooltip": "Prefix Tuning",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s19_b19_A1",
+      "label": "RLHF",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/blog/rlhf",
+      "tooltip": "RLHF Explained",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s19_b19_A2",
+      "label": "DPO/ORPO",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/trl/dpo_trainer",
+      "tooltip": "DPO Trainer",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s19_b19_A3",
+      "label": "Constitutional AI",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Constitutional AI",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s19_b19_AD1",
+      "label": "Steering Vectors",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Steering Vectors",
+      "style": null,
+      "parent": null,
+      "original_id": "AD1"
+    },
+    {
+      "id": "s19_b19_AD2",
+      "label": "Model Merging",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/blog/mlabonne/merge-models",
+      "tooltip": "Model Merging Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "AD2"
+    },
+    {
+      "id": "s19_b19_AD3",
+      "label": "Distillation",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/transformers/tasks/knowledge_distillation",
+      "tooltip": "Knowledge Distillation",
+      "style": null,
+      "parent": null,
+      "original_id": "AD3"
+    },
+    {
+      "id": "s19_b20_Extract",
+      "label": "1\ufe0f\u20e3 Extract Steering Vector",
+      "type": "subgraph",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Extract Steering Vector",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Extract"
+    },
+    {
+      "id": "s19_b20_E1",
+      "label": "Collect positive examples",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Steering Vectors Explained",
+      "style": null,
+      "parent": "s19_b20_Extract",
+      "original_id": "E1"
+    },
+    {
+      "id": "s19_b20_E2",
+      "label": "Collect negative examples",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.lesswrong.com/posts/ndyngghzFY388Dnew/activation-engineering",
+      "tooltip": "Activation Engineering",
+      "style": null,
+      "parent": "s19_b20_Extract",
+      "original_id": "E2"
+    },
+    {
+      "id": "s19_b20_E3",
+      "label": "Compute activation difference",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2310.01405",
+      "tooltip": "Representation Engineering",
+      "style": null,
+      "parent": "s19_b20_Extract",
+      "original_id": "E3"
+    },
+    {
+      "id": "s19_b20_Apply",
+      "label": "2\ufe0f\u20e3 Apply at Inference",
+      "type": "subgraph",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Apply Steering",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Apply"
+    },
+    {
+      "id": "s19_b20_A1",
+      "label": "Add to layer activations",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Activation Additions",
+      "style": null,
+      "parent": "s19_b20_Apply",
+      "original_id": "A1"
+    },
+    {
+      "id": "s19_b20_A2",
+      "label": "Scale by strength \u03b1",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://github.com/vgel/repeng",
+      "tooltip": "RepEng Library",
+      "style": null,
+      "parent": "s19_b20_Apply",
+      "original_id": "A2"
+    },
+    {
+      "id": "s19_b20_A3",
+      "label": "Steer behavior",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.alignmentforum.org/posts/zt6hRsDE84HeBKh7E/activation-engineering",
+      "tooltip": "Behavior Steering",
+      "style": null,
+      "parent": "s19_b20_Apply",
+      "original_id": "A3"
+    },
+    {
+      "id": "s19_b20_Uses",
+      "label": "3\ufe0f\u20e3 Use Cases",
+      "type": "subgraph",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2310.01405",
+      "tooltip": "Steering Use Cases",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Uses"
+    },
+    {
+      "id": "s19_b20_U1",
+      "label": "Increase/decrease honesty",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2312.06681",
+      "tooltip": "Honesty Steering Paper",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U1"
+    },
+    {
+      "id": "s19_b20_U2",
+      "label": "Control verbosity",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://huggingface.co/docs/trl/",
+      "tooltip": "LLM Alignment",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U2"
+    },
+    {
+      "id": "s19_b20_U3",
+      "label": "Adjust formality",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.anthropic.com/research/claude-character",
+      "tooltip": "Claude Character Control",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U3"
+    },
+    {
+      "id": "s19_b20_U4",
+      "label": "Modify refusal behavior",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2401.06824",
+      "tooltip": "Refusal in LLMs",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U4"
+    },
+    {
+      "id": "s19_b115_Axolotl",
+      "label": "Axolotl",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 115,
+      "url": "https://github.com/OpenAccess-AI-Collective/axolotl",
+      "tooltip": "Fine-tuning toolkit",
+      "style": null,
+      "parent": null,
+      "original_id": "Axolotl"
+    },
+    {
+      "id": "s19_b116_Unsloth",
+      "label": "Unsloth",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 116,
+      "url": "https://github.com/unslothai/unsloth",
+      "tooltip": "2x faster fine-tuning",
+      "style": null,
+      "parent": null,
+      "original_id": "Unsloth"
+    },
+    {
+      "id": "s19_b117_LLaMA_Fact",
+      "label": "LLaMA-Factory",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 117,
+      "url": "https://github.com/hiyouga/LLaMA-Factory",
+      "tooltip": "Easy LLM fine-tuning",
+      "style": null,
+      "parent": null,
+      "original_id": "LLaMA-Factory"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_PROMPT",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_RAG",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_PEFT",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_ALIGN",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_ADV",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PROMPT",
+      "target": "s19_b19_P1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PROMPT",
+      "target": "s19_b19_P2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PROMPT",
+      "target": "s19_b19_P3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_RAG",
+      "target": "s19_b19_R1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_RAG",
+      "target": "s19_b19_R2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PEFT",
+      "target": "s19_b19_F1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PEFT",
+      "target": "s19_b19_F2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PEFT",
+      "target": "s19_b19_F3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ALIGN",
+      "target": "s19_b19_A1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ALIGN",
+      "target": "s19_b19_A2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ALIGN",
+      "target": "s19_b19_A3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ADV",
+      "target": "s19_b19_AD1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ADV",
+      "target": "s19_b19_AD2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ADV",
+      "target": "s19_b19_AD3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_Apply",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_Uses",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_E1",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_E2",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_E3",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_A1",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_A2",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_A3",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U1",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U2",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U3",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U4",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    }
+  ]
+}

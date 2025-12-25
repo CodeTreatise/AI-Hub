@@ -1,0 +1,3551 @@
+{
+  "meta": {
+    "id": "ai-llm-models",
+    "title": "LLM Models & Customization",
+    "description": "Large language models, fine-tuning, and optimization",
+    "icon": "\ud83e\udd16",
+    "totalNodes": 200,
+    "totalEdges": 156,
+    "totalSections": 6
+  },
+  "sections": [
+    {
+      "id": 19,
+      "title": "LLM Customization Approaches",
+      "slug": "19-llm-customization-approaches",
+      "description": "Prompting, RAG, Fine-tuning",
+      "line": 1114
+    },
+    {
+      "id": 22,
+      "title": "Key AI Companies & Models",
+      "slug": "22-key-ai-companies--models",
+      "description": "OpenAI, Anthropic, Google, Meta",
+      "line": 1407
+    },
+    {
+      "id": 23,
+      "title": "LLMOps & Evaluation",
+      "slug": "23-llmops--evaluation",
+      "description": "Benchmarks, Evals, Monitoring",
+      "line": 1473
+    },
+    {
+      "id": 34,
+      "title": "Model Optimization & Compilers",
+      "slug": "34-model-optimization--compilers",
+      "description": "XLA, TVM, ONNX, Quantization",
+      "line": 2548
+    },
+    {
+      "id": 40,
+      "title": "Model Calibration & Uncertainty",
+      "slug": "40-model-calibration--uncertainty",
+      "description": "Temperature Scaling, Conformal Prediction",
+      "line": 3221
+    },
+    {
+      "id": 45,
+      "title": "Open Source AI Movement",
+      "slug": "",
+      "description": "",
+      "line": 3880
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s19_b19_CUSTOM",
+      "label": "LLM CUSTOMIZATION",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI Courses",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CUSTOM"
+    },
+    {
+      "id": "s19_b19_PROMPT",
+      "label": "Prompting",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "Prompting Guide",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROMPT"
+    },
+    {
+      "id": "s19_b19_RAG",
+      "label": "RAG",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://docs.llamaindex.ai/",
+      "tooltip": "LlamaIndex RAG",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RAG"
+    },
+    {
+      "id": "s19_b19_PEFT",
+      "label": "PEFT",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/",
+      "tooltip": "HuggingFace PEFT",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PEFT"
+    },
+    {
+      "id": "s19_b19_ALIGN",
+      "label": "Alignment",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/trl/",
+      "tooltip": "TRL Library",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ALIGN"
+    },
+    {
+      "id": "s19_b19_ADV",
+      "label": "Advanced",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Advanced Techniques",
+      "style": "fill:#00695C,stroke:#004D40,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ADV"
+    },
+    {
+      "id": "s19_b19_P1",
+      "label": "Zero/Few-shot",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.promptingguide.ai/techniques/fewshot",
+      "tooltip": "Few-Shot Prompting",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s19_b19_P2",
+      "label": "Chain-of-Thought",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.promptingguide.ai/techniques/cot",
+      "tooltip": "Chain-of-Thought",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s19_b19_P3",
+      "label": "System Prompts",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "tooltip": "System Prompts",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s19_b19_R1",
+      "label": "Vector RAG",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "Vector RAG",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s19_b19_R2",
+      "label": "GraphRAG",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Microsoft GraphRAG",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s19_b19_F1",
+      "label": "LoRA/QLoRA",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/lora",
+      "tooltip": "LoRA Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s19_b19_F2",
+      "label": "Adapters",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/adapter",
+      "tooltip": "Adapters",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s19_b19_F3",
+      "label": "Prefix Tuning",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/prompting",
+      "tooltip": "Prefix Tuning",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s19_b19_A1",
+      "label": "RLHF",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/blog/rlhf",
+      "tooltip": "RLHF Explained",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s19_b19_A2",
+      "label": "DPO/ORPO",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/trl/dpo_trainer",
+      "tooltip": "DPO Trainer",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s19_b19_A3",
+      "label": "Constitutional AI",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Constitutional AI",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s19_b19_AD1",
+      "label": "Steering Vectors",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Steering Vectors",
+      "style": null,
+      "parent": null,
+      "original_id": "AD1"
+    },
+    {
+      "id": "s19_b19_AD2",
+      "label": "Model Merging",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/blog/mlabonne/merge-models",
+      "tooltip": "Model Merging Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "AD2"
+    },
+    {
+      "id": "s19_b19_AD3",
+      "label": "Distillation",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 19,
+      "url": "https://huggingface.co/docs/transformers/tasks/knowledge_distillation",
+      "tooltip": "Knowledge Distillation",
+      "style": null,
+      "parent": null,
+      "original_id": "AD3"
+    },
+    {
+      "id": "s19_b20_Extract",
+      "label": "1\ufe0f\u20e3 Extract Steering Vector",
+      "type": "subgraph",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Extract Steering Vector",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Extract"
+    },
+    {
+      "id": "s19_b20_E1",
+      "label": "Collect positive examples",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors",
+      "tooltip": "Steering Vectors Explained",
+      "style": null,
+      "parent": "s19_b20_Extract",
+      "original_id": "E1"
+    },
+    {
+      "id": "s19_b20_E2",
+      "label": "Collect negative examples",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.lesswrong.com/posts/ndyngghzFY388Dnew/activation-engineering",
+      "tooltip": "Activation Engineering",
+      "style": null,
+      "parent": "s19_b20_Extract",
+      "original_id": "E2"
+    },
+    {
+      "id": "s19_b20_E3",
+      "label": "Compute activation difference",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2310.01405",
+      "tooltip": "Representation Engineering",
+      "style": null,
+      "parent": "s19_b20_Extract",
+      "original_id": "E3"
+    },
+    {
+      "id": "s19_b20_Apply",
+      "label": "2\ufe0f\u20e3 Apply at Inference",
+      "type": "subgraph",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Apply Steering",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Apply"
+    },
+    {
+      "id": "s19_b20_A1",
+      "label": "Add to layer activations",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Activation Additions",
+      "style": null,
+      "parent": "s19_b20_Apply",
+      "original_id": "A1"
+    },
+    {
+      "id": "s19_b20_A2",
+      "label": "Scale by strength \u03b1",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://github.com/vgel/repeng",
+      "tooltip": "RepEng Library",
+      "style": null,
+      "parent": "s19_b20_Apply",
+      "original_id": "A2"
+    },
+    {
+      "id": "s19_b20_A3",
+      "label": "Steer behavior",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.alignmentforum.org/posts/zt6hRsDE84HeBKh7E/activation-engineering",
+      "tooltip": "Behavior Steering",
+      "style": null,
+      "parent": "s19_b20_Apply",
+      "original_id": "A3"
+    },
+    {
+      "id": "s19_b20_Uses",
+      "label": "3\ufe0f\u20e3 Use Cases",
+      "type": "subgraph",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2310.01405",
+      "tooltip": "Steering Use Cases",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Uses"
+    },
+    {
+      "id": "s19_b20_U1",
+      "label": "Increase/decrease honesty",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2312.06681",
+      "tooltip": "Honesty Steering Paper",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U1"
+    },
+    {
+      "id": "s19_b20_U2",
+      "label": "Control verbosity",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://huggingface.co/docs/trl/",
+      "tooltip": "LLM Alignment",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U2"
+    },
+    {
+      "id": "s19_b20_U3",
+      "label": "Adjust formality",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://www.anthropic.com/research/claude-character",
+      "tooltip": "Claude Character Control",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U3"
+    },
+    {
+      "id": "s19_b20_U4",
+      "label": "Modify refusal behavior",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 20,
+      "url": "https://arxiv.org/abs/2401.06824",
+      "tooltip": "Refusal in LLMs",
+      "style": null,
+      "parent": "s19_b20_Uses",
+      "original_id": "U4"
+    },
+    {
+      "id": "s22_b23_OpenAI",
+      "label": "OPENAI",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://openai.com/",
+      "tooltip": "OpenAI",
+      "style": "fill:#10A37F,stroke:#0D8C6D,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OpenAI"
+    },
+    {
+      "id": "s22_b23_OA1",
+      "label": "GPT-4o / o1",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://platform.openai.com/docs/models",
+      "tooltip": "OpenAI Models",
+      "style": null,
+      "parent": "s22_b23_OpenAI",
+      "original_id": "OA1"
+    },
+    {
+      "id": "s22_b23_OA2",
+      "label": "DALL-E 3",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://openai.com/dall-e-3",
+      "tooltip": "DALL-E 3",
+      "style": null,
+      "parent": "s22_b23_OpenAI",
+      "original_id": "OA2"
+    },
+    {
+      "id": "s22_b23_OA3",
+      "label": "Whisper / Sora",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://openai.com/sora",
+      "tooltip": "Sora",
+      "style": null,
+      "parent": "s22_b23_OpenAI",
+      "original_id": "OA3"
+    },
+    {
+      "id": "s22_b23_Anthropic",
+      "label": "ANTHROPIC",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://www.anthropic.com/",
+      "tooltip": "Anthropic",
+      "style": "fill:#D4A574,stroke:#C4956A,color:#000000",
+      "parent": null,
+      "original_id": "Anthropic"
+    },
+    {
+      "id": "s22_b23_AN1",
+      "label": "Claude 3.5 Sonnet",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://docs.anthropic.com/",
+      "tooltip": "Claude Docs",
+      "style": null,
+      "parent": "s22_b23_Anthropic",
+      "original_id": "AN1"
+    },
+    {
+      "id": "s22_b23_AN2",
+      "label": "Claude Opus",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://www.anthropic.com/claude",
+      "tooltip": "Claude",
+      "style": null,
+      "parent": "s22_b23_Anthropic",
+      "original_id": "AN2"
+    },
+    {
+      "id": "s22_b23_Google",
+      "label": "GOOGLE",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://ai.google/",
+      "tooltip": "Google AI",
+      "style": "fill:#4285F4,stroke:#3367D6,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Google"
+    },
+    {
+      "id": "s22_b23_GO1",
+      "label": "Gemini 2.0",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://deepmind.google/technologies/gemini/",
+      "tooltip": "Gemini",
+      "style": null,
+      "parent": "s22_b23_Google",
+      "original_id": "GO1"
+    },
+    {
+      "id": "s22_b23_GO2",
+      "label": "Gemma 2",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://ai.google.dev/gemma",
+      "tooltip": "Gemma",
+      "style": null,
+      "parent": "s22_b23_Google",
+      "original_id": "GO2"
+    },
+    {
+      "id": "s22_b23_Meta",
+      "label": "META",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://ai.meta.com/",
+      "tooltip": "Meta AI",
+      "style": "fill:#0668E1,stroke:#0553B8,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Meta"
+    },
+    {
+      "id": "s22_b23_ME1",
+      "label": "Llama 3.2 / 3.3",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Llama",
+      "style": null,
+      "parent": "s22_b23_Meta",
+      "original_id": "ME1"
+    },
+    {
+      "id": "s22_b23_ME2",
+      "label": "SAM 2",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://segment-anything.com/",
+      "tooltip": "SAM 2",
+      "style": null,
+      "parent": "s22_b23_Meta",
+      "original_id": "ME2"
+    },
+    {
+      "id": "s22_b23_Mistral",
+      "label": "MISTRAL",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://mistral.ai/",
+      "tooltip": "Mistral AI",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Mistral"
+    },
+    {
+      "id": "s22_b23_MI1",
+      "label": "Mistral Large",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://mistral.ai/",
+      "tooltip": "Mistral AI",
+      "style": null,
+      "parent": "s22_b23_Mistral",
+      "original_id": "MI1"
+    },
+    {
+      "id": "s22_b23_MI2",
+      "label": "Mixtral 8x22B",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://mistral.ai/news/mixtral-of-experts/",
+      "tooltip": "Mixtral",
+      "style": null,
+      "parent": "s22_b23_Mistral",
+      "original_id": "MI2"
+    },
+    {
+      "id": "s22_b23_xAI",
+      "label": "xAI",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://x.ai/",
+      "tooltip": "xAI",
+      "style": "fill:#1DA1F2,stroke:#1991DB,color:#FFFFFF",
+      "parent": null,
+      "original_id": "xAI"
+    },
+    {
+      "id": "s22_b23_XA1",
+      "label": "Grok 2",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://x.ai/",
+      "tooltip": "xAI",
+      "style": null,
+      "parent": "s22_b23_xAI",
+      "original_id": "XA1"
+    },
+    {
+      "id": "s23_b24_LLMOPS",
+      "label": "LLMOps & EVALUATION",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.deeplearning.ai/short-courses/evaluating-debugging-generative-ai/",
+      "tooltip": "LLMOps Course",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLMOPS"
+    },
+    {
+      "id": "s23_b24_EVAL",
+      "label": "Evaluation",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://huggingface.co/open-llm-leaderboard",
+      "tooltip": "Evaluation",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EVAL"
+    },
+    {
+      "id": "s23_b24_MONITOR",
+      "label": "Monitoring",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://langfuse.com/",
+      "tooltip": "Monitoring",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MONITOR"
+    },
+    {
+      "id": "s23_b24_VERSION",
+      "label": "Versioning",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://mlflow.org/",
+      "tooltip": "Versioning",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VERSION"
+    },
+    {
+      "id": "s23_b24_TEST",
+      "label": "Testing",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.promptfoo.dev/",
+      "tooltip": "Testing",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TEST"
+    },
+    {
+      "id": "s23_b24_E1",
+      "label": "Benchmarks",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://huggingface.co/open-llm-leaderboard",
+      "tooltip": "Open LLM Leaderboard",
+      "style": null,
+      "parent": null,
+      "original_id": "E1"
+    },
+    {
+      "id": "s23_b24_E2",
+      "label": "Human Eval",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.humaneval.com/",
+      "tooltip": "HumanEval",
+      "style": null,
+      "parent": null,
+      "original_id": "E2"
+    },
+    {
+      "id": "s23_b24_E3",
+      "label": "LLM-as-Judge",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.smith.langchain.com/evaluation",
+      "tooltip": "LLM-as-Judge",
+      "style": null,
+      "parent": null,
+      "original_id": "E3"
+    },
+    {
+      "id": "s23_b24_M1",
+      "label": "Quality Metrics",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://langfuse.com/",
+      "tooltip": "Langfuse",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s23_b24_M2",
+      "label": "Drift Detection",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.arize.com/phoenix/",
+      "tooltip": "Arize Phoenix",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s23_b24_M3",
+      "label": "Toxicity/Safety",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://huggingface.co/meta-llama/Llama-Guard-3-8B",
+      "tooltip": "Toxicity Detection - LlamaGuard",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s23_b24_M4",
+      "label": "Cost Tracking",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.helicone.ai/",
+      "tooltip": "Cost Tracking - Helicone",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s23_b24_V1",
+      "label": "Prompt Versioning",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://promptlayer.com/",
+      "tooltip": "PromptLayer",
+      "style": null,
+      "parent": null,
+      "original_id": "V1"
+    },
+    {
+      "id": "s23_b24_V2",
+      "label": "Model Registry",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://mlflow.org/docs/latest/model-registry.html",
+      "tooltip": "MLflow Model Registry",
+      "style": null,
+      "parent": null,
+      "original_id": "V2"
+    },
+    {
+      "id": "s23_b24_V3",
+      "label": "Experiment Tracking",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.wandb.ai/",
+      "tooltip": "Weights & Biases",
+      "style": null,
+      "parent": null,
+      "original_id": "V3"
+    },
+    {
+      "id": "s23_b24_T1",
+      "label": "A/B Testing",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.promptfoo.dev/",
+      "tooltip": "Promptfoo",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s23_b24_T2",
+      "label": "Regression Tests",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.pytest.org/",
+      "tooltip": "Regression Testing - Pytest",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s23_b24_T3",
+      "label": "Red Teaming",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://atlas.mitre.org/",
+      "tooltip": "MITRE ATLAS",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s23_b25_OTEL",
+      "label": "OPENTELEMETRY FOR AI",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/",
+      "tooltip": "OpenTelemetry",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OTEL"
+    },
+    {
+      "id": "s23_b25_TRACE",
+      "label": "Distributed Tracing",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+      "tooltip": "OTel Traces",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TRACE"
+    },
+    {
+      "id": "s23_b25_METRICS",
+      "label": "Metrics",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+      "tooltip": "OTel Metrics",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "METRICS"
+    },
+    {
+      "id": "s23_b25_LOGS",
+      "label": "Structured Logs",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+      "tooltip": "OTel Logs",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LOGS"
+    },
+    {
+      "id": "s23_b25_SEM",
+      "label": "Semantic Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "GenAI Conventions",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SEM"
+    },
+    {
+      "id": "s23_b25_T1",
+      "label": "LLM Spans",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "LLM Spans",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s23_b25_T2",
+      "label": "RAG Pipeline Traces",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.traceloop.com/",
+      "tooltip": "Traceloop RAG",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s23_b25_T3",
+      "label": "Agent Action Traces",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.smith.langchain.com/",
+      "tooltip": "Agent Tracing",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s23_b25_T4",
+      "label": "Latency Breakdown",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+      "tooltip": "Latency Traces",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    },
+    {
+      "id": "s23_b25_M1",
+      "label": "Token Throughput",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "Token Metrics",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s23_b25_M2",
+      "label": "Latency Percentiles",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+      "tooltip": "Latency Metrics",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s23_b25_M3",
+      "label": "Error Rates",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+      "tooltip": "Error Metrics",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s23_b25_M4",
+      "label": "Cost Tracking",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.helicone.ai/",
+      "tooltip": "Cost Tracking",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s23_b25_L1",
+      "label": "Prompt/Response Logs",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.langfuse.com/",
+      "tooltip": "Langfuse Logging",
+      "style": null,
+      "parent": null,
+      "original_id": "L1"
+    },
+    {
+      "id": "s23_b25_L2",
+      "label": "Error Context",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+      "tooltip": "Error Logs",
+      "style": null,
+      "parent": null,
+      "original_id": "L2"
+    },
+    {
+      "id": "s23_b25_L3",
+      "label": "Retrieval Logs",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/observability/",
+      "tooltip": "Retrieval Logs",
+      "style": null,
+      "parent": null,
+      "original_id": "L3"
+    },
+    {
+      "id": "s23_b25_L4",
+      "label": "Audit Trail",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+      "tooltip": "Audit Logs",
+      "style": null,
+      "parent": null,
+      "original_id": "L4"
+    },
+    {
+      "id": "s23_b25_S1",
+      "label": "GenAI Semantic Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "GenAI Conventions",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s23_b25_S2",
+      "label": "LLM Span Attributes",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "LLM Attributes",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s23_b25_S3",
+      "label": "Vector DB Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/database/",
+      "tooltip": "DB Conventions",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s23_b25_S4",
+      "label": "Agent Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/",
+      "tooltip": "Agent Conventions",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s34_b39_COMPILE",
+      "label": "MODEL OPTIMIZATION",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html",
+      "tooltip": "torch.compile",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COMPILE"
+    },
+    {
+      "id": "s34_b39_GRAPH",
+      "label": "Graph Optimization",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/fx.html",
+      "tooltip": "PyTorch FX",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GRAPH"
+    },
+    {
+      "id": "s34_b39_QUANT",
+      "label": "Quantization",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://huggingface.co/docs/transformers/quantization",
+      "tooltip": "HF Quantization",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "QUANT"
+    },
+    {
+      "id": "s34_b39_COMPILERS",
+      "label": "Compilers",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://openxla.org/",
+      "tooltip": "OpenXLA",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COMPILERS"
+    },
+    {
+      "id": "s34_b39_FORMATS",
+      "label": "Exchange Formats",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://onnx.ai/",
+      "tooltip": "ONNX",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FORMATS"
+    },
+    {
+      "id": "s34_b39_GR1",
+      "label": "Operator Fusion",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/fx.html#module-torch.fx",
+      "tooltip": "Operator Fusion",
+      "style": null,
+      "parent": null,
+      "original_id": "GR1"
+    },
+    {
+      "id": "s34_b39_GR2",
+      "label": "Constant Folding",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://onnxruntime.ai/docs/performance/graph-optimizations.html",
+      "tooltip": "ONNX Runtime Opts",
+      "style": null,
+      "parent": null,
+      "original_id": "GR2"
+    },
+    {
+      "id": "s34_b39_GR3",
+      "label": "Memory Planning",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://tvm.apache.org/docs/",
+      "tooltip": "TVM Memory",
+      "style": null,
+      "parent": null,
+      "original_id": "GR3"
+    },
+    {
+      "id": "s34_b39_GR4",
+      "label": "Layout Optimization",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://tvm.apache.org/docs/",
+      "tooltip": "Layout Optimization",
+      "style": null,
+      "parent": null,
+      "original_id": "GR4"
+    },
+    {
+      "id": "s34_b39_Q1",
+      "label": "Post-Training Quant",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/quantization.html",
+      "tooltip": "PyTorch Quantization",
+      "style": null,
+      "parent": null,
+      "original_id": "Q1"
+    },
+    {
+      "id": "s34_b39_Q2",
+      "label": "Quantization-Aware Training",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/quantization.html#quantization-aware-training",
+      "tooltip": "QAT",
+      "style": null,
+      "parent": null,
+      "original_id": "Q2"
+    },
+    {
+      "id": "s34_b39_Q3",
+      "label": "INT8/INT4/FP8",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://huggingface.co/docs/transformers/main/quantization/overview",
+      "tooltip": "Quantization Types",
+      "style": null,
+      "parent": null,
+      "original_id": "Q3"
+    },
+    {
+      "id": "s34_b39_Q4",
+      "label": "GGUF/AWQ/GPTQ",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "tooltip": "GGUF/llama.cpp",
+      "style": null,
+      "parent": null,
+      "original_id": "Q4"
+    },
+    {
+      "id": "s34_b39_C1",
+      "label": "XLA",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://openxla.org/xla",
+      "tooltip": "XLA",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s34_b39_C2",
+      "label": "TVM",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://tvm.apache.org/",
+      "tooltip": "Apache TVM",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s34_b39_C3",
+      "label": "TensorRT",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://developer.nvidia.com/tensorrt",
+      "tooltip": "TensorRT",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s34_b39_C4",
+      "label": "torch.compile",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/torch.compiler.html",
+      "tooltip": "torch.compile",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s34_b39_F1",
+      "label": "ONNX",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://onnx.ai/",
+      "tooltip": "ONNX",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s34_b39_F2",
+      "label": "TorchScript",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://pytorch.org/docs/stable/jit.html",
+      "tooltip": "TorchScript",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s34_b39_F3",
+      "label": "SavedModel TF",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://www.tensorflow.org/guide/saved_model",
+      "tooltip": "TF SavedModel",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s34_b39_F4",
+      "label": "Core ML",
+      "type": "node",
+      "section_id": 34,
+      "block_id": 39,
+      "url": "https://coremltools.readme.io/",
+      "tooltip": "Core ML Tools",
+      "style": null,
+      "parent": null,
+      "original_id": "F4"
+    },
+    {
+      "id": "s40_b48_CALIB",
+      "label": "MODEL CALIBRATION",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Calibration Paper",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CALIB"
+    },
+    {
+      "id": "s40_b48_POST",
+      "label": "Post-hoc Calibration",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "tooltip": "Sklearn Calibration",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "POST"
+    },
+    {
+      "id": "s40_b48_METRICS",
+      "label": "Calibration Metrics",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Calibration Metrics",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "METRICS"
+    },
+    {
+      "id": "s40_b48_CONFORMAL",
+      "label": "Conformal Prediction",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://www.conformalprediction.com/",
+      "tooltip": "Conformal Prediction",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CONFORMAL"
+    },
+    {
+      "id": "s40_b48_VIZ",
+      "label": "Visualization",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "tooltip": "Reliability Diagrams",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VIZ"
+    },
+    {
+      "id": "s40_b48_P1",
+      "label": "Temperature Scaling",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Temperature Scaling Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s40_b48_P2",
+      "label": "Platt Scaling",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html#calibration",
+      "tooltip": "Platt Scaling",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s40_b48_P3",
+      "label": "Isotonic Regression",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html#calibration",
+      "tooltip": "Isotonic Regression",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s40_b48_P4",
+      "label": "Histogram Binning",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Histogram Binning",
+      "style": null,
+      "parent": null,
+      "original_id": "P4"
+    },
+    {
+      "id": "s40_b48_M1",
+      "label": "ECE Expected Cal Error",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "ECE Definition",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s40_b48_M2",
+      "label": "Brier Score",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html#brier-score-loss",
+      "tooltip": "Brier Score",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s40_b48_M3",
+      "label": "MCE Max Cal Error",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Maximum Calibration Error",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s40_b48_M4",
+      "label": "Log Loss",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html#log-loss",
+      "tooltip": "Log Loss",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s40_b48_C1",
+      "label": "Split Conformal",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/2107.07511",
+      "tooltip": "Split Conformal",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s40_b48_C2",
+      "label": "CV+ Conformal",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1905.02928",
+      "tooltip": "CV+ Conformal",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s40_b48_C3",
+      "label": "Conformalized Quantile",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1905.03222",
+      "tooltip": "CQR Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s40_b48_C4",
+      "label": "Adaptive Prediction Sets",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/2006.02544",
+      "tooltip": "Adaptive Prediction Sets",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s40_b48_V1",
+      "label": "Reliability Diagrams",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "tooltip": "Reliability Diagram",
+      "style": null,
+      "parent": null,
+      "original_id": "V1"
+    },
+    {
+      "id": "s40_b48_V2",
+      "label": "Calibration Curves",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html",
+      "tooltip": "Calibration Curves",
+      "style": null,
+      "parent": null,
+      "original_id": "V2"
+    },
+    {
+      "id": "s40_b48_V3",
+      "label": "Confidence Histograms",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Confidence Histograms",
+      "style": null,
+      "parent": null,
+      "original_id": "V3"
+    },
+    {
+      "id": "s40_b48_V4",
+      "label": "Prediction Intervals",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://mapie.readthedocs.io/",
+      "tooltip": "MAPIE Intervals",
+      "style": null,
+      "parent": null,
+      "original_id": "V4"
+    },
+    {
+      "id": "s45_b53_OPENSOURCE",
+      "label": "\ud83c\udf10 OPEN SOURCE AI",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OPENSOURCE"
+    },
+    {
+      "id": "s45_b53_MODELS",
+      "label": "\ud83d\udce6 Open Models",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "MODELS"
+    },
+    {
+      "id": "s45_b53_TOOLS",
+      "label": "\ud83d\udee0\ufe0f Open Tools",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "TOOLS"
+    },
+    {
+      "id": "s45_b53_DATA",
+      "label": "\ud83d\udcca Open Data",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "DATA"
+    },
+    {
+      "id": "s45_b53_COMMUNITY",
+      "label": "\ud83d\udc65 Communities",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "COMMUNITY"
+    },
+    {
+      "id": "s45_b53_OM",
+      "label": "OPEN MODELS",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OM"
+    },
+    {
+      "id": "s45_b53_OM1",
+      "label": "Meta LLaMA",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Meta LLaMA",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM1"
+    },
+    {
+      "id": "s45_b53_OM2",
+      "label": "Mistral Models",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://mistral.ai/technology/#models",
+      "tooltip": "Mistral Models",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM2"
+    },
+    {
+      "id": "s45_b53_OM3",
+      "label": "Falcon TII",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://falconllm.tii.ae/",
+      "tooltip": "Falcon LLM",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM3"
+    },
+    {
+      "id": "s45_b53_OM4",
+      "label": "BLOOM BigScience",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://huggingface.co/bigscience/bloom",
+      "tooltip": "BLOOM",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM4"
+    },
+    {
+      "id": "s45_b53_OM5",
+      "label": "Stable Diffusion",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://stability.ai/stable-image",
+      "tooltip": "Stable Diffusion",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM5"
+    },
+    {
+      "id": "s45_b53_OM6",
+      "label": "Whisper OpenAI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/openai/whisper",
+      "tooltip": "Whisper",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM6"
+    },
+    {
+      "id": "s45_b53_OM7",
+      "label": "Qwen Alibaba",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/QwenLM/Qwen",
+      "tooltip": "Qwen",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM7"
+    },
+    {
+      "id": "s45_b53_OM8",
+      "label": "DeepSeek Coder",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+      "tooltip": "DeepSeek Coder",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM8"
+    },
+    {
+      "id": "s45_b53_OT",
+      "label": "OPEN TOOLS",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OT"
+    },
+    {
+      "id": "s45_b53_OT1",
+      "label": "Hugging Face",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://huggingface.co/",
+      "tooltip": "Hugging Face",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT1"
+    },
+    {
+      "id": "s45_b53_OT2",
+      "label": "LangChain",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.langchain.com/",
+      "tooltip": "LangChain",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT2"
+    },
+    {
+      "id": "s45_b53_OT3",
+      "label": "LlamaIndex",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.llamaindex.ai/",
+      "tooltip": "LlamaIndex",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT3"
+    },
+    {
+      "id": "s45_b53_OT4",
+      "label": "vLLM",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://docs.vllm.ai/",
+      "tooltip": "vLLM",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT4"
+    },
+    {
+      "id": "s45_b53_OT5",
+      "label": "Ollama",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://ollama.com/",
+      "tooltip": "Ollama",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT5"
+    },
+    {
+      "id": "s45_b53_OT6",
+      "label": "LocalAI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://localai.io/",
+      "tooltip": "LocalAI",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT6"
+    },
+    {
+      "id": "s45_b53_OT7",
+      "label": "Text Gen WebUI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/oobabooga/text-generation-webui",
+      "tooltip": "Text Gen WebUI",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT7"
+    },
+    {
+      "id": "s45_b53_OT8",
+      "label": "Jan AI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://jan.ai/",
+      "tooltip": "Jan AI",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT8"
+    },
+    {
+      "id": "s45_b53_OD",
+      "label": "OPEN DATASETS",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OD"
+    },
+    {
+      "id": "s45_b53_OD1",
+      "label": "Common Crawl",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://commoncrawl.org/",
+      "tooltip": "Common Crawl",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD1"
+    },
+    {
+      "id": "s45_b53_OD2",
+      "label": "The Pile",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://pile.eleuther.ai/",
+      "tooltip": "The Pile",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD2"
+    },
+    {
+      "id": "s45_b53_OD3",
+      "label": "RedPajama",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/togethercomputer/RedPajama-Data",
+      "tooltip": "RedPajama",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD3"
+    },
+    {
+      "id": "s45_b53_OD4",
+      "label": "LAION",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://laion.ai/",
+      "tooltip": "LAION",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD4"
+    },
+    {
+      "id": "s45_b53_OD5",
+      "label": "OpenImages",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://storage.googleapis.com/openimages/web/index.html",
+      "tooltip": "Open Images",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD5"
+    },
+    {
+      "id": "s45_b53_OD6",
+      "label": "LibriSpeech",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.openslr.org/12",
+      "tooltip": "LibriSpeech",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD6"
+    },
+    {
+      "id": "s45_b53_CM",
+      "label": "COMMUNITIES",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CM"
+    },
+    {
+      "id": "s45_b53_CM1",
+      "label": "Hugging Face Hub",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://huggingface.co/models",
+      "tooltip": "HF Model Hub",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM1"
+    },
+    {
+      "id": "s45_b53_CM2",
+      "label": "GitHub ML",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/topics/machine-learning",
+      "tooltip": "GitHub ML",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM2"
+    },
+    {
+      "id": "s45_b53_CM3",
+      "label": "Kaggle",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.kaggle.com/",
+      "tooltip": "Kaggle",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM3"
+    },
+    {
+      "id": "s45_b53_CM4",
+      "label": "Papers With Code",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://paperswithcode.com/",
+      "tooltip": "Papers With Code",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM4"
+    },
+    {
+      "id": "s45_b53_CM5",
+      "label": "r/LocalLLaMA",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.reddit.com/r/LocalLLaMA/",
+      "tooltip": "r/LocalLLaMA",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM5"
+    },
+    {
+      "id": "s45_b53_CM6",
+      "label": "EleutherAI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.eleuther.ai/",
+      "tooltip": "EleutherAI",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM6"
+    },
+    {
+      "id": "s22_b65_Command_R",
+      "label": "Command-R",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 65,
+      "url": "https://cohere.com/command",
+      "tooltip": "Cohere enterprise LLM",
+      "style": null,
+      "parent": null,
+      "original_id": "Command-R"
+    },
+    {
+      "id": "s22_b66_Midjourney",
+      "label": "Midjourney",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 66,
+      "url": "https://www.midjourney.com/",
+      "tooltip": "AI image generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Midjourney"
+    },
+    {
+      "id": "s22_b67_Flux",
+      "label": "Flux",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 67,
+      "url": "https://blackforestlabs.ai/",
+      "tooltip": "Black Forest Labs image model",
+      "style": null,
+      "parent": null,
+      "original_id": "Flux"
+    },
+    {
+      "id": "s22_b68_Adobe_Fire",
+      "label": "Adobe Firefly",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 68,
+      "url": "https://www.adobe.com/products/firefly.html",
+      "tooltip": "Adobe generative AI",
+      "style": null,
+      "parent": null,
+      "original_id": "Adobe_Firefly"
+    },
+    {
+      "id": "s22_b69_Runway",
+      "label": "Runway",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 69,
+      "url": "https://runwayml.com/",
+      "tooltip": "AI video generation platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Runway"
+    },
+    {
+      "id": "s22_b70_Pika",
+      "label": "Pika",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 70,
+      "url": "https://pika.art/",
+      "tooltip": "AI video generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Pika"
+    },
+    {
+      "id": "s22_b71_Kling",
+      "label": "Kling",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 71,
+      "url": "https://kling.kuaishou.com/",
+      "tooltip": "Kuaishou video AI",
+      "style": null,
+      "parent": null,
+      "original_id": "Kling"
+    },
+    {
+      "id": "s22_b72_Luma_Dream",
+      "label": "Luma Dream Machine",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 72,
+      "url": "https://lumalabs.ai/dream-machine",
+      "tooltip": "AI video generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Luma_Dream_Machine"
+    },
+    {
+      "id": "s22_b73_ElevenLabs",
+      "label": "ElevenLabs",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 73,
+      "url": "https://elevenlabs.io/",
+      "tooltip": "AI voice synthesis",
+      "style": null,
+      "parent": null,
+      "original_id": "ElevenLabs"
+    },
+    {
+      "id": "s22_b74_MusicLM",
+      "label": "MusicLM",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 74,
+      "url": "https://google-research.github.io/seanet/musiclm/examples/",
+      "tooltip": "Google music generation",
+      "style": null,
+      "parent": null,
+      "original_id": "MusicLM"
+    },
+    {
+      "id": "s23_b93_RAGAS",
+      "label": "RAGAS",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 93,
+      "url": "https://docs.ragas.io/",
+      "tooltip": "RAG evaluation framework",
+      "style": null,
+      "parent": null,
+      "original_id": "RAGAS"
+    },
+    {
+      "id": "s23_b94_DeepEval",
+      "label": "DeepEval",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 94,
+      "url": "https://docs.confident-ai.com/",
+      "tooltip": "LLM evaluation framework",
+      "style": null,
+      "parent": null,
+      "original_id": "DeepEval"
+    },
+    {
+      "id": "s23_b95_TruLens",
+      "label": "TruLens",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 95,
+      "url": "https://www.trulens.org/",
+      "tooltip": "LLM app evaluation",
+      "style": null,
+      "parent": null,
+      "original_id": "TruLens"
+    },
+    {
+      "id": "s23_b96_Giskard",
+      "label": "Giskard",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 96,
+      "url": "https://www.giskard.ai/",
+      "tooltip": "ML testing framework",
+      "style": null,
+      "parent": null,
+      "original_id": "Giskard"
+    },
+    {
+      "id": "s23_b97_Patronus_A",
+      "label": "Patronus AI",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 97,
+      "url": "https://www.patronus.ai/",
+      "tooltip": "LLM evaluation platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Patronus_AI"
+    },
+    {
+      "id": "s23_b98_MMLU",
+      "label": "MMLU",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 98,
+      "url": "https://paperswithcode.com/dataset/mmlu",
+      "tooltip": "Massive Multitask Language Understanding",
+      "style": null,
+      "parent": null,
+      "original_id": "MMLU"
+    },
+    {
+      "id": "s23_b99_HumanEval",
+      "label": "HumanEval",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 99,
+      "url": "https://github.com/openai/human-eval",
+      "tooltip": "Code generation benchmark",
+      "style": null,
+      "parent": null,
+      "original_id": "HumanEval"
+    },
+    {
+      "id": "s23_b100_GSM8K",
+      "label": "GSM8K",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 100,
+      "url": "https://github.com/openai/grade-school-math",
+      "tooltip": "Math reasoning benchmark",
+      "style": null,
+      "parent": null,
+      "original_id": "GSM8K"
+    },
+    {
+      "id": "s23_b101_MATH",
+      "label": "MATH",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 101,
+      "url": "https://github.com/hendrycks/math",
+      "tooltip": "Mathematics benchmark",
+      "style": null,
+      "parent": null,
+      "original_id": "MATH"
+    },
+    {
+      "id": "s23_b102_HellaSwag",
+      "label": "HellaSwag",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 102,
+      "url": "https://rowanzellers.com/hellaswag/",
+      "tooltip": "Commonsense reasoning",
+      "style": null,
+      "parent": null,
+      "original_id": "HellaSwag"
+    },
+    {
+      "id": "s23_b103_ARC",
+      "label": "ARC",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 103,
+      "url": "https://allenai.org/data/arc",
+      "tooltip": "AI2 Reasoning Challenge",
+      "style": null,
+      "parent": null,
+      "original_id": "ARC"
+    },
+    {
+      "id": "s19_b115_Axolotl",
+      "label": "Axolotl",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 115,
+      "url": "https://github.com/OpenAccess-AI-Collective/axolotl",
+      "tooltip": "Fine-tuning toolkit",
+      "style": null,
+      "parent": null,
+      "original_id": "Axolotl"
+    },
+    {
+      "id": "s19_b116_Unsloth",
+      "label": "Unsloth",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 116,
+      "url": "https://github.com/unslothai/unsloth",
+      "tooltip": "2x faster fine-tuning",
+      "style": null,
+      "parent": null,
+      "original_id": "Unsloth"
+    },
+    {
+      "id": "s19_b117_LLaMA_Fact",
+      "label": "LLaMA-Factory",
+      "type": "node",
+      "section_id": 19,
+      "block_id": 117,
+      "url": "https://github.com/hiyouga/LLaMA-Factory",
+      "tooltip": "Easy LLM fine-tuning",
+      "style": null,
+      "parent": null,
+      "original_id": "LLaMA-Factory"
+    },
+    {
+      "id": "s23_b134_LangFuse",
+      "label": "LangFuse",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 134,
+      "url": "https://langfuse.com/",
+      "tooltip": "Open-source LLM observability",
+      "style": null,
+      "parent": null,
+      "original_id": "LangFuse"
+    },
+    {
+      "id": "s23_b135_LangSmith",
+      "label": "LangSmith",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 135,
+      "url": "https://smith.langchain.com/",
+      "tooltip": "LangChain debugging platform",
+      "style": null,
+      "parent": null,
+      "original_id": "LangSmith"
+    },
+    {
+      "id": "s23_b136_Arize_AI",
+      "label": "Arize AI",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 136,
+      "url": "https://arize.com/",
+      "tooltip": "ML observability platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Arize_AI"
+    },
+    {
+      "id": "s23_b137_Phoenix",
+      "label": "Phoenix",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 137,
+      "url": "https://docs.arize.com/phoenix/",
+      "tooltip": "ML observability notebook",
+      "style": null,
+      "parent": null,
+      "original_id": "Phoenix"
+    },
+    {
+      "id": "s23_b138_Helicone",
+      "label": "Helicone",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 138,
+      "url": "https://www.helicone.ai/",
+      "tooltip": "LLM observability & cost tracking",
+      "style": null,
+      "parent": null,
+      "original_id": "Helicone"
+    },
+    {
+      "id": "s23_b139_PromptLaye",
+      "label": "PromptLayer",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 139,
+      "url": "https://promptlayer.com/",
+      "tooltip": "Prompt engineering platform",
+      "style": null,
+      "parent": null,
+      "original_id": "PromptLayer"
+    },
+    {
+      "id": "s23_b140_Promptfoo",
+      "label": "Promptfoo",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 140,
+      "url": "https://www.promptfoo.dev/",
+      "tooltip": "LLM testing & evaluation",
+      "style": null,
+      "parent": null,
+      "original_id": "Promptfoo"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_PROMPT",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_RAG",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_PEFT",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_ALIGN",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_CUSTOM",
+      "target": "s19_b19_ADV",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PROMPT",
+      "target": "s19_b19_P1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PROMPT",
+      "target": "s19_b19_P2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PROMPT",
+      "target": "s19_b19_P3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_RAG",
+      "target": "s19_b19_R1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_RAG",
+      "target": "s19_b19_R2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PEFT",
+      "target": "s19_b19_F1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PEFT",
+      "target": "s19_b19_F2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_PEFT",
+      "target": "s19_b19_F3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ALIGN",
+      "target": "s19_b19_A1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ALIGN",
+      "target": "s19_b19_A2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ALIGN",
+      "target": "s19_b19_A3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ADV",
+      "target": "s19_b19_AD1",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ADV",
+      "target": "s19_b19_AD2",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b19_ADV",
+      "target": "s19_b19_AD3",
+      "type": "regular",
+      "section_id": 19,
+      "block_id": 19
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_Apply",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_Uses",
+      "type": "thick",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_E1",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_E2",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Extract",
+      "target": "s19_b20_E3",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_A1",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_A2",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Apply",
+      "target": "s19_b20_A3",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U1",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U2",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U3",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s19_b20_Uses",
+      "target": "s19_b20_U4",
+      "type": "contains",
+      "section_id": 19,
+      "block_id": 20
+    },
+    {
+      "source": "s22_b23_OpenAI",
+      "target": "s22_b23_OA1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_OpenAI",
+      "target": "s22_b23_OA2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_OpenAI",
+      "target": "s22_b23_OA3",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Anthropic",
+      "target": "s22_b23_AN1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Anthropic",
+      "target": "s22_b23_AN2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Google",
+      "target": "s22_b23_GO1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Google",
+      "target": "s22_b23_GO2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Meta",
+      "target": "s22_b23_ME1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Meta",
+      "target": "s22_b23_ME2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Mistral",
+      "target": "s22_b23_MI1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Mistral",
+      "target": "s22_b23_MI2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_xAI",
+      "target": "s22_b23_XA1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_EVAL",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_MONITOR",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_VERSION",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_TEST",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_EVAL",
+      "target": "s23_b24_E1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_EVAL",
+      "target": "s23_b24_E2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_EVAL",
+      "target": "s23_b24_E3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_VERSION",
+      "target": "s23_b24_V1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_VERSION",
+      "target": "s23_b24_V2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_VERSION",
+      "target": "s23_b24_V3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_TEST",
+      "target": "s23_b24_T1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_TEST",
+      "target": "s23_b24_T2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_TEST",
+      "target": "s23_b24_T3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_TRACE",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_METRICS",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_LOGS",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_SEM",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_GRAPH",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_QUANT",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_COMPILERS",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILE",
+      "target": "s34_b39_FORMATS",
+      "type": "thick",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_GRAPH",
+      "target": "s34_b39_GR4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_QUANT",
+      "target": "s34_b39_Q4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_COMPILERS",
+      "target": "s34_b39_C4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F1",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F2",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F3",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s34_b39_FORMATS",
+      "target": "s34_b39_F4",
+      "type": "regular",
+      "section_id": 34,
+      "block_id": 39
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_POST",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_METRICS",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_CONFORMAL",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_VIZ",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s45_b53_MODELS",
+      "target": "s45_b53_OM",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_TOOLS",
+      "target": "s45_b53_OT",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_DATA",
+      "target": "s45_b53_OD",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_COMMUNITY",
+      "target": "s45_b53_CM",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_MODELS",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_TOOLS",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_DATA",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_COMMUNITY",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM7",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM8",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT7",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT8",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    }
+  ]
+}

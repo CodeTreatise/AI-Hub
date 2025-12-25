@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "id": 10,
+    "title": "AI Tech Stack",
+    "description": "Languages, frameworks, tools",
+    "slug": "ai-tech-stack",
+    "totalNodes": 15,
+    "totalEdges": 11
+  },
+  "sections": [
+    {
+      "id": 10,
+      "title": "AI Tech Stack",
+      "slug": "10-ai-tech-stack",
+      "description": "Languages, frameworks, tools",
+      "line": 602
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s10_b10_Lang",
+      "label": "LANGUAGES",
+      "type": "subgraph",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://www.python.org/",
+      "tooltip": "Programming Languages",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Lang"
+    },
+    {
+      "id": "s10_b10_PY",
+      "label": "Python",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://python.org/",
+      "tooltip": "Python.org",
+      "style": null,
+      "parent": "s10_b10_Lang",
+      "original_id": "PY"
+    },
+    {
+      "id": "s10_b10_CPP",
+      "label": "C++",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://isocpp.org/",
+      "tooltip": "C++ Standard",
+      "style": null,
+      "parent": "s10_b10_Lang",
+      "original_id": "CPP"
+    },
+    {
+      "id": "s10_b10_Frame",
+      "label": "FRAMEWORKS",
+      "type": "subgraph",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://pytorch.org/",
+      "tooltip": "ML Frameworks",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Frame"
+    },
+    {
+      "id": "s10_b10_PT",
+      "label": "PyTorch",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://pytorch.org/docs/",
+      "tooltip": "PyTorch Docs",
+      "style": null,
+      "parent": "s10_b10_Frame",
+      "original_id": "PT"
+    },
+    {
+      "id": "s10_b10_TF",
+      "label": "TensorFlow",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://www.tensorflow.org/tutorials",
+      "tooltip": "TensorFlow Tutorials",
+      "style": null,
+      "parent": "s10_b10_Frame",
+      "original_id": "TF"
+    },
+    {
+      "id": "s10_b10_LLM",
+      "label": "LLM TOOLS",
+      "type": "subgraph",
+      "section_id": 10,
+      "block_id": 10,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLM"
+    },
+    {
+      "id": "s10_b10_LC",
+      "label": "LangChain",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://python.langchain.com/docs/",
+      "tooltip": "LangChain Docs",
+      "style": null,
+      "parent": "s10_b10_LLM",
+      "original_id": "LC"
+    },
+    {
+      "id": "s10_b10_HF",
+      "label": "HuggingFace",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://huggingface.co/docs",
+      "tooltip": "HuggingFace Docs",
+      "style": null,
+      "parent": "s10_b10_LLM",
+      "original_id": "HF"
+    },
+    {
+      "id": "s10_b10_VDB",
+      "label": "VECTOR DBs",
+      "type": "subgraph",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://www.pinecone.io/",
+      "tooltip": "Vector Databases",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VDB"
+    },
+    {
+      "id": "s10_b10_PC",
+      "label": "Pinecone",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://docs.pinecone.io/",
+      "tooltip": "Pinecone Docs",
+      "style": null,
+      "parent": "s10_b10_VDB",
+      "original_id": "PC"
+    },
+    {
+      "id": "s10_b10_CH",
+      "label": "Chroma",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 10,
+      "url": "https://docs.trychroma.com/",
+      "tooltip": "ChromaDB Docs",
+      "style": null,
+      "parent": "s10_b10_VDB",
+      "original_id": "CH"
+    },
+    {
+      "id": "s10_b118_Haystack",
+      "label": "Haystack",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 118,
+      "url": "https://haystack.deepset.ai/",
+      "tooltip": "LLM application framework",
+      "style": null,
+      "parent": null,
+      "original_id": "Haystack"
+    },
+    {
+      "id": "s10_b119_Semantic_K",
+      "label": "Semantic Kernel",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 119,
+      "url": "https://learn.microsoft.com/semantic-kernel/",
+      "tooltip": "Microsoft AI SDK",
+      "style": null,
+      "parent": null,
+      "original_id": "Semantic_Kernel"
+    },
+    {
+      "id": "s10_b120_DSPy",
+      "label": "DSPy",
+      "type": "node",
+      "section_id": 10,
+      "block_id": 120,
+      "url": "https://dspy-docs.vercel.app/",
+      "tooltip": "Programming with foundation models",
+      "style": null,
+      "parent": null,
+      "original_id": "DSPy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s10_b10_Lang",
+      "target": "s10_b10_Frame",
+      "type": "thick",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_Frame",
+      "target": "s10_b10_LLM",
+      "type": "thick",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_LLM",
+      "target": "s10_b10_VDB",
+      "type": "thick",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_Lang",
+      "target": "s10_b10_PY",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_Lang",
+      "target": "s10_b10_CPP",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_Frame",
+      "target": "s10_b10_PT",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_Frame",
+      "target": "s10_b10_TF",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_LLM",
+      "target": "s10_b10_LC",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_LLM",
+      "target": "s10_b10_HF",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_VDB",
+      "target": "s10_b10_PC",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    },
+    {
+      "source": "s10_b10_VDB",
+      "target": "s10_b10_CH",
+      "type": "contains",
+      "section_id": 10,
+      "block_id": 10
+    }
+  ]
+}

@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Mode - GenAI Learning</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --border: #30363d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --accent-purple: #a371f7;
+            --accent-green: #3fb950;
+            --accent-orange: #d29922;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        #app {
+            display: flex;
+            height: 100vh;
+        }
+        
+        /* ===== LEFT SIDEBAR: Navigation ===== */
+        #nav-sidebar {
+            width: 280px;
+            min-width: 280px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s;
+        }
+        
+        #nav-sidebar.collapsed {
+            width: 60px;
+            min-width: 60px;
+        }
+        
+        .nav-header {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .nav-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        #nav-sidebar.collapsed .nav-title span { display: none; }
+        
+        .collapse-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 4px;
+        }
+        
+        .collapse-btn:hover { background: var(--bg-tertiary); }
+        
+        /* Progress bar */
+        .progress-container {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        #nav-sidebar.collapsed .progress-container { display: none; }
+        
+        .progress-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: var(--bg-tertiary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent));
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+        
+        /* View toggle */
+        .view-toggle {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        #nav-sidebar.collapsed .view-toggle { display: none; }
+        
+        .toggle-btn {
+            flex: 1;
+            padding: 0.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        
+        .toggle-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        .toggle-btn:hover:not(.active) {
+            background: var(--bg-primary);
+        }
+        
+        /* Sections list */
+        #sections-nav {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem;
+        }
+        
+        .section-group {
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 0.75rem;
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .section-header:hover {
+            background: var(--bg-primary);
+        }
+        
+        .section-header.active {
+            background: rgba(88, 166, 255, 0.15);
+            border-left: 3px solid var(--accent);
+        }
+        
+        .section-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        
+        .section-name {
+            flex: 1;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        #nav-sidebar.collapsed .section-name { display: none; }
+        
+        .section-count {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            background: var(--bg-primary);
+            padding: 0.15rem 0.4rem;
+            border-radius: 10px;
+        }
+        
+        #nav-sidebar.collapsed .section-count { display: none; }
+        
+        .section-items {
+            padding-left: 1.5rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        /* When sidebar is collapsed, keep sub-items usable but icon-only */
+        #nav-sidebar.collapsed .section-items {
+            padding-left: 0;
+        }
+        
+        .section-group.expanded .section-items {
+            display: block;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .nav-icon {
+            width: 1.25rem;
+            text-align: center;
+            flex: 0 0 1.25rem;
+        }
+
+        .nav-label {
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #nav-sidebar.collapsed .nav-item {
+            justify-content: center;
+            padding: 0.6rem;
+        }
+
+        #nav-sidebar.collapsed .nav-label {
+            display: none;
+        }
+
+        #nav-sidebar.collapsed .section-header {
+            justify-content: center;
+            padding: 0.6rem;
+        }
+        
+        .nav-item:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .nav-item.active {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+        }
+        
+        .nav-item.completed::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-size: 0.7rem;
+        }
+        
+        /* ===== CENTER: Graph + Cards View ===== */
+        #main-view {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        /* Hide main view when content is open */
+        #main-view.hidden {
+            display: none;
+        }
+        
+        /* Top bar */
+        .top-bar {
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover { color: var(--accent); }
+        
+        .breadcrumb .current {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .top-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .action-btn {
+            padding: 0.4rem 0.8rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+        }
+        
+        .action-btn:hover {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        /* Graph container */
+        #graph-view {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #graph-svg {
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+        }
+        
+        /* Cards view (alternative to graph) */
+        #cards-view {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: none;
+        }
+        
+        #cards-view.active {
+            display: block;
+        }
+        
+        #graph-view.hidden {
+            display: none;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .module-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 4px 20px rgba(88, 166, 255, 0.15);
+        }
+        
+        .module-card.completed {
+            border-color: var(--accent-green);
+        }
+        
+        .module-card.completed::after {
+            content: '✓';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-green);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        .module-card.current {
+            border-color: var(--accent-orange);
+            background: rgba(210, 153, 34, 0.1);
+        }
+        
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .card-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+        
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        /* Graph controls */
+        .graph-controls {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            background: var(--bg-secondary);
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .graph-btn {
+            padding: 0.4rem 0.75rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+        
+        .graph-btn:hover, .graph-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        /* ===== RIGHT: Content Panel ===== */
+        #content-panel {
+            display: none;
+            flex: 1;
+            background: var(--bg-primary);
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        #content-panel.open {
+            display: flex;
+        }
+        
+        .content-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-secondary);
+            flex-shrink: 0;
+        }
+        
+        .content-title-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .back-to-graph {
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            margin-right: 0.5rem;
+        }
+        
+        .back-to-graph:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        .content-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .content-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .nav-position {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding: 0 0.5rem;
+        }
+        
+        .nav-arrow {
+            padding: 0.5rem 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .nav-arrow:hover:not(:disabled) {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        #content-frame {
+            flex: 1;
+            border: none;
+            background: var(--bg-primary);
+        }
+        
+        /* Loading state */
+        .loading-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+        }
+        
+        .spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        
+        .tooltip.visible { opacity: 1; }
+        
+        .tooltip-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .tooltip-type {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+        
+        /* Quick actions floating */
+        .quick-nav {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 100;
+        }
+        
+        #content-panel.open ~ .quick-nav {
+            display: none;
+        }
+        
+        .quick-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.2s;
+        }
+        
+        .quick-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            #nav-sidebar { width: 240px; min-width: 240px; }
+            #content-panel.open { width: 50%; min-width: 400px; }
+        }
+        
+        @media (max-width: 900px) {
+            #nav-sidebar { 
+                position: absolute; 
+                left: 0; 
+                top: 0; 
+                height: 100%; 
+                z-index: 200;
+                transform: translateX(-100%);
+            }
+            #nav-sidebar.mobile-open { transform: translateX(0); }
+            #content-panel.open { width: 100%; min-width: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Left Navigation -->
+        <aside id="nav-sidebar">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <span>📚</span>
+                    <span>GenAI Course</span>
+                </div>
+                <button class="collapse-btn" onclick="toggleSidebar()" title="Collapse">☰</button>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Progress</span>
+                    <span id="progress-text">0/8 modules</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <div class="view-toggle">
+                <button class="toggle-btn active" data-view="graph" onclick="switchView('graph')">📊 Graph</button>
+                <button class="toggle-btn" data-view="cards" onclick="switchView('cards')">🃏 Cards</button>
+            </div>
+            
+            <nav id="sections-nav">
+                <!-- Populated by JS -->
+            </nav>
+        </aside>
+        
+        <!-- Main View Area -->
+        <main id="main-view">
+            <div class="top-bar">
+                <div class="breadcrumb">
+                    <a href="../index.html">🏠 Hub</a>
+                    <span>›</span>
+                    <span class="current" id="current-section">GenAI Learning Path</span>
+                </div>
+                <div class="top-actions">
+                    <button class="action-btn" onclick="resetProgress()">🔄 Reset</button>
+                    <button class="action-btn" onclick="showGraphView()">📊 Graph View</button>
+                </div>
+            </div>
+            
+            <!-- Graph View -->
+            <div id="graph-view">
+                <svg id="graph-svg"></svg>
+                <div class="graph-controls">
+                    <button class="graph-btn active" data-layout="force">Force</button>
+                    <button class="graph-btn" data-layout="radial">Radial</button>
+                    <button class="graph-btn" id="toggle-labels">Labels</button>
+                    <button class="graph-btn" onclick="resetZoom()">Reset</button>
+                </div>
+            </div>
+            
+            <!-- Cards View -->
+            <div id="cards-view">
+                <div class="cards-grid" id="cards-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </main>
+        
+        <!-- Content Panel (slides in from right) -->
+        <aside id="content-panel">
+            <div class="content-header">
+                <div class="content-title-section">
+                    <button class="back-to-graph" onclick="closeContent()" title="Back to Graph">
+                        ← Back
+                    </button>
+                    <span id="content-icon">📖</span>
+                    <span class="content-title" id="content-title">Module</span>
+                </div>
+                <div class="content-nav">
+                    <button class="nav-arrow" id="prev-btn" onclick="navigateContent(-1)" title="Previous">← Prev</button>
+                    <span class="nav-position" id="nav-position">1/8</span>
+                    <button class="nav-arrow" id="next-btn" onclick="navigateContent(1)" title="Next">Next →</button>
+                </div>
+            </div>
+            <iframe id="content-frame" src="about:blank"></iframe>
+        </aside>
+        
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip">
+            <div class="tooltip-title"></div>
+            <div class="tooltip-type"></div>
+        </div>
+    </div>
+    
+    <!-- Quick navigation fab -->
+    <div class="quick-nav">
+        <button class="quick-btn" onclick="continueStudy()" title="Continue where you left off">▶</button>
+    </div>
+
+    <script>
+        // State
+        let graphData = null;
+        let simulation = null;
+        let currentView = 'graph';
+        let currentContentIndex = -1;
+        let contentList = [];
+        let completedModules = new Set();
+        let showLabels = true;
+        
+        // Color palette
+        const colors = d3.schemeTableau10;
+        
+        // Course modules (ordered)
+        const courseModules = [
+            { id: 'module-0', title: 'The Big Picture', icon: '🎯', path: '../data/course/module-0-overview/index.html', desc: 'Overview of GenAI and RAG concepts' },
+            { id: 'module-1', title: 'Docker & Dev Environment', icon: '🐳', path: '../data/course/module-1-docker/index.html', desc: 'Set up your development environment' },
+            { id: 'module-2', title: 'Database Foundations', icon: '🗄️', path: '../data/course/module-2-postgres/index.html', desc: 'PostgreSQL with pgvector' },
+            { id: 'module-3', title: 'LLM Fundamentals', icon: '🤖', path: '../data/course/module-3-llm/index.html', desc: 'OpenAI API and prompt engineering' },
+            { id: 'module-4', title: 'Embeddings & Vectors', icon: '🧠', path: '../data/course/module-4-embeddings/index.html', desc: 'Vector embeddings and semantic search' },
+            { id: 'module-5', title: 'RAG Pipeline', icon: '🔄', path: '../data/course/module-5-rag/index.html', desc: 'Build the complete RAG system' },
+            { id: 'module-6', title: 'Production & Polish', icon: '🚀', path: '../data/course/module-6-production/index.html', desc: 'Deploy and optimize' },
+            { id: 'module-7', title: 'Advanced RAG', icon: '⚡', path: '../data/course/module-7-advanced/index.html', desc: 'Hybrid search, re-ranking, and evaluation' }
+        ];
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            loadProgress();
+            renderSectionsNav();
+            renderCards();
+            await loadGraph();
+            updateProgress();
+        });
+        
+        // Load progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem('genai-course-progress');
+            if (saved) {
+                completedModules = new Set(JSON.parse(saved));
+            }
+        }
+        
+        // Save progress
+        function saveProgress() {
+            localStorage.setItem('genai-course-progress', JSON.stringify([...completedModules]));
+        }
+        
+        // Update progress UI
+        function updateProgress() {
+            const total = courseModules.length;
+            const done = completedModules.size;
+            const pct = Math.round((done / total) * 100);
+            
+            document.getElementById('progress-text').textContent = `${done}/${total} modules`;
+            document.getElementById('progress-fill').style.width = `${pct}%`;
+            
+            // Update nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                if (completedModules.has(item.dataset.id)) {
+                    item.classList.add('completed');
+                }
+            });
+            
+            // Update cards
+            document.querySelectorAll('.module-card').forEach(card => {
+                if (completedModules.has(card.dataset.id)) {
+                    card.classList.add('completed');
+                }
+            });
+        }
+        
+        // Reset progress
+        function resetProgress() {
+            if (confirm('Reset all progress? This cannot be undone.')) {
+                completedModules.clear();
+                saveProgress();
+                location.reload();
+            }
+        }
+        
+        // Render sections navigation
+        function renderSectionsNav() {
+            const nav = document.getElementById('sections-nav');
+            
+            // Group modules by phase
+            const phases = [
+                { name: 'Getting Started', modules: [0] },
+                { name: 'Foundation', modules: [1, 2] },
+                { name: 'LLM & Embeddings', modules: [3, 4] },
+                { name: 'Build & Deploy', modules: [5, 6] },
+                { name: 'Advanced Techniques', modules: [7] }
+            ];
+            
+            nav.innerHTML = phases.map((phase, pi) => `
+                <div class="section-group ${pi === 0 ? 'expanded' : ''}" data-phase="${pi}">
+                    <div class="section-header" onclick="togglePhase(${pi})" title="${phase.name}">
+                        <div class="section-dot" style="background: ${colors[pi]}"></div>
+                        <span class="section-name">${phase.name}</span>
+                        <span class="section-count">${phase.modules.length}</span>
+                    </div>
+                    <div class="section-items">
+                        ${phase.modules.map(mi => {
+                            const m = courseModules[mi];
+                            return `
+                                <div class="nav-item" data-id="${m.id}" onclick="openContent(${mi})" title="${m.title}">
+                                    <span class="nav-icon">${m.icon}</span>
+                                    <span class="nav-label">${m.title}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Toggle phase expansion
+        function togglePhase(index) {
+            const group = document.querySelector(`.section-group[data-phase="${index}"]`);
+            group.classList.toggle('expanded');
+        }
+        
+        // Render cards view
+        function renderCards() {
+            const grid = document.getElementById('cards-grid');
+            
+            grid.innerHTML = courseModules.map((m, i) => `
+                <div class="module-card ${i === 0 ? 'current' : ''}" data-id="${m.id}" onclick="openContent(${i})">
+                    <div class="card-icon">${m.icon}</div>
+                    <div class="card-title">Module ${i}: ${m.title}</div>
+                    <div class="card-desc">${m.desc}</div>
+                    <div class="card-meta">
+                        <span>📖 ~45 min</span>
+                        <span>📊 Available</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Switch between graph and cards view
+        function switchView(view) {
+            currentView = view;
+            
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.view === view);
+            });
+            
+            document.getElementById('graph-view').classList.toggle('hidden', view !== 'graph');
+            document.getElementById('cards-view').classList.toggle('active', view === 'cards');
+        }
+        
+        // Toggle sidebar collapse
+        function toggleSidebar() {
+            document.getElementById('nav-sidebar').classList.toggle('collapsed');
+        }
+
+        // Return to in-page graph view (no separate viewer page)
+        function showGraphView() {
+            if (document.getElementById('content-panel').classList.contains('open')) {
+                closeContent();
+            }
+            switchView('graph');
+        }
+        
+        // Load and render graph
+        async function loadGraph() {
+            try {
+                const response = await fetch('../data/graphs/genai-path.json');
+                graphData = await response.json();
+                initGraph();
+            } catch (error) {
+                console.error('Failed to load graph:', error);
+            }
+        }
+        
+        // Initialize D3 graph
+        function initGraph() {
+            const svg = d3.select('#graph-svg');
+            const container = document.getElementById('graph-view');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            svg.selectAll('*').remove();
+            
+            const g = svg.append('g');
+            
+            // Zoom
+            const zoom = d3.zoom()
+                .scaleExtent([0.3, 3])
+                .on('zoom', (e) => g.attr('transform', e.transform));
+            
+            svg.call(zoom);
+            window.resetZoom = () => svg.transition().call(zoom.transform, d3.zoomIdentity);
+            
+            // Data
+            const nodes = graphData.nodes.map(n => ({...n}));
+            const links = graphData.edges.filter(e => 
+                nodes.some(n => n.id === e.source) && nodes.some(n => n.id === e.target)
+            ).map(e => ({...e}));
+            
+            // Section colors
+            const sectionIndex = graphData.sections 
+                ? new Map(graphData.sections.map((s, i) => [s.id, i]))
+                : new Map();
+            
+            // Draw links
+            const link = g.append('g')
+                .selectAll('line')
+                .data(links)
+                .join('line')
+                .attr('stroke', '#30363d')
+                .attr('stroke-opacity', 0.4)
+                .attr('stroke-width', 1);
+            
+            // Draw nodes
+            const node = g.append('g')
+                .selectAll('circle')
+                .data(nodes)
+                .join('circle')
+                .attr('r', d => d.type === 'root' ? 12 : d.type === 'phase' ? 8 : 5)
+                .attr('fill', d => {
+                    if (d.level !== undefined) return colors[d.level % colors.length];
+                    return '#888';
+                })
+                .attr('stroke', '#0d1117')
+                .attr('stroke-width', 1.5)
+                .style('cursor', 'pointer')
+                .on('mouseover', showTooltip)
+                .on('mouseout', hideTooltip)
+                .on('click', (e, d) => openNodeContent(d))
+                .call(d3.drag()
+                    .on('start', dragStart)
+                    .on('drag', dragging)
+                    .on('end', dragEnd));
+            
+            // Draw labels
+            const labels = g.append('g')
+                .selectAll('text')
+                .data(nodes)
+                .join('text')
+                .attr('class', 'node-label')
+                .attr('font-size', '8px')
+                .attr('fill', '#c9d1d9')
+                .attr('text-anchor', 'middle')
+                .attr('dy', d => (d.type === 'root' ? 22 : 14))
+                .attr('pointer-events', 'none')
+                .attr('opacity', showLabels ? 1 : 0)
+                .text(d => {
+                    let label = d.label.replace(/^[\u{1F300}-\u{1F9FF}]+ ?/u, '');
+                    return label.length > 20 ? label.slice(0, 18) + '...' : label;
+                });
+            
+            // Simulation
+            simulation = d3.forceSimulation(nodes)
+                .force('link', d3.forceLink(links).id(d => d.id).distance(60))
+                .force('charge', d3.forceManyBody().strength(-150))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(25))
+                .on('tick', () => {
+                    link
+                        .attr('x1', d => d.source.x)
+                        .attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x)
+                        .attr('y2', d => d.target.y);
+                    node
+                        .attr('cx', d => d.x)
+                        .attr('cy', d => d.y);
+                    labels
+                        .attr('x', d => d.x)
+                        .attr('y', d => d.y);
+                });
+            
+            // Toggle labels
+            document.getElementById('toggle-labels').onclick = () => {
+                showLabels = !showLabels;
+                labels.attr('opacity', showLabels ? 1 : 0);
+                document.getElementById('toggle-labels').classList.toggle('active', showLabels);
+            };
+            
+            // Layout buttons
+            document.querySelectorAll('.graph-btn[data-layout]').forEach(btn => {
+                btn.onclick = () => {
+                    document.querySelectorAll('.graph-btn[data-layout]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    changeLayout(btn.dataset.layout, nodes, width, height);
+                };
+            });
+        }
+        
+        // Drag handlers
+        function dragStart(e, d) {
+            if (!e.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragging(e, d) {
+            d.fx = e.x;
+            d.fy = e.y;
+        }
+        
+        function dragEnd(e, d) {
+            if (!e.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // Change layout
+        function changeLayout(layout, nodes, width, height) {
+            if (layout === 'radial') {
+                const levels = [...new Set(nodes.map(n => n.level || 0))].sort((a,b) => a - b);
+                nodes.forEach(n => {
+                    const level = n.level || 0;
+                    const radius = 80 + level * 100;
+                    const nodesAtLevel = nodes.filter(x => (x.level || 0) === level);
+                    const idx = nodesAtLevel.indexOf(n);
+                    const angle = (idx / nodesAtLevel.length) * 2 * Math.PI;
+                    n.fx = width/2 + radius * Math.cos(angle);
+                    n.fy = height/2 + radius * Math.sin(angle);
+                });
+            } else {
+                nodes.forEach(n => { n.fx = null; n.fy = null; });
+            }
+            simulation.alpha(1).restart();
+        }
+        
+        // Tooltip
+        function showTooltip(e, d) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.querySelector('.tooltip-title').textContent = d.label;
+            tooltip.querySelector('.tooltip-type').textContent = d.type || 'node';
+            tooltip.style.left = (e.pageX + 10) + 'px';
+            tooltip.style.top = (e.pageY - 10) + 'px';
+            tooltip.classList.add('visible');
+        }
+        
+        function hideTooltip() {
+            document.getElementById('tooltip').classList.remove('visible');
+        }
+        
+        // Open node content (from graph click)
+        function openNodeContent(node) {
+            // Check if it's a course module
+            const moduleIndex = courseModules.findIndex(m => 
+                node.label.includes(m.title) || node.local_path?.includes(m.id)
+            );
+            
+            if (moduleIndex >= 0) {
+                openContent(moduleIndex);
+            } else if (node.local_path) {
+                // Open curated content
+                loadContentInPanel(node.label, node.type, '../' + node.local_path);
+            } else if (node.url) {
+                window.open(node.url, '_blank');
+            }
+        }
+        
+        // Open content panel for a module
+        function openContent(index) {
+            currentContentIndex = index;
+            const module = courseModules[index];
+            
+            document.getElementById('content-icon').textContent = module.icon;
+            document.getElementById('content-title').textContent = `Module ${index}: ${module.title}`;
+            document.getElementById('content-frame').src = module.path;
+            
+            // Open panel
+            document.getElementById('content-panel').classList.add('open');
+            document.getElementById('main-view').classList.add('hidden');
+            
+            // Update nav buttons
+            document.getElementById('prev-btn').disabled = index === 0;
+            document.getElementById('next-btn').disabled = index === courseModules.length - 1;
+            document.getElementById('nav-position').textContent = `${index + 1}/${courseModules.length}`;
+            
+            // Mark active in nav
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.id === module.id);
+            });
+            
+            // Update breadcrumb
+            document.getElementById('current-section').textContent = module.title;
+            
+            // Mark as in progress (will be completed when they click next or close)
+            // For now, mark completed when opened
+            completedModules.add(module.id);
+            saveProgress();
+            updateProgress();
+        }
+        
+        // Load any content in panel
+        function loadContentInPanel(title, type, path) {
+            document.getElementById('content-icon').textContent = '📄';
+            document.getElementById('content-title').textContent = title;
+            document.getElementById('content-frame').src = path;
+            
+            document.getElementById('content-panel').classList.add('open');
+            document.getElementById('main-view').classList.add('hidden');
+            
+            // Disable nav for non-course content
+            document.getElementById('prev-btn').disabled = true;
+            document.getElementById('next-btn').disabled = true;
+            currentContentIndex = -1;
+        }
+        
+        // Navigate content (prev/next)
+        function navigateContent(direction) {
+            const newIndex = currentContentIndex + direction;
+            if (newIndex >= 0 && newIndex < courseModules.length) {
+                openContent(newIndex);
+            }
+        }
+        
+        // Close content panel
+        function closeContent() {
+            document.getElementById('content-panel').classList.remove('open');
+            document.getElementById('main-view').classList.remove('hidden');
+            document.getElementById('content-frame').src = 'about:blank';
+            
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            document.getElementById('current-section').textContent = 'GenAI Learning Path';
+        }
+        
+        // Continue study (find next uncompleted module)
+        function continueStudy() {
+            const nextIndex = courseModules.findIndex(m => !completedModules.has(m.id));
+            if (nextIndex >= 0) {
+                openContent(nextIndex);
+            } else {
+                // All done! Open first one
+                openContent(0);
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('content-panel').classList.contains('open')) {
+                if (e.key === 'Escape') closeContent();
+                if (e.key === 'ArrowLeft') navigateContent(-1);
+                if (e.key === 'ArrowRight') navigateContent(1);
+            }
+        });
+        
+        // Handle resize
+        window.addEventListener('resize', () => {
+            if (graphData) initGraph();
+        });
+    </script>
+</body>
+</html>

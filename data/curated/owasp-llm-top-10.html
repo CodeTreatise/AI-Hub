@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP LLM Top 10</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a; /* Match main theme */
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #58a6ff; padding-left: 1rem; color: #8b949e; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>OWASP LLM Top 10</h1>
+            <p>Source: <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank">https://owasp.org/www-project-top-10-for-large-language-model-applications/</a></p>
+        </div>
+        <div class="content">
+            <main role="main">
+<div class="main-wrapper">
+
+
+<h1 class="page-title">OWASP Top 10 for Large Language Model Applications</h1>
+<div aria-labelledby="main-link" class="page-body tab" id="main" role="tabpanel" tabindex="0">
+<section class="page-body" id="sec-main">
+<h2 id="about-this-repository">About This Repository</h2>
+<p>This is the repository for the <strong>OWASP Top 10 for Large Language Model Applications</strong>. However, this project has now grown into the comprehensive <strong>OWASP GenAI Security Project</strong> - a global initiative that encompasses multiple security initiatives beyond just the Top 10 list.</p>
+<h2 id="owasp-genai-security-project">OWASP GenAI Security Project</h2>
+<p>The OWASP GenAI Security Project is a global, open-source initiative dedicated to identifying, mitigating, and documenting security and safety risks associated with generative AI technologies, including large language models (LLMs), agentic AI systems, and AI-driven applications. Our mission is to empower organizations, security professionals, AI practitioners, and policymakers with comprehensive, actionable guidance and tools to ensure the secure development, deployment, and governance of generative AI systems.</p>
+<p><strong>Learn more about our mission and charter:</strong> <a href="https://genai.owasp.org/project-mission-and-charter/" target="_blank">Project Mission and Charter</a></p>
+<p><strong>Visit our main project site:</strong> <a href="https://genai.owasp.org" target="_blank">genai.owasp.org</a></p>
+<h2 id="latest-top-10-for-llm-applications">Latest Top 10 for LLM Applications</h2>
+<p>The OWASP Top 10 for Large Language Model Applications continues to be a core component of our work, identifying the most critical security vulnerabilities in LLM applications.</p>
+<p><strong>Access the latest Top 10 for LLM:</strong> <a href="https://genai.owasp.org/llm-top-10/" target="_blank">https://genai.owasp.org/llm-top-10/</a></p>
+<h2 id="project-background-and-growth">Project Background and Growth</h2>
+<p>The project has evolved significantly since its inception. From a small group of security professionals addressing an urgent security gap in 2023, it has grown into a global community with over 600 contributing experts from more than 18 countries and nearly 8,000 active community members.</p>
+<p><strong>Read our full project background:</strong> <a href="https://genai.owasp.org/introduction-genai-security-project/" target="_blank">Introduction and Background</a></p>
+<h2 id="get-involved">Get Involved</h2>
+<h3 id="contribute-to-the-project">Contribute to the Project</h3>
+<p>We welcome all expert ideas, contributions, suggestions, and remarks from security professionals, researchers, developers, and anyone passionate about AI security.</p>
+<p><strong>Learn how to contribute:</strong> <a href="https://genai.owasp.org/contribute/" target="_blank">https://genai.owasp.org/contribute/</a></p>
+<h3 id="join-our-meetings">Join Our Meetings</h3>
+<p>Participate in our bi-weekly sync meetings and stay connected with the community.</p>
+<p><strong>Meeting information:</strong> <a href="https://genai.owasp.org/meetings/" target="_blank">https://genai.owasp.org/meetings/</a></p>
+<h3 id="connect-with-the-community">Connect with the Community</h3>
+<ul>
+<li>Join our working group channel on the <a href="https://owasp.org/slack/invite" target="_blank">OWASP Slack</a> - sign up and join us on the <code class="language-plaintext highlighter-rouge">#project-top10-for-llm</code> channel</li>
+<li><a href="https://www.linkedin.com/company/owasp-top-10-for-large-language-model-applications/" target="_blank">Follow our project LinkedIn page</a></li>
+<li><a href="https://llmtop10.beehiiv.com/subscribe" target="_blank">Subscribe to our newsletter</a> for periodic updates</li>
+</ul>
+<h2 id="project-support">Project Support</h2>
+<p>We are a not-for-profit, open-source, community-driven project. If you are interested in supporting the project with resources or becoming a sponsor to help us sustain community efforts and offset operational and outreach costs, visit the <a href="https://genai.owasp.org/sponsorship" target="_blank">Sponsor Section</a> on our website.</p>
+<p><strong>Thank you to our current <a href="https://genai.owasp.org/supporters/" target="_blank">Sponsors and Supporters</a></strong></p>
+<h2 id="educational-resources">Educational Resources</h2>
+<p>New to LLM Application security? Check out our <a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/wiki/Educational-Resources" target="_blank">resources page</a> to learn more.</p>
+</section>
+<section class="page-body tab-hidden" id="sec-example">
+<hr/>
+<h1 id="owasp-top-10-for-large-language-model-applications-version-11">OWASP Top 10 for Large Language Model Applications version 1.1</h1>
+<h2 id="llm01-prompt-injection">LLM01: Prompt Injection</h2>
+<p>Manipulating LLMs via crafted inputs can lead to unauthorized access, data breaches, and compromised decision-making.</p>
+<h2 id="llm02-insecure-output-handling">LLM02: Insecure Output Handling</h2>
+<p>Neglecting to validate LLM outputs may lead to downstream security exploits, including code execution that compromises systems and exposes data.</p>
+<h2 id="llm03-training-data-poisoning">LLM03: Training Data Poisoning</h2>
+<p>Tampered training data can impair LLM models leading to responses that may compromise security, accuracy, or ethical behavior.</p>
+<h2 id="llm04-model-denial-of-service">LLM04: Model Denial of Service</h2>
+<p>Overloading LLMs with resource-heavy operations can cause service disruptions and increased costs.</p>
+<h2 id="llm05-supply-chain-vulnerabilities">LLM05: Supply Chain Vulnerabilities</h2>
+<p>Depending upon compromised components, services or datasets undermine system integrity, causing data breaches and system failures.</p>
+<h2 id="llm06-sensitive-information-disclosure">LLM06: Sensitive Information Disclosure</h2>
+<p>Failure to protect against disclosure of sensitive information in LLM outputs can result in legal consequences or a loss of competitive advantage.</p>
+<h2 id="llm07-insecure-plugin-design">LLM07: Insecure Plugin Design</h2>
+<p>LLM plugins processing untrusted inputs and having insufficient access control risk severe exploits like remote code execution.</p>
+<h2 id="llm08-excessive-agency">LLM08: Excessive Agency</h2>
+<p>Granting LLMs unchecked autonomy to take action can lead to unintended consequences, jeopardizing reliability, privacy, and trust.</p>
+<h2 id="llm09-overreliance">LLM09: Overreliance</h2>
+<p>Failing to critically assess LLM outputs can lead to compromised decision making, security vulnerabilities, and legal liabilities.</p>
+<h2 id="llm10-model-theft">LLM10: Model Theft</h2>
+<p>Unauthorized access to proprietary large language models risks theft, competitive advantage, and dissemination of sensitive information.</p>
+</section>
+</div>
+<hr/>
+<div class="repo">
+</div>
+<div class="github-buttons">
+<a aria-label="Watch on GitHub" class="github-button" data-icon="octicon-eye" data-show-count="true" data-size="large" href="https://github.com/owasp/www-project-top-10-for-large-language-model-applications/subscription" target="_blank">Watch</a>
+<a aria-label="Star on GitHub" class="github-button" data-icon="octicon-star" data-show-count="true" data-size="large" href="https://github.com/owasp/www-project-top-10-for-large-language-model-applications" target="_blank">Star</a>
+</div>
+<div class="sidebar" role="complementary">
+<div class="owasp-sidebar-top">
+<strong>The OWASP<sup>®</sup> Foundation</strong> works to improve the security of software through its community-led open source software projects, 
+     hundreds of chapters worldwide, tens of thousands of members, and by hosting local and global conferences.
+</div>
+<h3 id="top-10-for-large-language-model-applications-information">Top 10 for Large Language Model Applications Information</h3>
+<ul>
+<li><a href="https://owasp.org/projects/" target="_blank">Lab Status Project</a></li>
+<li><a href="https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/" target="_blank">Version 2025</a></li>
+<li><a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/tree/main/assets/translations" target="_blank">Version 1.1.0 Translations</a> (archived)</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v1_1.pdf" target="_blank">Version 1.1.0</a> (archived)</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v1_0_1.pdf" target="_blank">Version 1.0.1</a> (archived)</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v1_0.pdf" target="_blank">Version 1.0.0</a> (archived)</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v09.pdf" target="_blank">Version 0.9.0</a> (archived)</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v05.pdf" target="_blank">Version 0.5.0</a> (archived)</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/" target="_blank">Version 0.1.0</a> (archived)</li>
+</ul>
+<h3 id="social-links">Social Links</h3>
+<ul>
+<li><a href="https://llmtop10.beehiiv.com/subscribe" target="_blank">Subscribe to our Newsletter</a></li>
+<li><a href="https://www.linkedin.com/pulse/new-release-owasp-top-10-llm-apps-steve-wilson?trk=public_post_feed-article-content" target="_blank">v1.1 Announcement</a></li>
+<li><a href="https://www.linkedin.com/pulse/official-release-owasp-top-10-large-language-model-v10-steve-wilson/" target="_blank">v1 Announcement</a></li>
+<li><a href="https://www.linkedin.com/pulse/announcing-owasp-top-10-large-language-models-ai-project-steve-wilson/" target="_blank">Project Announcement</a></li>
+<li><a href="https://twitter.com/intent/tweet?url=https://owasp.org/www-project-top-10-for-large-language-model-applications/&amp;text=Check%20out%20the%20OWASP%20Top%2010%20for%20Large%20Language%20Model%20Applications%20project:%20" target="_blank">Share on Twitter</a></li>
+<li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank">Share on LinkedIn</a></li>
+</ul>
+<h3 id="code-repository">Code Repository</h3>
+<ul>
+<li><a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications" target="_blank">repo</a></li>
+<li><a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/wiki" target="_blank">wiki</a></li>
+</ul>
+<h3 id="change-log">Change Log</h3>
+<ul>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/changes" target="_blank">changes</a></li>
+</ul>
+<h3 id="leaders">Leaders</h3>
+<ul>
+<li>Lead <a href="https://owasp.org/cdn-cgi/l/email-protection#daa9aebfacbff4adb3b6a9b5b49ab5adbba9aaf4b5a8bd" target="_blank">Steve Wilson</a> - <a href="https://www.linkedin.com/in/wilsonsd/" target="_blank">LinkedIn</a> <a href="https://twitter.com/virtualsteve" target="_blank">Twitter</a></li>
+<li>Co-lead <a href="https://owasp.org/cdn-cgi/l/email-protection#7e1f1a0d501a1f090d11103e11091f0d0e50110c19" target="_blank">Ads Dawson</a> - <a href="https://www.linkedin.com/in/adamdawson0/" target="_blank">LinkedIn</a> <a href="https://github.com/GangGreenTemperTatum" target="_blank">GitHub</a></li>
+<li>Co-lead <a href="https://owasp.org/cdn-cgi/l/email-protection#3953565157174a564d504b5649564c55564a79564e584a4917564b5e" target="_blank">John Sotiropoulos</a> - <a href="https://www.linkedin.com/in/jsotiropoulos/" target="_blank">LinkedIn</a></li>
+<li>Co-lead <a href="https://owasp.org/cdn-cgi/l/email-protection#e89b8b879c9cc68b8481869c8786a8879f899b98c6879a8f" target="_blank">Scott Clinton</a> - <a href="https://www.linkedin.com/in/scottjclinton/" target="_blank">LinkedIn</a></li>
+<li>Co-lead <a href="https://owasp.org/cdn-cgi/l/email-protection#abd8cac5cfd285cfdec5c5ebc4dccad8db85c4d9cc" target="_blank">Sandy Dunn</a> - <a href="https://www.linkedin.com/in/sandydunnciso/" target="_blank">LinkedIn</a></li>
+</ul>
+<h3 id="core-leadership-vteam">Core Leadership vTeam</h3>
+<ul>
+<li>Full Core Team <a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/wiki/Core-Team" target="_blank">Team Page</a></li>
+</ul>
+<div class="owasp-sidebar-bottom">
+<h3>Upcoming OWASP Global Events</h3>
+<div id="global-event-div">
+</div>
+</div>
+
+<!--<div>
+    <h3>OWASP News & Opinions</h3>
+    <ul>
+    	
+    </ul>	
+  </div>-->
+</div>
+</div>
+</main>
+        </div>
+    </div>
+</body>
+</html>

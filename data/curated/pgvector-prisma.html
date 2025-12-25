@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pgvector with Prisma</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+        .note { background: #1a3a2a; border-left: 4px solid #3fb950; padding: 1rem; border-radius: 4px; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>🐘 pgvector with Prisma</h1>
+            <p>Source: <a href="https://www.prisma.io/docs/orm/overview/databases/postgresql/vectors" target="_blank">prisma.io/docs</a></p>
+        </div>
+        <div class="content">
+            <h2>What is pgvector?</h2>
+            <p>pgvector is a PostgreSQL extension that adds vector similarity search capabilities. Combined with Prisma, you can build type-safe RAG applications with vector storage in your existing Postgres database.</p>
+            
+            <h2>Setup</h2>
+            
+            <h3>1. Enable pgvector Extension</h3>
+            <pre><code>-- In PostgreSQL
+CREATE EXTENSION IF NOT EXISTS vector;</code></pre>
+            
+            <h3>2. Install Dependencies</h3>
+            <pre><code>npm install @prisma/client prisma
+npm install pgvector</code></pre>
+            
+            <h3>3. Define Schema with Vector Type</h3>
+            <pre><code>// prisma/schema.prisma
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector]
+}
+
+model Document {
+  id        String   @id @default(cuid())
+  content   String
+  embedding Unsupported("vector(1536)")  // OpenAI embedding dimension
+  createdAt DateTime @default(now())
+}</code></pre>
+            
+            <div class="note">
+                <strong>📝 Note:</strong> Prisma uses <code>Unsupported()</code> for vector types since it's not a native Prisma type. You'll need raw queries for vector operations.
+            </div>
+            
+            <h3>4. Run Migration</h3>
+            <pre><code>npx prisma migrate dev --name add_documents</code></pre>
+            
+            <h2>Vector Operations</h2>
+            
+            <h3>Insert Embeddings</h3>
+            <pre><code>import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+async function insertDocument(content: string, embedding: number[]) {
+    // Convert array to pgvector format
+    const vectorString = `[${embedding.join(',')}]`;
+    
+    await prisma.$executeRaw`
+        INSERT INTO "Document" (id, content, embedding)
+        VALUES (gen_random_uuid(), ${content}, ${vectorString}::vector)
+    `;
+}</code></pre>
+            
+            <h3>Similarity Search</h3>
+            <pre><code>async function findSimilar(queryEmbedding: number[], limit = 5) {
+    const vectorString = `[${queryEmbedding.join(',')}]`;
+    
+    const results = await prisma.$queryRaw`
+        SELECT id, content, 
+               1 - (embedding <=> ${vectorString}::vector) as similarity
+        FROM "Document"
+        ORDER BY embedding <=> ${vectorString}::vector
+        LIMIT ${limit}
+    `;
+    
+    return results;
+}</code></pre>
+            
+            <h2>Distance Operators</h2>
+            <ul>
+                <li><code>&lt;=&gt;</code> - Cosine distance (most common for embeddings)</li>
+                <li><code>&lt;-&gt;</code> - L2/Euclidean distance</li>
+                <li><code>&lt;#&gt;</code> - Inner product (for normalized vectors)</li>
+            </ul>
+            
+            <h2>Indexing for Performance</h2>
+            <pre><code>-- Add index for faster similarity search
+CREATE INDEX ON "Document" 
+USING ivfflat (embedding vector_cosine_ops)
+WITH (lists = 100);
+
+-- Or use HNSW for better recall
+CREATE INDEX ON "Document"
+USING hnsw (embedding vector_cosine_ops);</code></pre>
+            
+            <h2>Alternatives</h2>
+            <ul>
+                <li><strong>Drizzle ORM:</strong> Better native pgvector support</li>
+                <li><strong>Raw pg client:</strong> Full control over queries</li>
+                <li><strong>Supabase:</strong> Managed Postgres with pgvector</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

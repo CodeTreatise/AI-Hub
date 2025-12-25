@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "id": 8,
+    "title": "Computer Vision Tasks",
+    "description": "Detection, Segmentation, Gen",
+    "slug": "computer-vision-tasks",
+    "totalNodes": 14,
+    "totalEdges": 13
+  },
+  "sections": [
+    {
+      "id": 8,
+      "title": "Computer Vision Tasks",
+      "slug": "8-computer-vision-tasks",
+      "description": "Detection, Segmentation, Gen",
+      "line": 504
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s8_b8_CV",
+      "label": "COMPUTER VISION",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://www.coursera.org/learn/convolutional-neural-networks",
+      "tooltip": "Stanford CV Course",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CV"
+    },
+    {
+      "id": "s8_b8_IC",
+      "label": "Classification",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/image-classification",
+      "tooltip": "Image Classification Papers",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "IC"
+    },
+    {
+      "id": "s8_b8_OD",
+      "label": "Object Detection",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/object-detection",
+      "tooltip": "Object Detection Papers",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OD"
+    },
+    {
+      "id": "s8_b8_SEG",
+      "label": "Segmentation",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/semantic-segmentation",
+      "tooltip": "Segmentation Papers",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SEG"
+    },
+    {
+      "id": "s8_b8_GEN",
+      "label": "Generation",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://paperswithcode.com/task/image-generation",
+      "tooltip": "Image Generation Papers",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GEN"
+    },
+    {
+      "id": "s8_b8_VGG",
+      "label": "VGG",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1409.1556",
+      "tooltip": "VGG Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "VGG"
+    },
+    {
+      "id": "s8_b8_RES",
+      "label": "ResNet",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1512.03385",
+      "tooltip": "ResNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "RES"
+    },
+    {
+      "id": "s8_b8_EFF",
+      "label": "EfficientNet",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1905.11946",
+      "tooltip": "EfficientNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "EFF"
+    },
+    {
+      "id": "s8_b8_YOLO",
+      "label": "YOLO",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://docs.ultralytics.com/",
+      "tooltip": "YOLO Ultralytics",
+      "style": null,
+      "parent": null,
+      "original_id": "YOLO"
+    },
+    {
+      "id": "s8_b8_RCNN",
+      "label": "R-CNN",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://github.com/facebookresearch/detectron2",
+      "tooltip": "Detectron2",
+      "style": null,
+      "parent": null,
+      "original_id": "RCNN"
+    },
+    {
+      "id": "s8_b8_UNET",
+      "label": "U-Net",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1505.04597",
+      "tooltip": "U-Net Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "UNET"
+    },
+    {
+      "id": "s8_b8_DEEPLAB",
+      "label": "DeepLab",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://github.com/google-research/deeplab2",
+      "tooltip": "DeepLab",
+      "style": null,
+      "parent": null,
+      "original_id": "DEEPLAB"
+    },
+    {
+      "id": "s8_b8_GANV",
+      "label": "GANs",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/1406.2661",
+      "tooltip": "GANs Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "GANV"
+    },
+    {
+      "id": "s8_b8_DIFFV",
+      "label": "Diffusion",
+      "type": "node",
+      "section_id": 8,
+      "block_id": 8,
+      "url": "https://arxiv.org/abs/2006.11239",
+      "tooltip": "Diffusion Models Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DIFFV"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_IC",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_OD",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_SEG",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_CV",
+      "target": "s8_b8_GEN",
+      "type": "thick",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_IC",
+      "target": "s8_b8_VGG",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_IC",
+      "target": "s8_b8_RES",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_IC",
+      "target": "s8_b8_EFF",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_OD",
+      "target": "s8_b8_YOLO",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_OD",
+      "target": "s8_b8_RCNN",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_SEG",
+      "target": "s8_b8_UNET",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_SEG",
+      "target": "s8_b8_DEEPLAB",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_GEN",
+      "target": "s8_b8_GANV",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    },
+    {
+      "source": "s8_b8_GEN",
+      "target": "s8_b8_DIFFV",
+      "type": "regular",
+      "section_id": 8,
+      "block_id": 8
+    }
+  ]
+}

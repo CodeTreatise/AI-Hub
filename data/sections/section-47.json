@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "id": 47,
+    "title": "AI for Social Good & Sustainability",
+    "description": "AI initiatives for climate, health, education, and broader social impact.",
+    "slug": "ai-for-social-good-sustainability",
+    "totalNodes": 33,
+    "totalEdges": 32
+  },
+  "sections": [
+    {
+      "id": 47,
+      "title": "AI for Social Good & Sustainability",
+      "slug": "",
+      "description": "AI initiatives for climate, health, education, and broader social impact.",
+      "line": 4078
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s47_b55_SOCIAL",
+      "label": "\ud83c\udf31 AI FOR GOOD",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SOCIAL"
+    },
+    {
+      "id": "s47_b55_CLIMATE",
+      "label": "\ud83c\udf0d Climate AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.climate.ai/",
+      "tooltip": "Climate AI",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "CLIMATE"
+    },
+    {
+      "id": "s47_b55_HEALTH",
+      "label": "\ud83c\udfe5 Global Health",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.who.int/health-topics/artificial-intelligence",
+      "tooltip": "WHO AI",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "HEALTH"
+    },
+    {
+      "id": "s47_b55_DISASTER",
+      "label": "\ud83d\udea8 Disaster Response",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.unocha.org/themes/digital-transformation",
+      "tooltip": "UN OCHA Digital",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "DISASTER"
+    },
+    {
+      "id": "s47_b55_ACCESS",
+      "label": "\u267f Accessibility",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.microsoft.com/en-us/accessibility",
+      "tooltip": "Microsoft Accessibility",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "ACCESS"
+    },
+    {
+      "id": "s47_b55_CONSERVATION",
+      "label": "\ud83e\udd81 Conservation",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.wildlabs.net/",
+      "tooltip": "WILDLABS",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "CONSERVATION"
+    },
+    {
+      "id": "s47_b55_CLI",
+      "label": "CLIMATE AI",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLI"
+    },
+    {
+      "id": "s47_b55_CL1",
+      "label": "Weather Prediction",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.google.com/search?q=google+weather+prediction+ai",
+      "tooltip": "Google Weather AI",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL1"
+    },
+    {
+      "id": "s47_b55_CL2",
+      "label": "Carbon Tracking",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://carbontracker.org/",
+      "tooltip": "Carbon Tracker",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL2"
+    },
+    {
+      "id": "s47_b55_CL3",
+      "label": "Energy Optimization",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/",
+      "tooltip": "DeepMind Cooling",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL3"
+    },
+    {
+      "id": "s47_b55_CL4",
+      "label": "Climate Modeling",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.climatetrace.org/",
+      "tooltip": "Climate TRACE",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL4"
+    },
+    {
+      "id": "s47_b55_CL5",
+      "label": "Deforestation Detection",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.globalforestwatch.org/",
+      "tooltip": "Global Forest Watch",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL5"
+    },
+    {
+      "id": "s47_b55_GH",
+      "label": "GLOBAL HEALTH",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GH"
+    },
+    {
+      "id": "s47_b55_GH1",
+      "label": "Disease Outbreak",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://healthmap.org/",
+      "tooltip": "HealthMap",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH1"
+    },
+    {
+      "id": "s47_b55_GH2",
+      "label": "Drug Discovery",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.benevolent.com/",
+      "tooltip": "BenevolentAI",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH2"
+    },
+    {
+      "id": "s47_b55_GH3",
+      "label": "Telemedicine AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.babylon.com/",
+      "tooltip": "Babylon Health",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH3"
+    },
+    {
+      "id": "s47_b55_GH4",
+      "label": "Medical Translation",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://translatorswithoutborders.org/",
+      "tooltip": "Translators Without Borders",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH4"
+    },
+    {
+      "id": "s47_b55_GH5",
+      "label": "Epidemic Modeling",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.iddynamics.jhsph.edu/",
+      "tooltip": "JHU Epidemiology",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH5"
+    },
+    {
+      "id": "s47_b55_DR",
+      "label": "DISASTER RESPONSE",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DR"
+    },
+    {
+      "id": "s47_b55_DR1",
+      "label": "Damage Assessment",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.planet.com/products/monitoring/",
+      "tooltip": "Planet Monitoring",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR1"
+    },
+    {
+      "id": "s47_b55_DR2",
+      "label": "Search & Rescue",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.droneresponders.org/",
+      "tooltip": "Drone Responders",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR2"
+    },
+    {
+      "id": "s47_b55_DR3",
+      "label": "Early Warning",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.preventionweb.net/sendai-framework",
+      "tooltip": "Sendai Framework",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR3"
+    },
+    {
+      "id": "s47_b55_DR4",
+      "label": "Resource Allocation",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.icrc.org/en/document/artificial-intelligence-humanitarian-action",
+      "tooltip": "ICRC AI",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR4"
+    },
+    {
+      "id": "s47_b55_AC",
+      "label": "ACCESSIBILITY",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AC"
+    },
+    {
+      "id": "s47_b55_AC1",
+      "label": "Screen Readers",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.freedomscientific.com/products/software/jaws/",
+      "tooltip": "JAWS",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC1"
+    },
+    {
+      "id": "s47_b55_AC2",
+      "label": "Sign Language AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.signall.us/",
+      "tooltip": "SignAll",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC2"
+    },
+    {
+      "id": "s47_b55_AC3",
+      "label": "Voice Interfaces",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://voiceitt.com/",
+      "tooltip": "Voiceitt",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC3"
+    },
+    {
+      "id": "s47_b55_AC4",
+      "label": "Image Description",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.microsoft.com/en-us/ai/seeing-ai",
+      "tooltip": "Seeing AI",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC4"
+    },
+    {
+      "id": "s47_b55_CV",
+      "label": "CONSERVATION",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#00695C,stroke:#004D40,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CV"
+    },
+    {
+      "id": "s47_b55_CV1",
+      "label": "Wildlife Tracking",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://wildme.org/",
+      "tooltip": "Wild Me",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV1"
+    },
+    {
+      "id": "s47_b55_CV2",
+      "label": "Poaching Detection",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.resolve.ngo/trailguard.htm",
+      "tooltip": "TrailGuard",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV2"
+    },
+    {
+      "id": "s47_b55_CV3",
+      "label": "Ocean Monitoring",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://globalfishingwatch.org/",
+      "tooltip": "Global Fishing Watch",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV3"
+    },
+    {
+      "id": "s47_b55_CV4",
+      "label": "Biodiversity AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.inaturalist.org/",
+      "tooltip": "iNaturalist",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s47_b55_CLIMATE",
+      "target": "s47_b55_CLI",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_HEALTH",
+      "target": "s47_b55_GH",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DISASTER",
+      "target": "s47_b55_DR",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_ACCESS",
+      "target": "s47_b55_AC",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CONSERVATION",
+      "target": "s47_b55_CV",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_CLIMATE",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_HEALTH",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_DISASTER",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_ACCESS",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_CONSERVATION",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL5",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH5",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "id": 7,
+    "title": "NLP Evolution Timeline",
+    "description": "From rule-based to LLMs",
+    "slug": "nlp-evolution-timeline",
+    "totalNodes": 15,
+    "totalEdges": 14
+  },
+  "sections": [
+    {
+      "id": 7,
+      "title": "NLP Evolution Timeline",
+      "slug": "7-nlp-evolution-timeline",
+      "description": "From rule-based to LLMs",
+      "line": 445
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s7_b7_Classic",
+      "label": "1950s-1990s",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://en.wikipedia.org/wiki/Natural_language_processing#History",
+      "tooltip": "Classic NLP History",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Classic"
+    },
+    {
+      "id": "s7_b7_C1",
+      "label": "Rule-based",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://en.wikipedia.org/wiki/Rule-based_machine_translation",
+      "tooltip": "Rule-based NLP",
+      "style": null,
+      "parent": "s7_b7_Classic",
+      "original_id": "C1"
+    },
+    {
+      "id": "s7_b7_C2",
+      "label": "Bag of Words",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#the-bag-of-words-representation",
+      "tooltip": "Bag of Words",
+      "style": null,
+      "parent": "s7_b7_Classic",
+      "original_id": "C2"
+    },
+    {
+      "id": "s7_b7_Statistical",
+      "label": "2000s",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://web.stanford.edu/~jurafsky/slp3/",
+      "tooltip": "Statistical NLP - Jurafsky",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Statistical"
+    },
+    {
+      "id": "s7_b7_S1",
+      "label": "Word2Vec",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://radimrehurek.com/gensim/models/word2vec.html",
+      "tooltip": "Word2Vec Gensim",
+      "style": null,
+      "parent": "s7_b7_Statistical",
+      "original_id": "S1"
+    },
+    {
+      "id": "s7_b7_S2",
+      "label": "TF-IDF",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf",
+      "tooltip": "TF-IDF Guide",
+      "style": null,
+      "parent": "s7_b7_Statistical",
+      "original_id": "S2"
+    },
+    {
+      "id": "s7_b7_Neural",
+      "label": "2014-2017",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://www.deeplearning.ai/resources/natural-language-processing/",
+      "tooltip": "Neural NLP",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Neural"
+    },
+    {
+      "id": "s7_b7_N1",
+      "label": "Seq2Seq",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Seq2Seq Visualization",
+      "style": null,
+      "parent": "s7_b7_Neural",
+      "original_id": "N1"
+    },
+    {
+      "id": "s7_b7_N2",
+      "label": "Attention",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Attention Mechanism",
+      "style": null,
+      "parent": "s7_b7_Neural",
+      "original_id": "N2"
+    },
+    {
+      "id": "s7_b7_Transformer",
+      "label": "2017-2020",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "tooltip": "Transformer Architecture",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Transformer"
+    },
+    {
+      "id": "s7_b7_T1",
+      "label": "BERT",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://huggingface.co/docs/transformers/model_doc/bert",
+      "tooltip": "BERT Docs",
+      "style": null,
+      "parent": "s7_b7_Transformer",
+      "original_id": "T1"
+    },
+    {
+      "id": "s7_b7_T2",
+      "label": "GPT-2",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://huggingface.co/docs/transformers/model_doc/gpt2",
+      "tooltip": "GPT-2 Docs",
+      "style": null,
+      "parent": "s7_b7_Transformer",
+      "original_id": "T2"
+    },
+    {
+      "id": "s7_b7_LLM",
+      "label": "2020+",
+      "type": "subgraph",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "LLM Era",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLM"
+    },
+    {
+      "id": "s7_b7_L1",
+      "label": "GPT-4",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://platform.openai.com/docs/models/gpt-4",
+      "tooltip": "GPT-4 API",
+      "style": null,
+      "parent": "s7_b7_LLM",
+      "original_id": "L1"
+    },
+    {
+      "id": "s7_b7_L2",
+      "label": "Claude",
+      "type": "node",
+      "section_id": 7,
+      "block_id": 7,
+      "url": "https://docs.anthropic.com/",
+      "tooltip": "Claude Docs",
+      "style": null,
+      "parent": "s7_b7_LLM",
+      "original_id": "L2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s7_b7_Classic",
+      "target": "s7_b7_Statistical",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Statistical",
+      "target": "s7_b7_Neural",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Neural",
+      "target": "s7_b7_Transformer",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Transformer",
+      "target": "s7_b7_LLM",
+      "type": "thick",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Classic",
+      "target": "s7_b7_C1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Classic",
+      "target": "s7_b7_C2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Statistical",
+      "target": "s7_b7_S1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Statistical",
+      "target": "s7_b7_S2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Neural",
+      "target": "s7_b7_N1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Neural",
+      "target": "s7_b7_N2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Transformer",
+      "target": "s7_b7_T1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_Transformer",
+      "target": "s7_b7_T2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_LLM",
+      "target": "s7_b7_L1",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    },
+    {
+      "source": "s7_b7_LLM",
+      "target": "s7_b7_L2",
+      "type": "contains",
+      "section_id": 7,
+      "block_id": 7
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 0: The Big Picture | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 0: The Big Picture</h1>
+            <p>Understanding GenAI, LLMs, and RAG - and why this matters for your career</p>
+            <div class="module-meta">
+                <span>⏱️ ~30 minutes</span>
+                <span>📊 Beginner</span>
+                <span>📚 Module 0</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Understand what Generative AI is and why it matters</li>
+            <li>Know the difference between traditional AI and GenAI</li>
+            <li>Understand what RAG is and why we need it</li>
+            <li>See the big picture of what you'll build</li>
+            <li>Understand your career path as a GenAI developer</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>📖 The Big Picture</h2>
+            
+        <h3>What is Generative AI?</h3>
+        <p>Generative AI refers to artificial intelligence systems that can <strong>create new content</strong> - text, images, code, music, and more. Unlike traditional AI that classifies or predicts, GenAI <em>generates</em>.</p>
+        
+        <div class="callout callout-info">
+            <strong>Simple analogy:</strong> Traditional AI is like a librarian who finds books for you. Generative AI is like an author who writes new books based on everything they've read.
+        </div>
+        
+        <h3>Large Language Models (LLMs)</h3>
+        <p>LLMs are the engines behind text-based GenAI. They've been trained on massive amounts of text and can:</p>
+        <ul>
+            <li>Answer questions</li>
+            <li>Write code</li>
+            <li>Summarize documents</li>
+            <li>Translate languages</li>
+            <li>Have conversations</li>
+        </ul>
+        
+        <p>Examples: GPT-4, Claude, Llama, Gemini</p>
+        
+        <h3>The Problem with LLMs</h3>
+        <p>LLMs have a critical limitation: <strong>they only know what they were trained on</strong>. They can't:</p>
+        <ul>
+            <li>Access your private documents</li>
+            <li>Know about events after their training cutoff</li>
+            <li>Answer questions about your specific business data</li>
+        </ul>
+        
+        <div class="callout callout-warning">
+            <strong>This is why we need RAG!</strong> Without RAG, LLMs are like brilliant experts who've been locked in a room since 2023 with no access to your company's information.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🔍 What is RAG?</h2>
+            
+        <h3>RAG = Retrieval-Augmented Generation</h3>
+        <p>RAG is a technique that gives LLMs access to external knowledge. Here's how it works:</p>
+        
+        <ol>
+            <li><strong>User asks a question</strong> - "What's our refund policy?"</li>
+            <li><strong>Retrieval</strong> - System searches your documents and finds relevant info</li>
+            <li><strong>Augmentation</strong> - The found information is added to the LLM's prompt</li>
+            <li><strong>Generation</strong> - LLM generates an answer using that context</li>
+        </ol>
+        
+        <div class="callout callout-tip">
+            <strong>Think of it like this:</strong> Instead of asking someone a question from memory, you hand them the relevant documents first and THEN ask the question.
+        </div>
+        
+        <h3>Why RAG is Powerful</h3>
+        <ul>
+            <li><strong>Up-to-date:</strong> Your documents can change anytime</li>
+            <li><strong>Private:</strong> Your data never leaves your control</li>
+            <li><strong>Accurate:</strong> Answers are grounded in real documents</li>
+            <li><strong>Verifiable:</strong> You can show which documents were used</li>
+            <li><strong>Cost-effective:</strong> No need to retrain expensive models</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🛠️ What You'll Build</h2>
+            
+        <p>In this course, you'll build a complete RAG application:</p>
+        
+        <pre><code>┌─────────────────────────────────────────────────────────┐
+│                    YOUR RAG APP                          │
+├─────────────────────────────────────────────────────────┤
+│                                                          │
+│   📄 Documents ──▶ 🔪 Chunker ──▶ 🔢 Embeddings         │
+│                                          │               │
+│                                          ▼               │
+│                                    ┌──────────┐          │
+│                                    │ pgvector │          │
+│                                    │ Database │          │
+│                                    └──────────┘          │
+│                                          │               │
+│   💬 User Query ──▶ 🔢 Embed ──▶ 🔍 Search │            │
+│                                          │               │
+│                                          ▼               │
+│                                    ┌──────────┐          │
+│                     Context ◀───── │ Results  │          │
+│                        │           └──────────┘          │
+│                        ▼                                 │
+│                   ┌─────────┐                            │
+│                   │  LLM    │ ──▶ 💬 Answer             │
+│                   │ (GPT-4) │                            │
+│                   └─────────┘                            │
+│                                                          │
+└─────────────────────────────────────────────────────────┘</code></pre>
+        
+        <h3>Your Tech Stack</h3>
+        <ul>
+            <li><strong>Backend:</strong> Node.js + Express + TypeScript</li>
+            <li><strong>Database:</strong> PostgreSQL + pgvector</li>
+            <li><strong>LLM:</strong> OpenAI API (GPT-4)</li>
+            <li><strong>Frontend:</strong> Angular (your existing skills!)</li>
+            <li><strong>DevOps:</strong> Docker for local development</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💼 Why This Matters For Your Career</h2>
+            
+        <h3>The Demand for GenAI Developers</h3>
+        <p>As of 2024-2025, GenAI skills are among the most in-demand in tech. Companies are racing to integrate AI into their products, and they need developers who understand:</p>
+        <ul>
+            <li>How to build practical AI applications (not just use ChatGPT)</li>
+            <li>How to make AI work with private/company data (RAG)</li>
+            <li>How to deploy and scale these systems</li>
+        </ul>
+        
+        <h3>Your Advantage</h3>
+        <p>You already know Node.js and Angular. That's a huge head start:</p>
+        <ul>
+            <li>Most RAG tutorials are in Python - you'll stand out with TypeScript expertise</li>
+            <li>You can build full-stack AI apps, not just backend</li>
+            <li>Your Angular skills apply directly to building chat UIs</li>
+        </ul>
+        
+        <div class="callout callout-tip">
+            <strong>Tip:</strong> The goal isn't to become an ML researcher. It's to become a developer who can <em>apply</em> AI to solve real problems.
+        </div>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Check Your Understanding</h2>
+            
+        <div class="quiz-question">
+            <p>1. What does RAG stand for?</p>
+            <ul class="quiz-options">
+                <li>A) Random Access Generation</li>
+                <li>B) Retrieval-Augmented Generation</li>
+                <li>C) Rapid AI Growth</li>
+                <li>D) Real-time Answer Generator</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. What problem does RAG solve?</p>
+            <ul class="quiz-options">
+                <li>A) LLMs are too slow</li>
+                <li>B) LLMs don't know about your private data</li>
+                <li>C) LLMs are too expensive</li>
+                <li>D) LLMs can't generate text</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. In a RAG system, what happens BEFORE the LLM generates an answer?</p>
+            <ul class="quiz-options">
+                <li>A) The LLM is retrained on new data</li>
+                <li>B) Relevant documents are retrieved and added to the prompt</li>
+                <li>C) The user's question is translated to another language</li>
+                <li>D) The database is backed up</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-B, 3-B</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://www.pinecone.io/learn/retrieval-augmented-generation/" target="_blank">
+                    What is RAG? - Pinecone
+                </a>
+                <span style="color: #8b949e;"> - Comprehensive overview of RAG</span>
+            </li>
+            <li>
+                <a href="https://huggingface.co/docs/transformers/llm_tutorial" target="_blank">
+                    LLM Introduction - Hugging Face
+                </a>
+                <span style="color: #8b949e;"> - Understanding large language models</span>
+            </li>
+            <li>
+                <a href="https://platform.openai.com/docs" target="_blank">
+                    OpenAI Documentation
+                </a>
+                <span style="color: #8b949e;"> - Official API docs</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../index.html">← Course Home</a>
+            <a href="../module-1-docker/index.html">Next: Dev Environment →</a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "id": 9,
+    "title": "MLOps Pipeline",
+    "description": "Data \u2192 Train \u2192 Deploy \u2192 Monitor",
+    "slug": "mlops-pipeline",
+    "totalNodes": 12,
+    "totalEdges": 15
+  },
+  "sections": [
+    {
+      "id": 9,
+      "title": "MLOps Pipeline",
+      "slug": "9-mlops-pipeline",
+      "description": "Data \u2192 Train \u2192 Deploy \u2192 Monitor",
+      "line": 555
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s9_b9_Data",
+      "label": "DATA",
+      "type": "subgraph",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://dvc.org/",
+      "tooltip": "Data Pipeline",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Data"
+    },
+    {
+      "id": "s9_b9_DC",
+      "label": "Collect",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://dvc.org/",
+      "tooltip": "DVC - Data Version Control",
+      "style": null,
+      "parent": "s9_b9_Data",
+      "original_id": "DC"
+    },
+    {
+      "id": "s9_b9_DP",
+      "label": "Process",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://great-expectations.io/",
+      "tooltip": "Great Expectations",
+      "style": null,
+      "parent": "s9_b9_Data",
+      "original_id": "DP"
+    },
+    {
+      "id": "s9_b9_Model",
+      "label": "MODEL",
+      "type": "subgraph",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://mlflow.org/",
+      "tooltip": "Model Training",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Model"
+    },
+    {
+      "id": "s9_b9_TR",
+      "label": "Train",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://mlflow.org/",
+      "tooltip": "MLflow",
+      "style": null,
+      "parent": "s9_b9_Model",
+      "original_id": "TR"
+    },
+    {
+      "id": "s9_b9_EV",
+      "label": "Evaluate",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://docs.wandb.ai/",
+      "tooltip": "Weights & Biases",
+      "style": null,
+      "parent": "s9_b9_Model",
+      "original_id": "EV"
+    },
+    {
+      "id": "s9_b9_Deploy",
+      "label": "DEPLOY",
+      "type": "subgraph",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://www.bentoml.com/",
+      "tooltip": "Deployment",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Deploy"
+    },
+    {
+      "id": "s9_b9_REG",
+      "label": "Registry",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://mlflow.org/docs/latest/model-registry.html",
+      "tooltip": "MLflow Model Registry",
+      "style": null,
+      "parent": "s9_b9_Deploy",
+      "original_id": "REG"
+    },
+    {
+      "id": "s9_b9_API",
+      "label": "Serve",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://www.bentoml.com/",
+      "tooltip": "BentoML",
+      "style": null,
+      "parent": "s9_b9_Deploy",
+      "original_id": "API"
+    },
+    {
+      "id": "s9_b9_Monitor",
+      "label": "MONITOR",
+      "type": "subgraph",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://prometheus.io/",
+      "tooltip": "Monitoring",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Monitor"
+    },
+    {
+      "id": "s9_b9_LOG",
+      "label": "Logs",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://docs.seldon.io/projects/alibi-detect/",
+      "tooltip": "Alibi Detect",
+      "style": null,
+      "parent": "s9_b9_Monitor",
+      "original_id": "LOG"
+    },
+    {
+      "id": "s9_b9_ALERT",
+      "label": "Alerts",
+      "type": "node",
+      "section_id": 9,
+      "block_id": 9,
+      "url": "https://prometheus.io/",
+      "tooltip": "Prometheus",
+      "style": null,
+      "parent": "s9_b9_Monitor",
+      "original_id": "ALERT"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s9_b9_DC",
+      "target": "s9_b9_DP",
+      "type": "regular",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_TR",
+      "target": "s9_b9_EV",
+      "type": "regular",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_REG",
+      "target": "s9_b9_API",
+      "type": "regular",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_LOG",
+      "target": "s9_b9_ALERT",
+      "type": "regular",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Data",
+      "target": "s9_b9_Model",
+      "type": "thick",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Model",
+      "target": "s9_b9_Deploy",
+      "type": "thick",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Deploy",
+      "target": "s9_b9_Monitor",
+      "type": "thick",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Data",
+      "target": "s9_b9_DC",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Data",
+      "target": "s9_b9_DP",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Model",
+      "target": "s9_b9_TR",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Model",
+      "target": "s9_b9_EV",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Deploy",
+      "target": "s9_b9_REG",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Deploy",
+      "target": "s9_b9_API",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Monitor",
+      "target": "s9_b9_LOG",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    },
+    {
+      "source": "s9_b9_Monitor",
+      "target": "s9_b9_ALERT",
+      "type": "contains",
+      "section_id": 9,
+      "block_id": 9
+    }
+  ]
+}

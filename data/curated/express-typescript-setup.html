@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express + TypeScript Setup</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul, .content ol { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>⚡ Express + TypeScript Setup</h1>
+            <p>Source: <a href="https://blog.logrocket.com/how-to-set-up-node-typescript-express/" target="_blank">blog.logrocket.com</a></p>
+        </div>
+        <div class="content">
+            <h2>Quick Setup Guide</h2>
+            <p>Set up a modern Express.js API with TypeScript in minutes.</p>
+            
+            <h3>1. Initialize Project</h3>
+            <pre><code>mkdir my-express-api && cd my-express-api
+npm init -y</code></pre>
+            
+            <h3>2. Install Dependencies</h3>
+            <pre><code># Core dependencies
+npm install express
+
+# TypeScript + Dev dependencies
+npm install -D typescript @types/node @types/express ts-node nodemon</code></pre>
+            
+            <h3>3. Create tsconfig.json</h3>
+            <pre><code>{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}</code></pre>
+            
+            <h3>4. Create src/index.ts</h3>
+            <pre><code>import express, { Request, Response } from 'express';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json());
+
+// Routes
+app.get('/', (req: Request, res: Response) => {
+    res.json({ message: 'Hello from Express + TypeScript!' });
+});
+
+app.get('/health', (req: Request, res: Response) => {
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+});</code></pre>
+            
+            <h3>5. Add Scripts to package.json</h3>
+            <pre><code>{
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  }
+}</code></pre>
+            
+            <h3>6. Run Development Server</h3>
+            <pre><code>npm run dev</code></pre>
+            
+            <h2>Project Structure</h2>
+            <pre><code>my-express-api/
+├── src/
+│   ├── index.ts          # Entry point
+│   ├── routes/           # API routes
+│   ├── controllers/      # Route handlers
+│   ├── middleware/       # Custom middleware
+│   └── types/            # TypeScript types
+├── dist/                 # Compiled output
+├── package.json
+└── tsconfig.json</code></pre>
+            
+            <h2>Why TypeScript with Express?</h2>
+            <ul>
+                <li><strong>Type Safety:</strong> Catch errors at compile time</li>
+                <li><strong>Better IDE Support:</strong> Autocomplete, refactoring</li>
+                <li><strong>Self-Documenting:</strong> Types serve as documentation</li>
+                <li><strong>Easier Maintenance:</strong> Refactor with confidence</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

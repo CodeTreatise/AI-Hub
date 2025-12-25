@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Prompt Patterns</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+        .pattern { background: #1a2a3a; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #58a6ff; }
+        .pattern h4 { color: #58a6ff; margin: 0 0 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>📝 RAG Prompt Patterns</h1>
+            <p>Source: <a href="https://www.promptingguide.ai/research/rag" target="_blank">promptingguide.ai</a></p>
+        </div>
+        <div class="content">
+            <h2>Core RAG Prompt Structure</h2>
+            <p>Effective RAG prompts clearly separate context from questions and provide explicit instructions on how to use the retrieved information.</p>
+            
+            <div class="pattern">
+                <h4>Basic RAG Pattern</h4>
+                <pre><code>Use the following context to answer the question.
+If the answer is not in the context, say "I don't know."
+
+Context:
+{retrieved_chunks}
+
+Question: {user_question}
+
+Answer:</code></pre>
+            </div>
+            
+            <h2>Advanced Patterns</h2>
+            
+            <div class="pattern">
+                <h4>Structured Context with Sources</h4>
+                <pre><code>Answer the question based ONLY on the following sources.
+Cite your sources using [1], [2], etc.
+
+Sources:
+[1] {source_1_title}: {chunk_1}
+[2] {source_2_title}: {chunk_2}
+[3] {source_3_title}: {chunk_3}
+
+Question: {user_question}
+
+Provide a comprehensive answer with citations:</code></pre>
+            </div>
+            
+            <div class="pattern">
+                <h4>Step-by-Step Reasoning (Chain of Thought)</h4>
+                <pre><code>Context:
+{retrieved_chunks}
+
+Question: {user_question}
+
+Let's approach this step by step:
+1. First, identify the relevant information in the context
+2. Then, synthesize the information to answer the question
+3. Finally, provide a clear answer
+
+Reasoning:</code></pre>
+            </div>
+            
+            <div class="pattern">
+                <h4>Confidence-Aware Pattern</h4>
+                <pre><code>Use the context below to answer the question.
+Rate your confidence: HIGH (directly stated), MEDIUM (can be inferred), 
+LOW (partially supported), or NONE (not in context).
+
+Context:
+{retrieved_chunks}
+
+Question: {user_question}
+
+Answer with confidence rating:</code></pre>
+            </div>
+            
+            <h2>Anti-Hallucination Techniques</h2>
+            
+            <div class="pattern">
+                <h4>Explicit Grounding Instructions</h4>
+                <pre><code>You are a helpful assistant that ONLY uses the provided context.
+
+Rules:
+- ONLY use information from the context below
+- If information is not in the context, say "Not found in documents"
+- Do NOT use any prior knowledge
+- Quote directly from sources when possible
+
+Context:
+{retrieved_chunks}
+
+Question: {user_question}</code></pre>
+            </div>
+            
+            <h2>Multi-Document Synthesis</h2>
+            
+            <div class="pattern">
+                <h4>Compare and Contrast Pattern</h4>
+                <pre><code>Analyze the following documents and synthesize a comprehensive answer.
+Note any contradictions or different perspectives between sources.
+
+Document 1: {chunk_1}
+Document 2: {chunk_2}
+Document 3: {chunk_3}
+
+Question: {user_question}
+
+Synthesis (noting agreements and disagreements):</code></pre>
+            </div>
+            
+            <h2>Best Practices</h2>
+            <ul>
+                <li><strong>Clear delimiters:</strong> Use markers like "Context:", "Question:" to separate sections</li>
+                <li><strong>Explicit instructions:</strong> Tell the model exactly how to handle missing information</li>
+                <li><strong>Source attribution:</strong> Ask for citations to verify answers</li>
+                <li><strong>Structured output:</strong> Request specific formats when needed</li>
+                <li><strong>Context ordering:</strong> Place most relevant chunks first or last (primacy/recency)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

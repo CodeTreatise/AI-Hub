@@ -1,0 +1,3127 @@
+{
+  "meta": {
+    "id": "ai-safety-governance",
+    "title": "AI Safety & Governance",
+    "description": "Ethics, security, privacy, and responsible AI",
+    "icon": "\ud83d\udee1\ufe0f",
+    "totalNodes": 167,
+    "totalEdges": 152,
+    "totalSections": 6
+  },
+  "sections": [
+    {
+      "id": 12,
+      "title": "AI Ethics & Safety",
+      "slug": "12-ai-ethics--safety",
+      "description": "Bias, Privacy, Alignment",
+      "line": 700
+    },
+    {
+      "id": 24,
+      "title": "AI Security & Governance",
+      "slug": "24-ai-security--governance",
+      "description": "Prompt Injection, PII, Compliance",
+      "line": 1615
+    },
+    {
+      "id": 36,
+      "title": "Adversarial ML & Robustness",
+      "slug": "36-adversarial-ml--robustness",
+      "description": "Attacks, Defenses, Model Security",
+      "line": 2773
+    },
+    {
+      "id": 37,
+      "title": "Privacy-Preserving ML",
+      "slug": "37-privacy-preserving-ml",
+      "description": "Federated Learning, Differential Privacy",
+      "line": 2848
+    },
+    {
+      "id": 39,
+      "title": "Explainability & XAI",
+      "slug": "39-explainability--xai",
+      "description": "SHAP, LIME, Mechanistic Interp",
+      "line": 3145
+    },
+    {
+      "id": 41,
+      "title": "Content Provenance & Authenticity",
+      "slug": "41-content-provenance--authenticity",
+      "description": "Watermarking, C2PA, Deepfake Detection",
+      "line": 3306
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s12_b12_ETHICS",
+      "label": "AI ETHICS & SAFETY",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Anthropic Safety Research",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ETHICS"
+    },
+    {
+      "id": "s12_b12_BIAS",
+      "label": "Bias/Fairness",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://developers.google.com/machine-learning/crash-course/fairness",
+      "tooltip": "Bias & Fairness",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "BIAS"
+    },
+    {
+      "id": "s12_b12_PRIV",
+      "label": "Privacy",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://privacytools.io/",
+      "tooltip": "Privacy Tools",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PRIV"
+    },
+    {
+      "id": "s12_b12_TRANS",
+      "label": "Transparency",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://christophm.github.io/interpretable-ml-book/",
+      "tooltip": "Interpretable ML Book",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TRANS"
+    },
+    {
+      "id": "s12_b12_SAFE",
+      "label": "Safety",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://www.safe.ai/",
+      "tooltip": "AI Safety",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SAFE"
+    },
+    {
+      "id": "s12_b12_B1",
+      "label": "Data Bias",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://developers.google.com/machine-learning/crash-course/fairness",
+      "tooltip": "Google ML Fairness",
+      "style": null,
+      "parent": null,
+      "original_id": "B1"
+    },
+    {
+      "id": "s12_b12_B2",
+      "label": "Algo Bias",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://fairlearn.org/",
+      "tooltip": "Fairlearn Library",
+      "style": null,
+      "parent": null,
+      "original_id": "B2"
+    },
+    {
+      "id": "s12_b12_P1",
+      "label": "Federated Learning",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://flower.ai/",
+      "tooltip": "Flower Federated Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s12_b12_P2",
+      "label": "Anonymization",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://microsoft.github.io/presidio/",
+      "tooltip": "Microsoft Presidio",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s12_b12_TR1",
+      "label": "Explainable AI",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://interpret.ml/",
+      "tooltip": "InterpretML",
+      "style": null,
+      "parent": null,
+      "original_id": "TR1"
+    },
+    {
+      "id": "s12_b12_TR2",
+      "label": "Interpretability",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://captum.ai/",
+      "tooltip": "Captum (PyTorch)",
+      "style": null,
+      "parent": null,
+      "original_id": "TR2"
+    },
+    {
+      "id": "s12_b12_S1",
+      "label": "Alignment",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://aligned.ai/",
+      "tooltip": "Alignment Research",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s12_b12_S2",
+      "label": "Red Teaming",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://atlas.mitre.org/",
+      "tooltip": "MITRE ATLAS",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s24_b26_SECURITY",
+      "label": "AI SECURITY & GOVERNANCE",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://genai.owasp.org/",
+      "tooltip": "OWASP LLM Top 10",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SECURITY"
+    },
+    {
+      "id": "s24_b26_ATTACK",
+      "label": "Attack Vectors",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://genai.owasp.org/",
+      "tooltip": "Attack Vectors",
+      "style": "fill:#E53935,stroke:#C62828,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ATTACK"
+    },
+    {
+      "id": "s24_b26_PROTECT",
+      "label": "Protection",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.nvidia.com/nemo/guardrails/",
+      "tooltip": "Protection",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROTECT"
+    },
+    {
+      "id": "s24_b26_COMPLY",
+      "label": "Compliance",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://gdpr.eu/",
+      "tooltip": "Compliance",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COMPLY"
+    },
+    {
+      "id": "s24_b26_GOVERN",
+      "label": "Governance",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://huggingface.co/docs/hub/model-cards",
+      "tooltip": "Governance",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GOVERN"
+    },
+    {
+      "id": "s24_b26_A1",
+      "label": "Prompt Injection",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://learnprompting.org/docs/prompt_hacking/injection",
+      "tooltip": "Prompt Injection Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s24_b26_A2",
+      "label": "Jailbreaking",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://arxiv.org/abs/2307.15043",
+      "tooltip": "Jailbreaking Research",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s24_b26_A3",
+      "label": "Data Exfiltration",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://genai.owasp.org/",
+      "tooltip": "Data Exfiltration",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s24_b26_A4",
+      "label": "Model Extraction",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://arxiv.org/abs/2403.06634",
+      "tooltip": "Model Extraction Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s24_b26_P1",
+      "label": "Input Validation",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://python.langchain.com/docs/security/",
+      "tooltip": "Input Validation",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s24_b26_P2",
+      "label": "Output Filtering",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.lakera.ai/",
+      "tooltip": "Output Filtering - Lakera",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s24_b26_P3",
+      "label": "PII Redaction",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://microsoft.github.io/presidio/",
+      "tooltip": "Microsoft Presidio",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s24_b26_P4",
+      "label": "Guardrails",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.nvidia.com/nemo/guardrails/",
+      "tooltip": "NeMo Guardrails",
+      "style": null,
+      "parent": null,
+      "original_id": "P4"
+    },
+    {
+      "id": "s24_b26_C1",
+      "label": "GDPR",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://gdpr.eu/",
+      "tooltip": "GDPR Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s24_b26_C2",
+      "label": "SOC2",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+      "tooltip": "SOC2 Overview",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s24_b26_C3",
+      "label": "HIPAA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://www.hhs.gov/hipaa/index.html",
+      "tooltip": "HIPAA Guidelines",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s24_b26_C4",
+      "label": "ISO 27001",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://www.iso.org/standard/27001",
+      "tooltip": "ISO 27001",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s24_b26_G1",
+      "label": "Model Cards",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://huggingface.co/docs/hub/model-cards",
+      "tooltip": "HF Model Cards",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s24_b26_G2",
+      "label": "Audit Logs",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://langfuse.com/docs/tracing",
+      "tooltip": "Audit Logs - Langfuse",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s24_b26_G3",
+      "label": "Access Control",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.aws.amazon.com/IAM/",
+      "tooltip": "Access Control - AWS IAM",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s24_b26_G4",
+      "label": "Data Lineage",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.datadoghq.com/",
+      "tooltip": "Data Lineage",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s24_b27_REGULATIONS",
+      "label": "GLOBAL AI REGULATIONS",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/",
+      "tooltip": "AI Regulations",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REGULATIONS"
+    },
+    {
+      "id": "s24_b27_EU",
+      "label": "European Union",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/",
+      "tooltip": "EU AI Regulation",
+      "style": "fill:#003399,stroke:#002266,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EU"
+    },
+    {
+      "id": "s24_b27_US",
+      "label": "United States",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tooltip": "US AI Policy",
+      "style": "fill:#B22234,stroke:#8B1A28,color:#FFFFFF",
+      "parent": null,
+      "original_id": "US"
+    },
+    {
+      "id": "s24_b27_SECTOR",
+      "label": "Sector-Specific",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-machine-learning-aiml-software-medical-device",
+      "tooltip": "FDA AI",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SECTOR"
+    },
+    {
+      "id": "s24_b27_GLOBAL",
+      "label": "Global Standards",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.iso.org/standard/81230.html",
+      "tooltip": "ISO AI Standard",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GLOBAL"
+    },
+    {
+      "id": "s24_b27_EU1",
+      "label": "EU AI Act",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/the-act/",
+      "tooltip": "EU AI Act Full Text",
+      "style": null,
+      "parent": null,
+      "original_id": "EU1"
+    },
+    {
+      "id": "s24_b27_EU2",
+      "label": "Risk-Based Classification",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/high-level-summary/",
+      "tooltip": "Risk Classification",
+      "style": null,
+      "parent": null,
+      "original_id": "EU2"
+    },
+    {
+      "id": "s24_b27_EU3",
+      "label": "Prohibited AI Uses",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/article/5/",
+      "tooltip": "Prohibited Practices",
+      "style": null,
+      "parent": null,
+      "original_id": "EU3"
+    },
+    {
+      "id": "s24_b27_EU4",
+      "label": "GDPR for AI",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://gdpr.eu/",
+      "tooltip": "GDPR + AI",
+      "style": null,
+      "parent": null,
+      "original_id": "EU4"
+    },
+    {
+      "id": "s24_b27_US1",
+      "label": "Executive Orders",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tooltip": "Biden AI EO",
+      "style": null,
+      "parent": null,
+      "original_id": "US1"
+    },
+    {
+      "id": "s24_b27_US2",
+      "label": "NIST AI RMF",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tooltip": "NIST AI RMF",
+      "style": null,
+      "parent": null,
+      "original_id": "US2"
+    },
+    {
+      "id": "s24_b27_US3",
+      "label": "State Laws CA/CO",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://cppa.ca.gov/regulations/",
+      "tooltip": "California Privacy",
+      "style": null,
+      "parent": null,
+      "original_id": "US3"
+    },
+    {
+      "id": "s24_b27_US4",
+      "label": "FTC Enforcement",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check",
+      "tooltip": "FTC AI Guidelines",
+      "style": null,
+      "parent": null,
+      "original_id": "US4"
+    },
+    {
+      "id": "s24_b27_SE1",
+      "label": "Healthcare FDA/HIPAA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-machine-learning-aiml-software-medical-device",
+      "tooltip": "FDA AI/ML",
+      "style": null,
+      "parent": null,
+      "original_id": "SE1"
+    },
+    {
+      "id": "s24_b27_SE2",
+      "label": "Finance SEC/FINRA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.sec.gov/spotlight/cybersecurity",
+      "tooltip": "SEC AI/Cyber",
+      "style": null,
+      "parent": null,
+      "original_id": "SE2"
+    },
+    {
+      "id": "s24_b27_SE3",
+      "label": "Automotive NHTSA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nhtsa.gov/technology-innovation/automated-vehicles-safety",
+      "tooltip": "NHTSA Automated",
+      "style": null,
+      "parent": null,
+      "original_id": "SE3"
+    },
+    {
+      "id": "s24_b27_SE4",
+      "label": "Employment EEOC",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.eeoc.gov/laws/guidance/artificial-intelligence-and-title-vii",
+      "tooltip": "EEOC AI Fairness",
+      "style": null,
+      "parent": null,
+      "original_id": "SE4"
+    },
+    {
+      "id": "s24_b27_GL1",
+      "label": "ISO/IEC 42001",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.iso.org/standard/81230.html",
+      "tooltip": "ISO 42001",
+      "style": null,
+      "parent": null,
+      "original_id": "GL1"
+    },
+    {
+      "id": "s24_b27_GL2",
+      "label": "IEEE 7000 Series",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://standards.ieee.org/industry-connections/ec/ead-v1/",
+      "tooltip": "IEEE Ethically Aligned",
+      "style": null,
+      "parent": null,
+      "original_id": "GL2"
+    },
+    {
+      "id": "s24_b27_GL3",
+      "label": "OECD AI Principles",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://oecd.ai/en/ai-principles",
+      "tooltip": "OECD Principles",
+      "style": null,
+      "parent": null,
+      "original_id": "GL3"
+    },
+    {
+      "id": "s24_b27_GL4",
+      "label": "UNESCO Recommendations",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
+      "tooltip": "UNESCO AI Ethics",
+      "style": null,
+      "parent": null,
+      "original_id": "GL4"
+    },
+    {
+      "id": "s36_b42_ADVERSARIAL",
+      "label": "ADVERSARIAL ML & ROBUSTNESS",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/",
+      "tooltip": "ART Toolbox",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ADVERSARIAL"
+    },
+    {
+      "id": "s36_b42_EVASION",
+      "label": "Evasion Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/attacks/evasion.html",
+      "tooltip": "Evasion Attacks",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EVASION"
+    },
+    {
+      "id": "s36_b42_POISON",
+      "label": "Poisoning Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/attacks/poisoning.html",
+      "tooltip": "Poisoning Attacks",
+      "style": "fill:#E53935,stroke:#C62828,color:#FFFFFF",
+      "parent": null,
+      "original_id": "POISON"
+    },
+    {
+      "id": "s36_b42_DEFENSE",
+      "label": "Defenses",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://adversarial-robustness-toolbox.readthedocs.io/en/latest/modules/defences.html",
+      "tooltip": "Defenses",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DEFENSE"
+    },
+    {
+      "id": "s36_b42_SUPPLY",
+      "label": "Supply Chain",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://slsa.dev/",
+      "tooltip": "SLSA Framework",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SUPPLY"
+    },
+    {
+      "id": "s36_b42_EV1",
+      "label": "Adversarial Examples",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1312.6199",
+      "tooltip": "Adversarial Examples Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "EV1"
+    },
+    {
+      "id": "s36_b42_EV2",
+      "label": "FGSM/PGD",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1706.06083",
+      "tooltip": "PGD Attack Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "EV2"
+    },
+    {
+      "id": "s36_b42_EV3",
+      "label": "Patch Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1712.09665",
+      "tooltip": "Adversarial Patch",
+      "style": null,
+      "parent": null,
+      "original_id": "EV3"
+    },
+    {
+      "id": "s36_b42_EV4",
+      "label": "Black-box Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1611.02770",
+      "tooltip": "Black-box Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "EV4"
+    },
+    {
+      "id": "s36_b42_PO1",
+      "label": "Data Poisoning",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1804.00792",
+      "tooltip": "Data Poisoning Survey",
+      "style": null,
+      "parent": null,
+      "original_id": "PO1"
+    },
+    {
+      "id": "s36_b42_PO2",
+      "label": "Backdoor Attacks",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1708.06733",
+      "tooltip": "Backdoor Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "PO2"
+    },
+    {
+      "id": "s36_b42_PO3",
+      "label": "Model Trojans",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1712.05526",
+      "tooltip": "Neural Trojans",
+      "style": null,
+      "parent": null,
+      "original_id": "PO3"
+    },
+    {
+      "id": "s36_b42_PO4",
+      "label": "Label Flipping",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/2006.07589",
+      "tooltip": "Label Poisoning",
+      "style": null,
+      "parent": null,
+      "original_id": "PO4"
+    },
+    {
+      "id": "s36_b42_DE1",
+      "label": "Adversarial Training",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1706.06083",
+      "tooltip": "Adversarial Training",
+      "style": null,
+      "parent": null,
+      "original_id": "DE1"
+    },
+    {
+      "id": "s36_b42_DE2",
+      "label": "Certified Robustness",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1902.04557",
+      "tooltip": "Certified Defenses",
+      "style": null,
+      "parent": null,
+      "original_id": "DE2"
+    },
+    {
+      "id": "s36_b42_DE3",
+      "label": "Input Preprocessing",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1711.00117",
+      "tooltip": "Input Transformations",
+      "style": null,
+      "parent": null,
+      "original_id": "DE3"
+    },
+    {
+      "id": "s36_b42_DE4",
+      "label": "Ensemble Methods",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://arxiv.org/abs/1709.00200",
+      "tooltip": "Ensemble Adversarial",
+      "style": null,
+      "parent": null,
+      "original_id": "DE4"
+    },
+    {
+      "id": "s36_b42_SU1",
+      "label": "Model Provenance",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://huggingface.co/docs/hub/security",
+      "tooltip": "HF Model Security",
+      "style": null,
+      "parent": null,
+      "original_id": "SU1"
+    },
+    {
+      "id": "s36_b42_SU2",
+      "label": "Weights Verification",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://github.com/sigstore/cosign",
+      "tooltip": "Cosign Verification",
+      "style": null,
+      "parent": null,
+      "original_id": "SU2"
+    },
+    {
+      "id": "s36_b42_SU3",
+      "label": "Dataset Auditing",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://datadreamer.dev/",
+      "tooltip": "Dataset Auditing",
+      "style": null,
+      "parent": null,
+      "original_id": "SU3"
+    },
+    {
+      "id": "s36_b42_SU4",
+      "label": "Dependency Scanning",
+      "type": "node",
+      "section_id": 36,
+      "block_id": 42,
+      "url": "https://snyk.io/",
+      "tooltip": "Snyk Dependency Scan",
+      "style": null,
+      "parent": null,
+      "original_id": "SU4"
+    },
+    {
+      "id": "s37_b43_PRIVACY",
+      "label": "PRIVACY-PRESERVING ML",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://petsymposium.org/",
+      "tooltip": "PETS Symposium",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PRIVACY"
+    },
+    {
+      "id": "s37_b43_FED",
+      "label": "Federated Learning",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://flower.ai/",
+      "tooltip": "Federated Learning",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FED"
+    },
+    {
+      "id": "s37_b43_DP",
+      "label": "Differential Privacy",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://opacus.ai/",
+      "tooltip": "Differential Privacy",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DP"
+    },
+    {
+      "id": "s37_b43_CRYPTO",
+      "label": "Cryptographic ML",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.openmined.org/",
+      "tooltip": "Cryptographic ML",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CRYPTO"
+    },
+    {
+      "id": "s37_b43_TEE",
+      "label": "Trusted Execution",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://confidentialcomputing.io/",
+      "tooltip": "Confidential Computing",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TEE"
+    },
+    {
+      "id": "s37_b43_F1",
+      "label": "Flower",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://flower.ai/",
+      "tooltip": "Flower FL",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s37_b43_F2",
+      "label": "PySyft",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://openmined.github.io/PySyft/",
+      "tooltip": "PySyft",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s37_b43_F3",
+      "label": "FATE",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://fate.fedai.org/",
+      "tooltip": "FATE",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s37_b43_F4",
+      "label": "TensorFlow Federated",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.tensorflow.org/federated",
+      "tooltip": "TFF",
+      "style": null,
+      "parent": null,
+      "original_id": "F4"
+    },
+    {
+      "id": "s37_b43_D1",
+      "label": "Opacus PyTorch",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://opacus.ai/",
+      "tooltip": "Opacus",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s37_b43_D2",
+      "label": "TF Privacy",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://github.com/tensorflow/privacy",
+      "tooltip": "TF Privacy",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s37_b43_D3",
+      "label": "Diffprivlib",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://diffprivlib.readthedocs.io/",
+      "tooltip": "diffprivlib",
+      "style": null,
+      "parent": null,
+      "original_id": "D3"
+    },
+    {
+      "id": "s37_b43_D4",
+      "label": "DP-SGD",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://arxiv.org/abs/1607.00133",
+      "tooltip": "DP-SGD Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "D4"
+    },
+    {
+      "id": "s37_b43_C1",
+      "label": "Homomorphic Encryption",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.microsoft.com/en-us/research/project/microsoft-seal/",
+      "tooltip": "Microsoft SEAL",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s37_b43_C2",
+      "label": "Secure MPC",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://eprint.iacr.org/2020/300.pdf",
+      "tooltip": "MPC for ML",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s37_b43_C3",
+      "label": "Secret Sharing",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://crypten.ai/",
+      "tooltip": "CrypTen",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s37_b43_C4",
+      "label": "Functional Encryption",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://eprint.iacr.org/2018/206",
+      "tooltip": "Functional Encryption",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s37_b43_T1",
+      "label": "Intel SGX",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html",
+      "tooltip": "Intel SGX",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s37_b43_T2",
+      "label": "ARM TrustZone",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://developer.arm.com/documentation/102377/latest/",
+      "tooltip": "ARM TrustZone",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s37_b43_T3",
+      "label": "AWS Nitro Enclaves",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://aws.amazon.com/ec2/nitro/nitro-enclaves/",
+      "tooltip": "AWS Nitro",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s37_b43_T4",
+      "label": "Azure Confidential",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://azure.microsoft.com/en-us/solutions/confidential-compute/",
+      "tooltip": "Azure Confidential",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    },
+    {
+      "id": "s37_b44_ATTACK",
+      "label": "PRIVACY ATTACKS",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2007.07646",
+      "tooltip": "Privacy Attacks Survey",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ATTACK"
+    },
+    {
+      "id": "s37_b44_MEM",
+      "label": "Membership Inference",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1610.05820",
+      "tooltip": "Membership Inference",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MEM"
+    },
+    {
+      "id": "s37_b44_INV",
+      "label": "Model Inversion",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1911.07135",
+      "tooltip": "Model Inversion Survey",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INV"
+    },
+    {
+      "id": "s37_b44_ATTR",
+      "label": "Attribute Inference",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1805.04049",
+      "tooltip": "Attribute Inference",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ATTR"
+    },
+    {
+      "id": "s37_b44_GRAD",
+      "label": "Gradient Leakage",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1906.08935",
+      "tooltip": "Gradient Leakage",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GRAD"
+    },
+    {
+      "id": "s37_b44_M1",
+      "label": "Shadow Models",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1610.05820",
+      "tooltip": "Shadow Model Attack",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s37_b44_M2",
+      "label": "Likelihood Ratio",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2112.03570",
+      "tooltip": "LiRA Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s37_b44_M3",
+      "label": "Label-Only Attacks",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2007.14321",
+      "tooltip": "Label-Only MI",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s37_b44_M4",
+      "label": "LiRA Attack",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2112.03570",
+      "tooltip": "LiRA Attack",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s37_b44_I1",
+      "label": "Reconstruction Attacks",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1911.07135",
+      "tooltip": "Reconstruction",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s37_b44_I2",
+      "label": "Feature Leakage",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2012.07805",
+      "tooltip": "Feature Leakage",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s37_b44_I3",
+      "label": "Embedding Inversion",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2004.00053",
+      "tooltip": "Embedding Inversion",
+      "style": null,
+      "parent": null,
+      "original_id": "I3"
+    },
+    {
+      "id": "s37_b44_I4",
+      "label": "Prompt Extraction",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2311.17035",
+      "tooltip": "Prompt Extraction",
+      "style": null,
+      "parent": null,
+      "original_id": "I4"
+    },
+    {
+      "id": "s37_b44_A1",
+      "label": "Sensitive Attribute",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1805.04049",
+      "tooltip": "Sensitive Attributes",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s37_b44_A2",
+      "label": "Property Inference",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1807.00459",
+      "tooltip": "Property Inference",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s37_b44_A3",
+      "label": "Training Data Extraction",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2012.07805",
+      "tooltip": "Data Extraction",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s37_b44_A4",
+      "label": "Memorization Attacks",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2202.07646",
+      "tooltip": "Memorization in LLMs",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s37_b44_G1",
+      "label": "Gradient Matching",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1906.08935",
+      "tooltip": "DLG Attack",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s37_b44_G2",
+      "label": "FL Gradient Leakage",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2003.14053",
+      "tooltip": "FL Gradient Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s37_b44_G3",
+      "label": "DLGA Attack",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2001.02610",
+      "tooltip": "DLGA",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s37_b44_G4",
+      "label": "Inverting Gradients",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2003.14053",
+      "tooltip": "Inverting Gradients",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s39_b47_XAI",
+      "label": "EXPLAINABILITY & XAI",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://christophm.github.io/interpretable-ml-book/",
+      "tooltip": "Interpretable ML Book",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "XAI"
+    },
+    {
+      "id": "s39_b47_LOCAL",
+      "label": "Local Explanations",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://github.com/marcotcr/lime",
+      "tooltip": "Local Explanations",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LOCAL"
+    },
+    {
+      "id": "s39_b47_GLOBAL",
+      "label": "Global Explanations",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://shap.readthedocs.io/",
+      "tooltip": "Global Explanations",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GLOBAL"
+    },
+    {
+      "id": "s39_b47_CONCEPT",
+      "label": "Concept-Based",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1711.11279",
+      "tooltip": "Concept-Based",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CONCEPT"
+    },
+    {
+      "id": "s39_b47_MECH",
+      "label": "Mechanistic",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://transformer-circuits.pub/",
+      "tooltip": "Mechanistic Interp",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MECH"
+    },
+    {
+      "id": "s39_b47_L1",
+      "label": "LIME",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://github.com/marcotcr/lime",
+      "tooltip": "LIME",
+      "style": null,
+      "parent": null,
+      "original_id": "L1"
+    },
+    {
+      "id": "s39_b47_L2",
+      "label": "SHAP",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://shap.readthedocs.io/",
+      "tooltip": "SHAP",
+      "style": null,
+      "parent": null,
+      "original_id": "L2"
+    },
+    {
+      "id": "s39_b47_L3",
+      "label": "Anchors",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://github.com/marcotcr/anchor",
+      "tooltip": "Anchors",
+      "style": null,
+      "parent": null,
+      "original_id": "L3"
+    },
+    {
+      "id": "s39_b47_L4",
+      "label": "Counterfactuals",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://docs.seldon.io/projects/alibi/en/stable/methods/CFProto.html",
+      "tooltip": "Counterfactuals",
+      "style": null,
+      "parent": null,
+      "original_id": "L4"
+    },
+    {
+      "id": "s39_b47_G1",
+      "label": "Feature Importance",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+      "tooltip": "Permutation Importance",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s39_b47_G2",
+      "label": "Partial Dependence",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://scikit-learn.org/stable/modules/partial_dependence.html",
+      "tooltip": "Partial Dependence",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s39_b47_G3",
+      "label": "SHAP Summary",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/plots/beeswarm.html",
+      "tooltip": "SHAP Summary",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s39_b47_G4",
+      "label": "Global Surrogates",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://christophm.github.io/interpretable-ml-book/global.html",
+      "tooltip": "Global Surrogates",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s39_b47_CO1",
+      "label": "TCAV",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1711.11279",
+      "tooltip": "TCAV Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "CO1"
+    },
+    {
+      "id": "s39_b47_CO2",
+      "label": "Concept Bottleneck",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/2007.04612",
+      "tooltip": "Concept Bottleneck",
+      "style": null,
+      "parent": null,
+      "original_id": "CO2"
+    },
+    {
+      "id": "s39_b47_CO3",
+      "label": "Prototype Networks",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1904.11483",
+      "tooltip": "Prototypes",
+      "style": null,
+      "parent": null,
+      "original_id": "CO3"
+    },
+    {
+      "id": "s39_b47_CO4",
+      "label": "Concept Activation",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1711.11279",
+      "tooltip": "Concept Activation",
+      "style": null,
+      "parent": null,
+      "original_id": "CO4"
+    },
+    {
+      "id": "s39_b47_M1",
+      "label": "TransformerLens",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://transformerlensorg.github.io/TransformerLens/",
+      "tooltip": "TransformerLens",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s39_b47_M2",
+      "label": "Activation Patching",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/2211.00593",
+      "tooltip": "Activation Patching",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s39_b47_M3",
+      "label": "Circuit Analysis",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://transformer-circuits.pub/",
+      "tooltip": "Circuits",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s39_b47_M4",
+      "label": "Probing Classifiers",
+      "type": "node",
+      "section_id": 39,
+      "block_id": 47,
+      "url": "https://arxiv.org/abs/1909.03368",
+      "tooltip": "Probing",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s41_b49_PROV",
+      "label": "CONTENT PROVENANCE",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/",
+      "tooltip": "C2PA Standard",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROV"
+    },
+    {
+      "id": "s41_b49_WATER",
+      "label": "Watermarking",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2301.10226",
+      "tooltip": "Watermarking Survey",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "WATER"
+    },
+    {
+      "id": "s41_b49_CRED",
+      "label": "Content Credentials",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentauthenticity.org/",
+      "tooltip": "Content Authenticity",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CRED"
+    },
+    {
+      "id": "s41_b49_DETECT",
+      "label": "Detection",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://ai.meta.com/",
+      "tooltip": "Detection Methods",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DETECT"
+    },
+    {
+      "id": "s41_b49_AUDIT",
+      "label": "Audit Trail",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/specifications/",
+      "tooltip": "Audit Specifications",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AUDIT"
+    },
+    {
+      "id": "s41_b49_W1",
+      "label": "Invisible Watermarks",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2301.10226",
+      "tooltip": "Invisible Watermarks",
+      "style": null,
+      "parent": null,
+      "original_id": "W1"
+    },
+    {
+      "id": "s41_b49_W2",
+      "label": "SynthID Google",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://deepmind.google/technologies/synthid/",
+      "tooltip": "Google SynthID",
+      "style": null,
+      "parent": null,
+      "original_id": "W2"
+    },
+    {
+      "id": "s41_b49_W3",
+      "label": "Stable Signature",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2303.15435",
+      "tooltip": "Stable Signature",
+      "style": null,
+      "parent": null,
+      "original_id": "W3"
+    },
+    {
+      "id": "s41_b49_W4",
+      "label": "Audio Watermarks",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2308.01187",
+      "tooltip": "AudioSeal Meta",
+      "style": null,
+      "parent": null,
+      "original_id": "W4"
+    },
+    {
+      "id": "s41_b49_CR1",
+      "label": "C2PA Standard",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/",
+      "tooltip": "C2PA Coalition",
+      "style": null,
+      "parent": null,
+      "original_id": "CR1"
+    },
+    {
+      "id": "s41_b49_CR2",
+      "label": "Content Credentials",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentcredentials.org/",
+      "tooltip": "Content Credentials",
+      "style": null,
+      "parent": null,
+      "original_id": "CR2"
+    },
+    {
+      "id": "s41_b49_CR3",
+      "label": "Adobe CAI",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentauthenticity.org/",
+      "tooltip": "Adobe CAI",
+      "style": null,
+      "parent": null,
+      "original_id": "CR3"
+    },
+    {
+      "id": "s41_b49_CR4",
+      "label": "Metadata Signing",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/specifications/specifications/1.3/specs/C2PA_Specification.html",
+      "tooltip": "C2PA Signing",
+      "style": null,
+      "parent": null,
+      "original_id": "CR4"
+    },
+    {
+      "id": "s41_b49_D1",
+      "label": "Deepfake Detection",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://ai.meta.com/",
+      "tooltip": "Deepfake Detection",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s41_b49_D2",
+      "label": "AI Text Detectors",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://gptzero.me/",
+      "tooltip": "AI Text Detection",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s41_b49_D3",
+      "label": "Image Forensics",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2303.14126",
+      "tooltip": "Image Forensics",
+      "style": null,
+      "parent": null,
+      "original_id": "D3"
+    },
+    {
+      "id": "s41_b49_D4",
+      "label": "Video Analysis",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2006.14749",
+      "tooltip": "Video Deepfakes",
+      "style": null,
+      "parent": null,
+      "original_id": "D4"
+    },
+    {
+      "id": "s41_b49_A1",
+      "label": "Blockchain Provenance",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://www.numbersprotocol.io/",
+      "tooltip": "Numbers Protocol",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s41_b49_A2",
+      "label": "Hash Chains",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/specifications/",
+      "tooltip": "Hash Chain Provenance",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s41_b49_A3",
+      "label": "Timestamping",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://www.rfc-editor.org/rfc/rfc3161",
+      "tooltip": "RFC 3161 Timestamp",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s41_b49_A4",
+      "label": "Origin Tracking",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentauthenticity.org/how-it-works",
+      "tooltip": "Origin Tracking",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s24_b104_NeMo_Guard",
+      "label": "NeMo Guardrails",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 104,
+      "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+      "tooltip": "NVIDIA guardrails toolkit",
+      "style": null,
+      "parent": null,
+      "original_id": "NeMo_Guardrails"
+    },
+    {
+      "id": "s24_b105_Guardrails",
+      "label": "Guardrails AI",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 105,
+      "url": "https://www.guardrailsai.com/",
+      "tooltip": "Output validation framework",
+      "style": null,
+      "parent": null,
+      "original_id": "Guardrails_AI"
+    },
+    {
+      "id": "s24_b106_Rebuff",
+      "label": "Rebuff",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 106,
+      "url": "https://github.com/protectai/rebuff",
+      "tooltip": "Prompt injection detection",
+      "style": null,
+      "parent": null,
+      "original_id": "Rebuff"
+    },
+    {
+      "id": "s24_b107_Lakera",
+      "label": "Lakera",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 107,
+      "url": "https://www.lakera.ai/",
+      "tooltip": "AI security platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Lakera"
+    },
+    {
+      "id": "s24_b108_Constituti",
+      "label": "Constitutional AI",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 108,
+      "url": "https://arxiv.org/abs/2212.08073",
+      "tooltip": "Self-supervised alignment",
+      "style": null,
+      "parent": null,
+      "original_id": "Constitutional_AI"
+    },
+    {
+      "id": "s24_b109_DPO",
+      "label": "DPO",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 109,
+      "url": "https://arxiv.org/abs/2305.18290",
+      "tooltip": "Direct Preference Optimization",
+      "style": null,
+      "parent": null,
+      "original_id": "DPO"
+    },
+    {
+      "id": "s24_b141_Llama_Guar",
+      "label": "Llama Guard",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 141,
+      "url": "https://huggingface.co/meta-llama/LlamaGuard-7b",
+      "tooltip": "Meta content safety model",
+      "style": null,
+      "parent": null,
+      "original_id": "Llama_Guard"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_BIAS",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_PRIV",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_TRANS",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_SAFE",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_BIAS",
+      "target": "s12_b12_B1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_BIAS",
+      "target": "s12_b12_B2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_PRIV",
+      "target": "s12_b12_P1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_PRIV",
+      "target": "s12_b12_P2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_TRANS",
+      "target": "s12_b12_TR1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_TRANS",
+      "target": "s12_b12_TR2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_SAFE",
+      "target": "s12_b12_S1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_SAFE",
+      "target": "s12_b12_S2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_ATTACK",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_PROTECT",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_COMPLY",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_GOVERN",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_EU",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_US",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_SECTOR",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_GLOBAL",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_EVASION",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_POISON",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_DEFENSE",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_ADVERSARIAL",
+      "target": "s36_b42_SUPPLY",
+      "type": "thick",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_EVASION",
+      "target": "s36_b42_EV4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_POISON",
+      "target": "s36_b42_PO4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_DEFENSE",
+      "target": "s36_b42_DE4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU1",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU2",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU3",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s36_b42_SUPPLY",
+      "target": "s36_b42_SU4",
+      "type": "regular",
+      "section_id": 36,
+      "block_id": 42
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_FED",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_DP",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_CRYPTO",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_TEE",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_MEM",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_INV",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_ATTR",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_GRAD",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_LOCAL",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_GLOBAL",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_CONCEPT",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_XAI",
+      "target": "s39_b47_MECH",
+      "type": "thick",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_LOCAL",
+      "target": "s39_b47_L4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_GLOBAL",
+      "target": "s39_b47_G4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_CONCEPT",
+      "target": "s39_b47_CO4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M1",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M2",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M3",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s39_b47_MECH",
+      "target": "s39_b47_M4",
+      "type": "regular",
+      "section_id": 39,
+      "block_id": 47
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_WATER",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_CRED",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_DETECT",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_AUDIT",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    }
+  ]
+}

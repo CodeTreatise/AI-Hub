@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f0f1a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .header-left h1 {
+            font-size: 1.75rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.25rem;
+        }
+        
+        .header-left p {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        .header-stats {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #818cf8;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 8px;
+            color: #818cf8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #818cf8;
+        }
+        
+        /* Search & Filter Bar */
+        .search-bar {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .search-input-wrapper {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            color: #e0e0e0;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+        
+        .search-input:focus {
+            border-color: #818cf8;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            opacity: 0.5;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.25rem;
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 8px;
+            color: #9ca3af;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #818cf8;
+            color: #e0e0e0;
+        }
+        
+        /* Category Tabs */
+        .category-tabs {
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .category-tab {
+            padding: 0.5rem 1rem;
+            background: rgba(30, 30, 50, 0.6);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 20px;
+            color: #9ca3af;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .category-tab:hover,
+        .category-tab.active {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.4);
+            color: #e0e0e0;
+        }
+        
+        .category-tab .count {
+            background: rgba(99, 102, 241, 0.3);
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+        
+        /* Category Section */
+        .category-section {
+            margin-bottom: 3rem;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+        }
+        
+        .category-icon {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+        }
+        
+        .category-info h2 {
+            font-size: 1.3rem;
+            color: #f0f0f0;
+            margin-bottom: 0.25rem;
+        }
+        
+        .category-info p {
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+        
+        .category-count {
+            margin-left: auto;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #818cf8;
+        }
+        
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        /* Tool Card */
+        .tool-card {
+            background: rgba(30, 30, 50, 0.7);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+                        0 0 20px rgba(99, 102, 241, 0.1);
+        }
+        
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .tool-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #f0f0f0;
+        }
+        
+        .tool-pricing {
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .pricing-free {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+        
+        .pricing-freemium {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+        
+        .pricing-paid {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+        
+        .tool-desc {
+            font-size: 0.85rem;
+            color: #b8c0cc;
+            line-height: 1.5;
+            flex: 1;
+        }
+        
+        .tool-url {
+            font-size: 0.75rem;
+            color: #818cf8;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .tool-url span {
+            opacity: 0.7;
+        }
+        
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #9ca3af;
+        }
+        
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+        }
+        
+        footer a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .header-left h1 {
+                font-size: 1.4rem;
+            }
+            
+            .header-stats {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .nav-links {
+                width: 100%;
+            }
+            
+            .search-bar {
+                padding: 0 1rem;
+            }
+            
+            .category-tabs {
+                padding: 0 1rem;
+            }
+            
+            main {
+                padding: 0 1rem 3rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tool-card {
+            animation: fadeIn 0.3s ease forwards;
+        }
+        
+        .category-section {
+            animation: fadeIn 0.4s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <h1>🧰 AI Tools Directory</h1>
+                <p>Curated collection of AI tools and utilities</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-tools">180+</div>
+                    <div class="stat-label">Tools</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="total-categories">20</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">🏠 Hub</a>
+                <a href="landscape.html" class="nav-link">🌐 Landscape</a>
+                <a href="learning.html" class="nav-link">🎓 Learn</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="search-bar">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="search-input" placeholder="Search tools by name, description, or category...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="free">Free</button>
+                <button class="filter-btn" data-filter="freemium">Freemium</button>
+                <button class="filter-btn" data-filter="paid">Paid</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="category-tabs" id="category-tabs">
+        <!-- Generated by JS -->
+    </div>
+    
+    <main id="main-content">
+        <!-- Generated by JS -->
+    </main>
+    
+    <footer>
+        <p>AI Tools Directory • Part of <a href="../index.html">AI Knowledge Hub</a> • Updated Dec 2025</p>
+    </footer>
+
+    <script>
+        let toolsData = null;
+        let activeCategory = 'all';
+        let activePricing = 'all';
+        let searchQuery = '';
+        
+        // Load tools data
+        async function loadTools() {
+            try {
+                const response = await fetch('../data/tools.json');
+                toolsData = await response.json();
+                
+                // Update stats
+                let totalTools = 0;
+                toolsData.categories.forEach(cat => totalTools += cat.tools.length);
+                document.getElementById('total-tools').textContent = totalTools + '+';
+                document.getElementById('total-categories').textContent = toolsData.categories.length;
+                
+                renderCategoryTabs();
+                renderTools();
+            } catch (error) {
+                console.error('Failed to load tools:', error);
+                document.getElementById('main-content').innerHTML = `
+                    <div class="no-results">
+                        <h3>Failed to load tools</h3>
+                        <p>Please try refreshing the page</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Render category tabs
+        function renderCategoryTabs() {
+            const container = document.getElementById('category-tabs');
+            
+            let html = `<div class="category-tab active" data-category="all">
+                <span>📋</span> All <span class="count">${countAllTools()}</span>
+            </div>`;
+            
+            toolsData.categories.forEach(cat => {
+                html += `
+                    <div class="category-tab" data-category="${cat.id}">
+                        <span>${cat.icon}</span> ${cat.title.split(' ').slice(0, 2).join(' ')}
+                        <span class="count">${cat.tools.length}</span>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            
+            // Add click handlers
+            container.querySelectorAll('.category-tab').forEach(tab => {
+                tab.onclick = () => {
+                    container.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    activeCategory = tab.dataset.category;
+                    renderTools();
+                };
+            });
+        }
+        
+        function countAllTools() {
+            let count = 0;
+            toolsData.categories.forEach(cat => count += cat.tools.length);
+            return count;
+        }
+        
+        // Render tools
+        function renderTools() {
+            const container = document.getElementById('main-content');
+            let html = '';
+            let hasResults = false;
+            
+            const categoriesToShow = activeCategory === 'all' 
+                ? toolsData.categories 
+                : toolsData.categories.filter(c => c.id === activeCategory);
+            
+            categoriesToShow.forEach(category => {
+                const filteredTools = category.tools.filter(tool => {
+                    // Pricing filter
+                    if (activePricing !== 'all' && tool.pricing !== activePricing) {
+                        return false;
+                    }
+                    
+                    // Search filter
+                    if (searchQuery) {
+                        const query = searchQuery.toLowerCase();
+                        return (
+                            tool.name.toLowerCase().includes(query) ||
+                            tool.desc.toLowerCase().includes(query) ||
+                            category.title.toLowerCase().includes(query)
+                        );
+                    }
+                    
+                    return true;
+                });
+                
+                if (filteredTools.length === 0) return;
+                hasResults = true;
+                
+                html += `
+                    <section class="category-section" id="cat-${category.id}">
+                        <div class="category-header">
+                            <div class="category-icon" style="background: ${category.color}20;">${category.icon}</div>
+                            <div class="category-info">
+                                <h2>${category.title}</h2>
+                                <p>${category.description}</p>
+                            </div>
+                            <div class="category-count">${filteredTools.length} tools</div>
+                        </div>
+                        <div class="tools-grid">
+                `;
+                
+                filteredTools.forEach((tool, index) => {
+                    const urlDisplay = tool.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+                    html += `
+                        <a href="${tool.url}" target="_blank" rel="noopener" class="tool-card" style="animation-delay: ${index * 0.03}s">
+                            <div class="tool-header">
+                                <span class="tool-name">${tool.name}</span>
+                                <span class="tool-pricing pricing-${tool.pricing}">${tool.pricing}</span>
+                            </div>
+                            <p class="tool-desc">${tool.desc}</p>
+                            <div class="tool-url">
+                                <span>🔗</span> ${urlDisplay}
+                            </div>
+                        </a>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </section>
+                `;
+            });
+            
+            if (!hasResults) {
+                html = `
+                    <div class="no-results">
+                        <h3>No tools found</h3>
+                        <p>Try adjusting your search or filters</p>
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+        
+        // Search handler
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderTools();
+        });
+        
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activePricing = btn.dataset.filter;
+                renderTools();
+            };
+        });
+        
+        // Initialize
+        loadTools();
+    </script>
+</body>
+</html>

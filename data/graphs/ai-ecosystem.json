@@ -1,0 +1,1841 @@
+{
+  "meta": {
+    "id": "ai-ecosystem",
+    "title": "Global AI Ecosystem",
+    "description": "Companies, research, and global landscape",
+    "icon": "\ud83c\udf0d",
+    "totalNodes": 96,
+    "totalEdges": 93,
+    "totalSections": 3
+  },
+  "sections": [
+    {
+      "id": 4,
+      "title": "AI/ML Job Roles Hierarchy",
+      "slug": "4-aiml-job-roles-hierarchy",
+      "description": "Career paths in AI",
+      "line": 262
+    },
+    {
+      "id": 42,
+      "title": "Global AI Ecosystem",
+      "slug": "",
+      "description": "",
+      "line": 3550
+    },
+    {
+      "id": 44,
+      "title": "AI Research & Academia",
+      "slug": "",
+      "description": "",
+      "line": 3775
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s4_b4_Research",
+      "label": "RESEARCH",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/",
+      "tooltip": "Research Careers",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Research"
+    },
+    {
+      "id": "s4_b4_RS",
+      "label": "Research Scientist",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/",
+      "tooltip": "Research Scientist Path",
+      "style": null,
+      "parent": "s4_b4_Research",
+      "original_id": "RS"
+    },
+    {
+      "id": "s4_b4_RRS",
+      "label": "ML Researcher",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+      "tooltip": "ML Researcher Career",
+      "style": null,
+      "parent": "s4_b4_Research",
+      "original_id": "RRS"
+    },
+    {
+      "id": "s4_b4_Engineering",
+      "label": "ENGINEERING",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://mlops.community/",
+      "tooltip": "Engineering Careers",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Engineering"
+    },
+    {
+      "id": "s4_b4_MLE",
+      "label": "ML Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+      "tooltip": "ML Engineer Career",
+      "style": null,
+      "parent": "s4_b4_Engineering",
+      "original_id": "MLE"
+    },
+    {
+      "id": "s4_b4_DLE",
+      "label": "DL Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/deep-learning-specialization/",
+      "tooltip": "Deep Learning Engineer",
+      "style": null,
+      "parent": "s4_b4_Engineering",
+      "original_id": "DLE"
+    },
+    {
+      "id": "s4_b4_MLOPS",
+      "label": "MLOps Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://mlops.community/",
+      "tooltip": "MLOps Engineer Community",
+      "style": null,
+      "parent": "s4_b4_Engineering",
+      "original_id": "MLOPS"
+    },
+    {
+      "id": "s4_b4_Data",
+      "label": "DATA",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.datacamp.com/",
+      "tooltip": "Data Careers",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Data"
+    },
+    {
+      "id": "s4_b4_DS",
+      "label": "Data Scientist",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.coursera.org/articles/what-is-a-data-scientist",
+      "tooltip": "Data Scientist Career",
+      "style": null,
+      "parent": "s4_b4_Data",
+      "original_id": "DS"
+    },
+    {
+      "id": "s4_b4_DE",
+      "label": "Data Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.datacamp.com/blog/what-is-a-data-engineer",
+      "tooltip": "Data Engineer Guide",
+      "style": null,
+      "parent": "s4_b4_Data",
+      "original_id": "DE"
+    },
+    {
+      "id": "s4_b4_Specialized",
+      "label": "SPECIALIZED",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://apply.workable.com/huggingface/",
+      "tooltip": "Specialized AI Jobs",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Specialized"
+    },
+    {
+      "id": "s4_b4_NLP",
+      "label": "NLP Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.linkedin.com/pulse/nlp-engineer-career-guide-2024-aiquest-intelligence-szezf",
+      "tooltip": "NLP Engineer Guide",
+      "style": null,
+      "parent": "s4_b4_Specialized",
+      "original_id": "NLP"
+    },
+    {
+      "id": "s4_b4_CVE",
+      "label": "CV Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/",
+      "tooltip": "CV Engineer Career",
+      "style": null,
+      "parent": "s4_b4_Specialized",
+      "original_id": "CVE"
+    },
+    {
+      "id": "s4_b4_GAI",
+      "label": "GenAI Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.datacamp.com/blog/how-to-become-an-llm-engineer",
+      "tooltip": "GenAI Engineer Career",
+      "style": null,
+      "parent": "s4_b4_Specialized",
+      "original_id": "GAI"
+    },
+    {
+      "id": "s42_b50_GLOBAL",
+      "label": "\ud83c\udf0d GLOBAL AI LANDSCAPE",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GLOBAL"
+    },
+    {
+      "id": "s42_b50_CHINA",
+      "label": "\ud83c\udde8\ud83c\uddf3 China",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.scmp.com/tech/tech-trends/article/3246538/china-ai",
+      "tooltip": "China AI Ecosystem",
+      "style": null,
+      "parent": "s42_b50_GLOBAL",
+      "original_id": "CHINA"
+    },
+    {
+      "id": "s42_b50_USA",
+      "label": "\ud83c\uddfa\ud83c\uddf8 United States",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://ai.gov/",
+      "tooltip": "US AI Initiative",
+      "style": null,
+      "parent": "s42_b50_GLOBAL",
+      "original_id": "USA"
+    },
+    {
+      "id": "s22_b23_OpenAI",
+      "label": "OPENAI",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://openai.com/",
+      "tooltip": "OpenAI",
+      "style": "fill:#10A37F,stroke:#0D8C6D,color:#FFFFFF",
+      "parent": "s42_b50_USA",
+      "original_id": "OpenAI"
+    },
+    {
+      "id": "s42_b50_EUROPE",
+      "label": "\ud83c\uddea\ud83c\uddfa Europe",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence",
+      "tooltip": "EU AI Strategy",
+      "style": null,
+      "parent": "s42_b50_GLOBAL",
+      "original_id": "EUROPE"
+    },
+    {
+      "id": "s42_b50_ASIA",
+      "label": "\ud83c\udf0f Asia-Pacific",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.apec.org/Groups/SOM-Steering-Committee-on-Economic-and-Technical-Cooperation/Working-Groups/Digital-Economy",
+      "tooltip": "APEC Digital",
+      "style": null,
+      "parent": "s42_b50_GLOBAL",
+      "original_id": "ASIA"
+    },
+    {
+      "id": "s42_b50_MENA",
+      "label": "\ud83c\udf0d Middle East",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://ai.gov.ae/",
+      "tooltip": "UAE AI Strategy",
+      "style": null,
+      "parent": "s42_b50_GLOBAL",
+      "original_id": "MENA"
+    },
+    {
+      "id": "s42_b50_INDIA",
+      "label": "\ud83c\uddee\ud83c\uddf3 India",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://indiaai.gov.in/",
+      "tooltip": "India AI Mission",
+      "style": null,
+      "parent": "s42_b50_GLOBAL",
+      "original_id": "INDIA"
+    },
+    {
+      "id": "s42_b50_CN",
+      "label": "CHINA AI GIANTS",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#DE2910,stroke:#FFDE00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CN"
+    },
+    {
+      "id": "s42_b50_CN1",
+      "label": "Baidu - ERNIE",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://yiyan.baidu.com/",
+      "tooltip": "Baidu ERNIE Bot",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN1"
+    },
+    {
+      "id": "s42_b50_CN2",
+      "label": "Alibaba - Qwen/Tongyi",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://tongyi.aliyun.com/",
+      "tooltip": "Alibaba Tongyi Qianwen",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN2"
+    },
+    {
+      "id": "s42_b50_CN3",
+      "label": "Tencent - Hunyuan",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://hunyuan.tencent.com/",
+      "tooltip": "Tencent Hunyuan",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN3"
+    },
+    {
+      "id": "s42_b50_CN4",
+      "label": "ByteDance - Doubao",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.doubao.com/",
+      "tooltip": "ByteDance Doubao",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN4"
+    },
+    {
+      "id": "s42_b50_CN5",
+      "label": "DeepSeek",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.deepseek.com/",
+      "tooltip": "DeepSeek AI",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN5"
+    },
+    {
+      "id": "s42_b50_CN6",
+      "label": "Zhipu AI - GLM",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.zhipuai.cn/",
+      "tooltip": "Zhipu AI ChatGLM",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN6"
+    },
+    {
+      "id": "s42_b50_CN7",
+      "label": "Baichuan",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.baichuan-ai.com/",
+      "tooltip": "Baichuan AI",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN7"
+    },
+    {
+      "id": "s42_b50_CN8",
+      "label": "01.AI - Yi",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.01.ai/",
+      "tooltip": "01.AI Yi Models",
+      "style": null,
+      "parent": "s42_b50_CN",
+      "original_id": "CN8"
+    },
+    {
+      "id": "s42_b50_EU",
+      "label": "EUROPE AI",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#003399,stroke:#FFCC00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EU"
+    },
+    {
+      "id": "s42_b50_EU1",
+      "label": "Mistral AI \ud83c\uddeb\ud83c\uddf7",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://mistral.ai/",
+      "tooltip": "Mistral AI",
+      "style": null,
+      "parent": "s42_b50_EU",
+      "original_id": "EU1"
+    },
+    {
+      "id": "s42_b50_EU2",
+      "label": "Aleph Alpha \ud83c\udde9\ud83c\uddea",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://aleph-alpha.com/",
+      "tooltip": "Aleph Alpha",
+      "style": null,
+      "parent": "s42_b50_EU",
+      "original_id": "EU2"
+    },
+    {
+      "id": "s42_b50_EU3",
+      "label": "Stability AI \ud83c\uddec\ud83c\udde7",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://stability.ai/",
+      "tooltip": "Stability AI",
+      "style": null,
+      "parent": "s42_b50_EU",
+      "original_id": "EU3"
+    },
+    {
+      "id": "s42_b50_EU4",
+      "label": "DeepMind \ud83c\uddec\ud83c\udde7",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://deepmind.google/",
+      "tooltip": "Google DeepMind",
+      "style": null,
+      "parent": "s42_b50_EU",
+      "original_id": "EU4"
+    },
+    {
+      "id": "s42_b50_EU5",
+      "label": "Silo AI \ud83c\uddeb\ud83c\uddee",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.silo.ai/",
+      "tooltip": "Silo AI",
+      "style": null,
+      "parent": "s42_b50_EU",
+      "original_id": "EU5"
+    },
+    {
+      "id": "s42_b50_EU6",
+      "label": "Poolside \ud83c\uddeb\ud83c\uddf7",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.poolside.ai/",
+      "tooltip": "Poolside AI",
+      "style": null,
+      "parent": "s42_b50_EU",
+      "original_id": "EU6"
+    },
+    {
+      "id": "s42_b50_AP",
+      "label": "ASIA-PACIFIC",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AP"
+    },
+    {
+      "id": "s42_b50_AP1",
+      "label": "Naver \ud83c\uddf0\ud83c\uddf7 - HyperCLOVA",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://clova.ai/",
+      "tooltip": "Naver CLOVA",
+      "style": null,
+      "parent": "s42_b50_AP",
+      "original_id": "AP1"
+    },
+    {
+      "id": "s42_b50_AP2",
+      "label": "Kakao \ud83c\uddf0\ud83c\uddf7",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.kakaocorp.com/page/service/service/KakaoAI",
+      "tooltip": "Kakao AI",
+      "style": null,
+      "parent": "s42_b50_AP",
+      "original_id": "AP2"
+    },
+    {
+      "id": "s42_b50_AP3",
+      "label": "Samsung \ud83c\uddf0\ud83c\uddf7",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.samsung.com/us/artificial-intelligence/",
+      "tooltip": "Samsung AI",
+      "style": null,
+      "parent": "s42_b50_AP",
+      "original_id": "AP3"
+    },
+    {
+      "id": "s42_b50_AP4",
+      "label": "SoftBank/Arm \ud83c\uddef\ud83c\uddf5",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.arm.com/markets/artificial-intelligence",
+      "tooltip": "Arm AI",
+      "style": null,
+      "parent": "s42_b50_AP",
+      "original_id": "AP4"
+    },
+    {
+      "id": "s42_b50_AP5",
+      "label": "Preferred Networks \ud83c\uddef\ud83c\uddf5",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.preferred.jp/en/",
+      "tooltip": "Preferred Networks",
+      "style": null,
+      "parent": "s42_b50_AP",
+      "original_id": "AP5"
+    },
+    {
+      "id": "s42_b50_AP6",
+      "label": "CSIRO \ud83c\udde6\ud83c\uddfa",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.csiro.au/en/work-with-us/ip-commercialisation/technologies/artificial-intelligence",
+      "tooltip": "CSIRO AI",
+      "style": null,
+      "parent": "s42_b50_AP",
+      "original_id": "AP6"
+    },
+    {
+      "id": "s42_b50_ME",
+      "label": "MIDDLE EAST & AFRICA",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#006C35,stroke:#FFFFFF,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ME"
+    },
+    {
+      "id": "s42_b50_ME1",
+      "label": "TII - Falcon \ud83c\udde6\ud83c\uddea",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://falconllm.tii.ae/",
+      "tooltip": "Falcon LLM",
+      "style": null,
+      "parent": "s42_b50_ME",
+      "original_id": "ME1"
+    },
+    {
+      "id": "s42_b50_ME2",
+      "label": "G42 \ud83c\udde6\ud83c\uddea",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://g42.ai/",
+      "tooltip": "G42",
+      "style": null,
+      "parent": "s42_b50_ME",
+      "original_id": "ME2"
+    },
+    {
+      "id": "s42_b50_ME3",
+      "label": "SDAIA \ud83c\uddf8\ud83c\udde6",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://sdaia.gov.sa/",
+      "tooltip": "SDAIA",
+      "style": null,
+      "parent": "s42_b50_ME",
+      "original_id": "ME3"
+    },
+    {
+      "id": "s42_b50_ME4",
+      "label": "Inception \ud83c\udde6\ud83c\uddea",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://inceptioniai.org/",
+      "tooltip": "Inception",
+      "style": null,
+      "parent": "s42_b50_ME",
+      "original_id": "ME4"
+    },
+    {
+      "id": "s42_b50_IN",
+      "label": "INDIA AI",
+      "type": "subgraph",
+      "section_id": 42,
+      "block_id": 50,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#FF9933,stroke:#138808,color:#FFFFFF",
+      "parent": null,
+      "original_id": "IN"
+    },
+    {
+      "id": "s42_b50_IN1",
+      "label": "AI4Bharat",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://ai4bharat.org/",
+      "tooltip": "AI4Bharat",
+      "style": null,
+      "parent": "s42_b50_IN",
+      "original_id": "IN1"
+    },
+    {
+      "id": "s42_b50_IN2",
+      "label": "Sarvam AI",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.sarvam.ai/",
+      "tooltip": "Sarvam AI",
+      "style": null,
+      "parent": "s42_b50_IN",
+      "original_id": "IN2"
+    },
+    {
+      "id": "s42_b50_IN3",
+      "label": "Krutrim",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://olakrutrim.com/",
+      "tooltip": "Krutrim AI",
+      "style": null,
+      "parent": "s42_b50_IN",
+      "original_id": "IN3"
+    },
+    {
+      "id": "s42_b50_IN4",
+      "label": "CoRover",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://corover.ai/",
+      "tooltip": "CoRover",
+      "style": null,
+      "parent": "s42_b50_IN",
+      "original_id": "IN4"
+    },
+    {
+      "id": "s42_b50_IN5",
+      "label": "Haptik",
+      "type": "node",
+      "section_id": 42,
+      "block_id": 50,
+      "url": "https://www.haptik.ai/",
+      "tooltip": "Haptik",
+      "style": null,
+      "parent": "s42_b50_IN",
+      "original_id": "IN5"
+    },
+    {
+      "id": "s44_b52_RESEARCH",
+      "label": "\ud83c\udf93 AI RESEARCH HUBS",
+      "type": "subgraph",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RESEARCH"
+    },
+    {
+      "id": "s44_b52_US_UNI",
+      "label": "\ud83c\uddfa\ud83c\uddf8 US Universities",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s44_b52_RESEARCH",
+      "original_id": "US_UNI"
+    },
+    {
+      "id": "s44_b52_EU_UNI",
+      "label": "\ud83c\uddea\ud83c\uddfa European Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s44_b52_RESEARCH",
+      "original_id": "EU_UNI"
+    },
+    {
+      "id": "s44_b52_ASIA_UNI",
+      "label": "\ud83c\udf0f Asian Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s44_b52_RESEARCH",
+      "original_id": "ASIA_UNI"
+    },
+    {
+      "id": "s44_b52_LABS",
+      "label": "\ud83d\udd2c Industry Labs",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s44_b52_RESEARCH",
+      "original_id": "LABS"
+    },
+    {
+      "id": "s44_b52_CONF",
+      "label": "\ud83d\udcc4 Top Conferences",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s44_b52_RESEARCH",
+      "original_id": "CONF"
+    },
+    {
+      "id": "s44_b52_USU",
+      "label": "US UNIVERSITIES",
+      "type": "subgraph",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#B22234,stroke:#3C3B6E,color:#FFFFFF",
+      "parent": null,
+      "original_id": "USU"
+    },
+    {
+      "id": "s44_b52_US1",
+      "label": "Stanford HAI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://hai.stanford.edu/",
+      "tooltip": "Stanford HAI",
+      "style": null,
+      "parent": "s44_b52_USU",
+      "original_id": "US1"
+    },
+    {
+      "id": "s44_b52_US2",
+      "label": "MIT CSAIL",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.csail.mit.edu/",
+      "tooltip": "MIT CSAIL",
+      "style": null,
+      "parent": "s44_b52_USU",
+      "original_id": "US2"
+    },
+    {
+      "id": "s44_b52_US3",
+      "label": "CMU AI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://ai.cs.cmu.edu/",
+      "tooltip": "CMU AI",
+      "style": null,
+      "parent": "s44_b52_USU",
+      "original_id": "US3"
+    },
+    {
+      "id": "s44_b52_US4",
+      "label": "Berkeley BAIR",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://bair.berkeley.edu/",
+      "tooltip": "Berkeley BAIR",
+      "style": null,
+      "parent": "s44_b52_USU",
+      "original_id": "US4"
+    },
+    {
+      "id": "s44_b52_US5",
+      "label": "Princeton AI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://ai.princeton.edu/",
+      "tooltip": "Princeton AI",
+      "style": null,
+      "parent": "s44_b52_USU",
+      "original_id": "US5"
+    },
+    {
+      "id": "s44_b52_EUR",
+      "label": "EUROPEAN RESEARCH",
+      "type": "subgraph",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#003399,stroke:#FFCC00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EUR"
+    },
+    {
+      "id": "s44_b52_ER1",
+      "label": "Oxford AI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.ox.ac.uk/research/research-in-conversation/ai",
+      "tooltip": "Oxford AI",
+      "style": null,
+      "parent": "s44_b52_EUR",
+      "original_id": "ER1"
+    },
+    {
+      "id": "s44_b52_ER2",
+      "label": "Cambridge ML",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://mlatcl.github.io/",
+      "tooltip": "Cambridge ML",
+      "style": null,
+      "parent": "s44_b52_EUR",
+      "original_id": "ER2"
+    },
+    {
+      "id": "s44_b52_ER3",
+      "label": "ETH Zurich",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://ai.ethz.ch/",
+      "tooltip": "ETH AI Center",
+      "style": null,
+      "parent": "s44_b52_EUR",
+      "original_id": "ER3"
+    },
+    {
+      "id": "s44_b52_ER4",
+      "label": "INRIA France",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.inria.fr/en/artificial-intelligence",
+      "tooltip": "INRIA AI",
+      "style": null,
+      "parent": "s44_b52_EUR",
+      "original_id": "ER4"
+    },
+    {
+      "id": "s44_b52_ER5",
+      "label": "Max Planck",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://is.mpg.de/",
+      "tooltip": "Max Planck IS",
+      "style": null,
+      "parent": "s44_b52_EUR",
+      "original_id": "ER5"
+    },
+    {
+      "id": "s44_b52_ER6",
+      "label": "Mila Quebec",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://mila.quebec/",
+      "tooltip": "Mila Quebec",
+      "style": null,
+      "parent": "s44_b52_EUR",
+      "original_id": "ER6"
+    },
+    {
+      "id": "s44_b52_ASR",
+      "label": "ASIAN RESEARCH",
+      "type": "subgraph",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ASR"
+    },
+    {
+      "id": "s44_b52_AS1",
+      "label": "Tsinghua AI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://air.tsinghua.edu.cn/en/",
+      "tooltip": "Tsinghua AIR",
+      "style": null,
+      "parent": "s44_b52_ASR",
+      "original_id": "AS1"
+    },
+    {
+      "id": "s44_b52_AS2",
+      "label": "Peking NLP",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://nlp.pku.edu.cn/",
+      "tooltip": "Peking NLP",
+      "style": null,
+      "parent": "s44_b52_ASR",
+      "original_id": "AS2"
+    },
+    {
+      "id": "s44_b52_AS3",
+      "label": "KAIST Korea",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://ai.kaist.ac.kr/",
+      "tooltip": "KAIST AI",
+      "style": null,
+      "parent": "s44_b52_ASR",
+      "original_id": "AS3"
+    },
+    {
+      "id": "s44_b52_AS4",
+      "label": "Tokyo AI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.ai.u-tokyo.ac.jp/en/",
+      "tooltip": "Tokyo AI Center",
+      "style": null,
+      "parent": "s44_b52_ASR",
+      "original_id": "AS4"
+    },
+    {
+      "id": "s44_b52_AS5",
+      "label": "NUS Singapore",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://ai.comp.nus.edu.sg/",
+      "tooltip": "NUS AI Lab",
+      "style": null,
+      "parent": "s44_b52_ASR",
+      "original_id": "AS5"
+    },
+    {
+      "id": "s44_b52_AS6",
+      "label": "IIT India",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.iitm.ac.in/research/research-themes/artificial-intelligence-data-science",
+      "tooltip": "IIT AI",
+      "style": null,
+      "parent": "s44_b52_ASR",
+      "original_id": "AS6"
+    },
+    {
+      "id": "s44_b52_LAB",
+      "label": "INDUSTRY LABS",
+      "type": "subgraph",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LAB"
+    },
+    {
+      "id": "s44_b52_LB1",
+      "label": "Google Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://research.google/",
+      "tooltip": "Google Research",
+      "style": null,
+      "parent": "s44_b52_LAB",
+      "original_id": "LB1"
+    },
+    {
+      "id": "s44_b52_LB2",
+      "label": "Meta FAIR",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://ai.meta.com/research/",
+      "tooltip": "Meta FAIR",
+      "style": null,
+      "parent": "s44_b52_LAB",
+      "original_id": "LB2"
+    },
+    {
+      "id": "s44_b52_LB3",
+      "label": "Microsoft Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.microsoft.com/en-us/research/",
+      "tooltip": "Microsoft Research",
+      "style": null,
+      "parent": "s44_b52_LAB",
+      "original_id": "LB3"
+    },
+    {
+      "id": "s44_b52_LB4",
+      "label": "IBM Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://research.ibm.com/artificial-intelligence",
+      "tooltip": "IBM Research AI",
+      "style": null,
+      "parent": "s44_b52_LAB",
+      "original_id": "LB4"
+    },
+    {
+      "id": "s44_b52_LB5",
+      "label": "NVIDIA Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.nvidia.com/en-us/research/",
+      "tooltip": "NVIDIA Research",
+      "style": null,
+      "parent": "s44_b52_LAB",
+      "original_id": "LB5"
+    },
+    {
+      "id": "s44_b52_LB6",
+      "label": "Baidu Research",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://research.baidu.com/",
+      "tooltip": "Baidu Research",
+      "style": null,
+      "parent": "s44_b52_LAB",
+      "original_id": "LB6"
+    },
+    {
+      "id": "s44_b52_CNF",
+      "label": "TOP CONFERENCES",
+      "type": "subgraph",
+      "section_id": 44,
+      "block_id": 52,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CNF"
+    },
+    {
+      "id": "s44_b52_CF1",
+      "label": "NeurIPS",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://neurips.cc/",
+      "tooltip": "NeurIPS",
+      "style": null,
+      "parent": "s44_b52_CNF",
+      "original_id": "CF1"
+    },
+    {
+      "id": "s44_b52_CF2",
+      "label": "ICML",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://icml.cc/",
+      "tooltip": "ICML",
+      "style": null,
+      "parent": "s44_b52_CNF",
+      "original_id": "CF2"
+    },
+    {
+      "id": "s44_b52_CF3",
+      "label": "ICLR",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://iclr.cc/",
+      "tooltip": "ICLR",
+      "style": null,
+      "parent": "s44_b52_CNF",
+      "original_id": "CF3"
+    },
+    {
+      "id": "s44_b52_CF4",
+      "label": "ACL",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://www.aclweb.org/",
+      "tooltip": "ACL",
+      "style": null,
+      "parent": "s44_b52_CNF",
+      "original_id": "CF4"
+    },
+    {
+      "id": "s44_b52_CF5",
+      "label": "CVPR",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://cvpr.thecvf.com/",
+      "tooltip": "CVPR",
+      "style": null,
+      "parent": "s44_b52_CNF",
+      "original_id": "CF5"
+    },
+    {
+      "id": "s44_b52_CF6",
+      "label": "AAAI",
+      "type": "node",
+      "section_id": 44,
+      "block_id": 52,
+      "url": "https://aaai.org/conference/aaai/",
+      "tooltip": "AAAI",
+      "style": null,
+      "parent": "s44_b52_CNF",
+      "original_id": "CF6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s4_b4_Research",
+      "target": "s4_b4_Engineering",
+      "type": "thick",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Data",
+      "target": "s4_b4_Engineering",
+      "type": "thick",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_Specialized",
+      "type": "thick",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Research",
+      "target": "s4_b4_RS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Research",
+      "target": "s4_b4_RRS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_MLE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_DLE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_MLOPS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Data",
+      "target": "s4_b4_DS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Data",
+      "target": "s4_b4_DE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Specialized",
+      "target": "s4_b4_NLP",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Specialized",
+      "target": "s4_b4_CVE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Specialized",
+      "target": "s4_b4_GAI",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s42_b50_CHINA",
+      "target": "s42_b50_CN",
+      "type": "regular",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_USA",
+      "target": "s22_b23_OpenAI",
+      "type": "regular",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EUROPE",
+      "target": "s42_b50_EU",
+      "type": "regular",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_ASIA",
+      "target": "s42_b50_AP",
+      "type": "regular",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_MENA",
+      "target": "s42_b50_ME",
+      "type": "regular",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_INDIA",
+      "target": "s42_b50_IN",
+      "type": "regular",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_GLOBAL",
+      "target": "s42_b50_CHINA",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_GLOBAL",
+      "target": "s42_b50_USA",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_GLOBAL",
+      "target": "s42_b50_EUROPE",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_GLOBAL",
+      "target": "s42_b50_ASIA",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_GLOBAL",
+      "target": "s42_b50_MENA",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_GLOBAL",
+      "target": "s42_b50_INDIA",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN1",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN2",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN3",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN4",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN5",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN6",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN7",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_CN",
+      "target": "s42_b50_CN8",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EU",
+      "target": "s42_b50_EU1",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EU",
+      "target": "s42_b50_EU2",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EU",
+      "target": "s42_b50_EU3",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EU",
+      "target": "s42_b50_EU4",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EU",
+      "target": "s42_b50_EU5",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_EU",
+      "target": "s42_b50_EU6",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_AP",
+      "target": "s42_b50_AP1",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_AP",
+      "target": "s42_b50_AP2",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_AP",
+      "target": "s42_b50_AP3",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_AP",
+      "target": "s42_b50_AP4",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_AP",
+      "target": "s42_b50_AP5",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_AP",
+      "target": "s42_b50_AP6",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_ME",
+      "target": "s42_b50_ME1",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_ME",
+      "target": "s42_b50_ME2",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_ME",
+      "target": "s42_b50_ME3",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_ME",
+      "target": "s42_b50_ME4",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_IN",
+      "target": "s42_b50_IN1",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_IN",
+      "target": "s42_b50_IN2",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_IN",
+      "target": "s42_b50_IN3",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_IN",
+      "target": "s42_b50_IN4",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s42_b50_IN",
+      "target": "s42_b50_IN5",
+      "type": "contains",
+      "section_id": 42,
+      "block_id": 50
+    },
+    {
+      "source": "s44_b52_US_UNI",
+      "target": "s44_b52_USU",
+      "type": "regular",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EU_UNI",
+      "target": "s44_b52_EUR",
+      "type": "regular",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASIA_UNI",
+      "target": "s44_b52_ASR",
+      "type": "regular",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LABS",
+      "target": "s44_b52_LAB",
+      "type": "regular",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CONF",
+      "target": "s44_b52_CNF",
+      "type": "regular",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_RESEARCH",
+      "target": "s44_b52_US_UNI",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_RESEARCH",
+      "target": "s44_b52_EU_UNI",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_RESEARCH",
+      "target": "s44_b52_ASIA_UNI",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_RESEARCH",
+      "target": "s44_b52_LABS",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_RESEARCH",
+      "target": "s44_b52_CONF",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_USU",
+      "target": "s44_b52_US1",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_USU",
+      "target": "s44_b52_US2",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_USU",
+      "target": "s44_b52_US3",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_USU",
+      "target": "s44_b52_US4",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_USU",
+      "target": "s44_b52_US5",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EUR",
+      "target": "s44_b52_ER1",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EUR",
+      "target": "s44_b52_ER2",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EUR",
+      "target": "s44_b52_ER3",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EUR",
+      "target": "s44_b52_ER4",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EUR",
+      "target": "s44_b52_ER5",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_EUR",
+      "target": "s44_b52_ER6",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASR",
+      "target": "s44_b52_AS1",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASR",
+      "target": "s44_b52_AS2",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASR",
+      "target": "s44_b52_AS3",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASR",
+      "target": "s44_b52_AS4",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASR",
+      "target": "s44_b52_AS5",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_ASR",
+      "target": "s44_b52_AS6",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LAB",
+      "target": "s44_b52_LB1",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LAB",
+      "target": "s44_b52_LB2",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LAB",
+      "target": "s44_b52_LB3",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LAB",
+      "target": "s44_b52_LB4",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LAB",
+      "target": "s44_b52_LB5",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_LAB",
+      "target": "s44_b52_LB6",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CNF",
+      "target": "s44_b52_CF1",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CNF",
+      "target": "s44_b52_CF2",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CNF",
+      "target": "s44_b52_CF3",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CNF",
+      "target": "s44_b52_CF4",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CNF",
+      "target": "s44_b52_CF5",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    },
+    {
+      "source": "s44_b52_CNF",
+      "target": "s44_b52_CF6",
+      "type": "contains",
+      "section_id": 44,
+      "block_id": 52
+    }
+  ]
+}

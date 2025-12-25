@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "id": 4,
+    "title": "AI/ML Job Roles Hierarchy",
+    "description": "Career paths in AI",
+    "slug": "ai-ml-job-roles-hierarchy",
+    "totalNodes": 14,
+    "totalEdges": 13
+  },
+  "sections": [
+    {
+      "id": 4,
+      "title": "AI/ML Job Roles Hierarchy",
+      "slug": "4-aiml-job-roles-hierarchy",
+      "description": "Career paths in AI",
+      "line": 262
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s4_b4_Research",
+      "label": "RESEARCH",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/",
+      "tooltip": "Research Careers",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Research"
+    },
+    {
+      "id": "s4_b4_RS",
+      "label": "Research Scientist",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/",
+      "tooltip": "Research Scientist Path",
+      "style": null,
+      "parent": "s4_b4_Research",
+      "original_id": "RS"
+    },
+    {
+      "id": "s4_b4_RRS",
+      "label": "ML Researcher",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+      "tooltip": "ML Researcher Career",
+      "style": null,
+      "parent": "s4_b4_Research",
+      "original_id": "RRS"
+    },
+    {
+      "id": "s4_b4_Engineering",
+      "label": "ENGINEERING",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://mlops.community/",
+      "tooltip": "Engineering Careers",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Engineering"
+    },
+    {
+      "id": "s4_b4_MLE",
+      "label": "ML Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+      "tooltip": "ML Engineer Career",
+      "style": null,
+      "parent": "s4_b4_Engineering",
+      "original_id": "MLE"
+    },
+    {
+      "id": "s4_b4_DLE",
+      "label": "DL Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/deep-learning-specialization/",
+      "tooltip": "Deep Learning Engineer",
+      "style": null,
+      "parent": "s4_b4_Engineering",
+      "original_id": "DLE"
+    },
+    {
+      "id": "s4_b4_MLOPS",
+      "label": "MLOps Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://mlops.community/",
+      "tooltip": "MLOps Engineer Community",
+      "style": null,
+      "parent": "s4_b4_Engineering",
+      "original_id": "MLOPS"
+    },
+    {
+      "id": "s4_b4_Data",
+      "label": "DATA",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.datacamp.com/",
+      "tooltip": "Data Careers",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Data"
+    },
+    {
+      "id": "s4_b4_DS",
+      "label": "Data Scientist",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.coursera.org/articles/what-is-a-data-scientist",
+      "tooltip": "Data Scientist Career",
+      "style": null,
+      "parent": "s4_b4_Data",
+      "original_id": "DS"
+    },
+    {
+      "id": "s4_b4_DE",
+      "label": "Data Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.datacamp.com/blog/what-is-a-data-engineer",
+      "tooltip": "Data Engineer Guide",
+      "style": null,
+      "parent": "s4_b4_Data",
+      "original_id": "DE"
+    },
+    {
+      "id": "s4_b4_Specialized",
+      "label": "SPECIALIZED",
+      "type": "subgraph",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://apply.workable.com/huggingface/",
+      "tooltip": "Specialized AI Jobs",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Specialized"
+    },
+    {
+      "id": "s4_b4_NLP",
+      "label": "NLP Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.linkedin.com/pulse/nlp-engineer-career-guide-2024-aiquest-intelligence-szezf",
+      "tooltip": "NLP Engineer Guide",
+      "style": null,
+      "parent": "s4_b4_Specialized",
+      "original_id": "NLP"
+    },
+    {
+      "id": "s4_b4_CVE",
+      "label": "CV Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.deeplearning.ai/courses/",
+      "tooltip": "CV Engineer Career",
+      "style": null,
+      "parent": "s4_b4_Specialized",
+      "original_id": "CVE"
+    },
+    {
+      "id": "s4_b4_GAI",
+      "label": "GenAI Engineer",
+      "type": "node",
+      "section_id": 4,
+      "block_id": 4,
+      "url": "https://www.datacamp.com/blog/how-to-become-an-llm-engineer",
+      "tooltip": "GenAI Engineer Career",
+      "style": null,
+      "parent": "s4_b4_Specialized",
+      "original_id": "GAI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s4_b4_Research",
+      "target": "s4_b4_Engineering",
+      "type": "thick",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Data",
+      "target": "s4_b4_Engineering",
+      "type": "thick",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_Specialized",
+      "type": "thick",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Research",
+      "target": "s4_b4_RS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Research",
+      "target": "s4_b4_RRS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_MLE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_DLE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Engineering",
+      "target": "s4_b4_MLOPS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Data",
+      "target": "s4_b4_DS",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Data",
+      "target": "s4_b4_DE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Specialized",
+      "target": "s4_b4_NLP",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Specialized",
+      "target": "s4_b4_CVE",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    },
+    {
+      "source": "s4_b4_Specialized",
+      "target": "s4_b4_GAI",
+      "type": "contains",
+      "section_id": 4,
+      "block_id": 4
+    }
+  ]
+}

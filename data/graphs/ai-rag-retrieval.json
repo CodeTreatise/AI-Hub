@@ -1,0 +1,1372 @@
+{
+  "meta": {
+    "id": "ai-rag-retrieval",
+    "title": "RAG & Retrieval Systems",
+    "description": "Retrieval-augmented generation and vector search",
+    "icon": "\ud83d\udd0d",
+    "totalNodes": 75,
+    "totalEdges": 61,
+    "totalSections": 4
+  },
+  "sections": [
+    {
+      "id": 15,
+      "title": "RAG (Retrieval-Augmented Generation)",
+      "slug": "15-rag-retrieval-augmented-generation",
+      "description": "Retrieval-Augmented Generation",
+      "line": 866
+    },
+    {
+      "id": 16,
+      "title": "Advanced RAG Patterns",
+      "slug": "16-advanced-rag-patterns",
+      "description": "GraphRAG, Agentic RAG, Self-RAG",
+      "line": 916
+    },
+    {
+      "id": 17,
+      "title": "RAG Evolution & Techniques",
+      "slug": "17-rag-evolution--techniques",
+      "description": "HyDE, RAPTOR, Reranking",
+      "line": 969
+    },
+    {
+      "id": 26,
+      "title": "Hybrid Search & Retrieval",
+      "slug": "26-hybrid-search--retrieval",
+      "description": "BM25, Vectors, Rerankers",
+      "line": 1840
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s15_b15_Ingestion",
+      "label": "INGESTION",
+      "type": "subgraph",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/loading/",
+      "tooltip": "Data Ingestion",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Ingestion"
+    },
+    {
+      "id": "s15_b15_DOC",
+      "label": "Documents",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/loading/",
+      "tooltip": "LlamaIndex Loaders",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "DOC"
+    },
+    {
+      "id": "s15_b15_CHUNK",
+      "label": "Chunking",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/loading/node_parsers/",
+      "tooltip": "Chunking Strategies",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "CHUNK"
+    },
+    {
+      "id": "s15_b15_EMBED",
+      "label": "Embedding",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://huggingface.co/sentence-transformers",
+      "tooltip": "Sentence Transformers",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "EMBED"
+    },
+    {
+      "id": "s15_b15_STORE",
+      "label": "Vector Store",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.pinecone.io/",
+      "tooltip": "Pinecone Vector DB",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "STORE"
+    },
+    {
+      "id": "s15_b15_Retrieval",
+      "label": "RETRIEVAL",
+      "type": "subgraph",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/querying/retriever/",
+      "tooltip": "Retrieval Guide",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Retrieval"
+    },
+    {
+      "id": "s15_b15_QUERY",
+      "label": "Query",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/deploying/query_engine/",
+      "tooltip": "Query Engine",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "QUERY"
+    },
+    {
+      "id": "s15_b15_QEMBED",
+      "label": "Query Embed",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://huggingface.co/sentence-transformers",
+      "tooltip": "Query Embedding",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "QEMBED"
+    },
+    {
+      "id": "s15_b15_SEARCH",
+      "label": "Similarity Search",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.trychroma.com/guides",
+      "tooltip": "ChromaDB Guide",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "SEARCH"
+    },
+    {
+      "id": "s15_b15_CONTEXT",
+      "label": "Top-K Results",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/querying/response_synthesizers/",
+      "tooltip": "Context Retrieval",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "CONTEXT"
+    },
+    {
+      "id": "s15_b15_Generation",
+      "label": "GENERATION",
+      "type": "subgraph",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/querying/response_synthesizers/",
+      "tooltip": "Response Generation",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Generation"
+    },
+    {
+      "id": "s15_b15_PROMPT",
+      "label": "Prompt + Context",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/models/prompts/",
+      "tooltip": "Prompt Templates",
+      "style": null,
+      "parent": "s15_b15_Generation",
+      "original_id": "PROMPT"
+    },
+    {
+      "id": "s15_b15_LLM",
+      "label": "LLM",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://platform.openai.com/docs",
+      "tooltip": "OpenAI API",
+      "style": null,
+      "parent": "s15_b15_Generation",
+      "original_id": "LLM"
+    },
+    {
+      "id": "s15_b15_ANSWER",
+      "label": "Answer",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://python.langchain.com/docs/modules/chains/",
+      "tooltip": "Answer Generation",
+      "style": null,
+      "parent": "s15_b15_Generation",
+      "original_id": "ANSWER"
+    },
+    {
+      "id": "s16_b16_RAG",
+      "label": "ADVANCED RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://www.promptingguide.ai/techniques/rag",
+      "tooltip": "RAG Guide",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RAG"
+    },
+    {
+      "id": "s16_b16_GRAPH",
+      "label": "GraphRAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Microsoft GraphRAG",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GRAPH"
+    },
+    {
+      "id": "s16_b16_AGENT",
+      "label": "Agentic RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "LangGraph Agents",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AGENT"
+    },
+    {
+      "id": "s16_b16_SELF",
+      "label": "Self-RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2310.11511",
+      "tooltip": "Self-RAG Paper",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SELF"
+    },
+    {
+      "id": "s16_b16_CORRECT",
+      "label": "Corrective RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2401.15884",
+      "tooltip": "CRAG Paper",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CORRECT"
+    },
+    {
+      "id": "s16_b16_G1",
+      "label": "Knowledge Graphs",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://neo4j.com/developer/",
+      "tooltip": "Neo4j Developer",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s16_b16_G2",
+      "label": "Entity Relations",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://neo4j.com/docs/graph-data-science/current/",
+      "tooltip": "Entity Relations",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s16_b16_G3",
+      "label": "Community Detection",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://microsoft.github.io/graphrag/index/overview/",
+      "tooltip": "Community Detection",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s16_b16_A1",
+      "label": "Tool-based Retrieval",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://python.langchain.com/docs/modules/tools/",
+      "tooltip": "Tool-based Retrieval",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s16_b16_A2",
+      "label": "Multi-step Reasoning",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "LangGraph Tutorials",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s16_b16_A3",
+      "label": "Dynamic Planning",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://blog.langchain.dev/planning-agents/",
+      "tooltip": "Dynamic Planning",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s16_b16_S1",
+      "label": "Self-Reflection",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2310.11511",
+      "tooltip": "Self-Reflection",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s16_b16_S2",
+      "label": "Relevance Scoring",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Relevance Scoring",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s16_b16_C1",
+      "label": "Retrieval Grading",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2401.15884",
+      "tooltip": "Retrieval Grading",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s16_b16_C2",
+      "label": "Web Fallback",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://python.langchain.com/docs/integrations/tools/tavily_search/",
+      "tooltip": "Web Fallback",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s17_b17_Basic",
+      "label": "BASIC RAG",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "Basic RAG",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Basic"
+    },
+    {
+      "id": "s17_b17_B1",
+      "label": "Naive RAG",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "LangChain RAG Tutorial",
+      "style": null,
+      "parent": "s17_b17_Basic",
+      "original_id": "B1"
+    },
+    {
+      "id": "s17_b17_B2",
+      "label": "Sentence Window",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Sentence Window Retrieval",
+      "style": null,
+      "parent": "s17_b17_Basic",
+      "original_id": "B2"
+    },
+    {
+      "id": "s17_b17_Advanced",
+      "label": "ADVANCED RAG",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/",
+      "tooltip": "Advanced RAG",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Advanced"
+    },
+    {
+      "id": "s17_b17_A1",
+      "label": "HyDE",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2212.10496",
+      "tooltip": "HyDE Paper",
+      "style": null,
+      "parent": "s17_b17_Advanced",
+      "original_id": "A1"
+    },
+    {
+      "id": "s17_b17_A2",
+      "label": "Multi-Query",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/query_transformations/query_transform_cookbook/",
+      "tooltip": "Multi-Query RAG",
+      "style": null,
+      "parent": "s17_b17_Advanced",
+      "original_id": "A2"
+    },
+    {
+      "id": "s17_b17_A3",
+      "label": "Parent-Child",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/retrievers/auto_merging_retriever/",
+      "tooltip": "Parent-Child Retrieval",
+      "style": null,
+      "parent": "s17_b17_Advanced",
+      "original_id": "A3"
+    },
+    {
+      "id": "s17_b17_Modular",
+      "label": "MODULAR RAG",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2407.21059",
+      "tooltip": "Modular RAG",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Modular"
+    },
+    {
+      "id": "s17_b17_M1",
+      "label": "Reranking",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Reranking Guide",
+      "style": null,
+      "parent": "s17_b17_Modular",
+      "original_id": "M1"
+    },
+    {
+      "id": "s17_b17_M2",
+      "label": "Fusion",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2402.03367",
+      "tooltip": "Fusion Retrieval",
+      "style": null,
+      "parent": "s17_b17_Modular",
+      "original_id": "M2"
+    },
+    {
+      "id": "s17_b17_M3",
+      "label": "Compression",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Contextual Compression",
+      "style": null,
+      "parent": "s17_b17_Modular",
+      "original_id": "M3"
+    },
+    {
+      "id": "s17_b17_Cutting",
+      "label": "CUTTING EDGE",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Cutting Edge RAG",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Cutting"
+    },
+    {
+      "id": "s17_b17_C1",
+      "label": "GraphRAG",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Microsoft GraphRAG",
+      "style": null,
+      "parent": "s17_b17_Cutting",
+      "original_id": "C1"
+    },
+    {
+      "id": "s17_b17_C2",
+      "label": "Agentic RAG",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://blog.langchain.dev/agentic-rag-with-langgraph/",
+      "tooltip": "Agentic RAG",
+      "style": null,
+      "parent": "s17_b17_Cutting",
+      "original_id": "C2"
+    },
+    {
+      "id": "s17_b17_C3",
+      "label": "RAPTOR",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2401.18059",
+      "tooltip": "RAPTOR Paper",
+      "style": null,
+      "parent": "s17_b17_Cutting",
+      "original_id": "C3"
+    },
+    {
+      "id": "s26_b29_Sparse",
+      "label": "SPARSE SEARCH",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html",
+      "tooltip": "Sparse Search",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Sparse"
+    },
+    {
+      "id": "s26_b29_BM25",
+      "label": "BM25/TF-IDF",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-similarity.html",
+      "tooltip": "BM25 in Elasticsearch",
+      "style": null,
+      "parent": "s26_b29_Sparse",
+      "original_id": "BM25"
+    },
+    {
+      "id": "s26_b29_KW",
+      "label": "Keyword Match",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html",
+      "tooltip": "Keyword Matching",
+      "style": null,
+      "parent": "s26_b29_Sparse",
+      "original_id": "KW"
+    },
+    {
+      "id": "s26_b29_Dense",
+      "label": "DENSE SEARCH",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.pinecone.io/learn/what-is-similarity-search/",
+      "tooltip": "Dense Search",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Dense"
+    },
+    {
+      "id": "s26_b29_VEC",
+      "label": "Vector Similarity",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://docs.pinecone.io/guides/get-started/overview",
+      "tooltip": "Vector Search",
+      "style": null,
+      "parent": "s26_b29_Dense",
+      "original_id": "VEC"
+    },
+    {
+      "id": "s26_b29_EMB",
+      "label": "Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://huggingface.co/sentence-transformers",
+      "tooltip": "Sentence Transformers",
+      "style": null,
+      "parent": "s26_b29_Dense",
+      "original_id": "EMB"
+    },
+    {
+      "id": "s26_b29_Hybrid",
+      "label": "HYBRID",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.pinecone.io/learn/hybrid-search-intro/",
+      "tooltip": "Hybrid Search",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Hybrid"
+    },
+    {
+      "id": "s26_b29_FUSE",
+      "label": "Score Fusion",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.pinecone.io/learn/hybrid-search-intro/",
+      "tooltip": "Score Fusion",
+      "style": null,
+      "parent": "s26_b29_Hybrid",
+      "original_id": "FUSE"
+    },
+    {
+      "id": "s26_b29_RRF",
+      "label": "RRF Algorithm",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html",
+      "tooltip": "RRF Algorithm",
+      "style": null,
+      "parent": "s26_b29_Hybrid",
+      "original_id": "RRF"
+    },
+    {
+      "id": "s26_b29_Rerank",
+      "label": "RERANKING",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://docs.cohere.com/docs/reranking",
+      "tooltip": "Reranking",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Rerank"
+    },
+    {
+      "id": "s26_b29_CROSS",
+      "label": "Cross-Encoder",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.sbert.net/docs/pretrained_cross-encoders.html",
+      "tooltip": "Cross-Encoders",
+      "style": null,
+      "parent": "s26_b29_Rerank",
+      "original_id": "CROSS"
+    },
+    {
+      "id": "s26_b29_COHERE",
+      "label": "Cohere Rerank",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://docs.cohere.com/docs/reranking",
+      "tooltip": "Cohere Rerank",
+      "style": null,
+      "parent": "s26_b29_Rerank",
+      "original_id": "COHERE"
+    },
+    {
+      "id": "s26_b29_BGE",
+      "label": "BGE Reranker",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+      "tooltip": "BGE Reranker",
+      "style": null,
+      "parent": "s26_b29_Rerank",
+      "original_id": "BGE"
+    },
+    {
+      "id": "s26_b75_Weaviate",
+      "label": "Weaviate",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 75,
+      "url": "https://weaviate.io/",
+      "tooltip": "Open-source vector database",
+      "style": null,
+      "parent": null,
+      "original_id": "Weaviate"
+    },
+    {
+      "id": "s26_b76_Qdrant",
+      "label": "Qdrant",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 76,
+      "url": "https://qdrant.tech/",
+      "tooltip": "Vector similarity search",
+      "style": null,
+      "parent": null,
+      "original_id": "Qdrant"
+    },
+    {
+      "id": "s26_b77_Milvus",
+      "label": "Milvus",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 77,
+      "url": "https://milvus.io/",
+      "tooltip": "Scalable vector database",
+      "style": null,
+      "parent": null,
+      "original_id": "Milvus"
+    },
+    {
+      "id": "s26_b78_pgvector",
+      "label": "pgvector",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 78,
+      "url": "https://github.com/pgvector/pgvector",
+      "tooltip": "Postgres vector extension",
+      "style": null,
+      "parent": null,
+      "original_id": "pgvector"
+    },
+    {
+      "id": "s26_b79_FAISS",
+      "label": "FAISS",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 79,
+      "url": "https://github.com/facebookresearch/faiss",
+      "tooltip": "Facebook similarity search",
+      "style": null,
+      "parent": null,
+      "original_id": "FAISS"
+    },
+    {
+      "id": "s26_b80_OpenAI_Emb",
+      "label": "OpenAI Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 80,
+      "url": "https://platform.openai.com/docs/guides/embeddings",
+      "tooltip": "OpenAI text embeddings",
+      "style": null,
+      "parent": null,
+      "original_id": "OpenAI_Embeddings"
+    },
+    {
+      "id": "s26_b81_Cohere_Emb",
+      "label": "Cohere Embed",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 81,
+      "url": "https://cohere.com/embed",
+      "tooltip": "Cohere embedding models",
+      "style": null,
+      "parent": null,
+      "original_id": "Cohere_Embed"
+    },
+    {
+      "id": "s26_b82_Voyage_AI",
+      "label": "Voyage AI",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 82,
+      "url": "https://www.voyageai.com/",
+      "tooltip": "Embedding models",
+      "style": null,
+      "parent": null,
+      "original_id": "Voyage_AI"
+    },
+    {
+      "id": "s26_b83_Jina_Embed",
+      "label": "Jina Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 83,
+      "url": "https://jina.ai/embeddings/",
+      "tooltip": "Multilingual embeddings",
+      "style": null,
+      "parent": null,
+      "original_id": "Jina_Embeddings"
+    },
+    {
+      "id": "s26_b84_E5_Embeddi",
+      "label": "E5 Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 84,
+      "url": "https://huggingface.co/intfloat/e5-large-v2",
+      "tooltip": "Microsoft E5 embeddings",
+      "style": null,
+      "parent": null,
+      "original_id": "E5_Embeddings"
+    },
+    {
+      "id": "s26_b85_ColBERT",
+      "label": "ColBERT",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 85,
+      "url": "https://github.com/stanford-futuredata/ColBERT",
+      "tooltip": "Late interaction retrieval",
+      "style": null,
+      "parent": null,
+      "original_id": "ColBERT"
+    },
+    {
+      "id": "s26_b86_Parent_Doc",
+      "label": "Parent Document Retriever",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 86,
+      "url": "https://python.langchain.com/docs/modules/data_connection/retrievers/parent_document_retriever",
+      "tooltip": "Hierarchical retrieval",
+      "style": null,
+      "parent": null,
+      "original_id": "Parent_Document_Retriever"
+    },
+    {
+      "id": "s16_b87_Chain_of_T",
+      "label": "Chain-of-Thought",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 87,
+      "url": "https://arxiv.org/abs/2201.11903",
+      "tooltip": "Step-by-step reasoning",
+      "style": null,
+      "parent": null,
+      "original_id": "Chain-of-Thought"
+    },
+    {
+      "id": "s16_b88_ReAct",
+      "label": "ReAct",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 88,
+      "url": "https://arxiv.org/abs/2210.03629",
+      "tooltip": "Reasoning + Acting pattern",
+      "style": null,
+      "parent": null,
+      "original_id": "ReAct"
+    },
+    {
+      "id": "s16_b89_Tree_of_Th",
+      "label": "Tree-of-Thought",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 89,
+      "url": "https://arxiv.org/abs/2305.10601",
+      "tooltip": "Deliberate problem solving",
+      "style": null,
+      "parent": null,
+      "original_id": "Tree-of-Thought"
+    },
+    {
+      "id": "s16_b90_Self_Consi",
+      "label": "Self-Consistency",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 90,
+      "url": "https://arxiv.org/abs/2203.11171",
+      "tooltip": "Multiple reasoning paths",
+      "style": null,
+      "parent": null,
+      "original_id": "Self-Consistency"
+    },
+    {
+      "id": "s16_b91_Self_Ask",
+      "label": "Self-Ask",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 91,
+      "url": "https://arxiv.org/abs/2210.03350",
+      "tooltip": "Compositional reasoning",
+      "style": null,
+      "parent": null,
+      "original_id": "Self-Ask"
+    },
+    {
+      "id": "s16_b92_Reflexion",
+      "label": "Reflexion",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 92,
+      "url": "https://arxiv.org/abs/2303.11366",
+      "tooltip": "Self-reflection agents",
+      "style": null,
+      "parent": null,
+      "original_id": "Reflexion"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s15_b15_DOC",
+      "target": "s15_b15_CHUNK",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_CHUNK",
+      "target": "s15_b15_EMBED",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_EMBED",
+      "target": "s15_b15_STORE",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_QUERY",
+      "target": "s15_b15_QEMBED",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_QEMBED",
+      "target": "s15_b15_SEARCH",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_SEARCH",
+      "target": "s15_b15_CONTEXT",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_CONTEXT",
+      "target": "s15_b15_PROMPT",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_PROMPT",
+      "target": "s15_b15_LLM",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_LLM",
+      "target": "s15_b15_ANSWER",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_Generation",
+      "type": "thick",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_DOC",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_CHUNK",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_EMBED",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_STORE",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_QUERY",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_QEMBED",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_SEARCH",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_CONTEXT",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Generation",
+      "target": "s15_b15_PROMPT",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Generation",
+      "target": "s15_b15_LLM",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Generation",
+      "target": "s15_b15_ANSWER",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_GRAPH",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_AGENT",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_SELF",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_CORRECT",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_GRAPH",
+      "target": "s16_b16_G1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_GRAPH",
+      "target": "s16_b16_G2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_GRAPH",
+      "target": "s16_b16_G3",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_AGENT",
+      "target": "s16_b16_A1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_AGENT",
+      "target": "s16_b16_A2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_AGENT",
+      "target": "s16_b16_A3",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_SELF",
+      "target": "s16_b16_S1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_SELF",
+      "target": "s16_b16_S2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_CORRECT",
+      "target": "s16_b16_C1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_CORRECT",
+      "target": "s16_b16_C2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s17_b17_Basic",
+      "target": "s17_b17_Advanced",
+      "type": "thick",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_Modular",
+      "type": "thick",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_Cutting",
+      "type": "thick",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Basic",
+      "target": "s17_b17_B1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Basic",
+      "target": "s17_b17_B2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_A1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_A2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_A3",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_M1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_M2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_M3",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Cutting",
+      "target": "s17_b17_C1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Cutting",
+      "target": "s17_b17_C2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Cutting",
+      "target": "s17_b17_C3",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s26_b29_Sparse",
+      "target": "s26_b29_Hybrid",
+      "type": "thick",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Dense",
+      "target": "s26_b29_Hybrid",
+      "type": "thick",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Hybrid",
+      "target": "s26_b29_Rerank",
+      "type": "thick",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Sparse",
+      "target": "s26_b29_BM25",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Sparse",
+      "target": "s26_b29_KW",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Dense",
+      "target": "s26_b29_VEC",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Dense",
+      "target": "s26_b29_EMB",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Hybrid",
+      "target": "s26_b29_FUSE",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Hybrid",
+      "target": "s26_b29_RRF",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Rerank",
+      "target": "s26_b29_CROSS",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Rerank",
+      "target": "s26_b29_COHERE",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Rerank",
+      "target": "s26_b29_BGE",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    }
+  ]
+}

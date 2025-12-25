@@ -1,0 +1,807 @@
+{
+  "meta": {
+    "id": 37,
+    "title": "Privacy-Preserving ML",
+    "description": "Federated Learning, Differential Privacy",
+    "slug": "privacy-preserving-ml",
+    "totalNodes": 42,
+    "totalEdges": 40
+  },
+  "sections": [
+    {
+      "id": 37,
+      "title": "Privacy-Preserving ML",
+      "slug": "37-privacy-preserving-ml",
+      "description": "Federated Learning, Differential Privacy",
+      "line": 2848
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s37_b43_PRIVACY",
+      "label": "PRIVACY-PRESERVING ML",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://petsymposium.org/",
+      "tooltip": "PETS Symposium",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PRIVACY"
+    },
+    {
+      "id": "s37_b43_FED",
+      "label": "Federated Learning",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://flower.ai/",
+      "tooltip": "Federated Learning",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FED"
+    },
+    {
+      "id": "s37_b43_DP",
+      "label": "Differential Privacy",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://opacus.ai/",
+      "tooltip": "Differential Privacy",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DP"
+    },
+    {
+      "id": "s37_b43_CRYPTO",
+      "label": "Cryptographic ML",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.openmined.org/",
+      "tooltip": "Cryptographic ML",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CRYPTO"
+    },
+    {
+      "id": "s37_b43_TEE",
+      "label": "Trusted Execution",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://confidentialcomputing.io/",
+      "tooltip": "Confidential Computing",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TEE"
+    },
+    {
+      "id": "s37_b43_F1",
+      "label": "Flower",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://flower.ai/",
+      "tooltip": "Flower FL",
+      "style": null,
+      "parent": null,
+      "original_id": "F1"
+    },
+    {
+      "id": "s37_b43_F2",
+      "label": "PySyft",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://openmined.github.io/PySyft/",
+      "tooltip": "PySyft",
+      "style": null,
+      "parent": null,
+      "original_id": "F2"
+    },
+    {
+      "id": "s37_b43_F3",
+      "label": "FATE",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://fate.fedai.org/",
+      "tooltip": "FATE",
+      "style": null,
+      "parent": null,
+      "original_id": "F3"
+    },
+    {
+      "id": "s37_b43_F4",
+      "label": "TensorFlow Federated",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.tensorflow.org/federated",
+      "tooltip": "TFF",
+      "style": null,
+      "parent": null,
+      "original_id": "F4"
+    },
+    {
+      "id": "s37_b43_D1",
+      "label": "Opacus PyTorch",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://opacus.ai/",
+      "tooltip": "Opacus",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s37_b43_D2",
+      "label": "TF Privacy",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://github.com/tensorflow/privacy",
+      "tooltip": "TF Privacy",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s37_b43_D3",
+      "label": "Diffprivlib",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://diffprivlib.readthedocs.io/",
+      "tooltip": "diffprivlib",
+      "style": null,
+      "parent": null,
+      "original_id": "D3"
+    },
+    {
+      "id": "s37_b43_D4",
+      "label": "DP-SGD",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://arxiv.org/abs/1607.00133",
+      "tooltip": "DP-SGD Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "D4"
+    },
+    {
+      "id": "s37_b43_C1",
+      "label": "Homomorphic Encryption",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.microsoft.com/en-us/research/project/microsoft-seal/",
+      "tooltip": "Microsoft SEAL",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s37_b43_C2",
+      "label": "Secure MPC",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://eprint.iacr.org/2020/300.pdf",
+      "tooltip": "MPC for ML",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s37_b43_C3",
+      "label": "Secret Sharing",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://crypten.ai/",
+      "tooltip": "CrypTen",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s37_b43_C4",
+      "label": "Functional Encryption",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://eprint.iacr.org/2018/206",
+      "tooltip": "Functional Encryption",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s37_b43_T1",
+      "label": "Intel SGX",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html",
+      "tooltip": "Intel SGX",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s37_b43_T2",
+      "label": "ARM TrustZone",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://developer.arm.com/documentation/102377/latest/",
+      "tooltip": "ARM TrustZone",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s37_b43_T3",
+      "label": "AWS Nitro Enclaves",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://aws.amazon.com/ec2/nitro/nitro-enclaves/",
+      "tooltip": "AWS Nitro",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s37_b43_T4",
+      "label": "Azure Confidential",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 43,
+      "url": "https://azure.microsoft.com/en-us/solutions/confidential-compute/",
+      "tooltip": "Azure Confidential",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    },
+    {
+      "id": "s37_b44_ATTACK",
+      "label": "PRIVACY ATTACKS",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2007.07646",
+      "tooltip": "Privacy Attacks Survey",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ATTACK"
+    },
+    {
+      "id": "s37_b44_MEM",
+      "label": "Membership Inference",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1610.05820",
+      "tooltip": "Membership Inference",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MEM"
+    },
+    {
+      "id": "s37_b44_INV",
+      "label": "Model Inversion",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1911.07135",
+      "tooltip": "Model Inversion Survey",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INV"
+    },
+    {
+      "id": "s37_b44_ATTR",
+      "label": "Attribute Inference",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1805.04049",
+      "tooltip": "Attribute Inference",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ATTR"
+    },
+    {
+      "id": "s37_b44_GRAD",
+      "label": "Gradient Leakage",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1906.08935",
+      "tooltip": "Gradient Leakage",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GRAD"
+    },
+    {
+      "id": "s37_b44_M1",
+      "label": "Shadow Models",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1610.05820",
+      "tooltip": "Shadow Model Attack",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s37_b44_M2",
+      "label": "Likelihood Ratio",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2112.03570",
+      "tooltip": "LiRA Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s37_b44_M3",
+      "label": "Label-Only Attacks",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2007.14321",
+      "tooltip": "Label-Only MI",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s37_b44_M4",
+      "label": "LiRA Attack",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2112.03570",
+      "tooltip": "LiRA Attack",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s37_b44_I1",
+      "label": "Reconstruction Attacks",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1911.07135",
+      "tooltip": "Reconstruction",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s37_b44_I2",
+      "label": "Feature Leakage",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2012.07805",
+      "tooltip": "Feature Leakage",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s37_b44_I3",
+      "label": "Embedding Inversion",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2004.00053",
+      "tooltip": "Embedding Inversion",
+      "style": null,
+      "parent": null,
+      "original_id": "I3"
+    },
+    {
+      "id": "s37_b44_I4",
+      "label": "Prompt Extraction",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2311.17035",
+      "tooltip": "Prompt Extraction",
+      "style": null,
+      "parent": null,
+      "original_id": "I4"
+    },
+    {
+      "id": "s37_b44_A1",
+      "label": "Sensitive Attribute",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1805.04049",
+      "tooltip": "Sensitive Attributes",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s37_b44_A2",
+      "label": "Property Inference",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1807.00459",
+      "tooltip": "Property Inference",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s37_b44_A3",
+      "label": "Training Data Extraction",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2012.07805",
+      "tooltip": "Data Extraction",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s37_b44_A4",
+      "label": "Memorization Attacks",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2202.07646",
+      "tooltip": "Memorization in LLMs",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s37_b44_G1",
+      "label": "Gradient Matching",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/1906.08935",
+      "tooltip": "DLG Attack",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s37_b44_G2",
+      "label": "FL Gradient Leakage",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2003.14053",
+      "tooltip": "FL Gradient Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s37_b44_G3",
+      "label": "DLGA Attack",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2001.02610",
+      "tooltip": "DLGA",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s37_b44_G4",
+      "label": "Inverting Gradients",
+      "type": "node",
+      "section_id": 37,
+      "block_id": 44,
+      "url": "https://arxiv.org/abs/2003.14053",
+      "tooltip": "Inverting Gradients",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_FED",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_DP",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_CRYPTO",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_PRIVACY",
+      "target": "s37_b43_TEE",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_FED",
+      "target": "s37_b43_F4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_DP",
+      "target": "s37_b43_D4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_CRYPTO",
+      "target": "s37_b43_C4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b43_TEE",
+      "target": "s37_b43_T4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 43
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_MEM",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_INV",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_ATTR",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTACK",
+      "target": "s37_b44_GRAD",
+      "type": "thick",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_MEM",
+      "target": "s37_b44_M4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_INV",
+      "target": "s37_b44_I4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_ATTR",
+      "target": "s37_b44_A4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G1",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G2",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G3",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    },
+    {
+      "source": "s37_b44_GRAD",
+      "target": "s37_b44_G4",
+      "type": "regular",
+      "section_id": 37,
+      "block_id": 44
+    }
+  ]
+}

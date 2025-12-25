@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.1 Postgres Fundamentals (MUST LEARN)</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        /* Markdown Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; background: rgba(110, 118, 129, 0.4); padding: 0.2em 0.4em; border-radius: 6px; }
+        pre code { background: transparent; padding: 0; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #58a6ff; padding-left: 1rem; color: #8b949e; margin: 1rem 0; }
+        table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+        th, td { border: 1px solid #30363d; padding: 0.5rem; text-align: left; color: #c9d1d9; }
+        th { background: #161b22; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>1.1 Postgres Fundamentals (MUST LEARN)</h1>
+            <p>Type: topic</p>
+        </div>
+        <div class="content">
+            <p><strong>Why:</strong> Every GenAI app needs: users, documents, chunks, chat history, permissions, logs.</p>
+<p><strong>Topics to learn:</strong></p>
+<ul>
+<li>Tables, primary keys, foreign keys, constraints</li>
+<li>Data types (TEXT, JSONB, TIMESTAMP, UUID)</li>
+<li>Relationships: one-to-many, many-to-many</li>
+<li>Joins: INNER, LEFT, RIGHT</li>
+<li>Indexes: B-tree, when to use them</li>
+<li>EXPLAIN ANALYZE (understand query performance)</li>
+<li>Migrations (schema versioning)</li>
+</ul>
+<p><strong>Resources (free):</strong></p>
+<ol>
+<li>
+<p><strong>PostgreSQL Tutorial</strong> (official-style)<br />
+https://www.postgresqltutorial.com/<br />
+→ Do: Basic, Joins, Indexes sections</p>
+</li>
+<li>
+<p><strong>SQLBolt</strong> (interactive)<br />
+https://sqlbolt.com/<br />
+→ Lessons 1–12 (1–2 hours total)</p>
+</li>
+<li>
+<p><strong>Prisma Docs</strong> (ORM you'll use)<br />
+https://www.prisma.io/docs/getting-started<br />
+→ Quickstart + Data Modeling sections</p>
+</li>
+</ol>
+<p><strong>Practice (30 min):</strong></p>
+<ul>
+<li>Create a <code>users</code> table with email, password_hash, created_at</li>
+<li>Create an <code>orgs</code> table</li>
+<li>Create <code>memberships</code> (user ↔ org many-to-many)</li>
+<li>Write a query: &quot;all orgs a user belongs to&quot; (JOIN)</li>
+</ul>
+<hr />
+
+        </div>
+    </div>
+</body>
+</html>

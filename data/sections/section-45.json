@@ -1,0 +1,719 @@
+{
+  "meta": {
+    "id": 45,
+    "title": "Open Source AI Movement",
+    "description": "Open models, datasets, tooling, and communities enabling open AI.",
+    "slug": "open-source-ai-movement",
+    "totalNodes": 37,
+    "totalEdges": 36
+  },
+  "sections": [
+    {
+      "id": 45,
+      "title": "Open Source AI Movement",
+      "slug": "",
+      "description": "Open models, datasets, tooling, and communities enabling open AI.",
+      "line": 3880
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s45_b53_OPENSOURCE",
+      "label": "\ud83c\udf10 OPEN SOURCE AI",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OPENSOURCE"
+    },
+    {
+      "id": "s45_b53_MODELS",
+      "label": "\ud83d\udce6 Open Models",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "MODELS"
+    },
+    {
+      "id": "s45_b53_TOOLS",
+      "label": "\ud83d\udee0\ufe0f Open Tools",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "TOOLS"
+    },
+    {
+      "id": "s45_b53_DATA",
+      "label": "\ud83d\udcca Open Data",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "DATA"
+    },
+    {
+      "id": "s45_b53_COMMUNITY",
+      "label": "\ud83d\udc65 Communities",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s45_b53_OPENSOURCE",
+      "original_id": "COMMUNITY"
+    },
+    {
+      "id": "s45_b53_OM",
+      "label": "OPEN MODELS",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OM"
+    },
+    {
+      "id": "s45_b53_OM1",
+      "label": "Meta LLaMA",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Meta LLaMA",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM1"
+    },
+    {
+      "id": "s45_b53_OM2",
+      "label": "Mistral Models",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://mistral.ai/technology/#models",
+      "tooltip": "Mistral Models",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM2"
+    },
+    {
+      "id": "s45_b53_OM3",
+      "label": "Falcon TII",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://falconllm.tii.ae/",
+      "tooltip": "Falcon LLM",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM3"
+    },
+    {
+      "id": "s45_b53_OM4",
+      "label": "BLOOM BigScience",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://huggingface.co/bigscience/bloom",
+      "tooltip": "BLOOM",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM4"
+    },
+    {
+      "id": "s45_b53_OM5",
+      "label": "Stable Diffusion",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://stability.ai/stable-image",
+      "tooltip": "Stable Diffusion",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM5"
+    },
+    {
+      "id": "s45_b53_OM6",
+      "label": "Whisper OpenAI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/openai/whisper",
+      "tooltip": "Whisper",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM6"
+    },
+    {
+      "id": "s45_b53_OM7",
+      "label": "Qwen Alibaba",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/QwenLM/Qwen",
+      "tooltip": "Qwen",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM7"
+    },
+    {
+      "id": "s45_b53_OM8",
+      "label": "DeepSeek Coder",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+      "tooltip": "DeepSeek Coder",
+      "style": null,
+      "parent": "s45_b53_OM",
+      "original_id": "OM8"
+    },
+    {
+      "id": "s45_b53_OT",
+      "label": "OPEN TOOLS",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OT"
+    },
+    {
+      "id": "s45_b53_OT1",
+      "label": "Hugging Face",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://huggingface.co/",
+      "tooltip": "Hugging Face",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT1"
+    },
+    {
+      "id": "s45_b53_OT2",
+      "label": "LangChain",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.langchain.com/",
+      "tooltip": "LangChain",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT2"
+    },
+    {
+      "id": "s45_b53_OT3",
+      "label": "LlamaIndex",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.llamaindex.ai/",
+      "tooltip": "LlamaIndex",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT3"
+    },
+    {
+      "id": "s45_b53_OT4",
+      "label": "vLLM",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://docs.vllm.ai/",
+      "tooltip": "vLLM",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT4"
+    },
+    {
+      "id": "s45_b53_OT5",
+      "label": "Ollama",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://ollama.com/",
+      "tooltip": "Ollama",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT5"
+    },
+    {
+      "id": "s45_b53_OT6",
+      "label": "LocalAI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://localai.io/",
+      "tooltip": "LocalAI",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT6"
+    },
+    {
+      "id": "s45_b53_OT7",
+      "label": "Text Gen WebUI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/oobabooga/text-generation-webui",
+      "tooltip": "Text Gen WebUI",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT7"
+    },
+    {
+      "id": "s45_b53_OT8",
+      "label": "Jan AI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://jan.ai/",
+      "tooltip": "Jan AI",
+      "style": null,
+      "parent": "s45_b53_OT",
+      "original_id": "OT8"
+    },
+    {
+      "id": "s45_b53_OD",
+      "label": "OPEN DATASETS",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OD"
+    },
+    {
+      "id": "s45_b53_OD1",
+      "label": "Common Crawl",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://commoncrawl.org/",
+      "tooltip": "Common Crawl",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD1"
+    },
+    {
+      "id": "s45_b53_OD2",
+      "label": "The Pile",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://pile.eleuther.ai/",
+      "tooltip": "The Pile",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD2"
+    },
+    {
+      "id": "s45_b53_OD3",
+      "label": "RedPajama",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/togethercomputer/RedPajama-Data",
+      "tooltip": "RedPajama",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD3"
+    },
+    {
+      "id": "s45_b53_OD4",
+      "label": "LAION",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://laion.ai/",
+      "tooltip": "LAION",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD4"
+    },
+    {
+      "id": "s45_b53_OD5",
+      "label": "OpenImages",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://storage.googleapis.com/openimages/web/index.html",
+      "tooltip": "Open Images",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD5"
+    },
+    {
+      "id": "s45_b53_OD6",
+      "label": "LibriSpeech",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.openslr.org/12",
+      "tooltip": "LibriSpeech",
+      "style": null,
+      "parent": "s45_b53_OD",
+      "original_id": "OD6"
+    },
+    {
+      "id": "s45_b53_CM",
+      "label": "COMMUNITIES",
+      "type": "subgraph",
+      "section_id": 45,
+      "block_id": 53,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CM"
+    },
+    {
+      "id": "s45_b53_CM1",
+      "label": "Hugging Face Hub",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://huggingface.co/models",
+      "tooltip": "HF Model Hub",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM1"
+    },
+    {
+      "id": "s45_b53_CM2",
+      "label": "GitHub ML",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://github.com/topics/machine-learning",
+      "tooltip": "GitHub ML",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM2"
+    },
+    {
+      "id": "s45_b53_CM3",
+      "label": "Kaggle",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.kaggle.com/",
+      "tooltip": "Kaggle",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM3"
+    },
+    {
+      "id": "s45_b53_CM4",
+      "label": "Papers With Code",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://paperswithcode.com/",
+      "tooltip": "Papers With Code",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM4"
+    },
+    {
+      "id": "s45_b53_CM5",
+      "label": "r/LocalLLaMA",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.reddit.com/r/LocalLLaMA/",
+      "tooltip": "r/LocalLLaMA",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM5"
+    },
+    {
+      "id": "s45_b53_CM6",
+      "label": "EleutherAI",
+      "type": "node",
+      "section_id": 45,
+      "block_id": 53,
+      "url": "https://www.eleuther.ai/",
+      "tooltip": "EleutherAI",
+      "style": null,
+      "parent": "s45_b53_CM",
+      "original_id": "CM6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s45_b53_MODELS",
+      "target": "s45_b53_OM",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_TOOLS",
+      "target": "s45_b53_OT",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_DATA",
+      "target": "s45_b53_OD",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_COMMUNITY",
+      "target": "s45_b53_CM",
+      "type": "regular",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_MODELS",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_TOOLS",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_DATA",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OPENSOURCE",
+      "target": "s45_b53_COMMUNITY",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM7",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OM",
+      "target": "s45_b53_OM8",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT7",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OT",
+      "target": "s45_b53_OT8",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_OD",
+      "target": "s45_b53_OD6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM1",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM2",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM3",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM4",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM5",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    },
+    {
+      "source": "s45_b53_CM",
+      "target": "s45_b53_CM6",
+      "type": "contains",
+      "section_id": 45,
+      "block_id": 53
+    }
+  ]
+}

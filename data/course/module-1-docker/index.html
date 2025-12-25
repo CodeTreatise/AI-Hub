@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Docker & Development Environment | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 1: Docker & Development Environment</h1>
+            <p>Master Docker and set up your complete development environment for building RAG applications</p>
+            <div class="module-meta">
+                <span>⏱️ ~60 minutes</span>
+                <span>📊 Beginner</span>
+                <span>📚 Module 1</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Understand what Docker is and why we use it</li>
+            <li>Know the difference between containers and virtual machines</li>
+            <li>Understand Docker images, containers, and Dockerfiles</li>
+            <li>Master Docker Compose for multi-container applications</li>
+            <li>Set up your complete development environment for this course</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section prerequisites">
+            <h2>📋 Prerequisites</h2>
+            
+        <p>Before starting this module, make sure you have:</p>
+        <ul>
+            <li>A computer running Linux, macOS, or Windows</li>
+            <li>Admin/sudo access to install software</li>
+            <li>Basic command line knowledge (cd, ls, mkdir)</li>
+            <li>A code editor (VS Code recommended)</li>
+        </ul>
+        <div class="callout callout-info">
+            <strong>Don't worry!</strong> We'll explain everything step by step. Even if you've never used Docker, you'll be comfortable with it by the end of this module.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🐳 What is Docker?</h2>
+            
+        <h3>The Problem Docker Solves</h3>
+        <p>Have you ever heard (or said) "It works on my machine!"? This happens because:</p>
+        <ul>
+            <li>Different operating systems behave differently</li>
+            <li>Different versions of software (Node.js, Python, PostgreSQL) may be installed</li>
+            <li>Environment variables and configurations differ</li>
+            <li>Some dependencies are missing on other machines</li>
+        </ul>
+        
+        <div class="callout callout-warning">
+            <strong>Real-world problem:</strong> You build an app with PostgreSQL 16 on your Mac. Your teammate has PostgreSQL 14 on Ubuntu. The production server runs PostgreSQL 15 on Amazon Linux. Things break in mysterious ways.
+        </div>
+        
+        <h3>Docker's Solution: Containers</h3>
+        <p>Docker packages your application AND its entire environment (OS, dependencies, configurations) into a <strong>container</strong>. This container runs exactly the same everywhere.</p>
+        
+        <blockquote style="border-left: 4px solid #818cf8; padding-left: 1rem; color: #c9d1d9; margin: 1rem 0;">
+            "Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly."
+            <footer style="color: #8b949e; margin-top: 0.5rem;">— Docker Documentation</footer>
+        </blockquote>
+        
+        <h3>Container vs Virtual Machine</h3>
+        <p>You might be wondering: "Isn't this like a virtual machine?" Not quite:</p>
+        
+        <pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    VIRTUAL MACHINES                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐                      │
+│  │  App 1  │  │  App 2  │  │  App 3  │  ← Your apps         │
+│  ├─────────┤  ├─────────┤  ├─────────┤                      │
+│  │Guest OS │  │Guest OS │  │Guest OS │  ← FULL OS each!     │
+│  │(Ubuntu) │  │(CentOS) │  │(Debian) │     (heavy: ~GB)     │
+│  └─────────┘  └─────────┘  └─────────┘                      │
+│  ┌───────────────────────────────────────┐                  │
+│  │           Hypervisor (VMware)          │                  │
+│  └───────────────────────────────────────┘                  │
+│  ┌───────────────────────────────────────┐                  │
+│  │           Host OS (Your Machine)       │                  │
+│  └───────────────────────────────────────┘                  │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│                      CONTAINERS                              │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐                      │
+│  │  App 1  │  │  App 2  │  │  App 3  │  ← Your apps         │
+│  ├─────────┤  ├─────────┤  ├─────────┤                      │
+│  │  Libs   │  │  Libs   │  │  Libs   │  ← Just libraries    │
+│  │  Only   │  │  Only   │  │  Only   │     (light: ~MB)     │
+│  └─────────┘  └─────────┘  └─────────┘                      │
+│  ┌───────────────────────────────────────┐                  │
+│  │           Docker Engine                │                  │
+│  └───────────────────────────────────────┘                  │
+│  ┌───────────────────────────────────────┐                  │
+│  │     Host OS (Shared Linux Kernel)      │                  │
+│  └───────────────────────────────────────┘                  │
+└─────────────────────────────────────────────────────────────┘</code></pre>
+        
+        <p><strong>Key differences:</strong></p>
+        <ul>
+            <li><strong>Size:</strong> VMs are gigabytes, containers are megabytes</li>
+            <li><strong>Startup:</strong> VMs take minutes, containers take seconds</li>
+            <li><strong>Resources:</strong> VMs need dedicated RAM/CPU, containers share host resources</li>
+            <li><strong>Isolation:</strong> VMs are fully isolated, containers share the host kernel</li>
+        </ul>
+        
+        <div class="callout callout-tip">
+            <strong>Simple analogy:</strong> VMs are like houses (each with its own plumbing, electricity, foundation). Containers are like apartments (shared building infrastructure, but isolated living spaces).
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🏗️ Docker Architecture</h2>
+            
+        <h3>Core Concepts</h3>
+        <p>Docker has three main components you need to understand:</p>
+        
+        <h4>1. Docker Image</h4>
+        <p>An <strong>image</strong> is a read-only template with instructions for creating a container. Think of it like a recipe or a blueprint.</p>
+        <ul>
+            <li>Images are built from a <code>Dockerfile</code></li>
+            <li>Images are stored in registries (like Docker Hub)</li>
+            <li>Images are layered (each instruction adds a layer)</li>
+            <li>Images can be based on other images</li>
+        </ul>
+        
+        <pre><code># Example: This image is based on node:18, then adds your app
+FROM node:18-alpine
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+CMD ["npm", "start"]</code></pre>
+        
+        <h4>2. Docker Container</h4>
+        <p>A <strong>container</strong> is a runnable instance of an image. It's like a running instance of your recipe.</p>
+        <ul>
+            <li>You can create, start, stop, move, or delete containers</li>
+            <li>Containers are isolated from each other</li>
+            <li>You can run multiple containers from the same image</li>
+            <li>Changes to a container don't affect the image</li>
+        </ul>
+        
+        <h4>3. Docker Daemon & Client</h4>
+        <p>The <strong>Docker daemon</strong> (<code>dockerd</code>) does the heavy lifting - building, running, and managing containers. The <strong>Docker client</strong> (<code>docker</code>) is the command-line tool you use.</p>
+        
+        <pre><code># The docker command (client) talks to dockerd (daemon)
+$ docker run nginx     # Client sends "run nginx" to daemon
+$ docker ps            # Client asks daemon "what's running?"
+$ docker stop abc123   # Client tells daemon to stop container</code></pre>
+        
+        <div class="callout callout-info">
+            <strong>Docker Desktop</strong> is an application that installs both the daemon and client, plus a nice GUI. It's the easiest way to get started on Mac/Windows.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>📥 Installing Docker</h2>
+            
+        <h3>Step 1: Install Docker Desktop</h3>
+        <p>The easiest way to get Docker is via Docker Desktop:</p>
+        
+        <ol>
+            <li>Go to <a href="https://www.docker.com/products/docker-desktop/" target="_blank">docker.com/products/docker-desktop</a></li>
+            <li>Download the version for your OS (Mac, Windows, or Linux)</li>
+            <li>Run the installer and follow the prompts</li>
+            <li>Restart your computer when prompted</li>
+        </ol>
+        
+        <h3>Step 2: Verify Installation</h3>
+        <p>Open a terminal and run:</p>
+        
+        <pre><code># Check Docker is installed
+$ docker --version
+Docker version 24.0.7, build afdd53b
+
+# Check Docker is running  
+$ docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.</code></pre>
+        
+        <div class="callout callout-warning">
+            <strong>Common Issue:</strong> If you get "Cannot connect to the Docker daemon", make sure Docker Desktop is running (check your system tray/menu bar for the whale icon).
+        </div>
+        
+        <h3>Step 3: Test with a Real Container</h3>
+        <pre><code># Run an nginx web server
+$ docker run -d -p 8080:80 nginx
+
+# This:
+# -d          = run in background (detached)
+# -p 8080:80  = map your port 8080 to container's port 80
+# nginx       = the image to run
+
+# Now open http://localhost:8080 in your browser!
+
+# See running containers
+$ docker ps
+CONTAINER ID   IMAGE   STATUS         PORTS
+abc123...      nginx   Up 2 minutes   0.0.0.0:8080->80/tcp
+
+# Stop the container
+$ docker stop abc123</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>⌨️ Essential Docker Commands</h2>
+            
+        <h3>Commands You'll Use Every Day</h3>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Command</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">What it does</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker run</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Create and start a container</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker ps</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">List running containers (<code>-a</code> for all)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker stop</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Stop a running container</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker rm</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Remove a stopped container</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker images</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">List downloaded images</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker pull</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Download an image from a registry</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker build</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Build an image from a Dockerfile</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker logs</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">View container output/logs</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>docker exec</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Run a command inside a container</td>
+            </tr>
+        </table>
+        
+        <h3>Common Flags</h3>
+        <pre><code># -d = detached (background)
+docker run -d nginx
+
+# -p = port mapping (host:container)
+docker run -p 3000:3000 myapp
+
+# -v = volume mount (persist data)
+docker run -v ./data:/app/data myapp
+
+# -e = environment variable
+docker run -e DATABASE_URL=postgres://... myapp
+
+# -it = interactive terminal (for debugging)
+docker run -it ubuntu bash
+
+# --rm = remove container when it stops
+docker run --rm nginx</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🎼 Docker Compose</h2>
+            
+        <h3>The Problem with Multiple Containers</h3>
+        <p>Real applications often need multiple services:</p>
+        <ul>
+            <li>Your app (Node.js)</li>
+            <li>A database (PostgreSQL)</li>
+            <li>A cache (Redis)</li>
+            <li>Maybe a queue (RabbitMQ)</li>
+        </ul>
+        
+        <p>Running each with <code>docker run</code> gets tedious. You'd need to:</p>
+        <ul>
+            <li>Start each container manually</li>
+            <li>Remember all the ports and volume mounts</li>
+            <li>Set up networking between containers</li>
+            <li>Stop them all individually</li>
+        </ul>
+        
+        <h3>Docker Compose: One File, All Services</h3>
+        <p>Docker Compose lets you define all your services in one YAML file:</p>
+        
+        <pre><code># compose.yaml
+services:
+  # Your Node.js application
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://postgres:secret@db:5432/myapp
+    depends_on:
+      - db
+      - redis
+  
+  # PostgreSQL database
+  db:
+    image: postgres:16
+    environment:
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=myapp
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  # Redis cache
+  redis:
+    image: redis:alpine
+
+# Named volumes (data persists when containers restart)
+volumes:
+  postgres_data:</code></pre>
+        
+        <h3>Compose Commands</h3>
+        <pre><code># Start all services (use -d for background)
+$ docker compose up -d
+
+# View logs from all services
+$ docker compose logs -f
+
+# Stop all services
+$ docker compose stop
+
+# Stop AND remove containers, networks
+$ docker compose down
+
+# Stop, remove, AND delete volumes (careful!)
+$ docker compose down -v
+
+# Rebuild images after code changes
+$ docker compose build
+$ docker compose up -d --build  # rebuild and start</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Why this matters for RAG:</strong> Our RAG application will have: Node.js app, PostgreSQL with pgvector, and possibly Redis for caching. Docker Compose makes this one-command simple.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💻 Hands-On: Build Your Environment</h2>
+            
+        <h3>Exercise: Build Your Dev Environment</h3>
+        <p>Let's set up the foundation for our RAG project:</p>
+        
+        <h4>Step 1: Create Project Structure</h4>
+        <pre><code>mkdir rag-project
+cd rag-project
+mkdir -p src/api src/services
+touch compose.yaml Dockerfile .env.example</code></pre>
+        
+        <h4>Step 2: Create the Dockerfile</h4>
+        <pre><code># Dockerfile
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package files first (for better caching)
+COPY package*.json ./
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Development command
+CMD ["npm", "run", "dev"]</code></pre>
+        
+        <h4>Step 3: Create compose.yaml</h4>
+        <pre><code># compose.yaml
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount source code for hot-reloading
+      - ./src:/app/src
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/ragdb
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ragdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:</code></pre>
+        
+        <h4>Step 4: Create a Simple package.json</h4>
+        <pre><code>{
+  "name": "rag-project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  }
+}</code></pre>
+        
+        <h4>Step 5: Create src/index.js</h4>
+        <pre><code>// src/index.js
+console.log('🚀 RAG Project Starting...');
+console.log('Database URL:', process.env.DATABASE_URL);
+console.log('');
+console.log('This will become our RAG application!');
+
+// Keep the process running
+setInterval(() => {}, 1000);</code></pre>
+        
+        <h4>Step 6: Run It!</h4>
+        <pre><code># Start everything
+$ docker compose up -d
+
+# Check status
+$ docker compose ps
+
+# View logs
+$ docker compose logs -f app
+
+# You should see:
+# 🚀 RAG Project Starting...
+# Database URL: postgres://postgres:postgres@db:5432/ragdb</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Congratulations!</strong> You now have PostgreSQL with pgvector running in a container, ready for our RAG application.
+        </div>
+    
+        </section>
+    
+        <section class="section gotchas">
+            <h2>⚠️ Common Gotchas & Debugging</h2>
+            
+        <h3>Things That Trip People Up</h3>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Data Loss:</strong> If you don't use volumes, container data is GONE when the container is removed. Always mount volumes for databases!
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Port Conflicts:</strong> If port 5432 is already in use (local PostgreSQL running?), change the port mapping: <code>5433:5432</code>
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Container Names:</strong> Container names must be unique. Use <code>docker compose down</code> to clean up old containers before restarting.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Apple Silicon (M1/M2):</strong> Most images work fine, but some may need <code>platform: linux/amd64</code> in compose.yaml.
+        </div>
+        
+        <h3>Debugging Tips</h3>
+        <pre><code># Container won't start? Check logs:
+docker compose logs app
+
+# Need to get inside a container?
+docker compose exec app sh
+
+# Database not connecting? Check if it's healthy:
+docker compose ps
+
+# Start fresh (nuclear option):
+docker compose down -v
+docker compose up -d --build</code></pre>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Check Your Understanding</h2>
+            
+        <div class="quiz-question">
+            <p>1. What is the main difference between a Docker image and a container?</p>
+            <ul class="quiz-options">
+                <li>A) Images run on Linux, containers run on Windows</li>
+                <li>B) An image is a template, a container is a running instance</li>
+                <li>C) Images are faster than containers</li>
+                <li>D) There is no difference</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. What does the `-v ./data:/app/data` flag do?</p>
+            <ul class="quiz-options">
+                <li>A) Makes the container verbose</li>
+                <li>B) Mounts a volume from host to container</li>
+                <li>C) Sets the version number</li>
+                <li>D) Validates the container</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. Why use Docker Compose instead of multiple `docker run` commands?</p>
+            <ul class="quiz-options">
+                <li>A) Compose is faster</li>
+                <li>B) Compose manages multiple services, networking, and volumes in one file</li>
+                <li>C) Compose uses less memory</li>
+                <li>D) docker run is deprecated</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>4. What happens to database data if you run `docker compose down -v`?</p>
+            <ul class="quiz-options">
+                <li>A) It's backed up automatically</li>
+                <li>B) Nothing, volumes are preserved</li>
+                <li>C) It's deleted because -v removes volumes</li>
+                <li>D) It's moved to a backup location</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-B, 3-B, 4-C</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://docs.docker.com/get-started/overview/" target="_blank">
+                    Docker Overview - Official Documentation
+                </a>
+                <span style="color: #8b949e;"> - Comprehensive introduction to Docker</span>
+            </li>
+            <li>
+                <a href="https://docs.docker.com/compose/gettingstarted/" target="_blank">
+                    Docker Compose Getting Started
+                </a>
+                <span style="color: #8b949e;"> - Step-by-step Compose tutorial</span>
+            </li>
+            <li>
+                <a href="https://docs.docker.com/reference/dockerfile/" target="_blank">
+                    Dockerfile Reference
+                </a>
+                <span style="color: #8b949e;"> - All Dockerfile instructions explained</span>
+            </li>
+            <li>
+                <a href="https://hub.docker.com/" target="_blank">
+                    Docker Hub
+                </a>
+                <span style="color: #8b949e;"> - Public registry of Docker images</span>
+            </li>
+            <li>
+                <a href="https://github.com/pgvector/pgvector" target="_blank">
+                    pgvector on GitHub
+                </a>
+                <span style="color: #8b949e;"> - The PostgreSQL vector extension we'll use</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../module-0-overview/index.html">← Previous: The Big Picture</a>
+            <a href="../module-2-postgres/index.html">Next: Database Foundations →</a>
+        </nav>
+    </div>
+</body>
+</html>

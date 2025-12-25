@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 33,
+    "title": "Distributed Training & Systems",
+    "description": "DeepSpeed, FSDP, ZeRO, Parallelism",
+    "slug": "distributed-training-systems",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 33,
+      "title": "Distributed Training & Systems",
+      "slug": "33-distributed-training--systems",
+      "description": "DeepSpeed, FSDP, ZeRO, Parallelism",
+      "line": 2473
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s33_b38_DIST",
+      "label": "DISTRIBUTED TRAINING",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://huggingface.co/docs/transformers/parallelism",
+      "tooltip": "Parallelism Guide",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DIST"
+    },
+    {
+      "id": "s33_b38_PARALLEL",
+      "label": "Parallelism",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://pytorch.org/tutorials/intermediate/ddp_tutorial.html",
+      "tooltip": "PyTorch DDP",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PARALLEL"
+    },
+    {
+      "id": "s33_b38_OPTIM",
+      "label": "Memory Optimization",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://www.deepspeed.ai/tutorials/zero/",
+      "tooltip": "ZeRO Tutorial",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OPTIM"
+    },
+    {
+      "id": "s33_b38_INFRA",
+      "label": "Infrastructure",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://developer.nvidia.com/nccl",
+      "tooltip": "NCCL",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INFRA"
+    },
+    {
+      "id": "s33_b38_FRAME",
+      "label": "Frameworks",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://www.deepspeed.ai/",
+      "tooltip": "DeepSpeed",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FRAME"
+    },
+    {
+      "id": "s33_b38_PA1",
+      "label": "Data Parallelism",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://pytorch.org/docs/stable/notes/ddp.html",
+      "tooltip": "Data Parallelism",
+      "style": null,
+      "parent": null,
+      "original_id": "PA1"
+    },
+    {
+      "id": "s33_b38_PA2",
+      "label": "Tensor Parallelism",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://docs.nvidia.com/megatron-core/developer-guide/latest/api-guide/tensor_parallel.html",
+      "tooltip": "Tensor Parallelism",
+      "style": null,
+      "parent": null,
+      "original_id": "PA2"
+    },
+    {
+      "id": "s33_b38_PA3",
+      "label": "Pipeline Parallelism",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://pytorch.org/docs/stable/",
+      "tooltip": "Pipeline Parallelism",
+      "style": null,
+      "parent": null,
+      "original_id": "PA3"
+    },
+    {
+      "id": "s33_b38_PA4",
+      "label": "3D Parallelism",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://www.microsoft.com/en-us/research/blog/deepspeed-extreme-scale-model-training-for-everyone/",
+      "tooltip": "3D Parallelism",
+      "style": null,
+      "parent": null,
+      "original_id": "PA4"
+    },
+    {
+      "id": "s33_b38_OP1",
+      "label": "ZeRO Stage 1/2/3",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://www.deepspeed.ai/tutorials/zero/",
+      "tooltip": "ZeRO",
+      "style": null,
+      "parent": null,
+      "original_id": "OP1"
+    },
+    {
+      "id": "s33_b38_OP2",
+      "label": "Gradient Checkpointing",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://pytorch.org/docs/stable/checkpoint.html",
+      "tooltip": "Gradient Checkpointing",
+      "style": null,
+      "parent": null,
+      "original_id": "OP2"
+    },
+    {
+      "id": "s33_b38_OP3",
+      "label": "Mixed Precision FP16/BF16",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://pytorch.org/docs/stable/amp.html",
+      "tooltip": "Mixed Precision",
+      "style": null,
+      "parent": null,
+      "original_id": "OP3"
+    },
+    {
+      "id": "s33_b38_OP4",
+      "label": "Activation Recomputation",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://arxiv.org/abs/1604.06174",
+      "tooltip": "Activation Checkpointing",
+      "style": null,
+      "parent": null,
+      "original_id": "OP4"
+    },
+    {
+      "id": "s33_b38_IN1",
+      "label": "NCCL/NVLink",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://developer.nvidia.com/nccl",
+      "tooltip": "NVIDIA NCCL",
+      "style": null,
+      "parent": null,
+      "original_id": "IN1"
+    },
+    {
+      "id": "s33_b38_IN2",
+      "label": "InfiniBand/RDMA",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://www.nvidia.com/en-us/networking/",
+      "tooltip": "InfiniBand",
+      "style": null,
+      "parent": null,
+      "original_id": "IN2"
+    },
+    {
+      "id": "s33_b38_IN3",
+      "label": "Kubernetes/Slurm",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+      "tooltip": "K8s Jobs",
+      "style": null,
+      "parent": null,
+      "original_id": "IN3"
+    },
+    {
+      "id": "s33_b38_IN4",
+      "label": "Cloud HPC",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://cloud.google.com/tpu/docs/training-on-tpu-pods",
+      "tooltip": "Cloud TPU Pods",
+      "style": null,
+      "parent": null,
+      "original_id": "IN4"
+    },
+    {
+      "id": "s33_b38_FR1",
+      "label": "DeepSpeed",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://www.deepspeed.ai/",
+      "tooltip": "DeepSpeed",
+      "style": null,
+      "parent": null,
+      "original_id": "FR1"
+    },
+    {
+      "id": "s33_b38_FR2",
+      "label": "FSDP",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://pytorch.org/docs/stable/fsdp.html",
+      "tooltip": "PyTorch FSDP",
+      "style": null,
+      "parent": null,
+      "original_id": "FR2"
+    },
+    {
+      "id": "s33_b38_FR3",
+      "label": "Megatron-LM",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://github.com/NVIDIA/Megatron-LM",
+      "tooltip": "Megatron-LM",
+      "style": null,
+      "parent": null,
+      "original_id": "FR3"
+    },
+    {
+      "id": "s33_b38_FR4",
+      "label": "Ray/Horovod",
+      "type": "node",
+      "section_id": 33,
+      "block_id": 38,
+      "url": "https://docs.ray.io/en/latest/train/train.html",
+      "tooltip": "Ray Train",
+      "style": null,
+      "parent": null,
+      "original_id": "FR4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s33_b38_DIST",
+      "target": "s33_b38_PARALLEL",
+      "type": "thick",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_DIST",
+      "target": "s33_b38_OPTIM",
+      "type": "thick",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_DIST",
+      "target": "s33_b38_INFRA",
+      "type": "thick",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_DIST",
+      "target": "s33_b38_FRAME",
+      "type": "thick",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_PARALLEL",
+      "target": "s33_b38_PA1",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_PARALLEL",
+      "target": "s33_b38_PA2",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_PARALLEL",
+      "target": "s33_b38_PA3",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_PARALLEL",
+      "target": "s33_b38_PA4",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_OPTIM",
+      "target": "s33_b38_OP1",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_OPTIM",
+      "target": "s33_b38_OP2",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_OPTIM",
+      "target": "s33_b38_OP3",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_OPTIM",
+      "target": "s33_b38_OP4",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_INFRA",
+      "target": "s33_b38_IN1",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_INFRA",
+      "target": "s33_b38_IN2",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_INFRA",
+      "target": "s33_b38_IN3",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_INFRA",
+      "target": "s33_b38_IN4",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_FRAME",
+      "target": "s33_b38_FR1",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_FRAME",
+      "target": "s33_b38_FR2",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_FRAME",
+      "target": "s33_b38_FR3",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    },
+    {
+      "source": "s33_b38_FRAME",
+      "target": "s33_b38_FR4",
+      "type": "regular",
+      "section_id": 33,
+      "block_id": 38
+    }
+  ]
+}

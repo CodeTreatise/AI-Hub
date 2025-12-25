@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "id": 5,
+    "title": "ML Types & Algorithms",
+    "description": "Supervised, Unsupervised, RL",
+    "slug": "ml-types-algorithms",
+    "totalNodes": 19,
+    "totalEdges": 18
+  },
+  "sections": [
+    {
+      "id": 5,
+      "title": "ML Types & Algorithms",
+      "slug": "5-ml-types--algorithms",
+      "description": "Supervised, Unsupervised, RL",
+      "line": 318
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s5_b5_ML",
+      "label": "MACHINE LEARNING",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/",
+      "tooltip": "Scikit-learn Docs",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ML"
+    },
+    {
+      "id": "s5_b5_SL",
+      "label": "Supervised",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "tooltip": "Supervised Learning",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SL"
+    },
+    {
+      "id": "s5_b5_UL",
+      "label": "Unsupervised",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/unsupervised_learning.html",
+      "tooltip": "Unsupervised Learning",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "UL"
+    },
+    {
+      "id": "s5_b5_RL",
+      "label": "Reinforcement",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://spinningup.openai.com/",
+      "tooltip": "OpenAI Spinning Up",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RL"
+    },
+    {
+      "id": "s5_b5_CLASS",
+      "label": "Classification",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html#classification",
+      "tooltip": "Classification",
+      "style": "fill:#43A047,stroke:#2E7D32,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLASS"
+    },
+    {
+      "id": "s5_b5_REG",
+      "label": "Regression",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html#regression",
+      "tooltip": "Regression",
+      "style": "fill:#66BB6A,stroke:#43A047,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REG"
+    },
+    {
+      "id": "s5_b5_C1",
+      "label": "Logistic Reg",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression",
+      "tooltip": "Logistic Regression",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s5_b5_C2",
+      "label": "Random Forest",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html#forest",
+      "tooltip": "Random Forest",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s5_b5_C3",
+      "label": "SVM",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/svm.html",
+      "tooltip": "SVM Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s5_b5_R1",
+      "label": "Linear Reg",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares",
+      "tooltip": "Linear Regression",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s5_b5_R2",
+      "label": "XGBoost",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://xgboost.readthedocs.io/",
+      "tooltip": "XGBoost Docs",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s5_b5_CLUST",
+      "label": "Clustering",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "tooltip": "Clustering",
+      "style": "fill:#FB8C00,stroke:#F57C00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLUST"
+    },
+    {
+      "id": "s5_b5_DIM",
+      "label": "Dim Reduction",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "tooltip": "Dimensionality Reduction",
+      "style": "fill:#FFA726,stroke:#FB8C00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DIM"
+    },
+    {
+      "id": "s5_b5_K1",
+      "label": "K-Means",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+      "tooltip": "K-Means",
+      "style": null,
+      "parent": null,
+      "original_id": "K1"
+    },
+    {
+      "id": "s5_b5_K2",
+      "label": "DBSCAN",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/clustering.html#dbscan",
+      "tooltip": "DBSCAN",
+      "style": null,
+      "parent": null,
+      "original_id": "K2"
+    },
+    {
+      "id": "s5_b5_D1",
+      "label": "PCA",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html#pca",
+      "tooltip": "PCA Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s5_b5_D2",
+      "label": "t-SNE",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/manifold.html#t-sne",
+      "tooltip": "t-SNE Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s5_b5_RL1",
+      "label": "Q-Learning",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://www.gymlibrary.dev/",
+      "tooltip": "Q-Learning - Gym",
+      "style": null,
+      "parent": null,
+      "original_id": "RL1"
+    },
+    {
+      "id": "s5_b5_RL2",
+      "label": "PPO",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://stable-baselines3.readthedocs.io/",
+      "tooltip": "Stable Baselines3",
+      "style": null,
+      "parent": null,
+      "original_id": "RL2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s5_b5_ML",
+      "target": "s5_b5_SL",
+      "type": "thick",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_ML",
+      "target": "s5_b5_UL",
+      "type": "thick",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_ML",
+      "target": "s5_b5_RL",
+      "type": "thick",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_SL",
+      "target": "s5_b5_CLASS",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_SL",
+      "target": "s5_b5_REG",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLASS",
+      "target": "s5_b5_C1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLASS",
+      "target": "s5_b5_C2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLASS",
+      "target": "s5_b5_C3",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_REG",
+      "target": "s5_b5_R1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_REG",
+      "target": "s5_b5_R2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_UL",
+      "target": "s5_b5_CLUST",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_UL",
+      "target": "s5_b5_DIM",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLUST",
+      "target": "s5_b5_K1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLUST",
+      "target": "s5_b5_K2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_DIM",
+      "target": "s5_b5_D1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_DIM",
+      "target": "s5_b5_D2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_RL",
+      "target": "s5_b5_RL1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_RL",
+      "target": "s5_b5_RL2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    }
+  ]
+}

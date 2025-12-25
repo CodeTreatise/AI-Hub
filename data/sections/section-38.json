@@ -1,0 +1,807 @@
+{
+  "meta": {
+    "id": 38,
+    "title": "Decision-Making ML",
+    "description": "Bandits, Offline RL, Causal Discovery",
+    "slug": "decision-making-ml",
+    "totalNodes": 42,
+    "totalEdges": 40
+  },
+  "sections": [
+    {
+      "id": 38,
+      "title": "Decision-Making ML",
+      "slug": "38-decision-making-ml",
+      "description": "Bandits, Offline RL, Causal Discovery",
+      "line": 2996
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s38_b45_DECISION",
+      "label": "DECISION-MAKING ML",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://vowpalwabbit.org/",
+      "tooltip": "Decision Service",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DECISION"
+    },
+    {
+      "id": "s38_b45_BANDIT",
+      "label": "Bandits",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://vowpalwabbit.org/",
+      "tooltip": "Bandits",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "BANDIT"
+    },
+    {
+      "id": "s38_b45_OFFLINE",
+      "label": "Offline RL",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://sites.google.com/view/offlinerltutorial-neurips2020",
+      "tooltip": "Offline RL",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OFFLINE"
+    },
+    {
+      "id": "s38_b45_CAUSAL",
+      "label": "Causal Discovery",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://causal-learn.readthedocs.io/",
+      "tooltip": "Causal Discovery",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CAUSAL"
+    },
+    {
+      "id": "s38_b45_OPTIM",
+      "label": "Optimization",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://ax.dev/",
+      "tooltip": "Optimization",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OPTIM"
+    },
+    {
+      "id": "s38_b45_B1",
+      "label": "Multi-Armed Bandits",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://vowpalwabbit.org/",
+      "tooltip": "MAB Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "B1"
+    },
+    {
+      "id": "s38_b45_B2",
+      "label": "Contextual Bandits",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/1802.09127",
+      "tooltip": "Contextual Bandits Survey",
+      "style": null,
+      "parent": null,
+      "original_id": "B2"
+    },
+    {
+      "id": "s38_b45_B3",
+      "label": "Thompson Sampling",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/1707.02038",
+      "tooltip": "Thompson Sampling",
+      "style": null,
+      "parent": null,
+      "original_id": "B3"
+    },
+    {
+      "id": "s38_b45_B4",
+      "label": "UCB Algorithms",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/1904.05245",
+      "tooltip": "UCB Algorithms",
+      "style": null,
+      "parent": null,
+      "original_id": "B4"
+    },
+    {
+      "id": "s38_b45_O1",
+      "label": "Batch RL",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/2005.01643",
+      "tooltip": "Offline RL Survey",
+      "style": null,
+      "parent": null,
+      "original_id": "O1"
+    },
+    {
+      "id": "s38_b45_O2",
+      "label": "Conservative Q-Learning",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/2006.04779",
+      "tooltip": "CQL Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "O2"
+    },
+    {
+      "id": "s38_b45_O3",
+      "label": "Decision Transformer",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/2106.01345",
+      "tooltip": "Decision Transformer",
+      "style": null,
+      "parent": null,
+      "original_id": "O3"
+    },
+    {
+      "id": "s38_b45_O4",
+      "label": "Implicit Q-Learning",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/2110.06169",
+      "tooltip": "IQL Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "O4"
+    },
+    {
+      "id": "s38_b45_CA1",
+      "label": "PC Algorithm",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://www.jmlr.org/papers/v15/colombo14a.html",
+      "tooltip": "PC Algorithm",
+      "style": null,
+      "parent": null,
+      "original_id": "CA1"
+    },
+    {
+      "id": "s38_b45_CA2",
+      "label": "FCI",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/1302.3545",
+      "tooltip": "FCI Algorithm",
+      "style": null,
+      "parent": null,
+      "original_id": "CA2"
+    },
+    {
+      "id": "s38_b45_CA3",
+      "label": "NOTEARS",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/1803.01422",
+      "tooltip": "NOTEARS Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "CA3"
+    },
+    {
+      "id": "s38_b45_CA4",
+      "label": "Causal Discovery Toolbox",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://causal-learn.readthedocs.io/",
+      "tooltip": "causal-learn",
+      "style": null,
+      "parent": null,
+      "original_id": "CA4"
+    },
+    {
+      "id": "s38_b45_OP1",
+      "label": "Bayesian Optimization",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://ax.dev/",
+      "tooltip": "Ax/BoTorch",
+      "style": null,
+      "parent": null,
+      "original_id": "OP1"
+    },
+    {
+      "id": "s38_b45_OP2",
+      "label": "Hyperparameter Tuning",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://optuna.org/",
+      "tooltip": "Optuna",
+      "style": null,
+      "parent": null,
+      "original_id": "OP2"
+    },
+    {
+      "id": "s38_b45_OP3",
+      "label": "AutoML",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://auto.gluon.ai/",
+      "tooltip": "AutoGluon",
+      "style": null,
+      "parent": null,
+      "original_id": "OP3"
+    },
+    {
+      "id": "s38_b45_OP4",
+      "label": "Neural Architecture Search",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 45,
+      "url": "https://arxiv.org/abs/1808.05377",
+      "tooltip": "NAS Survey",
+      "style": null,
+      "parent": null,
+      "original_id": "OP4"
+    },
+    {
+      "id": "s38_b46_OPE",
+      "label": "OFF-POLICY EVALUATION",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/2002.09072",
+      "tooltip": "OPE Survey",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OPE"
+    },
+    {
+      "id": "s38_b46_IS",
+      "label": "Importance Sampling",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1503.02834",
+      "tooltip": "Importance Sampling",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "IS"
+    },
+    {
+      "id": "s38_b46_DM",
+      "label": "Direct Methods",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/2002.09072",
+      "tooltip": "Direct Methods",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DM"
+    },
+    {
+      "id": "s38_b46_DR",
+      "label": "Doubly Robust",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1103.4601",
+      "tooltip": "Doubly Robust",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DR"
+    },
+    {
+      "id": "s38_b46_SAFE",
+      "label": "Safety Constraints",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/2202.10027",
+      "tooltip": "Safe OPE",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SAFE"
+    },
+    {
+      "id": "s38_b46_I1",
+      "label": "IPS Inverse Propensity",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1503.02834",
+      "tooltip": "IPS Estimator",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s38_b46_I2",
+      "label": "SNIPS Self-Normalized",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1503.02834",
+      "tooltip": "SNIPS",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s38_b46_I3",
+      "label": "Clipped IS",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1707.06887",
+      "tooltip": "Clipped IS",
+      "style": null,
+      "parent": null,
+      "original_id": "I3"
+    },
+    {
+      "id": "s38_b46_I4",
+      "label": "Per-Decision IS",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1906.03735",
+      "tooltip": "Per-Decision IS",
+      "style": null,
+      "parent": null,
+      "original_id": "I4"
+    },
+    {
+      "id": "s38_b46_D1",
+      "label": "Reward Model",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/2002.09072",
+      "tooltip": "Reward Model OPE",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s38_b46_D2",
+      "label": "Fitted Q Evaluation",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1911.11361",
+      "tooltip": "FQE",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s38_b46_D3",
+      "label": "MAGIC Estimator",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1604.00923",
+      "tooltip": "MAGIC",
+      "style": null,
+      "parent": null,
+      "original_id": "D3"
+    },
+    {
+      "id": "s38_b46_D4",
+      "label": "Model-Based OPE",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/2002.09072",
+      "tooltip": "Model-Based OPE",
+      "style": null,
+      "parent": null,
+      "original_id": "D4"
+    },
+    {
+      "id": "s38_b46_R1",
+      "label": "DR Estimator",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1103.4601",
+      "tooltip": "Doubly Robust",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s38_b46_R2",
+      "label": "Weighted DR WDR",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1612.01205",
+      "tooltip": "Weighted DR",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s38_b46_R3",
+      "label": "SWITCH Estimator",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1612.01205",
+      "tooltip": "SWITCH",
+      "style": null,
+      "parent": null,
+      "original_id": "R3"
+    },
+    {
+      "id": "s38_b46_R4",
+      "label": "More Robust DR",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1802.03493",
+      "tooltip": "More Robust DR",
+      "style": null,
+      "parent": null,
+      "original_id": "R4"
+    },
+    {
+      "id": "s38_b46_S1",
+      "label": "High-Confidence Bounds",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1606.06126",
+      "tooltip": "High-Confidence OPE",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s38_b46_S2",
+      "label": "SELDONIAN Framework",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1903.08254",
+      "tooltip": "SELDONIAN",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s38_b46_S3",
+      "label": "Safe Policy Improvement",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1712.06924",
+      "tooltip": "Safe Policy Improvement",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s38_b46_S4",
+      "label": "Counterfactual Risk",
+      "type": "node",
+      "section_id": 38,
+      "block_id": 46,
+      "url": "https://arxiv.org/abs/1502.02362",
+      "tooltip": "Counterfactual Risk",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s38_b45_DECISION",
+      "target": "s38_b45_BANDIT",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_DECISION",
+      "target": "s38_b45_OFFLINE",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_DECISION",
+      "target": "s38_b45_CAUSAL",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_DECISION",
+      "target": "s38_b45_OPTIM",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_BANDIT",
+      "target": "s38_b45_B1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_BANDIT",
+      "target": "s38_b45_B2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_BANDIT",
+      "target": "s38_b45_B3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_BANDIT",
+      "target": "s38_b45_B4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OFFLINE",
+      "target": "s38_b45_O1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OFFLINE",
+      "target": "s38_b45_O2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OFFLINE",
+      "target": "s38_b45_O3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OFFLINE",
+      "target": "s38_b45_O4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_CAUSAL",
+      "target": "s38_b45_CA1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_CAUSAL",
+      "target": "s38_b45_CA2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_CAUSAL",
+      "target": "s38_b45_CA3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_CAUSAL",
+      "target": "s38_b45_CA4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OPTIM",
+      "target": "s38_b45_OP1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OPTIM",
+      "target": "s38_b45_OP2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OPTIM",
+      "target": "s38_b45_OP3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b45_OPTIM",
+      "target": "s38_b45_OP4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 45
+    },
+    {
+      "source": "s38_b46_OPE",
+      "target": "s38_b46_IS",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_OPE",
+      "target": "s38_b46_DM",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_OPE",
+      "target": "s38_b46_DR",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_OPE",
+      "target": "s38_b46_SAFE",
+      "type": "thick",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_IS",
+      "target": "s38_b46_I1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_IS",
+      "target": "s38_b46_I2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_IS",
+      "target": "s38_b46_I3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_IS",
+      "target": "s38_b46_I4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DM",
+      "target": "s38_b46_D1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DM",
+      "target": "s38_b46_D2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DM",
+      "target": "s38_b46_D3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DM",
+      "target": "s38_b46_D4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DR",
+      "target": "s38_b46_R1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DR",
+      "target": "s38_b46_R2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DR",
+      "target": "s38_b46_R3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_DR",
+      "target": "s38_b46_R4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_SAFE",
+      "target": "s38_b46_S1",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_SAFE",
+      "target": "s38_b46_S2",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_SAFE",
+      "target": "s38_b46_S3",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    },
+    {
+      "source": "s38_b46_SAFE",
+      "target": "s38_b46_S4",
+      "type": "regular",
+      "section_id": 38,
+      "block_id": 46
+    }
+  ]
+}

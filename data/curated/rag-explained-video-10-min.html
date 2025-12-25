@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Explained (video, 10 min)</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        .content {
+            color: #c9d1d9;
+            line-height: 1.7;
+        }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .watch-on-youtube {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ff0033;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .watch-on-youtube:hover { background: #cc0029; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>🎥 RAG Explained (video, 10 min)</h1>
+            <p>Source: <a href="https://www.youtube.com/watch?v=T-D1OfcDW1M" target="_blank">youtube.com/watch?v=T-D1OfcDW1M</a></p>
+        </div>
+        
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/T-D1OfcDW1M" 
+                title="RAG Explained"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="content">
+            <h2>Video Summary</h2>
+            <p>This video explains <strong>Retrieval-Augmented Generation (RAG)</strong>, a technique that enhances Large Language Models by connecting them to external knowledge sources.</p>
+            
+            <h3>Key Concepts Covered</h3>
+            <ul>
+                <li><strong>The Problem:</strong> LLMs have a knowledge cutoff date and can hallucinate facts</li>
+                <li><strong>The Solution:</strong> RAG retrieves relevant context from external sources before generating responses</li>
+                <li><strong>Vector Embeddings:</strong> Converting text to numerical representations for semantic search</li>
+                <li><strong>Vector Databases:</strong> Storing and searching embeddings efficiently (Pinecone, Weaviate, etc.)</li>
+                <li><strong>The RAG Pipeline:</strong> Query → Retrieve → Augment → Generate</li>
+            </ul>
+            
+            <h3>Why RAG Matters</h3>
+            <ul>
+                <li>Provides up-to-date information beyond training data</li>
+                <li>Reduces hallucinations with grounded context</li>
+                <li>Enables domain-specific knowledge without fine-tuning</li>
+                <li>More cost-effective than training custom models</li>
+            </ul>
+            
+            <a href="https://www.youtube.com/watch?v=T-D1OfcDW1M" target="_blank" class="watch-on-youtube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                Watch on YouTube
+            </a>
+        </div>
+    </div>
+</body>
+</html>

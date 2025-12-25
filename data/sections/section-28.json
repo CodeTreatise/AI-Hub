@@ -1,0 +1,617 @@
+{
+  "meta": {
+    "id": 28,
+    "title": "Future Trends (2025+)",
+    "description": "AGI, Embodied AI, Neuromorphic",
+    "slug": "future-trends-2025",
+    "totalNodes": 32,
+    "totalEdges": 30
+  },
+  "sections": [
+    {
+      "id": 28,
+      "title": "Future Trends (2025+)",
+      "slug": "28-future-trends-2025",
+      "description": "AGI, Embodied AI, Neuromorphic",
+      "line": 2044
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s28_b32_Near",
+      "label": "\ud83d\udd2e 2025-2026: Near Term",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.gartner.com/en/articles/what-s-new-in-artificial-intelligence-from-the-2024-gartner-hype-cycle",
+      "tooltip": "Near-Term AI Trends",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Near"
+    },
+    {
+      "id": "s28_b32_N1",
+      "label": "Agentic AI Mainstream",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "tooltip": "LLM Agents",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N1"
+    },
+    {
+      "id": "s28_b32_N2",
+      "label": "Small Language Models",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://azure.microsoft.com/en-us/products/phi-3",
+      "tooltip": "Microsoft Phi",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N2"
+    },
+    {
+      "id": "s28_b32_N3",
+      "label": "On-Device AI",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://developer.apple.com/machine-learning/core-ml/",
+      "tooltip": "Apple Core ML",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N3"
+    },
+    {
+      "id": "s28_b32_N4",
+      "label": "Enterprise RAG",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "GraphRAG",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N4"
+    },
+    {
+      "id": "s28_b32_N5",
+      "label": "AI Regulation",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://artificialintelligenceact.eu/",
+      "tooltip": "EU AI Act",
+      "style": null,
+      "parent": "s28_b32_Near",
+      "original_id": "N5"
+    },
+    {
+      "id": "s28_b32_Mid",
+      "label": "\ud83d\ude80 2027-2028: Mid Term",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://hai.stanford.edu/news/ai-index-state-ai-14-charts",
+      "tooltip": "Mid-Term AI Outlook",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Mid"
+    },
+    {
+      "id": "s28_b32_M1",
+      "label": "AGI Progress",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://openai.com/",
+      "tooltip": "OpenAI",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M1"
+    },
+    {
+      "id": "s28_b32_M2",
+      "label": "Embodied AI / Robotics",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.figure.ai/",
+      "tooltip": "Figure Robotics",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M2"
+    },
+    {
+      "id": "s28_b32_M3",
+      "label": "Neuromorphic Computing",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html",
+      "tooltip": "Intel Neuromorphic",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M3"
+    },
+    {
+      "id": "s28_b32_M4",
+      "label": "AI-Native Applications",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://a16z.com/emerging-architectures-for-llm-applications/",
+      "tooltip": "AI-Native Apps",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M4"
+    },
+    {
+      "id": "s28_b32_M5",
+      "label": "Synthetic Data Dominance",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://gretel.ai/",
+      "tooltip": "Synthetic Data",
+      "style": null,
+      "parent": "s28_b32_Mid",
+      "original_id": "M5"
+    },
+    {
+      "id": "s28_b32_Long",
+      "label": "\ud83c\udf0c 2029-2030+: Long Term",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://futureoflife.org/open-letter/pause-giant-ai-experiments/",
+      "tooltip": "Long-Term AI Future",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Long"
+    },
+    {
+      "id": "s28_b32_L1",
+      "label": "Artificial General Intelligence?",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://deepmind.google/",
+      "tooltip": "DeepMind",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L1"
+    },
+    {
+      "id": "s28_b32_L2",
+      "label": "Brain-Computer Interfaces",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://neuralink.com/",
+      "tooltip": "Neuralink",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L2"
+    },
+    {
+      "id": "s28_b32_L3",
+      "label": "Quantum AI",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://www.ibm.com/quantum",
+      "tooltip": "IBM Quantum",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L3"
+    },
+    {
+      "id": "s28_b32_L4",
+      "label": "AI Consciousness Debate",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://plato.stanford.edu/entries/consciousness-higher/",
+      "tooltip": "AI Consciousness",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L4"
+    },
+    {
+      "id": "s28_b32_L5",
+      "label": "Post-Transformer Architectures",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 32,
+      "url": "https://arxiv.org/abs/2312.00752",
+      "tooltip": "Mamba Paper",
+      "style": null,
+      "parent": "s28_b32_Long",
+      "original_id": "L5"
+    },
+    {
+      "id": "s28_b33_Past",
+      "label": "\ud83d\udcdc Past Paradigms",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.britannica.com/technology/artificial-intelligence",
+      "tooltip": "AI History",
+      "style": "fill:#455A64,stroke:#263238,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Past"
+    },
+    {
+      "id": "s28_b33_P1",
+      "label": "Rule-Based Expert Systems",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.britannica.com/technology/expert-system",
+      "tooltip": "Expert Systems",
+      "style": null,
+      "parent": "s28_b33_Past",
+      "original_id": "P1"
+    },
+    {
+      "id": "s28_b33_P2",
+      "label": "Statistical ML",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://scikit-learn.org/",
+      "tooltip": "Scikit-learn",
+      "style": null,
+      "parent": "s28_b33_Past",
+      "original_id": "P2"
+    },
+    {
+      "id": "s28_b33_P3",
+      "label": "Deep Learning",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://pytorch.org/",
+      "tooltip": "PyTorch",
+      "style": null,
+      "parent": "s28_b33_Past",
+      "original_id": "P3"
+    },
+    {
+      "id": "s28_b33_Present",
+      "label": "\u26a1 Current (2025)",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.nvidia.com/en-us/glossary/large-language-models/",
+      "tooltip": "Current AI",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Present"
+    },
+    {
+      "id": "s28_b33_C1",
+      "label": "Foundation Models",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://huggingface.co/",
+      "tooltip": "Hugging Face",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C1"
+    },
+    {
+      "id": "s28_b33_C2",
+      "label": "Prompt Engineering",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "Prompting Guide",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C2"
+    },
+    {
+      "id": "s28_b33_C3",
+      "label": "RAG & Retrieval",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://docs.llamaindex.ai/",
+      "tooltip": "LlamaIndex",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C3"
+    },
+    {
+      "id": "s28_b33_C4",
+      "label": "Agentic Workflows",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "LangGraph",
+      "style": null,
+      "parent": "s28_b33_Present",
+      "original_id": "C4"
+    },
+    {
+      "id": "s28_b33_Future",
+      "label": "\ud83c\udf1f Future",
+      "type": "subgraph",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://deepmind.google/",
+      "tooltip": "Future AI",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Future"
+    },
+    {
+      "id": "s28_b33_F1",
+      "label": "World Models",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://ai.meta.com/",
+      "tooltip": "JEPA",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F1"
+    },
+    {
+      "id": "s28_b33_F2",
+      "label": "Continuous Learning",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://arxiv.org/abs/1706.10295",
+      "tooltip": "Continual Learning",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F2"
+    },
+    {
+      "id": "s28_b33_F3",
+      "label": "Embodied Intelligence",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://www.figure.ai/",
+      "tooltip": "Figure AI",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F3"
+    },
+    {
+      "id": "s28_b33_F4",
+      "label": "Collective AI Systems",
+      "type": "node",
+      "section_id": 28,
+      "block_id": 33,
+      "url": "https://arxiv.org/abs/2305.11206",
+      "tooltip": "Collective AI",
+      "style": null,
+      "parent": "s28_b33_Future",
+      "original_id": "F4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_Mid",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_Long",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Near",
+      "target": "s28_b32_N5",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Mid",
+      "target": "s28_b32_M5",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b32_Long",
+      "target": "s28_b32_L5",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 32
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_Present",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_Future",
+      "type": "thick",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_P1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_P2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Past",
+      "target": "s28_b33_P3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Present",
+      "target": "s28_b33_C4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F1",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F2",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F3",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    },
+    {
+      "source": "s28_b33_Future",
+      "target": "s28_b33_F4",
+      "type": "contains",
+      "section_id": 28,
+      "block_id": 33
+    }
+  ]
+}

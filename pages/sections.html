@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Viewer</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            overflow: hidden;
+        }
+        
+        #app {
+            display: flex;
+            height: 100vh;
+        }
+        
+        /* Sidebar */
+        #sidebar {
+            width: 320px;
+            background: #161b22;
+            border-right: 1px solid #30363d;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        #sidebar-header {
+            padding: 1.25rem;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        #sidebar-header h1 {
+            font-size: 1.1rem;
+            color: #58a6ff;
+            margin-bottom: 0.5rem;
+        }
+        
+        #sidebar-header p {
+            font-size: 0.8rem;
+            color: #8b949e;
+            margin-bottom: 0.75rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.6rem;
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 6px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+        
+        .nav-link:hover {
+            background: rgba(88, 166, 255, 0.2);
+        }
+        
+        /* Search */
+        #search-box {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        #search-input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            font-size: 0.85rem;
+        }
+        
+        #search-input:focus {
+            outline: none;
+            border-color: #58a6ff;
+        }
+        
+        /* Sections list */
+        #sections-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem;
+        }
+        
+        .section-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 2px;
+        }
+        
+        .section-item:hover {
+            background: rgba(88, 166, 255, 0.1);
+        }
+        
+        .section-item.active {
+            background: #21262d;
+            border-left: 3px solid #58a6ff;
+            margin-left: -3px;
+        }
+        
+        .section-num {
+            width: 28px;
+            height: 28px;
+            background: rgba(88, 166, 255, 0.15);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #58a6ff;
+            flex-shrink: 0;
+        }
+        
+        .section-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .section-title {
+            font-size: 0.8rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .section-count {
+            font-size: 0.7rem;
+            color: #8b949e;
+        }
+        
+        /* Graph Container */
+        #graph-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #graph-svg {
+            width: 100%;
+            height: 100%;
+            background: #0d1117;
+        }
+        
+        /* Controls */
+        #controls {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .control-btn {
+            padding: 0.5rem 1rem;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        
+        .control-btn:hover {
+            background: #30363d;
+            border-color: #58a6ff;
+        }
+        
+        .control-btn.active {
+            background: #58a6ff;
+            color: white;
+            border-color: #58a6ff;
+        }
+        
+        /* Node tooltip */
+        .node-tooltip {
+            position: absolute;
+            background: #1c2128;
+            border: 1px solid #444c56;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            max-width: 350px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 100;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        
+        .node-tooltip.visible {
+            opacity: 1;
+        }
+        
+        .tooltip-title {
+            font-weight: 600;
+            color: #58a6ff;
+            margin-bottom: 0.25rem;
+        }
+        
+        .tooltip-type {
+            font-size: 0.7rem;
+            color: #8b949e;
+            text-transform: uppercase;
+        }
+        
+        .tooltip-url {
+            font-size: 0.7rem;
+            color: #7ee787;
+            margin-top: 0.5rem;
+            word-break: break-all;
+        }
+        
+        /* Stats */
+        #stats {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            background: rgba(22, 27, 34, 0.9);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.75rem;
+            color: #8b949e;
+        }
+        
+        #stats span {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+        
+        /* Section Title Overlay */
+        #section-title {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(22, 27, 34, 0.95);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            max-width: 400px;
+        }
+        
+        #section-title h2 {
+            font-size: 1.1rem;
+            color: #58a6ff;
+            margin-bottom: 0.25rem;
+        }
+        
+        #section-title p {
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        
+        /* Loading */
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #8b949e;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #30363d;
+            border-top-color: #58a6ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #161b22; }
+        ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <div id="sidebar-header">
+                <h1>📊 AI Landscape Sections</h1>
+                <p><span id="total-sections">47</span> sections • Select to explore</p>
+                <div class="nav-links">
+                    <a href="../index.html" class="nav-link">🏠 Hub</a>
+                    <a href="landscape.html" class="nav-link">🌐 Full</a>
+                    <a href="learning.html" class="nav-link">🎓 Learn</a>
+                    <a href="tools.html" class="nav-link">🧰 Tools</a>
+                </div>
+            </div>
+            <div id="search-box">
+                <input type="text" id="search-input" placeholder="Search sections...">
+            </div>
+            <div id="sections-list"></div>
+        </div>
+        <div id="graph-container">
+            <svg id="graph-svg"></svg>
+            <div id="section-title">
+                <h2 id="current-title">Select a Section</h2>
+                <p id="current-desc">Choose from the sidebar to explore</p>
+            </div>
+            <div id="controls">
+                <button class="control-btn active" data-layout="force">Force</button>
+                <button class="control-btn" data-layout="radial">Radial</button>
+                <button class="control-btn" id="reset-zoom">Reset</button>
+            </div>
+            <div class="node-tooltip" id="tooltip"></div>
+            <div id="stats"></div>
+            <div id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading section...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let sectionsIndex = null;
+        let currentSection = null;
+        let simulation = null;
+        let currentLayout = 'force';
+        let totalSections = 47;
+        let maxSectionId = 47;
+        
+        const colors = d3.schemeTableau10;
+        
+        // Get section ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let sectionId = parseInt(urlParams.get('section')) || 1;
+        
+        // Load sections index
+        async function init() {
+            try {
+                const response = await fetch('../data/sections/index.json');
+                sectionsIndex = await response.json();
+
+                totalSections = sectionsIndex.totalSections || (sectionsIndex.sections ? sectionsIndex.sections.length : 47);
+                maxSectionId = sectionsIndex.sections && sectionsIndex.sections.length
+                    ? Math.max(...sectionsIndex.sections.map(s => s.id))
+                    : 47;
+                const totalEl = document.getElementById('total-sections');
+                if (totalEl) totalEl.textContent = totalSections;
+
+                renderSectionsList();
+                loadSection(sectionId);
+                setupEventListeners();
+            } catch (error) {
+                console.error('Failed to load sections index:', error);
+            }
+        }
+        
+        // Render sidebar list
+        function renderSectionsList(filter = '') {
+            const container = document.getElementById('sections-list');
+            const filtered = sectionsIndex.sections.filter(s => 
+                s.title.toLowerCase().includes(filter.toLowerCase())
+            );
+            
+            container.innerHTML = filtered.map(section => `
+                <a href="?section=${section.id}" 
+                   class="section-item ${section.id === sectionId ? 'active' : ''}"
+                   onclick="event.preventDefault(); loadSection(${section.id})">
+                    <div class="section-num">${section.id}</div>
+                    <div class="section-text">
+                        <div class="section-title">${section.title}</div>
+                        <div class="section-count">${section.nodes} nodes</div>
+                    </div>
+                </a>
+            `).join('');
+        }
+        
+        // Load a section
+        async function loadSection(id) {
+            sectionId = id;
+            
+            // Update URL
+            window.history.pushState({}, '', `?section=${id}`);
+            
+            // Update active state
+            document.querySelectorAll('.section-item').forEach(item => {
+                item.classList.toggle('active', item.href.includes(`section=${id}`));
+            });
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            
+            try {
+                const filename = `section-${String(id).padStart(2, '0')}.json`;
+                const response = await fetch(`../data/sections/${filename}`);
+                currentSection = await response.json();
+                
+                // Update title
+                document.getElementById('current-title').textContent = currentSection.meta.title;
+                document.getElementById('current-desc').textContent = currentSection.meta.description || `${currentSection.meta.totalNodes} nodes`;
+                document.title = `${currentSection.meta.title} - AI Landscape`;
+                
+                // Hide loading
+                document.getElementById('loading').style.display = 'none';
+                
+                // Render graph
+                renderGraph();
+                updateStats();
+            } catch (error) {
+                console.error('Failed to load section:', error);
+                document.getElementById('loading').innerHTML = `<p style="color: #f85149;">Failed to load section ${id}</p>`;
+            }
+        }
+        
+        // Render graph
+        function renderGraph() {
+            const svg = d3.select('#graph-svg');
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            svg.selectAll('*').remove();
+            
+            const g = svg.append('g');
+            
+            // Create data
+            const nodes = currentSection.nodes.map(n => ({...n}));
+            const nodeMap = new Map(nodes.map(n => [n.id, n]));
+            const links = currentSection.edges
+                .filter(e => nodeMap.has(e.source) && nodeMap.has(e.target))
+                .map(e => ({source: e.source, target: e.target}));
+            
+            // Draw links
+            const link = g.append('g')
+                .selectAll('line')
+                .data(links)
+                .join('line')
+                .attr('stroke', '#30363d')
+                .attr('stroke-opacity', 0.4)
+                .attr('stroke-width', 1);
+            
+            // Draw nodes
+            const node = g.append('g')
+                .selectAll('circle')
+                .data(nodes)
+                .join('circle')
+                .attr('r', d => d.type === 'subgraph' ? 10 : 6)
+                .attr('fill', (d, i) => colors[i % colors.length])
+                .attr('stroke', '#0d1117')
+                .attr('stroke-width', 1.5)
+                .style('cursor', 'pointer')
+                .on('mouseover', showTooltip)
+                .on('mouseout', hideTooltip)
+                .on('click', (e, d) => {
+                    if (d.url) window.open(d.url, '_blank');
+                })
+                .call(d3.drag()
+                    .on('start', dragStart)
+                    .on('drag', dragging)
+                    .on('end', dragEnd));
+            
+            // Labels for larger graphs
+            const labels = g.append('g')
+                .selectAll('text')
+                .data(nodes.filter(n => n.type === 'subgraph'))
+                .join('text')
+                .attr('font-size', '10px')
+                .attr('fill', '#8b949e')
+                .attr('text-anchor', 'middle')
+                .attr('dy', 20)
+                .text(d => d.label.length > 20 ? d.label.slice(0, 20) + '...' : d.label);
+            
+            // Simulation
+            simulation = d3.forceSimulation(nodes)
+                .force('link', d3.forceLink(links).id(d => d.id).distance(60))
+                .force('charge', d3.forceManyBody().strength(-150))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(15))
+                .on('tick', () => {
+                    link
+                        .attr('x1', d => d.source.x)
+                        .attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x)
+                        .attr('y2', d => d.target.y);
+                    
+                    node
+                        .attr('cx', d => d.x)
+                        .attr('cy', d => d.y);
+                    
+                    labels
+                        .attr('x', d => d.x)
+                        .attr('y', d => d.y);
+                });
+            
+            // Zoom
+            const zoom = d3.zoom()
+                .scaleExtent([0.2, 4])
+                .on('zoom', e => g.attr('transform', e.transform));
+            
+            svg.call(zoom);
+            
+            // Reset zoom
+            document.getElementById('reset-zoom').onclick = () => {
+                svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+            };
+            
+            // Store refs
+            window.graphRefs = { nodes, links, simulation, width, height };
+        }
+        
+        // Tooltip
+        function showTooltip(event, d) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.innerHTML = `
+                <div class="tooltip-title">${d.label}</div>
+                <div class="tooltip-type">${d.type || 'node'}</div>
+                ${d.url ? `<div class="tooltip-url">${d.url}</div>` : ''}
+            `;
+            tooltip.style.left = (event.pageX + 15) + 'px';
+            tooltip.style.top = (event.pageY - 10) + 'px';
+            tooltip.classList.add('visible');
+        }
+        
+        function hideTooltip() {
+            document.getElementById('tooltip').classList.remove('visible');
+        }
+        
+        // Drag
+        function dragStart(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragging(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragEnd(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // Stats
+        function updateStats() {
+            document.getElementById('stats').innerHTML = `
+                Section <span>${currentSection.meta.id}</span> of ${totalSections} · 
+                <span>${currentSection.meta.totalNodes}</span> nodes · 
+                <span>${currentSection.meta.totalEdges}</span> edges
+            `;
+        }
+        
+        // Event listeners
+        function setupEventListeners() {
+            // Search
+            document.getElementById('search-input').addEventListener('input', e => {
+                renderSectionsList(e.target.value);
+            });
+            
+            // Layout buttons
+            document.querySelectorAll('[data-layout]').forEach(btn => {
+                btn.onclick = () => {
+                    document.querySelectorAll('[data-layout]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentLayout = btn.dataset.layout;
+                    applyLayout();
+                };
+            });
+            
+            // Keyboard nav
+            document.addEventListener('keydown', e => {
+                if (e.target.tagName === 'INPUT') return;
+                if (e.key === 'ArrowDown' && sectionId < maxSectionId) loadSection(sectionId + 1);
+                if (e.key === 'ArrowUp' && sectionId > 1) loadSection(sectionId - 1);
+            });
+        }
+        
+        // Apply layout
+        function applyLayout() {
+            const { nodes, simulation, width, height } = window.graphRefs;
+            
+            simulation.stop();
+            
+            if (currentLayout === 'force') {
+                simulation
+                    .force('center', d3.forceCenter(width / 2, height / 2))
+                    .alpha(1)
+                    .restart();
+            } else if (currentLayout === 'radial') {
+                const angleStep = (2 * Math.PI) / nodes.length;
+                const radius = Math.min(width, height) * 0.35;
+                
+                nodes.forEach((node, i) => {
+                    const angle = i * angleStep - Math.PI / 2;
+                    node.x = width / 2 + Math.cos(angle) * radius;
+                    node.y = height / 2 + Math.sin(angle) * radius;
+                });
+                
+                simulation.alpha(0.3).restart();
+            }
+        }
+        
+        // Init
+        init();
+        
+        // Resize
+        window.addEventListener('resize', () => {
+            if (currentSection) renderGraph();
+        });
+    </script>
+</body>
+</html>

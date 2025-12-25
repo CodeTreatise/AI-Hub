@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "id": 17,
+    "title": "RAG Evolution & Techniques",
+    "description": "HyDE, RAPTOR, Reranking",
+    "slug": "rag-evolution-techniques",
+    "totalNodes": 15,
+    "totalEdges": 14
+  },
+  "sections": [
+    {
+      "id": 17,
+      "title": "RAG Evolution & Techniques",
+      "slug": "17-rag-evolution--techniques",
+      "description": "HyDE, RAPTOR, Reranking",
+      "line": 969
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s17_b17_Basic",
+      "label": "BASIC RAG",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "Basic RAG",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Basic"
+    },
+    {
+      "id": "s17_b17_B1",
+      "label": "Naive RAG",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "LangChain RAG Tutorial",
+      "style": null,
+      "parent": "s17_b17_Basic",
+      "original_id": "B1"
+    },
+    {
+      "id": "s17_b17_B2",
+      "label": "Sentence Window",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Sentence Window Retrieval",
+      "style": null,
+      "parent": "s17_b17_Basic",
+      "original_id": "B2"
+    },
+    {
+      "id": "s17_b17_Advanced",
+      "label": "ADVANCED RAG",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/",
+      "tooltip": "Advanced RAG",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Advanced"
+    },
+    {
+      "id": "s17_b17_A1",
+      "label": "HyDE",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2212.10496",
+      "tooltip": "HyDE Paper",
+      "style": null,
+      "parent": "s17_b17_Advanced",
+      "original_id": "A1"
+    },
+    {
+      "id": "s17_b17_A2",
+      "label": "Multi-Query",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/query_transformations/query_transform_cookbook/",
+      "tooltip": "Multi-Query RAG",
+      "style": null,
+      "parent": "s17_b17_Advanced",
+      "original_id": "A2"
+    },
+    {
+      "id": "s17_b17_A3",
+      "label": "Parent-Child",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/retrievers/auto_merging_retriever/",
+      "tooltip": "Parent-Child Retrieval",
+      "style": null,
+      "parent": "s17_b17_Advanced",
+      "original_id": "A3"
+    },
+    {
+      "id": "s17_b17_Modular",
+      "label": "MODULAR RAG",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2407.21059",
+      "tooltip": "Modular RAG",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Modular"
+    },
+    {
+      "id": "s17_b17_M1",
+      "label": "Reranking",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Reranking Guide",
+      "style": null,
+      "parent": "s17_b17_Modular",
+      "original_id": "M1"
+    },
+    {
+      "id": "s17_b17_M2",
+      "label": "Fusion",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2402.03367",
+      "tooltip": "Fusion Retrieval",
+      "style": null,
+      "parent": "s17_b17_Modular",
+      "original_id": "M2"
+    },
+    {
+      "id": "s17_b17_M3",
+      "label": "Compression",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Contextual Compression",
+      "style": null,
+      "parent": "s17_b17_Modular",
+      "original_id": "M3"
+    },
+    {
+      "id": "s17_b17_Cutting",
+      "label": "CUTTING EDGE",
+      "type": "subgraph",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Cutting Edge RAG",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Cutting"
+    },
+    {
+      "id": "s17_b17_C1",
+      "label": "GraphRAG",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Microsoft GraphRAG",
+      "style": null,
+      "parent": "s17_b17_Cutting",
+      "original_id": "C1"
+    },
+    {
+      "id": "s17_b17_C2",
+      "label": "Agentic RAG",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://blog.langchain.dev/agentic-rag-with-langgraph/",
+      "tooltip": "Agentic RAG",
+      "style": null,
+      "parent": "s17_b17_Cutting",
+      "original_id": "C2"
+    },
+    {
+      "id": "s17_b17_C3",
+      "label": "RAPTOR",
+      "type": "node",
+      "section_id": 17,
+      "block_id": 17,
+      "url": "https://arxiv.org/abs/2401.18059",
+      "tooltip": "RAPTOR Paper",
+      "style": null,
+      "parent": "s17_b17_Cutting",
+      "original_id": "C3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s17_b17_Basic",
+      "target": "s17_b17_Advanced",
+      "type": "thick",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_Modular",
+      "type": "thick",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_Cutting",
+      "type": "thick",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Basic",
+      "target": "s17_b17_B1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Basic",
+      "target": "s17_b17_B2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_A1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_A2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Advanced",
+      "target": "s17_b17_A3",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_M1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_M2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Modular",
+      "target": "s17_b17_M3",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Cutting",
+      "target": "s17_b17_C1",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Cutting",
+      "target": "s17_b17_C2",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    },
+    {
+      "source": "s17_b17_Cutting",
+      "target": "s17_b17_C3",
+      "type": "contains",
+      "section_id": 17,
+      "block_id": 17
+    }
+  ]
+}

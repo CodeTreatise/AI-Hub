@@ -1,0 +1,2783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Landscape - Interactive Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            overflow: hidden;
+        }
+
+        #app {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            width: 320px;
+            background: #161b22;
+            border-right: 1px solid #30363d;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: width 0.3s ease;
+            position: relative;
+        }
+
+        #sidebar.collapsed {
+            width: 60px;
+            overflow: visible;
+        }
+
+        #sidebar.collapsed #sections-list {
+            overflow-y: auto;
+            overflow-x: visible;
+        }
+
+        #sidebar.collapsed #sidebar-header h1,
+        #sidebar.collapsed #sidebar-header p,
+        #sidebar.collapsed #search-box,
+        #sidebar.collapsed #node-details,
+        #sidebar.collapsed .section-text {
+            display: none !important;
+        }
+
+        #sidebar.collapsed #sidebar-header {
+            padding: 15px 10px;
+            text-align: center;
+        }
+
+        #sidebar.collapsed #sidebar-header::before {
+            content: '🧠';
+            font-size: 24px;
+        }
+
+        #sidebar.collapsed .section-item {
+            padding: 12px 0;
+            justify-content: center;
+            border-left-width: 0;
+            gap: 0;
+            position: relative;
+        }
+
+        #sidebar.collapsed .section-item.active {
+            background: #21262d;
+            border-left-width: 0;
+        }
+
+        #sidebar.collapsed .section-item .color-dot {
+            display: none;
+        }
+
+        #sidebar.collapsed .section-item .section-icon {
+            display: flex;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        #sidebar.collapsed .section-item:hover .section-icon {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.1);
+        }
+
+        #sidebar.collapsed .section-item.active .section-icon {
+            box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.5);
+        }
+
+        /* Section icon - hidden when expanded */
+        .section-icon {
+            display: none;
+        }
+
+        .sidebar-tooltip {
+            display: none;
+        }
+
+        /* Sidebar hover tooltip (fixed position, outside scroll) */
+        #sidebar-hover-tooltip {
+            position: fixed;
+            background: #1c2128;
+            border: 1px solid #444c56;
+            color: #c9d1d9;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.15s;
+            z-index: 9999;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            pointer-events: none;
+        }
+
+        #sidebar-hover-tooltip.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #sidebar-hover-tooltip::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-right-color: #444c56;
+            border-left: none;
+        }
+
+        #sidebar-hover-tooltip::after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 7px solid transparent;
+            border-right-color: #1c2128;
+            border-left: none;
+        }
+
+        #sidebar-hover-tooltip i {
+            margin-right: 8px;
+            opacity: 0.8;
+        }
+
+        #sidebar-hover-tooltip .tooltip-count {
+            color: #8b949e;
+            margin-left: 6px;
+        }
+
+        /* Sidebar toggle button */
+        #sidebar-toggle {
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 50%;
+            color: #8b949e;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            z-index: 200;
+            transition: all 0.2s;
+        }
+
+        #sidebar-toggle:hover {
+            background: #30363d;
+            color: #c9d1d9;
+            border-color: #58a6ff;
+        }
+
+        #sidebar.collapsed #sidebar-toggle {
+            right: -14px;
+        }
+
+        #sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        #sidebar-header h1 {
+            font-size: 1.4rem;
+            color: #58a6ff;
+            margin-bottom: 8px;
+        }
+
+        #sidebar-header p {
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+
+        .learning-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .learning-link:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        #sidebar.collapsed .learning-link {
+            display: none;
+        }
+
+        #search-box {
+            padding: 15px 20px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 10px 12px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            font-size: 0.9rem;
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: #58a6ff;
+        }
+
+        #sections-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 0;
+        }
+
+        .section-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-item:hover {
+            background: #21262d;
+        }
+
+        .section-item.active {
+            background: #21262d;
+            border-left-color: #58a6ff;
+        }
+
+        .section-item .color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .section-item .section-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .section-item .section-num {
+            font-size: 0.75rem;
+            color: #8b949e;
+            margin-bottom: 2px;
+        }
+
+        .section-item .section-title {
+            font-size: 0.9rem;
+            color: #c9d1d9;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .section-item .section-count {
+            font-size: 0.75rem;
+            color: #58a6ff;
+            margin-top: 2px;
+        }
+
+        /* Main Graph Area */
+        #graph-container {
+            flex: 1;
+            position: relative;
+        }
+
+        #graph-svg {
+            width: 100%;
+            height: 100%;
+            background: #0d1117;
+        }
+
+        /* Nodes */
+        .node {
+            cursor: pointer;
+        }
+
+        .node circle {
+            stroke-width: 2px;
+            transition: all 0.2s;
+        }
+
+        .node:hover circle {
+            stroke-width: 3px;
+            filter: brightness(1.2);
+        }
+
+        .node text {
+            font-size: 10px;
+            fill: #c9d1d9;
+            pointer-events: none;
+            transition: opacity 0.3s, font-size 0.3s;
+        }
+
+        .node .main-label {
+            font-size: 11px;
+            font-weight: 600;
+            fill: #ffffff;
+        }
+
+        .node .detail-label {
+            font-size: 10px;
+            fill: #8b949e;
+        }
+
+        /* Edges */
+        .edge {
+            fill: none;
+        }
+
+        .edge.thick {
+            stroke: #58a6ff;
+            stroke-width: 2.5px;
+            stroke-opacity: 0.7;
+        }
+
+        .edge.regular {
+            stroke: #30363d;
+            stroke-width: 1.5px;
+            stroke-opacity: 0.5;
+        }
+
+        .edge.contains {
+            stroke: #8b949e;
+            stroke-width: 1px;
+            stroke-opacity: 0.4;
+            stroke-dasharray: 4,2;
+        }
+
+        /* Tooltip */
+        #tooltip {
+            position: absolute;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            max-width: 300px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+
+        #tooltip.visible {
+            opacity: 1;
+        }
+
+        #tooltip .tooltip-label {
+            font-weight: 600;
+            color: #58a6ff;
+            margin-bottom: 4px;
+        }
+
+        #tooltip .tooltip-section {
+            font-size: 0.75rem;
+            color: #8b949e;
+        }
+
+        #tooltip .tooltip-url {
+            font-size: 0.75rem;
+            color: #3fb950;
+            margin-top: 6px;
+            word-break: break-all;
+        }
+
+        /* Cluster nodes */
+        .cluster-node circle {
+            transition: transform 0.2s, filter 0.2s;
+        }
+        
+        .cluster-node:hover circle {
+            filter: brightness(1.2);
+            transform: scale(1.1);
+        }
+
+        /* Controls - Compact Toolbar */
+        #controls {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            gap: 6px;
+            z-index: 100;
+            flex-wrap: wrap;
+            max-width: 400px;
+            justify-content: flex-end;
+        }
+
+        .control-group {
+            display: flex;
+            gap: 2px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .control-group .control-btn {
+            border: none;
+            border-radius: 0;
+            border-right: 1px solid #30363d;
+        }
+
+        .control-group .control-btn:last-child {
+            border-right: none;
+        }
+
+        .control-btn {
+            padding: 8px 12px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            background: #30363d;
+            border-color: #58a6ff;
+        }
+
+        .control-select {
+            padding: 10px 16px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .control-select:hover {
+            border-color: #58a6ff;
+        }
+
+        .control-select option {
+            background: #21262d;
+            color: #c9d1d9;
+        }
+
+        /* Stats bar */
+        #stats-bar {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 0.75rem;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Breadcrumb bar */
+        #breadcrumb-bar {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 100;
+            max-width: calc(100% - 440px);
+        }
+
+        #breadcrumb-bar.compact .breadcrumb-link,
+        #breadcrumb-bar.compact .breadcrumb-sep {
+            display: none;
+        }
+
+        #breadcrumb-bar.compact .breadcrumb-current {
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        #breadcrumb-bar .breadcrumb-link {
+            color: #58a6ff;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        #breadcrumb-bar .breadcrumb-link:hover {
+            color: #79c0ff;
+            text-decoration: underline;
+        }
+
+        #breadcrumb-bar .breadcrumb-sep {
+            color: #484f58;
+        }
+
+        #breadcrumb-bar .breadcrumb-current {
+            color: #c9d1d9;
+            font-weight: 500;
+        }
+
+        #breadcrumb-bar .back-btn {
+            background: #30363d;
+            border: none;
+            color: #c9d1d9;
+            width: 28px;
+            height: 28px;
+            padding: 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #breadcrumb-bar .back-btn:hover {
+            background: #484f58;
+            color: #58a6ff;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .stat-value {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+
+        /* Legend */
+        #legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px 16px;
+            font-size: 0.8rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .legend-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .legend-line {
+            width: 24px;
+            height: 3px;
+            border-radius: 2px;
+        }
+
+        .legend-line.thick {
+            background: #58a6ff;
+        }
+
+        .legend-line.regular {
+            background: #30363d;
+        }
+
+        .legend-line.contains {
+            background: #8b949e;
+            background: repeating-linear-gradient(
+                90deg,
+                #8b949e 0px,
+                #8b949e 4px,
+                transparent 4px,
+                transparent 6px
+            );
+        }
+
+        .legend-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Loading */
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #30363d;
+            border-top-color: #58a6ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(20px); }
+            15% { opacity: 1; transform: translateY(0); }
+            85% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #161b22;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #484f58;
+        }
+
+        /* Node selection highlighting */
+        .node.faded circle {
+            opacity: 0.15;
+        }
+        .node.faded text {
+            opacity: 0.15;
+        }
+        .node.highlighted circle {
+            stroke-width: 3px !important;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+        }
+        .node.selected circle {
+            stroke: #fff !important;
+            stroke-width: 4px !important;
+            filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.8));
+        }
+        .edge.faded {
+            opacity: 0.08;
+        }
+        .edge.highlighted {
+            opacity: 1;
+            stroke-width: 2.5px !important;
+        }
+
+        /* Node details panel */
+        #node-details {
+            display: none;
+            background: #21262d;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 15px;
+            border: 1px solid #30363d;
+        }
+        #node-details.visible {
+            display: block;
+        }
+        #node-details h3 {
+            margin: 0 0 12px 0;
+            color: #58a6ff;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #node-details .close-btn {
+            background: none;
+            border: none;
+            color: #8b949e;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+            line-height: 1;
+        }
+        #node-details .close-btn:hover {
+            color: #f85149;
+        }
+        #node-details .detail-row {
+            margin: 8px 0;
+            font-size: 13px;
+        }
+        #node-details .detail-label {
+            color: #8b949e;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+        #node-details .detail-value {
+            color: #c9d1d9;
+            word-break: break-word;
+        }
+        #node-details .detail-value a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        #node-details .detail-value a:hover {
+            text-decoration: underline;
+        }
+        #node-details .neighbors-list {
+            max-height: 120px;
+            overflow-y: auto;
+            margin-top: 5px;
+        }
+        #node-details .neighbor-item {
+            padding: 4px 8px;
+            margin: 3px 0;
+            background: #161b22;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        #node-details .neighbor-item:hover {
+            background: #30363d;
+        }
+        #node-details .neighbor-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Node Preview Card - Floating */
+        #node-preview-card {
+            position: fixed;
+            background: #1c2128;
+            border: 1px solid #444c56;
+            border-radius: 12px;
+            padding: 0;
+            width: 320px;
+            max-width: 90vw;
+            z-index: 9999;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            overflow: hidden;
+        }
+
+        #node-preview-card.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #node-preview-card .preview-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            background: #21262d;
+            border-bottom: 1px solid #30363d;
+        }
+
+        #node-preview-card .preview-favicon {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        #node-preview-card .preview-domain {
+            font-size: 12px;
+            color: #8b949e;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        #node-preview-card .preview-close {
+            background: none;
+            border: none;
+            color: #8b949e;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        #node-preview-card .preview-close:hover {
+            color: #f85149;
+        }
+
+        #node-preview-card .preview-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background: #161b22;
+            display: none;
+        }
+
+        #node-preview-card .preview-image.has-image {
+            display: block;
+        }
+
+        #node-preview-card .preview-body {
+            padding: 14px;
+        }
+
+        #node-preview-card .preview-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #c9d1d9;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        #node-preview-card .preview-description {
+            font-size: 13px;
+            color: #8b949e;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        #node-preview-card .preview-section {
+            font-size: 11px;
+            color: #58a6ff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #node-preview-card .preview-section .section-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        #node-preview-card .preview-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        #node-preview-card .preview-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        #node-preview-card .preview-btn-primary {
+            background: #238636;
+            border: 1px solid #238636;
+            color: #fff;
+        }
+
+        #node-preview-card .preview-btn-primary:hover {
+            background: #2ea043;
+        }
+
+        #node-preview-card .preview-btn-secondary {
+            background: transparent;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+
+        #node-preview-card .preview-btn-secondary:hover {
+            background: #30363d;
+        }
+
+        #node-preview-card .preview-no-url {
+            color: #8b949e;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        #node-preview-card .preview-connections {
+            font-size: 12px;
+            color: #8b949e;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar-hover-tooltip"></div>
+    <div id="node-preview-card">
+        <div class="preview-header">
+            <img class="preview-favicon" src="" alt="">
+            <span class="preview-domain"></span>
+            <button class="preview-close" onclick="hidePreviewCard()">&times;</button>
+        </div>
+        <img class="preview-image" src="" alt="">
+        <div class="preview-body">
+            <div class="preview-title"></div>
+            <div class="preview-description"></div>
+            <div class="preview-section">
+                <span class="section-dot"></span>
+                <span class="section-name"></span>
+            </div>
+            <div class="preview-actions"></div>
+            <div class="preview-connections"></div>
+        </div>
+    </div>
+    <div id="app">
+        <div id="sidebar">
+            <div id="sidebar-header">
+                <h1>🧠 AI Landscape</h1>
+                <p>Interactive Knowledge Graph</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                    <a href="../index.html" class="learning-link" style="font-size: 0.75rem;">🏠 Hub</a>
+                    <a href="learning.html" class="learning-link" style="font-size: 0.75rem;">🎓 Learn</a>
+                    <a href="sections.html" class="learning-link" style="font-size: 0.75rem;">📑 Sections</a>
+                    <a href="tools.html" class="learning-link" style="font-size: 0.75rem;">🧰 Tools</a>
+                </div>
+            </div>
+            <div id="search-box">
+                <input type="text" id="search-input" placeholder="Search nodes...">
+            </div>
+            <div id="node-details">
+                <h3>
+                    <span>Node Details</span>
+                    <button class="close-btn" onclick="clearSelection()">&times;</button>
+                </h3>
+                <div class="detail-row">
+                    <div class="detail-label">Name</div>
+                    <div class="detail-value" id="detail-name"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Section</div>
+                    <div class="detail-value" id="detail-section"></div>
+                </div>
+                <div class="detail-row" id="detail-url-row">
+                    <div class="detail-label">URL</div>
+                    <div class="detail-value" id="detail-url"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Connections</div>
+                    <div class="detail-value" id="detail-connections"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Neighbors</div>
+                    <div class="neighbors-list" id="detail-neighbors"></div>
+                </div>
+            </div>
+            <div id="sections-list"></div>
+            <button id="sidebar-toggle" onclick="toggleSidebar()" title="Toggle Sidebar">◀</button>
+        </div>
+        <div id="graph-container">
+            <div id="loading">
+                <div class="spinner"></div>
+                <p>Loading graph data...</p>
+            </div>
+            <svg id="graph-svg"></svg>
+            <div id="breadcrumb-bar" style="display: none;">
+                <button class="back-btn" onclick="filterSection(null)" title="Back to All Sections">←</button>
+                <span class="breadcrumb-current" id="breadcrumb-section">Section</span>
+            </div>
+            <div id="tooltip">
+                <div class="tooltip-label"></div>
+                <div class="tooltip-section"></div>
+                <div class="tooltip-url"></div>
+            </div>
+            <div id="controls">
+                <select id="layout-select" class="control-select" onchange="changeLayout(this.value)">
+                    <option value="force">🔮 Force</option>
+                    <option value="hierarchical">🌳 Tree</option>
+                    <option value="radial">🎯 Radial</option>
+                    <option value="cluster">📦 Cluster</option>
+                </select>
+                <div class="control-group">
+                    <button class="control-btn" onclick="zoomIn()" title="Zoom In">+</button>
+                    <button class="control-btn" onclick="zoomOut()" title="Zoom Out">−</button>
+                    <button class="control-btn" onclick="centerOnNodes()" title="Fit View">◎</button>
+                    <button class="control-btn" onclick="resetZoom()" title="Reset Zoom">⟲</button>
+                </div>
+                <div class="control-group">
+                    <button class="control-btn" onclick="shareUrl()" title="Share URL">📤</button>
+                    <button class="control-btn" onclick="showHelp()" title="Help">?</button>
+                </div>
+            </div>
+            <div id="stats-bar">
+                <div class="stat-item">
+                    <span>Nodes:</span>
+                    <span class="stat-value" id="stat-nodes">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Edges:</span>
+                    <span class="stat-value" id="stat-edges">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Section:</span>
+                    <span class="stat-value" id="stat-section">All</span>
+                </div>
+            </div>
+            <div id="legend">
+                <div class="legend-item">
+                    <div class="legend-line thick"></div>
+                    <span>Main Flow (==&gt;)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-line regular"></div>
+                    <span>Detail (--&gt;)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-line contains"></div>
+                    <span>Contains (subgraph)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let data = null;
+        let currentSection = null;
+        let currentLayout = 'force';
+        let simulation = null;
+        let svg, g, zoom;
+        let nodes = [], edges = [];
+        let nodeMap = null;  // Precomputed node ID -> node lookup
+        let selectedNode = null;  // Currently selected node for highlighting
+
+        // Color palette for sections
+        const colors = [
+            '#58a6ff', '#3fb950', '#f85149', '#a371f7', '#f0883e',
+            '#db61a2', '#79c0ff', '#7ee787', '#ff7b72', '#d2a8ff',
+            '#ffa657', '#ff9bce', '#56d4dd', '#e3b341', '#8b949e'
+        ];
+
+        // URL metadata cache
+        let urlMetadata = {};
+
+        // Load data
+        async function loadData() {
+            try {
+                // Load graph data
+                const response = await fetch('../data/landscape.json');
+                data = await response.json();
+                
+                // Precompute node lookup map for O(1) access
+                nodeMap = new Map(data.nodes.map(n => [n.id, n]));
+                
+                // Load URL metadata (non-blocking)
+                loadUrlMetadata();
+                
+                console.log('Data loaded:', data.sections?.length, 'sections,', data.nodes?.length, 'nodes');
+                document.getElementById('loading').style.display = 'none';
+                populateSidebar();
+                initGraph();
+                // Auto-center after initial render
+                setTimeout(centerOnNodes, 1500);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loading').innerHTML = `
+                    <p style="color: #f85149;">Error loading data</p>
+                    <p style="font-size: 0.8rem; margin-top: 8px;">${error.message}</p>
+                `;
+            }
+        }
+
+        // Load URL metadata cache
+        async function loadUrlMetadata() {
+            try {
+                const response = await fetch('../data/metadata.json');
+                const metadata = await response.json();
+                // Index by URL for O(1) lookup
+                metadata.urls.forEach(m => {
+                    urlMetadata[m.url] = m;
+                });
+                console.log('URL metadata loaded:', Object.keys(urlMetadata).length, 'entries');
+            } catch (error) {
+                console.log('URL metadata not available:', error.message);
+            }
+        }
+
+        // Icon mapping for AI/ML topics
+        function getSectionIcon(title) {
+            const t = title.toLowerCase();
+            // AI & ML Core
+            if (t.includes('neural') || t.includes('deep learning')) return 'fa-brain';
+            if (t.includes('machine learning') || t.includes('ml ')) return 'fa-robot';
+            if (t.includes('artificial intelligence') || t.includes(' ai ')) return 'fa-microchip';
+            // Language & NLP
+            if (t.includes('nlp') || t.includes('language') || t.includes('text')) return 'fa-language';
+            if (t.includes('llm') || t.includes('gpt') || t.includes('transformer')) return 'fa-comment-dots';
+            if (t.includes('chat') || t.includes('conversation')) return 'fa-comments';
+            // Vision & Media
+            if (t.includes('vision') || t.includes('image') || t.includes('visual')) return 'fa-eye';
+            if (t.includes('video') || t.includes('multimedia')) return 'fa-video';
+            if (t.includes('audio') || t.includes('speech') || t.includes('voice')) return 'fa-microphone';
+            // Data & Analytics
+            if (t.includes('data') || t.includes('dataset')) return 'fa-database';
+            if (t.includes('analytics') || t.includes('insight')) return 'fa-chart-line';
+            if (t.includes('knowledge') || t.includes('graph')) return 'fa-project-diagram';
+            // Training & Models
+            if (t.includes('training') || t.includes('learn')) return 'fa-graduation-cap';
+            if (t.includes('model') || t.includes('architecture')) return 'fa-cubes';
+            if (t.includes('fine-tun') || t.includes('finetun')) return 'fa-sliders';
+            // Infrastructure
+            if (t.includes('cloud') || t.includes('deploy')) return 'fa-cloud';
+            if (t.includes('server') || t.includes('infrastructure')) return 'fa-server';
+            if (t.includes('api') || t.includes('endpoint')) return 'fa-plug';
+            if (t.includes('gpu') || t.includes('hardware')) return 'fa-memory';
+            // Tools & Frameworks
+            if (t.includes('framework') || t.includes('library')) return 'fa-toolbox';
+            if (t.includes('python') || t.includes('code')) return 'fa-code';
+            if (t.includes('tool') || t.includes('utility')) return 'fa-wrench';
+            // Applications
+            if (t.includes('agent') || t.includes('autonom')) return 'fa-user-astronaut';
+            if (t.includes('generat') || t.includes('creat')) return 'fa-wand-magic-sparkles';
+            if (t.includes('search') || t.includes('retriev')) return 'fa-magnifying-glass';
+            if (t.includes('recommend')) return 'fa-thumbs-up';
+            if (t.includes('automat')) return 'fa-gears';
+            // Safety & Ethics
+            if (t.includes('ethic') || t.includes('bias') || t.includes('fair')) return 'fa-scale-balanced';
+            if (t.includes('safe') || t.includes('security')) return 'fa-shield-halved';
+            if (t.includes('privacy')) return 'fa-user-shield';
+            // Business & Research
+            if (t.includes('research') || t.includes('paper')) return 'fa-flask';
+            if (t.includes('company') || t.includes('enterprise')) return 'fa-building';
+            if (t.includes('startup') || t.includes('venture')) return 'fa-rocket';
+            if (t.includes('open source') || t.includes('community')) return 'fa-code-branch';
+            // Specific tech
+            if (t.includes('embed') || t.includes('vector')) return 'fa-arrows-to-dot';
+            if (t.includes('prompt') || t.includes('instruct')) return 'fa-terminal';
+            if (t.includes('rag') || t.includes('augment')) return 'fa-layer-group';
+            if (t.includes('multimodal') || t.includes('multi-modal')) return 'fa-object-group';
+            // Default
+            return 'fa-circle-nodes';
+        }
+
+        // Populate sidebar with sections
+        function populateSidebar() {
+            console.log('Populating sidebar with', data.sections?.length, 'sections');
+            const container = document.getElementById('sections-list');
+            
+            // Add "All Sections" option
+            const allItem = document.createElement('div');
+            allItem.className = 'section-item active';
+            allItem.dataset.tooltipIcon = 'fa-layer-group';
+            allItem.dataset.tooltipText = 'All Sections';
+            allItem.dataset.tooltipCount = data.nodes.length;
+            allItem.innerHTML = `
+                <span class="color-dot" style="background: linear-gradient(135deg, #58a6ff, #3fb950, #f85149, #a371f7);"></span>
+                <span class="section-icon" style="background: linear-gradient(135deg, #58a6ff, #3fb950); color: #fff;">
+                    <i class="fa-solid fa-layer-group"></i>
+                </span>
+                <div class="section-text">
+                    <div class="section-num">Overview</div>
+                    <div class="section-title">All Sections</div>
+                    <div class="section-count">${data.nodes.length} nodes</div>
+                </div>
+            `;
+            allItem.onclick = () => filterSection(null);
+            setupSectionTooltip(allItem);
+            container.appendChild(allItem);
+
+            // Add each section
+            data.sections.forEach(section => {
+                const nodeCount = data.nodes.filter(n => n.section_id === section.id).length;
+                const sectionColor = colors[section.id % colors.length];
+                const icon = getSectionIcon(section.title);
+                const item = document.createElement('div');
+                item.className = 'section-item';
+                item.dataset.sectionId = section.id;
+                item.dataset.tooltipIcon = icon;
+                item.dataset.tooltipText = section.title;
+                item.dataset.tooltipCount = nodeCount;
+                item.innerHTML = `
+                    <span class="color-dot" style="background: ${sectionColor};"></span>
+                    <span class="section-icon" style="background: ${sectionColor}; color: #fff;">
+                        <i class="fa-solid ${icon}"></i>
+                    </span>
+                    <div class="section-text">
+                        <div class="section-num">Section ${section.id}</div>
+                        <div class="section-title">${section.title}</div>
+                        <div class="section-count">${nodeCount} nodes</div>
+                    </div>
+                `;
+                item.onclick = () => filterSection(section.id);
+                setupSectionTooltip(item);
+                container.appendChild(item);
+            });
+        }
+
+        // Setup tooltip for section items (works when collapsed)
+        function setupSectionTooltip(element) {
+            const tooltip = document.getElementById('sidebar-hover-tooltip');
+            
+            element.addEventListener('mouseenter', (e) => {
+                const sidebar = document.getElementById('sidebar');
+                if (!sidebar.classList.contains('collapsed')) return;
+                
+                const icon = element.dataset.tooltipIcon;
+                const text = element.dataset.tooltipText;
+                const count = element.dataset.tooltipCount;
+                
+                tooltip.innerHTML = `<i class="fa-solid ${icon}"></i>${text}<span class="tooltip-count">(${count})</span>`;
+                
+                const rect = element.getBoundingClientRect();
+                tooltip.style.left = (rect.right + 12) + 'px';
+                tooltip.style.top = (rect.top + rect.height/2) + 'px';
+                tooltip.style.transform = 'translateY(-50%)';
+                tooltip.classList.add('visible');
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                tooltip.classList.remove('visible');
+            });
+        }
+
+        // Initialize the graph
+        function initGraph() {
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            svg = d3.select('#graph-svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            // Setup zoom
+            zoom = d3.zoom()
+                .scaleExtent([0.05, 10])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                    // Update label visibility like Google Maps
+                    updateLabelVisibility(event.transform.k);
+                    // Keep nodes same visual size regardless of zoom
+                    updateNodeScaling(event.transform.k);
+                });
+
+            svg.call(zoom);
+            
+            // Clear selection when clicking on empty space
+            svg.on('click', (event) => {
+                if (event.target === svg.node()) {
+                    clearSelection();
+                }
+            });
+
+            // Create container group
+            g = svg.append('g');
+
+            // Arrow markers
+            svg.append('defs').selectAll('marker')
+                .data(['thick', 'regular', 'contains'])
+                .join('marker')
+                .attr('id', d => `arrow-${d}`)
+                .attr('viewBox', '0 -5 10 10')
+                .attr('refX', 20)
+                .attr('refY', 0)
+                .attr('markerWidth', 6)
+                .attr('markerHeight', 6)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('fill', d => d === 'thick' ? '#58a6ff' : d === 'contains' ? '#8b949e' : '#30363d')
+                .attr('d', 'M0,-5L10,0L0,5');
+
+            // Initial render with all data
+            updateGraph();
+        }
+
+        // Filter by section
+        function filterSection(sectionId) {
+            currentSection = sectionId;
+            
+            // Clear any node selection
+            clearSelection();
+
+            // Update sidebar
+            document.querySelectorAll('.section-item').forEach(item => {
+                item.classList.remove('active');
+                if (sectionId === null && !item.dataset.sectionId) {
+                    item.classList.add('active');
+                } else if (item.dataset.sectionId == sectionId) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Update stats
+            document.getElementById('stat-section').textContent = 
+                sectionId === null ? 'All' : `#${sectionId}`;
+
+            // Update breadcrumb
+            const breadcrumb = document.getElementById('breadcrumb-bar');
+            if (sectionId === null) {
+                breadcrumb.style.display = 'none';
+            } else {
+                const section = data.sections.find(s => s.id === sectionId);
+                const sectionColor = colors[sectionId % colors.length];
+                document.getElementById('breadcrumb-section').innerHTML = 
+                    `<span style="color: ${sectionColor};">●</span> ${section ? section.title : 'Section ' + sectionId}`;
+                breadcrumb.style.display = 'flex';
+            }
+
+            updateGraph();
+            
+            // Auto-center on the filtered nodes after simulation settles
+            setTimeout(centerOnNodes, 500);
+            
+            // Update URL for sharing
+            if (typeof updateUrl === 'function') updateUrl();
+        }
+
+        // Render clustered overview for "All Sections" - with physics simulation
+        function renderClusteredView() {
+            g.selectAll('*').remove();
+            if (simulation) simulation.stop();
+            
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth || 800;
+            const height = container.clientHeight || 600;
+            
+            // Create cluster data from sections
+            const clusters = data.sections.map(section => {
+                const sectionNodes = data.nodes.filter(n => n.section_id === section.id);
+                return {
+                    id: `cluster-${section.id}`,
+                    sectionId: section.id,
+                    label: section.title,
+                    nodeCount: sectionNodes.length,
+                    radius: Math.max(25, Math.sqrt(sectionNodes.length) * 5),
+                    x: width / 2 + (Math.random() - 0.5) * width * 0.6,
+                    y: height / 2 + (Math.random() - 0.5) * height * 0.6
+                };
+            });
+            
+            // Count cross-section edges for cluster connections (using precomputed nodeMap)
+            const clusterEdges = [];
+            const edgeCounts = new Map();
+            
+            data.edges.forEach(e => {
+                const srcId = typeof e.source === 'object' ? e.source.id : e.source;
+                const tgtId = typeof e.target === 'object' ? e.target.id : e.target;
+                const srcNode = nodeMap.get(srcId);
+                const tgtNode = nodeMap.get(tgtId);
+                if (srcNode && tgtNode && srcNode.section_id !== tgtNode.section_id) {
+                    const key = `${Math.min(srcNode.section_id, tgtNode.section_id)}-${Math.max(srcNode.section_id, tgtNode.section_id)}`;
+                    edgeCounts.set(key, (edgeCounts.get(key) || 0) + 1);
+                }
+            });
+            
+            edgeCounts.forEach((count, key) => {
+                const [src, tgt] = key.split('-').map(Number);
+                if (count >= 1) {
+                    clusterEdges.push({
+                        source: `cluster-${src}`,
+                        target: `cluster-${tgt}`,
+                        weight: count
+                    });
+                }
+            });
+            
+            // Update stats
+            document.getElementById('stat-nodes').textContent = `${clusters.length} sections (${data.nodes.length} nodes)`;
+            document.getElementById('stat-edges').textContent = clusterEdges.length;
+            
+            // Create edges first (below nodes)
+            const edgeElements = g.append('g')
+                .selectAll('line')
+                .data(clusterEdges)
+                .join('line')
+                .attr('class', 'edge regular')
+                .attr('stroke-opacity', d => Math.min(0.8, 0.2 + d.weight * 0.05))
+                .attr('stroke-width', d => Math.min(4, 1 + d.weight * 0.1));
+            
+            // Create cluster nodes
+            const clusterElements = g.append('g')
+                .selectAll('g')
+                .data(clusters)
+                .join('g')
+                .attr('class', 'cluster-node')
+                .style('cursor', 'pointer');
+            
+            // Cluster circles - size based on node count
+            clusterElements.append('circle')
+                .attr('r', d => d.radius)
+                .attr('fill', d => colors[d.sectionId % colors.length])
+                .attr('stroke', d => d3.color(colors[d.sectionId % colors.length]).darker(0.5))
+                .attr('stroke-width', 3);
+            
+            // Node count badge
+            clusterElements.append('text')
+                .attr('dy', 5)
+                .attr('text-anchor', 'middle')
+                .attr('fill', 'white')
+                .attr('font-size', '12px')
+                .attr('font-weight', 'bold')
+                .text(d => d.nodeCount);
+            
+            // Section title
+            clusterElements.append('text')
+                .attr('class', 'cluster-label')
+                .attr('dy', d => d.radius + 15)
+                .attr('text-anchor', 'middle')
+                .attr('fill', '#c9d1d9')
+                .attr('font-size', '11px')
+                .text(d => d.label.length > 20 ? d.label.substring(0, 18) + '...' : d.label);
+            
+            // Click to drill into section
+            clusterElements.on('click', (event, d) => {
+                if (!event.defaultPrevented) {
+                    filterSection(d.sectionId);
+                }
+            });
+            
+            // Tooltip
+            clusterElements
+                .on('mouseover', (event, d) => {
+                    const tooltip = document.getElementById('tooltip');
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = (event.pageX + 10) + 'px';
+                    tooltip.style.top = (event.pageY - 10) + 'px';
+                    tooltip.querySelector('.tooltip-label').textContent = d.label;
+                    tooltip.querySelector('.tooltip-section').textContent = `Section ${d.sectionId} • ${d.nodeCount} nodes`;
+                    tooltip.querySelector('.tooltip-url').textContent = 'Click to explore';
+                })
+                .on('mouseout', () => {
+                    document.getElementById('tooltip').style.display = 'none';
+                });
+            
+            // Drag behavior
+            clusterElements.call(d3.drag()
+                .on('start', (event, d) => {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    d.fx = d.x;
+                    d.fy = d.y;
+                })
+                .on('drag', (event, d) => {
+                    d.fx = event.x;
+                    d.fy = event.y;
+                })
+                .on('end', (event, d) => {
+                    if (!event.active) simulation.alphaTarget(0);
+                    d.fx = null;
+                    d.fy = null;
+                }));
+            
+            // Create force simulation for clusters
+            simulation = d3.forceSimulation(clusters)
+                .force('link', d3.forceLink(clusterEdges)
+                    .id(d => d.id)
+                    .distance(120)
+                    .strength(0.5))
+                .force('charge', d3.forceManyBody()
+                    .strength(-400)
+                    .distanceMax(400))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide()
+                    .radius(d => d.radius + 20)
+                    .strength(0.8))
+                .force('x', d3.forceX(width / 2).strength(0.05))
+                .force('y', d3.forceY(height / 2).strength(0.05))
+                .on('tick', () => {
+                    clusterElements.attr('transform', d => `translate(${d.x},${d.y})`);
+                    
+                    edgeElements
+                        .attr('x1', d => d.source.x)
+                        .attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x)
+                        .attr('y2', d => d.target.y);
+                });
+            
+            // Store for centering
+            nodes = clusters;
+            edges = clusterEdges;
+            
+            simulation.on('end', () => {
+                centerOnNodes();
+            });
+        }
+
+        // Center view on current nodes
+        function centerOnNodes() {
+            if (nodes.length === 0) return;
+            
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            // Calculate bounding box of all nodes
+            let minX = Infinity, maxX = -Infinity;
+            let minY = Infinity, maxY = -Infinity;
+            
+            nodes.forEach(n => {
+                if (n.x !== undefined && n.y !== undefined) {
+                    minX = Math.min(minX, n.x);
+                    maxX = Math.max(maxX, n.x);
+                    minY = Math.min(minY, n.y);
+                    maxY = Math.max(maxY, n.y);
+                }
+            });
+            
+            if (minX === Infinity) return;
+            
+            // Add padding
+            const padding = 100;
+            minX -= padding;
+            maxX += padding;
+            minY -= padding;
+            maxY += padding;
+            
+            // Calculate scale to fit
+            const boxWidth = maxX - minX;
+            const boxHeight = maxY - minY;
+            
+            // Adaptive max zoom based on node count
+            // Fewer nodes = zoom in more to show detail
+            const nodeCount = nodes.length;
+            let maxZoom;
+            if (nodeCount <= 5) maxZoom = 2.0;
+            else if (nodeCount <= 15) maxZoom = 1.5;
+            else if (nodeCount <= 30) maxZoom = 1.2;
+            else maxZoom = 1.0;
+            
+            const scale = Math.min(
+                width / boxWidth,
+                height / boxHeight,
+                maxZoom
+            ) * 0.85;
+            
+            // Calculate center
+            const centerX = (minX + maxX) / 2;
+            const centerY = (minY + maxY) / 2;
+            
+            // Apply transform
+            const translateX = width / 2 - centerX * scale;
+            const translateY = height / 2 - centerY * scale;
+            
+            svg.transition()
+                .duration(750)
+                .call(zoom.transform, d3.zoomIdentity
+                    .translate(translateX, translateY)
+                    .scale(scale));
+        }
+
+        // Update graph with current filter
+        function updateGraph() {
+            // For "All Sections" with many nodes, use clustered view
+            const useClusteredView = currentSection === null && data.nodes.length > 100;
+            
+            if (useClusteredView) {
+                // Create section-level clusters instead of individual nodes
+                renderClusteredView();
+                return;
+            }
+            
+            // Regular view for individual sections
+            if (currentSection === null) {
+                nodes = data.nodes.map(n => ({...n, x: undefined, y: undefined}));
+                edges = data.edges.map(e => ({...e}));
+            } else {
+                nodes = data.nodes.filter(n => n.section_id === currentSection).map(n => ({...n, x: undefined, y: undefined}));
+                const nodeIds = new Set(nodes.map(n => n.id));
+                edges = data.edges.filter(e => {
+                    const srcId = typeof e.source === 'object' ? e.source.id : e.source;
+                    const tgtId = typeof e.target === 'object' ? e.target.id : e.target;
+                    return nodeIds.has(srcId) && nodeIds.has(tgtId);
+                }).map(e => ({...e}));
+            }
+
+            // Update stats
+            document.getElementById('stat-nodes').textContent = nodes.length;
+            document.getElementById('stat-edges').textContent = edges.length;
+
+            // Clear previous
+            g.selectAll('*').remove();
+
+            if (nodes.length === 0) return;
+
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth || 800;
+            const height = container.clientHeight || 600;
+
+            // Find main nodes (sources of thick edges) for label priority
+            const thickSources = new Set(edges.filter(e => e.type === 'thick').map(e => 
+                typeof e.source === 'object' ? e.source.id : e.source
+            ));
+            nodes.forEach(n => {
+                n.isMain = thickSources.has(n.id) || n.type === 'subgraph';
+            });
+
+            // Build node map for edge resolution
+            const nodeMap = new Map(nodes.map(n => [n.id, n]));
+            
+            // Resolve edge source/target to node objects
+            edges.forEach(e => {
+                if (typeof e.source === 'string') {
+                    e.source = nodeMap.get(e.source) || e.source;
+                }
+                if (typeof e.target === 'string') {
+                    e.target = nodeMap.get(e.target) || e.target;
+                }
+            });
+
+            // Create edge elements
+            const edgeElements = g.append('g')
+                .selectAll('line')
+                .data(edges)
+                .join('line')
+                .attr('class', d => `edge ${d.type}`)
+                .attr('marker-end', d => `url(#arrow-${d.type})`);
+
+            // Create node elements
+            const nodeElements = g.append('g')
+                .selectAll('g')
+                .data(nodes)
+                .join('g')
+                .attr('class', 'node')
+                .call(d3.drag()
+                    .on('start', dragStarted)
+                    .on('drag', dragged)
+                    .on('end', dragEnded));
+
+            // Node circles - size based on importance
+            nodeElements.append('circle')
+                .attr('r', d => d.isMain ? 14 : (d.type === 'subgraph' ? 12 : 8))
+                .attr('fill', d => colors[d.section_id % colors.length])
+                .attr('stroke', d => d3.color(colors[d.section_id % colors.length]).darker(0.5));
+
+            // Node labels
+            nodeElements.append('text')
+                .attr('dx', d => d.isMain ? 18 : 12)
+                .attr('dy', 4)
+                .attr('class', d => d.isMain ? 'main-label' : 'detail-label')
+                .text(d => {
+                    const label = d.label.replace(/<[^>]+>/g, '').substring(0, 25);
+                    return label.length < d.label.replace(/<[^>]+>/g, '').length ? label + '...' : label;
+                });
+
+            // Node interactions
+            nodeElements
+                .on('mouseover', showTooltip)
+                .on('mouseout', hideTooltip)
+                .on('click', selectNode)
+                .on('dblclick', openUrl);
+
+            // Apply the selected layout
+            applyLayout(nodeElements, edgeElements, width, height);
+
+            // Update label visibility and scaling on zoom
+            const currentZoom = d3.zoomTransform(svg.node()).k;
+            updateLabelVisibility(currentZoom);
+            updateNodeScaling(currentZoom);
+        }
+
+        // Show/hide labels based on zoom level (like Google Maps)
+        function updateLabelVisibility(zoomLevel) {
+            // Main labels always visible, detail labels only when zoomed in
+            g.selectAll('.detail-label')
+                .style('opacity', zoomLevel >= 0.6 ? 1 : 0);
+            
+            g.selectAll('.main-label')
+                .style('opacity', 1)  // Always visible
+                .style('font-weight', zoomLevel < 0.6 ? 'bold' : 'normal')
+                .style('font-size', zoomLevel < 0.6 ? '12px' : '10px');
+        }
+
+        // Keep nodes same visual size regardless of zoom level
+        function updateNodeScaling(zoomLevel) {
+            // Counter-scale nodes so they stay visually constant
+            const scale = 1 / zoomLevel;
+            
+            // Limit the counter-scale to reasonable bounds
+            const clampedScale = Math.max(0.3, Math.min(3, scale));
+            
+            // Scale circles inversely to zoom
+            g.selectAll('.node circle')
+                .attr('r', function(d) {
+                    const baseRadius = d.isMain ? 14 : (d.type === 'subgraph' ? 12 : 8);
+                    return baseRadius * clampedScale;
+                });
+            
+            // Scale text inversely to zoom
+            g.selectAll('.node text')
+                .style('font-size', function(d) {
+                    const baseSize = d.isMain ? 11 : 10;
+                    return (baseSize * clampedScale) + 'px';
+                })
+                .attr('dx', function(d) {
+                    const baseDx = d.isMain ? 18 : 12;
+                    return baseDx * clampedScale;
+                });
+            
+            // Also scale edge stroke widths
+            g.selectAll('.edge.thick')
+                .style('stroke-width', 2.5 * clampedScale + 'px');
+            g.selectAll('.edge.regular')
+                .style('stroke-width', 1.5 * clampedScale + 'px');
+            g.selectAll('.edge.contains')
+                .style('stroke-width', 1 * clampedScale + 'px');
+        }
+
+        // Drag handlers
+        function dragStarted(event, d) {
+            if (currentLayout === 'force' && simulation) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+            }
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+            d.x = event.x;
+            d.y = event.y;
+            
+            // For non-force layouts, update positions immediately
+            if (currentLayout !== 'force') {
+                d3.select(event.sourceEvent.target.parentNode)
+                    .attr('transform', `translate(${d.x},${d.y})`);
+                
+                // Update connected edges - handle both object and string references
+                g.selectAll('.edge')
+                    .attr('x1', e => typeof e.source === 'object' ? e.source.x : 0)
+                    .attr('y1', e => typeof e.source === 'object' ? e.source.y : 0)
+                    .attr('x2', e => typeof e.target === 'object' ? e.target.x : 0)
+                    .attr('y2', e => typeof e.target === 'object' ? e.target.y : 0);
+            }
+        }
+
+        function dragEnded(event, d) {
+            if (currentLayout === 'force' && simulation) {
+                if (!event.active) simulation.alphaTarget(0);
+            }
+            // Keep the node where it was dropped (don't reset fx/fy for non-force)
+            if (currentLayout === 'force') {
+                d.fx = null;
+                d.fy = null;
+            }
+        }
+
+        // Tooltip
+        function showTooltip(event, d) {
+            const tooltip = document.getElementById('tooltip');
+            const section = data.sections.find(s => s.id === d.section_id);
+            
+            tooltip.querySelector('.tooltip-label').textContent = 
+                d.label.replace(/<[^>]+>/g, '');
+            tooltip.querySelector('.tooltip-section').textContent = 
+                section ? `Section ${section.id}: ${section.title}` : '';
+            tooltip.querySelector('.tooltip-url').textContent = 
+                d.url ? `🔗 ${d.url}` : '';
+
+            tooltip.style.left = (event.pageX + 15) + 'px';
+            tooltip.style.top = (event.pageY + 15) + 'px';
+            tooltip.classList.add('visible');
+        }
+
+        function hideTooltip() {
+            document.getElementById('tooltip').classList.remove('visible');
+        }
+
+        // Find 1-hop neighbors of a node
+        function getNeighbors(nodeId) {
+            const neighbors = new Set();
+            const neighborEdges = [];
+            
+            edges.forEach(edge => {
+                const sourceId = typeof edge.source === 'object' ? edge.source.id : edge.source;
+                const targetId = typeof edge.target === 'object' ? edge.target.id : edge.target;
+                
+                if (sourceId === nodeId) {
+                    neighbors.add(targetId);
+                    neighborEdges.push(edge);
+                } else if (targetId === nodeId) {
+                    neighbors.add(sourceId);
+                    neighborEdges.push(edge);
+                }
+            });
+            
+            return { neighbors: Array.from(neighbors), edges: neighborEdges };
+        }
+
+        // Select a node and highlight its neighbors
+        function selectNode(event, d) {
+            event.stopPropagation();
+            
+            // If clicking the same node, deselect
+            if (selectedNode && selectedNode.id === d.id) {
+                clearSelection();
+                return;
+            }
+            
+            selectedNode = d;
+            const { neighbors, edges: neighborEdges } = getNeighbors(d.id);
+            const neighborSet = new Set(neighbors);
+            
+            // Update node classes
+            g.selectAll('.node')
+                .classed('selected', n => n.id === d.id)
+                .classed('highlighted', n => neighborSet.has(n.id))
+                .classed('faded', n => n.id !== d.id && !neighborSet.has(n.id));
+            
+            // Update edge classes
+            g.selectAll('.edge')
+                .classed('highlighted', e => {
+                    const sourceId = typeof e.source === 'object' ? e.source.id : e.source;
+                    const targetId = typeof e.target === 'object' ? e.target.id : e.target;
+                    return sourceId === d.id || targetId === d.id;
+                })
+                .classed('faded', e => {
+                    const sourceId = typeof e.source === 'object' ? e.source.id : e.source;
+                    const targetId = typeof e.target === 'object' ? e.target.id : e.target;
+                    return sourceId !== d.id && targetId !== d.id;
+                });
+            
+            // Show preview card near the node
+            showPreviewCard(event, d, neighbors.length);
+            
+            // Show node details panel in sidebar
+            showNodeDetails(d, neighbors);
+        }
+
+        // Show floating preview card near the clicked node
+        function showPreviewCard(event, node, connectionCount) {
+            const card = document.getElementById('node-preview-card');
+            const section = data.sections.find(s => s.id === node.section_id);
+            const sectionColor = colors[node.section_id % colors.length];
+            const metadata = node.url ? urlMetadata[node.url] : null;
+            
+            // Header - favicon and domain
+            const favicon = card.querySelector('.preview-favicon');
+            const domain = card.querySelector('.preview-domain');
+            
+            if (metadata && metadata.favicon) {
+                favicon.src = metadata.favicon;
+                favicon.style.display = 'block';
+                favicon.onerror = () => { favicon.style.display = 'none'; };
+            } else if (node.url) {
+                // Try default favicon
+                const urlObj = new URL(node.url);
+                favicon.src = `https://www.google.com/s2/favicons?domain=${urlObj.hostname}&sz=32`;
+                favicon.style.display = 'block';
+            } else {
+                favicon.style.display = 'none';
+            }
+            
+            domain.textContent = metadata?.domain || (node.url ? new URL(node.url).hostname : 'No URL');
+            
+            // Image
+            const image = card.querySelector('.preview-image');
+            if (metadata && metadata.image) {
+                image.src = metadata.image;
+                image.classList.add('has-image');
+                image.onerror = () => { image.classList.remove('has-image'); };
+            } else {
+                image.classList.remove('has-image');
+            }
+            
+            // Title - prefer metadata, fallback to node label
+            const title = card.querySelector('.preview-title');
+            const nodeLabel = node.label.replace(/<[^>]+>/g, '');
+            title.textContent = (metadata && metadata.title) ? metadata.title : nodeLabel;
+            
+            // Description
+            const desc = card.querySelector('.preview-description');
+            if (metadata && metadata.description) {
+                desc.textContent = metadata.description;
+                desc.style.display = 'block';
+            } else {
+                desc.style.display = 'none';
+            }
+            
+            // Section
+            const sectionEl = card.querySelector('.preview-section');
+            const sectionDot = sectionEl.querySelector('.section-dot');
+            const sectionName = sectionEl.querySelector('.section-name');
+            sectionDot.style.background = sectionColor;
+            sectionName.textContent = section ? section.title : 'Unknown Section';
+            
+            // Actions
+            const actions = card.querySelector('.preview-actions');
+            if (node.url) {
+                actions.innerHTML = `
+                    <a href="${node.url}" target="_blank" class="preview-btn preview-btn-primary">
+                        <i class="fa-solid fa-external-link"></i> Open Link
+                    </a>
+                    <button class="preview-btn preview-btn-secondary" onclick="copyUrl('${node.url}')">
+                        <i class="fa-solid fa-copy"></i> Copy
+                    </button>
+                `;
+            } else {
+                actions.innerHTML = `<span class="preview-no-url">No URL available</span>`;
+            }
+            
+            // Connections
+            const connections = card.querySelector('.preview-connections');
+            connections.innerHTML = `<i class="fa-solid fa-diagram-project"></i> ${connectionCount} connection${connectionCount !== 1 ? 's' : ''}`;
+            
+            // Position the card near the click - use clientX/Y for viewport-relative positioning
+            // First show card off-screen to measure actual size
+            card.style.left = '-9999px';
+            card.style.top = '-9999px';
+            card.classList.add('visible');
+            
+            // Get actual card dimensions
+            const cardRect = card.getBoundingClientRect();
+            const cardWidth = cardRect.width || 320;
+            const cardHeight = cardRect.height || 350;
+            
+            // Use client coordinates (viewport-relative)
+            const clickX = event.clientX;
+            const clickY = event.clientY;
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const margin = 15;
+            
+            let x, y;
+            
+            // Horizontal positioning
+            if (clickX + margin + cardWidth < viewportWidth - margin) {
+                // Fits on the right
+                x = clickX + margin;
+            } else if (clickX - margin - cardWidth > margin) {
+                // Fits on the left
+                x = clickX - margin - cardWidth;
+            } else {
+                // Center horizontally
+                x = Math.max(margin, (viewportWidth - cardWidth) / 2);
+            }
+            
+            // Vertical positioning
+            if (clickY - cardHeight / 2 > margin && clickY + cardHeight / 2 < viewportHeight - margin) {
+                // Center vertically on click point
+                y = clickY - cardHeight / 2;
+            } else if (clickY + margin + cardHeight < viewportHeight - margin) {
+                // Below the click
+                y = clickY + margin;
+            } else if (clickY - margin - cardHeight > margin) {
+                // Above the click
+                y = clickY - margin - cardHeight;
+            } else {
+                // Fallback: top of viewport
+                y = margin;
+            }
+            
+            // Final boundary check
+            x = Math.max(margin, Math.min(x, viewportWidth - cardWidth - margin));
+            y = Math.max(margin, Math.min(y, viewportHeight - cardHeight - margin));
+            
+            card.style.left = x + 'px';
+            card.style.top = y + 'px';
+        }
+
+        // Hide preview card
+        function hidePreviewCard() {
+            document.getElementById('node-preview-card').classList.remove('visible');
+        }
+
+        // Copy URL to clipboard
+        function copyUrl(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                // Brief visual feedback
+                const btn = event.target.closest('.preview-btn');
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                setTimeout(() => { btn.innerHTML = originalHtml; }, 1500);
+            });
+        }
+
+        // Show node details in sidebar panel
+        function showNodeDetails(node, neighborIds) {
+            const panel = document.getElementById('node-details');
+            const section = data.sections.find(s => s.id === node.section_id);
+            
+            // Set name
+            document.getElementById('detail-name').textContent = 
+                node.label.replace(/<[^>]+>/g, '');
+            
+            // Set section
+            document.getElementById('detail-section').textContent = 
+                section ? `${section.id}: ${section.title}` : 'Unknown';
+            
+            // Set URL
+            const urlRow = document.getElementById('detail-url-row');
+            const urlEl = document.getElementById('detail-url');
+            if (node.url) {
+                urlRow.style.display = 'block';
+                urlEl.innerHTML = `<a href="${node.url}" target="_blank">${node.url}</a>`;
+            } else {
+                urlRow.style.display = 'none';
+            }
+            
+            // Set connections count
+            document.getElementById('detail-connections').textContent = 
+                `${neighborIds.length} connection${neighborIds.length !== 1 ? 's' : ''}`;
+            
+            // Set neighbors list
+            const neighborsEl = document.getElementById('detail-neighbors');
+            neighborsEl.innerHTML = '';
+            
+            neighborIds.slice(0, 20).forEach(nId => {
+                const neighbor = nodeMap.get(nId);
+                if (neighbor) {
+                    const item = document.createElement('div');
+                    item.className = 'neighbor-item';
+                    const color = colors[neighbor.section_id % colors.length];
+                    item.innerHTML = `
+                        <span class="neighbor-dot" style="background: ${color};"></span>
+                        <span>${neighbor.label.replace(/<[^>]+>/g, '').substring(0, 30)}</span>
+                    `;
+                    item.onclick = (e) => {
+                        e.stopPropagation();
+                        // Find the node data in current nodes array
+                        const nodeData = nodes.find(n => n.id === nId);
+                        if (nodeData) {
+                            selectNode({ stopPropagation: () => {} }, nodeData);
+                        }
+                    };
+                    neighborsEl.appendChild(item);
+                }
+            });
+            
+            if (neighborIds.length > 20) {
+                const more = document.createElement('div');
+                more.style.cssText = 'padding: 4px 8px; color: #8b949e; font-size: 11px;';
+                more.textContent = `...and ${neighborIds.length - 20} more`;
+                neighborsEl.appendChild(more);
+            }
+            
+            panel.classList.add('visible');
+        }
+
+        // Clear node selection
+        function clearSelection() {
+            selectedNode = null;
+            
+            // Remove all highlight classes
+            g.selectAll('.node')
+                .classed('selected', false)
+                .classed('highlighted', false)
+                .classed('faded', false);
+            
+            g.selectAll('.edge')
+                .classed('highlighted', false)
+                .classed('faded', false);
+            
+            // Hide details panel and preview card
+            document.getElementById('node-details').classList.remove('visible');
+            hidePreviewCard();
+        }
+
+        // Open URL on double-click
+        function openUrl(event, d) {
+            if (d.url) {
+                window.open(d.url, '_blank');
+            }
+        }
+
+        // Toggle sidebar collapsed state
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.getElementById('sidebar-toggle');
+            sidebar.classList.toggle('collapsed');
+            toggle.textContent = sidebar.classList.contains('collapsed') ? '▶' : '◀';
+            
+            // Resize graph after sidebar toggle
+            setTimeout(() => {
+                const container = document.getElementById('graph-container');
+                svg.attr('width', container.clientWidth)
+                   .attr('height', container.clientHeight);
+                centerOnNodes();
+            }, 350);
+        }
+
+        // Zoom controls
+        function resetZoom() {
+            svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        }
+
+        function zoomIn() {
+            svg.transition().duration(300).call(zoom.scaleBy, 1.3);
+        }
+
+        function zoomOut() {
+            svg.transition().duration(300).call(zoom.scaleBy, 0.7);
+        }
+
+        // Share current view URL
+        function shareUrl() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                // Show toast notification
+                const toast = document.createElement('div');
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 80px;
+                    right: 20px;
+                    background: #238636;
+                    color: white;
+                    padding: 12px 20px;
+                    border-radius: 6px;
+                    z-index: 1000;
+                    animation: fadeInOut 2s ease-in-out;
+                `;
+                toast.textContent = '✓ Link copied to clipboard!';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2000);
+            }).catch(() => {
+                // Fallback: show URL in prompt
+                prompt('Copy this URL:', url);
+            });
+        }
+
+        // Show help dialog
+        function showHelp() {
+            const helpContent = `
+⌨️ Keyboard Shortcuts:
+
++/-  Zoom in/out
+F    Fit view
+[    Toggle sidebar
+1-4  Switch layouts
+S    Focus search
+Esc  Clear selection
+
+🖱️ Mouse:
+
+Click      Select node (highlights neighbors)
+Dbl-click  Open URL
+Drag       Move nodes
+Scroll     Zoom
+
+🔗 URL Parameters:
+
+?section=5     Show section 5
+?node=GPT      Highlight nodes
+?layout=radial Use radial layout
+            `;
+            alert(helpContent.trim());
+        }
+
+        // Change layout type
+        function changeLayout(layout) {
+            currentLayout = layout;
+            updateGraph();
+            setTimeout(centerOnNodes, 600);
+            
+            // Update URL for sharing
+            if (typeof updateUrl === 'function') updateUrl();
+        }
+
+        // Apply different layout algorithms
+        function applyLayout(nodeElements, edgeElements, width, height) {
+            // Stop any existing simulation
+            if (simulation) {
+                simulation.stop();
+            }
+
+            const nodeCount = nodes.length;
+
+            switch (currentLayout) {
+                case 'hierarchical':
+                    applyHierarchicalLayout(width, height);
+                    break;
+                case 'radial':
+                    applyRadialLayout(width, height);
+                    break;
+                case 'cluster':
+                    applyClusterLayout(width, height);
+                    break;
+                case 'force':
+                default:
+                    applyForceLayout(nodeElements, edgeElements, width, height);
+                    return; // Force layout handles its own updates
+            }
+
+            // For non-force layouts, update positions immediately
+            edgeElements
+                .attr('x1', d => typeof d.source === 'object' ? d.source.x : 0)
+                .attr('y1', d => typeof d.source === 'object' ? d.source.y : 0)
+                .attr('x2', d => typeof d.target === 'object' ? d.target.x : 0)
+                .attr('y2', d => typeof d.target === 'object' ? d.target.y : 0);
+
+            nodeElements
+                .attr('transform', d => `translate(${d.x},${d.y})`);
+        }
+
+        // Hierarchical (Tree) Layout - Top to Bottom
+        function applyHierarchicalLayout(width, height) {
+            // Build hierarchy from edges
+            const nodeMap = new Map(nodes.map(n => [n.id, n]));
+            const children = new Map();
+            const parents = new Set();
+            
+            edges.forEach(e => {
+                const srcId = typeof e.source === 'object' ? e.source.id : e.source;
+                const tgtId = typeof e.target === 'object' ? e.target.id : e.target;
+                if (!children.has(srcId)) children.set(srcId, []);
+                children.get(srcId).push(tgtId);
+                parents.add(tgtId);
+            });
+
+            // Find root nodes (nodes with no parents)
+            const roots = nodes.filter(n => !parents.has(n.id));
+            if (roots.length === 0 && nodes.length > 0) {
+                roots.push(nodes[0]);
+            }
+
+            // Assign levels using BFS
+            const levels = new Map();
+            const queue = roots.map(r => ({ id: r.id, level: 0 }));
+            const visited = new Set();
+
+            while (queue.length > 0) {
+                const { id, level } = queue.shift();
+                if (visited.has(id)) continue;
+                visited.add(id);
+                levels.set(id, level);
+
+                const kids = children.get(id) || [];
+                kids.forEach(kid => {
+                    if (!visited.has(kid)) {
+                        queue.push({ id: kid, level: level + 1 });
+                    }
+                });
+            }
+
+            // Assign nodes that weren't visited
+            nodes.forEach(n => {
+                if (!levels.has(n.id)) {
+                    levels.set(n.id, 0);
+                }
+            });
+
+            // Group by level
+            const levelGroups = new Map();
+            nodes.forEach(n => {
+                const lvl = levels.get(n.id);
+                if (!levelGroups.has(lvl)) levelGroups.set(lvl, []);
+                levelGroups.get(lvl).push(n);
+            });
+
+            // Position nodes with more spacing
+            const maxLevel = Math.max(...levelGroups.keys());
+            
+            // Use fixed spacing instead of cramming into viewport
+            const nodeSpacingX = 150;  // Horizontal space between nodes
+            const nodeSpacingY = 120;  // Vertical space between levels
+            
+            // Calculate total dimensions needed
+            let maxNodesInLevel = 0;
+            levelGroups.forEach((nodesAtLevel) => {
+                maxNodesInLevel = Math.max(maxNodesInLevel, nodesAtLevel.length);
+            });
+            
+            const totalWidth = maxNodesInLevel * nodeSpacingX;
+            const totalHeight = (maxLevel + 1) * nodeSpacingY;
+            
+            // Center the tree
+            const offsetX = (width - totalWidth) / 2 + nodeSpacingX / 2;
+            const offsetY = nodeSpacingY;
+
+            levelGroups.forEach((nodesAtLevel, level) => {
+                const levelWidth = nodesAtLevel.length * nodeSpacingX;
+                const levelOffsetX = (totalWidth - levelWidth) / 2;
+                
+                nodesAtLevel.forEach((n, i) => {
+                    n.x = offsetX + levelOffsetX + (i * nodeSpacingX);
+                    n.y = offsetY + (level * nodeSpacingY);
+                });
+            });
+        }
+
+        // Radial Layout - Center outward
+        function applyRadialLayout(width, height) {
+            const centerX = width / 2;
+            const centerY = height / 2;
+            
+            // Find main nodes (sources of thick edges) as center
+            const thickSources = new Set(edges.filter(e => e.type === 'thick').map(e => 
+                typeof e.source === 'object' ? e.source.id : e.source
+            ));
+            
+            // Build levels from center
+            const children = new Map();
+            const parents = new Set();
+            
+            edges.forEach(e => {
+                const srcId = typeof e.source === 'object' ? e.source.id : e.source;
+                const tgtId = typeof e.target === 'object' ? e.target.id : e.target;
+                if (!children.has(srcId)) children.set(srcId, []);
+                children.get(srcId).push(tgtId);
+                parents.add(tgtId);
+            });
+
+            // Center nodes are those with no parents or main nodes
+            const centerNodes = nodes.filter(n => !parents.has(n.id) || thickSources.has(n.id));
+            if (centerNodes.length === 0 && nodes.length > 0) {
+                centerNodes.push(nodes[0]);
+            }
+
+            // BFS to assign rings
+            const rings = new Map();
+            const queue = centerNodes.map(n => ({ id: n.id, ring: 0 }));
+            const visited = new Set();
+
+            while (queue.length > 0) {
+                const { id, ring } = queue.shift();
+                if (visited.has(id)) continue;
+                visited.add(id);
+                rings.set(id, ring);
+
+                const kids = children.get(id) || [];
+                kids.forEach(kid => {
+                    if (!visited.has(kid)) {
+                        queue.push({ id: kid, ring: ring + 1 });
+                    }
+                });
+            }
+
+            // Assign unvisited nodes
+            nodes.forEach(n => {
+                if (!rings.has(n.id)) rings.set(n.id, 1);
+            });
+
+            // Group by ring
+            const ringGroups = new Map();
+            nodes.forEach(n => {
+                const r = rings.get(n.id);
+                if (!ringGroups.has(r)) ringGroups.set(r, []);
+                ringGroups.get(r).push(n);
+            });
+
+            // Position nodes in concentric circles with better spacing
+            const maxRing = Math.max(...ringGroups.keys());
+            const ringSpacing = 120;  // Fixed spacing between rings
+
+            ringGroups.forEach((nodesInRing, ring) => {
+                if (ring === 0) {
+                    // Center nodes in a small circle
+                    const angleStep = (2 * Math.PI) / nodesInRing.length;
+                    nodesInRing.forEach((n, i) => {
+                        const angle = i * angleStep - Math.PI / 2;
+                        const r = nodesInRing.length === 1 ? 0 : 50;
+                        n.x = centerX + r * Math.cos(angle);
+                        n.y = centerY + r * Math.sin(angle);
+                    });
+                } else {
+                    const angleStep = (2 * Math.PI) / nodesInRing.length;
+                    const r = ringSpacing * ring;
+                    nodesInRing.forEach((n, i) => {
+                        const angle = i * angleStep - Math.PI / 2;
+                        n.x = centerX + r * Math.cos(angle);
+                        n.y = centerY + r * Math.sin(angle);
+                    });
+                }
+            });
+        }
+
+        // Cluster Layout - Group by section/parent
+        function applyClusterLayout(width, height) {
+            // Group nodes by their parent (subgraph) or section
+            const groups = new Map();
+            
+            nodes.forEach(n => {
+                const groupKey = n.parent || `section_${n.section_id}`;
+                if (!groups.has(groupKey)) groups.set(groupKey, []);
+                groups.get(groupKey).push(n);
+            });
+
+            // Arrange groups in a grid with fixed spacing
+            const groupCount = groups.size;
+            const cols = Math.ceil(Math.sqrt(groupCount));
+            const rows = Math.ceil(groupCount / cols);
+            const cellWidth = 300;   // Fixed cell width
+            const cellHeight = 250;  // Fixed cell height
+            
+            // Calculate total grid size and offset to center it
+            const totalWidth = cols * cellWidth;
+            const totalHeight = rows * cellHeight;
+            const offsetX = (width - totalWidth) / 2 + cellWidth / 2;
+            const offsetY = (height - totalHeight) / 2 + cellHeight / 2;
+
+            let groupIndex = 0;
+            groups.forEach((groupNodes, groupKey) => {
+                const col = groupIndex % cols;
+                const row = Math.floor(groupIndex / cols);
+                const centerX = offsetX + cellWidth * col;
+                const centerY = offsetY + cellHeight * row;
+
+                // Arrange nodes within cluster in a circle with better spacing
+                const nodeSpacing = 50;
+                const radius = Math.max(nodeSpacing, groupNodes.length * nodeSpacing / (2 * Math.PI));
+                const angleStep = (2 * Math.PI) / groupNodes.length;
+
+                groupNodes.forEach((n, i) => {
+                    if (groupNodes.length === 1) {
+                        n.x = centerX;
+                        n.y = centerY;
+                    } else {
+                        const angle = i * angleStep - Math.PI / 2;
+                        n.x = centerX + radius * Math.cos(angle);
+                        n.y = centerY + radius * Math.sin(angle);
+                    }
+                });
+
+                groupIndex++;
+            });
+        }
+
+        // Force-Directed Layout (original)
+        function applyForceLayout(nodeElements, edgeElements, width, height) {
+            const nodeCount = nodes.length;
+            
+            // For large graphs (100+ nodes), use section-based radial positioning
+            if (nodeCount > 100) {
+                // Get unique sections and create radial positions
+                const sections = [...new Set(nodes.map(n => n.section_id))].sort((a,b) => a - b);
+                const numSections = sections.length;
+                
+                console.log('Large graph mode:', numSections, 'sections, width:', width, 'height:', height);
+                
+                // Calculate section centers in a circular pattern
+                const sectionCenters = new Map();
+                const radius = Math.min(width, height) * 0.35;
+                
+                sections.forEach((sectionId, i) => {
+                    const angle = (2 * Math.PI * i / numSections) - Math.PI / 2;
+                    sectionCenters.set(sectionId, {
+                        x: width / 2 + Math.cos(angle) * radius,
+                        y: height / 2 + Math.sin(angle) * radius
+                    });
+                });
+                
+                console.log('Section centers sample:', [...sectionCenters.entries()].slice(0, 3));
+                
+                // Count nodes per section for spacing
+                const sectionNodeCounts = new Map();
+                nodes.forEach(n => {
+                    sectionNodeCounts.set(n.section_id, (sectionNodeCounts.get(n.section_id) || 0) + 1);
+                });
+                
+                // Position nodes around their section center
+                const sectionNodeIndex = new Map();
+                nodes.forEach(n => {
+                    const center = sectionCenters.get(n.section_id);
+                    const count = sectionNodeCounts.get(n.section_id);
+                    const idx = sectionNodeIndex.get(n.section_id) || 0;
+                    sectionNodeIndex.set(n.section_id, idx + 1);
+                    
+                    // Spread nodes in a small cluster around their section center
+                    const localRadius = Math.sqrt(count) * 15;
+                    const localAngle = (2 * Math.PI * idx / count);
+                    const jitter = (Math.random() - 0.5) * 20;
+                    
+                    n.x = center.x + Math.cos(localAngle) * localRadius + jitter;
+                    n.y = center.y + Math.sin(localAngle) * localRadius + jitter;
+                    
+                    // Store section center for force
+                    n.sectionCenterX = center.x;
+                    n.sectionCenterY = center.y;
+                });
+                
+                console.log('Node positions sample:', nodes.slice(0, 3).map(n => ({id: n.id, x: n.x, y: n.y})));
+                
+                // Set initial positions on node elements BEFORE simulation
+                nodeElements.attr('transform', d => `translate(${d.x},${d.y})`);
+                edgeElements
+                    .attr('x1', d => d.source.x || 0)
+                    .attr('y1', d => d.source.y || 0)
+                    .attr('x2', d => d.target.x || 0)
+                    .attr('y2', d => d.target.y || 0);
+                
+                // Create simulation with section clustering
+                simulation = d3.forceSimulation(nodes)
+                    .force('link', d3.forceLink(edges)
+                        .id(d => d.id)
+                        .distance(30)
+                        .strength(0.1))  // Weak links so sections don't pull together
+                    .force('charge', d3.forceManyBody()
+                        .strength(-50)
+                        .distanceMax(100))
+                    .force('collision', d3.forceCollide().radius(12).strength(0.7))
+                    // Force nodes toward their section center
+                    .force('sectionX', d3.forceX(d => d.sectionCenterX).strength(0.3))
+                    .force('sectionY', d3.forceY(d => d.sectionCenterY).strength(0.3))
+                    .alpha(0.5)
+                    .alphaDecay(0.02)
+                    .velocityDecay(0.4)
+                    .on('tick', () => {
+                        edgeElements
+                            .attr('x1', d => d.source.x)
+                            .attr('y1', d => d.source.y)
+                            .attr('x2', d => d.target.x)
+                            .attr('y2', d => d.target.y);
+                        nodeElements
+                            .attr('transform', d => `translate(${d.x},${d.y})`);
+                    });
+            } else {
+                // For smaller graphs, use standard force layout
+                nodes.forEach(n => {
+                    if (n.x === undefined || n.x === 0) {
+                        n.x = width / 2 + (Math.random() - 0.5) * width * 0.6;
+                    }
+                    if (n.y === undefined || n.y === 0) {
+                        n.y = height / 2 + (Math.random() - 0.5) * height * 0.6;
+                    }
+                });
+                
+                const linkDistance = nodeCount <= 10 ? 60 : nodeCount <= 30 ? 80 : 100;
+                const chargeStrength = nodeCount <= 10 ? -100 : nodeCount <= 30 ? -150 : -300;
+                const collisionRadius = nodeCount <= 10 ? 40 : nodeCount <= 30 ? 35 : 30;
+                
+                simulation = d3.forceSimulation(nodes)
+                    .force('link', d3.forceLink(edges)
+                        .id(d => d.id)
+                        .distance(linkDistance)
+                        .strength(0.5))
+                    .force('charge', d3.forceManyBody()
+                        .strength(chargeStrength)
+                        .distanceMax(300))
+                    .force('center', d3.forceCenter(width / 2, height / 2))
+                    .force('collision', d3.forceCollide().radius(collisionRadius))
+                    .force('x', d3.forceX(width / 2).strength(0.05))
+                    .force('y', d3.forceY(height / 2).strength(0.05))
+                    .on('tick', () => {
+                        edgeElements
+                            .attr('x1', d => d.source.x)
+                            .attr('y1', d => d.source.y)
+                            .attr('x2', d => d.target.x)
+                            .attr('y2', d => d.target.y);
+                        nodeElements
+                            .attr('transform', d => `translate(${d.x},${d.y})`);
+                    });
+            }
+            
+            // Auto-center after simulation stabilizes
+            simulation.on('end', () => {
+                centerOnNodes();
+            });
+        }
+
+        // Search
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            
+            if (query.length < 2) {
+                d3.selectAll('.node circle').attr('opacity', 1);
+                d3.selectAll('.node text').attr('opacity', 1);
+                return;
+            }
+
+            d3.selectAll('.node').each(function(d) {
+                const label = d.label.toLowerCase();
+                const match = label.includes(query);
+                d3.select(this).select('circle').attr('opacity', match ? 1 : 0.2);
+                d3.select(this).select('text').attr('opacity', match ? 1 : 0.2);
+            });
+        });
+
+        // Window resize
+        window.addEventListener('resize', () => {
+            if (data) {
+                const container = document.getElementById('graph-container');
+                svg.attr('width', container.clientWidth)
+                   .attr('height', container.clientHeight);
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ignore if typing in search
+            if (e.target.tagName === 'INPUT') return;
+            
+            switch(e.key) {
+                case '+':
+                case '=':
+                    // Zoom in
+                    svg.transition().duration(300).call(zoom.scaleBy, 1.3);
+                    break;
+                case '-':
+                case '_':
+                    // Zoom out
+                    svg.transition().duration(300).call(zoom.scaleBy, 0.7);
+                    break;
+                case 'f':
+                case 'F':
+                    // Fit view
+                    centerOnNodes();
+                    break;
+                case '1':
+                    document.getElementById('layout-select').value = 'force';
+                    changeLayout('force');
+                    break;
+                case '2':
+                    document.getElementById('layout-select').value = 'hierarchical';
+                    changeLayout('hierarchical');
+                    break;
+                case '3':
+                    document.getElementById('layout-select').value = 'radial';
+                    changeLayout('radial');
+                    break;
+                case '4':
+                    document.getElementById('layout-select').value = 'cluster';
+                    changeLayout('cluster');
+                    break;
+                case 's':
+                case 'S':
+                    // Focus search
+                    document.getElementById('search-input').focus();
+                    e.preventDefault();
+                    break;
+                case '[':
+                    // Toggle sidebar
+                    toggleSidebar();
+                    break;
+                case 'Escape':
+                    // Clear selection, show all
+                    document.getElementById('search-input').value = '';
+                    clearSelection();
+                    filterSection(null);
+                    break;
+                case '?':
+                    showHelp();
+                    break;
+            }
+        });
+
+        // URL parameter handling
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                section: params.get('section'),
+                node: params.get('node'),
+                layout: params.get('layout')
+            };
+        }
+
+        function updateUrl() {
+            const params = new URLSearchParams();
+            if (currentSection !== null) {
+                params.set('section', currentSection);
+            }
+            if (currentLayout !== 'force') {
+                params.set('layout', currentLayout);
+            }
+            const newUrl = params.toString() 
+                ? `${window.location.pathname}?${params.toString()}`
+                : window.location.pathname;
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        function applyUrlParams() {
+            const params = getUrlParams();
+            
+            // Apply layout first
+            if (params.layout && ['force', 'hierarchical', 'radial', 'cluster'].includes(params.layout)) {
+                document.getElementById('layout-select').value = params.layout;
+                currentLayout = params.layout;
+            }
+            
+            // Apply section filter
+            if (params.section) {
+                const sectionId = parseInt(params.section);
+                if (!isNaN(sectionId) && data.sections.some(s => s.id === sectionId)) {
+                    filterSection(sectionId);
+                }
+            }
+            
+            // Highlight specific node
+            if (params.node) {
+                setTimeout(() => {
+                    const searchTerm = params.node.toLowerCase();
+                    g.selectAll('.node').each(function(d) {
+                        const label = d.label.replace(/<[^>]+>/g, '').toLowerCase();
+                        const match = label.includes(searchTerm);
+                        d3.select(this).select('circle').attr('opacity', match ? 1 : 0.2);
+                        d3.select(this).select('text').attr('opacity', match ? 1 : 0.2);
+                        
+                        // Center on matched node
+                        if (match && label === searchTerm) {
+                            const container = document.getElementById('graph-container');
+                            const width = container.clientWidth;
+                            const height = container.clientHeight;
+                            svg.transition().duration(750).call(
+                                zoom.transform,
+                                d3.zoomIdentity.translate(width/2 - d.x, height/2 - d.y).scale(1.5)
+                            );
+                        }
+                    });
+                    document.getElementById('search-input').value = params.node;
+                }, 800);
+            }
+        }
+
+        // Initialize
+        loadData().then(() => {
+            // Apply URL params after data loads
+            setTimeout(applyUrlParams, 500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+{
+  "nodes": [
+    {
+      "id": "root",
+      "label": "GenAI Learning Path",
+      "type": "root",
+      "level": 0
+    },
+    {
+      "id": "fcebd8f2",
+      "label": "\ud83d\udcdd Week 1 Recipe (Follow Step-by-Step)",
+      "type": "recipe",
+      "level": 2,
+      "local_path": "data/curated/fcebd8f2.html"
+    },
+    {
+      "id": "7409a286",
+      "label": "Phase 1: Foundation (Weeks 1\u20132)",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/7409a286.html"
+    },
+    {
+      "id": "0e78bbb6",
+      "label": "1.1 Postgres Fundamentals (MUST LEARN)",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/0e78bbb6.html"
+    },
+    {
+      "id": "b42a8406",
+      "label": "1.2 Node.js + TypeScript Refresh",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/b42a8406.html"
+    },
+    {
+      "id": "88a3bcab",
+      "label": "TypeScript Handbook",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/typescript-handbook.html"
+    },
+    {
+      "id": "f5001a67",
+      "label": "Express + TypeScript setup",
+      "url": "https://blog.logrocket.com/how-to-set-up-node-typescript-express/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/express-typescript-setup.html"
+    },
+    {
+      "id": "8bfe526a",
+      "label": "Zod (validation)",
+      "url": "https://zod.dev/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/zod-validation.html"
+    },
+    {
+      "id": "b3548239",
+      "label": "1.3 Docker Basics (for Postgres)",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/b3548239.html"
+    },
+    {
+      "id": "52dc0c6e",
+      "label": "Docker in 100 Seconds",
+      "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/docker-in-100-seconds.html"
+    },
+    {
+      "id": "a94d6876",
+      "label": "Docker Compose Quickstart",
+      "url": "https://docs.docker.com/compose/gettingstarted/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/docker-compose-quickstart.html"
+    },
+    {
+      "id": "9ba819c0",
+      "label": "Phase 2: LLM Fundamentals (Week 3)",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/9ba819c0.html"
+    },
+    {
+      "id": "1de861f9",
+      "label": "2.1 Core Concepts",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/1de861f9.html"
+    },
+    {
+      "id": "f63508c7",
+      "label": "OpenAI API Docs",
+      "url": "https://platform.openai.com/docs/introduction",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/openai-api-docs.html"
+    },
+    {
+      "id": "bb3c06a8",
+      "label": "Prompt Engineering Guide",
+      "url": "https://www.promptingguide.ai/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/prompt-engineering-guide.html"
+    },
+    {
+      "id": "91f68d3b",
+      "label": "OpenAI Cookbook",
+      "url": "https://cookbook.openai.com/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/openai-cookbook.html"
+    },
+    {
+      "id": "f6ca8c4c",
+      "label": "2.2 Structured Outputs + Tool Calling",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/f6ca8c4c.html"
+    },
+    {
+      "id": "87ac36e5",
+      "label": "OpenAI Structured Outputs",
+      "url": "https://platform.openai.com/docs/guides/structured-outputs",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/openai-structured-outputs.html"
+    },
+    {
+      "id": "3da90478",
+      "label": "OpenAI Function Calling",
+      "url": "https://platform.openai.com/docs/guides/function-calling",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/openai-function-calling.html"
+    },
+    {
+      "id": "c1c924b0",
+      "label": "Phase 3: RAG Fundamentals (Weeks 4\u20136)",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/c1c924b0.html"
+    },
+    {
+      "id": "e6b0a7e6",
+      "label": "3.1 What is RAG?",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/e6b0a7e6.html"
+    },
+    {
+      "id": "bbac1f2a",
+      "label": "RAG Explained (video, 10 min)",
+      "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/rag-explained-video-10-min.html"
+    },
+    {
+      "id": "383dca2a",
+      "label": "LangChain RAG Tutorial",
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/langchain-rag-tutorial.html"
+    },
+    {
+      "id": "bc6ddc89",
+      "label": "Pinecone: What is RAG?",
+      "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/pinecone-what-is-rag.html"
+    },
+    {
+      "id": "d9c63d1f",
+      "label": "3.2 Document Ingestion",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/d9c63d1f.html"
+    },
+    {
+      "id": "5c7a857c",
+      "label": "Cheerio",
+      "url": "https://cheerio.js.org/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/cheerio.html"
+    },
+    {
+      "id": "510568ec",
+      "label": "Mozilla Readability",
+      "url": "https://github.com/mozilla/readability",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/mozilla-readability.html"
+    },
+    {
+      "id": "14cd4cb5",
+      "label": "3.3 Chunking",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/14cd4cb5.html"
+    },
+    {
+      "id": "7fd583ed",
+      "label": "Chunking Strategies",
+      "url": "https://www.pinecone.io/learn/chunking-strategies/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/chunking-strategies.html"
+    },
+    {
+      "id": "7f87e0cf",
+      "label": "LangChain Text Splitters",
+      "url": "https://js.langchain.com/docs/concepts/text_splitters",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/langchain-text-splitters.html"
+    },
+    {
+      "id": "1c0210e3",
+      "label": "3.4 Embeddings",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/1c0210e3.html"
+    },
+    {
+      "id": "86385ce2",
+      "label": "OpenAI Embeddings Guide",
+      "url": "https://platform.openai.com/docs/guides/embeddings",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/openai-embeddings-guide.html"
+    },
+    {
+      "id": "5491a8eb",
+      "label": "What are Embeddings? (video)",
+      "url": "https://www.youtube.com/watch?v=wjZofJX0v4M",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/what-are-embeddings-video.html"
+    },
+    {
+      "id": "41d86100",
+      "label": "3.5 Vector Database (pgvector)",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/41d86100.html"
+    },
+    {
+      "id": "0982f03c",
+      "label": "pgvector GitHub",
+      "url": "https://github.com/pgvector/pgvector",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/pgvector-github.html"
+    },
+    {
+      "id": "b8803a11",
+      "label": "pgvector + Prisma",
+      "url": "https://www.prisma.io/docs/orm/prisma-schema/data-model/unsupported-database-features#scalars",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/pgvector-prisma.html"
+    },
+    {
+      "id": "2c51d957",
+      "label": "Supabase pgvector Guide",
+      "url": "https://supabase.com/docs/guides/ai/vector-columns",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/supabase-pgvector-guide.html"
+    },
+    {
+      "id": "a42b46c0",
+      "label": "3.6 Retrieval + Generation",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/a42b46c0.html"
+    },
+    {
+      "id": "eba7caf5",
+      "label": "RAG Prompt Patterns",
+      "url": "https://www.promptingguide.ai/research/rag",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/rag-prompt-patterns.html"
+    },
+    {
+      "id": "ce029c3a",
+      "label": "Phase 4: Reliability + Evaluation (Weeks 7\u20138)",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/ce029c3a.html"
+    },
+    {
+      "id": "9a61cb0a",
+      "label": "4.1 Why Evaluation Matters",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/9a61cb0a.html"
+    },
+    {
+      "id": "fa7f4f3f",
+      "label": "LLM Evaluation Guide",
+      "url": "https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/llm-evaluation-guide.html"
+    },
+    {
+      "id": "c1b4a402",
+      "label": "RAGAS",
+      "url": "https://docs.ragas.io/en/latest/concepts/metrics/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/ragas.html"
+    },
+    {
+      "id": "b9f6412f",
+      "label": "4.2 Monitoring + Observability",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/b9f6412f.html"
+    },
+    {
+      "id": "f1cb5263",
+      "label": "Phase 5: Security + Safety (Week 9)",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/f1cb5263.html"
+    },
+    {
+      "id": "bc52a8a8",
+      "label": "5.1 Prompt Injection",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/bc52a8a8.html"
+    },
+    {
+      "id": "d2850f82",
+      "label": "OWASP LLM Top 10",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/owasp-llm-top-10.html"
+    },
+    {
+      "id": "789355b0",
+      "label": "Prompt Injection Explained",
+      "url": "https://simonwillison.net/2022/Sep/12/prompt-injection/",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/prompt-injection-explained.html"
+    },
+    {
+      "id": "1f660971",
+      "label": "5.2 Access Control (RBAC)",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/1f660971.html"
+    },
+    {
+      "id": "a3dd28f8",
+      "label": "5.3 PII + Data Handling",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/a3dd28f8.html"
+    },
+    {
+      "id": "89386cb2",
+      "label": "Phase 6: Deployment (Week 10)",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/89386cb2.html"
+    },
+    {
+      "id": "87cb6f12",
+      "label": "6.1 Deployment Options (simple)",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/87cb6f12.html"
+    },
+    {
+      "id": "5a85dcaa",
+      "label": "6.2 README + Portfolio",
+      "type": "topic",
+      "level": 2,
+      "local_path": "data/curated/5a85dcaa.html"
+    },
+    {
+      "id": "e9f6349a",
+      "label": "Angular SSE (Server-Sent Events)",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/angular-sse-server-sent-events.html"
+    },
+    {
+      "id": "f29dabb8",
+      "label": "Streaming fetch in JS",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams",
+      "type": "resource",
+      "level": 3,
+      "local_path": "data/curated/streaming-fetch-in-js.html"
+    },
+    {
+      "id": "d5fe13a4",
+      "label": "Phase 7 (Optional): Add Python Skills",
+      "type": "phase",
+      "level": 1,
+      "local_path": "data/curated/d5fe13a4.html"
+    }
+  ],
+  "edges": [
+    {
+      "source": "root",
+      "target": "fcebd8f2"
+    },
+    {
+      "source": "root",
+      "target": "7409a286"
+    },
+    {
+      "source": "7409a286",
+      "target": "0e78bbb6"
+    },
+    {
+      "source": "7409a286",
+      "target": "b42a8406"
+    },
+    {
+      "source": "b42a8406",
+      "target": "88a3bcab"
+    },
+    {
+      "source": "b42a8406",
+      "target": "f5001a67"
+    },
+    {
+      "source": "b42a8406",
+      "target": "8bfe526a"
+    },
+    {
+      "source": "7409a286",
+      "target": "b3548239"
+    },
+    {
+      "source": "b3548239",
+      "target": "52dc0c6e"
+    },
+    {
+      "source": "b3548239",
+      "target": "a94d6876"
+    },
+    {
+      "source": "root",
+      "target": "9ba819c0"
+    },
+    {
+      "source": "9ba819c0",
+      "target": "1de861f9"
+    },
+    {
+      "source": "1de861f9",
+      "target": "f63508c7"
+    },
+    {
+      "source": "1de861f9",
+      "target": "bb3c06a8"
+    },
+    {
+      "source": "1de861f9",
+      "target": "91f68d3b"
+    },
+    {
+      "source": "9ba819c0",
+      "target": "f6ca8c4c"
+    },
+    {
+      "source": "f6ca8c4c",
+      "target": "87ac36e5"
+    },
+    {
+      "source": "f6ca8c4c",
+      "target": "3da90478"
+    },
+    {
+      "source": "root",
+      "target": "c1c924b0"
+    },
+    {
+      "source": "c1c924b0",
+      "target": "e6b0a7e6"
+    },
+    {
+      "source": "e6b0a7e6",
+      "target": "bbac1f2a"
+    },
+    {
+      "source": "e6b0a7e6",
+      "target": "383dca2a"
+    },
+    {
+      "source": "e6b0a7e6",
+      "target": "bc6ddc89"
+    },
+    {
+      "source": "c1c924b0",
+      "target": "d9c63d1f"
+    },
+    {
+      "source": "d9c63d1f",
+      "target": "5c7a857c"
+    },
+    {
+      "source": "d9c63d1f",
+      "target": "510568ec"
+    },
+    {
+      "source": "c1c924b0",
+      "target": "14cd4cb5"
+    },
+    {
+      "source": "14cd4cb5",
+      "target": "7fd583ed"
+    },
+    {
+      "source": "14cd4cb5",
+      "target": "7f87e0cf"
+    },
+    {
+      "source": "c1c924b0",
+      "target": "1c0210e3"
+    },
+    {
+      "source": "1c0210e3",
+      "target": "86385ce2"
+    },
+    {
+      "source": "1c0210e3",
+      "target": "5491a8eb"
+    },
+    {
+      "source": "c1c924b0",
+      "target": "41d86100"
+    },
+    {
+      "source": "41d86100",
+      "target": "0982f03c"
+    },
+    {
+      "source": "41d86100",
+      "target": "b8803a11"
+    },
+    {
+      "source": "41d86100",
+      "target": "2c51d957"
+    },
+    {
+      "source": "c1c924b0",
+      "target": "a42b46c0"
+    },
+    {
+      "source": "a42b46c0",
+      "target": "eba7caf5"
+    },
+    {
+      "source": "root",
+      "target": "ce029c3a"
+    },
+    {
+      "source": "ce029c3a",
+      "target": "9a61cb0a"
+    },
+    {
+      "source": "9a61cb0a",
+      "target": "fa7f4f3f"
+    },
+    {
+      "source": "9a61cb0a",
+      "target": "c1b4a402"
+    },
+    {
+      "source": "ce029c3a",
+      "target": "b9f6412f"
+    },
+    {
+      "source": "root",
+      "target": "f1cb5263"
+    },
+    {
+      "source": "f1cb5263",
+      "target": "bc52a8a8"
+    },
+    {
+      "source": "bc52a8a8",
+      "target": "d2850f82"
+    },
+    {
+      "source": "bc52a8a8",
+      "target": "789355b0"
+    },
+    {
+      "source": "f1cb5263",
+      "target": "1f660971"
+    },
+    {
+      "source": "f1cb5263",
+      "target": "a3dd28f8"
+    },
+    {
+      "source": "root",
+      "target": "89386cb2"
+    },
+    {
+      "source": "89386cb2",
+      "target": "87cb6f12"
+    },
+    {
+      "source": "89386cb2",
+      "target": "5a85dcaa"
+    },
+    {
+      "source": "5a85dcaa",
+      "target": "e9f6349a"
+    },
+    {
+      "source": "5a85dcaa",
+      "target": "f29dabb8"
+    },
+    {
+      "source": "root",
+      "target": "d5fe13a4"
+    }
+  ],
+  "meta": {
+    "title": "GenAI Learning Path",
+    "description": "Interactive guide with self-contained recipes and resources.",
+    "version": "2.0"
+  },
+  "sections": []
+}

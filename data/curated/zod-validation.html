@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zod - TypeScript Schema Validation</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+        .tip { background: #1a3a2a; border-left: 4px solid #3fb950; padding: 1rem; border-radius: 4px; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>✨ Zod - TypeScript Schema Validation</h1>
+            <p>Source: <a href="https://zod.dev/" target="_blank">zod.dev</a></p>
+        </div>
+        <div class="content">
+            <h2>What is Zod?</h2>
+            <p>Zod is a TypeScript-first schema validation library. It lets you define schemas for your data and automatically infers TypeScript types, providing both runtime validation and compile-time type safety.</p>
+            
+            <h2>Installation</h2>
+            <pre><code>npm install zod</code></pre>
+            
+            <h2>Basic Usage</h2>
+            <pre><code>import { z } from 'zod';
+
+// Define a schema
+const UserSchema = z.object({
+    name: z.string().min(1),
+    email: z.string().email(),
+    age: z.number().int().positive().optional()
+});
+
+// Infer TypeScript type from schema
+type User = z.infer&lt;typeof UserSchema&gt;;
+// { name: string; email: string; age?: number }
+
+// Validate data
+const result = UserSchema.safeParse({
+    name: "John",
+    email: "john@example.com"
+});
+
+if (result.success) {
+    console.log(result.data); // Typed as User
+} else {
+    console.log(result.error.issues);
+}</code></pre>
+            
+            <h2>Common Schema Types</h2>
+            <pre><code>// Primitives
+z.string()
+z.number()
+z.boolean()
+z.date()
+z.undefined()
+z.null()
+z.any()
+
+// String validations
+z.string().min(5).max(100)
+z.string().email()
+z.string().url()
+z.string().uuid()
+z.string().regex(/pattern/)
+
+// Number validations
+z.number().int()
+z.number().positive()
+z.number().min(0).max(100)
+
+// Arrays and objects
+z.array(z.string())
+z.object({ key: z.string() })
+z.record(z.string(), z.number())
+
+// Unions and enums
+z.union([z.string(), z.number()])
+z.enum(['admin', 'user', 'guest'])
+z.literal('specific-value')</code></pre>
+            
+            <h2>AI/LLM Use Cases</h2>
+            
+            <div class="tip">
+                <strong>💡 Key Use Case:</strong> Zod is essential for validating structured outputs from LLMs to ensure they match expected schemas.
+            </div>
+            
+            <h3>Validate LLM JSON Output</h3>
+            <pre><code>const LLMResponseSchema = z.object({
+    answer: z.string(),
+    confidence: z.number().min(0).max(1),
+    sources: z.array(z.object({
+        title: z.string(),
+        url: z.string().url()
+    }))
+});
+
+async function queryLLM(prompt: string) {
+    const response = await llm.complete(prompt);
+    const parsed = JSON.parse(response);
+    
+    // Validate response structure
+    const result = LLMResponseSchema.safeParse(parsed);
+    if (!result.success) {
+        throw new Error("LLM returned invalid structure");
+    }
+    
+    return result.data;
+}</code></pre>
+            
+            <h3>API Request Validation</h3>
+            <pre><code>const ChatRequestSchema = z.object({
+    message: z.string().min(1).max(4000),
+    model: z.enum(['gpt-4', 'gpt-3.5-turbo']).default('gpt-3.5-turbo'),
+    temperature: z.number().min(0).max(2).optional()
+});
+
+app.post('/chat', (req, res) => {
+    const result = ChatRequestSchema.safeParse(req.body);
+    if (!result.success) {
+        return res.status(400).json({ errors: result.error.issues });
+    }
+    // result.data is typed and validated
+});</code></pre>
+            
+            <h2>Transform & Coerce</h2>
+            <pre><code>// Transform data during parsing
+const schema = z.string().transform(s => s.toLowerCase());
+
+// Coerce types (useful for form data)
+const numberFromString = z.coerce.number();
+numberFromString.parse("42"); // 42</code></pre>
+            
+            <h2>Related Libraries</h2>
+            <ul>
+                <li><strong>zod-to-json-schema:</strong> Generate JSON Schema from Zod</li>
+                <li><strong>@ai-sdk/zod:</strong> AI SDK integration for structured outputs</li>
+                <li><strong>zod-validation-error:</strong> Better error messages</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

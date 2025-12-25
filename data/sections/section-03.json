@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "id": 3,
+    "title": "Generative AI Ecosystem",
+    "description": "Models, tools, databases, apps",
+    "slug": "generative-ai-ecosystem",
+    "totalNodes": 13,
+    "totalEdges": 12
+  },
+  "sections": [
+    {
+      "id": 3,
+      "title": "Generative AI Ecosystem",
+      "slug": "3-generative-ai-ecosystem",
+      "description": "Models, tools, databases, apps",
+      "line": 206
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s3_b3_Foundation",
+      "label": "FOUNDATION MODELS",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://huggingface.co/models",
+      "tooltip": "Foundation Models",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Foundation"
+    },
+    {
+      "id": "s3_b3_GPT",
+      "label": "GPT-4",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://platform.openai.com/docs",
+      "tooltip": "OpenAI API Docs",
+      "style": null,
+      "parent": "s3_b3_Foundation",
+      "original_id": "GPT"
+    },
+    {
+      "id": "s3_b3_CLAUDE",
+      "label": "Claude",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.anthropic.com/",
+      "tooltip": "Anthropic Claude Docs",
+      "style": null,
+      "parent": "s3_b3_Foundation",
+      "original_id": "CLAUDE"
+    },
+    {
+      "id": "s3_b3_LLAMA",
+      "label": "Llama",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Meta Llama",
+      "style": null,
+      "parent": "s3_b3_Foundation",
+      "original_id": "LLAMA"
+    },
+    {
+      "id": "s3_b3_Orchestration",
+      "label": "ORCHESTRATION",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://python.langchain.com/",
+      "tooltip": "Orchestration Frameworks",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Orchestration"
+    },
+    {
+      "id": "s3_b3_LC",
+      "label": "LangChain",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://python.langchain.com/docs/",
+      "tooltip": "LangChain Docs",
+      "style": null,
+      "parent": "s3_b3_Orchestration",
+      "original_id": "LC"
+    },
+    {
+      "id": "s3_b3_LI",
+      "label": "LlamaIndex",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.llamaindex.ai/",
+      "tooltip": "LlamaIndex Docs",
+      "style": null,
+      "parent": "s3_b3_Orchestration",
+      "original_id": "LI"
+    },
+    {
+      "id": "s3_b3_VectorDB",
+      "label": "VECTOR DBs",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://www.pinecone.io/learn/vector-database/",
+      "tooltip": "Vector Databases",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VectorDB"
+    },
+    {
+      "id": "s3_b3_PC",
+      "label": "Pinecone",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.pinecone.io/",
+      "tooltip": "Pinecone Docs",
+      "style": null,
+      "parent": "s3_b3_VectorDB",
+      "original_id": "PC"
+    },
+    {
+      "id": "s3_b3_CH",
+      "label": "ChromaDB",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://docs.trychroma.com/",
+      "tooltip": "ChromaDB Docs",
+      "style": null,
+      "parent": "s3_b3_VectorDB",
+      "original_id": "CH"
+    },
+    {
+      "id": "s3_b3_Apps",
+      "label": "APPLICATIONS",
+      "type": "subgraph",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "GenAI Applications",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Apps"
+    },
+    {
+      "id": "s3_b3_RAG",
+      "label": "RAG",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://www.promptingguide.ai/techniques/rag",
+      "tooltip": "RAG Guide",
+      "style": null,
+      "parent": "s3_b3_Apps",
+      "original_id": "RAG"
+    },
+    {
+      "id": "s3_b3_AGENTS",
+      "label": "Agents",
+      "type": "node",
+      "section_id": 3,
+      "block_id": 3,
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "tooltip": "LLM Agents Guide",
+      "style": null,
+      "parent": "s3_b3_Apps",
+      "original_id": "AGENTS"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_Orchestration",
+      "type": "thick",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Orchestration",
+      "target": "s3_b3_VectorDB",
+      "type": "thick",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_VectorDB",
+      "target": "s3_b3_Apps",
+      "type": "thick",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_GPT",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_CLAUDE",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Foundation",
+      "target": "s3_b3_LLAMA",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Orchestration",
+      "target": "s3_b3_LC",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Orchestration",
+      "target": "s3_b3_LI",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_VectorDB",
+      "target": "s3_b3_PC",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_VectorDB",
+      "target": "s3_b3_CH",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Apps",
+      "target": "s3_b3_RAG",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    },
+    {
+      "source": "s3_b3_Apps",
+      "target": "s3_b3_AGENTS",
+      "type": "contains",
+      "section_id": 3,
+      "block_id": 3
+    }
+  ]
+}

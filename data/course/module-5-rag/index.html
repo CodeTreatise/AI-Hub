@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5: RAG Pipeline | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 5: RAG Pipeline</h1>
+            <p>Build a complete Retrieval-Augmented Generation system</p>
+            <div class="module-meta">
+                <span>⏱️ ~120 minutes</span>
+                <span>📊 Advanced</span>
+                <span>📚 Module 5</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Understand how RAG combines retrieval with generation</li>
+            <li>Build a complete RAG pipeline from scratch</li>
+            <li>Implement document ingestion, retrieval, and response generation</li>
+            <li>Create API endpoints for your RAG chatbot</li>
+            <li>Handle conversation context and follow-up questions</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section prerequisites">
+            <h2>📋 Prerequisites</h2>
+            
+        <p>Before starting this module, you should have completed:</p>
+        <ul>
+            <li>Module 2: Database with pgvector set up</li>
+            <li>Module 3: OpenAI API working</li>
+            <li>Module 4: Embeddings and semantic search implemented</li>
+        </ul>
+        <div class="callout callout-info">
+            <strong>This is it!</strong> This module ties everything together into a working RAG system.
+        </div>
+        <div class="callout callout-tip">
+            <strong>If SQL is new:</strong> You don’t need “deep SQL” here. Make sure you completed Module 2’s <em>SQL Cheat Sheet</em> and <em>Mini-Lab</em>, then come back.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🏗️ RAG Architecture Overview</h2>
+            
+        <h3>What is RAG?</h3>
+        <p><strong>Retrieval-Augmented Generation (RAG)</strong> is a technique that enhances LLM responses by providing relevant context from your own data. Instead of relying solely on what the model was trained on, you give it specific information to answer from.</p>
+        
+        <div style="background: #161b22; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; text-align: center;">
+            <p style="font-family: monospace; font-size: 1.1rem; margin: 0; line-height: 2;">
+                User Question<br>
+                ↓<br>
+                <span style="color: #58a6ff;">Embed Question → Search Database → Get Relevant Chunks</span><br>
+                ↓<br>
+                <span style="color: #a371f7;">Build Prompt with Context + Question</span><br>
+                ↓<br>
+                <span style="color: #3fb950;">Send to LLM → Generate Answer</span><br>
+                ↓<br>
+                Response to User
+            </p>
+        </div>
+        
+        <h3>Why RAG Beats Fine-Tuning</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Approach</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Pros</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Cons</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>RAG</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d; color: #3fb950;">
+                    • Easy to update data<br>
+                    • No training needed<br>
+                    • Traceable sources<br>
+                    • Works immediately
+                </td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d; color: #f87171;">
+                    • Retrieval can miss<br>
+                    • Needs good chunking
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><strong>Fine-Tuning</strong></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d; color: #3fb950;">
+                    • Learns patterns<br>
+                    • No runtime retrieval
+                </td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d; color: #f87171;">
+                    • Expensive to train<br>
+                    • Hard to update<br>
+                    • Can hallucinate<br>
+                    • No source citations
+                </td>
+            </tr>
+        </table>
+        
+        <div class="callout callout-tip">
+            <strong>Rule of thumb:</strong> Use RAG for factual Q&A from your docs. Use fine-tuning for style/tone changes or specialized reasoning patterns.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>⚡ Building the RAG Pipeline</h2>
+            
+        <h3>The Complete RAG Service</h3>
+        <p>Let's build a complete RAG service that handles everything:</p>
+        
+        <pre><code>// src/rag.ts
+import OpenAI from 'openai';
+import pool from './db.js';
+
+const openai = new OpenAI();
+
+interface RAGResponse {
+    answer: string;
+    sources: Array<{
+        title: string;
+        content: string;
+        similarity: number;
+    }>;
+    tokensUsed: number;
+}
+
+// The main RAG function
+export async function askRAG(
+    question: string,
+    options: {
+        topK?: number;
+        threshold?: number;
+        systemPrompt?: string;
+    } = {}
+): Promise&lt;RAGResponse&gt; {
+    const { topK = 5, threshold = 0.7, systemPrompt } = options;
+    
+    // Step 1: Embed the question
+    console.log('🔍 Embedding question...');
+    const embeddingResponse = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: question
+    });
+    const questionEmbedding = embeddingResponse.data[0].embedding;
+    
+    // Step 2: Search for relevant chunks
+    console.log('📚 Searching for relevant documents...');
+    const searchResult = await pool.query(\`
+        SELECT 
+            c.content,
+            d.title,
+            1 - (c.embedding &lt;=&gt; $1::vector) as similarity
+        FROM chunks c
+        JOIN documents d ON c.document_id = d.id
+        WHERE 1 - (c.embedding &lt;=&gt; $1::vector) > $2
+        ORDER BY c.embedding &lt;=&gt; $1::vector
+        LIMIT $3
+    \`, [JSON.stringify(questionEmbedding), threshold, topK]);
+    
+    const sources = searchResult.rows;
+    console.log(\`  Found \${sources.length} relevant chunks\`);
+    
+    // Step 3: Build the context
+    const context = sources.length > 0
+        ? sources.map((s, i) => 
+            \`[Source \${i + 1}: \${s.title}]\n\${s.content}\`
+          ).join('\n\n---\n\n')
+        : 'No relevant documents found.';
+    
+    // Step 4: Build the prompt
+    const defaultSystemPrompt = \`You are a helpful assistant that answers questions based on the provided context.
+
+Rules:
+- Only answer based on the provided context
+- If the context doesn't contain the answer, say "I don't have information about that in my knowledge base"
+- Be concise but thorough
+- Cite sources when possible using [Source N] format\`;
+    
+    const messages: OpenAI.ChatCompletionMessageParam[] = [
+        { 
+            role: 'system', 
+            content: systemPrompt || defaultSystemPrompt 
+        },
+        { 
+            role: 'user', 
+            content: \`Context:
+\${context}
+
+Question: \${question}
+
+Please answer based on the context above.\`
+        }
+    ];
+    
+    // Step 5: Generate the response
+    console.log('🤖 Generating response...');
+    const completion = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages,
+        temperature: 0.3,  // Lower for more factual responses
+        max_tokens: 1000
+    });
+    
+    return {
+        answer: completion.choices[0].message.content || 'No response generated',
+        sources: sources.map(s => ({
+            title: s.title,
+            content: s.content.slice(0, 200) + '...',
+            similarity: parseFloat(s.similarity)
+        })),
+        tokensUsed: completion.usage?.total_tokens || 0
+    };
+}</code></pre>
+        
+        <h3>Test It Out</h3>
+        <pre><code>// scripts/test-rag.ts
+import { askRAG } from '../src/rag.js';
+import pool from '../src/db.js';
+
+async function main() {
+    const questions = [
+        'How do I reset my password?',
+        'What are the API rate limits?',
+        'How do I authenticate with the API?'
+    ];
+    
+    for (const q of questions) {
+        console.log('\n' + '='.repeat(60));
+        console.log('❓ Question:', q);
+        console.log('='.repeat(60));
+        
+        const result = await askRAG(q);
+        
+        console.log('\n📝 Answer:');
+        console.log(result.answer);
+        
+        console.log('\n📚 Sources used:');
+        result.sources.forEach((s, i) => {
+            console.log(\`  [\${i + 1}] \${s.title} (\${(s.similarity * 100).toFixed(0)}% match)\`);
+        });
+        
+        console.log(\`\n📊 Tokens used: \${result.tokensUsed}\`);
+    }
+    
+    await pool.end();
+}
+
+main();</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🔌 API Endpoints</h2>
+            
+        <h3>Creating REST API Endpoints</h3>
+        <p>Let's expose our RAG system through a clean API:</p>
+        
+        <pre><code>// src/routes/chat.ts
+import { Router, Request, Response } from 'express';
+import { askRAG } from '../rag.js';
+
+const router = Router();
+
+interface ChatRequest {
+    message: string;
+    conversationId?: string;
+}
+
+// Simple Q&A endpoint
+router.post('/ask', async (req: Request, res: Response) => {
+    try {
+        const { message } = req.body as ChatRequest;
+        
+        if (!message) {
+            return res.status(400).json({ error: 'Message is required' });
+        }
+        
+        const result = await askRAG(message);
+        
+        res.json({
+            success: true,
+            answer: result.answer,
+            sources: result.sources,
+            tokensUsed: result.tokensUsed
+        });
+    } catch (error) {
+        console.error('RAG error:', error);
+        res.status(500).json({ error: 'Failed to process question' });
+    }
+});
+
+export default router;</code></pre>
+        
+        <h3>Wire It Up in Express</h3>
+        <pre><code>// src/index.ts
+import express from 'express';
+import cors from 'cors';
+import chatRoutes from './routes/chat.js';
+import 'dotenv/config';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use('/api/chat', chatRoutes);
+
+// Health check
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+app.listen(PORT, () => {
+    console.log(\`🚀 RAG API running on http://localhost:\${PORT}\`);
+});
+
+export default app;</code></pre>
+        
+        <h3>Test with cURL</h3>
+        <pre><code># Ask a question
+curl -X POST http://localhost:3000/api/chat/ask \
+  -H "Content-Type: application/json" \
+  -d '{"message": "How do I reset my password?"}'
+
+# Response:
+{
+  "success": true,
+  "answer": "To reset your password, click the 'Forgot Password' link on the login page. You'll receive an email with a reset link that expires after 24 hours. [Source 1]",
+  "sources": [
+    {
+      "title": "Password Reset",
+      "content": "If you forgot your password, click the Forgot Password link...",
+      "similarity": 0.91
+    }
+  ],
+  "tokensUsed": 245
+}</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💭 Conversation Memory</h2>
+            
+        <h3>Adding Conversation Memory</h3>
+        <p>For a true chatbot experience, we need to remember previous messages:</p>
+        
+        <pre><code>// src/conversation.ts
+import OpenAI from 'openai';
+
+interface Message {
+    role: 'user' | 'assistant';
+    content: string;
+}
+
+// In-memory store (use Redis for production)
+const conversations = new Map&lt;string, Message[]&gt;();
+
+export function getConversation(id: string): Message[] {
+    return conversations.get(id) || [];
+}
+
+export function addMessage(id: string, message: Message): void {
+    const history = getConversation(id);
+    history.push(message);
+    
+    // Keep last 10 messages to manage context size
+    if (history.length > 10) {
+        history.splice(0, history.length - 10);
+    }
+    
+    conversations.set(id, history);
+}
+
+export function clearConversation(id: string): void {
+    conversations.delete(id);
+}</code></pre>
+        
+        <h3>RAG with Conversation Context</h3>
+        <pre><code>// Enhanced askRAG with conversation history
+export async function askRAGWithHistory(
+    question: string,
+    conversationId: string,
+    options: { topK?: number; threshold?: number } = {}
+): Promise&lt;RAGResponse&gt; {
+    const { topK = 5, threshold = 0.7 } = options;
+    
+    // Get conversation history
+    const history = getConversation(conversationId);
+    
+    // Embed and search (same as before)
+    const embeddingResponse = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: question
+    });
+    const questionEmbedding = embeddingResponse.data[0].embedding;
+    
+    const searchResult = await pool.query(\`
+        SELECT c.content, d.title,
+               1 - (c.embedding &lt;=&gt; $1::vector) as similarity
+        FROM chunks c
+        JOIN documents d ON c.document_id = d.id
+        WHERE 1 - (c.embedding &lt;=&gt; $1::vector) > $2
+        ORDER BY c.embedding &lt;=&gt; $1::vector
+        LIMIT $3
+    \`, [JSON.stringify(questionEmbedding), threshold, topK]);
+    
+    const sources = searchResult.rows;
+    const context = sources.map((s, i) => 
+        \`[Source \${i + 1}]\n\${s.content}\`
+    ).join('\n\n');
+    
+    // Build messages with history
+    const messages: OpenAI.ChatCompletionMessageParam[] = [
+        { 
+            role: 'system', 
+            content: \`You are a helpful assistant. Answer based on the context provided.
+            
+Context from knowledge base:
+\${context || 'No relevant documents found.'}\`
+        },
+        // Include conversation history
+        ...history.map(m => ({
+            role: m.role as 'user' | 'assistant',
+            content: m.content
+        })),
+        // Current question
+        { role: 'user', content: question }
+    ];
+    
+    const completion = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages,
+        temperature: 0.3,
+        max_tokens: 1000
+    });
+    
+    const answer = completion.choices[0].message.content || '';
+    
+    // Save to conversation history
+    addMessage(conversationId, { role: 'user', content: question });
+    addMessage(conversationId, { role: 'assistant', content: answer });
+    
+    return {
+        answer,
+        sources: sources.map(s => ({
+            title: s.title,
+            content: s.content.slice(0, 200) + '...',
+            similarity: parseFloat(s.similarity)
+        })),
+        tokensUsed: completion.usage?.total_tokens || 0
+    };
+}</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Follow-up questions work!</strong> Now users can ask "What about the rate limits?" and the bot remembers they were asking about the API.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💻 Hands-On: Complete RAG Chatbot</h2>
+            
+        <h3>Complete Exercise: Build Your RAG Chatbot</h3>
+        
+        <h4>Step 1: Project Structure</h4>
+        <pre><code>my-rag-app/
+├── src/
+│   ├── index.ts         # Express server
+│   ├── db.ts            # Database connection
+│   ├── rag.ts           # RAG logic
+│   ├── conversation.ts  # Memory management
+│   └── routes/
+│       └── chat.ts      # API routes
+├── scripts/
+│   ├── ingest.ts        # Document ingestion
+│   └── test-rag.ts      # Testing
+├── package.json
+├── tsconfig.json
+└── .env</code></pre>
+        
+        <h4>Step 2: Ingest Your Documents</h4>
+        <pre><code>// Run ingestion
+npx tsx scripts/ingest.ts
+
+// Output:
+// Processing: Getting Started
+//   Created 3 chunks
+//   Generated embeddings
+//   Stored in database
+// ✅ Ingestion complete!</code></pre>
+        
+        <h4>Step 3: Start the Server</h4>
+        <pre><code>npx tsx src/index.ts
+
+// 🚀 RAG API running on http://localhost:3000</code></pre>
+        
+        <h4>Step 4: Test Your Chatbot</h4>
+        <pre><code># First question
+curl -X POST http://localhost:3000/api/chat/ask \
+  -H "Content-Type: application/json" \
+  -d '{"message": "How do I get started?", "conversationId": "user-123"}'
+
+# Follow-up question (remembers context)
+curl -X POST http://localhost:3000/api/chat/ask \
+  -H "Content-Type: application/json" \
+  -d '{"message": "What about authentication?", "conversationId": "user-123"}'</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>🎉 Congratulations!</strong> You've built a complete RAG chatbot from scratch! It can:
+            <ul style="margin-top: 0.5rem;">
+                <li>Ingest and chunk documents</li>
+                <li>Generate embeddings and store them</li>
+                <li>Search semantically for relevant content</li>
+                <li>Generate grounded responses with citations</li>
+                <li>Remember conversation context</li>
+            </ul>
+        </div>
+    
+        </section>
+    
+        <section class="section gotchas">
+            <h2>⚠️ Common Gotchas & Tips</h2>
+            
+        <h3>Common RAG Mistakes</h3>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Not Setting Temperature Low:</strong> For factual Q&A, use temperature 0.1-0.3. Higher values cause creative "interpretation" of facts.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Ignoring Empty Results:</strong> Always handle the case when no relevant documents are found. Don't let the LLM make things up!
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Too Much Context:</strong> Stuffing too many chunks into the prompt dilutes relevance. 3-5 highly relevant chunks > 20 mediocre ones.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 No Source Attribution:</strong> Always include sources so users can verify. This builds trust and catches hallucinations.
+        </div>
+        
+        <h3>Production Tips</h3>
+        <ul>
+            <li><strong>Cache embeddings:</strong> Don't re-embed the same question repeatedly</li>
+            <li><strong>Use streaming:</strong> For better UX, stream responses to the client</li>
+            <li><strong>Monitor costs:</strong> Track token usage per conversation</li>
+            <li><strong>Implement fallbacks:</strong> Have graceful degradation when API fails</li>
+            <li><strong>Log everything:</strong> Questions, retrieved chunks, and responses for debugging</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Check Your Understanding</h2>
+            
+        <div class="quiz-question">
+            <p>1. What does RAG stand for?</p>
+            <ul class="quiz-options">
+                <li>A) Random Augmented Generation</li>
+                <li>B) Retrieval-Augmented Generation</li>
+                <li>C) Rapid AI Generation</li>
+                <li>D) Recursive Answer Generation</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. In a RAG pipeline, what happens FIRST when a user asks a question?</p>
+            <ul class="quiz-options">
+                <li>A) Send the question directly to the LLM</li>
+                <li>B) Embed the question and search for relevant documents</li>
+                <li>C) Generate a response immediately</li>
+                <li>D) Store the question in the database</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. Why is low temperature (0.1-0.3) recommended for RAG?</p>
+            <ul class="quiz-options">
+                <li>A) To make responses faster</li>
+                <li>B) To reduce API costs</li>
+                <li>C) To keep responses factual and consistent</li>
+                <li>D) To make responses more creative</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>4. What's the main advantage of RAG over fine-tuning?</p>
+            <ul class="quiz-options">
+                <li>A) Faster responses</li>
+                <li>B) Easy to update data without retraining</li>
+                <li>C) Lower memory usage</li>
+                <li>D) Works offline</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-B, 3-C, 4-B</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://python.langchain.com/docs/tutorials/rag/" target="_blank">
+                    LangChain RAG Tutorial
+                </a>
+                <span style="color: #8b949e;"> - Official LangChain guide</span>
+            </li>
+            <li>
+                <a href="https://www.pinecone.io/learn/chunking-strategies/" target="_blank">
+                    Chunking Strategies for LLM Applications
+                </a>
+                <span style="color: #8b949e;"> - Pinecone's comprehensive guide</span>
+            </li>
+            <li>
+                <a href="https://www.anthropic.com/news/contextual-retrieval" target="_blank">
+                    Anthropic: Contextual Retrieval
+                </a>
+                <span style="color: #8b949e;"> - Advanced RAG techniques</span>
+            </li>
+            <li>
+                <a href="https://platform.openai.com/docs/guides/text-generation" target="_blank">
+                    OpenAI Chat Completions Guide
+                </a>
+                <span style="color: #8b949e;"> - Official API documentation</span>
+            </li>
+            <li>
+                <a href="https://github.com/pgvector/pgvector" target="_blank">
+                    pgvector Documentation
+                </a>
+                <span style="color: #8b949e;"> - Vector storage in PostgreSQL</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../module-4-embeddings/index.html">← Previous: Embeddings & Vectors</a>
+            <a href="../module-6-production/index.html">Next: Production & Polish →</a>
+        </nav>
+    </div>
+</body>
+</html>

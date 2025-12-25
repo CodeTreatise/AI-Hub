@@ -1,0 +1,966 @@
+{
+  "meta": {
+    "id": 23,
+    "title": "LLMOps & Evaluation",
+    "description": "Benchmarks, Evals, Monitoring",
+    "slug": "llmops-evaluation",
+    "totalNodes": 57,
+    "totalEdges": 37
+  },
+  "sections": [
+    {
+      "id": 23,
+      "title": "LLMOps & Evaluation",
+      "slug": "23-llmops--evaluation",
+      "description": "Benchmarks, Evals, Monitoring",
+      "line": 1473
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s23_b24_LLMOPS",
+      "label": "LLMOps & EVALUATION",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.deeplearning.ai/short-courses/evaluating-debugging-generative-ai/",
+      "tooltip": "LLMOps Course",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLMOPS"
+    },
+    {
+      "id": "s23_b24_EVAL",
+      "label": "Evaluation",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://huggingface.co/open-llm-leaderboard",
+      "tooltip": "Evaluation",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EVAL"
+    },
+    {
+      "id": "s23_b24_MONITOR",
+      "label": "Monitoring",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://langfuse.com/",
+      "tooltip": "Monitoring",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MONITOR"
+    },
+    {
+      "id": "s23_b24_VERSION",
+      "label": "Versioning",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://mlflow.org/",
+      "tooltip": "Versioning",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VERSION"
+    },
+    {
+      "id": "s23_b24_TEST",
+      "label": "Testing",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.promptfoo.dev/",
+      "tooltip": "Testing",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TEST"
+    },
+    {
+      "id": "s23_b24_E1",
+      "label": "Benchmarks",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://huggingface.co/open-llm-leaderboard",
+      "tooltip": "Open LLM Leaderboard",
+      "style": null,
+      "parent": null,
+      "original_id": "E1"
+    },
+    {
+      "id": "s23_b24_E2",
+      "label": "Human Eval",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.humaneval.com/",
+      "tooltip": "HumanEval",
+      "style": null,
+      "parent": null,
+      "original_id": "E2"
+    },
+    {
+      "id": "s23_b24_E3",
+      "label": "LLM-as-Judge",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.smith.langchain.com/evaluation",
+      "tooltip": "LLM-as-Judge",
+      "style": null,
+      "parent": null,
+      "original_id": "E3"
+    },
+    {
+      "id": "s23_b24_M1",
+      "label": "Quality Metrics",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://langfuse.com/",
+      "tooltip": "Langfuse",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s23_b24_M2",
+      "label": "Drift Detection",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.arize.com/phoenix/",
+      "tooltip": "Arize Phoenix",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s23_b24_M3",
+      "label": "Toxicity/Safety",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://huggingface.co/meta-llama/Llama-Guard-3-8B",
+      "tooltip": "Toxicity Detection - LlamaGuard",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s23_b24_M4",
+      "label": "Cost Tracking",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.helicone.ai/",
+      "tooltip": "Cost Tracking - Helicone",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s23_b24_V1",
+      "label": "Prompt Versioning",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://promptlayer.com/",
+      "tooltip": "PromptLayer",
+      "style": null,
+      "parent": null,
+      "original_id": "V1"
+    },
+    {
+      "id": "s23_b24_V2",
+      "label": "Model Registry",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://mlflow.org/docs/latest/model-registry.html",
+      "tooltip": "MLflow Model Registry",
+      "style": null,
+      "parent": null,
+      "original_id": "V2"
+    },
+    {
+      "id": "s23_b24_V3",
+      "label": "Experiment Tracking",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.wandb.ai/",
+      "tooltip": "Weights & Biases",
+      "style": null,
+      "parent": null,
+      "original_id": "V3"
+    },
+    {
+      "id": "s23_b24_T1",
+      "label": "A/B Testing",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://www.promptfoo.dev/",
+      "tooltip": "Promptfoo",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s23_b24_T2",
+      "label": "Regression Tests",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://docs.pytest.org/",
+      "tooltip": "Regression Testing - Pytest",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s23_b24_T3",
+      "label": "Red Teaming",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 24,
+      "url": "https://atlas.mitre.org/",
+      "tooltip": "MITRE ATLAS",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s23_b25_OTEL",
+      "label": "OPENTELEMETRY FOR AI",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/",
+      "tooltip": "OpenTelemetry",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OTEL"
+    },
+    {
+      "id": "s23_b25_TRACE",
+      "label": "Distributed Tracing",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+      "tooltip": "OTel Traces",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TRACE"
+    },
+    {
+      "id": "s23_b25_METRICS",
+      "label": "Metrics",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+      "tooltip": "OTel Metrics",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "METRICS"
+    },
+    {
+      "id": "s23_b25_LOGS",
+      "label": "Structured Logs",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+      "tooltip": "OTel Logs",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LOGS"
+    },
+    {
+      "id": "s23_b25_SEM",
+      "label": "Semantic Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "GenAI Conventions",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SEM"
+    },
+    {
+      "id": "s23_b25_T1",
+      "label": "LLM Spans",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "LLM Spans",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s23_b25_T2",
+      "label": "RAG Pipeline Traces",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.traceloop.com/",
+      "tooltip": "Traceloop RAG",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s23_b25_T3",
+      "label": "Agent Action Traces",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.smith.langchain.com/",
+      "tooltip": "Agent Tracing",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s23_b25_T4",
+      "label": "Latency Breakdown",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+      "tooltip": "Latency Traces",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    },
+    {
+      "id": "s23_b25_M1",
+      "label": "Token Throughput",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "Token Metrics",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s23_b25_M2",
+      "label": "Latency Percentiles",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+      "tooltip": "Latency Metrics",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s23_b25_M3",
+      "label": "Error Rates",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+      "tooltip": "Error Metrics",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s23_b25_M4",
+      "label": "Cost Tracking",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.helicone.ai/",
+      "tooltip": "Cost Tracking",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s23_b25_L1",
+      "label": "Prompt/Response Logs",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.langfuse.com/",
+      "tooltip": "Langfuse Logging",
+      "style": null,
+      "parent": null,
+      "original_id": "L1"
+    },
+    {
+      "id": "s23_b25_L2",
+      "label": "Error Context",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+      "tooltip": "Error Logs",
+      "style": null,
+      "parent": null,
+      "original_id": "L2"
+    },
+    {
+      "id": "s23_b25_L3",
+      "label": "Retrieval Logs",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/observability/",
+      "tooltip": "Retrieval Logs",
+      "style": null,
+      "parent": null,
+      "original_id": "L3"
+    },
+    {
+      "id": "s23_b25_L4",
+      "label": "Audit Trail",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+      "tooltip": "Audit Logs",
+      "style": null,
+      "parent": null,
+      "original_id": "L4"
+    },
+    {
+      "id": "s23_b25_S1",
+      "label": "GenAI Semantic Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "GenAI Conventions",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s23_b25_S2",
+      "label": "LLM Span Attributes",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai/",
+      "tooltip": "LLM Attributes",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s23_b25_S3",
+      "label": "Vector DB Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/database/",
+      "tooltip": "DB Conventions",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s23_b25_S4",
+      "label": "Agent Conventions",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 25,
+      "url": "https://opentelemetry.io/docs/specs/semconv/",
+      "tooltip": "Agent Conventions",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s23_b93_RAGAS",
+      "label": "RAGAS",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 93,
+      "url": "https://docs.ragas.io/",
+      "tooltip": "RAG evaluation framework",
+      "style": null,
+      "parent": null,
+      "original_id": "RAGAS"
+    },
+    {
+      "id": "s23_b94_DeepEval",
+      "label": "DeepEval",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 94,
+      "url": "https://docs.confident-ai.com/",
+      "tooltip": "LLM evaluation framework",
+      "style": null,
+      "parent": null,
+      "original_id": "DeepEval"
+    },
+    {
+      "id": "s23_b95_TruLens",
+      "label": "TruLens",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 95,
+      "url": "https://www.trulens.org/",
+      "tooltip": "LLM app evaluation",
+      "style": null,
+      "parent": null,
+      "original_id": "TruLens"
+    },
+    {
+      "id": "s23_b96_Giskard",
+      "label": "Giskard",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 96,
+      "url": "https://www.giskard.ai/",
+      "tooltip": "ML testing framework",
+      "style": null,
+      "parent": null,
+      "original_id": "Giskard"
+    },
+    {
+      "id": "s23_b97_Patronus_A",
+      "label": "Patronus AI",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 97,
+      "url": "https://www.patronus.ai/",
+      "tooltip": "LLM evaluation platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Patronus_AI"
+    },
+    {
+      "id": "s23_b98_MMLU",
+      "label": "MMLU",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 98,
+      "url": "https://paperswithcode.com/dataset/mmlu",
+      "tooltip": "Massive Multitask Language Understanding",
+      "style": null,
+      "parent": null,
+      "original_id": "MMLU"
+    },
+    {
+      "id": "s23_b99_HumanEval",
+      "label": "HumanEval",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 99,
+      "url": "https://github.com/openai/human-eval",
+      "tooltip": "Code generation benchmark",
+      "style": null,
+      "parent": null,
+      "original_id": "HumanEval"
+    },
+    {
+      "id": "s23_b100_GSM8K",
+      "label": "GSM8K",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 100,
+      "url": "https://github.com/openai/grade-school-math",
+      "tooltip": "Math reasoning benchmark",
+      "style": null,
+      "parent": null,
+      "original_id": "GSM8K"
+    },
+    {
+      "id": "s23_b101_MATH",
+      "label": "MATH",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 101,
+      "url": "https://github.com/hendrycks/math",
+      "tooltip": "Mathematics benchmark",
+      "style": null,
+      "parent": null,
+      "original_id": "MATH"
+    },
+    {
+      "id": "s23_b102_HellaSwag",
+      "label": "HellaSwag",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 102,
+      "url": "https://rowanzellers.com/hellaswag/",
+      "tooltip": "Commonsense reasoning",
+      "style": null,
+      "parent": null,
+      "original_id": "HellaSwag"
+    },
+    {
+      "id": "s23_b103_ARC",
+      "label": "ARC",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 103,
+      "url": "https://allenai.org/data/arc",
+      "tooltip": "AI2 Reasoning Challenge",
+      "style": null,
+      "parent": null,
+      "original_id": "ARC"
+    },
+    {
+      "id": "s23_b134_LangFuse",
+      "label": "LangFuse",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 134,
+      "url": "https://langfuse.com/",
+      "tooltip": "Open-source LLM observability",
+      "style": null,
+      "parent": null,
+      "original_id": "LangFuse"
+    },
+    {
+      "id": "s23_b135_LangSmith",
+      "label": "LangSmith",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 135,
+      "url": "https://smith.langchain.com/",
+      "tooltip": "LangChain debugging platform",
+      "style": null,
+      "parent": null,
+      "original_id": "LangSmith"
+    },
+    {
+      "id": "s23_b136_Arize_AI",
+      "label": "Arize AI",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 136,
+      "url": "https://arize.com/",
+      "tooltip": "ML observability platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Arize_AI"
+    },
+    {
+      "id": "s23_b137_Phoenix",
+      "label": "Phoenix",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 137,
+      "url": "https://docs.arize.com/phoenix/",
+      "tooltip": "ML observability notebook",
+      "style": null,
+      "parent": null,
+      "original_id": "Phoenix"
+    },
+    {
+      "id": "s23_b138_Helicone",
+      "label": "Helicone",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 138,
+      "url": "https://www.helicone.ai/",
+      "tooltip": "LLM observability & cost tracking",
+      "style": null,
+      "parent": null,
+      "original_id": "Helicone"
+    },
+    {
+      "id": "s23_b139_PromptLaye",
+      "label": "PromptLayer",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 139,
+      "url": "https://promptlayer.com/",
+      "tooltip": "Prompt engineering platform",
+      "style": null,
+      "parent": null,
+      "original_id": "PromptLayer"
+    },
+    {
+      "id": "s23_b140_Promptfoo",
+      "label": "Promptfoo",
+      "type": "node",
+      "section_id": 23,
+      "block_id": 140,
+      "url": "https://www.promptfoo.dev/",
+      "tooltip": "LLM testing & evaluation",
+      "style": null,
+      "parent": null,
+      "original_id": "Promptfoo"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_EVAL",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_MONITOR",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_VERSION",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_LLMOPS",
+      "target": "s23_b24_TEST",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_EVAL",
+      "target": "s23_b24_E1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_EVAL",
+      "target": "s23_b24_E2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_EVAL",
+      "target": "s23_b24_E3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_MONITOR",
+      "target": "s23_b24_M4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_VERSION",
+      "target": "s23_b24_V1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_VERSION",
+      "target": "s23_b24_V2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_VERSION",
+      "target": "s23_b24_V3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_TEST",
+      "target": "s23_b24_T1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_TEST",
+      "target": "s23_b24_T2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b24_TEST",
+      "target": "s23_b24_T3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 24
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_TRACE",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_METRICS",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_LOGS",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_OTEL",
+      "target": "s23_b25_SEM",
+      "type": "thick",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_TRACE",
+      "target": "s23_b25_T4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_METRICS",
+      "target": "s23_b25_M4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_LOGS",
+      "target": "s23_b25_L4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S1",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S2",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S3",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    },
+    {
+      "source": "s23_b25_SEM",
+      "target": "s23_b25_S4",
+      "type": "regular",
+      "section_id": 23,
+      "block_id": 25
+    }
+  ]
+}

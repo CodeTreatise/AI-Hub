@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 40,
+    "title": "Model Calibration & Uncertainty",
+    "description": "Temperature Scaling, Conformal Prediction",
+    "slug": "model-calibration-uncertainty",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 40,
+      "title": "Model Calibration & Uncertainty",
+      "slug": "40-model-calibration--uncertainty",
+      "description": "Temperature Scaling, Conformal Prediction",
+      "line": 3221
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s40_b48_CALIB",
+      "label": "MODEL CALIBRATION",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Calibration Paper",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CALIB"
+    },
+    {
+      "id": "s40_b48_POST",
+      "label": "Post-hoc Calibration",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "tooltip": "Sklearn Calibration",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "POST"
+    },
+    {
+      "id": "s40_b48_METRICS",
+      "label": "Calibration Metrics",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Calibration Metrics",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "METRICS"
+    },
+    {
+      "id": "s40_b48_CONFORMAL",
+      "label": "Conformal Prediction",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://www.conformalprediction.com/",
+      "tooltip": "Conformal Prediction",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CONFORMAL"
+    },
+    {
+      "id": "s40_b48_VIZ",
+      "label": "Visualization",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "tooltip": "Reliability Diagrams",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "VIZ"
+    },
+    {
+      "id": "s40_b48_P1",
+      "label": "Temperature Scaling",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Temperature Scaling Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s40_b48_P2",
+      "label": "Platt Scaling",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html#calibration",
+      "tooltip": "Platt Scaling",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s40_b48_P3",
+      "label": "Isotonic Regression",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html#calibration",
+      "tooltip": "Isotonic Regression",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s40_b48_P4",
+      "label": "Histogram Binning",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Histogram Binning",
+      "style": null,
+      "parent": null,
+      "original_id": "P4"
+    },
+    {
+      "id": "s40_b48_M1",
+      "label": "ECE Expected Cal Error",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "ECE Definition",
+      "style": null,
+      "parent": null,
+      "original_id": "M1"
+    },
+    {
+      "id": "s40_b48_M2",
+      "label": "Brier Score",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html#brier-score-loss",
+      "tooltip": "Brier Score",
+      "style": null,
+      "parent": null,
+      "original_id": "M2"
+    },
+    {
+      "id": "s40_b48_M3",
+      "label": "MCE Max Cal Error",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Maximum Calibration Error",
+      "style": null,
+      "parent": null,
+      "original_id": "M3"
+    },
+    {
+      "id": "s40_b48_M4",
+      "label": "Log Loss",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html#log-loss",
+      "tooltip": "Log Loss",
+      "style": null,
+      "parent": null,
+      "original_id": "M4"
+    },
+    {
+      "id": "s40_b48_C1",
+      "label": "Split Conformal",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/2107.07511",
+      "tooltip": "Split Conformal",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s40_b48_C2",
+      "label": "CV+ Conformal",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1905.02928",
+      "tooltip": "CV+ Conformal",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s40_b48_C3",
+      "label": "Conformalized Quantile",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1905.03222",
+      "tooltip": "CQR Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s40_b48_C4",
+      "label": "Adaptive Prediction Sets",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/2006.02544",
+      "tooltip": "Adaptive Prediction Sets",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s40_b48_V1",
+      "label": "Reliability Diagrams",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "tooltip": "Reliability Diagram",
+      "style": null,
+      "parent": null,
+      "original_id": "V1"
+    },
+    {
+      "id": "s40_b48_V2",
+      "label": "Calibration Curves",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html",
+      "tooltip": "Calibration Curves",
+      "style": null,
+      "parent": null,
+      "original_id": "V2"
+    },
+    {
+      "id": "s40_b48_V3",
+      "label": "Confidence Histograms",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://arxiv.org/abs/1706.04599",
+      "tooltip": "Confidence Histograms",
+      "style": null,
+      "parent": null,
+      "original_id": "V3"
+    },
+    {
+      "id": "s40_b48_V4",
+      "label": "Prediction Intervals",
+      "type": "node",
+      "section_id": 40,
+      "block_id": 48,
+      "url": "https://mapie.readthedocs.io/",
+      "tooltip": "MAPIE Intervals",
+      "style": null,
+      "parent": null,
+      "original_id": "V4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_POST",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_METRICS",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_CONFORMAL",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CALIB",
+      "target": "s40_b48_VIZ",
+      "type": "thick",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_POST",
+      "target": "s40_b48_P4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_METRICS",
+      "target": "s40_b48_M4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_CONFORMAL",
+      "target": "s40_b48_C4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V1",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V2",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V3",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    },
+    {
+      "source": "s40_b48_VIZ",
+      "target": "s40_b48_V4",
+      "type": "regular",
+      "section_id": 40,
+      "block_id": 48
+    }
+  ]
+}

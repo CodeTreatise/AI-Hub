@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 7 (Optional): Add Python Skills</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        /* Markdown Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; background: rgba(110, 118, 129, 0.4); padding: 0.2em 0.4em; border-radius: 6px; }
+        pre code { background: transparent; padding: 0; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #58a6ff; padding-left: 1rem; color: #8b949e; margin: 1rem 0; }
+        table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+        th, td { border: 1px solid #30363d; padding: 0.5rem; text-align: left; color: #c9d1d9; }
+        th { background: #161b22; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>Phase 7 (Optional): Add Python Skills</h1>
+            <p>Type: phase</p>
+        </div>
+        <div class="content">
+            <h3>When: After you ship the TS project</h3>
+<p><strong>Why Python:</strong></p>
+<ul>
+<li>Many ML tools are Python-first</li>
+<li>Evaluation frameworks (RAGAS, DeepEval)</li>
+<li>Fine-tuning / experiments</li>
+</ul>
+<p><strong>What to learn:</strong></p>
+<ul>
+<li>Python basics (if rusty)</li>
+<li>Jupyter notebooks</li>
+<li>pandas (data manipulation)</li>
+<li>Write eval scripts in Python</li>
+</ul>
+<p><strong>Resources:</strong></p>
+<ol>
+<li>
+<p><strong>Python for JS Developers</strong><br />
+https://www.pythonforjavascriptdevelopers.com/</p>
+</li>
+<li>
+<p><strong>Real Python</strong> (tutorials)<br />
+https://realpython.com/</p>
+</li>
+</ol>
+<hr />
+<h2>Bonus: Advanced Topics (After MVP)</h2>
+<h3>Cost Management + Caching</h3>
+<p><strong>Why:</strong> OpenAI API costs money. Caching saves 50–80% on repeated queries.</p>
+<p><strong>Topics:</strong></p>
+<ul>
+<li>Token counting before sending</li>
+<li>Budget limits per user/org</li>
+<li>Cache embeddings (same text = same vector)</li>
+<li>Cache LLM responses for identical queries (with TTL)</li>
+</ul>
+<p><strong>Practice:</strong></p>
+<ul>
+<li>Add Redis for caching (or in-memory for MVP)</li>
+<li>Log token usage per request</li>
+<li>Add admin endpoint: &quot;cost this month&quot;</li>
+</ul>
+<hr />
+<h3>🆓 Local LLMs (Zero Cost Learning)</h3>
+<p><strong>Why:</strong> Learn RAG concepts without spending on API costs. Your laptop (32GB RAM, i7) can run 7B–13B models.</p>
+<p><strong>Best tool: Ollama</strong> (easiest setup, most popular)</p>
+<p><strong>Install Ollama (one command):</strong></p>
+<pre><code class="language-bash">curl -fsSL https://ollama.com/install.sh | sh
+</code></pre>
+<hr />
+<h4>Understanding Model Sizes &amp; Quantization</h4>
+<p><strong>What is quantization?</strong><br />
+Models are compressed from 16-bit to 4-bit, reducing size by 75% with minimal quality loss.<br />
+Ollama typically downloads <strong>quantized GGUF</strong> variants (often ~4-bit by default). The exact quantization can vary by model/tag, but the defaults are fine for learning.</p>
+<p><strong>Memory rule of thumb:</strong>
+| Model Size | Download Size | RAM Needed | Your Laptop (32GB) |
+|------------|---------------|------------|-------------------|
+| 1B–3B | 0.5–2GB | 2–4GB | ✅ Very fast |
+| 7B–8B | 4–5GB | 6–8GB | ✅ Runs well |
+| 13B | 7–8GB | 10–12GB | ✅ Works |
+| 32B | 18–20GB | 24–28GB | ⚠️ Slow but possible |
+| 70B+ | 40GB+ | 48GB+ | ❌ Too big |</p>
+<hr />
+<h4>Recommended Models for Your Laptop (32GB RAM, CPU-only)</h4>
+<p>| Model | Command | RAM | Speed | Best For | Popularity |
+|-------|---------|-----|-------|----------|------------|
+| <strong>Qwen2.5 7B</strong> ⭐ | <code>ollama run qwen2.5:7b</code> | ~5GB | 5-8 tok/s | Best overall for RAG | 18.5M pulls |
+| <strong>Llama 3.2 3B</strong> | <code>ollama run llama3.2:3b</code> | ~2GB | 10-15 tok/s | Fast iteration | 50.6M pulls |
+| <strong>Phi-3 Mini</strong> | <code>ollama run phi3</code> | ~2.5GB | 10-12 tok/s | Reasoning, tiny | 15.3M pulls |
+| <strong>Mistral 7B</strong> | <code>ollama run mistral</code> | ~4.5GB | 5-8 tok/s | Classic, reliable | 23.4M pulls |
+| <strong>Gemma2 9B</strong> | <code>ollama run gemma2:9b</code> | ~6GB | 4-6 tok/s | Google quality | 11.9M pulls |
+| <strong>Qwen2.5-coder</strong> | <code>ollama run qwen2.5-coder:7b</code> | ~5GB | 5-8 tok/s | Code generation | 9.4M pulls |
+| <strong>Llama3-ChatQA</strong> | <code>ollama run llama3-chatqa</code> | ~5GB | 5-8 tok/s | RAG/QA specific | 165K pulls |</p>
+<blockquote>
+<p><strong>🎯 Start with:</strong></p>
+<ul>
+<li><code>qwen2.5:7b</code> — Best quality, 128K context (great for RAG)</li>
+<li><code>llama3.2:3b</code> — Fastest, use for quick tests</li>
+</ul>
+</blockquote>
+<hr />
+<h4>Quick Start Commands</h4>
+<pre><code class="language-bash"># Get the best model for RAG (recommended)
+ollama run qwen2.5:7b
+
+# Or fastest model for quick tests
+ollama run llama3.2:3b
+
+# For coding tasks
+ollama run qwen2.5-coder:7b
+
+# Check running models
+ollama list
+</code></pre>
+<p><strong>Use Ollama in your code (OpenAI-compatible API):</strong></p>
+<pre><code class="language-typescript">// Ollama exposes OpenAI-compatible API at localhost:11434
+const response = await fetch('http://localhost:11434/v1/chat/completions', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+      model: 'qwen2.5:7b',
+    messages: [{ role: 'user', content: 'Hello!' }]
+  })
+});
+</code></pre>
+<p><strong>Or with OpenAI SDK (just change base URL):</strong></p>
+<pre><code class="language-typescript">import OpenAI from 'openai';
+
+// For local development (free)
+const localLLM = new OpenAI({
+  baseURL: 'http://localhost:11434/v1',
+  apiKey: 'not-needed'  // Ollama doesn't need a key
+});
+
+// For production (paid, better quality)
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
+
+// Use same code, just switch client
+const client = process.env.USE_LOCAL ? localLLM : openai;
+</code></pre>
+<p><strong>Local embeddings (also free):</strong></p>
+<pre><code class="language-bash"># Download embedding model
+ollama pull nomic-embed-text
+</code></pre>
+<pre><code class="language-typescript">const embedding = await fetch('http://localhost:11434/api/embeddings', {
+  method: 'POST',
+  body: JSON.stringify({
+    model: 'nomic-embed-text',
+    prompt: 'Your text here'
+  })
+});
+</code></pre>
+<p><strong>Recommended workflow:</strong></p>
+<ol>
+<li><strong>Learning/dev:</strong> Use Ollama (free, works offline)</li>
+<li><strong>Testing quality:</strong> Use OpenAI (if your account has free credits or pay-as-you-go)</li>
+<li><strong>Production:</strong> Use OpenAI or Anthropic (paid)</li>
+</ol>
+<p><strong>Resources:</strong></p>
+<ul>
+<li>Ollama: https://ollama.com/</li>
+<li>Model library: https://ollama.com/library</li>
+<li>LM Studio (GUI alternative): https://lmstudio.ai/</li>
+</ul>
+<hr />
+<h3>Reranking (improves retrieval quality)</h3>
+<p><strong>Why:</strong> Vector search returns &quot;similar&quot; but not always &quot;best&quot;. Reranking fixes this.</p>
+<p><strong>Topics:</strong></p>
+<ul>
+<li>What is reranking? (re-score retrieved chunks)</li>
+<li>Cohere Rerank API (easy to add)</li>
+<li>Cross-encoder models (more advanced)</li>
+</ul>
+<p><strong>Resources:</strong></p>
+<ol>
+<li>
+<p><strong>Cohere Rerank</strong><br />
+https://docs.cohere.com/docs/rerank</p>
+</li>
+<li>
+<p><strong>Why Reranking Matters</strong><br />
+https://www.pinecone.io/learn/series/rag/rerankers/</p>
+</li>
+</ol>
+<p><strong>Practice:</strong></p>
+<ul>
+<li>After vector search, call rerank API</li>
+<li>Use top 3–5 reranked chunks for LLM</li>
+</ul>
+<hr />
+<h3>Multi-turn Conversation (chat history)</h3>
+<p><strong>Why:</strong> Real users ask follow-up questions. &quot;What about X?&quot; needs context.</p>
+<p><strong>Topics:</strong></p>
+<ul>
+<li>Store conversation history in DB</li>
+<li>Include last N messages in prompt</li>
+<li>Manage context window limits</li>
+</ul>
+<p><strong>Practice:</strong></p>
+<ul>
+<li>Add <code>chat_sessions</code> and <code>messages</code> tables</li>
+<li><code>/chat</code> endpoint includes last 5 messages in prompt</li>
+<li>Handle &quot;context too long&quot; by summarizing or trimming</li>
+</ul>
+<hr />
+<h3>Error Handling for LLM APIs</h3>
+<p><strong>Why:</strong> APIs fail. Rate limits, timeouts, outages happen.</p>
+<p><strong>Topics:</strong></p>
+<ul>
+<li>Retry with exponential backoff</li>
+<li>Timeout handling</li>
+<li>Graceful degradation (&quot;Sorry, try again&quot;)</li>
+<li>Multiple provider fallback (OpenAI → Anthropic)</li>
+</ul>
+<p><strong>Practice:</strong></p>
+<ul>
+<li>Wrap LLM calls in try/catch</li>
+<li>Add retry logic (max 3 attempts)</li>
+<li>Return friendly error to user</li>
+</ul>
+<hr />
+<h2>Interview Preparation</h2>
+<h3>What interviewers ask for GenAI/RAG roles</h3>
+<p><strong>System design questions:</strong></p>
+<ul>
+<li>&quot;Design a chat-with-docs system for 1000 users&quot;</li>
+<li>&quot;How would you handle 10GB of documents?&quot;</li>
+<li>&quot;How do you ensure answers are accurate?&quot;</li>
+</ul>
+<p><strong>Technical questions:</strong></p>
+<ul>
+<li>&quot;Explain RAG step by step&quot;</li>
+<li>&quot;What's the difference between embeddings and fine-tuning?&quot;</li>
+<li>&quot;How do you prevent prompt injection?&quot;</li>
+<li>&quot;How do you evaluate a RAG system?&quot;</li>
+</ul>
+<p><strong>Behavioral / portfolio:</strong></p>
+<ul>
+<li>&quot;Walk me through your project architecture&quot;</li>
+<li>&quot;What was the hardest bug you fixed?&quot;</li>
+<li>&quot;How did you decide chunk size?&quot;</li>
+</ul>
+<h3>How to talk about your project (template)</h3>
+<blockquote>
+<p>&quot;I built a RAG-based knowledge chat system where users can upload documents and ask questions with cited answers.</p>
+<p><strong>Architecture:</strong> Express + TypeScript backend, Postgres with pgvector for embeddings, OpenAI for generation, Angular frontend with streaming.</p>
+<p><strong>Key features:</strong> Role-based access (users only see their org's docs), citation links, feedback collection, automated evaluation suite.</p>
+<p><strong>Challenges I solved:</strong></p>
+<ul>
+<li>Chunking strategy: tested 500/800/1200 chars, 800 worked best for our docs</li>
+<li>Prompt injection: treated retrieved text as untrusted, used structured outputs</li>
+<li>Evaluation: built 50-question test set, 87% answer accuracy</li>
+</ul>
+<p><strong>What I'd improve:</strong> Add reranking, better PDF parsing, cost dashboard.&quot;</p>
+</blockquote>
+<hr />
+<h2>Starter Code Templates</h2>
+<h3>docker-compose.yml (Postgres + pgvector)</h3>
+<pre><code class="language-yaml">version: '3.8'
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: rag-postgres
+    environment:
+      POSTGRES_USER: raguser
+      POSTGRES_PASSWORD: ragpass
+      POSTGRES_DB: ragdb
+    ports:
+      - &quot;5432:5432&quot;
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+</code></pre>
+<h3>.env (example)</h3>
+<pre><code>DATABASE_URL=postgresql://raguser:ragpass@localhost:5432/ragdb
+OPENAI_API_KEY=sk-your-key-here
+PORT=3000
+</code></pre>
+<h3>Prisma schema (starter)</h3>
+<pre><code class="language-prisma">generator client {
+  provider = &quot;prisma-client-js&quot;
+}
+
+datasource db {
+  provider = &quot;postgresql&quot;
+  url      = env(&quot;DATABASE_URL&quot;)
+}
+
+model User {
+  id           String       @id @default(uuid())
+  email        String       @unique
+  passwordHash String
+  createdAt    DateTime     @default(now())
+  memberships  Membership[]
+  chatSessions ChatSession[]
+}
+
+model Org {
+  id          String       @id @default(uuid())
+  name        String
+  createdAt   DateTime     @default(now())
+  memberships Membership[]
+  documents   Document[]
+}
+
+model Membership {
+  id     String @id @default(uuid())
+  userId String
+  orgId  String
+  role   String @default(&quot;member&quot;) // member, admin
+  user   User   @relation(fields: [userId], references: [id])
+  org    Org    @relation(fields: [orgId], references: [id])
+
+  @@unique([userId, orgId])
+}
+
+model Document {
+  id        String   @id @default(uuid())
+  orgId     String
+  title     String
+  sourceUrl String?
+  createdAt DateTime @default(now())
+  org       Org      @relation(fields: [orgId], references: [id])
+  chunks    Chunk[]
+}
+
+model Chunk {
+  id         String   @id @default(uuid())
+  documentId String
+  content    String
+  chunkIndex Int
+  metadata   Json?
+  // embedding added via raw SQL (pgvector)
+  document   Document @relation(fields: [documentId], references: [id])
+
+  @@index([documentId])
+}
+
+model ChatSession {
+  id        String    @id @default(uuid())
+  userId    String
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id])
+  messages  Message[]
+}
+
+model Message {
+  id            String      @id @default(uuid())
+  sessionId     String
+  role          String      // user, assistant
+  content       String
+  citations     Json?       // array of chunk IDs
+  tokenCount    Int?
+  latencyMs     Int?
+  createdAt     DateTime    @default(now())
+  session       ChatSession @relation(fields: [sessionId], references: [id])
+  feedback      Feedback?
+}
+
+model Feedback {
+  id        String   @id @default(uuid())
+  messageId String   @unique
+  rating    Int      // 1 = bad, 5 = good
+  comment   String?
+  createdAt DateTime @default(now())
+  message   Message  @relation(fields: [messageId], references: [id])
+}
+</code></pre>
+<h3>Project folder structure</h3>
+<pre><code>rag-knowledge-chat/
+├── docker-compose.yml
+├── .env
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── prisma/
+│   └── schema.prisma
+├── src/
+│   ├── index.ts              # entry point
+│   ├── server.ts             # Express setup
+│   ├── routes/
+│   │   ├── health.ts
+│   │   ├── auth.ts
+│   │   ├── documents.ts
+│   │   └── chat.ts
+│   ├── services/
+│   │   ├── llm/
+│   │   │   └── openai.ts     # LLM wrapper
+│   │   ├── rag/
+│   │   │   ├── ingest.ts     # URL fetch + chunk
+│   │   │   ├── embed.ts      # embeddings
+│   │   │   └── retrieve.ts   # vector search
+│   │   └── auth/
+│   │       └── password.ts
+│   ├── db/
+│   │   └── client.ts         # Prisma client
+│   └── utils/
+│       └── validation.ts     # Zod schemas
+├── eval/
+│   ├── questions.json
+│   └── run-eval.ts
+└── README.md
+</code></pre>
+<hr />
+<h2>Summary: Your 10-Week Milestones</h2>
+<p>| Week | Focus | Milestone |
+|------|-------|-----------|
+| 1 | Setup + Postgres | API + DB running, users/orgs tables |
+| 2 | Ingestion | URL fetch + chunking works |
+| 3 | LLM basics | Can call OpenAI, get structured response |
+| 4 | Embeddings | Chunks have vectors, similarity search works |
+| 5 | RAG chat | <code>/chat</code> returns answer + citations |
+| 6 | Polish RAG | Streaming, better prompts, refusal logic |
+| 7 | Evaluation | <code>npm run eval</code> with 20+ test cases |
+| 8 | Monitoring | Logs + feedback + basic dashboard |
+| 9 | Security | RBAC + prompt injection defenses |
+| 10 | Deploy | Live demo + README + portfolio ready |</p>
+<hr />
+<h2>Quick Reference: Key Resources</h2>
+<h3>🏆 Tier 1: Official Docs (Always Use First)</h3>
+<p>| Resource | URL | Why |
+|----------|-----|-----|
+| OpenAI Docs | https://platform.openai.com/docs | Your main LLM provider |
+| Anthropic Prompt Guide | https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview | Best prompt engineering guide |
+| Prisma Docs | https://www.prisma.io/docs | ORM you'll use |
+| pgvector | https://github.com/pgvector/pgvector | Vector DB extension |
+| LlamaIndex Docs | https://docs.llamaindex.ai/ | Production RAG patterns |</p>
+<h3>🏆 Tier 1: Essential Guides</h3>
+<p>| Resource | URL | Why |
+|----------|-----|-----|
+| Prompt Engineering Guide | https://www.promptingguide.ai/ | Most comprehensive, cited everywhere |
+| OWASP LLM Top 10 | https://owasp.org/www-project-top-10-for-large-language-model-applications/ | Security standard |
+| OpenAI Cookbook | https://cookbook.openai.com/ | Real-world code examples |
+| MTEB Leaderboard | https://huggingface.co/spaces/mteb/leaderboard | Compare embedding models |</p>
+<h3>🎥 YouTube (Best Channels for GenAI)</h3>
+<p>| Channel | Focus | URL |
+|---------|-------|-----|
+| <strong>Fireship</strong> | Short explainers (&lt; 10 min) | https://www.youtube.com/@Fireship |
+| <strong>AI Jason</strong> | RAG tutorials (practical) | https://www.youtube.com/@AIJasonZ |
+| <strong>Sam Witteveen</strong> | RAG deep dives (advanced) | https://www.youtube.com/@samwitteveenai |
+| <strong>Andrej Karpathy</strong> | LLM internals (theory) | https://www.youtube.com/@AndrejKarpathy |
+| <strong>James Briggs</strong> | Pinecone/RAG tutorials | https://www.youtube.com/@jamesbriggs |</p>
+<h3>💬 Communities (Ask Questions Here)</h3>
+<p>| Community | URL | Best For |
+|-----------|-----|----------|
+| r/LocalLLaMA | https://www.reddit.com/r/LocalLLaMA/ | Local models, Ollama |
+| Hugging Face Discord | https://huggingface.co/join/discord | Models, datasets |
+| LangChain Discord | https://discord.gg/langchain | RAG, chains, agents |
+| OpenAI Developer Forum | https://community.openai.com/ | API questions |</p>
+<h3>📊 Comparison Tools (For Decisions)</h3>
+<p>| Tool | URL | What It Compares |
+|------|-----|------------------|
+| MTEB Leaderboard | https://huggingface.co/spaces/mteb/leaderboard | Embedding models |
+| Chatbot Arena | https://lmarena.ai/ | LLM quality rankings |
+| Vector DB Comparison | https://superlinked.com/vector-db-comparison | Vector databases |</p>
+<hr />
+<h2>Next Steps</h2>
+<ol>
+<li><strong>Today:</strong> Setup your project folder, install Docker, create <code>docker-compose.yml</code></li>
+<li><strong>This week:</strong> Complete Week 1 milestones (API + DB + basic tables)</li>
+<li><strong>Ask me:</strong> When you're stuck on any step, I'll help debug or explain</li>
+</ol>
+<p>Good luck. Consistency &gt; intensity. 🚀</p>
+
+        </div>
+    </div>
+</body>
+</html>

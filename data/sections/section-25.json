@@ -1,0 +1,475 @@
+{
+  "meta": {
+    "id": 25,
+    "title": "Hardware & Inference Stack",
+    "description": "GPUs, TPUs, Serving, Optimization",
+    "slug": "hardware-inference-stack",
+    "totalNodes": 26,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 25,
+      "title": "Hardware & Inference Stack",
+      "slug": "25-hardware--inference-stack",
+      "description": "GPUs, TPUs, Serving, Optimization",
+      "line": 1764
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s25_b28_HARDWARE",
+      "label": "HARDWARE & INFERENCE",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://www.nvidia.com/en-us/data-center/",
+      "tooltip": "Hardware Overview",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "HARDWARE"
+    },
+    {
+      "id": "s25_b28_CHIPS",
+      "label": "Accelerators",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://www.nvidia.com/en-us/data-center/",
+      "tooltip": "AI Accelerators",
+      "style": "fill:#76FF03,stroke:#64DD17,color:#000000",
+      "parent": null,
+      "original_id": "CHIPS"
+    },
+    {
+      "id": "s25_b28_SERVE",
+      "label": "Serving",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://docs.vllm.ai/",
+      "tooltip": "Inference Serving",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SERVE"
+    },
+    {
+      "id": "s25_b28_OPT",
+      "label": "Optimization",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://huggingface.co/docs/transformers/perf_train_gpu_one",
+      "tooltip": "Optimization",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OPT"
+    },
+    {
+      "id": "s25_b28_COST",
+      "label": "Cost",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://modal.com/",
+      "tooltip": "Cost Optimization",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COST"
+    },
+    {
+      "id": "s25_b28_CH1",
+      "label": "NVIDIA GPUs",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://www.nvidia.com/en-us/data-center/h100/",
+      "tooltip": "NVIDIA H100",
+      "style": null,
+      "parent": null,
+      "original_id": "CH1"
+    },
+    {
+      "id": "s25_b28_CH2",
+      "label": "Google TPUs",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://cloud.google.com/tpu",
+      "tooltip": "Google TPU",
+      "style": null,
+      "parent": null,
+      "original_id": "CH2"
+    },
+    {
+      "id": "s25_b28_CH3",
+      "label": "AMD MI300",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://www.amd.com/en/products/accelerators/instinct/mi300.html",
+      "tooltip": "AMD MI300",
+      "style": null,
+      "parent": null,
+      "original_id": "CH3"
+    },
+    {
+      "id": "s25_b28_CH4",
+      "label": "AWS Inferentia",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://aws.amazon.com/machine-learning/inferentia/",
+      "tooltip": "AWS Inferentia",
+      "style": null,
+      "parent": null,
+      "original_id": "CH4"
+    },
+    {
+      "id": "s25_b28_S1",
+      "label": "vLLM",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://docs.vllm.ai/",
+      "tooltip": "vLLM Docs",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s25_b28_S2",
+      "label": "TensorRT-LLM",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://nvidia.github.io/TensorRT-LLM/",
+      "tooltip": "TensorRT-LLM",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s25_b28_S3",
+      "label": "TGI",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://huggingface.co/docs/text-generation-inference/",
+      "tooltip": "TGI Docs",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s25_b28_S4",
+      "label": "Triton",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://developer.nvidia.com/triton-inference-server",
+      "tooltip": "Triton Server",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s25_b28_O1",
+      "label": "Quantization",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://huggingface.co/docs/transformers/quantization",
+      "tooltip": "Quantization Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "O1"
+    },
+    {
+      "id": "s25_b28_O2",
+      "label": "Batching",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://docs.vllm.ai/en/latest/",
+      "tooltip": "Batching in vLLM",
+      "style": null,
+      "parent": null,
+      "original_id": "O2"
+    },
+    {
+      "id": "s25_b28_O3",
+      "label": "KV Cache",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://www.anyscale.com/blog/continuous-batching-llm-inference",
+      "tooltip": "KV Cache",
+      "style": null,
+      "parent": null,
+      "original_id": "O3"
+    },
+    {
+      "id": "s25_b28_O4",
+      "label": "Speculative Decode",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://huggingface.co/blog/assisted-generation",
+      "tooltip": "Speculative Decoding",
+      "style": null,
+      "parent": null,
+      "original_id": "O4"
+    },
+    {
+      "id": "s25_b28_CO1",
+      "label": "Spot Instances",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://aws.amazon.com/ec2/spot/",
+      "tooltip": "AWS Spot Instances",
+      "style": null,
+      "parent": null,
+      "original_id": "CO1"
+    },
+    {
+      "id": "s25_b28_CO2",
+      "label": "Serverless",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://modal.com/",
+      "tooltip": "Modal Serverless",
+      "style": null,
+      "parent": null,
+      "original_id": "CO2"
+    },
+    {
+      "id": "s25_b28_CO3",
+      "label": "Caching",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://redis.io/docs/interact/search-and-query/",
+      "tooltip": "Redis Caching",
+      "style": null,
+      "parent": null,
+      "original_id": "CO3"
+    },
+    {
+      "id": "s25_b28_CO4",
+      "label": "Model Routing",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 28,
+      "url": "https://github.com/BerriAI/litellm",
+      "tooltip": "LiteLLM Router",
+      "style": null,
+      "parent": null,
+      "original_id": "CO4"
+    },
+    {
+      "id": "s25_b110_llama.cpp",
+      "label": "llama.cpp",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 110,
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "tooltip": "CPU inference for LLMs",
+      "style": null,
+      "parent": null,
+      "original_id": "llama.cpp"
+    },
+    {
+      "id": "s25_b111_ExLlamaV2",
+      "label": "ExLlamaV2",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 111,
+      "url": "https://github.com/turboderp/exllamav2",
+      "tooltip": "Fast GPTQ inference",
+      "style": null,
+      "parent": null,
+      "original_id": "ExLlamaV2"
+    },
+    {
+      "id": "s25_b112_GGML",
+      "label": "GGML",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 112,
+      "url": "https://github.com/ggerganov/ggml",
+      "tooltip": "Tensor library for ML",
+      "style": null,
+      "parent": null,
+      "original_id": "GGML"
+    },
+    {
+      "id": "s25_b113_Banana",
+      "label": "Banana",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 113,
+      "url": "https://www.banana.dev/",
+      "tooltip": "GPU serverless platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Banana"
+    },
+    {
+      "id": "s25_b114_RunPod",
+      "label": "RunPod",
+      "type": "node",
+      "section_id": 25,
+      "block_id": 114,
+      "url": "https://www.runpod.io/",
+      "tooltip": "GPU cloud platform",
+      "style": null,
+      "parent": null,
+      "original_id": "RunPod"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s25_b28_HARDWARE",
+      "target": "s25_b28_CHIPS",
+      "type": "thick",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_HARDWARE",
+      "target": "s25_b28_SERVE",
+      "type": "thick",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_HARDWARE",
+      "target": "s25_b28_OPT",
+      "type": "thick",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_HARDWARE",
+      "target": "s25_b28_COST",
+      "type": "thick",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_CHIPS",
+      "target": "s25_b28_CH1",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_CHIPS",
+      "target": "s25_b28_CH2",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_CHIPS",
+      "target": "s25_b28_CH3",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_CHIPS",
+      "target": "s25_b28_CH4",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_SERVE",
+      "target": "s25_b28_S1",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_SERVE",
+      "target": "s25_b28_S2",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_SERVE",
+      "target": "s25_b28_S3",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_SERVE",
+      "target": "s25_b28_S4",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_OPT",
+      "target": "s25_b28_O1",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_OPT",
+      "target": "s25_b28_O2",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_OPT",
+      "target": "s25_b28_O3",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_OPT",
+      "target": "s25_b28_O4",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_COST",
+      "target": "s25_b28_CO1",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_COST",
+      "target": "s25_b28_CO2",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_COST",
+      "target": "s25_b28_CO3",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    },
+    {
+      "source": "s25_b28_COST",
+      "target": "s25_b28_CO4",
+      "type": "regular",
+      "section_id": 25,
+      "block_id": 28
+    }
+  ]
+}

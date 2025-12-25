@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Knowledge Hub</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>🧠 AI Knowledge Hub</h1>
+        <p>Explore the AI landscape through focused, interactive knowledge graphs</p>
+    </header>
+    
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-value" id="total-nodes">1,192</div>
+            <div class="stat-label">Total Nodes</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="total-graphs">11</div>
+            <div class="stat-label">Knowledge Graphs</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="total-sections">47</div>
+            <div class="stat-label">Sections</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="total-tools">187+</div>
+            <div class="stat-label">AI Tools</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="total-urls">1,144</div>
+            <div class="stat-label">Resource Links</div>
+        </div>
+    </div>
+    
+    <main>
+        <h2 class="section-title"><span>📊</span> Knowledge Graphs</h2>
+        
+        <div class="graphs-grid" id="graphs-grid">
+            <!-- Featured: Learning Path -->
+            <a href="pages/learning.html" class="graph-card featured-card">
+                <div class="card-header">
+                    <div class="card-icon icon-purple">🎓</div>
+                    <div class="card-title">
+                        <h3>AI Learning Path</h3>
+                        <p>Structured curriculum from beginner to advanced</p>
+                    </div>
+                    <span class="featured-badge">Learning</span>
+                    <span class="card-arrow">→</span>
+                </div>
+                <div class="card-stats">
+                    <div class="card-stat">📚 <strong>264</strong> Resources</div>
+                    <div class="card-stat">📖 <strong>25</strong> Topics</div>
+                    <div class="card-stat">⏱️ <strong>~1000h</strong> Content</div>
+                    <div class="card-stat">🛤️ <strong>5</strong> Levels</div>
+                </div>
+            </a>
+            
+            <!-- GenAI RAG Course - Study Mode -->
+            <a href="pages/study.html" class="graph-card featured-card" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.1)); border-color: rgba(236, 72, 153, 0.3);">
+                <div class="card-header">
+                    <div class="card-icon icon-purple">📖</div>
+                    <div class="card-title">
+                        <h3>GenAI RAG Course</h3>
+                        <p>Interactive study mode with progress tracking</p>
+                    </div>
+                    <span class="featured-badge" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">Study</span>
+                    <span class="card-arrow">→</span>
+                </div>
+                <div class="card-stats">
+                    <div class="card-stat">📚 <strong>8</strong> Modules</div>
+                    <div class="card-stat">📖 <strong>Inline</strong> Content</div>
+                    <div class="card-stat">✅ <strong>Track</strong> Progress</div>
+                </div>
+            </a>
+            
+            <!-- Full Landscape -->
+            <a href="pages/landscape.html" class="graph-card featured-card">
+                <div class="card-header">
+                    <div class="card-icon icon-indigo">🌐</div>
+                    <div class="card-title">
+                        <h3>Complete AI Landscape</h3>
+                        <p>Full knowledge graph with all sections</p>
+                    </div>
+                    <span class="featured-badge">Complete</span>
+                    <span class="card-arrow">→</span>
+                </div>
+                <div class="card-stats">
+                    <div class="card-stat">🔵 <strong>1,192</strong> Nodes</div>
+                    <div class="card-stat">🔗 <strong>1,058</strong> Edges</div>
+                    <div class="card-stat">📁 <strong>47</strong> Sections</div>
+                    <div class="card-stat">🔗 <strong>1,144</strong> URLs</div>
+                </div>
+            </a>
+            
+            <!-- AI Tools Directory -->
+            <a href="pages/tools.html" class="graph-card featured-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.1)); border-color: rgba(16, 185, 129, 0.3);">
+                <div class="card-header">
+                    <div class="card-icon icon-green">🧰</div>
+                    <div class="card-title">
+                        <h3>AI Tools Directory</h3>
+                        <p>Curated collection of AI tools & utilities</p>
+                    </div>
+                    <span class="featured-badge" style="background: linear-gradient(135deg, #10b981, #06b6d4);">Tools</span>
+                    <span class="card-arrow">→</span>
+                </div>
+                <div class="card-stats">
+                    <div class="card-stat">🛠️ <strong>187+</strong> Tools</div>
+                    <div class="card-stat">📂 <strong>20</strong> Categories</div>
+                    <div class="card-stat">🔗 <strong>Direct</strong> URLs</div>
+                    <div class="card-stat">💰 <strong>Pricing</strong> Info</div>
+                </div>
+            </a>
+            
+            <!-- Generated graph cards will go here -->
+        </div>
+        
+        <div class="quick-links">
+            <a href="pages/landscape.html" class="quick-link">🗺️ Full Graph View</a>
+            <a href="pages/learning.html" class="quick-link">🎓 Learning Path</a>
+            <a href="pages/sections.html" class="quick-link">📑 47 Sections</a>
+            <a href="pages/tools.html" class="quick-link">🧰 AI Tools</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>AI Knowledge Hub • Built with D3.js • <a href="pages/landscape.html">View Full Landscape</a></p>
+    </footer>
+
+    <script>
+        const graphColors = [
+            'icon-blue', 'icon-green', 'icon-orange', 'icon-pink', 
+            'icon-cyan', 'icon-teal', 'icon-red', 'icon-rose',
+            'icon-purple', 'icon-indigo'
+        ];
+        
+        async function loadGraphs() {
+            try {
+                const response = await fetch('data/graphs/index.json');
+                const data = await response.json();
+                
+                const grid = document.getElementById('graphs-grid');
+                
+                data.graphs.forEach((graph, index) => {
+                    const card = document.createElement('a');
+                    card.href = `pages/viewer.html?graph=${graph.id}`;
+                    card.className = 'graph-card';
+                    
+                    const colorClass = graphColors[index % graphColors.length];
+                    
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <div class="card-icon ${colorClass}">${graph.icon}</div>
+                            <div class="card-title">
+                                <h3>${graph.title}</h3>
+                                <p>${graph.sections} sections</p>
+                            </div>
+                            <span class="card-arrow">→</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="card-stat">🔵 <strong>${graph.nodes}</strong> Nodes</div>
+                            <div class="card-stat">🔗 <strong>${graph.edges}</strong> Edges</div>
+                        </div>
+                    `;
+                    
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Failed to load graphs:', error);
+            }
+        }
+        
+        loadGraphs();
+    </script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 30,
+    "title": "Classical AI & Symbolic Reasoning",
+    "description": "Search, Knowledge Rep, Expert Systems",
+    "slug": "classical-ai-symbolic-reasoning",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 30,
+      "title": "Classical AI & Symbolic Reasoning",
+      "slug": "30-classical-ai--symbolic-reasoning",
+      "description": "Search, Knowledge Rep, Expert Systems",
+      "line": 2246
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s30_b35_CLASSICAL",
+      "label": "CLASSICAL AI",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://aima.cs.berkeley.edu/",
+      "tooltip": "AIMA Textbook",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLASSICAL"
+    },
+    {
+      "id": "s30_b35_SEARCH",
+      "label": "Search Algorithms",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.redblobgames.com/pathfinding/",
+      "tooltip": "Search Algorithms",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SEARCH"
+    },
+    {
+      "id": "s30_b35_KR",
+      "label": "Knowledge Rep",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.w3.org/TR/owl2-overview/",
+      "tooltip": "OWL Overview",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "KR"
+    },
+    {
+      "id": "s30_b35_REASON",
+      "label": "Reasoning",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://en.wikipedia.org/wiki/Automated_reasoning",
+      "tooltip": "Automated Reasoning",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REASON"
+    },
+    {
+      "id": "s30_b35_EXPERT",
+      "label": "Expert Systems",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://en.wikipedia.org/wiki/Expert_system",
+      "tooltip": "Expert Systems",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EXPERT"
+    },
+    {
+      "id": "s30_b35_S1",
+      "label": "BFS/DFS",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://visualgo.net/en/dfsbfs",
+      "tooltip": "BFS/DFS Visualization",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s30_b35_S2",
+      "label": "A* Search",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+      "tooltip": "A* Introduction",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s30_b35_S3",
+      "label": "Minimax/Alpha-Beta",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.chessprogramming.org/Alpha-Beta",
+      "tooltip": "Alpha-Beta Pruning",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s30_b35_S4",
+      "label": "Monte Carlo Tree Search",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.nature.com/articles/nature16961",
+      "tooltip": "AlphaGo MCTS",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s30_b35_K1",
+      "label": "Ontologies OWL",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.w3.org/OWL/",
+      "tooltip": "W3C OWL",
+      "style": null,
+      "parent": null,
+      "original_id": "K1"
+    },
+    {
+      "id": "s30_b35_K2",
+      "label": "Semantic Web RDF",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.w3.org/RDF/",
+      "tooltip": "W3C RDF",
+      "style": null,
+      "parent": null,
+      "original_id": "K2"
+    },
+    {
+      "id": "s30_b35_K3",
+      "label": "Knowledge Graphs",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://neo4j.com/use-cases/knowledge-graph/",
+      "tooltip": "Neo4j Knowledge Graphs",
+      "style": null,
+      "parent": null,
+      "original_id": "K3"
+    },
+    {
+      "id": "s30_b35_K4",
+      "label": "Frame-based",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://en.wikipedia.org/wiki/Frame_(artificial_intelligence)",
+      "tooltip": "Frame Representation",
+      "style": null,
+      "parent": null,
+      "original_id": "K4"
+    },
+    {
+      "id": "s30_b35_R1",
+      "label": "First-Order Logic",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://plato.stanford.edu/entries/logic-classical/",
+      "tooltip": "Classical Logic",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s30_b35_R2",
+      "label": "Theorem Proving",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://leanprover.github.io/",
+      "tooltip": "Lean Theorem Prover",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s30_b35_R3",
+      "label": "Constraint Satisfaction",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://developers.google.com/optimization/cp",
+      "tooltip": "OR-Tools CSP",
+      "style": null,
+      "parent": null,
+      "original_id": "R3"
+    },
+    {
+      "id": "s30_b35_R4",
+      "label": "SAT Solvers",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.msoos.org/cryptominisat5/",
+      "tooltip": "SAT Solvers",
+      "style": null,
+      "parent": null,
+      "original_id": "R4"
+    },
+    {
+      "id": "s30_b35_E1",
+      "label": "Rule-Based Systems",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://clips.sourceforge.io/",
+      "tooltip": "CLIPS",
+      "style": null,
+      "parent": null,
+      "original_id": "E1"
+    },
+    {
+      "id": "s30_b35_E2",
+      "label": "Production Systems",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.drools.org/",
+      "tooltip": "Drools",
+      "style": null,
+      "parent": null,
+      "original_id": "E2"
+    },
+    {
+      "id": "s30_b35_E3",
+      "label": "CLIPS/Drools",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://clips.sourceforge.io/",
+      "tooltip": "CLIPS Expert System",
+      "style": null,
+      "parent": null,
+      "original_id": "E3"
+    },
+    {
+      "id": "s30_b35_E4",
+      "label": "Hybrid Neuro-Symbolic",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://arxiv.org/abs/2105.05330",
+      "tooltip": "Neuro-Symbolic AI",
+      "style": null,
+      "parent": null,
+      "original_id": "E4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_SEARCH",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_KR",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_REASON",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_EXPERT",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    }
+  ]
+}

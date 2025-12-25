@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "title": "AI Learning Path",
+    "description": "A practical roadmap from beginner to AI practitioner.",
+    "version": "1.0"
+  },
+  "levels": [
+    {
+      "id": 1,
+      "title": "Foundations",
+      "description": "Core programming, math intuition, and how data works"
+    },
+    {
+      "id": 2,
+      "title": "ML Basics",
+      "description": "Classical ML concepts, evaluation, and feature thinking"
+    },
+    {
+      "id": 3,
+      "title": "Deep Learning",
+      "description": "Neural nets, training dynamics, and modern architectures"
+    },
+    {
+      "id": 4,
+      "title": "LLMs & GenAI",
+      "description": "Prompting, embeddings, RAG, and building LLM apps"
+    },
+    {
+      "id": 5,
+      "title": "Production & MLOps",
+      "description": "Deployment, monitoring, evaluation, and systems concerns"
+    }
+  ],
+  "sections": [
+    {
+      "id": 101,
+      "level": 1,
+      "title": "Python & Tooling"
+    },
+    {
+      "id": 102,
+      "level": 1,
+      "title": "Math & Data Intuition"
+    },
+    {
+      "id": 103,
+      "level": 1,
+      "title": "Git, CLI, and Reproducibility"
+    },
+    {
+      "id": 201,
+      "level": 2,
+      "title": "Core ML Concepts"
+    },
+    {
+      "id": 202,
+      "level": 2,
+      "title": "Model Evaluation"
+    },
+    {
+      "id": 203,
+      "level": 2,
+      "title": "Hands-on ML Practice"
+    },
+    {
+      "id": 301,
+      "level": 3,
+      "title": "Neural Networks Fundamentals"
+    },
+    {
+      "id": 302,
+      "level": 3,
+      "title": "Modern Architectures"
+    },
+    {
+      "id": 303,
+      "level": 3,
+      "title": "Training & Debugging"
+    },
+    {
+      "id": 401,
+      "level": 4,
+      "title": "Prompting & LLM Basics"
+    },
+    {
+      "id": 402,
+      "level": 4,
+      "title": "Embeddings & Retrieval"
+    },
+    {
+      "id": 403,
+      "level": 4,
+      "title": "RAG & LLM App Building"
+    },
+    {
+      "id": 501,
+      "level": 5,
+      "title": "Serving & Deployment"
+    },
+    {
+      "id": 502,
+      "level": 5,
+      "title": "Monitoring & Evaluation"
+    },
+    {
+      "id": 503,
+      "level": 5,
+      "title": "Governance & Safety"
+    },
+    {
+      "id": 1,
+      "level": 0,
+      "title": "Reference & Tools"
+    },
+    {
+      "id": 2,
+      "level": 0,
+      "title": "Communities & News"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "py-automate",
+      "label": "Automate the Boring Stuff with Python",
+      "type": "book",
+      "section_id": 101,
+      "hours": 12,
+      "difficulty": "beginner",
+      "url": "https://automatetheboringstuff.com/",
+      "tooltip": "A practical, beginner-friendly Python book (free online)."
+    },
+    {
+      "id": "py-realpython-beginners",
+      "label": "Real Python: Python Basics",
+      "type": "article",
+      "section_id": 101,
+      "hours": 6,
+      "difficulty": "beginner",
+      "url": "https://realpython.com/python-basics/"
+    },
+    {
+      "id": "tool-jupyter",
+      "label": "Jupyter Notebook",
+      "type": "tool",
+      "section_id": 101,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://jupyter.org/"
+    },
+
+    {
+      "id": "math-khan-linear-algebra",
+      "label": "Khan Academy: Linear Algebra",
+      "type": "course",
+      "section_id": 102,
+      "hours": 15,
+      "difficulty": "beginner",
+      "url": "https://www.khanacademy.org/math/linear-algebra"
+    },
+    {
+      "id": "math-3blue1brown-la",
+      "label": "3Blue1Brown: Essence of Linear Algebra",
+      "type": "video",
+      "section_id": 102,
+      "hours": 4,
+      "difficulty": "beginner",
+      "url": "https://www.3blue1brown.com/lessons/linear-algebra"
+    },
+    {
+      "id": "math-statquest",
+      "label": "StatQuest: Statistics Fundamentals",
+      "type": "video",
+      "section_id": 102,
+      "hours": 4,
+      "difficulty": "beginner",
+      "url": "https://www.youtube.com/@statquest"
+    },
+
+    {
+      "id": "git-book",
+      "label": "Pro Git (book)",
+      "type": "book",
+      "section_id": 103,
+      "hours": 6,
+      "difficulty": "beginner",
+      "url": "https://git-scm.com/book/en/v2"
+    },
+    {
+      "id": "tool-uv",
+      "label": "uv: Python package manager",
+      "type": "tool",
+      "section_id": 103,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://github.com/astral-sh/uv"
+    },
+    {
+      "id": "practice-git-branching",
+      "label": "Learn Git Branching (interactive)",
+      "type": "practice",
+      "section_id": 103,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://learngitbranching.js.org/"
+    },
+
+    {
+      "id": "ml-ng-coursera",
+      "label": "Machine Learning Specialization (Andrew Ng)",
+      "type": "course",
+      "section_id": 201,
+      "hours": 30,
+      "difficulty": "beginner",
+      "url": "https://www.coursera.org/specializations/machine-learning-introduction"
+    },
+    {
+      "id": "ml-scikit",
+      "label": "scikit-learn User Guide",
+      "type": "article",
+      "section_id": 201,
+      "hours": 4,
+      "difficulty": "beginner",
+      "url": "https://scikit-learn.org/stable/user_guide.html"
+    },
+    {
+      "id": "ml-hands-on-oreilly",
+      "label": "Hands-On Machine Learning (Géron)",
+      "type": "book",
+      "section_id": 201,
+      "hours": 20,
+      "difficulty": "intermediate",
+      "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/"
+    },
+
+    {
+      "id": "eval-precision-recall",
+      "label": "Precision/Recall and ROC-AUC (primer)",
+      "type": "article",
+      "section_id": 202,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc"
+    },
+    {
+      "id": "eval-calibration",
+      "label": "Model Calibration (overview)",
+      "type": "article",
+      "section_id": 202,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://scikit-learn.org/stable/modules/calibration.html"
+    },
+    {
+      "id": "tool-wandb",
+      "label": "Weights & Biases",
+      "type": "tool",
+      "section_id": 202,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://wandb.ai/"
+    },
+
+    {
+      "id": "practice-kaggle-microcourses",
+      "label": "Kaggle Micro-courses",
+      "type": "practice",
+      "section_id": 203,
+      "hours": 10,
+      "difficulty": "beginner",
+      "url": "https://www.kaggle.com/learn"
+    },
+    {
+      "id": "practice-titanic",
+      "label": "Kaggle: Titanic (first ML project)",
+      "type": "practice",
+      "section_id": 203,
+      "hours": 6,
+      "difficulty": "beginner",
+      "url": "https://www.kaggle.com/competitions/titanic"
+    },
+
+    {
+      "id": "dl-ng-deeplearning",
+      "label": "DeepLearning.AI Deep Learning Specialization",
+      "type": "course",
+      "section_id": 301,
+      "hours": 40,
+      "difficulty": "intermediate",
+      "url": "https://www.coursera.org/specializations/deep-learning"
+    },
+    {
+      "id": "dl-fastai",
+      "label": "fast.ai Practical Deep Learning",
+      "type": "course",
+      "section_id": 301,
+      "hours": 20,
+      "difficulty": "intermediate",
+      "url": "https://course.fast.ai/"
+    },
+
+    {
+      "id": "arch-attention",
+      "label": "The Illustrated Transformer",
+      "type": "article",
+      "section_id": 302,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://jalammar.github.io/illustrated-transformer/"
+    },
+    {
+      "id": "arch-resnet-paper",
+      "label": "Deep Residual Learning (ResNet paper)",
+      "type": "article",
+      "section_id": 302,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://arxiv.org/abs/1512.03385"
+    },
+
+    {
+      "id": "train-debug-umap",
+      "label": "Troubleshooting model training (guide)",
+      "type": "article",
+      "section_id": 303,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://karpathy.github.io/2019/04/25/recipe/"
+    },
+    {
+      "id": "tool-tensorboard",
+      "label": "TensorBoard",
+      "type": "tool",
+      "section_id": 303,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://www.tensorflow.org/tensorboard"
+    },
+
+    {
+      "id": "llm-openai-cookbook",
+      "label": "OpenAI Cookbook",
+      "type": "article",
+      "section_id": 401,
+      "hours": 6,
+      "difficulty": "beginner",
+      "url": "https://cookbook.openai.com/"
+    },
+    {
+      "id": "llm-prompting-guide",
+      "label": "Prompt Engineering Guide",
+      "type": "article",
+      "section_id": 401,
+      "hours": 4,
+      "difficulty": "beginner",
+      "url": "https://www.promptingguide.ai/"
+    },
+
+    {
+      "id": "embed-openai-embeddings",
+      "label": "Embeddings (concepts + examples)",
+      "type": "article",
+      "section_id": 402,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://platform.openai.com/docs/guides/embeddings"
+    },
+    {
+      "id": "tool-faiss",
+      "label": "FAISS",
+      "type": "tool",
+      "section_id": 402,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://github.com/facebookresearch/faiss"
+    },
+
+    {
+      "id": "rag-langchain",
+      "label": "LangChain: Retrieval (docs)",
+      "type": "article",
+      "section_id": 403,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://python.langchain.com/docs/how_to/#retrieval"
+    },
+    {
+      "id": "rag-llamaindex",
+      "label": "LlamaIndex: RAG (docs)",
+      "type": "article",
+      "section_id": 403,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://docs.llamaindex.ai/"
+    },
+
+    {
+      "id": "serve-fastapi",
+      "label": "FastAPI",
+      "type": "tool",
+      "section_id": 501,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://fastapi.tiangolo.com/"
+    },
+    {
+      "id": "serve-docker",
+      "label": "Docker (get started)",
+      "type": "article",
+      "section_id": 501,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://docs.docker.com/get-started/"
+    },
+
+    {
+      "id": "eval-promptfoo",
+      "label": "promptfoo (LLM evals)",
+      "type": "tool",
+      "section_id": 502,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://www.promptfoo.dev/"
+    },
+    {
+      "id": "eval-langsmith",
+      "label": "LangSmith",
+      "type": "tool",
+      "section_id": 502,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://smith.langchain.com/"
+    },
+
+    {
+      "id": "safety-owasp-llm",
+      "label": "OWASP Top 10 for LLM Applications",
+      "type": "article",
+      "section_id": 503,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+    },
+    {
+      "id": "safety-nist-ai-rmf",
+      "label": "NIST AI Risk Management Framework",
+      "type": "article",
+      "section_id": 503,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+
+    {
+      "id": "ref-arxiv",
+      "label": "arXiv (research search)",
+      "type": "tool",
+      "section_id": 1,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://arxiv.org/"
+    },
+    {
+      "id": "ref-huggingface",
+      "label": "Hugging Face (models + datasets)",
+      "type": "tool",
+      "section_id": 1,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://huggingface.co/"
+    },
+
+    {
+      "id": "community-ml-sub",
+      "label": "r/MachineLearning",
+      "type": "community",
+      "section_id": 2,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://www.reddit.com/r/MachineLearning/"
+    },
+    {
+      "id": "community-hn-ai",
+      "label": "Hacker News: AI",
+      "type": "community",
+      "section_id": 2,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://news.ycombinator.com/"
+    }
+  ]
+}

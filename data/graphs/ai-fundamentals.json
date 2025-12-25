@@ -1,0 +1,2615 @@
+{
+  "meta": {
+    "id": "ai-fundamentals",
+    "title": "AI Fundamentals & History",
+    "description": "Core concepts, history, and foundational knowledge",
+    "icon": "\ud83d\udcda",
+    "totalNodes": 136,
+    "totalEdges": 131,
+    "totalSections": 7
+  },
+  "sections": [
+    {
+      "id": 1,
+      "title": "AI History Timeline (1950-2025)",
+      "slug": "1-ai-history-timeline-1950-2025",
+      "description": "Complete AI evolution journey",
+      "line": 51
+    },
+    {
+      "id": 2,
+      "title": "AI Domain Hierarchy",
+      "slug": "2-ai-domain-hierarchy",
+      "description": "AI \u2192 ML \u2192 DL \u2192 GenAI tree",
+      "line": 153
+    },
+    {
+      "id": 5,
+      "title": "ML Types & Algorithms",
+      "slug": "5-ml-types--algorithms",
+      "description": "Supervised, Unsupervised, RL",
+      "line": 318
+    },
+    {
+      "id": 6,
+      "title": "Deep Learning Architectures",
+      "slug": "6-deep-learning-architectures",
+      "description": "CNN, RNN, Transformers",
+      "line": 385
+    },
+    {
+      "id": 13,
+      "title": "Learning Roadmap",
+      "slug": "13-learning-roadmap",
+      "description": "Beginner to Advanced path",
+      "line": 749
+    },
+    {
+      "id": 30,
+      "title": "Classical AI & Symbolic Reasoning",
+      "slug": "30-classical-ai--symbolic-reasoning",
+      "description": "Search, Knowledge Rep, Expert Systems",
+      "line": 2246
+    },
+    {
+      "id": 31,
+      "title": "Probabilistic ML & Bayesian Methods",
+      "slug": "31-probabilistic-ml--bayesian-methods",
+      "description": "PGMs, MCMC, Gaussian Processes",
+      "line": 2322
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s1_b1_Birth",
+      "label": "\ud83c\udf82 1950s-60s: Birth of AI",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/History_of_artificial_intelligence",
+      "tooltip": "Birth of AI",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Birth"
+    },
+    {
+      "id": "s1_b1_B1",
+      "label": "1950: Turing Test",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Turing_test",
+      "tooltip": "Turing Test",
+      "style": null,
+      "parent": "s1_b1_Birth",
+      "original_id": "B1"
+    },
+    {
+      "id": "s1_b1_B2",
+      "label": "1956: Dartmouth Conference",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+      "tooltip": "Dartmouth Conference",
+      "style": null,
+      "parent": "s1_b1_Birth",
+      "original_id": "B2"
+    },
+    {
+      "id": "s1_b1_B3",
+      "label": "1958: Perceptron",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Perceptron",
+      "tooltip": "Perceptron",
+      "style": null,
+      "parent": "s1_b1_Birth",
+      "original_id": "B3"
+    },
+    {
+      "id": "s1_b1_Winter1",
+      "label": "\u2744\ufe0f 1970s-80s: First AI Winter",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/AI_winter",
+      "tooltip": "First AI Winter",
+      "style": "fill:#455A64,stroke:#263238,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Winter1"
+    },
+    {
+      "id": "s1_b1_W1",
+      "label": "1969: Perceptron Limits",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Perceptrons_(book)",
+      "tooltip": "Perceptrons Book",
+      "style": null,
+      "parent": "s1_b1_Winter1",
+      "original_id": "W1"
+    },
+    {
+      "id": "s1_b1_W2",
+      "label": "1974: Funding Cuts",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/AI_winter",
+      "tooltip": "AI Winter History",
+      "style": null,
+      "parent": "s1_b1_Winter1",
+      "original_id": "W2"
+    },
+    {
+      "id": "s1_b1_W3",
+      "label": "1980s: Expert Systems Rise",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Expert_system",
+      "tooltip": "Expert Systems",
+      "style": null,
+      "parent": "s1_b1_Winter1",
+      "original_id": "W3"
+    },
+    {
+      "id": "s1_b1_Revival",
+      "label": "\ud83c\udf31 1990s: Statistical Revival",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Machine_learning#History",
+      "tooltip": "Statistical Revival",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Revival"
+    },
+    {
+      "id": "s1_b1_R1",
+      "label": "1989: LeNet CNN",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "http://yann.lecun.com/exdb/lenet/",
+      "tooltip": "LeNet",
+      "style": null,
+      "parent": "s1_b1_Revival",
+      "original_id": "R1"
+    },
+    {
+      "id": "s1_b1_R2",
+      "label": "1997: LSTM",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "LSTM",
+      "style": null,
+      "parent": "s1_b1_Revival",
+      "original_id": "R2"
+    },
+    {
+      "id": "s1_b1_R3",
+      "label": "1997: DeepBlue Chess",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+      "tooltip": "DeepBlue",
+      "style": null,
+      "parent": "s1_b1_Revival",
+      "original_id": "R3"
+    },
+    {
+      "id": "s1_b1_DL",
+      "label": "\ud83d\ude80 2010s: Deep Learning Era",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Deep_learning",
+      "tooltip": "Deep Learning Era",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s1_b1_D1",
+      "label": "2012: AlexNet/ImageNet",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "tooltip": "AlexNet Paper",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D1"
+    },
+    {
+      "id": "s1_b1_D2",
+      "label": "2014: GANs, Seq2Seq",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/1406.2661",
+      "tooltip": "GANs Paper",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D2"
+    },
+    {
+      "id": "s1_b1_D3",
+      "label": "2017: Transformers",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "tooltip": "Attention Is All You Need",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D3"
+    },
+    {
+      "id": "s1_b1_D4",
+      "label": "2018: BERT, GPT",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/1810.04805",
+      "tooltip": "BERT Paper",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D4"
+    },
+    {
+      "id": "s1_b1_GenAI",
+      "label": "\u2b50 2020s: GenAI Revolution",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+      "tooltip": "GenAI Revolution",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GenAI"
+    },
+    {
+      "id": "s1_b1_G1",
+      "label": "2020: GPT-3",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/2005.14165",
+      "tooltip": "GPT-3 Paper",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G1"
+    },
+    {
+      "id": "s1_b1_G2",
+      "label": "2022: ChatGPT, Stable Diffusion",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://openai.com/blog/chatgpt",
+      "tooltip": "ChatGPT",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G2"
+    },
+    {
+      "id": "s1_b1_G3",
+      "label": "2023: GPT-4, Claude, Gemini",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://openai.com/gpt-4",
+      "tooltip": "GPT-4",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G3"
+    },
+    {
+      "id": "s1_b1_G4",
+      "label": "2024: Sora, Claude 3.5, Agents",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://openai.com/sora",
+      "tooltip": "Sora",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G4"
+    },
+    {
+      "id": "s1_b1_G5",
+      "label": "2025: MCP, GraphRAG, Multimodal",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://modelcontextprotocol.io/",
+      "tooltip": "MCP",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G5"
+    },
+    {
+      "id": "s2_b2_AI",
+      "label": "Artificial Intelligence",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "tooltip": "Learn about AI",
+      "style": "fill:#1565C0,stroke:#0D47A1,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AI"
+    },
+    {
+      "id": "s2_b2_ML",
+      "label": "Machine Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://scikit-learn.org/stable/",
+      "tooltip": "Scikit-learn Docs",
+      "style": "fill:#2E7D32,stroke:#1B5E20,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ML"
+    },
+    {
+      "id": "s2_b2_ES",
+      "label": "Expert Systems",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://en.wikipedia.org/wiki/Expert_system",
+      "tooltip": "Expert Systems",
+      "style": null,
+      "parent": null,
+      "original_id": "ES"
+    },
+    {
+      "id": "s2_b2_RO",
+      "label": "Robotics",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://www.ros.org/",
+      "tooltip": "ROS Robotics",
+      "style": null,
+      "parent": null,
+      "original_id": "RO"
+    },
+    {
+      "id": "s2_b2_SL",
+      "label": "Supervised Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "tooltip": "Supervised Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "SL"
+    },
+    {
+      "id": "s2_b2_UL",
+      "label": "Unsupervised Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://scikit-learn.org/stable/unsupervised_learning.html",
+      "tooltip": "Unsupervised Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "UL"
+    },
+    {
+      "id": "s2_b2_RL",
+      "label": "Reinforcement Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://spinningup.openai.com/",
+      "tooltip": "OpenAI Spinning Up RL",
+      "style": null,
+      "parent": null,
+      "original_id": "RL"
+    },
+    {
+      "id": "s2_b2_DL",
+      "label": "Deep Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://pytorch.org/tutorials/",
+      "tooltip": "PyTorch Tutorials",
+      "style": "fill:#7B1FA2,stroke:#4A148C,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s2_b2_CNN",
+      "label": "CNNs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://cs231n.stanford.edu/",
+      "tooltip": "Stanford CS231n - CNNs",
+      "style": null,
+      "parent": null,
+      "original_id": "CNN"
+    },
+    {
+      "id": "s2_b2_RNN",
+      "label": "RNNs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "Understanding LSTMs",
+      "style": null,
+      "parent": null,
+      "original_id": "RNN"
+    },
+    {
+      "id": "s2_b2_TR",
+      "label": "Transformers",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Illustrated Transformer",
+      "style": "fill:#C62828,stroke:#B71C1C,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TR"
+    },
+    {
+      "id": "s2_b2_GAN",
+      "label": "GANs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://developers.google.com/machine-learning/gan",
+      "tooltip": "Google GAN Course",
+      "style": null,
+      "parent": null,
+      "original_id": "GAN"
+    },
+    {
+      "id": "s2_b2_DIFF",
+      "label": "Diffusion Models",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/",
+      "tooltip": "Diffusion Models Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "DIFF"
+    },
+    {
+      "id": "s2_b2_LLM",
+      "label": "LLMs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "Prompting Guide",
+      "style": "fill:#EF6C00,stroke:#E65100,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLM"
+    },
+    {
+      "id": "s2_b2_GENAI",
+      "label": "Generative AI",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI Courses",
+      "style": "fill:#00838F,stroke:#006064,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GENAI"
+    },
+    {
+      "id": "s5_b5_ML",
+      "label": "MACHINE LEARNING",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/",
+      "tooltip": "Scikit-learn Docs",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ML"
+    },
+    {
+      "id": "s5_b5_SL",
+      "label": "Supervised",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "tooltip": "Supervised Learning",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SL"
+    },
+    {
+      "id": "s5_b5_UL",
+      "label": "Unsupervised",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/unsupervised_learning.html",
+      "tooltip": "Unsupervised Learning",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "UL"
+    },
+    {
+      "id": "s5_b5_RL",
+      "label": "Reinforcement",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://spinningup.openai.com/",
+      "tooltip": "OpenAI Spinning Up",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RL"
+    },
+    {
+      "id": "s5_b5_CLASS",
+      "label": "Classification",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html#classification",
+      "tooltip": "Classification",
+      "style": "fill:#43A047,stroke:#2E7D32,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLASS"
+    },
+    {
+      "id": "s5_b5_REG",
+      "label": "Regression",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html#regression",
+      "tooltip": "Regression",
+      "style": "fill:#66BB6A,stroke:#43A047,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REG"
+    },
+    {
+      "id": "s5_b5_C1",
+      "label": "Logistic Reg",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression",
+      "tooltip": "Logistic Regression",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s5_b5_C2",
+      "label": "Random Forest",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html#forest",
+      "tooltip": "Random Forest",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s5_b5_C3",
+      "label": "SVM",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/svm.html",
+      "tooltip": "SVM Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s5_b5_R1",
+      "label": "Linear Reg",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares",
+      "tooltip": "Linear Regression",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s5_b5_R2",
+      "label": "XGBoost",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://xgboost.readthedocs.io/",
+      "tooltip": "XGBoost Docs",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s5_b5_CLUST",
+      "label": "Clustering",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "tooltip": "Clustering",
+      "style": "fill:#FB8C00,stroke:#F57C00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLUST"
+    },
+    {
+      "id": "s5_b5_DIM",
+      "label": "Dim Reduction",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "tooltip": "Dimensionality Reduction",
+      "style": "fill:#FFA726,stroke:#FB8C00,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DIM"
+    },
+    {
+      "id": "s5_b5_K1",
+      "label": "K-Means",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/clustering.html#k-means",
+      "tooltip": "K-Means",
+      "style": null,
+      "parent": null,
+      "original_id": "K1"
+    },
+    {
+      "id": "s5_b5_K2",
+      "label": "DBSCAN",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/clustering.html#dbscan",
+      "tooltip": "DBSCAN",
+      "style": null,
+      "parent": null,
+      "original_id": "K2"
+    },
+    {
+      "id": "s5_b5_D1",
+      "label": "PCA",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html#pca",
+      "tooltip": "PCA Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s5_b5_D2",
+      "label": "t-SNE",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://scikit-learn.org/stable/modules/manifold.html#t-sne",
+      "tooltip": "t-SNE Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s5_b5_RL1",
+      "label": "Q-Learning",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://www.gymlibrary.dev/",
+      "tooltip": "Q-Learning - Gym",
+      "style": null,
+      "parent": null,
+      "original_id": "RL1"
+    },
+    {
+      "id": "s5_b5_RL2",
+      "label": "PPO",
+      "type": "node",
+      "section_id": 5,
+      "block_id": 5,
+      "url": "https://stable-baselines3.readthedocs.io/",
+      "tooltip": "Stable Baselines3",
+      "style": null,
+      "parent": null,
+      "original_id": "RL2"
+    },
+    {
+      "id": "s6_b6_DL",
+      "label": "DEEP LEARNING",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://pytorch.org/tutorials/",
+      "tooltip": "PyTorch Tutorials",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s6_b6_CNN",
+      "label": "CNN",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://cs231n.stanford.edu/",
+      "tooltip": "Stanford CS231n",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CNN"
+    },
+    {
+      "id": "s6_b6_RNN",
+      "label": "RNN",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "Understanding LSTMs",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RNN"
+    },
+    {
+      "id": "s6_b6_TR",
+      "label": "Transformers",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Illustrated Transformer",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TR"
+    },
+    {
+      "id": "s6_b6_GEN",
+      "label": "Generative",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/",
+      "tooltip": "Generative Models",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GEN"
+    },
+    {
+      "id": "s6_b6_C1",
+      "label": "ResNet",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1512.03385",
+      "tooltip": "ResNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s6_b6_C2",
+      "label": "VGG",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1409.1556",
+      "tooltip": "VGG Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s6_b6_C3",
+      "label": "EfficientNet",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1905.11946",
+      "tooltip": "EfficientNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s6_b6_R1",
+      "label": "LSTM",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "LSTM Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s6_b6_R2",
+      "label": "GRU",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1406.1078",
+      "tooltip": "GRU Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s6_b6_T1",
+      "label": "BERT",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/transformers/model_doc/bert",
+      "tooltip": "BERT on HuggingFace",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s6_b6_T2",
+      "label": "GPT",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/transformers/model_doc/gpt2",
+      "tooltip": "GPT-2 on HuggingFace",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s6_b6_T3",
+      "label": "ViT",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/transformers/model_doc/vit",
+      "tooltip": "ViT on HuggingFace",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s6_b6_G1",
+      "label": "GAN",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://developers.google.com/machine-learning/gan",
+      "tooltip": "Google GAN Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s6_b6_G2",
+      "label": "Diffusion",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/diffusers/",
+      "tooltip": "HuggingFace Diffusers",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s6_b6_G3",
+      "label": "VAE",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://keras.io/examples/generative/vae/",
+      "tooltip": "VAE Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s6_b6_SD",
+      "label": "Stable Diffusion",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://stability.ai/",
+      "tooltip": "Stability AI",
+      "style": null,
+      "parent": null,
+      "original_id": "SD"
+    },
+    {
+      "id": "s6_b6_DALLE",
+      "label": "DALL-E",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://openai.com/dall-e-3",
+      "tooltip": "DALL-E 3",
+      "style": null,
+      "parent": null,
+      "original_id": "DALLE"
+    },
+    {
+      "id": "s30_b35_CLASSICAL",
+      "label": "CLASSICAL AI",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://aima.cs.berkeley.edu/",
+      "tooltip": "AIMA Textbook",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLASSICAL"
+    },
+    {
+      "id": "s30_b35_SEARCH",
+      "label": "Search Algorithms",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.redblobgames.com/pathfinding/",
+      "tooltip": "Search Algorithms",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SEARCH"
+    },
+    {
+      "id": "s30_b35_KR",
+      "label": "Knowledge Rep",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.w3.org/TR/owl2-overview/",
+      "tooltip": "OWL Overview",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "KR"
+    },
+    {
+      "id": "s30_b35_REASON",
+      "label": "Reasoning",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://en.wikipedia.org/wiki/Automated_reasoning",
+      "tooltip": "Automated Reasoning",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REASON"
+    },
+    {
+      "id": "s30_b35_EXPERT",
+      "label": "Expert Systems",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://en.wikipedia.org/wiki/Expert_system",
+      "tooltip": "Expert Systems",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EXPERT"
+    },
+    {
+      "id": "s30_b35_S1",
+      "label": "BFS/DFS",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://visualgo.net/en/dfsbfs",
+      "tooltip": "BFS/DFS Visualization",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s30_b35_S2",
+      "label": "A* Search",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+      "tooltip": "A* Introduction",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s30_b35_S3",
+      "label": "Minimax/Alpha-Beta",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.chessprogramming.org/Alpha-Beta",
+      "tooltip": "Alpha-Beta Pruning",
+      "style": null,
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s30_b35_S4",
+      "label": "Monte Carlo Tree Search",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.nature.com/articles/nature16961",
+      "tooltip": "AlphaGo MCTS",
+      "style": null,
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s30_b35_K1",
+      "label": "Ontologies OWL",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.w3.org/OWL/",
+      "tooltip": "W3C OWL",
+      "style": null,
+      "parent": null,
+      "original_id": "K1"
+    },
+    {
+      "id": "s30_b35_K2",
+      "label": "Semantic Web RDF",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.w3.org/RDF/",
+      "tooltip": "W3C RDF",
+      "style": null,
+      "parent": null,
+      "original_id": "K2"
+    },
+    {
+      "id": "s30_b35_K3",
+      "label": "Knowledge Graphs",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://neo4j.com/use-cases/knowledge-graph/",
+      "tooltip": "Neo4j Knowledge Graphs",
+      "style": null,
+      "parent": null,
+      "original_id": "K3"
+    },
+    {
+      "id": "s30_b35_K4",
+      "label": "Frame-based",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://en.wikipedia.org/wiki/Frame_(artificial_intelligence)",
+      "tooltip": "Frame Representation",
+      "style": null,
+      "parent": null,
+      "original_id": "K4"
+    },
+    {
+      "id": "s30_b35_R1",
+      "label": "First-Order Logic",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://plato.stanford.edu/entries/logic-classical/",
+      "tooltip": "Classical Logic",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s30_b35_R2",
+      "label": "Theorem Proving",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://leanprover.github.io/",
+      "tooltip": "Lean Theorem Prover",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s30_b35_R3",
+      "label": "Constraint Satisfaction",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://developers.google.com/optimization/cp",
+      "tooltip": "OR-Tools CSP",
+      "style": null,
+      "parent": null,
+      "original_id": "R3"
+    },
+    {
+      "id": "s30_b35_R4",
+      "label": "SAT Solvers",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.msoos.org/cryptominisat5/",
+      "tooltip": "SAT Solvers",
+      "style": null,
+      "parent": null,
+      "original_id": "R4"
+    },
+    {
+      "id": "s30_b35_E1",
+      "label": "Rule-Based Systems",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://clips.sourceforge.io/",
+      "tooltip": "CLIPS",
+      "style": null,
+      "parent": null,
+      "original_id": "E1"
+    },
+    {
+      "id": "s30_b35_E2",
+      "label": "Production Systems",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://www.drools.org/",
+      "tooltip": "Drools",
+      "style": null,
+      "parent": null,
+      "original_id": "E2"
+    },
+    {
+      "id": "s30_b35_E3",
+      "label": "CLIPS/Drools",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://clips.sourceforge.io/",
+      "tooltip": "CLIPS Expert System",
+      "style": null,
+      "parent": null,
+      "original_id": "E3"
+    },
+    {
+      "id": "s30_b35_E4",
+      "label": "Hybrid Neuro-Symbolic",
+      "type": "node",
+      "section_id": 30,
+      "block_id": 35,
+      "url": "https://arxiv.org/abs/2105.05330",
+      "tooltip": "Neuro-Symbolic AI",
+      "style": null,
+      "parent": null,
+      "original_id": "E4"
+    },
+    {
+      "id": "s31_b36_PROB",
+      "label": "PROBABILISTIC ML",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://probml.github.io/pml-book/",
+      "tooltip": "Probabilistic ML Book",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROB"
+    },
+    {
+      "id": "s31_b36_BAYES",
+      "label": "Bayesian Methods",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://www.bayesianspectacles.org/",
+      "tooltip": "Bayesian Methods",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "BAYES"
+    },
+    {
+      "id": "s31_b36_PGM",
+      "label": "Graphical Models",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://pgm.stanford.edu/",
+      "tooltip": "Stanford PGM Course",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PGM"
+    },
+    {
+      "id": "s31_b36_INFER",
+      "label": "Inference",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://mc-stan.org/",
+      "tooltip": "Stan",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INFER"
+    },
+    {
+      "id": "s31_b36_GP",
+      "label": "Gaussian Processes",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://gaussianprocess.org/",
+      "tooltip": "Gaussian Processes",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GP"
+    },
+    {
+      "id": "s31_b36_B1",
+      "label": "Bayesian Inference",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://www.pymc.io/",
+      "tooltip": "PyMC",
+      "style": null,
+      "parent": null,
+      "original_id": "B1"
+    },
+    {
+      "id": "s31_b36_B2",
+      "label": "Prior/Posterior",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://seeing-theory.brown.edu/bayesian-inference/",
+      "tooltip": "Bayesian Inference Viz",
+      "style": null,
+      "parent": null,
+      "original_id": "B2"
+    },
+    {
+      "id": "s31_b36_B3",
+      "label": "Bayesian Neural Nets",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://arxiv.org/abs/2007.06823",
+      "tooltip": "Bayesian Deep Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "B3"
+    },
+    {
+      "id": "s31_b36_B4",
+      "label": "Bayesian Optimization",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://ax.dev/",
+      "tooltip": "Ax/BoTorch",
+      "style": null,
+      "parent": null,
+      "original_id": "B4"
+    },
+    {
+      "id": "s31_b36_P1",
+      "label": "Bayesian Networks",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://pgmpy.org/",
+      "tooltip": "pgmpy",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s31_b36_P2",
+      "label": "Markov Random Fields",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://en.wikipedia.org/wiki/Markov_random_field",
+      "tooltip": "MRF",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s31_b36_P3",
+      "label": "Hidden Markov Models",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://hmmlearn.readthedocs.io/",
+      "tooltip": "hmmlearn",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s31_b36_P4",
+      "label": "Conditional Random Fields",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://sklearn-crfsuite.readthedocs.io/",
+      "tooltip": "CRFsuite",
+      "style": null,
+      "parent": null,
+      "original_id": "P4"
+    },
+    {
+      "id": "s31_b36_I1",
+      "label": "MCMC",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://twiecki.io/blog/2015/11/10/mcmc-sampling/",
+      "tooltip": "MCMC Explained",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s31_b36_I2",
+      "label": "Variational Inference",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://arxiv.org/abs/1601.00670",
+      "tooltip": "VI Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s31_b36_I3",
+      "label": "Expectation Maximization",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm",
+      "tooltip": "EM Algorithm",
+      "style": null,
+      "parent": null,
+      "original_id": "I3"
+    },
+    {
+      "id": "s31_b36_I4",
+      "label": "Gibbs Sampling",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://en.wikipedia.org/wiki/Gibbs_sampling",
+      "tooltip": "Gibbs Sampling",
+      "style": null,
+      "parent": null,
+      "original_id": "I4"
+    },
+    {
+      "id": "s31_b36_G1",
+      "label": "GP Regression",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://scikit-learn.org/stable/modules/gaussian_process.html",
+      "tooltip": "sklearn GP",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s31_b36_G2",
+      "label": "GP Classification",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://gpytorch.ai/",
+      "tooltip": "GPyTorch",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s31_b36_G3",
+      "label": "Kernel Methods",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://www.kernel-methods.net/",
+      "tooltip": "Kernel Methods",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s31_b36_G4",
+      "label": "Uncertainty Quantification",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://arxiv.org/abs/2107.03342",
+      "tooltip": "Uncertainty Quantification",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s13_b13_S1",
+      "label": "1. FOUNDATIONS",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.python.org/",
+      "tooltip": "Foundations",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s13_b13_F1",
+      "label": "Python",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.python.org/about/gettingstarted/",
+      "tooltip": "Python Getting Started",
+      "style": null,
+      "parent": "s13_b13_S1",
+      "original_id": "F1"
+    },
+    {
+      "id": "s13_b13_F2",
+      "label": "Math/Stats",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.khanacademy.org/math/statistics-probability",
+      "tooltip": "Khan Academy Stats",
+      "style": null,
+      "parent": "s13_b13_S1",
+      "original_id": "F2"
+    },
+    {
+      "id": "s13_b13_F3",
+      "label": "Pandas/NumPy",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://pandas.pydata.org/docs/getting_started/",
+      "tooltip": "Pandas Docs",
+      "style": null,
+      "parent": "s13_b13_S1",
+      "original_id": "F3"
+    },
+    {
+      "id": "s13_b13_S2",
+      "label": "2. MACHINE LEARNING",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://scikit-learn.org/",
+      "tooltip": "Machine Learning",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s13_b13_M1",
+      "label": "Algorithms",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.coursera.org/learn/machine-learning",
+      "tooltip": "Andrew Ng ML Course",
+      "style": null,
+      "parent": "s13_b13_S2",
+      "original_id": "M1"
+    },
+    {
+      "id": "s13_b13_M2",
+      "label": "Scikit-learn",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://scikit-learn.org/stable/user_guide.html",
+      "tooltip": "Scikit-learn Tutorial",
+      "style": null,
+      "parent": "s13_b13_S2",
+      "original_id": "M2"
+    },
+    {
+      "id": "s13_b13_M3",
+      "label": "Evaluation",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "tooltip": "Model Evaluation",
+      "style": null,
+      "parent": "s13_b13_S2",
+      "original_id": "M3"
+    },
+    {
+      "id": "s13_b13_S3",
+      "label": "3. DEEP LEARNING",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://pytorch.org/",
+      "tooltip": "Deep Learning",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s13_b13_D1",
+      "label": "Neural Nets",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "http://neuralnetworksanddeeplearning.com/",
+      "tooltip": "Neural Networks Book",
+      "style": null,
+      "parent": "s13_b13_S3",
+      "original_id": "D1"
+    },
+    {
+      "id": "s13_b13_D2",
+      "label": "PyTorch",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html",
+      "tooltip": "PyTorch 60min",
+      "style": null,
+      "parent": "s13_b13_S3",
+      "original_id": "D2"
+    },
+    {
+      "id": "s13_b13_D3",
+      "label": "CNNs/RNNs",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://cs231n.stanford.edu/",
+      "tooltip": "Stanford CS231n",
+      "style": null,
+      "parent": "s13_b13_S3",
+      "original_id": "D3"
+    },
+    {
+      "id": "s13_b13_S4",
+      "label": "4. SPECIALIZATION",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://huggingface.co/",
+      "tooltip": "Specialization",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s13_b13_SP1",
+      "label": "NLP / CV",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://huggingface.co/learn/nlp-course/",
+      "tooltip": "HF NLP Course",
+      "style": null,
+      "parent": "s13_b13_S4",
+      "original_id": "SP1"
+    },
+    {
+      "id": "s13_b13_SP2",
+      "label": "Transformers",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://huggingface.co/docs/transformers/",
+      "tooltip": "Transformers Docs",
+      "style": null,
+      "parent": "s13_b13_S4",
+      "original_id": "SP2"
+    },
+    {
+      "id": "s13_b13_SP3",
+      "label": "LLMs",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI",
+      "style": null,
+      "parent": "s13_b13_S4",
+      "original_id": "SP3"
+    },
+    {
+      "id": "s13_b13_S5",
+      "label": "5. PRODUCTION",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://mlops.community/",
+      "tooltip": "Production",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S5"
+    },
+    {
+      "id": "s13_b13_P1",
+      "label": "MLOps",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://madewithml.com/",
+      "tooltip": "Made With ML",
+      "style": null,
+      "parent": "s13_b13_S5",
+      "original_id": "P1"
+    },
+    {
+      "id": "s13_b13_P2",
+      "label": "Deployment",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://fullstackdeeplearning.com/",
+      "tooltip": "Full Stack DL",
+      "style": null,
+      "parent": "s13_b13_S5",
+      "original_id": "P2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_Winter1",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_Revival",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_DL",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_GenAI",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_B1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_B2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_B3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_W1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_W2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_W3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_R1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_R2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_R3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D4",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G4",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G5",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s2_b2_AI",
+      "target": "s2_b2_ML",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_AI",
+      "target": "s2_b2_ES",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_AI",
+      "target": "s2_b2_RO",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_SL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_UL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_RL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_DL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_CNN",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_RNN",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_TR",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_GAN",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_DIFF",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_TR",
+      "target": "s2_b2_LLM",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_LLM",
+      "target": "s2_b2_GENAI",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DIFF",
+      "target": "s2_b2_GENAI",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_GAN",
+      "target": "s2_b2_GENAI",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s5_b5_ML",
+      "target": "s5_b5_SL",
+      "type": "thick",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_ML",
+      "target": "s5_b5_UL",
+      "type": "thick",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_ML",
+      "target": "s5_b5_RL",
+      "type": "thick",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_SL",
+      "target": "s5_b5_CLASS",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_SL",
+      "target": "s5_b5_REG",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLASS",
+      "target": "s5_b5_C1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLASS",
+      "target": "s5_b5_C2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLASS",
+      "target": "s5_b5_C3",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_REG",
+      "target": "s5_b5_R1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_REG",
+      "target": "s5_b5_R2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_UL",
+      "target": "s5_b5_CLUST",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_UL",
+      "target": "s5_b5_DIM",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLUST",
+      "target": "s5_b5_K1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_CLUST",
+      "target": "s5_b5_K2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_DIM",
+      "target": "s5_b5_D1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_DIM",
+      "target": "s5_b5_D2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_RL",
+      "target": "s5_b5_RL1",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s5_b5_RL",
+      "target": "s5_b5_RL2",
+      "type": "regular",
+      "section_id": 5,
+      "block_id": 5
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_CNN",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_RNN",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_TR",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_GEN",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_CNN",
+      "target": "s6_b6_C1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_CNN",
+      "target": "s6_b6_C2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_CNN",
+      "target": "s6_b6_C3",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_RNN",
+      "target": "s6_b6_R1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_RNN",
+      "target": "s6_b6_R2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_TR",
+      "target": "s6_b6_T1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_TR",
+      "target": "s6_b6_T2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_TR",
+      "target": "s6_b6_T3",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_GEN",
+      "target": "s6_b6_G1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_GEN",
+      "target": "s6_b6_G2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_GEN",
+      "target": "s6_b6_G3",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_G2",
+      "target": "s6_b6_SD",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_G2",
+      "target": "s6_b6_DALLE",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_SEARCH",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_KR",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_REASON",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_CLASSICAL",
+      "target": "s30_b35_EXPERT",
+      "type": "thick",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_SEARCH",
+      "target": "s30_b35_S4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_KR",
+      "target": "s30_b35_K4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_REASON",
+      "target": "s30_b35_R4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E1",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E2",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E3",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s30_b35_EXPERT",
+      "target": "s30_b35_E4",
+      "type": "regular",
+      "section_id": 30,
+      "block_id": 35
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_BAYES",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_PGM",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_INFER",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_GP",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_S2",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_S3",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_S4",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_S5",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_F1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_F2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_F3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_M1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_M2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_M3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_D1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_D2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_D3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_SP1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_SP2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_SP3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S5",
+      "target": "s13_b13_P1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S5",
+      "target": "s13_b13_P2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    }
+  ]
+}

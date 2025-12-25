@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Path</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .header-left h1 {
+            font-size: 1.75rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.25rem;
+        }
+        
+        .header-left p {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        .header-stats {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #818cf8;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 8px;
+            color: #818cf8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #818cf8;
+        }
+        
+        /* Progress Overview */
+        .progress-overview {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .progress-bar-container {
+            background: rgba(30, 30, 50, 0.8);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-header h2 {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+        
+        .progress-percent {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #10b981;
+        }
+        
+        .progress-track {
+            height: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .level-indicators {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+        
+        .level-dot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .level-dot:hover {
+            transform: scale(1.1);
+        }
+        
+        .dot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.2);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.2s;
+        }
+        
+        .level-dot.active .dot {
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            border-color: #a5b4fc;
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+        }
+        
+        .level-dot.completed .dot {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            border-color: #6ee7b7;
+        }
+        
+        .level-label {
+            font-size: 0.7rem;
+            color: #9ca3af;
+            text-align: center;
+        }
+        
+        .level-dot.active .level-label {
+            color: #818cf8;
+            font-weight: 600;
+        }
+        
+        /* Filters & Search */
+        .filters-bar {
+            max-width: 1400px;
+            margin: 0 auto 1.5rem;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #818cf8;
+        }
+        
+        .search-box::before {
+            content: '🔍';
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            color: #9ca3af;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+            color: #e0e0e0;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            border-color: transparent;
+            color: white;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+        
+        /* Level Sections */
+        .level-section {
+            margin-bottom: 3rem;
+        }
+        
+        .level-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+        
+        .level-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .level-1 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .level-2 { background: linear-gradient(135deg, #10b981, #047857); }
+        .level-3 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .level-4 { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .level-5 { background: linear-gradient(135deg, #ec4899, #be185d); }
+        .level-0 { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+        
+        .level-info h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .level-info p {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        .level-meta {
+            margin-left: auto;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .level-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+        
+        /* Topics Grid */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+        
+        /* Topic Card */
+        .topic-card {
+            background: rgba(30, 30, 50, 0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .topic-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .topic-header {
+            padding: 1rem 1.25rem;
+            background: rgba(40, 40, 70, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+        
+        .topic-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .topic-count {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: 10px;
+            color: #a5b4fc;
+        }
+        
+        .topic-progress {
+            height: 3px;
+            background: rgba(99, 102, 241, 0.1);
+        }
+        
+        .topic-progress-fill {
+            height: 100%;
+            background: #10b981;
+            transition: width 0.3s;
+        }
+        
+        /* Resources List */
+        .resources-list {
+            padding: 0.5rem;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+        
+        .resource-item {
+            display: flex;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            align-items: flex-start;
+        }
+        
+        .resource-item:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+        
+        .resource-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            flex-shrink: 0;
+            margin-top: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+        
+        .resource-check:hover {
+            border-color: #10b981;
+        }
+        
+        .resource-check.completed {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+        
+        .resource-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .icon-course { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .icon-video { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+        .icon-book { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .icon-article { background: linear-gradient(135deg, #10b981, #047857); }
+        .icon-practice { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+        .icon-tool { background: linear-gradient(135deg, #6366f1, #4338ca); }
+        .icon-community { background: linear-gradient(135deg, #ec4899, #be185d); }
+        
+        .resource-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .resource-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #e0e0e0;
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .resource-meta {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            font-size: 0.75rem;
+        }
+        
+        .resource-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #9ca3af;
+        }
+        
+        .difficulty-tag {
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .diff-beginner { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .diff-intermediate { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .diff-advanced { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        
+        .resource-link {
+            opacity: 0;
+            padding: 0.5rem;
+            color: #818cf8;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        .resource-item:hover .resource-link {
+            opacity: 1;
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: #1a1a2e;
+            border-radius: 16px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            background: rgba(40, 40, 70, 0.5);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .modal-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            line-height: 1;
+        }
+        
+        .modal-close:hover {
+            color: #fff;
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .modal-tags {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .modal-tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .modal-description {
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .modal-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: none;
+            font-size: 0.9rem;
+        }
+        
+        .modal-btn-primary {
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            color: white;
+        }
+        
+        .modal-btn-primary:hover {
+            transform: scale(1.02);
+        }
+        
+        .modal-btn-secondary {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #818cf8;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(20, 20, 40, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 3px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.5);
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #9ca3af;
+        }
+        
+        .empty-state .emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .level-meta {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .level-header {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <h1>🎓 AI Learning Path</h1>
+                <p>Your roadmap from beginner to AI practitioner</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-resources">0</div>
+                    <div class="stat-label">Resources</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="total-hours">0</div>
+                    <div class="stat-label">Est. Hours</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="completed-count">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+                <a href="../index.html" class="nav-link">🏠 Hub</a>
+                <a href="landscape.html" class="nav-link">🌐 Landscape</a>
+                <a href="sections.html" class="nav-link">📑 Sections</a>
+                <a href="tools.html" class="nav-link">🧰 Tools</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Progress Overview -->
+    <div class="progress-overview">
+        <div class="progress-bar-container">
+            <div class="progress-header">
+                <h2>📈 Your Progress</h2>
+                <span class="progress-percent" id="progress-percent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="level-indicators" id="level-indicators"></div>
+        </div>
+    </div>
+    
+    <!-- Filters -->
+    <div class="filters-bar">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search resources...">
+        </div>
+        <div class="filter-group" id="type-filters">
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="course">📚 Courses</button>
+            <button class="filter-btn" data-type="video">📺 Videos</button>
+            <button class="filter-btn" data-type="book">📖 Books</button>
+            <button class="filter-btn" data-type="practice">💪 Practice</button>
+        </div>
+        <div class="filter-group" id="difficulty-filters">
+            <button class="filter-btn" data-difficulty="beginner">Beginner</button>
+            <button class="filter-btn" data-difficulty="intermediate">Intermediate</button>
+            <button class="filter-btn" data-difficulty="advanced">Advanced</button>
+        </div>
+    </div>
+    
+    <main id="main-content"></main>
+    
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title" id="modal-title">Resource</h3>
+                </div>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tags" id="modal-tags"></div>
+                <p class="modal-description" id="modal-description"></p>
+                <div class="modal-actions">
+                    <a href="#" class="modal-btn modal-btn-primary" id="modal-link" target="_blank">
+                        🔗 Open Resource
+                    </a>
+                    <button class="modal-btn modal-btn-secondary" id="modal-complete-btn" onclick="toggleComplete()">
+                        ✓ Mark Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let data = null;
+        let completedResources = new Set();
+        let currentFilter = { type: 'all', difficulty: null, search: '' };
+        let selectedNode = null;
+        
+        const typeIcons = {
+            course: '🎓',
+            video: '📺',
+            book: '📖',
+            article: '📄',
+            practice: '💪',
+            tool: '🔧',
+            community: '👥'
+        };
+        
+        const levelColors = {
+            1: 'level-1',
+            2: 'level-2',
+            3: 'level-3',
+            4: 'level-4',
+            5: 'level-5',
+            0: 'level-0'
+        };
+        
+        // Load data
+        async function init() {
+            try {
+                const candidatePaths = [
+                    '../data/learning-path.json',
+                    '/data/learning-path.json',
+                    'data/learning-path.json'
+                ];
+
+                let lastError = null;
+                for (const path of candidatePaths) {
+                    try {
+                        const response = await fetch(path);
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status} for ${path}`);
+                        }
+                        data = await response.json();
+                        lastError = null;
+                        break;
+                    } catch (e) {
+                        lastError = e;
+                    }
+                }
+
+                if (!data) {
+                    throw lastError || new Error('Unable to load learning path JSON');
+                }
+                
+                // Load saved progress
+                const saved = localStorage.getItem('ai-learning-progress');
+                if (saved) {
+                    completedResources = new Set(JSON.parse(saved));
+                }
+                
+                updateStats();
+                renderLevelIndicators();
+                renderContent();
+                setupEventListeners();
+            } catch (error) {
+                console.error('Failed to load:', error);
+                const isFileProtocol = window.location && window.location.protocol === 'file:';
+                document.getElementById('main-content').innerHTML = `
+                    <div class="empty-state">
+                        <div class="emoji">⚠️</div>
+                        <p>Failed to load learning path data</p>
+                        <p style="margin-top: 0.5rem; color: #9ca3af; font-size: 0.9rem;">
+                            ${isFileProtocol ? 'Tip: open this page via a local server (http://...), not as a file (file://).' : 'Tip: make sure your server is running and that /data/learning-path.json is accessible.'}
+                        </p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Update statistics
+        function updateStats() {
+            const totalResources = data.nodes.length;
+            const totalHours = data.nodes.reduce((sum, n) => sum + (n.hours || 0), 0);
+            const completedCount = completedResources.size;
+            const percent = Math.round((completedCount / totalResources) * 100);
+            
+            document.getElementById('total-resources').textContent = totalResources;
+            document.getElementById('total-hours').textContent = totalHours;
+            document.getElementById('completed-count').textContent = completedCount;
+            document.getElementById('progress-percent').textContent = `${percent}%`;
+            document.getElementById('progress-fill').style.width = `${percent}%`;
+        }
+        
+        // Render level indicators
+        function renderLevelIndicators() {
+            const container = document.getElementById('level-indicators');
+            const allLevels = [...data.levels, { id: 0, title: 'Resources' }];
+            
+            container.innerHTML = allLevels.map(level => {
+                const levelNodes = data.nodes.filter(n => {
+                    const section = data.sections.find(s => s.id === n.section_id);
+                    return section && section.level === level.id;
+                });
+                const completed = levelNodes.filter(n => completedResources.has(n.id)).length;
+                const isComplete = completed === levelNodes.length && levelNodes.length > 0;
+                
+                return `
+                    <div class="level-dot ${isComplete ? 'completed' : ''}" onclick="scrollToLevel(${level.id})">
+                        <div class="dot">${level.id || '📚'}</div>
+                        <div class="level-label">${level.title}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Render main content
+        function renderContent() {
+            const main = document.getElementById('main-content');
+            const allLevels = [...data.levels, { id: 0, title: 'Resources', description: 'Cross-cutting learning materials' }];
+            
+            main.innerHTML = allLevels.map(level => renderLevel(level)).join('');
+        }
+        
+        // Render a level
+        function renderLevel(level) {
+            const levelSections = data.sections.filter(s => s.level === level.id);
+            const levelNodes = data.nodes.filter(n => {
+                const section = data.sections.find(s => s.id === n.section_id);
+                return section && section.level === level.id;
+            });
+            
+            const filteredNodes = filterNodes(levelNodes);
+            // Hide level if no matching resources after any filter
+            const hasActiveFilter = currentFilter.search || currentFilter.type !== 'all' || currentFilter.difficulty;
+            if (filteredNodes.length === 0 && hasActiveFilter) return '';
+            
+            const totalHours = levelNodes.reduce((sum, n) => sum + (n.hours || 0), 0);
+            const completedCount = levelNodes.filter(n => completedResources.has(n.id)).length;
+            
+            return `
+                <div class="level-section" id="level-${level.id}">
+                    <div class="level-header">
+                        <div class="level-badge ${levelColors[level.id]}">${level.id || '📚'}</div>
+                        <div class="level-info">
+                            <h2>${level.id ? `Level ${level.id}: ` : ''}${level.title}</h2>
+                            <p>${level.description || ''}</p>
+                        </div>
+                        <div class="level-meta">
+                            <span>⏱️ ${totalHours}h</span>
+                            <span>✅ ${completedCount}/${levelNodes.length}</span>
+                        </div>
+                    </div>
+                    <div class="topics-grid">
+                        ${levelSections.map(section => renderTopic(section)).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Render a topic card
+        function renderTopic(section) {
+            const sectionNodes = data.nodes.filter(n => n.section_id === section.id);
+            const filteredNodes = filterNodes(sectionNodes);
+            
+            // Hide topic card if no matching resources after any filter
+            const hasActiveFilter = currentFilter.search || currentFilter.type !== 'all' || currentFilter.difficulty;
+            if (filteredNodes.length === 0 && hasActiveFilter) return '';
+            
+            const completedCount = sectionNodes.filter(n => completedResources.has(n.id)).length;
+            const progressPercent = sectionNodes.length > 0 ? (completedCount / sectionNodes.length) * 100 : 0;
+            
+            return `
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <span class="topic-title">${section.title}</span>
+                        <span class="topic-count">${completedCount}/${sectionNodes.length}</span>
+                    </div>
+                    <div class="topic-progress">
+                        <div class="topic-progress-fill" style="width: ${progressPercent}%"></div>
+                    </div>
+                    <div class="resources-list">
+                        ${filteredNodes.map(node => renderResource(node)).join('')}
+                        ${filteredNodes.length === 0 ? '<div class="empty-state"><p>No matching resources</p></div>' : ''}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Render a resource item
+        function renderResource(node) {
+            const isCompleted = completedResources.has(node.id);
+            const icon = typeIcons[node.type] || '📄';
+            
+            return `
+                <div class="resource-item" onclick="openModal('${node.id}')">
+                    <div class="resource-check ${isCompleted ? 'completed' : ''}" 
+                         onclick="event.stopPropagation(); toggleResourceComplete('${node.id}')">
+                        ${isCompleted ? '✓' : ''}
+                    </div>
+                    <div class="resource-icon icon-${node.type}">${icon}</div>
+                    <div class="resource-content">
+                        <div class="resource-label">${node.label}</div>
+                        <div class="resource-meta">
+                            ${node.hours ? `<span class="resource-tag">⏱️ ${node.hours}h</span>` : ''}
+                            ${node.difficulty ? `<span class="difficulty-tag diff-${node.difficulty}">${node.difficulty}</span>` : ''}
+                        </div>
+                    </div>
+                    <a href="${node.url}" class="resource-link" target="_blank" onclick="event.stopPropagation()">↗</a>
+                </div>
+            `;
+        }
+        
+        // Filter nodes
+        function filterNodes(nodes) {
+            return nodes.filter(node => {
+                // Type filter
+                if (currentFilter.type !== 'all' && node.type !== currentFilter.type) return false;
+                
+                // Difficulty filter
+                if (currentFilter.difficulty && node.difficulty !== currentFilter.difficulty) return false;
+                
+                // Search filter
+                if (currentFilter.search) {
+                    const search = currentFilter.search.toLowerCase();
+                    const matchLabel = node.label.toLowerCase().includes(search);
+                    const matchTooltip = (node.tooltip || '').toLowerCase().includes(search);
+                    if (!matchLabel && !matchTooltip) return false;
+                }
+                
+                return true;
+            });
+        }
+        
+        // Setup event listeners
+        function setupEventListeners() {
+            // Type filters
+            document.querySelectorAll('#type-filters .filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#type-filters .filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter.type = btn.dataset.type;
+                    renderContent();
+                });
+            });
+            
+            // Difficulty filters
+            document.querySelectorAll('#difficulty-filters .filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const wasActive = btn.classList.contains('active');
+                    document.querySelectorAll('#difficulty-filters .filter-btn').forEach(b => b.classList.remove('active'));
+                    if (!wasActive) {
+                        btn.classList.add('active');
+                        currentFilter.difficulty = btn.dataset.difficulty;
+                    } else {
+                        currentFilter.difficulty = null;
+                    }
+                    renderContent();
+                });
+            });
+            
+            // Search
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                currentFilter.search = e.target.value;
+                renderContent();
+            });
+        }
+        
+        // Toggle resource complete
+        function toggleResourceComplete(nodeId) {
+            if (completedResources.has(nodeId)) {
+                completedResources.delete(nodeId);
+            } else {
+                completedResources.add(nodeId);
+            }
+            saveProgress();
+            updateStats();
+            renderLevelIndicators();
+            renderContent();
+        }
+        
+        // Save progress to localStorage
+        function saveProgress() {
+            localStorage.setItem('ai-learning-progress', JSON.stringify([...completedResources]));
+        }
+        
+        // Scroll to level
+        function scrollToLevel(levelId) {
+            const element = document.getElementById(`level-${levelId}`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // Modal functions
+        function openModal(nodeId) {
+            const node = data.nodes.find(n => n.id === nodeId);
+            if (!node) return;
+            
+            selectedNode = node;
+            const isCompleted = completedResources.has(nodeId);
+            
+            document.getElementById('modal-title').textContent = node.label;
+            document.getElementById('modal-description').textContent = node.tooltip || 'Click below to open this resource.';
+            document.getElementById('modal-link').href = node.url;
+            
+            document.getElementById('modal-tags').innerHTML = `
+                <span class="modal-tag icon-${node.type}" style="color: white;">${typeIcons[node.type]} ${node.type}</span>
+                ${node.hours ? `<span class="modal-tag" style="background: rgba(99,102,241,0.2); color: #a5b4fc;">⏱️ ${node.hours} hours</span>` : ''}
+                ${node.difficulty ? `<span class="modal-tag diff-${node.difficulty}">${node.difficulty}</span>` : ''}
+            `;
+            
+            const completeBtn = document.getElementById('modal-complete-btn');
+            completeBtn.textContent = isCompleted ? '✓ Completed' : '○ Mark Complete';
+            completeBtn.style.background = isCompleted ? 'rgba(16, 185, 129, 0.2)' : '';
+            completeBtn.style.borderColor = isCompleted ? '#10b981' : '';
+            completeBtn.style.color = isCompleted ? '#10b981' : '';
+            
+            document.getElementById('modal-overlay').classList.add('active');
+        }
+        
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('active');
+            selectedNode = null;
+        }
+        
+        function toggleComplete() {
+            if (selectedNode) {
+                toggleResourceComplete(selectedNode.id);
+                openModal(selectedNode.id); // Refresh modal
+            }
+        }
+        
+        document.getElementById('modal-overlay').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeModal();
+        });
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+        
+        // Initialize
+        init();
+    </script>
+</body>
+</html>

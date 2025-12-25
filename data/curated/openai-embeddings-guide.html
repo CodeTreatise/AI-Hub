@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Embeddings Guide</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        .note { background: rgba(88, 166, 255, 0.1); border-left: 4px solid #58a6ff; padding: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>OpenAI Embeddings Guide</h1>
+            <p>Source: <a href="https://platform.openai.com/docs/guides/embeddings" target="_blank">https://platform.openai.com/docs/guides/embeddings</a> (Offline Guide)</p>
+        </div>
+        <div class="content">
+            
+        <h2>Embeddings Guide</h2>
+        <p>Embeddings are vector representations of text. They convert words and sentences into long lists of numbers (arrays of floating-point numbers).</p>
+
+        <h3>The Core Idea</h3>
+        <p>Text with similar meanings will have similar embedding vectors. This allows us to measure "semantic similarity" mathematically.</p>
+        <ul>
+            <li>"The cat sits" and "The feline rests" are semantically close → High similarity score.</li>
+            <li>"The cat sits" and "The stock market crashed" are far apart → Low similarity score.</li>
+        </ul>
+
+        <h3>Use Cases</h3>
+        <ul>
+            <li><strong>Search (RAG):</strong> Find documents relevant to a query.</li>
+            <li><strong>Clustering:</strong> Group similar documents.</li>
+            <li><strong>Recommendations:</strong> Find items similar to what a user likes.</li>
+        </ul>
+
+        <h3>Models</h3>
+        <p>The current standard model is <code>text-embedding-3-small</code> (or <code>large</code>). It is cheaper and better than the older <code>ada-002</code>.</p>
+
+        <h3>Cosine Similarity</h3>
+        <p>The distance between two vectors is usually measured using Cosine Similarity. A value of 1.0 means identical meaning, 0 means no relation.</p>
+        
+        </div>
+    </div>
+</body>
+</html>

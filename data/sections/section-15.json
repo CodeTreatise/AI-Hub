@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "id": 15,
+    "title": "RAG (Retrieval-Augmented Generation)",
+    "description": "Retrieval-Augmented Generation",
+    "slug": "rag-retrieval-augmented-generation",
+    "totalNodes": 14,
+    "totalEdges": 21
+  },
+  "sections": [
+    {
+      "id": 15,
+      "title": "RAG (Retrieval-Augmented Generation)",
+      "slug": "15-rag-retrieval-augmented-generation",
+      "description": "Retrieval-Augmented Generation",
+      "line": 866
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s15_b15_Ingestion",
+      "label": "INGESTION",
+      "type": "subgraph",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/loading/",
+      "tooltip": "Data Ingestion",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Ingestion"
+    },
+    {
+      "id": "s15_b15_DOC",
+      "label": "Documents",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/loading/",
+      "tooltip": "LlamaIndex Loaders",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "DOC"
+    },
+    {
+      "id": "s15_b15_CHUNK",
+      "label": "Chunking",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/loading/node_parsers/",
+      "tooltip": "Chunking Strategies",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "CHUNK"
+    },
+    {
+      "id": "s15_b15_EMBED",
+      "label": "Embedding",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://huggingface.co/sentence-transformers",
+      "tooltip": "Sentence Transformers",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "EMBED"
+    },
+    {
+      "id": "s15_b15_STORE",
+      "label": "Vector Store",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.pinecone.io/",
+      "tooltip": "Pinecone Vector DB",
+      "style": null,
+      "parent": "s15_b15_Ingestion",
+      "original_id": "STORE"
+    },
+    {
+      "id": "s15_b15_Retrieval",
+      "label": "RETRIEVAL",
+      "type": "subgraph",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/querying/retriever/",
+      "tooltip": "Retrieval Guide",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Retrieval"
+    },
+    {
+      "id": "s15_b15_QUERY",
+      "label": "Query",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/deploying/query_engine/",
+      "tooltip": "Query Engine",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "QUERY"
+    },
+    {
+      "id": "s15_b15_QEMBED",
+      "label": "Query Embed",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://huggingface.co/sentence-transformers",
+      "tooltip": "Query Embedding",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "QEMBED"
+    },
+    {
+      "id": "s15_b15_SEARCH",
+      "label": "Similarity Search",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.trychroma.com/guides",
+      "tooltip": "ChromaDB Guide",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "SEARCH"
+    },
+    {
+      "id": "s15_b15_CONTEXT",
+      "label": "Top-K Results",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/querying/response_synthesizers/",
+      "tooltip": "Context Retrieval",
+      "style": null,
+      "parent": "s15_b15_Retrieval",
+      "original_id": "CONTEXT"
+    },
+    {
+      "id": "s15_b15_Generation",
+      "label": "GENERATION",
+      "type": "subgraph",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/querying/response_synthesizers/",
+      "tooltip": "Response Generation",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Generation"
+    },
+    {
+      "id": "s15_b15_PROMPT",
+      "label": "Prompt + Context",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://docs.llamaindex.ai/en/stable/module_guides/models/prompts/",
+      "tooltip": "Prompt Templates",
+      "style": null,
+      "parent": "s15_b15_Generation",
+      "original_id": "PROMPT"
+    },
+    {
+      "id": "s15_b15_LLM",
+      "label": "LLM",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://platform.openai.com/docs",
+      "tooltip": "OpenAI API",
+      "style": null,
+      "parent": "s15_b15_Generation",
+      "original_id": "LLM"
+    },
+    {
+      "id": "s15_b15_ANSWER",
+      "label": "Answer",
+      "type": "node",
+      "section_id": 15,
+      "block_id": 15,
+      "url": "https://python.langchain.com/docs/modules/chains/",
+      "tooltip": "Answer Generation",
+      "style": null,
+      "parent": "s15_b15_Generation",
+      "original_id": "ANSWER"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s15_b15_DOC",
+      "target": "s15_b15_CHUNK",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_CHUNK",
+      "target": "s15_b15_EMBED",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_EMBED",
+      "target": "s15_b15_STORE",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_QUERY",
+      "target": "s15_b15_QEMBED",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_QEMBED",
+      "target": "s15_b15_SEARCH",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_SEARCH",
+      "target": "s15_b15_CONTEXT",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_CONTEXT",
+      "target": "s15_b15_PROMPT",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_PROMPT",
+      "target": "s15_b15_LLM",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_LLM",
+      "target": "s15_b15_ANSWER",
+      "type": "regular",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_Generation",
+      "type": "thick",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_DOC",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_CHUNK",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_EMBED",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Ingestion",
+      "target": "s15_b15_STORE",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_QUERY",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_QEMBED",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_SEARCH",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Retrieval",
+      "target": "s15_b15_CONTEXT",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Generation",
+      "target": "s15_b15_PROMPT",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Generation",
+      "target": "s15_b15_LLM",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    },
+    {
+      "source": "s15_b15_Generation",
+      "target": "s15_b15_ANSWER",
+      "type": "contains",
+      "section_id": 15,
+      "block_id": 15
+    }
+  ]
+}

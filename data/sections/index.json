@@ -1,0 +1,383 @@
+{
+  "title": "AI Landscape Sections",
+  "description": "Individual section files",
+  "totalSections": 47,
+  "sections": [
+    {
+      "id": 1,
+      "title": "AI History Timeline (1950-2025)",
+      "slug": "ai-history-timeline-1950-2025",
+      "nodes": 23,
+      "edges": 22,
+      "file": "section-01.json"
+    },
+    {
+      "id": 2,
+      "title": "AI Domain Hierarchy",
+      "slug": "ai-domain-hierarchy",
+      "nodes": 15,
+      "edges": 16,
+      "file": "section-02.json"
+    },
+    {
+      "id": 3,
+      "title": "Generative AI Ecosystem",
+      "slug": "generative-ai-ecosystem",
+      "nodes": 13,
+      "edges": 12,
+      "file": "section-03.json"
+    },
+    {
+      "id": 4,
+      "title": "AI/ML Job Roles Hierarchy",
+      "slug": "ai-ml-job-roles-hierarchy",
+      "nodes": 14,
+      "edges": 13,
+      "file": "section-04.json"
+    },
+    {
+      "id": 5,
+      "title": "ML Types & Algorithms",
+      "slug": "ml-types-algorithms",
+      "nodes": 19,
+      "edges": 18,
+      "file": "section-05.json"
+    },
+    {
+      "id": 6,
+      "title": "Deep Learning Architectures",
+      "slug": "deep-learning-architectures",
+      "nodes": 18,
+      "edges": 17,
+      "file": "section-06.json"
+    },
+    {
+      "id": 7,
+      "title": "NLP Evolution Timeline",
+      "slug": "nlp-evolution-timeline",
+      "nodes": 15,
+      "edges": 14,
+      "file": "section-07.json"
+    },
+    {
+      "id": 8,
+      "title": "Computer Vision Tasks",
+      "slug": "computer-vision-tasks",
+      "nodes": 14,
+      "edges": 13,
+      "file": "section-08.json"
+    },
+    {
+      "id": 9,
+      "title": "MLOps Pipeline",
+      "slug": "mlops-pipeline",
+      "nodes": 12,
+      "edges": 15,
+      "file": "section-09.json"
+    },
+    {
+      "id": 10,
+      "title": "AI Tech Stack",
+      "slug": "ai-tech-stack",
+      "nodes": 15,
+      "edges": 11,
+      "file": "section-10.json"
+    },
+    {
+      "id": 11,
+      "title": "GenAI Application Types",
+      "slug": "genai-application-types",
+      "nodes": 19,
+      "edges": 12,
+      "file": "section-11.json"
+    },
+    {
+      "id": 12,
+      "title": "AI Ethics & Safety",
+      "slug": "ai-ethics-safety",
+      "nodes": 13,
+      "edges": 12,
+      "file": "section-12.json"
+    },
+    {
+      "id": 13,
+      "title": "Learning Roadmap",
+      "slug": "learning-roadmap",
+      "nodes": 19,
+      "edges": 18,
+      "file": "section-13.json"
+    },
+    {
+      "id": 14,
+      "title": "AI Agents Architecture",
+      "slug": "ai-agents-architecture",
+      "nodes": 23,
+      "edges": 13,
+      "file": "section-14.json"
+    },
+    {
+      "id": 15,
+      "title": "RAG (Retrieval-Augmented Generation)",
+      "slug": "rag-retrieval-augmented-generation",
+      "nodes": 14,
+      "edges": 21,
+      "file": "section-15.json"
+    },
+    {
+      "id": 16,
+      "title": "Advanced RAG Patterns",
+      "slug": "advanced-rag-patterns",
+      "nodes": 21,
+      "edges": 14,
+      "file": "section-16.json"
+    },
+    {
+      "id": 17,
+      "title": "RAG Evolution & Techniques",
+      "slug": "rag-evolution-techniques",
+      "nodes": 15,
+      "edges": 14,
+      "file": "section-17.json"
+    },
+    {
+      "id": 18,
+      "title": "Emerging AI Technologies (2024-2025)",
+      "slug": "emerging-ai-technologies-2024-2025",
+      "nodes": 17,
+      "edges": 16,
+      "file": "section-18.json"
+    },
+    {
+      "id": 19,
+      "title": "LLM Customization Approaches",
+      "slug": "llm-customization-approaches",
+      "nodes": 36,
+      "edges": 31,
+      "file": "section-19.json"
+    },
+    {
+      "id": 20,
+      "title": "Multimodal AI",
+      "slug": "multimodal-ai",
+      "nodes": 15,
+      "edges": 14,
+      "file": "section-20.json"
+    },
+    {
+      "id": 21,
+      "title": "AI Cloud Platforms",
+      "slug": "ai-cloud-platforms",
+      "nodes": 13,
+      "edges": 9,
+      "file": "section-21.json"
+    },
+    {
+      "id": 22,
+      "title": "Key AI Companies & Models",
+      "slug": "key-ai-companies-models",
+      "nodes": 28,
+      "edges": 12,
+      "file": "section-22.json"
+    },
+    {
+      "id": 23,
+      "title": "LLMOps & Evaluation",
+      "slug": "llmops-evaluation",
+      "nodes": 57,
+      "edges": 37,
+      "file": "section-23.json"
+    },
+    {
+      "id": 24,
+      "title": "AI Security & Governance",
+      "slug": "ai-security-governance",
+      "nodes": 49,
+      "edges": 40,
+      "file": "section-24.json"
+    },
+    {
+      "id": 25,
+      "title": "Hardware & Inference Stack",
+      "slug": "hardware-inference-stack",
+      "nodes": 26,
+      "edges": 20,
+      "file": "section-25.json"
+    },
+    {
+      "id": 26,
+      "title": "Hybrid Search & Retrieval",
+      "slug": "hybrid-search-retrieval",
+      "nodes": 25,
+      "edges": 12,
+      "file": "section-26.json"
+    },
+    {
+      "id": 27,
+      "title": "ML Application Domains",
+      "slug": "ml-application-domains",
+      "nodes": 38,
+      "edges": 36,
+      "file": "section-27.json"
+    },
+    {
+      "id": 28,
+      "title": "Future Trends (2025+)",
+      "slug": "future-trends-2025",
+      "nodes": 32,
+      "edges": 30,
+      "file": "section-28.json"
+    },
+    {
+      "id": 29,
+      "title": "Robotics & Control",
+      "slug": "robotics-control",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-29.json"
+    },
+    {
+      "id": 30,
+      "title": "Classical AI & Symbolic Reasoning",
+      "slug": "classical-ai-symbolic-reasoning",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-30.json"
+    },
+    {
+      "id": 31,
+      "title": "Probabilistic ML & Bayesian Methods",
+      "slug": "probabilistic-ml-bayesian-methods",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-31.json"
+    },
+    {
+      "id": 32,
+      "title": "Speech & Audio AI",
+      "slug": "speech-audio-ai",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-32.json"
+    },
+    {
+      "id": 33,
+      "title": "Distributed Training & Systems",
+      "slug": "distributed-training-systems",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-33.json"
+    },
+    {
+      "id": 34,
+      "title": "Model Optimization & Compilers",
+      "slug": "model-optimization-compilers",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-34.json"
+    },
+    {
+      "id": 35,
+      "title": "Data-Centric AI",
+      "slug": "data-centric-ai",
+      "nodes": 49,
+      "edges": 40,
+      "file": "section-35.json"
+    },
+    {
+      "id": 36,
+      "title": "Adversarial ML & Robustness",
+      "slug": "adversarial-ml-robustness",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-36.json"
+    },
+    {
+      "id": 37,
+      "title": "Privacy-Preserving ML",
+      "slug": "privacy-preserving-ml",
+      "nodes": 42,
+      "edges": 40,
+      "file": "section-37.json"
+    },
+    {
+      "id": 38,
+      "title": "Decision-Making ML",
+      "slug": "decision-making-ml",
+      "nodes": 42,
+      "edges": 40,
+      "file": "section-38.json"
+    },
+    {
+      "id": 39,
+      "title": "Explainability & XAI",
+      "slug": "explainability-xai",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-39.json"
+    },
+    {
+      "id": 40,
+      "title": "Model Calibration & Uncertainty",
+      "slug": "model-calibration-uncertainty",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-40.json"
+    },
+    {
+      "id": 41,
+      "title": "Content Provenance & Authenticity",
+      "slug": "content-provenance-authenticity",
+      "nodes": 21,
+      "edges": 20,
+      "file": "section-41.json"
+    },
+    {
+      "id": 42,
+      "title": "Global AI Ecosystem",
+      "slug": "global-ai-ecosystem",
+      "nodes": 42,
+      "edges": 41,
+      "file": "section-42.json"
+    },
+    {
+      "id": 43,
+      "title": "AI Industry Applications Worldwide",
+      "slug": "ai-industry-applications-worldwide",
+      "nodes": 41,
+      "edges": 40,
+      "file": "section-43.json"
+    },
+    {
+      "id": 44,
+      "title": "AI Research & Academia",
+      "slug": "ai-research-academia",
+      "nodes": 40,
+      "edges": 39,
+      "file": "section-44.json"
+    },
+    {
+      "id": 45,
+      "title": "Open Source AI Movement",
+      "slug": "open-source-ai-movement",
+      "nodes": 37,
+      "edges": 36,
+      "file": "section-45.json"
+    },
+    {
+      "id": 46,
+      "title": "AI Hardware & Compute Global",
+      "slug": "ai-hardware-compute-global",
+      "nodes": 39,
+      "edges": 38,
+      "file": "section-46.json"
+    },
+    {
+      "id": 47,
+      "title": "AI for Social Good & Sustainability",
+      "slug": "ai-for-social-good-sustainability",
+      "nodes": 33,
+      "edges": 32,
+      "file": "section-47.json"
+    }
+  ]
+}

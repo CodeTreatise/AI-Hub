@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Database Foundations | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 2: Database Foundations</h1>
+            <p>Master PostgreSQL, SQL essentials, and pgvector for storing embeddings</p>
+            <div class="module-meta">
+                <span>⏱️ ~90 minutes</span>
+                <span>📊 Beginner</span>
+                <span>📚 Module 2</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Understand what databases are and why PostgreSQL</li>
+            <li>Master essential SQL: SELECT, INSERT, UPDATE, DELETE, JOIN</li>
+            <li>Understand data types, constraints, and indexes</li>
+            <li>Learn about pgvector extension for vector storage</li>
+            <li>Connect to PostgreSQL from Node.js</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section prerequisites">
+            <h2>📋 Prerequisites</h2>
+            
+        <p>Before starting this module, you should have:</p>
+        <ul>
+            <li>Completed Module 1 (Docker running)</li>
+            <li>The RAG project from Module 1 with PostgreSQL container</li>
+            <li>A code editor (VS Code recommended)</li>
+        </ul>
+        <div class="callout callout-info">
+            <strong>No SQL experience needed.</strong> We only use a small, practical subset of SQL in this course (create tables, insert rows, and run a few queries). If you know some SQL already, the later sections on pgvector will be new.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🗄️ What is a Database?</h2>
+            
+        <h3>Why Do We Need Databases?</h3>
+        <p>Imagine you're building an app that stores user profiles. You could save them to a file:</p>
+        
+        <pre><code>// users.json
+[
+  { "id": 1, "name": "Alice", "email": "alice@example.com" },
+  { "id": 2, "name": "Bob", "email": "bob@example.com" }
+]</code></pre>
+        
+        <p>This works for a prototype, but problems emerge quickly:</p>
+        <ul>
+            <li><strong>Speed:</strong> Finding a user requires reading the entire file</li>
+            <li><strong>Concurrency:</strong> What if two requests try to update at the same time?</li>
+            <li><strong>Size:</strong> What when you have millions of users?</li>
+            <li><strong>Relationships:</strong> How do you link users to their orders?</li>
+            <li><strong>Data integrity:</strong> How do you ensure emails are unique?</li>
+        </ul>
+        
+        <p><strong>Databases solve all of these problems</strong> with specialized data structures, indexing, locking, and query optimization.</p>
+        
+        <h3>Why PostgreSQL?</h3>
+        <p>There are many databases, but PostgreSQL stands out:</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Feature</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Why It Matters for RAG</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">pgvector extension</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Store and search embeddings directly in your DB</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">JSONB support</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Store document metadata flexibly</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Full-text search</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Combine vector search with keyword search</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Reliability</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">ACID compliance, data won't get corrupted</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Free & Open Source</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">No licensing fees, huge community</td>
+            </tr>
+        </table>
+        
+        <div class="callout callout-tip">
+            <strong>Key insight:</strong> By using pgvector, we can store documents AND their embeddings in the same database. No need for a separate vector database like Pinecone or Weaviate (though those are great too).
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>📝 SQL Fundamentals</h2>
+            
+        <h3>Connecting to Your Database</h3>
+        <p>First, let's connect to the PostgreSQL container from Module 1:</p>
+        
+        <pre><code># Make sure your containers are running
+$ docker compose up -d
+
+# Connect to PostgreSQL inside the container
+$ docker compose exec db psql -U postgres -d ragdb
+
+# You should see:
+ragdb=# </code></pre>
+        
+        <p>You're now in the PostgreSQL interactive terminal. Let's learn SQL!</p>
+        
+        <h3>CREATE TABLE - Defining Structure</h3>
+        <pre><code>-- Create a table for documents
+CREATE TABLE documents (
+    id          SERIAL PRIMARY KEY,     -- Auto-incrementing ID
+    title       TEXT NOT NULL,          -- Required text
+    content     TEXT NOT NULL,          -- The document text
+    created_at  TIMESTAMP DEFAULT NOW() -- Auto-set timestamp
+);
+
+-- Verify it was created
+\dt</code></pre>
+        
+        <div class="callout callout-info">
+            <strong>SQL Keywords:</strong> SQL is case-insensitive, but convention is UPPERCASE for keywords (SELECT, FROM) and lowercase for your names (documents, title).
+        </div>
+        
+        <h3>INSERT - Adding Data</h3>
+        <pre><code>-- Insert a single document
+INSERT INTO documents (title, content) 
+VALUES ('Getting Started', 'Welcome to our documentation...');
+
+-- Insert multiple documents
+INSERT INTO documents (title, content) VALUES
+    ('Installation', 'First, install Node.js from nodejs.org...'),
+    ('Configuration', 'Create a .env file with your settings...'),
+    ('API Reference', 'The API exposes the following endpoints...');</code></pre>
+        
+        <h3>SELECT - Reading Data</h3>
+        <pre><code>-- Get all documents
+SELECT * FROM documents;
+
+-- Get specific columns
+SELECT id, title FROM documents;
+
+-- Filter with WHERE
+SELECT * FROM documents WHERE id = 1;
+
+-- Search text with LIKE
+SELECT * FROM documents WHERE title LIKE '%API%';
+
+-- Case-insensitive search with ILIKE
+SELECT * FROM documents WHERE content ILIKE '%install%';
+
+-- Order results
+SELECT * FROM documents ORDER BY created_at DESC;
+
+-- Limit results
+SELECT * FROM documents ORDER BY created_at DESC LIMIT 5;</code></pre>
+        
+        <h3>UPDATE - Modifying Data</h3>
+        <pre><code>-- Update a single document
+UPDATE documents 
+SET content = 'Updated content here...' 
+WHERE id = 1;
+
+-- Update multiple fields
+UPDATE documents 
+SET title = 'New Title', content = 'New content' 
+WHERE id = 1;
+
+-- ⚠️ Without WHERE, updates ALL rows!
+-- UPDATE documents SET title = 'Oops'; -- Don't do this!</code></pre>
+        
+        <h3>DELETE - Removing Data</h3>
+        <pre><code>-- Delete specific document
+DELETE FROM documents WHERE id = 1;
+
+-- Delete with condition
+DELETE FROM documents WHERE created_at < '2024-01-01';
+
+-- ⚠️ Without WHERE, deletes ALL rows!
+-- DELETE FROM documents; -- Be very careful!</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🧾 SQL Cheat Sheet (For This Course)</h2>
+            
+        <h3>The Only SQL You Need (Cheat Sheet)</h3>
+        <p>If you're new to SQL, don't try to learn everything at once. For this course, these are the core commands you'll reuse again and again:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">SQL</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Meaning</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Why it matters for RAG</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>CREATE TABLE</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Define storage</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Store documents + chunks + embeddings</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>INSERT</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Save rows</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Ingestion writes chunks + embeddings</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>SELECT</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Read rows</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Retrieval reads top matching chunks</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>WHERE</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Filter rows</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Filter by document, tenant, permissions</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>ORDER BY ... LIMIT</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Top results</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">“Top-K” retrieval is literally this</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>JOIN</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Combine tables</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Join chunks back to document titles/metadata</td>
+            </tr>
+        </table>
+
+        <h3>RAG Retrieval Query (Template)</h3>
+        <p>This is the most important query in a RAG app. You can treat it like a reusable template:</p>
+        <pre><code>SELECT
+  c.content,
+  d.title,
+  1 - (c.embedding <=> $1::vector) AS similarity
+FROM chunks c
+JOIN documents d ON c.document_id = d.id
+ORDER BY c.embedding <=> $1::vector
+LIMIT 5;</code></pre>
+
+        <div class="callout callout-tip">
+            <strong>Key idea:</strong> You don't need “deep SQL” to build RAG. You need one solid retrieval query + clean ingestion.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🧪 Mini-Lab: Practice SQL</h2>
+            
+        <h3>Mini-Lab: SQL Confidence in 15 Minutes</h3>
+        <p>This is a guided practice. Copy/paste each block into <code>psql</code> and compare with the expected output. If you complete this, you have enough SQL for the entire course.</p>
+
+        <h4>Step 0: Connect to Postgres</h4>
+        <pre><code># Start containers (if not running)
+    $ docker compose up -d
+
+    # Open Postgres shell
+    $ docker compose exec db psql -U postgres -d ragdb</code></pre>
+
+        <div class="callout callout-info">
+            <strong>psql tip:</strong> Use <code>\dt</code> to list tables, <code>\d table_name</code> to describe a table, and <code>\q</code> to quit.
+        </div>
+
+        <h4>Exercise 1: Create a table</h4>
+        <pre><code>CREATE TABLE IF NOT EXISTS mini_docs (
+      id SERIAL PRIMARY KEY,
+      title TEXT NOT NULL,
+      content TEXT NOT NULL,
+      created_at TIMESTAMP DEFAULT NOW()
+    );
+
+    \dt</code></pre>
+        <p><em>Expected:</em> You should see <code>mini_docs</code> in the table list.</p>
+
+        <h4>Exercise 2: Insert a few rows</h4>
+        <pre><code>INSERT INTO mini_docs (title, content) VALUES
+      ('Install', 'Install Node.js and Docker.'),
+      ('Auth', 'Use API keys and rotate them.'),
+      ('Errors', 'Handle timeouts and retries.');
+
+    SELECT id, title FROM mini_docs ORDER BY id;</code></pre>
+        <p><em>Expected:</em> 3 rows with IDs 1..3 (or continuing IDs if you ran before).</p>
+
+        <h4>Exercise 3: Filter results</h4>
+        <pre><code>SELECT id, title
+    FROM mini_docs
+    WHERE title ILIKE '%auth%';</code></pre>
+        <p><em>Expected:</em> 1 row (Auth).</p>
+
+        <h4>Exercise 4: Update safely (with WHERE)</h4>
+        <pre><code>UPDATE mini_docs
+    SET content = 'Use API keys, rate limits, and rotate secrets.'
+    WHERE title = 'Auth';
+
+    SELECT title, content FROM mini_docs WHERE title = 'Auth';</code></pre>
+        <p><em>Expected:</em> Updated content for Auth only.</p>
+
+        <h4>Exercise 5: Join (the pattern you’ll reuse in RAG)</h4>
+        <p>RAG commonly stores documents in one table and chunks in another table. This join pattern lets you retrieve chunks and still show the document title.</p>
+        <pre><code>CREATE TABLE IF NOT EXISTS mini_chunks (
+      id SERIAL PRIMARY KEY,
+      doc_id INTEGER NOT NULL REFERENCES mini_docs(id),
+      chunk_text TEXT NOT NULL
+    );
+
+    INSERT INTO mini_chunks (doc_id, chunk_text) VALUES
+      (1, 'Docker installs on Linux/Windows/Mac.'),
+      (1, 'Use docker compose for local dev.'),
+      (2, 'Never expose keys in frontend code.');
+
+    SELECT d.title, c.chunk_text
+    FROM mini_chunks c
+    JOIN mini_docs d ON c.doc_id = d.id
+    ORDER BY d.id, c.id;</code></pre>
+
+        <div class="callout callout-tip">
+            <strong>Big takeaway:</strong> That <code>JOIN</code> is exactly what you’ll do in RAG: search chunks → join back to document metadata.
+        </div>
+        
+        </section>
+    
+        <section class="section content">
+            <h2>🧰 Troubleshooting</h2>
+            
+            <h3>Common Errors & Quick Fixes</h3>
+            <p>If you get stuck in this course, it’s usually one of these. Start here before you assume you “don’t know SQL”.</p>
+
+            <h4>Docker / Compose issues</h4>
+
+            <h5>1) <code>docker: command not found</code></h5>
+            <p><em>Fix:</em> Install Docker Desktop (Mac/Windows) or Docker Engine (Linux). Then re-open your terminal.</p>
+
+            <h5>2) <code>docker compose</code> fails (older installs)</h5>
+            <p><em>Fix:</em> Try <code>docker-compose</code> instead of <code>docker compose</code>, or upgrade Docker.</p>
+
+            <h5>3) Port already in use (e.g. 5432)</h5>
+            <p><em>Symptoms:</em> compose fails to start, or Postgres container keeps restarting.</p>
+            <p><em>Fix options:</em></p>
+            <ul>
+                <li>Stop local Postgres: <code>sudo systemctl stop postgresql</code> (Linux, if applicable)</li>
+                <li>Or change the host port in <code>docker-compose.yml</code> (e.g. <code>15432:5432</code>)</li>
+            </ul>
+
+            <h4>Postgres connection issues</h4>
+
+            <h5>4) <code>could not connect to server</code> / connection refused</h5>
+            <p><em>Fix:</em> Confirm the container is running and healthy:</p>
+            <pre><code>docker compose ps
+    docker compose logs db --tail 100</code></pre>
+            <p>Then try connecting again:</p>
+            <pre><code>docker compose exec db psql -U postgres -d ragdb</code></pre>
+
+            <h5>5) <code>database "ragdb" does not exist</code></h5>
+            <p><em>Fix:</em> Either create it or connect to <code>postgres</code> first:</p>
+            <pre><code>docker compose exec db psql -U postgres -d postgres
+
+    CREATE DATABASE ragdb;
+            \q
+
+    docker compose exec db psql -U postgres -d ragdb</code></pre>
+
+            <h5>6) <code>role "postgres" does not exist</code></h5>
+            <p><em>Fix:</em> Your compose config may use a different user. Check your environment variables in compose, then connect with that user. If you’re unsure:</p>
+            <pre><code>docker compose exec db psql -U postgres -d postgres</code></pre>
+            <p>If that fails, open <code>docker-compose.yml</code> and look for <code>POSTGRES_USER</code>.</p>
+
+            <h4>pgvector issues</h4>
+
+            <h5>7) <code>type "vector" does not exist</code></h5>
+            <p><em>Fix:</em> Enable the extension in your database:</p>
+            <pre><code>CREATE EXTENSION IF NOT EXISTS vector;</code></pre>
+
+            <h5>8) <code>extension "vector" is not available</code></h5>
+            <p><em>Fix:</em> Your Postgres image doesn’t include pgvector. Use an image that includes it (or install it). In this course, the provided Docker setup should already handle this—so if you see this, double-check you’re using the course’s <code>docker-compose.yml</code>.</p>
+
+            <h4>RAG retrieval query issues</h4>
+            <h5>9) <code>operator does not exist: vector &lt;=&gt; vector</code></h5>
+            <p><em>Fix:</em> Same root cause as above: pgvector isn’t enabled/installed in the DB you’re connected to.</p>
+
+            <h5>10) Dimension mismatch when inserting embeddings</h5>
+            <p><em>Symptoms:</em> errors mentioning vector length/dimensions.</p>
+            <p><em>Fix:</em> Ensure your column is declared with the correct dimension, e.g. <code>VECTOR(1536)</code> for many embedding models, and that your embedding generator uses the same model consistently.</p>
+
+            <div class="callout callout-tip">
+                <strong>Debugging mindset:</strong> In GenAI apps, 80% of “it’s broken” is just environment + connectivity. Check containers, logs, and DB extensions first.
+            </div>
+        
+        </section>
+    
+        <section class="section content">
+            <h2>🔧 Data Types & Constraints</h2>
+            
+        <h3>Common PostgreSQL Data Types</h3>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Type</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Use For</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Example</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>TEXT</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Variable-length strings</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Document content</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>VARCHAR(n)</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Limited-length strings</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Usernames (max 50 chars)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>INTEGER</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Whole numbers</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Counts, IDs</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>FLOAT/REAL</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Decimal numbers</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Similarity scores</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>BOOLEAN</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">True/False</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">is_processed flag</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>TIMESTAMP</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Date and time</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">created_at</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>JSONB</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Flexible JSON data</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Document metadata</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>VECTOR(n)</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Embedding vectors (pgvector)</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Document embeddings</td>
+            </tr>
+        </table>
+        
+        <h3>Constraints - Data Integrity Rules</h3>
+        <pre><code>CREATE TABLE users (
+    id          SERIAL PRIMARY KEY,          -- Unique identifier
+    email       TEXT NOT NULL UNIQUE,        -- Required & unique
+    name        TEXT NOT NULL,               -- Required
+    role        TEXT DEFAULT 'user',         -- Default value
+    created_at  TIMESTAMP DEFAULT NOW()
+);
+
+-- What happens when you violate constraints:
+INSERT INTO users (email, name) VALUES ('alice@example.com', 'Alice');  -- ✅ Works
+INSERT INTO users (email, name) VALUES ('alice@example.com', 'Alice2'); -- ❌ Error: duplicate email
+INSERT INTO users (name) VALUES ('Bob');                                -- ❌ Error: email is required</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🔢 pgvector - Vector Storage</h2>
+            
+        <h3>What is pgvector?</h3>
+        <p>pgvector is a PostgreSQL extension that adds a <code>vector</code> data type and operators for similarity search. This is the key technology that makes our RAG application possible!</p>
+        
+        <blockquote style="border-left: 4px solid #818cf8; padding-left: 1rem; color: #c9d1d9; margin: 1rem 0;">
+            "Vectors in Supabase are enabled via pgvector, a Postgres extension for storing and querying vectors in Postgres. It can be used to store embeddings."
+            <footer style="color: #8b949e; margin-top: 0.5rem;">— Supabase Documentation</footer>
+        </blockquote>
+        
+        <h3>Enable pgvector</h3>
+        <pre><code>-- Enable the vector extension
+CREATE EXTENSION IF NOT EXISTS vector;
+
+-- Verify it's enabled
+\dx</code></pre>
+        
+        <h3>Create a Table with Vectors</h3>
+        <pre><code>-- Create table for documents with embeddings
+CREATE TABLE document_chunks (
+    id          SERIAL PRIMARY KEY,
+    document_id INTEGER REFERENCES documents(id),
+    content     TEXT NOT NULL,
+    embedding   VECTOR(1536),        -- OpenAI embeddings are 1536 dimensions
+    metadata    JSONB DEFAULT '{}'
+);
+
+-- The number in VECTOR(n) is the dimension count:
+-- - OpenAI text-embedding-ada-002: 1536
+-- - OpenAI text-embedding-3-small: 1536  
+-- - OpenAI text-embedding-3-large: 3072
+-- - Sentence Transformers (many): 384-768</code></pre>
+        
+        <div class="callout callout-warning">
+            <strong>Important:</strong> The vector dimensions must match your embedding model. If you use OpenAI's text-embedding-ada-002, use VECTOR(1536). Using the wrong dimension will cause errors!
+        </div>
+        
+        <h3>Insert Vectors</h3>
+        <pre><code>-- Insert a vector (normally you'd get this from an embedding API)
+INSERT INTO document_chunks (document_id, content, embedding) 
+VALUES (
+    1,
+    'This is a chunk of text from document 1',
+    '[0.1, 0.2, 0.3, ...]'::vector  -- 1536 float values
+);</code></pre>
+        
+        <h3>Vector Similarity Search</h3>
+        <p>This is the magic of RAG! pgvector supports 3 distance operators:</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Operator</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Distance Type</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Best For</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>&lt;-&gt;</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Euclidean (L2)</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">General purpose</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>&lt;#&gt;</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Inner Product (negative)</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Maximum inner product</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>&lt;=&gt;</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Cosine</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Normalized vectors (most common)</td>
+            </tr>
+        </table>
+        
+        <pre><code>-- Find the 5 most similar chunks to a query embedding
+SELECT 
+    id,
+    content,
+    1 - (embedding <=> '[0.1, 0.2, ...]'::vector) AS similarity
+FROM document_chunks
+ORDER BY embedding <=> '[0.1, 0.2, ...]'::vector
+LIMIT 5;</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Cosine Similarity:</strong> The <code>&lt;=&gt;</code> operator returns cosine <em>distance</em> (0 = identical, 2 = opposite). To get similarity (1 = identical, 0 = unrelated), use <code>1 - (embedding <=> query)</code>.
+        </div>
+        
+        <h3>Creating Vector Indexes</h3>
+        <p>Without an index, searches scan every row. With millions of embeddings, this becomes slow. pgvector supports special vector indexes:</p>
+        
+        <pre><code>-- IVFFlat index (faster, less accurate)
+CREATE INDEX ON document_chunks 
+USING ivfflat (embedding vector_cosine_ops) 
+WITH (lists = 100);
+
+-- HNSW index (slower to build, more accurate)
+CREATE INDEX ON document_chunks 
+USING hnsw (embedding vector_cosine_ops);</code></pre>
+        
+        <div class="callout callout-info">
+            <strong>When to add indexes:</strong> Start without indexes while developing. Once you have 10,000+ vectors, add an HNSW index for better performance.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🟢 Node.js & PostgreSQL</h2>
+            
+        <h3>Connecting from Node.js</h3>
+        <p>Let's connect our Node.js app to PostgreSQL. We'll use the <code>pg</code> package:</p>
+        
+        <pre><code># Install the pg package
+npm install pg</code></pre>
+        
+        <h4>Create a Database Client</h4>
+        <pre><code>// src/db.js
+import pg from 'pg';
+const { Pool } = pg;
+
+// Create a connection pool
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL
+    // For local Docker: postgres://postgres:postgres@db:5432/ragdb
+});
+
+// Test the connection
+pool.query('SELECT NOW()')
+    .then(res => console.log('✅ Database connected:', res.rows[0].now))
+    .catch(err => console.error('❌ Database error:', err));
+
+export default pool;</code></pre>
+        
+        <h4>Query Examples</h4>
+        <pre><code>// src/documents.js
+import pool from './db.js';
+
+// Get all documents
+export async function getAllDocuments() {
+    const result = await pool.query('SELECT * FROM documents ORDER BY created_at DESC');
+    return result.rows;
+}
+
+// Get document by ID
+export async function getDocument(id) {
+    const result = await pool.query('SELECT * FROM documents WHERE id = $1', [id]);
+    return result.rows[0];
+}
+
+// Create document
+export async function createDocument(title, content) {
+    const result = await pool.query(
+        'INSERT INTO documents (title, content) VALUES ($1, $2) RETURNING *',
+        [title, content]
+    );
+    return result.rows[0];
+}
+
+// Search by similarity (we'll expand this in Module 5)
+export async function searchSimilar(embedding, limit = 5) {
+    const result = await pool.query(`
+        SELECT id, content, 1 - (embedding <=> $1) as similarity
+        FROM document_chunks
+        ORDER BY embedding <=> $1
+        LIMIT $2
+    `, [JSON.stringify(embedding), limit]);
+    return result.rows;
+}</code></pre>
+        
+        <div class="callout callout-warning">
+            <strong>SQL Injection Warning:</strong> NEVER build queries with string concatenation! Always use parameterized queries (<code>$1</code>, <code>$2</code>) like the examples above. This protects against SQL injection attacks.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💻 Hands-On: Create RAG Schema</h2>
+            
+        <h3>Exercise: Set Up Your RAG Database Schema</h3>
+        <p>Let's create the database schema we'll use for our RAG application:</p>
+        
+        <h4>Step 1: Connect to PostgreSQL</h4>
+        <pre><code>$ docker compose exec db psql -U postgres -d ragdb</code></pre>
+        
+        <h4>Step 2: Create the Schema</h4>
+        <pre><code>-- Enable pgvector
+CREATE EXTENSION IF NOT EXISTS vector;
+
+-- Sources table (where documents come from)
+CREATE TABLE sources (
+    id          SERIAL PRIMARY KEY,
+    name        TEXT NOT NULL,
+    type        TEXT NOT NULL,  -- 'file', 'url', 'api'
+    metadata    JSONB DEFAULT '{}',
+    created_at  TIMESTAMP DEFAULT NOW()
+);
+
+-- Documents table (the actual documents)
+CREATE TABLE documents (
+    id          SERIAL PRIMARY KEY,
+    source_id   INTEGER REFERENCES sources(id) ON DELETE CASCADE,
+    title       TEXT NOT NULL,
+    content     TEXT NOT NULL,
+    metadata    JSONB DEFAULT '{}',
+    created_at  TIMESTAMP DEFAULT NOW()
+);
+
+-- Chunks table (split documents with embeddings)
+CREATE TABLE chunks (
+    id          SERIAL PRIMARY KEY,
+    document_id INTEGER REFERENCES documents(id) ON DELETE CASCADE,
+    content     TEXT NOT NULL,
+    embedding   VECTOR(1536),  -- OpenAI dimensions
+    token_count INTEGER,
+    metadata    JSONB DEFAULT '{}',
+    created_at  TIMESTAMP DEFAULT NOW()
+);
+
+-- Create index for similarity search
+CREATE INDEX ON chunks USING hnsw (embedding vector_cosine_ops);</code></pre>
+        
+        <h4>Step 3: Add Test Data</h4>
+        <pre><code>-- Insert a source
+INSERT INTO sources (name, type) VALUES ('Manual Entry', 'manual');
+
+-- Insert a document
+INSERT INTO documents (source_id, title, content) VALUES 
+    (1, 'RAG Introduction', 'RAG stands for Retrieval-Augmented Generation...');
+
+-- Verify
+SELECT s.name as source, d.title, d.content 
+FROM documents d 
+JOIN sources s ON d.source_id = s.id;</code></pre>
+        
+        <h4>Step 4: Exit PostgreSQL</h4>
+        <pre><code>-- Exit psql
+\q</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Congratulations!</strong> You now have a database schema ready for your RAG application. In Module 5, we'll populate the chunks table with real embeddings.
+        </div>
+    
+        </section>
+    
+        <section class="section gotchas">
+            <h2>⚠️ Common Gotchas & Tips</h2>
+            
+        <h3>Common Database Mistakes</h3>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 UPDATE/DELETE without WHERE:</strong> Always double-check your WHERE clause before running UPDATE or DELETE. Without it, you'll modify ALL rows!
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Wrong vector dimensions:</strong> If you get "different vector dimensions" errors, check that your embedding model dimensions match your VECTOR(n) column definition.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Connection leaks:</strong> Always use connection pooling. Don't create new connections for each query - use a Pool like our example.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 N+1 queries:</strong> Avoid querying in loops. Use JOINs or fetch all data at once instead.
+        </div>
+        
+        <h3>Useful psql Commands</h3>
+        <pre><code>\dt          -- List tables
+\d tablename -- Describe table structure
+\dx          -- List extensions
+\conninfo    -- Show connection info
+\q           -- Quit
+\?           -- Help</code></pre>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Check Your Understanding</h2>
+            
+        <div class="quiz-question">
+            <p>1. Which SQL command adds new rows to a table?</p>
+            <ul class="quiz-options">
+                <li>A) UPDATE</li>
+                <li>B) INSERT</li>
+                <li>C) CREATE</li>
+                <li>D) ADD</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. What does the <code>&lt;=&gt;</code> operator do in pgvector?</p>
+            <ul class="quiz-options">
+                <li>A) Checks if two vectors are equal</li>
+                <li>B) Calculates Euclidean distance</li>
+                <li>C) Calculates cosine distance</li>
+                <li>D) Adds two vectors together</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. Why should you use parameterized queries ($1, $2) instead of string concatenation?</p>
+            <ul class="quiz-options">
+                <li>A) They're faster</li>
+                <li>B) They prevent SQL injection attacks</li>
+                <li>C) They use less memory</li>
+                <li>D) PostgreSQL requires them</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>4. What vector dimension should you use for OpenAI's text-embedding-ada-002 model?</p>
+            <ul class="quiz-options">
+                <li>A) 384</li>
+                <li>B) 768</li>
+                <li>C) 1536</li>
+                <li>D) 3072</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-C, 3-B, 4-C</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://www.postgresql.org/docs/current/tutorial.html" target="_blank">
+                    PostgreSQL Tutorial - Official Docs
+                </a>
+                <span style="color: #8b949e;"> - Complete PostgreSQL introduction</span>
+            </li>
+            <li>
+                <a href="https://github.com/pgvector/pgvector" target="_blank">
+                    pgvector on GitHub
+                </a>
+                <span style="color: #8b949e;"> - Official pgvector extension</span>
+            </li>
+            <li>
+                <a href="https://supabase.com/docs/guides/ai/vector-columns" target="_blank">
+                    Supabase Vector Columns Guide
+                </a>
+                <span style="color: #8b949e;"> - Excellent pgvector tutorial</span>
+            </li>
+            <li>
+                <a href="https://node-postgres.com/" target="_blank">
+                    node-postgres (pg)
+                </a>
+                <span style="color: #8b949e;"> - Node.js PostgreSQL client</span>
+            </li>
+            <li>
+                <a href="https://www.prisma.io/docs/concepts/database-connectors/postgresql" target="_blank">
+                    Prisma with PostgreSQL
+                </a>
+                <span style="color: #8b949e;"> - Popular ORM alternative</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../module-1-docker/index.html">← Previous: Docker Environment</a>
+            <a href="../module-3-llm/index.html">Next: LLM Fundamentals →</a>
+        </nav>
+    </div>
+</body>
+</html>

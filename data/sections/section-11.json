@@ -1,0 +1,335 @@
+{
+  "meta": {
+    "id": 11,
+    "title": "GenAI Application Types",
+    "description": "Text, Image, Code, Audio",
+    "slug": "genai-application-types",
+    "totalNodes": 19,
+    "totalEdges": 12
+  },
+  "sections": [
+    {
+      "id": 11,
+      "title": "GenAI Application Types",
+      "slug": "11-genai-application-types",
+      "description": "Text, Image, Code, Audio",
+      "line": 651
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s11_b11_GENAI",
+      "label": "GENERATIVE AI APPS",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI Courses",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GENAI"
+    },
+    {
+      "id": "s11_b11_TEXT",
+      "label": "Text",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Text Generation",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TEXT"
+    },
+    {
+      "id": "s11_b11_IMAGE",
+      "label": "Image",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-to-image",
+      "tooltip": "Image Generation",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "IMAGE"
+    },
+    {
+      "id": "s11_b11_CODE",
+      "label": "Code",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Code Generation",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CODE"
+    },
+    {
+      "id": "s11_b11_AV",
+      "label": "Audio/Video",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/tasks/text-to-speech",
+      "tooltip": "Audio/Video Generation",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AV"
+    },
+    {
+      "id": "s11_b11_T1",
+      "label": "Chatbots",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://platform.openai.com/docs/guides/chat",
+      "tooltip": "OpenAI Chat API",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s11_b11_T2",
+      "label": "Summarization",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://huggingface.co/docs/transformers/tasks/summarization",
+      "tooltip": "HF Summarization",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s11_b11_I1",
+      "label": "AI Art",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://stability.ai/",
+      "tooltip": "Stability AI",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s11_b11_I2",
+      "label": "Image Edit",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://openai.com/dall-e-3",
+      "tooltip": "DALL-E 3",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s11_b11_CD1",
+      "label": "Copilot",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://github.com/features/copilot",
+      "tooltip": "GitHub Copilot",
+      "style": null,
+      "parent": null,
+      "original_id": "CD1"
+    },
+    {
+      "id": "s11_b11_CD2",
+      "label": "Debugging",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://docs.cursor.com/",
+      "tooltip": "Cursor AI",
+      "style": null,
+      "parent": null,
+      "original_id": "CD2"
+    },
+    {
+      "id": "s11_b11_A1",
+      "label": "TTS",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://elevenlabs.io/docs",
+      "tooltip": "ElevenLabs TTS",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s11_b11_A2",
+      "label": "Music Gen",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 11,
+      "url": "https://www.suno.ai/",
+      "tooltip": "Suno AI Music",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s11_b121_Cursor",
+      "label": "Cursor",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 121,
+      "url": "https://cursor.sh/",
+      "tooltip": "AI-first code editor",
+      "style": null,
+      "parent": null,
+      "original_id": "Cursor"
+    },
+    {
+      "id": "s11_b122_Cody",
+      "label": "Cody",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 122,
+      "url": "https://sourcegraph.com/cody",
+      "tooltip": "Sourcegraph AI assistant",
+      "style": null,
+      "parent": null,
+      "original_id": "Cody"
+    },
+    {
+      "id": "s11_b123_Continue",
+      "label": "Continue",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 123,
+      "url": "https://continue.dev/",
+      "tooltip": "Open-source AI code assistant",
+      "style": null,
+      "parent": null,
+      "original_id": "Continue"
+    },
+    {
+      "id": "s11_b124_Aider",
+      "label": "Aider",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 124,
+      "url": "https://aider.chat/",
+      "tooltip": "AI pair programming",
+      "style": null,
+      "parent": null,
+      "original_id": "Aider"
+    },
+    {
+      "id": "s11_b125_Devin",
+      "label": "Devin",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 125,
+      "url": "https://www.cognition.ai/",
+      "tooltip": "AI software engineer",
+      "style": null,
+      "parent": null,
+      "original_id": "Devin"
+    },
+    {
+      "id": "s11_b126_Codium",
+      "label": "Codium",
+      "type": "node",
+      "section_id": 11,
+      "block_id": 126,
+      "url": "https://www.codium.ai/",
+      "tooltip": "AI code generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Codium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_TEXT",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_IMAGE",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_CODE",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_GENAI",
+      "target": "s11_b11_AV",
+      "type": "thick",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_TEXT",
+      "target": "s11_b11_T1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_TEXT",
+      "target": "s11_b11_T2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_IMAGE",
+      "target": "s11_b11_I1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_IMAGE",
+      "target": "s11_b11_I2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_CODE",
+      "target": "s11_b11_CD1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_CODE",
+      "target": "s11_b11_CD2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_AV",
+      "target": "s11_b11_A1",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    },
+    {
+      "source": "s11_b11_AV",
+      "target": "s11_b11_A2",
+      "type": "regular",
+      "section_id": 11,
+      "block_id": 11
+    }
+  ]
+}

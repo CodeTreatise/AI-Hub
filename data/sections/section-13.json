@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "id": 13,
+    "title": "Learning Roadmap",
+    "description": "Beginner to Advanced path",
+    "slug": "learning-roadmap",
+    "totalNodes": 19,
+    "totalEdges": 18
+  },
+  "sections": [
+    {
+      "id": 13,
+      "title": "Learning Roadmap",
+      "slug": "13-learning-roadmap",
+      "description": "Beginner to Advanced path",
+      "line": 749
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s13_b13_S1",
+      "label": "1. FOUNDATIONS",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.python.org/",
+      "tooltip": "Foundations",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s13_b13_F1",
+      "label": "Python",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.python.org/about/gettingstarted/",
+      "tooltip": "Python Getting Started",
+      "style": null,
+      "parent": "s13_b13_S1",
+      "original_id": "F1"
+    },
+    {
+      "id": "s13_b13_F2",
+      "label": "Math/Stats",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.khanacademy.org/math/statistics-probability",
+      "tooltip": "Khan Academy Stats",
+      "style": null,
+      "parent": "s13_b13_S1",
+      "original_id": "F2"
+    },
+    {
+      "id": "s13_b13_F3",
+      "label": "Pandas/NumPy",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://pandas.pydata.org/docs/getting_started/",
+      "tooltip": "Pandas Docs",
+      "style": null,
+      "parent": "s13_b13_S1",
+      "original_id": "F3"
+    },
+    {
+      "id": "s13_b13_S2",
+      "label": "2. MACHINE LEARNING",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://scikit-learn.org/",
+      "tooltip": "Machine Learning",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s13_b13_M1",
+      "label": "Algorithms",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.coursera.org/learn/machine-learning",
+      "tooltip": "Andrew Ng ML Course",
+      "style": null,
+      "parent": "s13_b13_S2",
+      "original_id": "M1"
+    },
+    {
+      "id": "s13_b13_M2",
+      "label": "Scikit-learn",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://scikit-learn.org/stable/user_guide.html",
+      "tooltip": "Scikit-learn Tutorial",
+      "style": null,
+      "parent": "s13_b13_S2",
+      "original_id": "M2"
+    },
+    {
+      "id": "s13_b13_M3",
+      "label": "Evaluation",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "tooltip": "Model Evaluation",
+      "style": null,
+      "parent": "s13_b13_S2",
+      "original_id": "M3"
+    },
+    {
+      "id": "s13_b13_S3",
+      "label": "3. DEEP LEARNING",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://pytorch.org/",
+      "tooltip": "Deep Learning",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S3"
+    },
+    {
+      "id": "s13_b13_D1",
+      "label": "Neural Nets",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "http://neuralnetworksanddeeplearning.com/",
+      "tooltip": "Neural Networks Book",
+      "style": null,
+      "parent": "s13_b13_S3",
+      "original_id": "D1"
+    },
+    {
+      "id": "s13_b13_D2",
+      "label": "PyTorch",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html",
+      "tooltip": "PyTorch 60min",
+      "style": null,
+      "parent": "s13_b13_S3",
+      "original_id": "D2"
+    },
+    {
+      "id": "s13_b13_D3",
+      "label": "CNNs/RNNs",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://cs231n.stanford.edu/",
+      "tooltip": "Stanford CS231n",
+      "style": null,
+      "parent": "s13_b13_S3",
+      "original_id": "D3"
+    },
+    {
+      "id": "s13_b13_S4",
+      "label": "4. SPECIALIZATION",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://huggingface.co/",
+      "tooltip": "Specialization",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S4"
+    },
+    {
+      "id": "s13_b13_SP1",
+      "label": "NLP / CV",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://huggingface.co/learn/nlp-course/",
+      "tooltip": "HF NLP Course",
+      "style": null,
+      "parent": "s13_b13_S4",
+      "original_id": "SP1"
+    },
+    {
+      "id": "s13_b13_SP2",
+      "label": "Transformers",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://huggingface.co/docs/transformers/",
+      "tooltip": "Transformers Docs",
+      "style": null,
+      "parent": "s13_b13_S4",
+      "original_id": "SP2"
+    },
+    {
+      "id": "s13_b13_SP3",
+      "label": "LLMs",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI",
+      "style": null,
+      "parent": "s13_b13_S4",
+      "original_id": "SP3"
+    },
+    {
+      "id": "s13_b13_S5",
+      "label": "5. PRODUCTION",
+      "type": "subgraph",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://mlops.community/",
+      "tooltip": "Production",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "S5"
+    },
+    {
+      "id": "s13_b13_P1",
+      "label": "MLOps",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://madewithml.com/",
+      "tooltip": "Made With ML",
+      "style": null,
+      "parent": "s13_b13_S5",
+      "original_id": "P1"
+    },
+    {
+      "id": "s13_b13_P2",
+      "label": "Deployment",
+      "type": "node",
+      "section_id": 13,
+      "block_id": 13,
+      "url": "https://fullstackdeeplearning.com/",
+      "tooltip": "Full Stack DL",
+      "style": null,
+      "parent": "s13_b13_S5",
+      "original_id": "P2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_S2",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_S3",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_S4",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_S5",
+      "type": "thick",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_F1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_F2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S1",
+      "target": "s13_b13_F3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_M1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_M2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S2",
+      "target": "s13_b13_M3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_D1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_D2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S3",
+      "target": "s13_b13_D3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_SP1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_SP2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S4",
+      "target": "s13_b13_SP3",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S5",
+      "target": "s13_b13_P1",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    },
+    {
+      "source": "s13_b13_S5",
+      "target": "s13_b13_P2",
+      "type": "contains",
+      "section_id": 13,
+      "block_id": 13
+    }
+  ]
+}

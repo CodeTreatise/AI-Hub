@@ -1,0 +1,757 @@
+{
+  "meta": {
+    "id": 46,
+    "title": "AI Hardware & Compute Global",
+    "description": "Chips, cloud, and compute infrastructure that power modern AI.",
+    "slug": "ai-hardware-compute-global",
+    "totalNodes": 39,
+    "totalEdges": 38
+  },
+  "sections": [
+    {
+      "id": 46,
+      "title": "AI Hardware & Compute Global",
+      "slug": "",
+      "description": "Chips, cloud, and compute infrastructure that power modern AI.",
+      "line": 3977
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s46_b54_HARDWARE",
+      "label": "\ud83d\udd27 GLOBAL AI HARDWARE",
+      "type": "subgraph",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "HARDWARE"
+    },
+    {
+      "id": "s46_b54_CHIPS",
+      "label": "\ud83d\udd32 AI Chips",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s46_b54_HARDWARE",
+      "original_id": "CHIPS"
+    },
+    {
+      "id": "s46_b54_CLOUD",
+      "label": "\u2601\ufe0f Cloud AI",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s46_b54_HARDWARE",
+      "original_id": "CLOUD"
+    },
+    {
+      "id": "s46_b54_EDGE",
+      "label": "\ud83d\udcf1 Edge AI",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s46_b54_HARDWARE",
+      "original_id": "EDGE"
+    },
+    {
+      "id": "s46_b54_QUANTUM",
+      "label": "\u269b\ufe0f Quantum",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": null,
+      "parent": "s46_b54_HARDWARE",
+      "original_id": "QUANTUM"
+    },
+    {
+      "id": "s46_b54_CH",
+      "label": "AI CHIP MAKERS",
+      "type": "subgraph",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#76FF03,stroke:#64DD17,color:#000000",
+      "parent": null,
+      "original_id": "CH"
+    },
+    {
+      "id": "s46_b54_CH1",
+      "label": "NVIDIA \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.nvidia.com/en-us/data-center/",
+      "tooltip": "NVIDIA Data Center",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH1"
+    },
+    {
+      "id": "s46_b54_CH2",
+      "label": "AMD \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.amd.com/en/products/accelerators/instinct.html",
+      "tooltip": "AMD Instinct",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH2"
+    },
+    {
+      "id": "s46_b54_CH3",
+      "label": "Intel \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.intel.com/content/www/us/en/products/details/processors/ai-accelerators/gaudi.html",
+      "tooltip": "Intel Gaudi",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH3"
+    },
+    {
+      "id": "s46_b54_CH4",
+      "label": "Google TPU \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://cloud.google.com/tpu",
+      "tooltip": "Google TPU",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH4"
+    },
+    {
+      "id": "s46_b54_CH5",
+      "label": "Huawei Ascend \ud83c\udde8\ud83c\uddf3",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.hiascend.com/",
+      "tooltip": "Huawei Ascend",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH5"
+    },
+    {
+      "id": "s46_b54_CH6",
+      "label": "Graphcore \ud83c\uddec\ud83c\udde7",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.graphcore.ai/",
+      "tooltip": "Graphcore IPU",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH6"
+    },
+    {
+      "id": "s46_b54_CH7",
+      "label": "Cerebras \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.cerebras.net/",
+      "tooltip": "Cerebras",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH7"
+    },
+    {
+      "id": "s46_b54_CH8",
+      "label": "Groq \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://groq.com/",
+      "tooltip": "Groq LPU",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH8"
+    },
+    {
+      "id": "s46_b54_CH9",
+      "label": "SambaNova \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://sambanova.ai/",
+      "tooltip": "SambaNova",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH9"
+    },
+    {
+      "id": "s46_b54_CH10",
+      "label": "Cambricon \ud83c\udde8\ud83c\uddf3",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.cambricon.com/",
+      "tooltip": "Cambricon",
+      "style": null,
+      "parent": "s46_b54_CH",
+      "original_id": "CH10"
+    },
+    {
+      "id": "s46_b54_CL",
+      "label": "CLOUD PROVIDERS",
+      "type": "subgraph",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#29B6F6,stroke:#0288D1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CL"
+    },
+    {
+      "id": "s46_b54_CL1",
+      "label": "AWS \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://aws.amazon.com/machine-learning/",
+      "tooltip": "AWS ML",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL1"
+    },
+    {
+      "id": "s46_b54_CL2",
+      "label": "Azure \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://azure.microsoft.com/en-us/solutions/ai/",
+      "tooltip": "Azure AI",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL2"
+    },
+    {
+      "id": "s46_b54_CL3",
+      "label": "Google Cloud \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://cloud.google.com/ai-platform",
+      "tooltip": "Google AI Platform",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL3"
+    },
+    {
+      "id": "s46_b54_CL4",
+      "label": "Alibaba Cloud \ud83c\udde8\ud83c\uddf3",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.alibabacloud.com/product/machine-learning",
+      "tooltip": "Alibaba Cloud ML",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL4"
+    },
+    {
+      "id": "s46_b54_CL5",
+      "label": "Oracle Cloud \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.oracle.com/artificial-intelligence/",
+      "tooltip": "Oracle AI",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL5"
+    },
+    {
+      "id": "s46_b54_CL6",
+      "label": "CoreWeave \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.coreweave.com/",
+      "tooltip": "CoreWeave",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL6"
+    },
+    {
+      "id": "s46_b54_CL7",
+      "label": "Lambda Labs \ud83c\uddfa\ud83c\uddf8",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://lambdalabs.com/",
+      "tooltip": "Lambda Labs",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL7"
+    },
+    {
+      "id": "s46_b54_CL8",
+      "label": "Baidu Cloud \ud83c\udde8\ud83c\uddf3",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://cloud.baidu.com/product/ai.html",
+      "tooltip": "Baidu AI Cloud",
+      "style": null,
+      "parent": "s46_b54_CL",
+      "original_id": "CL8"
+    },
+    {
+      "id": "s46_b54_ED",
+      "label": "EDGE AI",
+      "type": "subgraph",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ED"
+    },
+    {
+      "id": "s46_b54_ED1",
+      "label": "Apple Neural Engine",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://developer.apple.com/machine-learning/core-ml/",
+      "tooltip": "Apple Core ML",
+      "style": null,
+      "parent": "s46_b54_ED",
+      "original_id": "ED1"
+    },
+    {
+      "id": "s46_b54_ED2",
+      "label": "Qualcomm NPU",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.qualcomm.com/products/technology/artificial-intelligence",
+      "tooltip": "Qualcomm AI",
+      "style": null,
+      "parent": "s46_b54_ED",
+      "original_id": "ED2"
+    },
+    {
+      "id": "s46_b54_ED3",
+      "label": "MediaTek APU",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.mediatek.com/technology/artificial-intelligence",
+      "tooltip": "MediaTek AI",
+      "style": null,
+      "parent": "s46_b54_ED",
+      "original_id": "ED3"
+    },
+    {
+      "id": "s46_b54_ED4",
+      "label": "Jetson NVIDIA",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://developer.nvidia.com/embedded/jetson-modules",
+      "tooltip": "Jetson",
+      "style": null,
+      "parent": "s46_b54_ED",
+      "original_id": "ED4"
+    },
+    {
+      "id": "s46_b54_ED5",
+      "label": "Google Coral",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://coral.ai/",
+      "tooltip": "Google Coral",
+      "style": null,
+      "parent": "s46_b54_ED",
+      "original_id": "ED5"
+    },
+    {
+      "id": "s46_b54_ED6",
+      "label": "Hailo \ud83c\uddee\ud83c\uddf1",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://hailo.ai/",
+      "tooltip": "Hailo",
+      "style": null,
+      "parent": "s46_b54_ED",
+      "original_id": "ED6"
+    },
+    {
+      "id": "s46_b54_QC",
+      "label": "QUANTUM AI",
+      "type": "subgraph",
+      "section_id": 46,
+      "block_id": 54,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "QC"
+    },
+    {
+      "id": "s46_b54_QC1",
+      "label": "IBM Quantum",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.ibm.com/quantum",
+      "tooltip": "IBM Quantum",
+      "style": null,
+      "parent": "s46_b54_QC",
+      "original_id": "QC1"
+    },
+    {
+      "id": "s46_b54_QC2",
+      "label": "Google Sycamore",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://quantumai.google/",
+      "tooltip": "Google Quantum AI",
+      "style": null,
+      "parent": "s46_b54_QC",
+      "original_id": "QC2"
+    },
+    {
+      "id": "s46_b54_QC3",
+      "label": "IonQ",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://ionq.com/",
+      "tooltip": "IonQ",
+      "style": null,
+      "parent": "s46_b54_QC",
+      "original_id": "QC3"
+    },
+    {
+      "id": "s46_b54_QC4",
+      "label": "Rigetti",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.rigetti.com/",
+      "tooltip": "Rigetti",
+      "style": null,
+      "parent": "s46_b54_QC",
+      "original_id": "QC4"
+    },
+    {
+      "id": "s46_b54_QC5",
+      "label": "D-Wave",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://www.dwavesys.com/",
+      "tooltip": "D-Wave",
+      "style": null,
+      "parent": "s46_b54_QC",
+      "original_id": "QC5"
+    },
+    {
+      "id": "s46_b54_QC6",
+      "label": "Baidu Quantum \ud83c\udde8\ud83c\uddf3",
+      "type": "node",
+      "section_id": 46,
+      "block_id": 54,
+      "url": "https://quantum.baidu.com/",
+      "tooltip": "Baidu Quantum",
+      "style": null,
+      "parent": "s46_b54_QC",
+      "original_id": "QC6"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s46_b54_CHIPS",
+      "target": "s46_b54_CH",
+      "type": "regular",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CLOUD",
+      "target": "s46_b54_CL",
+      "type": "regular",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_EDGE",
+      "target": "s46_b54_ED",
+      "type": "regular",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QUANTUM",
+      "target": "s46_b54_QC",
+      "type": "regular",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_HARDWARE",
+      "target": "s46_b54_CHIPS",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_HARDWARE",
+      "target": "s46_b54_CLOUD",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_HARDWARE",
+      "target": "s46_b54_EDGE",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_HARDWARE",
+      "target": "s46_b54_QUANTUM",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH1",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH2",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH3",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH4",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH5",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH6",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH7",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH8",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH9",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CH",
+      "target": "s46_b54_CH10",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL1",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL2",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL3",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL4",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL5",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL6",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL7",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_CL",
+      "target": "s46_b54_CL8",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_ED",
+      "target": "s46_b54_ED1",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_ED",
+      "target": "s46_b54_ED2",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_ED",
+      "target": "s46_b54_ED3",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_ED",
+      "target": "s46_b54_ED4",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_ED",
+      "target": "s46_b54_ED5",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_ED",
+      "target": "s46_b54_ED6",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QC",
+      "target": "s46_b54_QC1",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QC",
+      "target": "s46_b54_QC2",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QC",
+      "target": "s46_b54_QC3",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QC",
+      "target": "s46_b54_QC4",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QC",
+      "target": "s46_b54_QC5",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    },
+    {
+      "source": "s46_b54_QC",
+      "target": "s46_b54_QC6",
+      "type": "contains",
+      "section_id": 46,
+      "block_id": 54
+    }
+  ]
+}

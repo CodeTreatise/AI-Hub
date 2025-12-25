@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Developer Course | From Zero to RAG</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #8b949e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #c9d1d9;
+        }
+        
+        /* Section */
+        .section-title {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Module Cards */
+        .modules-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .module-card {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #30363d;
+            display: flex;
+            gap: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .module-card:hover {
+            border-color: #818cf8;
+            transform: translateX(5px);
+        }
+        
+        .module-card.upcoming {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .module-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .module-card.upcoming .module-number {
+            background: #30363d;
+        }
+        
+        .module-content h3 {
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-content p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #6e7681;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-item {
+            background: #161b22;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .tech-item span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Status Banner */
+        .status-banner {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .status-banner span {
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6e7681;
+            border-top: 1px solid #30363d;
+            margin-top: 3rem;
+        }
+        
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom: 1rem;">
+            <a href="../../index.html" target="_top" style="color:#58a6ff; text-decoration:none; padding:0.5rem 0.9rem; background:#161b22; border:1px solid #30363d; border-radius:999px;">🏠 Hub</a>
+            <a href="../../pages/study.html" target="_top" style="color:#58a6ff; text-decoration:none; padding:0.5rem 0.9rem; background:#161b22; border:1px solid #30363d; border-radius:999px;">📖 Study Mode (Recommended)</a>
+        </div>
+        <header class="hero">
+            <h1>🚀 GenAI Developer Course</h1>
+            <p>From Zero to Production RAG Application</p>
+            <p style="margin-top: 0.5rem; font-size: 1rem;">
+                A complete, practical course for building AI-powered applications with Node.js, TypeScript, PostgreSQL, and OpenAI
+            </p>
+            <div class="hero-meta">
+                <span>📚 8 Modules</span>
+                <span>⏱️ 10-14 Weeks</span>
+                <span>💻 Hands-On</span>
+                <span>🎯 Project-Based</span>
+            </div>
+        </header>
+        
+        <div class="status-banner">
+            <span>✅</span>
+            <div>
+                <strong>Course Complete</strong>
+                <p style="margin: 0; font-size: 0.9rem; color: #3fb950;">All modules (0–7) are available. Content sourced from official documentation.</p>
+            </div>
+        </div>
+
+        <div style="margin: 1.5rem 0 2rem; text-align:center;">
+            <a href="../../pages/study.html" target="_top" style="display:inline-block; padding:0.9rem 1.25rem; border-radius:12px; text-decoration:none; color:#c9d1d9; border:1px solid rgba(99, 102, 241, 0.3); background: rgba(99, 102, 241, 0.12);">Start in Study Mode →</a>
+            <p style="margin-top:0.6rem; color:#8b949e; font-size:0.95rem;">Study Mode keeps everything in one place and tracks your progress.</p>
+        </div>
+        
+        <h2 class="section-title">📖 Course Modules</h2>
+        
+        <div class="modules-grid">
+            <a href="module-0-overview/index.html" class="module-card">
+                <div class="module-number">0</div>
+                <div class="module-content">
+                    <h3>The Big Picture</h3>
+                    <p>Understand GenAI, LLMs, and RAG. See what you'll build and why it matters for your career.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~30 min</span>
+                        <span>📊 Beginner</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="module-1-docker/index.html" class="module-card">
+                <div class="module-number">1</div>
+                <div class="module-content">
+                    <h3>Docker & Development Environment</h3>
+                    <p>Master Docker containers, images, and Compose. Set up your complete dev environment.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~60 min</span>
+                        <span>📊 Beginner</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="module-2-postgres/index.html" class="module-card">
+                <div class="module-number">2</div>
+                <div class="module-content">
+                    <h3>Database Foundations</h3>
+                    <p>PostgreSQL essentials, SQL basics, and pgvector for vector storage.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~90 min</span>
+                        <span>📊 Beginner</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="module-3-llm/index.html" class="module-card">
+                <div class="module-number">3</div>
+                <div class="module-content">
+                    <h3>LLM Fundamentals</h3>
+                    <p>Tokens, prompts, and the OpenAI API. Build your first AI-powered app.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~75 min</span>
+                        <span>📊 Beginner</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="module-4-embeddings/index.html" class="module-card">
+                <div class="module-number">4</div>
+                <div class="module-content">
+                    <h3>Embeddings & Vector Search</h3>
+                    <p>Generate embeddings, chunk text, and do semantic search with pgvector.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~60 min</span>
+                        <span>📊 Intermediate</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="module-5-rag/index.html" class="module-card">
+                <div class="module-number">5</div>
+                <div class="module-content">
+                    <h3>RAG Pipeline</h3>
+                    <p>Document ingestion, chunking strategies, retrieval, and grounded answer generation.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~120 min</span>
+                        <span>📊 Advanced</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="module-6-production/index.html" class="module-card">
+                <div class="module-number">6</div>
+                <div class="module-content">
+                    <h3>Production & Polish</h3>
+                    <p>Streaming, error handling, logging/monitoring, cost control, and deployment.</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~90 min</span>
+                        <span>📊 Advanced</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="module-7-advanced/index.html" class="module-card">
+                <div class="module-number">7</div>
+                <div class="module-content">
+                    <h3>Advanced RAG Techniques</h3>
+                    <p>Hybrid search, re-ranking, and evaluation (RAGAS-style metrics).</p>
+                    <div class="module-meta">
+                        <span>⏱️ ~60 min</span>
+                        <span>📊 Expert</span>
+                        <span>✅ Available</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <section class="tech-stack">
+            <h2 class="section-title">🛠️ Tech Stack You'll Learn</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span>🟢</span>
+                    Node.js
+                </div>
+                <div class="tech-item">
+                    <span>📘</span>
+                    TypeScript
+                </div>
+                <div class="tech-item">
+                    <span>🐘</span>
+                    PostgreSQL
+                </div>
+                <div class="tech-item">
+                    <span>🔢</span>
+                    pgvector
+                </div>
+                <div class="tech-item">
+                    <span>🤖</span>
+                    OpenAI API
+                </div>
+                <div class="tech-item">
+                    <span>🐳</span>
+                    Docker
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Built with ❤️ for developers learning GenAI</p>
+            <p style="margin-top: 0.5rem;">
+                Content sourced from official documentation • 
+                <a href="https://github.com" target="_blank">View on GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "id": 26,
+    "title": "Hybrid Search & Retrieval",
+    "description": "BM25, Vectors, Rerankers",
+    "slug": "hybrid-search-retrieval",
+    "totalNodes": 25,
+    "totalEdges": 12
+  },
+  "sections": [
+    {
+      "id": 26,
+      "title": "Hybrid Search & Retrieval",
+      "slug": "26-hybrid-search--retrieval",
+      "description": "BM25, Vectors, Rerankers",
+      "line": 1840
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s26_b29_Sparse",
+      "label": "SPARSE SEARCH",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html",
+      "tooltip": "Sparse Search",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Sparse"
+    },
+    {
+      "id": "s26_b29_BM25",
+      "label": "BM25/TF-IDF",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-similarity.html",
+      "tooltip": "BM25 in Elasticsearch",
+      "style": null,
+      "parent": "s26_b29_Sparse",
+      "original_id": "BM25"
+    },
+    {
+      "id": "s26_b29_KW",
+      "label": "Keyword Match",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html",
+      "tooltip": "Keyword Matching",
+      "style": null,
+      "parent": "s26_b29_Sparse",
+      "original_id": "KW"
+    },
+    {
+      "id": "s26_b29_Dense",
+      "label": "DENSE SEARCH",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.pinecone.io/learn/what-is-similarity-search/",
+      "tooltip": "Dense Search",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Dense"
+    },
+    {
+      "id": "s26_b29_VEC",
+      "label": "Vector Similarity",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://docs.pinecone.io/guides/get-started/overview",
+      "tooltip": "Vector Search",
+      "style": null,
+      "parent": "s26_b29_Dense",
+      "original_id": "VEC"
+    },
+    {
+      "id": "s26_b29_EMB",
+      "label": "Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://huggingface.co/sentence-transformers",
+      "tooltip": "Sentence Transformers",
+      "style": null,
+      "parent": "s26_b29_Dense",
+      "original_id": "EMB"
+    },
+    {
+      "id": "s26_b29_Hybrid",
+      "label": "HYBRID",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.pinecone.io/learn/hybrid-search-intro/",
+      "tooltip": "Hybrid Search",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Hybrid"
+    },
+    {
+      "id": "s26_b29_FUSE",
+      "label": "Score Fusion",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.pinecone.io/learn/hybrid-search-intro/",
+      "tooltip": "Score Fusion",
+      "style": null,
+      "parent": "s26_b29_Hybrid",
+      "original_id": "FUSE"
+    },
+    {
+      "id": "s26_b29_RRF",
+      "label": "RRF Algorithm",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rrf.html",
+      "tooltip": "RRF Algorithm",
+      "style": null,
+      "parent": "s26_b29_Hybrid",
+      "original_id": "RRF"
+    },
+    {
+      "id": "s26_b29_Rerank",
+      "label": "RERANKING",
+      "type": "subgraph",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://docs.cohere.com/docs/reranking",
+      "tooltip": "Reranking",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Rerank"
+    },
+    {
+      "id": "s26_b29_CROSS",
+      "label": "Cross-Encoder",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://www.sbert.net/docs/pretrained_cross-encoders.html",
+      "tooltip": "Cross-Encoders",
+      "style": null,
+      "parent": "s26_b29_Rerank",
+      "original_id": "CROSS"
+    },
+    {
+      "id": "s26_b29_COHERE",
+      "label": "Cohere Rerank",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://docs.cohere.com/docs/reranking",
+      "tooltip": "Cohere Rerank",
+      "style": null,
+      "parent": "s26_b29_Rerank",
+      "original_id": "COHERE"
+    },
+    {
+      "id": "s26_b29_BGE",
+      "label": "BGE Reranker",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 29,
+      "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+      "tooltip": "BGE Reranker",
+      "style": null,
+      "parent": "s26_b29_Rerank",
+      "original_id": "BGE"
+    },
+    {
+      "id": "s26_b75_Weaviate",
+      "label": "Weaviate",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 75,
+      "url": "https://weaviate.io/",
+      "tooltip": "Open-source vector database",
+      "style": null,
+      "parent": null,
+      "original_id": "Weaviate"
+    },
+    {
+      "id": "s26_b76_Qdrant",
+      "label": "Qdrant",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 76,
+      "url": "https://qdrant.tech/",
+      "tooltip": "Vector similarity search",
+      "style": null,
+      "parent": null,
+      "original_id": "Qdrant"
+    },
+    {
+      "id": "s26_b77_Milvus",
+      "label": "Milvus",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 77,
+      "url": "https://milvus.io/",
+      "tooltip": "Scalable vector database",
+      "style": null,
+      "parent": null,
+      "original_id": "Milvus"
+    },
+    {
+      "id": "s26_b78_pgvector",
+      "label": "pgvector",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 78,
+      "url": "https://github.com/pgvector/pgvector",
+      "tooltip": "Postgres vector extension",
+      "style": null,
+      "parent": null,
+      "original_id": "pgvector"
+    },
+    {
+      "id": "s26_b79_FAISS",
+      "label": "FAISS",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 79,
+      "url": "https://github.com/facebookresearch/faiss",
+      "tooltip": "Facebook similarity search",
+      "style": null,
+      "parent": null,
+      "original_id": "FAISS"
+    },
+    {
+      "id": "s26_b80_OpenAI_Emb",
+      "label": "OpenAI Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 80,
+      "url": "https://platform.openai.com/docs/guides/embeddings",
+      "tooltip": "OpenAI text embeddings",
+      "style": null,
+      "parent": null,
+      "original_id": "OpenAI_Embeddings"
+    },
+    {
+      "id": "s26_b81_Cohere_Emb",
+      "label": "Cohere Embed",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 81,
+      "url": "https://cohere.com/embed",
+      "tooltip": "Cohere embedding models",
+      "style": null,
+      "parent": null,
+      "original_id": "Cohere_Embed"
+    },
+    {
+      "id": "s26_b82_Voyage_AI",
+      "label": "Voyage AI",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 82,
+      "url": "https://www.voyageai.com/",
+      "tooltip": "Embedding models",
+      "style": null,
+      "parent": null,
+      "original_id": "Voyage_AI"
+    },
+    {
+      "id": "s26_b83_Jina_Embed",
+      "label": "Jina Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 83,
+      "url": "https://jina.ai/embeddings/",
+      "tooltip": "Multilingual embeddings",
+      "style": null,
+      "parent": null,
+      "original_id": "Jina_Embeddings"
+    },
+    {
+      "id": "s26_b84_E5_Embeddi",
+      "label": "E5 Embeddings",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 84,
+      "url": "https://huggingface.co/intfloat/e5-large-v2",
+      "tooltip": "Microsoft E5 embeddings",
+      "style": null,
+      "parent": null,
+      "original_id": "E5_Embeddings"
+    },
+    {
+      "id": "s26_b85_ColBERT",
+      "label": "ColBERT",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 85,
+      "url": "https://github.com/stanford-futuredata/ColBERT",
+      "tooltip": "Late interaction retrieval",
+      "style": null,
+      "parent": null,
+      "original_id": "ColBERT"
+    },
+    {
+      "id": "s26_b86_Parent_Doc",
+      "label": "Parent Document Retriever",
+      "type": "node",
+      "section_id": 26,
+      "block_id": 86,
+      "url": "https://python.langchain.com/docs/modules/data_connection/retrievers/parent_document_retriever",
+      "tooltip": "Hierarchical retrieval",
+      "style": null,
+      "parent": null,
+      "original_id": "Parent_Document_Retriever"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s26_b29_Sparse",
+      "target": "s26_b29_Hybrid",
+      "type": "thick",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Dense",
+      "target": "s26_b29_Hybrid",
+      "type": "thick",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Hybrid",
+      "target": "s26_b29_Rerank",
+      "type": "thick",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Sparse",
+      "target": "s26_b29_BM25",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Sparse",
+      "target": "s26_b29_KW",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Dense",
+      "target": "s26_b29_VEC",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Dense",
+      "target": "s26_b29_EMB",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Hybrid",
+      "target": "s26_b29_FUSE",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Hybrid",
+      "target": "s26_b29_RRF",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Rerank",
+      "target": "s26_b29_CROSS",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Rerank",
+      "target": "s26_b29_COHERE",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    },
+    {
+      "source": "s26_b29_Rerank",
+      "target": "s26_b29_BGE",
+      "type": "contains",
+      "section_id": 26,
+      "block_id": 29
+    }
+  ]
+}

@@ -1,0 +1,2537 @@
+{
+  "meta": {
+    "id": "ai-applications",
+    "title": "AI Applications & Domains",
+    "description": "Industry applications and use cases",
+    "icon": "\ud83d\udcbc",
+    "totalNodes": 133,
+    "totalEdges": 128,
+    "totalSections": 4
+  },
+  "sections": [
+    {
+      "id": 27,
+      "title": "ML Application Domains",
+      "slug": "27-ml-application-domains",
+      "description": "Recommenders, Time Series, Anomaly",
+      "line": 1904
+    },
+    {
+      "id": 29,
+      "title": "Robotics & Control",
+      "slug": "29-robotics--control",
+      "description": "SLAM, Motion Planning, ROS, Sim",
+      "line": 2169
+    },
+    {
+      "id": 43,
+      "title": "AI Industry Applications Worldwide",
+      "slug": "",
+      "description": "",
+      "line": 3663
+    },
+    {
+      "id": 47,
+      "title": "AI for Social Good & Sustainability",
+      "slug": "",
+      "description": "",
+      "line": 4078
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s27_b30_DOMAINS",
+      "label": "ML APPLICATION DOMAINS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://paperswithcode.com/",
+      "tooltip": "Papers With Code",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DOMAINS"
+    },
+    {
+      "id": "s27_b30_REC",
+      "label": "Recommenders",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://nvidia-merlin.github.io/Merlin/",
+      "tooltip": "NVIDIA Merlin",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REC"
+    },
+    {
+      "id": "s27_b30_TS",
+      "label": "Time Series",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts Time Series",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TS"
+    },
+    {
+      "id": "s27_b30_ANOM",
+      "label": "Anomaly Detection",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://pyod.readthedocs.io/",
+      "tooltip": "PyOD",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ANOM"
+    },
+    {
+      "id": "s27_b30_CAUSAL",
+      "label": "Causal Inference",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://www.pywhy.org/dowhy/",
+      "tooltip": "DoWhy",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CAUSAL"
+    },
+    {
+      "id": "s27_b30_R1",
+      "label": "Collaborative Filtering",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://cloud.google.com/recommendations",
+      "tooltip": "Collaborative Filtering",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s27_b30_R2",
+      "label": "Content-Based",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://cloud.google.com/recommendations",
+      "tooltip": "Content-Based Filtering",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s27_b30_R3",
+      "label": "Two-Tower Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://www.tensorflow.org/recommenders",
+      "tooltip": "TensorFlow Recommenders",
+      "style": null,
+      "parent": null,
+      "original_id": "R3"
+    },
+    {
+      "id": "s27_b30_T1",
+      "label": "Forecasting",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://otexts.com/fpp3/",
+      "tooltip": "Forecasting Principles",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s27_b30_T2",
+      "label": "Prophet/ARIMA",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://facebook.github.io/prophet/",
+      "tooltip": "Prophet",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s27_b30_T3",
+      "label": "Temporal Fusion",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://arxiv.org/abs/1912.09363",
+      "tooltip": "Temporal Fusion Transformer",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s27_b30_A1",
+      "label": "Isolation Forest",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "tooltip": "Isolation Forest",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s27_b30_A2",
+      "label": "Autoencoders",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://keras.io/examples/generative/vae/",
+      "tooltip": "Autoencoders",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s27_b30_A3",
+      "label": "Statistical Methods",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+      "tooltip": "Statistical Methods",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s27_b30_C1",
+      "label": "A/B Testing",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://www.exp-platform.com/",
+      "tooltip": "A/B Testing",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s27_b30_C2",
+      "label": "Uplift Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://causalml.readthedocs.io/",
+      "tooltip": "Uplift Models",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s27_b30_C3",
+      "label": "DoWhy/CausalML",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://causalml.readthedocs.io/",
+      "tooltip": "CausalML",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s27_b31_TIMESERIES",
+      "label": "TIME SERIES ANALYSIS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts Library",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TIMESERIES"
+    },
+    {
+      "id": "s27_b31_CLASSICAL",
+      "label": "Classical Methods",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://otexts.com/fpp3/",
+      "tooltip": "Forecasting Textbook",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLASSICAL"
+    },
+    {
+      "id": "s27_b31_DL",
+      "label": "Deep Learning",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1912.09363",
+      "tooltip": "TFT Paper",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s27_b31_FOUNDATION",
+      "label": "Foundation Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.nixtla.io/",
+      "tooltip": "Nixtla TimeGPT",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FOUNDATION"
+    },
+    {
+      "id": "s27_b31_TOOLS",
+      "label": "Libraries",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TOOLS"
+    },
+    {
+      "id": "s27_b31_CL1",
+      "label": "ARIMA/SARIMA",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html",
+      "tooltip": "ARIMA",
+      "style": null,
+      "parent": null,
+      "original_id": "CL1"
+    },
+    {
+      "id": "s27_b31_CL2",
+      "label": "Exponential Smoothing",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://otexts.com/fpp3/expsmooth.html",
+      "tooltip": "Exponential Smoothing",
+      "style": null,
+      "parent": null,
+      "original_id": "CL2"
+    },
+    {
+      "id": "s27_b31_CL3",
+      "label": "Prophet",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://facebook.github.io/prophet/",
+      "tooltip": "Prophet",
+      "style": null,
+      "parent": null,
+      "original_id": "CL3"
+    },
+    {
+      "id": "s27_b31_CL4",
+      "label": "State Space Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.statsmodels.org/stable/statespace.html",
+      "tooltip": "State Space",
+      "style": null,
+      "parent": null,
+      "original_id": "CL4"
+    },
+    {
+      "id": "s27_b31_DL1",
+      "label": "N-BEATS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1905.10437",
+      "tooltip": "N-BEATS Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL1"
+    },
+    {
+      "id": "s27_b31_DL2",
+      "label": "Temporal Fusion Transformer",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1912.09363",
+      "tooltip": "TFT Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL2"
+    },
+    {
+      "id": "s27_b31_DL3",
+      "label": "DeepAR",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1704.04110",
+      "tooltip": "DeepAR Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL3"
+    },
+    {
+      "id": "s27_b31_DL4",
+      "label": "Informer/Autoformer",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/2012.07436",
+      "tooltip": "Informer Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL4"
+    },
+    {
+      "id": "s27_b31_FM1",
+      "label": "TimeGPT",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.nixtla.io/",
+      "tooltip": "TimeGPT",
+      "style": null,
+      "parent": null,
+      "original_id": "FM1"
+    },
+    {
+      "id": "s27_b31_FM2",
+      "label": "Chronos Amazon",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://auto.gluon.ai/stable/tutorials/timeseries/forecasting-chronos.html",
+      "tooltip": "Chronos",
+      "style": null,
+      "parent": null,
+      "original_id": "FM2"
+    },
+    {
+      "id": "s27_b31_FM3",
+      "label": "Lag-Llama",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://github.com/time-series-foundation-models/lag-llama",
+      "tooltip": "Lag-Llama",
+      "style": null,
+      "parent": null,
+      "original_id": "FM3"
+    },
+    {
+      "id": "s27_b31_FM4",
+      "label": "Moment",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://github.com/moment-timeseries-foundation-model/moment",
+      "tooltip": "Moment",
+      "style": null,
+      "parent": null,
+      "original_id": "FM4"
+    },
+    {
+      "id": "s27_b31_T1",
+      "label": "Darts",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s27_b31_T2",
+      "label": "statsmodels",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.statsmodels.org/",
+      "tooltip": "statsmodels",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s27_b31_T3",
+      "label": "NeuralProphet",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://neuralprophet.com/",
+      "tooltip": "NeuralProphet",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s27_b31_T4",
+      "label": "GluonTS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://ts.gluon.ai/stable/",
+      "tooltip": "GluonTS",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    },
+    {
+      "id": "s29_b34_ROBOTICS",
+      "label": "ROBOTICS & CONTROL",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.ros.org/",
+      "tooltip": "ROS",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ROBOTICS"
+    },
+    {
+      "id": "s29_b34_PERCEPT",
+      "label": "Perception",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.ros.org/",
+      "tooltip": "Robot Perception",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PERCEPT"
+    },
+    {
+      "id": "s29_b34_PLAN",
+      "label": "Planning",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://moveit.ros.org/",
+      "tooltip": "MoveIt",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PLAN"
+    },
+    {
+      "id": "s29_b34_CONTROL",
+      "label": "Control",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.gymlibrary.dev/",
+      "tooltip": "Gym Library",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CONTROL"
+    },
+    {
+      "id": "s29_b34_SIM",
+      "label": "Simulation",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://developer.nvidia.com/isaac-sim",
+      "tooltip": "Simulation",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SIM"
+    },
+    {
+      "id": "s29_b34_PE1",
+      "label": "SLAM",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://openslam-org.github.io/",
+      "tooltip": "OpenSLAM",
+      "style": null,
+      "parent": null,
+      "original_id": "PE1"
+    },
+    {
+      "id": "s29_b34_PE2",
+      "label": "Object Detection",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://ros.org/reps/rep-0138.html",
+      "tooltip": "ROS Perception",
+      "style": null,
+      "parent": null,
+      "original_id": "PE2"
+    },
+    {
+      "id": "s29_b34_PE3",
+      "label": "Point Cloud/LiDAR",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://pointclouds.org/",
+      "tooltip": "PCL",
+      "style": null,
+      "parent": null,
+      "original_id": "PE3"
+    },
+    {
+      "id": "s29_b34_PE4",
+      "label": "Sensor Fusion",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://docs.ros.org/en/humble/",
+      "tooltip": "Sensor Fusion",
+      "style": null,
+      "parent": null,
+      "original_id": "PE4"
+    },
+    {
+      "id": "s29_b34_PL1",
+      "label": "Motion Planning",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://moveit.ros.org/documentation/concepts/",
+      "tooltip": "Motion Planning",
+      "style": null,
+      "parent": null,
+      "original_id": "PL1"
+    },
+    {
+      "id": "s29_b34_PL2",
+      "label": "Path Planning A*",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+      "tooltip": "A* Algorithm",
+      "style": null,
+      "parent": null,
+      "original_id": "PL2"
+    },
+    {
+      "id": "s29_b34_PL3",
+      "label": "Task Planning PDDL",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://planning.wiki/",
+      "tooltip": "AI Planning Wiki",
+      "style": null,
+      "parent": null,
+      "original_id": "PL3"
+    },
+    {
+      "id": "s29_b34_PL4",
+      "label": "Behavior Trees",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.behaviortree.dev/",
+      "tooltip": "Behavior Trees",
+      "style": null,
+      "parent": null,
+      "original_id": "PL4"
+    },
+    {
+      "id": "s29_b34_CO1",
+      "label": "PID Control",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://en.wikipedia.org/wiki/PID_controller",
+      "tooltip": "PID Control",
+      "style": null,
+      "parent": null,
+      "original_id": "CO1"
+    },
+    {
+      "id": "s29_b34_CO2",
+      "label": "MPC",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.mathworks.com/help/mpc/ug/what-is-mpc.html",
+      "tooltip": "MPC",
+      "style": null,
+      "parent": null,
+      "original_id": "CO2"
+    },
+    {
+      "id": "s29_b34_CO3",
+      "label": "RL for Robotics",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://spinningup.openai.com/",
+      "tooltip": "OpenAI Spinning Up",
+      "style": null,
+      "parent": null,
+      "original_id": "CO3"
+    },
+    {
+      "id": "s29_b34_CO4",
+      "label": "Imitation Learning",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://sites.google.com/view/icml2018-imitation-learning/",
+      "tooltip": "Imitation Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "CO4"
+    },
+    {
+      "id": "s29_b34_SI1",
+      "label": "Isaac Sim",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://developer.nvidia.com/isaac-sim",
+      "tooltip": "NVIDIA Isaac Sim",
+      "style": null,
+      "parent": null,
+      "original_id": "SI1"
+    },
+    {
+      "id": "s29_b34_SI2",
+      "label": "Gazebo",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://gazebosim.org/",
+      "tooltip": "Gazebo",
+      "style": null,
+      "parent": null,
+      "original_id": "SI2"
+    },
+    {
+      "id": "s29_b34_SI3",
+      "label": "MuJoCo",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://mujoco.org/",
+      "tooltip": "MuJoCo",
+      "style": null,
+      "parent": null,
+      "original_id": "SI3"
+    },
+    {
+      "id": "s29_b34_SI4",
+      "label": "PyBullet",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://pybullet.org/",
+      "tooltip": "PyBullet",
+      "style": null,
+      "parent": null,
+      "original_id": "SI4"
+    },
+    {
+      "id": "s43_b51_INDUSTRIES",
+      "label": "\ud83c\udfed AI ACROSS INDUSTRIES",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INDUSTRIES"
+    },
+    {
+      "id": "s43_b51_HEALTH",
+      "label": "\ud83c\udfe5 Healthcare",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.who.int/health-topics/artificial-intelligence",
+      "tooltip": "WHO AI Health",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "HEALTH"
+    },
+    {
+      "id": "s43_b51_FINANCE",
+      "label": "\ud83d\udcb0 Finance",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.bis.org/publ/work930.htm",
+      "tooltip": "BIS AI Finance",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "FINANCE"
+    },
+    {
+      "id": "s43_b51_RETAIL",
+      "label": "\ud83d\uded2 Retail",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.mckinsey.com/industries/retail/our-insights/ai-in-retail",
+      "tooltip": "McKinsey Retail AI",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "RETAIL"
+    },
+    {
+      "id": "s43_b51_MANUFACT",
+      "label": "\ud83c\udfed Manufacturing",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.weforum.org/projects/ai-for-manufacturing",
+      "tooltip": "WEF Manufacturing AI",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "MANUFACT"
+    },
+    {
+      "id": "s43_b51_AGRI",
+      "label": "\ud83c\udf3e Agriculture",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.fao.org/artificial-intelligence/en/",
+      "tooltip": "FAO AI Agriculture",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "AGRI"
+    },
+    {
+      "id": "s43_b51_ENERGY",
+      "label": "\u26a1 Energy",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.iea.org/reports/digitalisation-and-energy",
+      "tooltip": "IEA Energy AI",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "ENERGY"
+    },
+    {
+      "id": "s43_b51_TRANSPORT",
+      "label": "\ud83d\ude97 Transportation",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.transportation.gov/priorities/innovation/av",
+      "tooltip": "DOT AV",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "TRANSPORT"
+    },
+    {
+      "id": "s43_b51_LEGAL",
+      "label": "\u2696\ufe0f Legal",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/",
+      "tooltip": "Stanford CodeX",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "LEGAL"
+    },
+    {
+      "id": "s43_b51_EDUCATION",
+      "label": "\ud83d\udcda Education",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.unesco.org/en/digital-education/artificial-intelligence",
+      "tooltip": "UNESCO AI Education",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "EDUCATION"
+    },
+    {
+      "id": "s43_b51_MEDIA",
+      "label": "\ud83c\udfac Media & Entertainment",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.hollywoodreporter.com/business/business-news/ai-hollywood-everything-know-1235469857/",
+      "tooltip": "AI Hollywood",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "MEDIA"
+    },
+    {
+      "id": "s43_b51_HC",
+      "label": "HEALTHCARE AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "HC"
+    },
+    {
+      "id": "s43_b51_HC1",
+      "label": "Drug Discovery - AlphaFold",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://alphafold.ebi.ac.uk/",
+      "tooltip": "AlphaFold DB",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC1"
+    },
+    {
+      "id": "s43_b51_HC2",
+      "label": "Medical Imaging - Zebra",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.zebra-med.com/",
+      "tooltip": "Zebra Medical",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC2"
+    },
+    {
+      "id": "s43_b51_HC3",
+      "label": "Clinical NLP - nuance",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.nuance.com/healthcare.html",
+      "tooltip": "Nuance Healthcare",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC3"
+    },
+    {
+      "id": "s43_b51_HC4",
+      "label": "Diagnostics - PathAI",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.pathai.com/",
+      "tooltip": "PathAI",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC4"
+    },
+    {
+      "id": "s43_b51_HC5",
+      "label": "Genomics - Illumina",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.illumina.com/techniques/popular-applications/genotyping.html",
+      "tooltip": "Illumina Genomics",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC5"
+    },
+    {
+      "id": "s43_b51_FN",
+      "label": "FINANCE AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FN"
+    },
+    {
+      "id": "s43_b51_FN1",
+      "label": "Fraud Detection",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://stripe.com/radar",
+      "tooltip": "Stripe Radar",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN1"
+    },
+    {
+      "id": "s43_b51_FN2",
+      "label": "Algorithmic Trading",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.jpmorgan.com/technology/artificial-intelligence",
+      "tooltip": "JPMorgan AI",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN2"
+    },
+    {
+      "id": "s43_b51_FN3",
+      "label": "Credit Scoring",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.fico.com/en/products/fico-score",
+      "tooltip": "FICO Score",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN3"
+    },
+    {
+      "id": "s43_b51_FN4",
+      "label": "Robo-Advisors",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.betterment.com/",
+      "tooltip": "Betterment",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN4"
+    },
+    {
+      "id": "s43_b51_FN5",
+      "label": "RegTech",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.chainalysis.com/",
+      "tooltip": "Chainalysis",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN5"
+    },
+    {
+      "id": "s43_b51_RT",
+      "label": "RETAIL AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RT"
+    },
+    {
+      "id": "s43_b51_RT1",
+      "label": "Personalization",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.dynamic-yield.com/",
+      "tooltip": "Dynamic Yield",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT1"
+    },
+    {
+      "id": "s43_b51_RT2",
+      "label": "Demand Forecasting",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.blue-yonder.com/",
+      "tooltip": "Blue Yonder",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT2"
+    },
+    {
+      "id": "s43_b51_RT3",
+      "label": "Visual Search",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.syte.ai/",
+      "tooltip": "Syte Visual AI",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT3"
+    },
+    {
+      "id": "s43_b51_RT4",
+      "label": "Inventory Optimization",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.llamasoft.com/",
+      "tooltip": "Llamasoft",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT4"
+    },
+    {
+      "id": "s43_b51_RT5",
+      "label": "Checkout-free Stores",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.amazon.com/b?ie=UTF8&node=16008589011",
+      "tooltip": "Amazon Go",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT5"
+    },
+    {
+      "id": "s43_b51_MF",
+      "label": "MANUFACTURING AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#455A64,stroke:#263238,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MF"
+    },
+    {
+      "id": "s43_b51_MF1",
+      "label": "Predictive Maintenance",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.uptake.com/",
+      "tooltip": "Uptake",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF1"
+    },
+    {
+      "id": "s43_b51_MF2",
+      "label": "Quality Control",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://landing.ai/",
+      "tooltip": "Landing AI",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF2"
+    },
+    {
+      "id": "s43_b51_MF3",
+      "label": "Supply Chain",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.o9solutions.com/",
+      "tooltip": "o9 Solutions",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF3"
+    },
+    {
+      "id": "s43_b51_MF4",
+      "label": "Digital Twins",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.siemens.com/global/en/products/digital-twin.html",
+      "tooltip": "Siemens Digital Twin",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF4"
+    },
+    {
+      "id": "s43_b51_MF5",
+      "label": "Cobots",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.universal-robots.com/",
+      "tooltip": "Universal Robots",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF5"
+    },
+    {
+      "id": "s43_b51_AG",
+      "label": "AGRICULTURE AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#558B2F,stroke:#33691E,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AG"
+    },
+    {
+      "id": "s43_b51_AG1",
+      "label": "Precision Farming",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.johndeere.com/en/technology-products/precision-ag-technology/",
+      "tooltip": "John Deere Precision",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG1"
+    },
+    {
+      "id": "s43_b51_AG2",
+      "label": "Crop Monitoring",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.planet.com/products/monitoring/",
+      "tooltip": "Planet Monitoring",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG2"
+    },
+    {
+      "id": "s43_b51_AG3",
+      "label": "Yield Prediction",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.climate.com/",
+      "tooltip": "Climate Corp",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG3"
+    },
+    {
+      "id": "s43_b51_AG4",
+      "label": "Autonomous Tractors",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.deere.com/en/autonomous/",
+      "tooltip": "Deere Autonomous",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG4"
+    },
+    {
+      "id": "s43_b51_AG5",
+      "label": "Livestock Monitoring",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.cainthus.com/",
+      "tooltip": "Cainthus",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG5"
+    },
+    {
+      "id": "s47_b55_SOCIAL",
+      "label": "\ud83c\udf31 AI FOR GOOD",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SOCIAL"
+    },
+    {
+      "id": "s47_b55_CLIMATE",
+      "label": "\ud83c\udf0d Climate AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.climate.ai/",
+      "tooltip": "Climate AI",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "CLIMATE"
+    },
+    {
+      "id": "s47_b55_HEALTH",
+      "label": "\ud83c\udfe5 Global Health",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.who.int/health-topics/artificial-intelligence",
+      "tooltip": "WHO AI",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "HEALTH"
+    },
+    {
+      "id": "s47_b55_DISASTER",
+      "label": "\ud83d\udea8 Disaster Response",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.unocha.org/themes/digital-transformation",
+      "tooltip": "UN OCHA Digital",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "DISASTER"
+    },
+    {
+      "id": "s47_b55_ACCESS",
+      "label": "\u267f Accessibility",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.microsoft.com/en-us/accessibility",
+      "tooltip": "Microsoft Accessibility",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "ACCESS"
+    },
+    {
+      "id": "s47_b55_CONSERVATION",
+      "label": "\ud83e\udd81 Conservation",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.wildlabs.net/",
+      "tooltip": "WILDLABS",
+      "style": null,
+      "parent": "s47_b55_SOCIAL",
+      "original_id": "CONSERVATION"
+    },
+    {
+      "id": "s47_b55_CLI",
+      "label": "CLIMATE AI",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLI"
+    },
+    {
+      "id": "s47_b55_CL1",
+      "label": "Weather Prediction",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.google.com/search?q=google+weather+prediction+ai",
+      "tooltip": "Google Weather AI",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL1"
+    },
+    {
+      "id": "s47_b55_CL2",
+      "label": "Carbon Tracking",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://carbontracker.org/",
+      "tooltip": "Carbon Tracker",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL2"
+    },
+    {
+      "id": "s47_b55_CL3",
+      "label": "Energy Optimization",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/",
+      "tooltip": "DeepMind Cooling",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL3"
+    },
+    {
+      "id": "s47_b55_CL4",
+      "label": "Climate Modeling",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.climatetrace.org/",
+      "tooltip": "Climate TRACE",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL4"
+    },
+    {
+      "id": "s47_b55_CL5",
+      "label": "Deforestation Detection",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.globalforestwatch.org/",
+      "tooltip": "Global Forest Watch",
+      "style": null,
+      "parent": "s47_b55_CLI",
+      "original_id": "CL5"
+    },
+    {
+      "id": "s47_b55_GH",
+      "label": "GLOBAL HEALTH",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GH"
+    },
+    {
+      "id": "s47_b55_GH1",
+      "label": "Disease Outbreak",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://healthmap.org/",
+      "tooltip": "HealthMap",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH1"
+    },
+    {
+      "id": "s47_b55_GH2",
+      "label": "Drug Discovery",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.benevolent.com/",
+      "tooltip": "BenevolentAI",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH2"
+    },
+    {
+      "id": "s47_b55_GH3",
+      "label": "Telemedicine AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.babylon.com/",
+      "tooltip": "Babylon Health",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH3"
+    },
+    {
+      "id": "s47_b55_GH4",
+      "label": "Medical Translation",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://translatorswithoutborders.org/",
+      "tooltip": "Translators Without Borders",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH4"
+    },
+    {
+      "id": "s47_b55_GH5",
+      "label": "Epidemic Modeling",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.iddynamics.jhsph.edu/",
+      "tooltip": "JHU Epidemiology",
+      "style": null,
+      "parent": "s47_b55_GH",
+      "original_id": "GH5"
+    },
+    {
+      "id": "s47_b55_DR",
+      "label": "DISASTER RESPONSE",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DR"
+    },
+    {
+      "id": "s47_b55_DR1",
+      "label": "Damage Assessment",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.planet.com/products/monitoring/",
+      "tooltip": "Planet Monitoring",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR1"
+    },
+    {
+      "id": "s47_b55_DR2",
+      "label": "Search & Rescue",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.droneresponders.org/",
+      "tooltip": "Drone Responders",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR2"
+    },
+    {
+      "id": "s47_b55_DR3",
+      "label": "Early Warning",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.preventionweb.net/sendai-framework",
+      "tooltip": "Sendai Framework",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR3"
+    },
+    {
+      "id": "s47_b55_DR4",
+      "label": "Resource Allocation",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.icrc.org/en/document/artificial-intelligence-humanitarian-action",
+      "tooltip": "ICRC AI",
+      "style": null,
+      "parent": "s47_b55_DR",
+      "original_id": "DR4"
+    },
+    {
+      "id": "s47_b55_AC",
+      "label": "ACCESSIBILITY",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AC"
+    },
+    {
+      "id": "s47_b55_AC1",
+      "label": "Screen Readers",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.freedomscientific.com/products/software/jaws/",
+      "tooltip": "JAWS",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC1"
+    },
+    {
+      "id": "s47_b55_AC2",
+      "label": "Sign Language AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.signall.us/",
+      "tooltip": "SignAll",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC2"
+    },
+    {
+      "id": "s47_b55_AC3",
+      "label": "Voice Interfaces",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://voiceitt.com/",
+      "tooltip": "Voiceitt",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC3"
+    },
+    {
+      "id": "s47_b55_AC4",
+      "label": "Image Description",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.microsoft.com/en-us/ai/seeing-ai",
+      "tooltip": "Seeing AI",
+      "style": null,
+      "parent": "s47_b55_AC",
+      "original_id": "AC4"
+    },
+    {
+      "id": "s47_b55_CV",
+      "label": "CONSERVATION",
+      "type": "subgraph",
+      "section_id": 47,
+      "block_id": 55,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#00695C,stroke:#004D40,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CV"
+    },
+    {
+      "id": "s47_b55_CV1",
+      "label": "Wildlife Tracking",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://wildme.org/",
+      "tooltip": "Wild Me",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV1"
+    },
+    {
+      "id": "s47_b55_CV2",
+      "label": "Poaching Detection",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.resolve.ngo/trailguard.htm",
+      "tooltip": "TrailGuard",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV2"
+    },
+    {
+      "id": "s47_b55_CV3",
+      "label": "Ocean Monitoring",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://globalfishingwatch.org/",
+      "tooltip": "Global Fishing Watch",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV3"
+    },
+    {
+      "id": "s47_b55_CV4",
+      "label": "Biodiversity AI",
+      "type": "node",
+      "section_id": 47,
+      "block_id": 55,
+      "url": "https://www.inaturalist.org/",
+      "tooltip": "iNaturalist",
+      "style": null,
+      "parent": "s47_b55_CV",
+      "original_id": "CV4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_REC",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_TS",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_ANOM",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_CAUSAL",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_REC",
+      "target": "s27_b30_R1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_REC",
+      "target": "s27_b30_R2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_REC",
+      "target": "s27_b30_R3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_TS",
+      "target": "s27_b30_T1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_TS",
+      "target": "s27_b30_T2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_TS",
+      "target": "s27_b30_T3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_ANOM",
+      "target": "s27_b30_A1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_ANOM",
+      "target": "s27_b30_A2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_ANOM",
+      "target": "s27_b30_A3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_CAUSAL",
+      "target": "s27_b30_C1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_CAUSAL",
+      "target": "s27_b30_C2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_CAUSAL",
+      "target": "s27_b30_C3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_CLASSICAL",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_DL",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_FOUNDATION",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_TOOLS",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_PERCEPT",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_PLAN",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_CONTROL",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_SIM",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s43_b51_HEALTH",
+      "target": "s43_b51_HC",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FINANCE",
+      "target": "s43_b51_FN",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RETAIL",
+      "target": "s43_b51_RT",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MANUFACT",
+      "target": "s43_b51_MF",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AGRI",
+      "target": "s43_b51_AG",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_HEALTH",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_FINANCE",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_RETAIL",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_MANUFACT",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_AGRI",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_ENERGY",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_TRANSPORT",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_LEGAL",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_EDUCATION",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_MEDIA",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s47_b55_CLIMATE",
+      "target": "s47_b55_CLI",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_HEALTH",
+      "target": "s47_b55_GH",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DISASTER",
+      "target": "s47_b55_DR",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_ACCESS",
+      "target": "s47_b55_AC",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CONSERVATION",
+      "target": "s47_b55_CV",
+      "type": "regular",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_CLIMATE",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_HEALTH",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_DISASTER",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_ACCESS",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_SOCIAL",
+      "target": "s47_b55_CONSERVATION",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CLI",
+      "target": "s47_b55_CL5",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_GH",
+      "target": "s47_b55_GH5",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_DR",
+      "target": "s47_b55_DR4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_AC",
+      "target": "s47_b55_AC4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV1",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV2",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV3",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    },
+    {
+      "source": "s47_b55_CV",
+      "target": "s47_b55_CV4",
+      "type": "contains",
+      "section_id": 47,
+      "block_id": 55
+    }
+  ]
+}

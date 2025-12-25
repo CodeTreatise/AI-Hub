@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Structured Outputs</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        .note { background: rgba(88, 166, 255, 0.1); border-left: 4px solid #58a6ff; padding: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>OpenAI Structured Outputs</h1>
+            <p>Source: <a href="https://platform.openai.com/docs/guides/structured-outputs" target="_blank">https://platform.openai.com/docs/guides/structured-outputs</a> (Offline Guide)</p>
+        </div>
+        <div class="content">
+            
+        <h2>Structured Outputs (JSON Mode)</h2>
+        <p>By default, LLMs return unstructured text. For building reliable applications, you often need structured data (JSON).</p>
+
+        <h3>Why use it?</h3>
+        <p>If you ask an LLM to "extract the date and time", it might say "Sure, the date is..." or just "2023-10-01". Structured outputs force it to return exactly what you need.</p>
+
+        <h3>Using <code>response_format</code></h3>
+        <p>You can enforce JSON output by setting the <code>response_format</code> parameter.</p>
+        
+        <pre><code>const completion = await openai.chat.completions.create({
+  model: "gpt-4o",
+  messages: [
+    { role: "system", content: "Extract data as JSON." },
+    { role: "user", content: "Meeting at 5pm on Friday." }
+  ],
+  response_format: { type: "json_object" }
+});</code></pre>
+
+        <div class="note">
+            <strong>Important:</strong> When using JSON mode, you MUST also instruct the model in the system prompt to "output JSON".
+        </div>
+
+        <h3>Strict Schemas (Zod)</h3>
+        <p>Newer models support strict schema validation, ensuring the output matches a specific structure exactly.</p>
+        
+        </div>
+    </div>
+</body>
+</html>

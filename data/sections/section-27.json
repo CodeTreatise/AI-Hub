@@ -1,0 +1,731 @@
+{
+  "meta": {
+    "id": 27,
+    "title": "ML Application Domains",
+    "description": "Recommenders, Time Series, Anomaly",
+    "slug": "ml-application-domains",
+    "totalNodes": 38,
+    "totalEdges": 36
+  },
+  "sections": [
+    {
+      "id": 27,
+      "title": "ML Application Domains",
+      "slug": "27-ml-application-domains",
+      "description": "Recommenders, Time Series, Anomaly",
+      "line": 1904
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s27_b30_DOMAINS",
+      "label": "ML APPLICATION DOMAINS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://paperswithcode.com/",
+      "tooltip": "Papers With Code",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DOMAINS"
+    },
+    {
+      "id": "s27_b30_REC",
+      "label": "Recommenders",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://nvidia-merlin.github.io/Merlin/",
+      "tooltip": "NVIDIA Merlin",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REC"
+    },
+    {
+      "id": "s27_b30_TS",
+      "label": "Time Series",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts Time Series",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TS"
+    },
+    {
+      "id": "s27_b30_ANOM",
+      "label": "Anomaly Detection",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://pyod.readthedocs.io/",
+      "tooltip": "PyOD",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ANOM"
+    },
+    {
+      "id": "s27_b30_CAUSAL",
+      "label": "Causal Inference",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://www.pywhy.org/dowhy/",
+      "tooltip": "DoWhy",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CAUSAL"
+    },
+    {
+      "id": "s27_b30_R1",
+      "label": "Collaborative Filtering",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://cloud.google.com/recommendations",
+      "tooltip": "Collaborative Filtering",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s27_b30_R2",
+      "label": "Content-Based",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://cloud.google.com/recommendations",
+      "tooltip": "Content-Based Filtering",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s27_b30_R3",
+      "label": "Two-Tower Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://www.tensorflow.org/recommenders",
+      "tooltip": "TensorFlow Recommenders",
+      "style": null,
+      "parent": null,
+      "original_id": "R3"
+    },
+    {
+      "id": "s27_b30_T1",
+      "label": "Forecasting",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://otexts.com/fpp3/",
+      "tooltip": "Forecasting Principles",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s27_b30_T2",
+      "label": "Prophet/ARIMA",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://facebook.github.io/prophet/",
+      "tooltip": "Prophet",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s27_b30_T3",
+      "label": "Temporal Fusion",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://arxiv.org/abs/1912.09363",
+      "tooltip": "Temporal Fusion Transformer",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s27_b30_A1",
+      "label": "Isolation Forest",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "tooltip": "Isolation Forest",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s27_b30_A2",
+      "label": "Autoencoders",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://keras.io/examples/generative/vae/",
+      "tooltip": "Autoencoders",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s27_b30_A3",
+      "label": "Statistical Methods",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+      "tooltip": "Statistical Methods",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s27_b30_C1",
+      "label": "A/B Testing",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://www.exp-platform.com/",
+      "tooltip": "A/B Testing",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s27_b30_C2",
+      "label": "Uplift Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://causalml.readthedocs.io/",
+      "tooltip": "Uplift Models",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s27_b30_C3",
+      "label": "DoWhy/CausalML",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 30,
+      "url": "https://causalml.readthedocs.io/",
+      "tooltip": "CausalML",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s27_b31_TIMESERIES",
+      "label": "TIME SERIES ANALYSIS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts Library",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TIMESERIES"
+    },
+    {
+      "id": "s27_b31_CLASSICAL",
+      "label": "Classical Methods",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://otexts.com/fpp3/",
+      "tooltip": "Forecasting Textbook",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CLASSICAL"
+    },
+    {
+      "id": "s27_b31_DL",
+      "label": "Deep Learning",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1912.09363",
+      "tooltip": "TFT Paper",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s27_b31_FOUNDATION",
+      "label": "Foundation Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.nixtla.io/",
+      "tooltip": "Nixtla TimeGPT",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FOUNDATION"
+    },
+    {
+      "id": "s27_b31_TOOLS",
+      "label": "Libraries",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TOOLS"
+    },
+    {
+      "id": "s27_b31_CL1",
+      "label": "ARIMA/SARIMA",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html",
+      "tooltip": "ARIMA",
+      "style": null,
+      "parent": null,
+      "original_id": "CL1"
+    },
+    {
+      "id": "s27_b31_CL2",
+      "label": "Exponential Smoothing",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://otexts.com/fpp3/expsmooth.html",
+      "tooltip": "Exponential Smoothing",
+      "style": null,
+      "parent": null,
+      "original_id": "CL2"
+    },
+    {
+      "id": "s27_b31_CL3",
+      "label": "Prophet",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://facebook.github.io/prophet/",
+      "tooltip": "Prophet",
+      "style": null,
+      "parent": null,
+      "original_id": "CL3"
+    },
+    {
+      "id": "s27_b31_CL4",
+      "label": "State Space Models",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.statsmodels.org/stable/statespace.html",
+      "tooltip": "State Space",
+      "style": null,
+      "parent": null,
+      "original_id": "CL4"
+    },
+    {
+      "id": "s27_b31_DL1",
+      "label": "N-BEATS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1905.10437",
+      "tooltip": "N-BEATS Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL1"
+    },
+    {
+      "id": "s27_b31_DL2",
+      "label": "Temporal Fusion Transformer",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1912.09363",
+      "tooltip": "TFT Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL2"
+    },
+    {
+      "id": "s27_b31_DL3",
+      "label": "DeepAR",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/1704.04110",
+      "tooltip": "DeepAR Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL3"
+    },
+    {
+      "id": "s27_b31_DL4",
+      "label": "Informer/Autoformer",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://arxiv.org/abs/2012.07436",
+      "tooltip": "Informer Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "DL4"
+    },
+    {
+      "id": "s27_b31_FM1",
+      "label": "TimeGPT",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.nixtla.io/",
+      "tooltip": "TimeGPT",
+      "style": null,
+      "parent": null,
+      "original_id": "FM1"
+    },
+    {
+      "id": "s27_b31_FM2",
+      "label": "Chronos Amazon",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://auto.gluon.ai/stable/tutorials/timeseries/forecasting-chronos.html",
+      "tooltip": "Chronos",
+      "style": null,
+      "parent": null,
+      "original_id": "FM2"
+    },
+    {
+      "id": "s27_b31_FM3",
+      "label": "Lag-Llama",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://github.com/time-series-foundation-models/lag-llama",
+      "tooltip": "Lag-Llama",
+      "style": null,
+      "parent": null,
+      "original_id": "FM3"
+    },
+    {
+      "id": "s27_b31_FM4",
+      "label": "Moment",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://github.com/moment-timeseries-foundation-model/moment",
+      "tooltip": "Moment",
+      "style": null,
+      "parent": null,
+      "original_id": "FM4"
+    },
+    {
+      "id": "s27_b31_T1",
+      "label": "Darts",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://unit8co.github.io/darts/",
+      "tooltip": "Darts",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s27_b31_T2",
+      "label": "statsmodels",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://www.statsmodels.org/",
+      "tooltip": "statsmodels",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s27_b31_T3",
+      "label": "NeuralProphet",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://neuralprophet.com/",
+      "tooltip": "NeuralProphet",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s27_b31_T4",
+      "label": "GluonTS",
+      "type": "node",
+      "section_id": 27,
+      "block_id": 31,
+      "url": "https://ts.gluon.ai/stable/",
+      "tooltip": "GluonTS",
+      "style": null,
+      "parent": null,
+      "original_id": "T4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_REC",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_TS",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_ANOM",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_DOMAINS",
+      "target": "s27_b30_CAUSAL",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_REC",
+      "target": "s27_b30_R1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_REC",
+      "target": "s27_b30_R2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_REC",
+      "target": "s27_b30_R3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_TS",
+      "target": "s27_b30_T1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_TS",
+      "target": "s27_b30_T2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_TS",
+      "target": "s27_b30_T3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_ANOM",
+      "target": "s27_b30_A1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_ANOM",
+      "target": "s27_b30_A2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_ANOM",
+      "target": "s27_b30_A3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_CAUSAL",
+      "target": "s27_b30_C1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_CAUSAL",
+      "target": "s27_b30_C2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b30_CAUSAL",
+      "target": "s27_b30_C3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 30
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_CLASSICAL",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_DL",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_FOUNDATION",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TIMESERIES",
+      "target": "s27_b31_TOOLS",
+      "type": "thick",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_CLASSICAL",
+      "target": "s27_b31_CL4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_DL",
+      "target": "s27_b31_DL4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_FOUNDATION",
+      "target": "s27_b31_FM4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T1",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T2",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T3",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    },
+    {
+      "source": "s27_b31_TOOLS",
+      "target": "s27_b31_T4",
+      "type": "regular",
+      "section_id": 27,
+      "block_id": 31
+    }
+  ]
+}

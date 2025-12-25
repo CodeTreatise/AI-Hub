@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Week 1 Recipe (Follow Step-by-Step)</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        /* Markdown Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; background: rgba(110, 118, 129, 0.4); padding: 0.2em 0.4em; border-radius: 6px; }
+        pre code { background: transparent; padding: 0; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #58a6ff; padding-left: 1rem; color: #8b949e; margin: 1rem 0; }
+        table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+        th, td { border: 1px solid #30363d; padding: 0.5rem; text-align: left; color: #c9d1d9; }
+        th { background: #161b22; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>📝 Week 1 Recipe (Follow Step-by-Step)</h1>
+            <p>Type: recipe</p>
+        </div>
+        <div class="content">
+            <h3>Goal</h3>
+<ul>
+<li>Local Postgres (pgvector) running in Docker</li>
+<li>Express + TypeScript API running</li>
+<li>Prisma connected + first migration applied</li>
+</ul>
+<h3>Step 0 — Verify tools</h3>
+<pre><code class="language-bash">node --version   # expect v18+ (or v20+)
+git --version
+docker --version
+docker compose version
+</code></pre>
+<p>If <code>docker compose</code> is missing on Linux, install Docker Engine + Compose plugin (recommended) or Docker Desktop.</p>
+<hr />
+<h3>Step 1 — Create repo + install deps</h3>
+<pre><code class="language-bash">mkdir -p ~/projects/rag-knowledge-chat
+cd ~/projects/rag-knowledge-chat
+
+npm init -y
+npm i express zod dotenv
+npm i -D typescript ts-node-dev @types/node @types/express prisma
+npx tsc --init
+npx prisma init
+</code></pre>
+<p>Expected:</p>
+<ul>
+<li><code>package.json</code> created</li>
+<li><code>tsconfig.json</code> created</li>
+<li><code>prisma/schema.prisma</code> created</li>
+<li><code>.env</code> created (by Prisma)</li>
+</ul>
+<hr />
+<h3>Step 2 — Start Postgres + pgvector (Docker)</h3>
+<p>Create <code>docker-compose.yml</code> using the template in this doc, then run:</p>
+<pre><code class="language-bash">docker compose up -d
+docker compose ps
+</code></pre>
+<p>Expected: service <code>postgres</code> is <code>running</code>.</p>
+<hr />
+<h3>Step 3 — Set your DATABASE_URL</h3>
+<p>In your <code>.env</code> (project root), set:</p>
+<pre><code class="language-bash">DATABASE_URL=postgresql://raguser:ragpass@localhost:5432/ragdb
+</code></pre>
+<p>Quick check (optional):</p>
+<pre><code class="language-bash">docker compose logs -n 50 postgres
+</code></pre>
+<p>Expected: Postgres ready to accept connections.</p>
+<hr />
+<h3>Step 4 — Add Prisma schema + run first migration</h3>
+<p>Replace <code>prisma/schema.prisma</code> with the schema in this doc, then run:</p>
+<pre><code class="language-bash">npx prisma generate
+npx prisma migrate dev --name init
+</code></pre>
+<p>Expected:</p>
+<ul>
+<li>Migration created in <code>prisma/migrations/...</code></li>
+<li>Database tables created</li>
+</ul>
+<hr />
+<h3>Step 5 — Create a minimal API (health check)</h3>
+<p>Create <code>src/index.ts</code>:</p>
+<pre><code class="language-ts">import 'dotenv/config';
+import express from 'express';
+
+const app = express();
+app.use(express.json());
+
+app.get('/health', (_req, res) =&gt; res.json({ ok: true }));
+
+const port = Number(process.env.PORT ?? 3000);
+app.listen(port, () =&gt; {
+   console.log(`API listening on http://localhost:${port}`);
+});
+</code></pre>
+<p>Add scripts in <code>package.json</code>:</p>
+<pre><code class="language-json">{
+   &quot;scripts&quot;: {
+      &quot;dev&quot;: &quot;ts-node-dev --respawn --transpile-only src/index.ts&quot;
+   }
+}
+</code></pre>
+<p>Run:</p>
+<pre><code class="language-bash">mkdir -p src
+npm run dev
+</code></pre>
+<p>Expected:</p>
+<ul>
+<li>Terminal prints <code>API listening on http://localhost:3000</code></li>
+</ul>
+<p>Test:</p>
+<pre><code class="language-bash">curl -s http://localhost:3000/health
+</code></pre>
+<p>Expected output:</p>
+<pre><code class="language-json">{&quot;ok&quot;:true}
+</code></pre>
+<hr />
+<h3>Step 6 — Week 1 done criteria</h3>
+<ul>
+<li>Docker Postgres running (<code>docker compose ps</code> looks healthy)</li>
+<li>Prisma migrated successfully</li>
+<li><code>/health</code> endpoint returns <code>{ ok: true }</code></li>
+</ul>
+<p>If you want, next I can generate the Week 2 recipe (URL ingestion + chunking) in the same style.</p>
+<hr />
+<h2>🧠 Pro Tips for Success (Read Before Starting)</h2>
+<h3>1. The &quot;Full Stack TypeScript&quot; Advantage</h3>
+<p>Since you use <strong>Express (Backend)</strong> and <strong>Angular (Frontend)</strong>, you have a superpower: <strong>Shared Types</strong>.</p>
+<ul>
+<li><strong>Don't duplicate interfaces.</strong> Create a <code>shared</code> folder (or use a monorepo/workspace) to define API response types (e.g., <code>ChatResponse</code>, <code>ErrorResponse</code>).</li>
+<li><strong>Why:</strong> If you change the backend API, your Angular build will fail immediately. This saves hours of debugging &quot;undefined&quot; errors.</li>
+</ul>
+<h3>2. Treat &quot;Git&quot; Like a Feature</h3>
+<p>Recruiters look at commit history, not just the final code.</p>
+<ul>
+<li><strong>Don't</strong> push one giant &quot;Initial commit&quot; at the end.</li>
+<li><strong>Do</strong> commit every time you finish a task:
+<ul>
+<li><code>feat: add pgvector migration</code></li>
+<li><code>fix: improve chunking overlap</code></li>
+<li><code>docs: add setup instructions</code></li>
+</ul>
+</li>
+<li><strong>Why:</strong> It proves you work iteratively and professionally.</li>
+</ul>
+<h3>3. Avoid the &quot;Prompt Engineering&quot; Trap</h3>
+<p>Beginners spend 80% of time tweaking prompts (&quot;Act as a helpful assistant...&quot;).</p>
+<ul>
+<li><strong>Don't</strong> obsess over prompts early on.</li>
+<li><strong>Do</strong> spend 80% of your time on <strong>Retrieval</strong> (getting the right chunks).</li>
+<li><strong>Why:</strong> If retrieval is bad (garbage in), the best prompt won't fix it (garbage out). Focus on <strong>Phase 3.3 (Chunking)</strong> and <strong>Phase 3.5 (Vector Search)</strong>—that's where the real engineering happens.</li>
+</ul>
+<hr />
+
+        </div>
+    </div>
+</body>
+</html>

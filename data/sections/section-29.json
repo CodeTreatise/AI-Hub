@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 29,
+    "title": "Robotics & Control",
+    "description": "SLAM, Motion Planning, ROS, Sim",
+    "slug": "robotics-control",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 29,
+      "title": "Robotics & Control",
+      "slug": "29-robotics--control",
+      "description": "SLAM, Motion Planning, ROS, Sim",
+      "line": 2169
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s29_b34_ROBOTICS",
+      "label": "ROBOTICS & CONTROL",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.ros.org/",
+      "tooltip": "ROS",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ROBOTICS"
+    },
+    {
+      "id": "s29_b34_PERCEPT",
+      "label": "Perception",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.ros.org/",
+      "tooltip": "Robot Perception",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PERCEPT"
+    },
+    {
+      "id": "s29_b34_PLAN",
+      "label": "Planning",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://moveit.ros.org/",
+      "tooltip": "MoveIt",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PLAN"
+    },
+    {
+      "id": "s29_b34_CONTROL",
+      "label": "Control",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.gymlibrary.dev/",
+      "tooltip": "Gym Library",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CONTROL"
+    },
+    {
+      "id": "s29_b34_SIM",
+      "label": "Simulation",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://developer.nvidia.com/isaac-sim",
+      "tooltip": "Simulation",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SIM"
+    },
+    {
+      "id": "s29_b34_PE1",
+      "label": "SLAM",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://openslam-org.github.io/",
+      "tooltip": "OpenSLAM",
+      "style": null,
+      "parent": null,
+      "original_id": "PE1"
+    },
+    {
+      "id": "s29_b34_PE2",
+      "label": "Object Detection",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://ros.org/reps/rep-0138.html",
+      "tooltip": "ROS Perception",
+      "style": null,
+      "parent": null,
+      "original_id": "PE2"
+    },
+    {
+      "id": "s29_b34_PE3",
+      "label": "Point Cloud/LiDAR",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://pointclouds.org/",
+      "tooltip": "PCL",
+      "style": null,
+      "parent": null,
+      "original_id": "PE3"
+    },
+    {
+      "id": "s29_b34_PE4",
+      "label": "Sensor Fusion",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://docs.ros.org/en/humble/",
+      "tooltip": "Sensor Fusion",
+      "style": null,
+      "parent": null,
+      "original_id": "PE4"
+    },
+    {
+      "id": "s29_b34_PL1",
+      "label": "Motion Planning",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://moveit.ros.org/documentation/concepts/",
+      "tooltip": "Motion Planning",
+      "style": null,
+      "parent": null,
+      "original_id": "PL1"
+    },
+    {
+      "id": "s29_b34_PL2",
+      "label": "Path Planning A*",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+      "tooltip": "A* Algorithm",
+      "style": null,
+      "parent": null,
+      "original_id": "PL2"
+    },
+    {
+      "id": "s29_b34_PL3",
+      "label": "Task Planning PDDL",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://planning.wiki/",
+      "tooltip": "AI Planning Wiki",
+      "style": null,
+      "parent": null,
+      "original_id": "PL3"
+    },
+    {
+      "id": "s29_b34_PL4",
+      "label": "Behavior Trees",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.behaviortree.dev/",
+      "tooltip": "Behavior Trees",
+      "style": null,
+      "parent": null,
+      "original_id": "PL4"
+    },
+    {
+      "id": "s29_b34_CO1",
+      "label": "PID Control",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://en.wikipedia.org/wiki/PID_controller",
+      "tooltip": "PID Control",
+      "style": null,
+      "parent": null,
+      "original_id": "CO1"
+    },
+    {
+      "id": "s29_b34_CO2",
+      "label": "MPC",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://www.mathworks.com/help/mpc/ug/what-is-mpc.html",
+      "tooltip": "MPC",
+      "style": null,
+      "parent": null,
+      "original_id": "CO2"
+    },
+    {
+      "id": "s29_b34_CO3",
+      "label": "RL for Robotics",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://spinningup.openai.com/",
+      "tooltip": "OpenAI Spinning Up",
+      "style": null,
+      "parent": null,
+      "original_id": "CO3"
+    },
+    {
+      "id": "s29_b34_CO4",
+      "label": "Imitation Learning",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://sites.google.com/view/icml2018-imitation-learning/",
+      "tooltip": "Imitation Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "CO4"
+    },
+    {
+      "id": "s29_b34_SI1",
+      "label": "Isaac Sim",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://developer.nvidia.com/isaac-sim",
+      "tooltip": "NVIDIA Isaac Sim",
+      "style": null,
+      "parent": null,
+      "original_id": "SI1"
+    },
+    {
+      "id": "s29_b34_SI2",
+      "label": "Gazebo",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://gazebosim.org/",
+      "tooltip": "Gazebo",
+      "style": null,
+      "parent": null,
+      "original_id": "SI2"
+    },
+    {
+      "id": "s29_b34_SI3",
+      "label": "MuJoCo",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://mujoco.org/",
+      "tooltip": "MuJoCo",
+      "style": null,
+      "parent": null,
+      "original_id": "SI3"
+    },
+    {
+      "id": "s29_b34_SI4",
+      "label": "PyBullet",
+      "type": "node",
+      "section_id": 29,
+      "block_id": 34,
+      "url": "https://pybullet.org/",
+      "tooltip": "PyBullet",
+      "style": null,
+      "parent": null,
+      "original_id": "SI4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_PERCEPT",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_PLAN",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_CONTROL",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_ROBOTICS",
+      "target": "s29_b34_SIM",
+      "type": "thick",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PERCEPT",
+      "target": "s29_b34_PE4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_PLAN",
+      "target": "s29_b34_PL4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_CONTROL",
+      "target": "s29_b34_CO4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI1",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI2",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI3",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    },
+    {
+      "source": "s29_b34_SIM",
+      "target": "s29_b34_SI4",
+      "type": "regular",
+      "section_id": 29,
+      "block_id": 34
+    }
+  ]
+}

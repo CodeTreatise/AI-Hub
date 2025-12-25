@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheerio - HTML Parser for Node.js</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>🍰 Cheerio - HTML Parser for Node.js</h1>
+            <p>Source: <a href="https://cheerio.js.org/" target="_blank">cheerio.js.org</a></p>
+        </div>
+        <div class="content">
+            <h2>What is Cheerio?</h2>
+            <p>Cheerio is a fast, flexible, and lean implementation of jQuery designed specifically for the server. It parses HTML and XML documents and provides a familiar jQuery-like API to traverse and manipulate the resulting data structure.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Familiar Syntax:</strong> Uses jQuery-style selectors (<code>$('.class')</code>, <code>$('#id')</code>)</li>
+                <li><strong>Fast:</strong> No browser DOM required - pure JavaScript parsing</li>
+                <li><strong>Flexible:</strong> Works with HTML and XML</li>
+                <li><strong>Lightweight:</strong> Minimal dependencies</li>
+            </ul>
+            
+            <h2>Installation</h2>
+            <pre><code>npm install cheerio</code></pre>
+            
+            <h2>Basic Usage</h2>
+            <pre><code>import * as cheerio from 'cheerio';
+
+// Load HTML
+const $ = cheerio.load('&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;');
+
+// Query elements (jQuery-style)
+const heading = $('h1').text();
+console.log(heading); // "Hello World"
+
+// Modify content
+$('h1').text('Modified!');
+$('body').append('&lt;p&gt;New paragraph&lt;/p&gt;');
+
+// Get modified HTML
+console.log($.html());</code></pre>
+            
+            <h2>Use Cases in RAG Applications</h2>
+            <ul>
+                <li><strong>Web Scraping:</strong> Extract content from web pages for ingestion</li>
+                <li><strong>HTML Cleaning:</strong> Strip unwanted elements before creating embeddings</li>
+                <li><strong>Content Extraction:</strong> Pull specific sections (articles, main content) from pages</li>
+                <li><strong>Link Extraction:</strong> Find and follow links for crawling</li>
+            </ul>
+            
+            <h3>Example: Extract Article Content</h3>
+            <pre><code>import * as cheerio from 'cheerio';
+
+async function extractArticle(html: string) {
+    const $ = cheerio.load(html);
+    
+    // Remove unwanted elements
+    $('script, style, nav, footer, aside').remove();
+    
+    // Get main content
+    const article = $('article').text() || $('main').text() || $('body').text();
+    
+    // Clean whitespace
+    return article.replace(/\s+/g, ' ').trim();
+}</code></pre>
+            
+            <h2>Related Tools</h2>
+            <ul>
+                <li><strong>Mozilla Readability:</strong> Extract readable content from pages</li>
+                <li><strong>Puppeteer:</strong> For JavaScript-rendered pages</li>
+                <li><strong>JSDOM:</strong> Full DOM implementation for Node.js</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

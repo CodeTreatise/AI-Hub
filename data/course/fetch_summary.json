@@ -1,0 +1,79 @@
+{
+  "module-0-overview": [
+    {
+      "name": "What is RAG - Pinecone",
+      "file": "../../data/course/module-0-overview/sources/what_is_rag_-_pinecone.json",
+      "pages": 1
+    },
+    {
+      "name": "LLM Introduction - Hugging Face",
+      "file": "../../data/course/module-0-overview/sources/llm_introduction_-_hugging_face.json",
+      "pages": 1
+    }
+  ],
+  "module-1-docker": [
+    {
+      "name": "Docker Overview",
+      "file": "../../data/course/module-1-docker/sources/docker_overview.json",
+      "pages": 5
+    },
+    {
+      "name": "Docker Compose Getting Started",
+      "file": "../../data/course/module-1-docker/sources/docker_compose_getting_started.json",
+      "pages": 1
+    }
+  ],
+  "module-2-postgres": [
+    {
+      "name": "PostgreSQL Tutorial",
+      "file": "../../data/course/module-2-postgres/sources/postgresql_tutorial.json",
+      "pages": 3
+    },
+    {
+      "name": "pgvector GitHub",
+      "file": "../../data/course/module-2-postgres/sources/pgvector_github.json",
+      "pages": 1
+    },
+    {
+      "name": "Supabase pgvector Guide",
+      "file": "../../data/course/module-2-postgres/sources/supabase_pgvector_guide.json",
+      "pages": 1
+    }
+  ],
+  "module-3-llm": [
+    {
+      "name": "OpenAI Cookbook",
+      "file": "../../data/course/module-3-llm/sources/openai_cookbook.json",
+      "pages": 1
+    },
+    {
+      "name": "Prompt Engineering Guide",
+      "file": "../../data/course/module-3-llm/sources/prompt_engineering_guide.json",
+      "pages": 2
+    }
+  ],
+  "module-4-embeddings": [
+    {
+      "name": "What are Embeddings - Pinecone",
+      "file": "../../data/course/module-4-embeddings/sources/what_are_embeddings_-_pinecone.json",
+      "pages": 1
+    },
+    {
+      "name": "Embeddings Guide - Hugging Face",
+      "file": "../../data/course/module-4-embeddings/sources/embeddings_guide_-_hugging_face.json",
+      "pages": 1
+    }
+  ],
+  "module-5-rag": [
+    {
+      "name": "RAG Tutorial - LangChain",
+      "file": "../../data/course/module-5-rag/sources/rag_tutorial_-_langchain.json",
+      "pages": 1
+    },
+    {
+      "name": "Chunking Strategies - Pinecone",
+      "file": "../../data/course/module-5-rag/sources/chunking_strategies_-_pinecone.json",
+      "pages": 1
+    }
+  ]
+}

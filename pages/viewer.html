@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Viewer</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/viewer.css">
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <div id="sidebar-header">
+                <h1><span id="graph-icon">📊</span> <span id="graph-title">Loading...</span></h1>
+                <p id="graph-description"></p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <a href="../index.html" class="back-link">🏠 Hub</a>
+                    <a href="study.html" class="back-link" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.2)); border-color: rgba(236, 72, 153, 0.4);">📖 Study</a>
+                    <a href="sections.html" class="back-link">📑 Sections</a>
+                    <a href="learning.html" class="back-link">🎓 Learn</a>
+                    <a href="tools.html" class="back-link">🧰 Tools</a>
+                </div>
+            </div>
+            <div id="sections-list"></div>
+        </div>
+        <div id="graph-container">
+            <svg id="graph-svg"></svg>
+            <div id="controls">
+                <button class="control-btn active" data-layout="force">Force</button>
+                <button class="control-btn" data-layout="radial">Radial</button>
+                <button class="control-btn" data-layout="cluster">Cluster</button>
+                <button class="control-btn active" id="toggle-labels">Labels</button>
+                <button class="control-btn" id="reset-zoom">Reset</button>
+            </div>
+            <div class="node-tooltip" id="tooltip"></div>
+            <div id="stats"></div>
+            <div id="loading">
+                <div class="spinner"></div>
+                <p>Loading graph...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangChain Text Splitters</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+        .splitter { background: #1a2a3a; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        .splitter h4 { color: #58a6ff; margin: 0 0 0.5rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>✂️ LangChain Text Splitters</h1>
+            <p>Source: <a href="https://js.langchain.com/docs/concepts/text_splitters" target="_blank">js.langchain.com</a></p>
+        </div>
+        <div class="content">
+            <h2>What are Text Splitters?</h2>
+            <p>Text splitters break large documents into smaller chunks suitable for embedding and retrieval. Proper chunking is crucial for RAG performance - chunks must be small enough to be precise but large enough to contain meaningful context.</p>
+            
+            <h2>Key Concepts</h2>
+            <ul>
+                <li><strong>Chunk Size:</strong> Target length of each chunk (in characters or tokens)</li>
+                <li><strong>Chunk Overlap:</strong> How much consecutive chunks share (preserves context)</li>
+                <li><strong>Separators:</strong> Characters/patterns used to split (paragraphs, sentences, etc.)</li>
+            </ul>
+            
+            <h2>Common Splitter Types</h2>
+            
+            <div class="splitter">
+                <h4>RecursiveCharacterTextSplitter</h4>
+                <p>The recommended default. Tries to split on paragraphs, then sentences, then words.</p>
+                <pre><code>import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+
+const splitter = new RecursiveCharacterTextSplitter({
+    chunkSize: 1000,
+    chunkOverlap: 200,
+    separators: ["\n\n", "\n", " ", ""]
+});
+
+const chunks = await splitter.splitText(document);</code></pre>
+            </div>
+            
+            <div class="splitter">
+                <h4>CharacterTextSplitter</h4>
+                <p>Simple splitting on a single separator.</p>
+                <pre><code>import { CharacterTextSplitter } from "langchain/text_splitter";
+
+const splitter = new CharacterTextSplitter({
+    separator: "\n\n",
+    chunkSize: 1000,
+    chunkOverlap: 200
+});</code></pre>
+            </div>
+            
+            <div class="splitter">
+                <h4>TokenTextSplitter</h4>
+                <p>Splits based on token count (important for LLM context limits).</p>
+                <pre><code>import { TokenTextSplitter } from "langchain/text_splitter";
+
+const splitter = new TokenTextSplitter({
+    chunkSize: 500,      // tokens
+    chunkOverlap: 50     // tokens
+});</code></pre>
+            </div>
+            
+            <div class="splitter">
+                <h4>MarkdownTextSplitter</h4>
+                <p>Respects Markdown structure (headers, code blocks, lists).</p>
+                <pre><code>import { MarkdownTextSplitter } from "langchain/text_splitter";
+
+const splitter = new MarkdownTextSplitter({
+    chunkSize: 1000,
+    chunkOverlap: 200
+});</code></pre>
+            </div>
+            
+            <h2>Choosing Chunk Size</h2>
+            <ul>
+                <li><strong>Small chunks (200-500):</strong> More precise retrieval, may lose context</li>
+                <li><strong>Medium chunks (500-1000):</strong> Good balance for most use cases</li>
+                <li><strong>Large chunks (1000-2000):</strong> More context, may retrieve irrelevant content</li>
+            </ul>
+            
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Use 10-20% overlap to preserve context across chunks</li>
+                <li>Match chunk size to embedding model's optimal input</li>
+                <li>Use semantic splitters for better chunk boundaries</li>
+                <li>Test different configurations with your actual queries</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

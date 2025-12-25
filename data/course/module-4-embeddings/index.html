@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: Embeddings & Vectors | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 4: Embeddings & Vectors</h1>
+            <p>Transform text into vectors for semantic search</p>
+            <div class="module-meta">
+                <span>⏱️ ~60 minutes</span>
+                <span>📊 Intermediate</span>
+                <span>📚 Module 4</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Understand what embeddings are and why they matter for AI</li>
+            <li>Learn to use the OpenAI Embeddings API</li>
+            <li>Master text chunking strategies for optimal retrieval</li>
+            <li>Store and query embeddings using pgvector</li>
+            <li>Build a complete embedding pipeline with Node.js</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section prerequisites">
+            <h2>📋 Prerequisites</h2>
+            
+        <p>Before starting this module, you should have:</p>
+        <ul>
+            <li>Completed Modules 1-3 (Docker, PostgreSQL, and LLM basics)</li>
+            <li>pgvector extension installed (from Module 2)</li>
+            <li>An OpenAI API key configured</li>
+            <li>Basic understanding of vectors (we'll explain the rest!)</li>
+        </ul>
+        <div class="callout callout-info">
+            <strong>Vector Refresher:</strong> A vector is just a list of numbers, like <code>[0.1, -0.5, 0.3, ...]</code>. Think of it as coordinates in a high-dimensional space that capture meaning.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🧠 Understanding Embeddings</h2>
+            
+        <h3>What Are Embeddings?</h3>
+        <p>Embeddings are numerical representations of text (or images, audio, etc.) that capture semantic meaning. They transform human-readable content into vectors that machines can compare and search.</p>
+        
+        <div style="background: #161b22; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <p style="font-family: monospace; margin: 0;">
+                Text: "The cat sat on the mat"<br><br>
+                ↓ Embedding Model ↓<br><br>
+                Vector: [0.023, -0.156, 0.089, ..., 0.045]<br>
+                (1536 dimensions for text-embedding-3-small)
+            </p>
+        </div>
+        
+        <h3>Why Embeddings Matter</h3>
+        <p>Embeddings enable <strong>semantic similarity</strong> - finding content by meaning, not just keywords:</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Query</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Keyword Match</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Semantic Match</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">"How to fix a bug"</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">❌ Docs about insects</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">✅ Debugging guides</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">"car not starting"</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">❌ Misses "vehicle won't turn on"</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">✅ Finds related content</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">"happy"</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">❌ Exact word only</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">✅ Also finds "joyful", "excited"</td>
+            </tr>
+        </table>
+        
+        <h3>How Similarity Works</h3>
+        <p>Similar texts have similar vectors. We measure similarity using <strong>cosine similarity</strong> or <strong>distance</strong>:</p>
+        
+        <pre><code>// Conceptually:
+embed("king") - embed("man") + embed("woman") ≈ embed("queen")
+
+// Similar meanings → close vectors
+similarity("cat", "kitten") → 0.92  // Very similar
+similarity("cat", "dog") → 0.75     // Related (pets)
+similarity("cat", "democracy") → 0.15  // Unrelated</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>The Magic:</strong> Embeddings capture relationships! Words with similar meanings cluster together in vector space, enabling "fuzzy" semantic search.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🔌 OpenAI Embeddings API</h2>
+            
+        <h3>OpenAI's Embedding Models</h3>
+        <p>OpenAI provides several embedding models optimized for different use cases:</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Model</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Dimensions</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Price (per 1M tokens)</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Best For</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>text-embedding-3-small</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">1536</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">$0.02</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Most use cases, best value</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>text-embedding-3-large</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">3072</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">$0.13</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Higher accuracy needs</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>text-embedding-ada-002</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">1536</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">$0.10</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Legacy (use v3 instead)</td>
+            </tr>
+        </table>
+        
+        <h3>Generating Embeddings</h3>
+        <pre><code>// src/embeddings.ts
+import OpenAI from 'openai';
+import 'dotenv/config';
+
+const openai = new OpenAI();
+
+async function getEmbedding(text: string): Promise&lt;number[]&gt; {
+    const response = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: text
+    });
+    
+    return response.data[0].embedding;
+}
+
+// Example usage
+const embedding = await getEmbedding("What is machine learning?");
+console.log(`Dimensions: ${embedding.length}`);  // 1536
+console.log(`First 5 values: ${embedding.slice(0, 5)}`);</code></pre>
+        
+        <h3>Batch Processing</h3>
+        <p>For efficiency, embed multiple texts in a single API call:</p>
+        
+        <pre><code>async function getEmbeddings(texts: string[]): Promise&lt;number[][]&gt; {
+    const response = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: texts  // Array of strings
+    });
+    
+    // Sort by index to maintain order
+    return response.data
+        .sort((a, b) => a.index - b.index)
+        .map(item => item.embedding);
+}
+
+// Embed multiple texts at once
+const texts = [
+    "Machine learning is a subset of AI",
+    "Neural networks mimic the human brain",
+    "Deep learning uses multiple layers"
+];
+
+const embeddings = await getEmbeddings(texts);
+console.log(`Generated ${embeddings.length} embeddings`);</code></pre>
+        
+        <div class="callout callout-info">
+            <strong>Batch Limits:</strong> You can send up to 2048 texts per request, with a combined limit of ~8191 tokens. For large datasets, batch in groups of 100-500 texts.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>✂️ Text Chunking Strategies</h2>
+            
+        <h3>Why Chunking Matters</h3>
+        <p>Large documents must be split into smaller chunks before embedding. Here's why:</p>
+        
+        <ul>
+            <li><strong>Token Limits:</strong> Embedding models have input limits (~8191 tokens)</li>
+            <li><strong>Precision:</strong> Smaller chunks = more precise retrieval</li>
+            <li><strong>Context Windows:</strong> Retrieved chunks must fit in LLM context</li>
+            <li><strong>Relevance:</strong> A 10,000-word doc about many topics won't match queries well</li>
+        </ul>
+        
+        <h3>Chunking Strategies</h3>
+        
+        <h4>1. Fixed-Size Chunking</h4>
+        <p>Split by character/token count with overlap:</p>
+        
+        <pre><code>function chunkBySize(text: string, chunkSize: number, overlap: number): string[] {
+    const chunks: string[] = [];
+    let start = 0;
+    
+    while (start < text.length) {
+        const end = start + chunkSize;
+        chunks.push(text.slice(start, end));
+        start = end - overlap;  // Step back by overlap amount
+    }
+    
+    return chunks;
+}
+
+// Example: 500 char chunks with 50 char overlap
+const chunks = chunkBySize(longDocument, 500, 50);</code></pre>
+        
+        <h4>2. Sentence-Based Chunking</h4>
+        <p>Split on sentence boundaries, then combine until size limit:</p>
+        
+        <pre><code>function chunkBySentences(text: string, maxChunkSize: number): string[] {
+    // Split into sentences (simplified regex)
+    const sentences = text.split(/(?&lt;=[.!?])\s+/);
+    
+    const chunks: string[] = [];
+    let currentChunk = '';
+    
+    for (const sentence of sentences) {
+        if ((currentChunk + sentence).length > maxChunkSize && currentChunk) {
+            chunks.push(currentChunk.trim());
+            currentChunk = sentence;
+        } else {
+            currentChunk += ' ' + sentence;
+        }
+    }
+    
+    if (currentChunk.trim()) {
+        chunks.push(currentChunk.trim());
+    }
+    
+    return chunks;
+}</code></pre>
+        
+        <h4>3. Semantic Chunking (Advanced)</h4>
+        <p>Split by document structure - headers, paragraphs, sections:</p>
+        
+        <pre><code>function chunkByStructure(markdown: string): string[] {
+    // Split on headers while keeping them
+    const sections = markdown.split(/(?=^#{1,3}\s)/m);
+    
+    return sections
+        .map(s => s.trim())
+        .filter(s => s.length > 0);
+}</code></pre>
+        
+        <h3>Overlap: The Secret Sauce</h3>
+        <p>Overlap ensures context isn't lost at chunk boundaries:</p>
+        
+        <div style="background: #161b22; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <p style="font-family: monospace; margin: 0; font-size: 0.85rem;">
+                Without overlap:<br>
+                Chunk 1: "The capital of France is"|<br>
+                Chunk 2: |"Paris. It's known for..."<br>
+                ❌ Query "France capital" might miss "Paris"<br><br>
+                
+                With 20% overlap:<br>
+                Chunk 1: "The capital of France is Paris."<br>
+                Chunk 2: "France is Paris. It's known for..."<br>
+                ✅ Query "France capital" finds "Paris" in both
+            </p>
+        </div>
+        
+        <h3>Recommended Settings</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Content Type</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Chunk Size</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Overlap</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Technical docs</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">500-1000 tokens</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">10-20%</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Q&A / FAQ</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">200-500 tokens</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">0-10%</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Long-form content</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">1000-2000 tokens</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">15-25%</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Code</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Function/class level</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Include imports</td>
+            </tr>
+        </table>
+        
+        <div class="callout callout-tip">
+            <strong>Pro Tip:</strong> Start with 500 tokens and 10% overlap. Adjust based on retrieval quality - if answers are incomplete, try larger chunks; if irrelevant results appear, try smaller chunks.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🗄️ Storing Embeddings in pgvector</h2>
+            
+        <h3>Setting Up pgvector Storage</h3>
+        <p>Let's create a table to store our embeddings with pgvector:</p>
+        
+        <pre><code>-- Create the documents table with vector column
+CREATE TABLE documents (
+    id SERIAL PRIMARY KEY,
+    content TEXT NOT NULL,
+    embedding vector(1536),  -- Match your model's dimensions
+    metadata JSONB DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create an index for fast similarity search
+CREATE INDEX ON documents 
+USING ivfflat (embedding vector_cosine_ops)
+WITH (lists = 100);  -- Adjust based on data size</code></pre>
+        
+        <h3>Storing Embeddings</h3>
+        <pre><code>// src/store.ts
+import { Pool } from 'pg';
+import OpenAI from 'openai';
+
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL
+});
+
+const openai = new OpenAI();
+
+async function storeDocument(content: string, metadata: object = {}) {
+    // Generate embedding
+    const response = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: content
+    });
+    const embedding = response.data[0].embedding;
+    
+    // Store in database
+    const result = await pool.query(
+        `INSERT INTO documents (content, embedding, metadata)
+         VALUES ($1, $2, $3)
+         RETURNING id`,
+        [content, JSON.stringify(embedding), metadata]
+    );
+    
+    return result.rows[0].id;
+}
+
+// Store a document
+const id = await storeDocument(
+    "PostgreSQL is a powerful open-source database",
+    { source: "docs", category: "databases" }
+);
+console.log(`Stored document with ID: ${id}`);</code></pre>
+        
+        <h3>Semantic Search</h3>
+        <pre><code>async function searchSimilar(query: string, limit = 5) {
+    // Embed the query
+    const response = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: query
+    });
+    const queryEmbedding = response.data[0].embedding;
+    
+    // Find similar documents using cosine distance
+    const result = await pool.query(
+        `SELECT id, content, metadata,
+                1 - (embedding &lt;=&gt; $1) as similarity
+         FROM documents
+         ORDER BY embedding &lt;=&gt; $1
+         LIMIT $2`,
+        [JSON.stringify(queryEmbedding), limit]
+    );
+    
+    return result.rows;
+}
+
+// Search for similar content
+const results = await searchSimilar("relational database systems");
+for (const doc of results) {
+    console.log(`[${doc.similarity.toFixed(3)}] ${doc.content}`);
+}</code></pre>
+        
+        <h3>Distance Operators</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Operator</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Name</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Use Case</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>&lt;=&gt;</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Cosine distance</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Text similarity (recommended)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>&lt;-&gt;</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">L2 (Euclidean)</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Image embeddings</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;"><code>&lt;#&gt;</code></td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Inner product</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Normalized vectors</td>
+            </tr>
+        </table>
+        
+        <div class="callout callout-info">
+            <strong>Cosine vs L2:</strong> Cosine distance measures angle (direction), L2 measures magnitude. For text, use cosine - it's invariant to document length.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💻 Hands-On: Build an Embedding Pipeline</h2>
+            
+        <h3>Exercise: Build an Embedding Pipeline</h3>
+        <p>Let's create a complete pipeline that chunks documents, generates embeddings, and enables semantic search:</p>
+        
+        <h4>Step 1: Set Up the Database</h4>
+        <pre><code>-- Run in psql or database client
+CREATE EXTENSION IF NOT EXISTS vector;
+
+CREATE TABLE IF NOT EXISTS documents (
+    id SERIAL PRIMARY KEY,
+    content TEXT NOT NULL,
+    embedding vector(1536),
+    source VARCHAR(255),
+    chunk_index INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS documents_embedding_idx 
+ON documents USING ivfflat (embedding vector_cosine_ops)
+WITH (lists = 100);</code></pre>
+        
+        <h4>Step 2: Create the Embedding Service</h4>
+        <pre><code>// src/embedding-service.ts
+import OpenAI from 'openai';
+import { Pool } from 'pg';
+import 'dotenv/config';
+
+const openai = new OpenAI();
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+
+// Chunking function
+function chunkText(text: string, maxLength = 1000, overlap = 100): string[] {
+    const chunks: string[] = [];
+    let start = 0;
+    
+    while (start < text.length) {
+        let end = start + maxLength;
+        
+        // Try to break at sentence boundary
+        if (end < text.length) {
+            const lastPeriod = text.lastIndexOf('.', end);
+            if (lastPeriod > start + maxLength * 0.5) {
+                end = lastPeriod + 1;
+            }
+        }
+        
+        chunks.push(text.slice(start, end).trim());
+        start = end - overlap;
+    }
+    
+    return chunks.filter(c => c.length > 0);
+}
+
+// Generate embedding
+async function embed(text: string): Promise&lt;number[]&gt; {
+    const response = await openai.embeddings.create({
+        model: 'text-embedding-3-small',
+        input: text
+    });
+    return response.data[0].embedding;
+}
+
+// Process and store a document
+export async function ingestDocument(content: string, source: string) {
+    const chunks = chunkText(content);
+    console.log(`Processing ${chunks.length} chunks from ${source}`);
+    
+    for (let i = 0; i < chunks.length; i++) {
+        const embedding = await embed(chunks[i]);
+        
+        await pool.query(
+            `INSERT INTO documents (content, embedding, source, chunk_index)
+             VALUES ($1, $2, $3, $4)`,
+            [chunks[i], JSON.stringify(embedding), source, i]
+        );
+        
+        console.log(`  Stored chunk ${i + 1}/${chunks.length}`);
+    }
+    
+    return chunks.length;
+}
+
+// Semantic search
+export async function search(query: string, limit = 5) {
+    const queryEmbedding = await embed(query);
+    
+    const result = await pool.query(
+        `SELECT content, source, chunk_index,
+                1 - (embedding &lt;=&gt; $1) as similarity
+         FROM documents
+         ORDER BY embedding &lt;=&gt; $1
+         LIMIT $2`,
+        [JSON.stringify(queryEmbedding), limit]
+    );
+    
+    return result.rows;
+}</code></pre>
+        
+        <h4>Step 3: Test the Pipeline</h4>
+        <pre><code>// src/test-embeddings.ts
+import { ingestDocument, search } from './embedding-service';
+
+async function main() {
+    // Sample documents to ingest
+    const docs = [
+        {
+            content: `PostgreSQL is a powerful, open source object-relational 
+            database system with over 35 years of active development. It has 
+            earned a strong reputation for reliability, feature robustness, 
+            and performance. PostgreSQL supports both SQL and JSON querying.`,
+            source: 'postgres-intro'
+        },
+        {
+            content: `Docker is a platform for developing, shipping, and running 
+            applications in containers. Containers are lightweight, standalone 
+            packages that include everything needed to run an application: code, 
+            runtime, system tools, and libraries.`,
+            source: 'docker-intro'
+        },
+        {
+            content: `Machine learning is a subset of artificial intelligence 
+            that enables systems to learn and improve from experience without 
+            being explicitly programmed. It focuses on developing algorithms 
+            that can access data and use it to learn for themselves.`,
+            source: 'ml-intro'
+        }
+    ];
+    
+    // Ingest documents
+    console.log('📥 Ingesting documents...\n');
+    for (const doc of docs) {
+        await ingestDocument(doc.content, doc.source);
+    }
+    
+    // Test searches
+    console.log('\n🔍 Testing semantic search...\n');
+    
+    const queries = [
+        "relational database with JSON support",
+        "containerization technology",
+        "AI systems that learn from data"
+    ];
+    
+    for (const query of queries) {
+        console.log(`Query: "${query}"`);
+        const results = await search(query, 2);
+        
+        for (const r of results) {
+            console.log(`  [${r.similarity.toFixed(3)}] ${r.source}: ${r.content.slice(0, 60)}...`);
+        }
+        console.log();
+    }
+}
+
+main().catch(console.error);</code></pre>
+        
+        <h4>Step 4: Run and Verify</h4>
+        <pre><code># Run the test
+npx ts-node src/test-embeddings.ts
+
+# Expected output:
+📥 Ingesting documents...
+
+Processing 1 chunks from postgres-intro
+  Stored chunk 1/1
+Processing 1 chunks from docker-intro
+  Stored chunk 1/1
+Processing 1 chunks from ml-intro
+  Stored chunk 1/1
+
+🔍 Testing semantic search...
+
+Query: "relational database with JSON support"
+  [0.847] postgres-intro: PostgreSQL is a powerful, open source object-relational...
+
+Query: "containerization technology"
+  [0.812] docker-intro: Docker is a platform for developing, shipping, and running...</code></pre>
+        
+        <div class="callout callout-tip">
+            <strong>Success!</strong> Notice how semantic search finds relevant content even when query words don't exactly match the document text!
+        </div>
+    
+        </section>
+    
+        <section class="section gotchas">
+            <h2>⚠️ Common Gotchas & Tips</h2>
+            
+        <h3>Common Embedding Mistakes</h3>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Mixing Embedding Models:</strong> Never mix embeddings from different models! A vector from <code>text-embedding-3-small</code> is incompatible with <code>ada-002</code>. If you switch models, re-embed everything.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Chunks Too Large:</strong> Giant chunks dilute semantic meaning. A 5000-word chunk about 20 topics won't match specific queries well. Aim for focused, coherent chunks.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Chunks Too Small:</strong> Tiny chunks lose context. "It is blue" means nothing without knowing what "it" refers to. Include enough context for standalone meaning.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 No Overlap:</strong> Without overlap, you'll miss content at chunk boundaries. Always use 10-20% overlap for continuous text.
+        </div>
+        
+        <div class="callout callout-warning">
+            <strong>🚨 Forgetting Metadata:</strong> Store source, page numbers, timestamps with embeddings. You'll need this for citations, filtering, and debugging.
+        </div>
+        
+        <h3>Performance Tips</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Issue</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Solution</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Slow embedding API calls</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Batch texts (up to 2048 per request)</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Slow similarity search</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Add IVFFlat or HNSW index</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">High storage costs</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Use smaller model or reduce dimensions</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Poor search quality</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Experiment with chunk sizes</td>
+            </tr>
+        </table>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Check Your Understanding</h2>
+            
+        <div class="quiz-question">
+            <p>1. What are embeddings?</p>
+            <ul class="quiz-options">
+                <li>A) Compressed text files</li>
+                <li>B) Numerical vectors that capture semantic meaning</li>
+                <li>C) Database indexes</li>
+                <li>D) Encryption keys</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. How many dimensions does text-embedding-3-small produce?</p>
+            <ul class="quiz-options">
+                <li>A) 256</li>
+                <li>B) 768</li>
+                <li>C) 1536</li>
+                <li>D) 3072</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. Why do we use overlap when chunking?</p>
+            <ul class="quiz-options">
+                <li>A) To save storage space</li>
+                <li>B) To avoid losing context at chunk boundaries</li>
+                <li>C) To speed up embedding generation</li>
+                <li>D) To reduce API costs</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>4. Which pgvector operator is recommended for text similarity?</p>
+            <ul class="quiz-options">
+                <li>A) &lt;-&gt; (L2 distance)</li>
+                <li>B) &lt;=&gt; (cosine distance)</li>
+                <li>C) &lt;#&gt; (inner product)</li>
+                <li>D) = (equality)</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>5. What happens if you mix embeddings from different models?</p>
+            <ul class="quiz-options">
+                <li>A) They automatically convert</li>
+                <li>B) Search results will be meaningless/incorrect</li>
+                <li>C) Performance improves</li>
+                <li>D) Nothing, they're compatible</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-C, 3-B, 4-B, 5-B</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://platform.openai.com/docs/guides/embeddings" target="_blank">
+                    OpenAI Embeddings Guide
+                </a>
+                <span style="color: #8b949e;"> - Official documentation</span>
+            </li>
+            <li>
+                <a href="https://github.com/pgvector/pgvector" target="_blank">
+                    pgvector GitHub
+                </a>
+                <span style="color: #8b949e;"> - Vector extension for PostgreSQL</span>
+            </li>
+            <li>
+                <a href="https://www.pinecone.io/learn/chunking-strategies/" target="_blank">
+                    Chunking Strategies for LLM Applications
+                </a>
+                <span style="color: #8b949e;"> - Deep dive into chunking</span>
+            </li>
+            <li>
+                <a href="https://cookbook.openai.com/examples/embedding_long_inputs" target="_blank">
+                    OpenAI Cookbook: Embedding Long Inputs
+                </a>
+                <span style="color: #8b949e;"> - Handling large documents</span>
+            </li>
+            <li>
+                <a href="https://supabase.com/docs/guides/ai/vector-columns" target="_blank">
+                    Supabase Vector Guide
+                </a>
+                <span style="color: #8b949e;"> - pgvector with Supabase</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../module-3-llm/index.html">← Previous: LLM Fundamentals</a>
+            <a href="../module-5-rag/index.html">Next: RAG Pipeline →</a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Handbook</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a; /* Match main theme */
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #58a6ff; padding-left: 1rem; color: #8b949e; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>TypeScript Handbook</h1>
+            <p>Source: <a href="https://www.typescriptlang.org/docs/handbook/intro.html" target="_blank">https://www.typescriptlang.org/docs/handbook/intro.html</a></p>
+        </div>
+        <div class="content">
+            <article><div class="whitespace raised"><div class="markdown"><h2 id="about-this-handbook" style="position:relative;"><a aria-label="about this handbook permalink" class="anchor before" href="https://www.typescriptlang.org/docs/handbook/intro.html#about-this-handbook" target="_blank"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>About this Handbook</h2>
+<p>Over 20 years after its introduction to the programming community, JavaScript is now one of the most widespread cross-platform languages ever created. Starting as a small scripting language for adding trivial interactivity to webpages, JavaScript has grown to be a language of choice for both frontend and backend applications of every size. While the size, scope, and complexity of programs written in JavaScript has grown exponentially, the ability of the JavaScript language to express the relationships between different units of code has not. Combined with JavaScript’s rather peculiar runtime semantics, this mismatch between language and program complexity has made JavaScript development a difficult task to manage at scale.</p>
+<p>The most common kinds of errors that programmers write can be described as type errors: a certain kind of value was used where a different kind of value was expected. This could be due to simple typos, a failure to understand the API surface of a library, incorrect assumptions about runtime behavior, or other errors. The goal of TypeScript is to be a static typechecker for JavaScript programs - in other words, a tool that runs before your code runs (static) and ensures that the types of the program are correct (typechecked).</p>
+<p>If you are coming to TypeScript without a JavaScript background, with the intention of TypeScript being your first language, we recommend you first start reading the documentation on either the <a href="https://developer.microsoft.com/javascript/" target="_blank">Microsoft Learn JavaScript tutorial</a> or read <a href="https://developer.mozilla.org/docs/Web/JavaScript/Guide" target="_blank">JavaScript at the Mozilla Web Docs</a>.
+If you have experience in other languages, you should be able to pick up JavaScript syntax quite quickly by reading the handbook.</p>
+<h2 id="how-is-this-handbook-structured" style="position:relative;"><a aria-label="how is this handbook structured permalink" class="anchor before" href="https://www.typescriptlang.org/docs/handbook/intro.html#how-is-this-handbook-structured" target="_blank"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>How is this Handbook Structured</h2>
+<p>The handbook is split into two sections:</p>
+<ul>
+<li>
+<p><strong>The Handbook</strong></p>
+<p>The TypeScript Handbook is intended to be a comprehensive document that explains TypeScript to everyday programmers. You can read the handbook by going from top to bottom in the left-hand navigation.</p>
+<p>You should expect each chapter or page to provide you with a strong understanding of the given concepts. The TypeScript Handbook is not a complete language specification, but it is intended to be a comprehensive guide to all of the language’s features and behaviors.</p>
+<p>A reader who completes the walkthrough should be able to:</p>
+<ul>
+<li>Read and understand commonly-used TypeScript syntax and patterns</li>
+<li>Explain the effects of important compiler options</li>
+<li>Correctly predict type system behavior in most cases</li>
+</ul>
+<p>In the interests of clarity and brevity, the main content of the Handbook will not explore every edge case or minutiae of the features being covered. You can find more details on particular concepts in the reference articles.</p>
+</li>
+<li>
+<p><strong>Reference Files</strong></p>
+<p>The reference section below the handbook in the navigation is built to provide a richer understanding of how a particular part of TypeScript works. You can read it top-to-bottom, but each section aims to provide a deeper explanation of a single concept - meaning there is no aim for continuity.</p>
+</li>
+</ul>
+<h3 id="non-goals" style="position:relative;"><a aria-label="non goals permalink" class="anchor before" href="https://www.typescriptlang.org/docs/handbook/intro.html#non-goals" target="_blank"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Non-Goals</h3>
+<p>The Handbook is also intended to be a concise document that can be comfortably read in a few hours. Certain topics won’t be covered in order to keep things short.</p>
+<p>Specifically, the Handbook does not fully introduce core JavaScript basics like functions, classes, and closures. Where appropriate, we’ll include links to background reading that you can use to read up on those concepts.</p>
+<p>The Handbook also isn’t intended to be a replacement for a language specification. In some cases, edge cases or formal descriptions of behavior will be skipped in favor of high-level, easier-to-understand explanations. Instead, there are separate reference pages that more precisely and formally describe many aspects of TypeScript’s behavior. The reference pages are not intended for readers unfamiliar with TypeScript, so they may use advanced terminology or reference topics you haven’t read about yet.</p>
+<p>Finally, the Handbook won’t cover how TypeScript interacts with other tools, except where necessary. Topics like how to configure TypeScript with webpack, rollup, parcel, react, babel, closure, lerna, rush, bazel, preact, vue, angular, svelte, jquery, yarn, or npm are out of scope - you can find these resources elsewhere on the web.</p>
+<h2 id="get-started" style="position:relative;"><a aria-label="get started permalink" class="anchor before" href="https://www.typescriptlang.org/docs/handbook/intro.html#get-started" target="_blank"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" fill-rule="evenodd"></path></svg></a>Get Started</h2>
+<p>Before getting started with <a href="https://www.typescriptlang.org/docs/handbook/2/basic-types.html" target="_blank">The Basics</a>, we recommend reading one of the following introductory pages. These introductions are intended to highlight key similarities and differences between TypeScript and your favored programming language, and clear up common misconceptions specific to those languages.</p>
+<ul>
+<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html" target="_blank">TypeScript for the New Programmer</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html" target="_blank">TypeScript for JavaScript Programmers</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html" target="_blank">TypeScript for Java/C# Programmers</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html" target="_blank">TypeScript for Functional Programmers</a></li>
+</ul>
+<p>Otherwise, jump to <a href="https://www.typescriptlang.org/docs/handbook/2/basic-types.html" target="_blank">The Basics</a>.</p></div></div></article>
+        </div>
+    </div>
+</body>
+</html>

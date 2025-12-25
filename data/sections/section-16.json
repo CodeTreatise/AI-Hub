@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "id": 16,
+    "title": "Advanced RAG Patterns",
+    "description": "GraphRAG, Agentic RAG, Self-RAG",
+    "slug": "advanced-rag-patterns",
+    "totalNodes": 21,
+    "totalEdges": 14
+  },
+  "sections": [
+    {
+      "id": 16,
+      "title": "Advanced RAG Patterns",
+      "slug": "16-advanced-rag-patterns",
+      "description": "GraphRAG, Agentic RAG, Self-RAG",
+      "line": 916
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s16_b16_RAG",
+      "label": "ADVANCED RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://www.promptingguide.ai/techniques/rag",
+      "tooltip": "RAG Guide",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RAG"
+    },
+    {
+      "id": "s16_b16_GRAPH",
+      "label": "GraphRAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://microsoft.github.io/graphrag/",
+      "tooltip": "Microsoft GraphRAG",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GRAPH"
+    },
+    {
+      "id": "s16_b16_AGENT",
+      "label": "Agentic RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "LangGraph Agents",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AGENT"
+    },
+    {
+      "id": "s16_b16_SELF",
+      "label": "Self-RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2310.11511",
+      "tooltip": "Self-RAG Paper",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SELF"
+    },
+    {
+      "id": "s16_b16_CORRECT",
+      "label": "Corrective RAG",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2401.15884",
+      "tooltip": "CRAG Paper",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CORRECT"
+    },
+    {
+      "id": "s16_b16_G1",
+      "label": "Knowledge Graphs",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://neo4j.com/developer/",
+      "tooltip": "Neo4j Developer",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s16_b16_G2",
+      "label": "Entity Relations",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://neo4j.com/docs/graph-data-science/current/",
+      "tooltip": "Entity Relations",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s16_b16_G3",
+      "label": "Community Detection",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://microsoft.github.io/graphrag/index/overview/",
+      "tooltip": "Community Detection",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s16_b16_A1",
+      "label": "Tool-based Retrieval",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://python.langchain.com/docs/modules/tools/",
+      "tooltip": "Tool-based Retrieval",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s16_b16_A2",
+      "label": "Multi-step Reasoning",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "LangGraph Tutorials",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s16_b16_A3",
+      "label": "Dynamic Planning",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://blog.langchain.dev/planning-agents/",
+      "tooltip": "Dynamic Planning",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s16_b16_S1",
+      "label": "Self-Reflection",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2310.11511",
+      "tooltip": "Self-Reflection",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s16_b16_S2",
+      "label": "Relevance Scoring",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/",
+      "tooltip": "Relevance Scoring",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    },
+    {
+      "id": "s16_b16_C1",
+      "label": "Retrieval Grading",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://arxiv.org/abs/2401.15884",
+      "tooltip": "Retrieval Grading",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s16_b16_C2",
+      "label": "Web Fallback",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 16,
+      "url": "https://python.langchain.com/docs/integrations/tools/tavily_search/",
+      "tooltip": "Web Fallback",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s16_b87_Chain_of_T",
+      "label": "Chain-of-Thought",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 87,
+      "url": "https://arxiv.org/abs/2201.11903",
+      "tooltip": "Step-by-step reasoning",
+      "style": null,
+      "parent": null,
+      "original_id": "Chain-of-Thought"
+    },
+    {
+      "id": "s16_b88_ReAct",
+      "label": "ReAct",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 88,
+      "url": "https://arxiv.org/abs/2210.03629",
+      "tooltip": "Reasoning + Acting pattern",
+      "style": null,
+      "parent": null,
+      "original_id": "ReAct"
+    },
+    {
+      "id": "s16_b89_Tree_of_Th",
+      "label": "Tree-of-Thought",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 89,
+      "url": "https://arxiv.org/abs/2305.10601",
+      "tooltip": "Deliberate problem solving",
+      "style": null,
+      "parent": null,
+      "original_id": "Tree-of-Thought"
+    },
+    {
+      "id": "s16_b90_Self_Consi",
+      "label": "Self-Consistency",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 90,
+      "url": "https://arxiv.org/abs/2203.11171",
+      "tooltip": "Multiple reasoning paths",
+      "style": null,
+      "parent": null,
+      "original_id": "Self-Consistency"
+    },
+    {
+      "id": "s16_b91_Self_Ask",
+      "label": "Self-Ask",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 91,
+      "url": "https://arxiv.org/abs/2210.03350",
+      "tooltip": "Compositional reasoning",
+      "style": null,
+      "parent": null,
+      "original_id": "Self-Ask"
+    },
+    {
+      "id": "s16_b92_Reflexion",
+      "label": "Reflexion",
+      "type": "node",
+      "section_id": 16,
+      "block_id": 92,
+      "url": "https://arxiv.org/abs/2303.11366",
+      "tooltip": "Self-reflection agents",
+      "style": null,
+      "parent": null,
+      "original_id": "Reflexion"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_GRAPH",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_AGENT",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_SELF",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_RAG",
+      "target": "s16_b16_CORRECT",
+      "type": "thick",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_GRAPH",
+      "target": "s16_b16_G1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_GRAPH",
+      "target": "s16_b16_G2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_GRAPH",
+      "target": "s16_b16_G3",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_AGENT",
+      "target": "s16_b16_A1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_AGENT",
+      "target": "s16_b16_A2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_AGENT",
+      "target": "s16_b16_A3",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_SELF",
+      "target": "s16_b16_S1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_SELF",
+      "target": "s16_b16_S2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_CORRECT",
+      "target": "s16_b16_C1",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    },
+    {
+      "source": "s16_b16_CORRECT",
+      "target": "s16_b16_C2",
+      "type": "regular",
+      "section_id": 16,
+      "block_id": 16
+    }
+  ]
+}

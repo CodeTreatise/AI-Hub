@@ -1,0 +1,891 @@
+{
+  "meta": {
+    "id": 24,
+    "title": "AI Security & Governance",
+    "description": "Prompt Injection, PII, Compliance",
+    "slug": "ai-security-governance",
+    "totalNodes": 49,
+    "totalEdges": 40
+  },
+  "sections": [
+    {
+      "id": 24,
+      "title": "AI Security & Governance",
+      "slug": "24-ai-security--governance",
+      "description": "Prompt Injection, PII, Compliance",
+      "line": 1615
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s24_b26_SECURITY",
+      "label": "AI SECURITY & GOVERNANCE",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://genai.owasp.org/",
+      "tooltip": "OWASP LLM Top 10",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SECURITY"
+    },
+    {
+      "id": "s24_b26_ATTACK",
+      "label": "Attack Vectors",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://genai.owasp.org/",
+      "tooltip": "Attack Vectors",
+      "style": "fill:#E53935,stroke:#C62828,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ATTACK"
+    },
+    {
+      "id": "s24_b26_PROTECT",
+      "label": "Protection",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.nvidia.com/nemo/guardrails/",
+      "tooltip": "Protection",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROTECT"
+    },
+    {
+      "id": "s24_b26_COMPLY",
+      "label": "Compliance",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://gdpr.eu/",
+      "tooltip": "Compliance",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "COMPLY"
+    },
+    {
+      "id": "s24_b26_GOVERN",
+      "label": "Governance",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://huggingface.co/docs/hub/model-cards",
+      "tooltip": "Governance",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GOVERN"
+    },
+    {
+      "id": "s24_b26_A1",
+      "label": "Prompt Injection",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://learnprompting.org/docs/prompt_hacking/injection",
+      "tooltip": "Prompt Injection Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s24_b26_A2",
+      "label": "Jailbreaking",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://arxiv.org/abs/2307.15043",
+      "tooltip": "Jailbreaking Research",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s24_b26_A3",
+      "label": "Data Exfiltration",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://genai.owasp.org/",
+      "tooltip": "Data Exfiltration",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s24_b26_A4",
+      "label": "Model Extraction",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://arxiv.org/abs/2403.06634",
+      "tooltip": "Model Extraction Attacks",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    },
+    {
+      "id": "s24_b26_P1",
+      "label": "Input Validation",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://python.langchain.com/docs/security/",
+      "tooltip": "Input Validation",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s24_b26_P2",
+      "label": "Output Filtering",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.lakera.ai/",
+      "tooltip": "Output Filtering - Lakera",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s24_b26_P3",
+      "label": "PII Redaction",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://microsoft.github.io/presidio/",
+      "tooltip": "Microsoft Presidio",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s24_b26_P4",
+      "label": "Guardrails",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.nvidia.com/nemo/guardrails/",
+      "tooltip": "NeMo Guardrails",
+      "style": null,
+      "parent": null,
+      "original_id": "P4"
+    },
+    {
+      "id": "s24_b26_C1",
+      "label": "GDPR",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://gdpr.eu/",
+      "tooltip": "GDPR Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s24_b26_C2",
+      "label": "SOC2",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+      "tooltip": "SOC2 Overview",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s24_b26_C3",
+      "label": "HIPAA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://www.hhs.gov/hipaa/index.html",
+      "tooltip": "HIPAA Guidelines",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s24_b26_C4",
+      "label": "ISO 27001",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://www.iso.org/standard/27001",
+      "tooltip": "ISO 27001",
+      "style": null,
+      "parent": null,
+      "original_id": "C4"
+    },
+    {
+      "id": "s24_b26_G1",
+      "label": "Model Cards",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://huggingface.co/docs/hub/model-cards",
+      "tooltip": "HF Model Cards",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s24_b26_G2",
+      "label": "Audit Logs",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://langfuse.com/docs/tracing",
+      "tooltip": "Audit Logs - Langfuse",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s24_b26_G3",
+      "label": "Access Control",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.aws.amazon.com/IAM/",
+      "tooltip": "Access Control - AWS IAM",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s24_b26_G4",
+      "label": "Data Lineage",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 26,
+      "url": "https://docs.datadoghq.com/",
+      "tooltip": "Data Lineage",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    },
+    {
+      "id": "s24_b27_REGULATIONS",
+      "label": "GLOBAL AI REGULATIONS",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/",
+      "tooltip": "AI Regulations",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "REGULATIONS"
+    },
+    {
+      "id": "s24_b27_EU",
+      "label": "European Union",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/",
+      "tooltip": "EU AI Regulation",
+      "style": "fill:#003399,stroke:#002266,color:#FFFFFF",
+      "parent": null,
+      "original_id": "EU"
+    },
+    {
+      "id": "s24_b27_US",
+      "label": "United States",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tooltip": "US AI Policy",
+      "style": "fill:#B22234,stroke:#8B1A28,color:#FFFFFF",
+      "parent": null,
+      "original_id": "US"
+    },
+    {
+      "id": "s24_b27_SECTOR",
+      "label": "Sector-Specific",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-machine-learning-aiml-software-medical-device",
+      "tooltip": "FDA AI",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SECTOR"
+    },
+    {
+      "id": "s24_b27_GLOBAL",
+      "label": "Global Standards",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.iso.org/standard/81230.html",
+      "tooltip": "ISO AI Standard",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GLOBAL"
+    },
+    {
+      "id": "s24_b27_EU1",
+      "label": "EU AI Act",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/the-act/",
+      "tooltip": "EU AI Act Full Text",
+      "style": null,
+      "parent": null,
+      "original_id": "EU1"
+    },
+    {
+      "id": "s24_b27_EU2",
+      "label": "Risk-Based Classification",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/high-level-summary/",
+      "tooltip": "Risk Classification",
+      "style": null,
+      "parent": null,
+      "original_id": "EU2"
+    },
+    {
+      "id": "s24_b27_EU3",
+      "label": "Prohibited AI Uses",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://artificialintelligenceact.eu/article/5/",
+      "tooltip": "Prohibited Practices",
+      "style": null,
+      "parent": null,
+      "original_id": "EU3"
+    },
+    {
+      "id": "s24_b27_EU4",
+      "label": "GDPR for AI",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://gdpr.eu/",
+      "tooltip": "GDPR + AI",
+      "style": null,
+      "parent": null,
+      "original_id": "EU4"
+    },
+    {
+      "id": "s24_b27_US1",
+      "label": "Executive Orders",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tooltip": "Biden AI EO",
+      "style": null,
+      "parent": null,
+      "original_id": "US1"
+    },
+    {
+      "id": "s24_b27_US2",
+      "label": "NIST AI RMF",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tooltip": "NIST AI RMF",
+      "style": null,
+      "parent": null,
+      "original_id": "US2"
+    },
+    {
+      "id": "s24_b27_US3",
+      "label": "State Laws CA/CO",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://cppa.ca.gov/regulations/",
+      "tooltip": "California Privacy",
+      "style": null,
+      "parent": null,
+      "original_id": "US3"
+    },
+    {
+      "id": "s24_b27_US4",
+      "label": "FTC Enforcement",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check",
+      "tooltip": "FTC AI Guidelines",
+      "style": null,
+      "parent": null,
+      "original_id": "US4"
+    },
+    {
+      "id": "s24_b27_SE1",
+      "label": "Healthcare FDA/HIPAA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-machine-learning-aiml-software-medical-device",
+      "tooltip": "FDA AI/ML",
+      "style": null,
+      "parent": null,
+      "original_id": "SE1"
+    },
+    {
+      "id": "s24_b27_SE2",
+      "label": "Finance SEC/FINRA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.sec.gov/spotlight/cybersecurity",
+      "tooltip": "SEC AI/Cyber",
+      "style": null,
+      "parent": null,
+      "original_id": "SE2"
+    },
+    {
+      "id": "s24_b27_SE3",
+      "label": "Automotive NHTSA",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.nhtsa.gov/technology-innovation/automated-vehicles-safety",
+      "tooltip": "NHTSA Automated",
+      "style": null,
+      "parent": null,
+      "original_id": "SE3"
+    },
+    {
+      "id": "s24_b27_SE4",
+      "label": "Employment EEOC",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.eeoc.gov/laws/guidance/artificial-intelligence-and-title-vii",
+      "tooltip": "EEOC AI Fairness",
+      "style": null,
+      "parent": null,
+      "original_id": "SE4"
+    },
+    {
+      "id": "s24_b27_GL1",
+      "label": "ISO/IEC 42001",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.iso.org/standard/81230.html",
+      "tooltip": "ISO 42001",
+      "style": null,
+      "parent": null,
+      "original_id": "GL1"
+    },
+    {
+      "id": "s24_b27_GL2",
+      "label": "IEEE 7000 Series",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://standards.ieee.org/industry-connections/ec/ead-v1/",
+      "tooltip": "IEEE Ethically Aligned",
+      "style": null,
+      "parent": null,
+      "original_id": "GL2"
+    },
+    {
+      "id": "s24_b27_GL3",
+      "label": "OECD AI Principles",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://oecd.ai/en/ai-principles",
+      "tooltip": "OECD Principles",
+      "style": null,
+      "parent": null,
+      "original_id": "GL3"
+    },
+    {
+      "id": "s24_b27_GL4",
+      "label": "UNESCO Recommendations",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 27,
+      "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
+      "tooltip": "UNESCO AI Ethics",
+      "style": null,
+      "parent": null,
+      "original_id": "GL4"
+    },
+    {
+      "id": "s24_b104_NeMo_Guard",
+      "label": "NeMo Guardrails",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 104,
+      "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+      "tooltip": "NVIDIA guardrails toolkit",
+      "style": null,
+      "parent": null,
+      "original_id": "NeMo_Guardrails"
+    },
+    {
+      "id": "s24_b105_Guardrails",
+      "label": "Guardrails AI",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 105,
+      "url": "https://www.guardrailsai.com/",
+      "tooltip": "Output validation framework",
+      "style": null,
+      "parent": null,
+      "original_id": "Guardrails_AI"
+    },
+    {
+      "id": "s24_b106_Rebuff",
+      "label": "Rebuff",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 106,
+      "url": "https://github.com/protectai/rebuff",
+      "tooltip": "Prompt injection detection",
+      "style": null,
+      "parent": null,
+      "original_id": "Rebuff"
+    },
+    {
+      "id": "s24_b107_Lakera",
+      "label": "Lakera",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 107,
+      "url": "https://www.lakera.ai/",
+      "tooltip": "AI security platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Lakera"
+    },
+    {
+      "id": "s24_b108_Constituti",
+      "label": "Constitutional AI",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 108,
+      "url": "https://arxiv.org/abs/2212.08073",
+      "tooltip": "Self-supervised alignment",
+      "style": null,
+      "parent": null,
+      "original_id": "Constitutional_AI"
+    },
+    {
+      "id": "s24_b109_DPO",
+      "label": "DPO",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 109,
+      "url": "https://arxiv.org/abs/2305.18290",
+      "tooltip": "Direct Preference Optimization",
+      "style": null,
+      "parent": null,
+      "original_id": "DPO"
+    },
+    {
+      "id": "s24_b141_Llama_Guar",
+      "label": "Llama Guard",
+      "type": "node",
+      "section_id": 24,
+      "block_id": 141,
+      "url": "https://huggingface.co/meta-llama/LlamaGuard-7b",
+      "tooltip": "Meta content safety model",
+      "style": null,
+      "parent": null,
+      "original_id": "Llama_Guard"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_ATTACK",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_PROTECT",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_COMPLY",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_SECURITY",
+      "target": "s24_b26_GOVERN",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_ATTACK",
+      "target": "s24_b26_A4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_PROTECT",
+      "target": "s24_b26_P4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_COMPLY",
+      "target": "s24_b26_C4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b26_GOVERN",
+      "target": "s24_b26_G4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 26
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_EU",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_US",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_SECTOR",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_REGULATIONS",
+      "target": "s24_b27_GLOBAL",
+      "type": "thick",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_EU",
+      "target": "s24_b27_EU4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_US",
+      "target": "s24_b27_US4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_SECTOR",
+      "target": "s24_b27_SE4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL1",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL2",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL3",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    },
+    {
+      "source": "s24_b27_GLOBAL",
+      "target": "s24_b27_GL4",
+      "type": "regular",
+      "section_id": 24,
+      "block_id": 27
+    }
+  ]
+}

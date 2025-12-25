@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI API Docs</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        .note { background: rgba(88, 166, 255, 0.1); border-left: 4px solid #58a6ff; padding: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>OpenAI API Docs</h1>
+            <p>Source: <a href="https://platform.openai.com/docs/introduction" target="_blank">https://platform.openai.com/docs/introduction</a> (Offline Guide)</p>
+        </div>
+        <div class="content">
+            
+        <h2>Introduction to the OpenAI API</h2>
+        <p>The OpenAI API provides access to advanced AI models like GPT-4o and GPT-3.5 Turbo. It allows developers to build applications that can understand and generate natural language, code, and images.</p>
+        
+        <h3>Key Concepts</h3>
+        <ul>
+            <li><strong>Models:</strong> The AI engines. Common ones are <code>gpt-4o</code> (flagship) and <code>gpt-3.5-turbo</code> (fast/cheap).</li>
+            <li><strong>Prompts:</strong> The input text you send to the model.</li>
+            <li><strong>Tokens:</strong> Text is broken down into tokens (parts of words). 1000 tokens is roughly 750 words. You pay per token.</li>
+            <li><strong>Context Window:</strong> The maximum number of tokens (input + output) the model can handle at once.</li>
+        </ul>
+
+        <h3>Chat Completions API</h3>
+        <p>This is the main endpoint used for chat applications. It takes a list of messages as input.</p>
+        <pre><code>POST https://api.openai.com/v1/chat/completions
+
+{
+  "model": "gpt-4o",
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Hello!"}
+  ]
+}</code></pre>
+
+        <h3>Roles</h3>
+        <ul>
+            <li><strong>System:</strong> Sets the behavior/personality of the AI.</li>
+            <li><strong>User:</strong> The human's input.</li>
+            <li><strong>Assistant:</strong> The AI's response (used for history).</li>
+        </ul>
+        
+        </div>
+    </div>
+</body>
+</html>

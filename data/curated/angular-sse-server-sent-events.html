@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular SSE (Server-Sent Events)</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a; /* Match main theme */
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #58a6ff; padding-left: 1rem; color: #8b949e; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>Angular SSE (Server-Sent Events)</h1>
+            <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events</a></p>
+        </div>
+        <div class="content">
+            <main class="reference-layout__content" id="content">
+<div class="reference-layout__header">
+<mdn-survey></mdn-survey>
+<h1>Using server-sent events</h1>
+<details class="baseline-indicator high" data-glean-toggle-open="baseline_toggle_open">
+<summary>
+<span aria-label="Baseline Check" class="indicator" role="img"></span>
+<div class="status-title">
+          
+                Baseline
+                <span class="not-bold">
+                  Widely available
+                </span>
+                 *
+              
+        </div>
+<div class="browsers">
+<span class="engine" key="Blink" title="Supported in ⁨Chrome and Edge⁩">
+<span aria-label="Chrome check" class="browser chrome supported" key="chrome" role="img"></span><span aria-label="Edge check" class="browser edge supported" key="edge" role="img"></span>
+</span><span class="engine" key="Gecko" title="Supported in ⁨Firefox⁩">
+<span aria-label="Firefox check" class="browser firefox supported" key="firefox" role="img"></span>
+</span><span class="engine" key="WebKit" title="Supported in ⁨Safari⁩">
+<span aria-label="Safari check" class="browser safari supported" key="safari" role="img"></span>
+</span>
+</div>
+<span class="icon icon-chevron"></span>
+</summary>
+<div class="extra">
+<p>
+              This feature is well established and works across many devices and browser versions. It’s been available across browsers since ⁨January 2020⁩.
+            </p>
+<p>* Some parts of this feature may have varying levels of support.</p>
+<ul>
+<li>
+<a class="learn-more" data-glean-id="baseline_link_learn_more" href="https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility" target="_blank">
+              Learn more
+            </a>
+</li>
+<li>
+<a data-glean-id="baseline_link_bcd_table" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#browser_compatibility" target="_blank">
+              See full compatibility
+            </a>
+</li>
+<li>
+<a class="feedback-link" data-glean-id="baseline_link_feedback" href="https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FServer-sent_events%2FUsing_server-sent_events&amp;level=high" rel="noreferrer" target="_blank">
+              Report feedback
+            </a>
+</li>
+</ul>
+</div>
+</details><? > <section class="content-section">
+<p>Developing a web application that uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events" target="_blank">server-sent events</a> is straightforward. You'll need a bit of code on the server to stream events to the front-end, but the client side code works almost identically to <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank">websockets</a> in part of handling incoming events. This is a one-way connection, so you can't send events from a client to a server.</p>
+</section>
+</div>
+
+<div class="reference-layout__body">
+<section aria-labelledby="receiving_events_from_the_server" class="content-section">
+<!--lit-part Sxxd+VOXfj4=--><!--lit-node 0--><h2 class="heading" id="receiving_events_from_the_server"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#receiving_events_from_the_server" target="_blank">Receiving events from the server</a></h2><!--/lit-part-->
+<p>The server-sent event API is contained in the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource" target="_blank"><code>EventSource</code></a> interface.</p>
+</section><section aria-labelledby="creating_an_eventsource_instance" class="content-section">
+<!--lit-part 5D1wZj6+r/s=--><!--lit-node 0--><h3 class="heading" id="creating_an_eventsource_instance"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#creating_an_eventsource_instance" target="_blank">Creating an <code>EventSource</code> instance</a></h3><!--/lit-part-->
+<p>To open a connection to the server to begin receiving events from it, create a new <code>EventSource</code> object with the URL of a script that generates the events. For example:</p>
+<div class="code-example"><div class="example-header"><span class="language-name">js</span></div><pre class="brush: js notranslate"><code>const evtSource = new EventSource("sse-demo.php");
+</code></pre></div>
+<p>If the event generator script is hosted on a different origin, a new <code>EventSource</code> object should be created with both the URL and an options dictionary. For example, assuming the client script is on <code>example.com</code>:</p>
+<div class="code-example"><div class="example-header"><span class="language-name">js</span></div><pre class="brush: js notranslate"><code>const evtSource = new EventSource("//api.example.com/sse-demo.php", {
+  withCredentials: true,
+});
+</code></pre></div>
+</section><section aria-labelledby="listening_for_message_events" class="content-section">
+<!--lit-part eqMtyjAnjtg=--><!--lit-node 0--><h3 class="heading" id="listening_for_message_events"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#listening_for_message_events" target="_blank">Listening for <code>message</code> events</a></h3><!--/lit-part-->
+<p>Messages sent from the server that don't have an <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event" target="_blank"><code>event</code></a> field are received as <code>message</code> events. To receive message events, attach a handler for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message_event" target="_blank" title="message"><code>message</code></a> event:</p>
+<div class="code-example"><div class="example-header"><span class="language-name">js</span></div><pre class="brush: js notranslate"><code>evtSource.onmessage = (event) =&gt; {
+  const newElement = document.createElement("li");
+  const eventList = document.getElementById("list");
+
+  newElement.textContent = `message: ${event.data}`;
+  eventList.appendChild(newElement);
+};
+</code></pre></div>
+<p>This code listens for incoming message events and appends the message text to a list in the document's HTML.</p>
+</section><section aria-labelledby="listening_for_custom_events" class="content-section">
+<!--lit-part DNphyFFjW80=--><!--lit-node 0--><h3 class="heading" id="listening_for_custom_events"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#listening_for_custom_events" target="_blank">Listening for custom events</a></h3><!--/lit-part-->
+<p>Messages from the server that do have an <code>event</code> field defined are received as events with the name given in <code>event</code>. For example:</p>
+<div class="code-example"><div class="example-header"><span class="language-name">js</span></div><pre class="brush: js notranslate"><code>evtSource.addEventListener("ping", (event) =&gt; {
+  const newElement = document.createElement("li");
+  const eventList = document.getElementById("list");
+  const time = JSON.parse(event.data).time;
+  newElement.textContent = `ping at ${time}`;
+  eventList.appendChild(newElement);
+});
+</code></pre></div>
+<p>This code will be called whenever the server sends a message with the <code>event</code> field set to <code>ping</code>; it then parses the JSON in the <code>data</code> field and outputs that information.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong>
+When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is <em>per browser</em> and is set to a very low number (6). The issue has been marked as "Won't fix" in <a class="external" href="https://crbug.com/275955" target="_blank">Chrome</a> and <a class="external" href="https://bugzil.la/906896" target="_blank">Firefox</a>. This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com</code> (per <a class="external" href="https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159" target="_blank">Stack Overflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
+</div>
+</section><section aria-labelledby="sending_events_from_the_server" class="content-section">
+<!--lit-part bjqHVURxHC0=--><!--lit-node 0--><h2 class="heading" id="sending_events_from_the_server"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#sending_events_from_the_server" target="_blank">Sending events from the server</a></h2><!--/lit-part-->
+<p>The server-side script that sends events needs to respond using the MIME type <code>text/event-stream</code>. Each notification is sent as a block of text terminated by a pair of newlines. For details on the format of the event stream, see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format" target="_blank">Event stream format</a>.</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Glossary/PHP" target="_blank">PHP</a> code for the example we're using here follows:</p>
+<div class="code-example"><div class="example-header"><span class="language-name">php</span></div><pre class="brush: php notranslate"><code>date_default_timezone_set("America/New_York");
+header("X-Accel-Buffering: no");
+header("Content-Type: text/event-stream");
+header("Cache-Control: no-cache");
+
+$counter = rand(1, 10);
+while (true) {
+  // Every second, send a "ping" event.
+
+  echo "event: ping\n";
+  $curDate = date(DATE_ISO8601);
+  echo 'data: {"time": "' . $curDate . '"}';
+  echo "\n\n";
+
+  // Send a simple message at random intervals.
+
+  $counter--;
+
+  if (!$counter) {
+    echo 'data: This is a message at time ' . $curDate . "\n\n";
+    $counter = rand(1, 10);
+  }
+
+  if (ob_get_contents()) {
+      ob_end_flush();
+  }
+  flush();
+
+  // Break the loop if the client aborted the connection (closed the page)
+
+  if (connection_aborted()) break;
+
+  sleep(1);
+}
+</code></pre></div>
+<p>The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.
+The loop will keep running independent of the connection status, so a check is included
+to break the loop if the connection has been closed (e.g., client closes the page).</p>
+<div class="notecard note">
+<p><strong>Note:</strong>
+You can find a full example that uses the code shown in this article on GitHub — see <a class="external" href="https://github.com/mdn/dom-examples/tree/main/server-sent-events" target="_blank">Simple SSE demo using PHP</a>.</p>
+</div>
+</section><section aria-labelledby="error_handling" class="content-section">
+<!--lit-part YoR237bGIw4=--><!--lit-node 0--><h2 class="heading" id="error_handling"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#error_handling" target="_blank">Error handling</a></h2><!--/lit-part-->
+<p>If the server responds with an <code>error</code> key (e.g., <code>JSON.parse(event.data.error)</code> or another problem occurs (such as a network timeout or issues pertaining to <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS" target="_blank">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
+<div class="code-example"><div class="example-header"><span class="language-name">js</span></div><pre class="brush: js notranslate"><code>evtSource.onerror = (err) =&gt; {
+  console.error("EventSource failed:", err);
+};
+</code></pre></div>
+</section><section aria-labelledby="closing_event_streams" class="content-section">
+<!--lit-part vVoBnm4hTDM=--><!--lit-node 0--><h2 class="heading" id="closing_event_streams"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#closing_event_streams" target="_blank">Closing event streams</a></h2><!--/lit-part-->
+<p>By default, if the connection between the client and server closes, the connection is restarted. The connection is terminated with the <code>.close()</code> method.</p>
+<div class="code-example"><div class="example-header"><span class="language-name">js</span></div><pre class="brush: js notranslate"><code>evtSource.close();
+</code></pre></div>
+</section><section aria-labelledby="event_stream_format" class="content-section">
+<!--lit-part +sRavQogRbM=--><!--lit-node 0--><h2 class="heading" id="event_stream_format"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format" target="_blank">Event stream format</a></h2><!--/lit-part-->
+<p>The event stream is a simple stream of text data which must be encoded using <a href="https://developer.mozilla.org/en-US/docs/Glossary/UTF-8" target="_blank">UTF-8</a>. Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.</p>
+<div class="notecard note">
+<p><strong>Note:</strong>
+The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.</p>
+</div>
+<p>Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.</p>
+</section><section aria-labelledby="fields" class="content-section">
+<!--lit-part BX7oI1dYZ4I=--><!--lit-node 0--><h3 class="heading" id="fields"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#fields" target="_blank">Fields</a></h3><!--/lit-part-->
+<p>Each message received has some combination of the following fields, one per line:</p>
+<dl>
+<dt id="event"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event" target="_blank"><code>event</code></a></dt>
+<dd>
+<p>A string identifying the type of event described. If this is specified, an event will be dispatched on the browser to the listener for the specified event name; the website source code should use <code>addEventListener()</code> to listen for named events. The <code>onmessage</code> handler is called if no event name is specified for a message.</p>
+</dd>
+<dt id="data"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#data" target="_blank"><code>data</code></a></dt>
+<dd>
+<p>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a class="external" href="https://html.spec.whatwg.org/multipage/#dispatchMessage" target="_blank">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</p>
+</dd>
+<dt id="id"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#id" target="_blank"><code>id</code></a></dt>
+<dd>
+<p>The event ID to set the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource" target="_blank"><code>EventSource</code></a> object's last event ID value.</p>
+</dd>
+<dt id="retry"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#retry" target="_blank"><code>retry</code></a></dt>
+<dd>
+<p>The reconnection time. If the connection to the server is lost, the browser will wait for the specified time before attempting to reconnect. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</p>
+</dd>
+</dl>
+<p>All other field names are ignored.</p>
+<div class="notecard note">
+<p><strong>Note:</strong>
+If a line doesn't contain a colon, the entire line is treated as the field name with an empty value string.</p>
+</div>
+</section><section aria-labelledby="examples" class="content-section">
+<!--lit-part 08VCXCsGGWc=--><!--lit-node 0--><h3 class="heading" id="examples"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#examples" target="_blank">Examples</a></h3><!--/lit-part-->
+<h4 id="data-only_messages">Data-only messages</h4>
+<p>In the following example, there are three messages sent. The first is just a comment, since it starts with a colon character. As mentioned previously, this can be useful as a keep-alive mechanism if messages might not be sent regularly.</p>
+<p>The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline special character in the value.</p>
+<div class="code-example"><div class="example-header"><span class="language-name">bash</span></div><pre class="brush: bash notranslate"><code>: this is a test stream
+
+data: some text
+
+data: another message
+data: with two lines
+</code></pre></div>
+<h4 id="named_events">Named events</h4>
+<p>This example sends named events. Each has an event name specified by the <code>event</code> field, and a <code>data</code> field whose value is an appropriate JSON string with the data needed for the client to act on the event. The <code>data</code> field could, of course, have any string data; it doesn't have to be JSON.</p>
+<div class="code-example"><div class="example-header"><span class="language-name">bash</span></div><pre class="brush: bash notranslate"><code>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
+
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+
+event: userdisconnect
+data: {"username": "bobby", "time": "02:34:23"}
+
+event: usermessage
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+</code></pre></div>
+<h4 id="mixing_and_matching">Mixing and matching</h4>
+<p>You don't have to use just unnamed messages or typed events; you can mix them together in a single event stream.</p>
+<div class="code-example"><div class="example-header"><span class="language-name">bash</span></div><pre class="brush: bash notranslate"><code>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
+
+data: Here's a system message of some kind that will get used
+data: to accomplish some task.
+
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+</code></pre></div>
+</section><section aria-labelledby="browser_compatibility" class="content-section">
+<!--lit-part y0+5SMr/T3s=--><!--lit-node 0--><h2 class="heading" id="browser_compatibility"><!--lit-node 1--><a class="heading-anchor" href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#browser_compatibility" target="_blank">Browser compatibility</a></h2><!--/lit-part-->
+<mdn-compat-table-lazy locale="en-US" query="api.EventSource"><template shadowroot="open" shadowrootmode="open"><!--lit-part y6RVfKR7hws=--><p><!--lit-part hRoZS/r0nwc=--><!--/lit-part--></p><!--/lit-part--></template></mdn-compat-table-lazy>
+</section>
+<section aria-labelledby="feedback" class="content-section article-footer">
+<div class="article-footer__inner">
+<div class="article-footer__svg-container"><!--lit-part +YwD1wS6984=--><svg fill="none" height="162" viewbox="0 0 162 162" width="162" xmlns="http://www.w3.org/2000/svg"><mask fill="#fff" id="b"><path d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z"></path></mask><path d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z" mask="url(#b)" stroke="url(#a)" stroke-dasharray="6, 6" stroke-width="2" style="stroke:url(#a)" transform="translate(-63.992 -25.587)"></path><ellipse cx="8.066" cy="111.597" fill="currentColor" rx="53.677" ry="53.699" transform="matrix(.71707 -.697 .7243 .6895 0 0)"></ellipse><g clip-path="url(#c)" transform="translate(-63.992 -25.587)"><path d="m144.256 137.379 32.906 12.434a4.41 4.41 0 0 1 2.559 5.667l-9.326 24.679a4.41 4.41 0 0 1-5.667 2.559l-8.226-3.108-2.332 6.17c-.466 1.233-.375 1.883-1.609 1.417l-2.253-.527c-.411-.155-.95-.594-1.206-1.161l-4.734-10.484-12.545-4.741a4.41 4.41 0 0 1-2.559-5.667l9.325-24.679a4.41 4.41 0 0 1 5.667-2.559m9.961 29.617 8.227 3.108 3.264-8.638-.498-6.768-4.113-1.555.548 7.258-4.319-1.632zm-12.339-4.663 8.226 3.108 3.264-8.637-.498-6.769-4.113-1.554.548 7.257-4.319-1.632z" fill="#9abff5"></path></g><g clip-path="url(#d)" transform="translate(-63.992 -25.587)"><path d="M135.35 60.136 86.67 41.654c-3.346-1.27-7.124.428-8.394 3.775L64.414 81.938c-1.27 3.347.428 7.125 3.774 8.395l12.17 4.62-3.465 9.128c-.693 1.826-1.432 2.457.394 3.15l3.014 1.625c.609.231 1.637.274 2.477-.104l15.53-6.983 18.56 7.047c3.346 1.27 7.124-.428 8.395-3.775l13.862-36.51c1.27-3.346-.428-7.124-3.775-8.395M95.261 83.207l-12.17-4.62 4.852-12.779 7.19-7.017 6.085 2.31-7.725 7.51 6.389 2.426zm18.255 6.93-12.17-4.62 4.852-12.778 7.189-7.017 6.085 2.31-7.725 7.51 6.39 2.426z" fill="#81b0f3"></path></g><defs><clippath id="c"><path d="m198.638 146.586-65.056-24.583-24.583 65.057 65.056 24.582z" fill="#fff"></path></clippath><clippath id="d"><path d="m66.438 14.055 96.242 36.54-36.54 96.243-96.243-36.54z" fill="#fff"></path></clippath><lineargradient gradientunits="userSpaceOnUse" id="a" x1="97.203" x2="199.995" y1="47.04" y2="152.793"><stop stop-color="#086DFC"></stop><stop offset=".246" stop-color="#2C81FA"></stop><stop offset=".516" stop-color="#5497F8"></stop><stop offset=".821" stop-color="#80B0F6"></stop><stop offset="1" stop-color="#9ABFF5"></stop></lineargradient></defs></svg><!--/lit-part--></div>
+<h2 id="feedback">Help improve MDN</h2>
+<mdn-content-feedback locale="en-US"><template shadowroot="open" shadowrootmode="open"><!--lit-part wnhNI9MhleE=--><fieldset class="content-feedback">
+<!--lit-part abqF9JTZmM8=--><label><!--lit-part-->Was this page helpful to you?<!--/lit-part-->
+</label>
+<div class="content-feedback--buttons">
+<!--lit-node 3--><mdn-button action="positive" data-vote="yes" defer-hydration="" variant="secondary"><template shadowroot="open" shadowrootmode="open"><!--lit-part ds8wn4pKxlc=-->
+<!--lit-node 0--><button aria-labelledby="label-4kvmcg14sgc" class="button" data-action="positive" data-variant="secondary" part="button">
+<!--lit-part--><!--lit-part bRP2a5ux/uw=--><span class="icon" part="icon"><!--lit-part GjE5cW6UBoM=--><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10v12m8-16.12L14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88"></path></svg><!--/lit-part--></span><!--/lit-part--><!--lit-part rI2hX8LXYZM=-->
+<!--lit-node 0--><span class="label" id="label-4kvmcg14sgc" part="label"><!--lit-part Pz0gobCCM4E=--><slot></slot><!--/lit-part--></span>
+<!--/lit-part--><!--/lit-part-->
+</button>
+<!--/lit-part--></template>
+<!--lit-part-->Yes<!--/lit-part-->
+</mdn-button>
+<!--lit-node 5--><mdn-button action="negative" data-vote="no" defer-hydration="" variant="secondary"><template shadowroot="open" shadowrootmode="open"><!--lit-part ds8wn4pKxlc=-->
+<!--lit-node 0--><button aria-labelledby="label-df4t3tjc88d" class="button" data-action="negative" data-variant="secondary" part="button">
+<!--lit-part--><!--lit-part bRP2a5ux/uw=--><span class="icon" part="icon"><!--lit-part IggRHjbPj/Q=--><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M17 14V2M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88"></path></svg><!--/lit-part--></span><!--/lit-part--><!--lit-part rI2hX8LXYZM=-->
+<!--lit-node 0--><span class="label" id="label-df4t3tjc88d" part="label"><!--lit-part Pz0gobCCM4E=--><slot></slot><!--/lit-part--></span>
+<!--/lit-part--><!--/lit-part-->
+</button>
+<!--/lit-part--></template>
+<!--lit-part-->No<!--/lit-part-->
+</mdn-button>
+</div><!--/lit-part-->
+</fieldset><!--/lit-part--></template></mdn-content-feedback>
+<a class="article-footer__contribute" href="https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started" target="_blank">Learn how to contribute</a> <p class="article-footer__last-modified">
+    This page was last modified on <time datetime="2025-05-15T22:08:54.000Z">⁨May 15, 2025⁩</time> by <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events/contributors.txt" target="_blank">MDN contributors</a>.
+  </p> <div class="article-footer__links">
+<a class="external" href="https://github.com/mdn/content/blob/main/files/en-us/web/api/server-sent_events/using_server-sent_events/index.md?plain=1" rel="noopener" target="_blank" title="Folder: ⁨en-us/web/api/server-sent_events/using_server-sent_events⁩ (Opens in a new tab)">View this page on GitHub</a> • <a class="external" href="https://github.com/mdn/content/issues/new?template=page-report.yml&amp;mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FServer-sent_events%2FUsing_server-sent_events&amp;metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fserver-sent_events%2Fusing_server-sent_events%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FServer-sent_events%2FUsing_server-sent_events%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fserver-sent_events%2Fusing_server-sent_events%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Ffd1048861f12cd6e4c806523655ac742b483f281%0A*+Document+last+modified%3A+2025-05-15T22%3A08%3A54.000Z%0A%0A%3C%2Fdetails%3E" rel="noopener" target="_blank" title="This will take you to GitHub to file a new issue.">Report a problem with this content</a>
+</div>
+</div>
+</section>
+</div>
+</main>
+        </div>
+    </div>
+</body>
+</html>

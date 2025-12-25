@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 31,
+    "title": "Probabilistic ML & Bayesian Methods",
+    "description": "PGMs, MCMC, Gaussian Processes",
+    "slug": "probabilistic-ml-bayesian-methods",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 31,
+      "title": "Probabilistic ML & Bayesian Methods",
+      "slug": "31-probabilistic-ml--bayesian-methods",
+      "description": "PGMs, MCMC, Gaussian Processes",
+      "line": 2322
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s31_b36_PROB",
+      "label": "PROBABILISTIC ML",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://probml.github.io/pml-book/",
+      "tooltip": "Probabilistic ML Book",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROB"
+    },
+    {
+      "id": "s31_b36_BAYES",
+      "label": "Bayesian Methods",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://www.bayesianspectacles.org/",
+      "tooltip": "Bayesian Methods",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "BAYES"
+    },
+    {
+      "id": "s31_b36_PGM",
+      "label": "Graphical Models",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://pgm.stanford.edu/",
+      "tooltip": "Stanford PGM Course",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PGM"
+    },
+    {
+      "id": "s31_b36_INFER",
+      "label": "Inference",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://mc-stan.org/",
+      "tooltip": "Stan",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INFER"
+    },
+    {
+      "id": "s31_b36_GP",
+      "label": "Gaussian Processes",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://gaussianprocess.org/",
+      "tooltip": "Gaussian Processes",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GP"
+    },
+    {
+      "id": "s31_b36_B1",
+      "label": "Bayesian Inference",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://www.pymc.io/",
+      "tooltip": "PyMC",
+      "style": null,
+      "parent": null,
+      "original_id": "B1"
+    },
+    {
+      "id": "s31_b36_B2",
+      "label": "Prior/Posterior",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://seeing-theory.brown.edu/bayesian-inference/",
+      "tooltip": "Bayesian Inference Viz",
+      "style": null,
+      "parent": null,
+      "original_id": "B2"
+    },
+    {
+      "id": "s31_b36_B3",
+      "label": "Bayesian Neural Nets",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://arxiv.org/abs/2007.06823",
+      "tooltip": "Bayesian Deep Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "B3"
+    },
+    {
+      "id": "s31_b36_B4",
+      "label": "Bayesian Optimization",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://ax.dev/",
+      "tooltip": "Ax/BoTorch",
+      "style": null,
+      "parent": null,
+      "original_id": "B4"
+    },
+    {
+      "id": "s31_b36_P1",
+      "label": "Bayesian Networks",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://pgmpy.org/",
+      "tooltip": "pgmpy",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s31_b36_P2",
+      "label": "Markov Random Fields",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://en.wikipedia.org/wiki/Markov_random_field",
+      "tooltip": "MRF",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s31_b36_P3",
+      "label": "Hidden Markov Models",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://hmmlearn.readthedocs.io/",
+      "tooltip": "hmmlearn",
+      "style": null,
+      "parent": null,
+      "original_id": "P3"
+    },
+    {
+      "id": "s31_b36_P4",
+      "label": "Conditional Random Fields",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://sklearn-crfsuite.readthedocs.io/",
+      "tooltip": "CRFsuite",
+      "style": null,
+      "parent": null,
+      "original_id": "P4"
+    },
+    {
+      "id": "s31_b36_I1",
+      "label": "MCMC",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://twiecki.io/blog/2015/11/10/mcmc-sampling/",
+      "tooltip": "MCMC Explained",
+      "style": null,
+      "parent": null,
+      "original_id": "I1"
+    },
+    {
+      "id": "s31_b36_I2",
+      "label": "Variational Inference",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://arxiv.org/abs/1601.00670",
+      "tooltip": "VI Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "I2"
+    },
+    {
+      "id": "s31_b36_I3",
+      "label": "Expectation Maximization",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm",
+      "tooltip": "EM Algorithm",
+      "style": null,
+      "parent": null,
+      "original_id": "I3"
+    },
+    {
+      "id": "s31_b36_I4",
+      "label": "Gibbs Sampling",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://en.wikipedia.org/wiki/Gibbs_sampling",
+      "tooltip": "Gibbs Sampling",
+      "style": null,
+      "parent": null,
+      "original_id": "I4"
+    },
+    {
+      "id": "s31_b36_G1",
+      "label": "GP Regression",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://scikit-learn.org/stable/modules/gaussian_process.html",
+      "tooltip": "sklearn GP",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s31_b36_G2",
+      "label": "GP Classification",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://gpytorch.ai/",
+      "tooltip": "GPyTorch",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s31_b36_G3",
+      "label": "Kernel Methods",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://www.kernel-methods.net/",
+      "tooltip": "Kernel Methods",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s31_b36_G4",
+      "label": "Uncertainty Quantification",
+      "type": "node",
+      "section_id": 31,
+      "block_id": 36,
+      "url": "https://arxiv.org/abs/2107.03342",
+      "tooltip": "Uncertainty Quantification",
+      "style": null,
+      "parent": null,
+      "original_id": "G4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_BAYES",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_PGM",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_INFER",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PROB",
+      "target": "s31_b36_GP",
+      "type": "thick",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_BAYES",
+      "target": "s31_b36_B4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_PGM",
+      "target": "s31_b36_P4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_INFER",
+      "target": "s31_b36_I4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G1",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G2",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G3",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    },
+    {
+      "source": "s31_b36_GP",
+      "target": "s31_b36_G4",
+      "type": "regular",
+      "section_id": 31,
+      "block_id": 36
+    }
+  ]
+}

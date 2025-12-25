@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "id": 14,
+    "title": "AI Agents Architecture",
+    "description": "Agentic AI architecture",
+    "slug": "ai-agents-architecture",
+    "totalNodes": 23,
+    "totalEdges": 13
+  },
+  "sections": [
+    {
+      "id": 14,
+      "title": "AI Agents Architecture",
+      "slug": "14-ai-agents-architecture",
+      "description": "Agentic AI architecture",
+      "line": 816
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s14_b14_AGENT",
+      "label": "AI AGENT",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "tooltip": "LLM Agents Guide",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AGENT"
+    },
+    {
+      "id": "s14_b14_USER",
+      "label": "User Query",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/modules/agents/",
+      "tooltip": "Agent Input",
+      "style": null,
+      "parent": null,
+      "original_id": "USER"
+    },
+    {
+      "id": "s14_b14_PLAN",
+      "label": "Planning",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://www.promptingguide.ai/techniques/cot",
+      "tooltip": "Chain-of-Thought",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PLAN"
+    },
+    {
+      "id": "s14_b14_MEM",
+      "label": "Memory",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/modules/memory/",
+      "tooltip": "LangChain Memory",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MEM"
+    },
+    {
+      "id": "s14_b14_TOOLS",
+      "label": "Tools",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/modules/tools/",
+      "tooltip": "LangChain Tools",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TOOLS"
+    },
+    {
+      "id": "s14_b14_REASON",
+      "label": "Reasoning",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://react-lm.github.io/",
+      "tooltip": "ReAct Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "REASON"
+    },
+    {
+      "id": "s14_b14_DECOMP",
+      "label": "Task Decomposition",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://arxiv.org/abs/2205.10625",
+      "tooltip": "Task Decomposition",
+      "style": null,
+      "parent": null,
+      "original_id": "DECOMP"
+    },
+    {
+      "id": "s14_b14_SHORT",
+      "label": "Short-term",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/modules/memory/types/buffer",
+      "tooltip": "Buffer Memory",
+      "style": null,
+      "parent": null,
+      "original_id": "SHORT"
+    },
+    {
+      "id": "s14_b14_LONG",
+      "label": "Long-term",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/modules/memory/types/vectorstore_retriever",
+      "tooltip": "Vector Memory",
+      "style": null,
+      "parent": null,
+      "original_id": "LONG"
+    },
+    {
+      "id": "s14_b14_SEARCH",
+      "label": "Web Search",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://serpapi.com/",
+      "tooltip": "SerpAPI",
+      "style": null,
+      "parent": null,
+      "original_id": "SEARCH"
+    },
+    {
+      "id": "s14_b14_CODE",
+      "label": "Code Exec",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://docs.e2b.dev/",
+      "tooltip": "E2B Code Sandbox",
+      "style": null,
+      "parent": null,
+      "original_id": "CODE"
+    },
+    {
+      "id": "s14_b14_API",
+      "label": "API Calls",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/integrations/tools/",
+      "tooltip": "API Tools",
+      "style": null,
+      "parent": null,
+      "original_id": "API"
+    },
+    {
+      "id": "s14_b14_DB",
+      "label": "Database",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/integrations/tools/sql_database",
+      "tooltip": "SQL Tools",
+      "style": null,
+      "parent": null,
+      "original_id": "DB"
+    },
+    {
+      "id": "s14_b14_OUTPUT",
+      "label": "Response/Action",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 14,
+      "url": "https://python.langchain.com/docs/modules/agents/agent_types/",
+      "tooltip": "Agent Output",
+      "style": "fill:#00838F,stroke:#006064,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OUTPUT"
+    },
+    {
+      "id": "s14_b56_AutoGen",
+      "label": "AutoGen",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 56,
+      "url": "https://microsoft.github.io/autogen/",
+      "tooltip": "Microsoft multi-agent framework",
+      "style": null,
+      "parent": null,
+      "original_id": "AutoGen"
+    },
+    {
+      "id": "s14_b57_CrewAI",
+      "label": "CrewAI",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 57,
+      "url": "https://www.crewai.com/",
+      "tooltip": "Role-based AI agent framework",
+      "style": null,
+      "parent": null,
+      "original_id": "CrewAI"
+    },
+    {
+      "id": "s14_b58_LangGraph",
+      "label": "LangGraph",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 58,
+      "url": "https://langchain-ai.github.io/langgraph/",
+      "tooltip": "Stateful agent orchestration",
+      "style": null,
+      "parent": null,
+      "original_id": "LangGraph"
+    },
+    {
+      "id": "s14_b59_Agency_Swa",
+      "label": "Agency Swarm",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 59,
+      "url": "https://github.com/VRSEN/agency-swarm",
+      "tooltip": "Agent swarm framework",
+      "style": null,
+      "parent": null,
+      "original_id": "Agency_Swarm"
+    },
+    {
+      "id": "s14_b60_SuperAGI",
+      "label": "SuperAGI",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 60,
+      "url": "https://superagi.com/",
+      "tooltip": "Open-source AGI framework",
+      "style": null,
+      "parent": null,
+      "original_id": "SuperAGI"
+    },
+    {
+      "id": "s14_b61_TaskWeaver",
+      "label": "TaskWeaver",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 61,
+      "url": "https://github.com/microsoft/TaskWeaver",
+      "tooltip": "Code-first agent framework",
+      "style": null,
+      "parent": null,
+      "original_id": "TaskWeaver"
+    },
+    {
+      "id": "s14_b62_Mem0",
+      "label": "Mem0",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 62,
+      "url": "https://mem0.ai/",
+      "tooltip": "Memory layer for AI agents",
+      "style": null,
+      "parent": null,
+      "original_id": "Mem0"
+    },
+    {
+      "id": "s14_b63_MemGPT",
+      "label": "MemGPT",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 63,
+      "url": "https://memgpt.ai/",
+      "tooltip": "LLMs with long-term memory",
+      "style": null,
+      "parent": null,
+      "original_id": "MemGPT"
+    },
+    {
+      "id": "s14_b64_Zep",
+      "label": "Zep",
+      "type": "node",
+      "section_id": 14,
+      "block_id": 64,
+      "url": "https://www.getzep.com/",
+      "tooltip": "Memory for AI assistants",
+      "style": null,
+      "parent": null,
+      "original_id": "Zep"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s14_b14_USER",
+      "target": "s14_b14_AGENT",
+      "type": "thick",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_AGENT",
+      "target": "s14_b14_PLAN",
+      "type": "thick",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_AGENT",
+      "target": "s14_b14_MEM",
+      "type": "thick",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_AGENT",
+      "target": "s14_b14_TOOLS",
+      "type": "thick",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_PLAN",
+      "target": "s14_b14_REASON",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_PLAN",
+      "target": "s14_b14_DECOMP",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_MEM",
+      "target": "s14_b14_SHORT",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_MEM",
+      "target": "s14_b14_LONG",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_TOOLS",
+      "target": "s14_b14_SEARCH",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_TOOLS",
+      "target": "s14_b14_CODE",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_TOOLS",
+      "target": "s14_b14_API",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_TOOLS",
+      "target": "s14_b14_DB",
+      "type": "regular",
+      "section_id": 14,
+      "block_id": 14
+    },
+    {
+      "source": "s14_b14_AGENT",
+      "target": "s14_b14_OUTPUT",
+      "type": "thick",
+      "section_id": 14,
+      "block_id": 14
+    }
+  ]
+}

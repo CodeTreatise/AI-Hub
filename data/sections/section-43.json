@@ -1,0 +1,795 @@
+{
+  "meta": {
+    "id": 43,
+    "title": "AI Industry Applications Worldwide",
+    "description": "Examples of AI use across major industries worldwide.",
+    "slug": "ai-industry-applications-worldwide",
+    "totalNodes": 41,
+    "totalEdges": 40
+  },
+  "sections": [
+    {
+      "id": 43,
+      "title": "AI Industry Applications Worldwide",
+      "slug": "",
+      "description": "Examples of AI use across major industries worldwide.",
+      "line": 3663
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s43_b51_INDUSTRIES",
+      "label": "\ud83c\udfed AI ACROSS INDUSTRIES",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INDUSTRIES"
+    },
+    {
+      "id": "s43_b51_HEALTH",
+      "label": "\ud83c\udfe5 Healthcare",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.who.int/health-topics/artificial-intelligence",
+      "tooltip": "WHO AI Health",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "HEALTH"
+    },
+    {
+      "id": "s43_b51_FINANCE",
+      "label": "\ud83d\udcb0 Finance",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.bis.org/publ/work930.htm",
+      "tooltip": "BIS AI Finance",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "FINANCE"
+    },
+    {
+      "id": "s43_b51_RETAIL",
+      "label": "\ud83d\uded2 Retail",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.mckinsey.com/industries/retail/our-insights/ai-in-retail",
+      "tooltip": "McKinsey Retail AI",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "RETAIL"
+    },
+    {
+      "id": "s43_b51_MANUFACT",
+      "label": "\ud83c\udfed Manufacturing",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.weforum.org/projects/ai-for-manufacturing",
+      "tooltip": "WEF Manufacturing AI",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "MANUFACT"
+    },
+    {
+      "id": "s43_b51_AGRI",
+      "label": "\ud83c\udf3e Agriculture",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.fao.org/artificial-intelligence/en/",
+      "tooltip": "FAO AI Agriculture",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "AGRI"
+    },
+    {
+      "id": "s43_b51_ENERGY",
+      "label": "\u26a1 Energy",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.iea.org/reports/digitalisation-and-energy",
+      "tooltip": "IEA Energy AI",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "ENERGY"
+    },
+    {
+      "id": "s43_b51_TRANSPORT",
+      "label": "\ud83d\ude97 Transportation",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.transportation.gov/priorities/innovation/av",
+      "tooltip": "DOT AV",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "TRANSPORT"
+    },
+    {
+      "id": "s43_b51_LEGAL",
+      "label": "\u2696\ufe0f Legal",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/",
+      "tooltip": "Stanford CodeX",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "LEGAL"
+    },
+    {
+      "id": "s43_b51_EDUCATION",
+      "label": "\ud83d\udcda Education",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.unesco.org/en/digital-education/artificial-intelligence",
+      "tooltip": "UNESCO AI Education",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "EDUCATION"
+    },
+    {
+      "id": "s43_b51_MEDIA",
+      "label": "\ud83c\udfac Media & Entertainment",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.hollywoodreporter.com/business/business-news/ai-hollywood-everything-know-1235469857/",
+      "tooltip": "AI Hollywood",
+      "style": null,
+      "parent": "s43_b51_INDUSTRIES",
+      "original_id": "MEDIA"
+    },
+    {
+      "id": "s43_b51_HC",
+      "label": "HEALTHCARE AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "HC"
+    },
+    {
+      "id": "s43_b51_HC1",
+      "label": "Drug Discovery - AlphaFold",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://alphafold.ebi.ac.uk/",
+      "tooltip": "AlphaFold DB",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC1"
+    },
+    {
+      "id": "s43_b51_HC2",
+      "label": "Medical Imaging - Zebra",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.zebra-med.com/",
+      "tooltip": "Zebra Medical",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC2"
+    },
+    {
+      "id": "s43_b51_HC3",
+      "label": "Clinical NLP - nuance",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.nuance.com/healthcare.html",
+      "tooltip": "Nuance Healthcare",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC3"
+    },
+    {
+      "id": "s43_b51_HC4",
+      "label": "Diagnostics - PathAI",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.pathai.com/",
+      "tooltip": "PathAI",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC4"
+    },
+    {
+      "id": "s43_b51_HC5",
+      "label": "Genomics - Illumina",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.illumina.com/techniques/popular-applications/genotyping.html",
+      "tooltip": "Illumina Genomics",
+      "style": null,
+      "parent": "s43_b51_HC",
+      "original_id": "HC5"
+    },
+    {
+      "id": "s43_b51_FN",
+      "label": "FINANCE AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "FN"
+    },
+    {
+      "id": "s43_b51_FN1",
+      "label": "Fraud Detection",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://stripe.com/radar",
+      "tooltip": "Stripe Radar",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN1"
+    },
+    {
+      "id": "s43_b51_FN2",
+      "label": "Algorithmic Trading",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.jpmorgan.com/technology/artificial-intelligence",
+      "tooltip": "JPMorgan AI",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN2"
+    },
+    {
+      "id": "s43_b51_FN3",
+      "label": "Credit Scoring",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.fico.com/en/products/fico-score",
+      "tooltip": "FICO Score",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN3"
+    },
+    {
+      "id": "s43_b51_FN4",
+      "label": "Robo-Advisors",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.betterment.com/",
+      "tooltip": "Betterment",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN4"
+    },
+    {
+      "id": "s43_b51_FN5",
+      "label": "RegTech",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.chainalysis.com/",
+      "tooltip": "Chainalysis",
+      "style": null,
+      "parent": "s43_b51_FN",
+      "original_id": "FN5"
+    },
+    {
+      "id": "s43_b51_RT",
+      "label": "RETAIL AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RT"
+    },
+    {
+      "id": "s43_b51_RT1",
+      "label": "Personalization",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.dynamic-yield.com/",
+      "tooltip": "Dynamic Yield",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT1"
+    },
+    {
+      "id": "s43_b51_RT2",
+      "label": "Demand Forecasting",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.blue-yonder.com/",
+      "tooltip": "Blue Yonder",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT2"
+    },
+    {
+      "id": "s43_b51_RT3",
+      "label": "Visual Search",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.syte.ai/",
+      "tooltip": "Syte Visual AI",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT3"
+    },
+    {
+      "id": "s43_b51_RT4",
+      "label": "Inventory Optimization",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.llamasoft.com/",
+      "tooltip": "Llamasoft",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT4"
+    },
+    {
+      "id": "s43_b51_RT5",
+      "label": "Checkout-free Stores",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.amazon.com/b?ie=UTF8&node=16008589011",
+      "tooltip": "Amazon Go",
+      "style": null,
+      "parent": "s43_b51_RT",
+      "original_id": "RT5"
+    },
+    {
+      "id": "s43_b51_MF",
+      "label": "MANUFACTURING AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#455A64,stroke:#263238,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MF"
+    },
+    {
+      "id": "s43_b51_MF1",
+      "label": "Predictive Maintenance",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.uptake.com/",
+      "tooltip": "Uptake",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF1"
+    },
+    {
+      "id": "s43_b51_MF2",
+      "label": "Quality Control",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://landing.ai/",
+      "tooltip": "Landing AI",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF2"
+    },
+    {
+      "id": "s43_b51_MF3",
+      "label": "Supply Chain",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.o9solutions.com/",
+      "tooltip": "o9 Solutions",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF3"
+    },
+    {
+      "id": "s43_b51_MF4",
+      "label": "Digital Twins",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.siemens.com/global/en/products/digital-twin.html",
+      "tooltip": "Siemens Digital Twin",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF4"
+    },
+    {
+      "id": "s43_b51_MF5",
+      "label": "Cobots",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.universal-robots.com/",
+      "tooltip": "Universal Robots",
+      "style": null,
+      "parent": "s43_b51_MF",
+      "original_id": "MF5"
+    },
+    {
+      "id": "s43_b51_AG",
+      "label": "AGRICULTURE AI",
+      "type": "subgraph",
+      "section_id": 43,
+      "block_id": 51,
+      "url": null,
+      "tooltip": null,
+      "style": "fill:#558B2F,stroke:#33691E,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AG"
+    },
+    {
+      "id": "s43_b51_AG1",
+      "label": "Precision Farming",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.johndeere.com/en/technology-products/precision-ag-technology/",
+      "tooltip": "John Deere Precision",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG1"
+    },
+    {
+      "id": "s43_b51_AG2",
+      "label": "Crop Monitoring",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.planet.com/products/monitoring/",
+      "tooltip": "Planet Monitoring",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG2"
+    },
+    {
+      "id": "s43_b51_AG3",
+      "label": "Yield Prediction",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.climate.com/",
+      "tooltip": "Climate Corp",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG3"
+    },
+    {
+      "id": "s43_b51_AG4",
+      "label": "Autonomous Tractors",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.deere.com/en/autonomous/",
+      "tooltip": "Deere Autonomous",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG4"
+    },
+    {
+      "id": "s43_b51_AG5",
+      "label": "Livestock Monitoring",
+      "type": "node",
+      "section_id": 43,
+      "block_id": 51,
+      "url": "https://www.cainthus.com/",
+      "tooltip": "Cainthus",
+      "style": null,
+      "parent": "s43_b51_AG",
+      "original_id": "AG5"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s43_b51_HEALTH",
+      "target": "s43_b51_HC",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FINANCE",
+      "target": "s43_b51_FN",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RETAIL",
+      "target": "s43_b51_RT",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MANUFACT",
+      "target": "s43_b51_MF",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AGRI",
+      "target": "s43_b51_AG",
+      "type": "regular",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_HEALTH",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_FINANCE",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_RETAIL",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_MANUFACT",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_AGRI",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_ENERGY",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_TRANSPORT",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_LEGAL",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_EDUCATION",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_INDUSTRIES",
+      "target": "s43_b51_MEDIA",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_HC",
+      "target": "s43_b51_HC5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_FN",
+      "target": "s43_b51_FN5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_RT",
+      "target": "s43_b51_RT5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_MF",
+      "target": "s43_b51_MF5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG1",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG2",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG3",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG4",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    },
+    {
+      "source": "s43_b51_AG",
+      "target": "s43_b51_AG5",
+      "type": "contains",
+      "section_id": 43,
+      "block_id": 51
+    }
+  ]
+}

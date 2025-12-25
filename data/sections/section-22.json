@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "id": 22,
+    "title": "Key AI Companies & Models",
+    "description": "OpenAI, Anthropic, Google, Meta",
+    "slug": "key-ai-companies-models",
+    "totalNodes": 28,
+    "totalEdges": 12
+  },
+  "sections": [
+    {
+      "id": 22,
+      "title": "Key AI Companies & Models",
+      "slug": "22-key-ai-companies--models",
+      "description": "OpenAI, Anthropic, Google, Meta",
+      "line": 1407
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s22_b23_OpenAI",
+      "label": "OPENAI",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://openai.com/",
+      "tooltip": "OpenAI",
+      "style": "fill:#10A37F,stroke:#0D8C6D,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OpenAI"
+    },
+    {
+      "id": "s22_b23_OA1",
+      "label": "GPT-4o / o1",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://platform.openai.com/docs/models",
+      "tooltip": "OpenAI Models",
+      "style": null,
+      "parent": "s22_b23_OpenAI",
+      "original_id": "OA1"
+    },
+    {
+      "id": "s22_b23_OA2",
+      "label": "DALL-E 3",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://openai.com/dall-e-3",
+      "tooltip": "DALL-E 3",
+      "style": null,
+      "parent": "s22_b23_OpenAI",
+      "original_id": "OA2"
+    },
+    {
+      "id": "s22_b23_OA3",
+      "label": "Whisper / Sora",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://openai.com/sora",
+      "tooltip": "Sora",
+      "style": null,
+      "parent": "s22_b23_OpenAI",
+      "original_id": "OA3"
+    },
+    {
+      "id": "s22_b23_Anthropic",
+      "label": "ANTHROPIC",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://www.anthropic.com/",
+      "tooltip": "Anthropic",
+      "style": "fill:#D4A574,stroke:#C4956A,color:#000000",
+      "parent": null,
+      "original_id": "Anthropic"
+    },
+    {
+      "id": "s22_b23_AN1",
+      "label": "Claude 3.5 Sonnet",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://docs.anthropic.com/",
+      "tooltip": "Claude Docs",
+      "style": null,
+      "parent": "s22_b23_Anthropic",
+      "original_id": "AN1"
+    },
+    {
+      "id": "s22_b23_AN2",
+      "label": "Claude Opus",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://www.anthropic.com/claude",
+      "tooltip": "Claude",
+      "style": null,
+      "parent": "s22_b23_Anthropic",
+      "original_id": "AN2"
+    },
+    {
+      "id": "s22_b23_Google",
+      "label": "GOOGLE",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://ai.google/",
+      "tooltip": "Google AI",
+      "style": "fill:#4285F4,stroke:#3367D6,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Google"
+    },
+    {
+      "id": "s22_b23_GO1",
+      "label": "Gemini 2.0",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://deepmind.google/technologies/gemini/",
+      "tooltip": "Gemini",
+      "style": null,
+      "parent": "s22_b23_Google",
+      "original_id": "GO1"
+    },
+    {
+      "id": "s22_b23_GO2",
+      "label": "Gemma 2",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://ai.google.dev/gemma",
+      "tooltip": "Gemma",
+      "style": null,
+      "parent": "s22_b23_Google",
+      "original_id": "GO2"
+    },
+    {
+      "id": "s22_b23_Meta",
+      "label": "META",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://ai.meta.com/",
+      "tooltip": "Meta AI",
+      "style": "fill:#0668E1,stroke:#0553B8,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Meta"
+    },
+    {
+      "id": "s22_b23_ME1",
+      "label": "Llama 3.2 / 3.3",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://llama.meta.com/",
+      "tooltip": "Llama",
+      "style": null,
+      "parent": "s22_b23_Meta",
+      "original_id": "ME1"
+    },
+    {
+      "id": "s22_b23_ME2",
+      "label": "SAM 2",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://segment-anything.com/",
+      "tooltip": "SAM 2",
+      "style": null,
+      "parent": "s22_b23_Meta",
+      "original_id": "ME2"
+    },
+    {
+      "id": "s22_b23_Mistral",
+      "label": "MISTRAL",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://mistral.ai/",
+      "tooltip": "Mistral AI",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Mistral"
+    },
+    {
+      "id": "s22_b23_MI1",
+      "label": "Mistral Large",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://mistral.ai/",
+      "tooltip": "Mistral AI",
+      "style": null,
+      "parent": "s22_b23_Mistral",
+      "original_id": "MI1"
+    },
+    {
+      "id": "s22_b23_MI2",
+      "label": "Mixtral 8x22B",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://mistral.ai/news/mixtral-of-experts/",
+      "tooltip": "Mixtral",
+      "style": null,
+      "parent": "s22_b23_Mistral",
+      "original_id": "MI2"
+    },
+    {
+      "id": "s22_b23_xAI",
+      "label": "xAI",
+      "type": "subgraph",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://x.ai/",
+      "tooltip": "xAI",
+      "style": "fill:#1DA1F2,stroke:#1991DB,color:#FFFFFF",
+      "parent": null,
+      "original_id": "xAI"
+    },
+    {
+      "id": "s22_b23_XA1",
+      "label": "Grok 2",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 23,
+      "url": "https://x.ai/",
+      "tooltip": "xAI",
+      "style": null,
+      "parent": "s22_b23_xAI",
+      "original_id": "XA1"
+    },
+    {
+      "id": "s22_b65_Command_R",
+      "label": "Command-R",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 65,
+      "url": "https://cohere.com/command",
+      "tooltip": "Cohere enterprise LLM",
+      "style": null,
+      "parent": null,
+      "original_id": "Command-R"
+    },
+    {
+      "id": "s22_b66_Midjourney",
+      "label": "Midjourney",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 66,
+      "url": "https://www.midjourney.com/",
+      "tooltip": "AI image generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Midjourney"
+    },
+    {
+      "id": "s22_b67_Flux",
+      "label": "Flux",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 67,
+      "url": "https://blackforestlabs.ai/",
+      "tooltip": "Black Forest Labs image model",
+      "style": null,
+      "parent": null,
+      "original_id": "Flux"
+    },
+    {
+      "id": "s22_b68_Adobe_Fire",
+      "label": "Adobe Firefly",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 68,
+      "url": "https://www.adobe.com/products/firefly.html",
+      "tooltip": "Adobe generative AI",
+      "style": null,
+      "parent": null,
+      "original_id": "Adobe_Firefly"
+    },
+    {
+      "id": "s22_b69_Runway",
+      "label": "Runway",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 69,
+      "url": "https://runwayml.com/",
+      "tooltip": "AI video generation platform",
+      "style": null,
+      "parent": null,
+      "original_id": "Runway"
+    },
+    {
+      "id": "s22_b70_Pika",
+      "label": "Pika",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 70,
+      "url": "https://pika.art/",
+      "tooltip": "AI video generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Pika"
+    },
+    {
+      "id": "s22_b71_Kling",
+      "label": "Kling",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 71,
+      "url": "https://kling.kuaishou.com/",
+      "tooltip": "Kuaishou video AI",
+      "style": null,
+      "parent": null,
+      "original_id": "Kling"
+    },
+    {
+      "id": "s22_b72_Luma_Dream",
+      "label": "Luma Dream Machine",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 72,
+      "url": "https://lumalabs.ai/dream-machine",
+      "tooltip": "AI video generation",
+      "style": null,
+      "parent": null,
+      "original_id": "Luma_Dream_Machine"
+    },
+    {
+      "id": "s22_b73_ElevenLabs",
+      "label": "ElevenLabs",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 73,
+      "url": "https://elevenlabs.io/",
+      "tooltip": "AI voice synthesis",
+      "style": null,
+      "parent": null,
+      "original_id": "ElevenLabs"
+    },
+    {
+      "id": "s22_b74_MusicLM",
+      "label": "MusicLM",
+      "type": "node",
+      "section_id": 22,
+      "block_id": 74,
+      "url": "https://google-research.github.io/seanet/musiclm/examples/",
+      "tooltip": "Google music generation",
+      "style": null,
+      "parent": null,
+      "original_id": "MusicLM"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s22_b23_OpenAI",
+      "target": "s22_b23_OA1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_OpenAI",
+      "target": "s22_b23_OA2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_OpenAI",
+      "target": "s22_b23_OA3",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Anthropic",
+      "target": "s22_b23_AN1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Anthropic",
+      "target": "s22_b23_AN2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Google",
+      "target": "s22_b23_GO1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Google",
+      "target": "s22_b23_GO2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Meta",
+      "target": "s22_b23_ME1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Meta",
+      "target": "s22_b23_ME2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Mistral",
+      "target": "s22_b23_MI1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_Mistral",
+      "target": "s22_b23_MI2",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    },
+    {
+      "source": "s22_b23_xAI",
+      "target": "s22_b23_XA1",
+      "type": "contains",
+      "section_id": 22,
+      "block_id": 23
+    }
+  ]
+}

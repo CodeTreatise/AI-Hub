@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6: Production & Polish | GenAI Course</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f0f1a;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        .module-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .module-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Sections */
+        .section {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #30363d;
+        }
+        
+        .section h2 {
+            color: #e0e0e0;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h3 {
+            color: #c9d1d9;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+        }
+        
+        .section ul, .section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Objectives */
+        .objectives ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .objectives li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .objectives li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 4px solid #58a6ff;
+        }
+        
+        /* Code blocks */
+        pre {
+            background: #0d1117;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid #30363d;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+        }
+        
+        :not(pre) > code {
+            background: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+        }
+        
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .callout-tip {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .callout-info {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+        }
+        
+        /* Quiz */
+        .quiz-question {
+            background: #161b22;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .quiz-question p {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quiz-options li {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            background: #0d1117;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .quiz-options li:hover {
+            border-color: #58a6ff;
+        }
+        
+        /* References */
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .references li {
+            padding: 0.75rem;
+            background: #161b22;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+        
+        .references a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .references a:hover {
+            text-decoration: underline;
+        }
+
+        /* Top nav (unified routing) */
+        .top-nav {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .top-nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.5rem 0.9rem;
+            background: #161b22;
+            border-radius: 999px;
+            border: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        .top-nav a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .nav-links a:hover {
+            background: #1a1a2e;
+            border-color: #58a6ff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .section { padding: 1.5rem; }
+            .module-meta { flex-wrap: wrap; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../../index.html" target="_top">🏠 Hub</a>
+            <a href="../../../pages/study.html" target="_top">📖 Study Mode</a>
+            <a href="../index.html" target="_top">📚 Course Home</a>
+        </nav>
+        <header class="module-header">
+            <h1>Module 6: Production & Polish</h1>
+            <p>Take your RAG app from prototype to production</p>
+            <div class="module-meta">
+                <span>⏱️ ~90 minutes</span>
+                <span>📊 Advanced</span>
+                <span>📚 Module 6</span>
+            </div>
+        </header>
+        
+        
+        <section class="section objectives">
+            <h2>🎯 What You'll Learn</h2>
+            
+        <ul>
+            <li>Add streaming responses for better user experience</li>
+            <li>Implement error handling and fallbacks</li>
+            <li>Set up logging and monitoring</li>
+            <li>Optimize performance and costs</li>
+            <li>Deploy your RAG application</li>
+        </ul>
+    
+        </section>
+    
+        <section class="section prerequisites">
+            <h2>📋 Prerequisites</h2>
+            
+        <p>Before starting this module, you should have:</p>
+        <ul>
+            <li>Completed Module 5: Working RAG pipeline</li>
+            <li>Basic understanding of deployment concepts</li>
+        </ul>
+        <div class="callout callout-info">
+            <strong>Final Module!</strong> This takes your RAG app from "works on my machine" to production-ready.
+        </div>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🌊 Streaming Responses</h2>
+            
+        <h3>Why Streaming Matters</h3>
+        <p>Without streaming, users stare at a blank screen for 5-10 seconds. With streaming, they see the response build in real-time - much better UX!</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+            <div style="background: #21262d; padding: 1rem; border-radius: 8px; border: 1px solid #f87171;">
+                <strong style="color: #f87171;">❌ Without Streaming</strong>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">User clicks → Waits 8 seconds → Full response appears</p>
+            </div>
+            <div style="background: #21262d; padding: 1rem; border-radius: 8px; border: 1px solid #3fb950;">
+                <strong style="color: #3fb950;">✅ With Streaming</strong>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">User clicks → Words appear immediately → Builds naturally</p>
+            </div>
+        </div>
+        
+        <h3>Implementing Streaming</h3>
+        <pre><code>// src/rag-stream.ts
+import OpenAI from 'openai';
+
+export async function* askRAGStream(
+    question: string,
+    context: string
+): AsyncGenerator&lt;string&gt; {
+    const openai = new OpenAI();
+    
+    const stream = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [
+            { 
+                role: 'system', 
+                content: \`Answer based on the context:\n\n\${context}\` 
+            },
+            { role: 'user', content: question }
+        ],
+        stream: true  // Enable streaming!
+    });
+    
+    for await (const chunk of stream) {
+        const content = chunk.choices[0]?.delta?.content;
+        if (content) {
+            yield content;
+        }
+    }
+}</code></pre>
+        
+        <h3>Streaming API Endpoint</h3>
+        <pre><code>// src/routes/chat.ts
+import { Router } from 'express';
+import { askRAGStream } from '../rag-stream.js';
+import { searchDocuments } from '../search.js';
+
+router.post('/stream', async (req, res) => {
+    const { message } = req.body;
+    
+    // Set headers for Server-Sent Events (SSE)
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+    
+    try {
+        // Get context first
+        const sources = await searchDocuments(message);
+        const context = sources.map(s => s.content).join('\n\n');
+        
+        // Stream the response
+        for await (const chunk of askRAGStream(message, context)) {
+            res.write(\`data: \${JSON.stringify({ text: chunk })}\n\n\`);
+        }
+        
+        // Send sources at the end
+        res.write(\`data: \${JSON.stringify({ sources, done: true })}\n\n\`);
+        res.end();
+    } catch (error) {
+        res.write(\`data: \${JSON.stringify({ error: 'Stream failed' })}\n\n\`);
+        res.end();
+    }
+});</code></pre>
+        
+        <h3>Frontend: Consuming the Stream</h3>
+        <pre><code>// Frontend JavaScript
+async function askQuestion(question) {
+    const responseDiv = document.getElementById('response');
+    responseDiv.textContent = '';
+    
+    const response = await fetch('/api/chat/stream', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: question })
+    });
+    
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    
+    while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        
+        const text = decoder.decode(value);
+        const lines = text.split('\n').filter(line => line.startsWith('data: '));
+        
+        for (const line of lines) {
+            const data = JSON.parse(line.slice(6));
+            if (data.text) {
+                responseDiv.textContent += data.text;
+            }
+            if (data.sources) {
+                showSources(data.sources);
+            }
+        }
+    }
+}</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🛡️ Error Handling & Resilience</h2>
+            
+        <h3>Robust Error Handling</h3>
+        <p>Production apps need graceful failure handling:</p>
+        
+        <pre><code>// src/rag-safe.ts
+import OpenAI from 'openai';
+
+const openai = new OpenAI();
+
+interface RAGResult {
+    success: boolean;
+    answer?: string;
+    error?: string;
+    fallback?: boolean;
+}
+
+export async function askRAGSafe(question: string): Promise&lt;RAGResult&gt; {
+    try {
+        // Try to get context
+        let context = '';
+        try {
+            const sources = await searchDocuments(question);
+            context = sources.map(s => s.content).join('\n\n');
+        } catch (dbError) {
+            console.error('Database error:', dbError);
+            // Continue without context - will use LLM knowledge
+        }
+        
+        // Generate response with retry
+        const response = await retryWithBackoff(async () => {
+            return openai.chat.completions.create({
+                model: 'gpt-4o-mini',
+                messages: [
+                    { 
+                        role: 'system', 
+                        content: context 
+                            ? \`Answer based on: \${context}\`
+                            : 'You are a helpful assistant.'
+                    },
+                    { role: 'user', content: question }
+                ],
+                timeout: 30000  // 30 second timeout
+            });
+        }, 3);  // Retry up to 3 times
+        
+        return {
+            success: true,
+            answer: response.choices[0].message.content,
+            fallback: !context  // Flag if we had to use fallback
+        };
+        
+    } catch (error) {
+        console.error('RAG failed:', error);
+        
+        // Return user-friendly error
+        return {
+            success: false,
+            error: 'I\'m having trouble answering right now. Please try again.'
+        };
+    }
+}
+
+// Retry helper with exponential backoff
+async function retryWithBackoff&lt;T&gt;(
+    fn: () => Promise&lt;T&gt;,
+    maxRetries: number,
+    baseDelay: number = 1000
+): Promise&lt;T&gt; {
+    let lastError: Error;
+    
+    for (let i = 0; i &lt; maxRetries; i++) {
+        try {
+            return await fn();
+        } catch (error) {
+            lastError = error as Error;
+            
+            // Don't retry on certain errors
+            if (error.status === 401 || error.status === 403) {
+                throw error;  // Auth errors won't fix with retry
+            }
+            
+            // Wait before retry (exponential backoff)
+            const delay = baseDelay * Math.pow(2, i);
+            console.log(\`Retry \${i + 1}/\${maxRetries} after \${delay}ms\`);
+            await new Promise(r => setTimeout(r, delay));
+        }
+    }
+    
+    throw lastError!;
+}</code></pre>
+        
+        <h3>Rate Limiting</h3>
+        <pre><code>// src/middleware/rateLimit.ts
+import rateLimit from 'express-rate-limit';
+
+export const chatLimiter = rateLimit({
+    windowMs: 60 * 1000,  // 1 minute
+    max: 20,              // 20 requests per minute
+    message: { 
+        error: 'Too many requests. Please wait a moment.' 
+    },
+    standardHeaders: true,
+    legacyHeaders: false
+});
+
+// Apply to routes
+app.use('/api/chat', chatLimiter);</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>📊 Logging & Monitoring</h2>
+            
+        <h3>Structured Logging</h3>
+        <p>Good logs are essential for debugging production issues:</p>
+        
+        <pre><code>// src/logger.ts
+import winston from 'winston';
+
+export const logger = winston.createLogger({
+    level: process.env.LOG_LEVEL || 'info',
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.json()
+    ),
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({ filename: 'logs/app.log' })
+    ]
+});
+
+// Log every RAG request
+export function logRAGRequest(data: {
+    question: string;
+    chunksFound: number;
+    tokensUsed: number;
+    responseTime: number;
+    success: boolean;
+}) {
+    logger.info('RAG Request', {
+        type: 'rag_request',
+        ...data
+    });
+}</code></pre>
+        
+        <h3>Request Tracking</h3>
+        <pre><code>// src/middleware/requestLogger.ts
+import { v4 as uuidv4 } from 'uuid';
+import { logger } from '../logger.js';
+
+export function requestLogger(req, res, next) {
+    const requestId = uuidv4();
+    const startTime = Date.now();
+    
+    // Attach to request for use in handlers
+    req.requestId = requestId;
+    
+    // Log when response finishes
+    res.on('finish', () => {
+        logger.info('HTTP Request', {
+            requestId,
+            method: req.method,
+            path: req.path,
+            statusCode: res.statusCode,
+            duration: Date.now() - startTime,
+            userAgent: req.get('user-agent')
+        });
+    });
+    
+    next();
+}</code></pre>
+        
+        <h3>Metrics to Track</h3>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Metric</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Why It Matters</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Response Time</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">User experience, SLA compliance</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Token Usage</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Cost control</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Chunks Retrieved</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Search quality indicator</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Error Rate</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">System health</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">No-Result Queries</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Content gaps in your knowledge base</td>
+            </tr>
+        </table>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>💰 Cost Optimization</h2>
+            
+        <h3>Understanding Costs</h3>
+        <p>AI API costs can surprise you. Here's how to keep them under control:</p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Component</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Cost Driver</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Optimization</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Embeddings</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">$0.02/1M tokens</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Cache query embeddings</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">GPT-4o-mini</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">$0.15/1M input tokens</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Limit context size</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">GPT-4o</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">$2.50/1M input tokens</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Use only when needed</td>
+            </tr>
+        </table>
+        
+        <h3>Caching Strategies</h3>
+        <pre><code>// src/cache.ts
+import NodeCache from 'node-cache';
+
+// Cache embeddings for 1 hour
+const embeddingCache = new NodeCache({ stdTTL: 3600 });
+
+export async function getCachedEmbedding(text: string): Promise&lt;number[]&gt; {
+    const cacheKey = \`emb:\${hashString(text)}\`;
+    
+    // Check cache first
+    const cached = embeddingCache.get&lt;number[]&gt;(cacheKey);
+    if (cached) {
+        return cached;
+    }
+    
+    // Generate and cache
+    const embedding = await generateEmbedding(text);
+    embeddingCache.set(cacheKey, embedding);
+    
+    return embedding;
+}
+
+// Cache frequent Q&A responses
+const responseCache = new NodeCache({ stdTTL: 1800 }); // 30 min
+
+export async function getCachedResponse(question: string): Promise&lt;string | null&gt; {
+    const normalized = question.toLowerCase().trim();
+    const cacheKey = \`resp:\${hashString(normalized)}\`;
+    
+    return responseCache.get(cacheKey) || null;
+}</code></pre>
+        
+        <h3>Model Selection Strategy</h3>
+        <pre><code>// Use cheaper model for simple questions
+function selectModel(question: string, context: string): string {
+    const totalTokens = estimateTokens(question + context);
+    
+    // Simple questions with limited context → cheap model
+    if (totalTokens &lt; 500 && !needsReasoning(question)) {
+        return 'gpt-4o-mini';
+    }
+    
+    // Complex questions or lots of context → better model
+    return 'gpt-4o';
+}
+
+function needsReasoning(question: string): boolean {
+    const reasoningKeywords = [
+        'compare', 'analyze', 'explain why', 'difference between',
+        'pros and cons', 'best approach', 'recommend'
+    ];
+    return reasoningKeywords.some(kw => 
+        question.toLowerCase().includes(kw)
+    );
+}</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🚀 Deployment</h2>
+            
+        <h3>Deployment Options</h3>
+        
+        <h4>Option 1: Docker Deployment</h4>
+        <pre><code># Dockerfile
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY dist/ ./dist/
+
+ENV NODE_ENV=production
+EXPOSE 3000
+
+CMD ["node", "dist/index.js"]</code></pre>
+        
+        <pre><code># docker-compose.yml
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://user:pass@db:5432/rag
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - db
+  
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: rag
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:</code></pre>
+        
+        <h4>Option 2: Cloud Platforms</h4>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tr style="background: #161b22;">
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Platform</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Best For</th>
+                <th style="padding: 0.75rem; text-align: left; border-bottom: 1px solid #30363d;">Managed DB Option</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Railway</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Quick deploys, free tier</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">PostgreSQL included</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Render</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Auto-scaling, simple</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">PostgreSQL included</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Fly.io</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Edge deployment</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Postgres + pgvector</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">AWS/GCP/Azure</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">Enterprise, full control</td>
+                <td style="padding: 0.75rem; border-bottom: 1px solid #30363d;">RDS/Cloud SQL</td>
+            </tr>
+        </table>
+        
+        <h3>Environment Variables</h3>
+        <pre><code># .env.production
+NODE_ENV=production
+PORT=3000
+
+# Database
+DATABASE_URL=postgresql://user:pass@host:5432/rag?sslmode=require
+
+# OpenAI
+OPENAI_API_KEY=sk-...
+
+# Security
+API_KEY_REQUIRED=true
+ALLOWED_ORIGINS=https://yourdomain.com
+
+# Limits
+MAX_TOKENS=1000
+RATE_LIMIT_PER_MINUTE=20</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>🔒 Security Considerations</h2>
+            
+        <h3>Security Checklist</h3>
+        
+        <div class="callout callout-warning">
+            <strong>⚠️ Before Going Live:</strong>
+            <ul style="margin: 0.5rem 0 0 0;">
+                <li>Never expose your OpenAI API key to the frontend</li>
+                <li>Always validate and sanitize user input</li>
+                <li>Implement rate limiting</li>
+                <li>Use HTTPS in production</li>
+                <li>Set up proper CORS policies</li>
+            </ul>
+        </div>
+        
+        <h3>Input Validation</h3>
+        <pre><code>// src/middleware/validation.ts
+import { z } from 'zod';
+
+const chatSchema = z.object({
+    message: z.string()
+        .min(1, 'Message required')
+        .max(2000, 'Message too long')
+        .transform(s => s.trim()),
+    conversationId: z.string().uuid().optional()
+});
+
+export function validateChat(req, res, next) {
+    const result = chatSchema.safeParse(req.body);
+    
+    if (!result.success) {
+        return res.status(400).json({
+            error: 'Invalid request',
+            details: result.error.issues
+        });
+    }
+    
+    req.body = result.data;
+    next();
+}</code></pre>
+        
+        <h3>Prompt Injection Prevention</h3>
+        <pre><code>// Basic prompt injection detection
+function detectPromptInjection(input: string): boolean {
+    const suspiciousPatterns = [
+        /ignore (previous|above|all) instructions/i,
+        /disregard (your|the) (rules|instructions)/i,
+        /you are now/i,
+        /new instruction/i,
+        /system prompt/i
+    ];
+    
+    return suspiciousPatterns.some(p => p.test(input));
+}
+
+// Use in your RAG handler
+if (detectPromptInjection(question)) {
+    logger.warn('Potential prompt injection', { question });
+    return { error: 'Invalid question format' };
+}</code></pre>
+    
+        </section>
+    
+        <section class="section content">
+            <h2>📋 Production Checklist</h2>
+            
+        <h3>Production Readiness Checklist</h3>
+        
+        <div style="background: #161b22; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+            <h4 style="margin-top: 0;">✅ Core Functionality</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li>☑️ RAG pipeline working end-to-end</li>
+                <li>☑️ Streaming responses implemented</li>
+                <li>☑️ Conversation memory working</li>
+                <li>☑️ Source citations included</li>
+            </ul>
+            
+            <h4>✅ Reliability</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li>☑️ Error handling with retries</li>
+                <li>☑️ Graceful degradation</li>
+                <li>☑️ Rate limiting configured</li>
+                <li>☑️ Timeouts set</li>
+            </ul>
+            
+            <h4>✅ Observability</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li>☑️ Structured logging</li>
+                <li>☑️ Request tracking</li>
+                <li>☑️ Error alerting</li>
+                <li>☑️ Cost monitoring</li>
+            </ul>
+            
+            <h4>✅ Security</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li>☑️ API keys secured</li>
+                <li>☑️ Input validation</li>
+                <li>☑️ CORS configured</li>
+                <li>☑️ HTTPS enabled</li>
+            </ul>
+        </div>
+        
+        <div class="callout callout-tip">
+            <strong>🎉 Congratulations!</strong> You've completed the GenAI RAG Developer Course! You now have the knowledge to build, deploy, and maintain production-ready RAG applications.
+        </div>
+    
+        </section>
+    
+        <section class="section quiz">
+            <h2>✅ Final Assessment</h2>
+            
+        <div class="quiz-question">
+            <p>1. Why is streaming important for RAG applications?</p>
+            <ul class="quiz-options">
+                <li>A) It reduces API costs</li>
+                <li>B) It improves perceived response time for users</li>
+                <li>C) It increases accuracy</li>
+                <li>D) It uses less memory</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>2. What should you do when the database is temporarily unavailable?</p>
+            <ul class="quiz-options">
+                <li>A) Return an error immediately</li>
+                <li>B) Crash the server</li>
+                <li>C) Retry with backoff, then gracefully degrade</li>
+                <li>D) Wait indefinitely</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>3. Which is the most cost-effective strategy for embeddings?</p>
+            <ul class="quiz-options">
+                <li>A) Generate fresh embeddings for every request</li>
+                <li>B) Cache embeddings for frequently asked questions</li>
+                <li>C) Use the largest embedding model available</li>
+                <li>D) Skip embeddings entirely</li>
+            </ul>
+        </div>
+        
+        <div class="quiz-question">
+            <p>4. What is prompt injection?</p>
+            <ul class="quiz-options">
+                <li>A) A way to make prompts faster</li>
+                <li>B) An attack where users try to override system instructions</li>
+                <li>C) A method to improve response quality</li>
+                <li>D) A caching strategy</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 1rem; color: #8b949e;"><em>Answers: 1-B, 2-C, 3-B, 4-B</em></p>
+    
+        </section>
+    
+        <section class="section references">
+            <h2>📚 Sources & Further Reading</h2>
+            
+        <ul>
+            <li>
+                <a href="https://platform.openai.com/docs/api-reference/streaming" target="_blank">
+                    OpenAI Streaming Guide
+                </a>
+                <span style="color: #8b949e;"> - Official streaming documentation</span>
+            </li>
+            <li>
+                <a href="https://www.docker.com/get-started/" target="_blank">
+                    Docker Getting Started
+                </a>
+                <span style="color: #8b949e;"> - Container deployment basics</span>
+            </li>
+            <li>
+                <a href="https://owasp.org/www-project-top-ten/" target="_blank">
+                    OWASP Top 10
+                </a>
+                <span style="color: #8b949e;"> - Web security best practices</span>
+            </li>
+            <li>
+                <a href="https://railway.app/docs" target="_blank">
+                    Railway Documentation
+                </a>
+                <span style="color: #8b949e;"> - Easy cloud deployment</span>
+            </li>
+            <li>
+                <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/LLM_AI_Security_Cheat_Sheet.md" target="_blank">
+                    OWASP LLM Security
+                </a>
+                <span style="color: #8b949e;"> - AI-specific security guidance</span>
+            </li>
+        </ul>
+    
+        </section>
+    
+        
+        <nav class="nav-links">
+            <a href="../module-5-rag/index.html">← Previous: RAG Pipeline</a>
+            <a href="../module-7-advanced/index.html">Next: Advanced RAG Techniques →</a>
+        </nav>
+    </div>
+</body>
+</html>

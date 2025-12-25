@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "id": 12,
+    "title": "AI Ethics & Safety",
+    "description": "Bias, Privacy, Alignment",
+    "slug": "ai-ethics-safety",
+    "totalNodes": 13,
+    "totalEdges": 12
+  },
+  "sections": [
+    {
+      "id": 12,
+      "title": "AI Ethics & Safety",
+      "slug": "12-ai-ethics--safety",
+      "description": "Bias, Privacy, Alignment",
+      "line": 700
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s12_b12_ETHICS",
+      "label": "AI ETHICS & SAFETY",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://www.anthropic.com/research",
+      "tooltip": "Anthropic Safety Research",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ETHICS"
+    },
+    {
+      "id": "s12_b12_BIAS",
+      "label": "Bias/Fairness",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://developers.google.com/machine-learning/crash-course/fairness",
+      "tooltip": "Bias & Fairness",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "BIAS"
+    },
+    {
+      "id": "s12_b12_PRIV",
+      "label": "Privacy",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://privacytools.io/",
+      "tooltip": "Privacy Tools",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PRIV"
+    },
+    {
+      "id": "s12_b12_TRANS",
+      "label": "Transparency",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://christophm.github.io/interpretable-ml-book/",
+      "tooltip": "Interpretable ML Book",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TRANS"
+    },
+    {
+      "id": "s12_b12_SAFE",
+      "label": "Safety",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://www.safe.ai/",
+      "tooltip": "AI Safety",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "SAFE"
+    },
+    {
+      "id": "s12_b12_B1",
+      "label": "Data Bias",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://developers.google.com/machine-learning/crash-course/fairness",
+      "tooltip": "Google ML Fairness",
+      "style": null,
+      "parent": null,
+      "original_id": "B1"
+    },
+    {
+      "id": "s12_b12_B2",
+      "label": "Algo Bias",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://fairlearn.org/",
+      "tooltip": "Fairlearn Library",
+      "style": null,
+      "parent": null,
+      "original_id": "B2"
+    },
+    {
+      "id": "s12_b12_P1",
+      "label": "Federated Learning",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://flower.ai/",
+      "tooltip": "Flower Federated Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "P1"
+    },
+    {
+      "id": "s12_b12_P2",
+      "label": "Anonymization",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://microsoft.github.io/presidio/",
+      "tooltip": "Microsoft Presidio",
+      "style": null,
+      "parent": null,
+      "original_id": "P2"
+    },
+    {
+      "id": "s12_b12_TR1",
+      "label": "Explainable AI",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://interpret.ml/",
+      "tooltip": "InterpretML",
+      "style": null,
+      "parent": null,
+      "original_id": "TR1"
+    },
+    {
+      "id": "s12_b12_TR2",
+      "label": "Interpretability",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://captum.ai/",
+      "tooltip": "Captum (PyTorch)",
+      "style": null,
+      "parent": null,
+      "original_id": "TR2"
+    },
+    {
+      "id": "s12_b12_S1",
+      "label": "Alignment",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://aligned.ai/",
+      "tooltip": "Alignment Research",
+      "style": null,
+      "parent": null,
+      "original_id": "S1"
+    },
+    {
+      "id": "s12_b12_S2",
+      "label": "Red Teaming",
+      "type": "node",
+      "section_id": 12,
+      "block_id": 12,
+      "url": "https://atlas.mitre.org/",
+      "tooltip": "MITRE ATLAS",
+      "style": null,
+      "parent": null,
+      "original_id": "S2"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_BIAS",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_PRIV",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_TRANS",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_ETHICS",
+      "target": "s12_b12_SAFE",
+      "type": "thick",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_BIAS",
+      "target": "s12_b12_B1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_BIAS",
+      "target": "s12_b12_B2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_PRIV",
+      "target": "s12_b12_P1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_PRIV",
+      "target": "s12_b12_P2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_TRANS",
+      "target": "s12_b12_TR1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_TRANS",
+      "target": "s12_b12_TR2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_SAFE",
+      "target": "s12_b12_S1",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    },
+    {
+      "source": "s12_b12_SAFE",
+      "target": "s12_b12_S2",
+      "type": "regular",
+      "section_id": 12,
+      "block_id": 12
+    }
+  ]
+}

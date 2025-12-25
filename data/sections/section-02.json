@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "id": 2,
+    "title": "AI Domain Hierarchy",
+    "description": "AI \u2192 ML \u2192 DL \u2192 GenAI tree",
+    "slug": "ai-domain-hierarchy",
+    "totalNodes": 15,
+    "totalEdges": 16
+  },
+  "sections": [
+    {
+      "id": 2,
+      "title": "AI Domain Hierarchy",
+      "slug": "2-ai-domain-hierarchy",
+      "description": "AI \u2192 ML \u2192 DL \u2192 GenAI tree",
+      "line": 153
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s2_b2_AI",
+      "label": "Artificial Intelligence",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "tooltip": "Learn about AI",
+      "style": "fill:#1565C0,stroke:#0D47A1,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AI"
+    },
+    {
+      "id": "s2_b2_ML",
+      "label": "Machine Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://scikit-learn.org/stable/",
+      "tooltip": "Scikit-learn Docs",
+      "style": "fill:#2E7D32,stroke:#1B5E20,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "ML"
+    },
+    {
+      "id": "s2_b2_ES",
+      "label": "Expert Systems",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://en.wikipedia.org/wiki/Expert_system",
+      "tooltip": "Expert Systems",
+      "style": null,
+      "parent": null,
+      "original_id": "ES"
+    },
+    {
+      "id": "s2_b2_RO",
+      "label": "Robotics",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://www.ros.org/",
+      "tooltip": "ROS Robotics",
+      "style": null,
+      "parent": null,
+      "original_id": "RO"
+    },
+    {
+      "id": "s2_b2_SL",
+      "label": "Supervised Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "tooltip": "Supervised Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "SL"
+    },
+    {
+      "id": "s2_b2_UL",
+      "label": "Unsupervised Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://scikit-learn.org/stable/unsupervised_learning.html",
+      "tooltip": "Unsupervised Learning",
+      "style": null,
+      "parent": null,
+      "original_id": "UL"
+    },
+    {
+      "id": "s2_b2_RL",
+      "label": "Reinforcement Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://spinningup.openai.com/",
+      "tooltip": "OpenAI Spinning Up RL",
+      "style": null,
+      "parent": null,
+      "original_id": "RL"
+    },
+    {
+      "id": "s2_b2_DL",
+      "label": "Deep Learning",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://pytorch.org/tutorials/",
+      "tooltip": "PyTorch Tutorials",
+      "style": "fill:#7B1FA2,stroke:#4A148C,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s2_b2_CNN",
+      "label": "CNNs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://cs231n.stanford.edu/",
+      "tooltip": "Stanford CS231n - CNNs",
+      "style": null,
+      "parent": null,
+      "original_id": "CNN"
+    },
+    {
+      "id": "s2_b2_RNN",
+      "label": "RNNs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "Understanding LSTMs",
+      "style": null,
+      "parent": null,
+      "original_id": "RNN"
+    },
+    {
+      "id": "s2_b2_TR",
+      "label": "Transformers",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Illustrated Transformer",
+      "style": "fill:#C62828,stroke:#B71C1C,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TR"
+    },
+    {
+      "id": "s2_b2_GAN",
+      "label": "GANs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://developers.google.com/machine-learning/gan",
+      "tooltip": "Google GAN Course",
+      "style": null,
+      "parent": null,
+      "original_id": "GAN"
+    },
+    {
+      "id": "s2_b2_DIFF",
+      "label": "Diffusion Models",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/",
+      "tooltip": "Diffusion Models Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "DIFF"
+    },
+    {
+      "id": "s2_b2_LLM",
+      "label": "LLMs",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://www.promptingguide.ai/",
+      "tooltip": "Prompting Guide",
+      "style": "fill:#EF6C00,stroke:#E65100,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "LLM"
+    },
+    {
+      "id": "s2_b2_GENAI",
+      "label": "Generative AI",
+      "type": "node",
+      "section_id": 2,
+      "block_id": 2,
+      "url": "https://www.deeplearning.ai/short-courses/",
+      "tooltip": "DeepLearning.AI Courses",
+      "style": "fill:#00838F,stroke:#006064,stroke-width:2px,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GENAI"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s2_b2_AI",
+      "target": "s2_b2_ML",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_AI",
+      "target": "s2_b2_ES",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_AI",
+      "target": "s2_b2_RO",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_SL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_UL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_RL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_ML",
+      "target": "s2_b2_DL",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_CNN",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_RNN",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_TR",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_GAN",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DL",
+      "target": "s2_b2_DIFF",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_TR",
+      "target": "s2_b2_LLM",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_LLM",
+      "target": "s2_b2_GENAI",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_DIFF",
+      "target": "s2_b2_GENAI",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    },
+    {
+      "source": "s2_b2_GAN",
+      "target": "s2_b2_GENAI",
+      "type": "regular",
+      "section_id": 2,
+      "block_id": 2
+    }
+  ]
+}

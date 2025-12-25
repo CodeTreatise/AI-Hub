@@ -1,0 +1,358 @@
+{
+  "meta": {
+    "id": 6,
+    "title": "Deep Learning Architectures",
+    "description": "CNN, RNN, Transformers",
+    "slug": "deep-learning-architectures",
+    "totalNodes": 18,
+    "totalEdges": 17
+  },
+  "sections": [
+    {
+      "id": 6,
+      "title": "Deep Learning Architectures",
+      "slug": "6-deep-learning-architectures",
+      "description": "CNN, RNN, Transformers",
+      "line": 385
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s6_b6_DL",
+      "label": "DEEP LEARNING",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://pytorch.org/tutorials/",
+      "tooltip": "PyTorch Tutorials",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s6_b6_CNN",
+      "label": "CNN",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://cs231n.stanford.edu/",
+      "tooltip": "Stanford CS231n",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CNN"
+    },
+    {
+      "id": "s6_b6_RNN",
+      "label": "RNN",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "Understanding LSTMs",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "RNN"
+    },
+    {
+      "id": "s6_b6_TR",
+      "label": "Transformers",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "tooltip": "Illustrated Transformer",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "TR"
+    },
+    {
+      "id": "s6_b6_GEN",
+      "label": "Generative",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/",
+      "tooltip": "Generative Models",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GEN"
+    },
+    {
+      "id": "s6_b6_C1",
+      "label": "ResNet",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1512.03385",
+      "tooltip": "ResNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C1"
+    },
+    {
+      "id": "s6_b6_C2",
+      "label": "VGG",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1409.1556",
+      "tooltip": "VGG Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C2"
+    },
+    {
+      "id": "s6_b6_C3",
+      "label": "EfficientNet",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1905.11946",
+      "tooltip": "EfficientNet Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "C3"
+    },
+    {
+      "id": "s6_b6_R1",
+      "label": "LSTM",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "LSTM Guide",
+      "style": null,
+      "parent": null,
+      "original_id": "R1"
+    },
+    {
+      "id": "s6_b6_R2",
+      "label": "GRU",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://arxiv.org/abs/1406.1078",
+      "tooltip": "GRU Paper",
+      "style": null,
+      "parent": null,
+      "original_id": "R2"
+    },
+    {
+      "id": "s6_b6_T1",
+      "label": "BERT",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/transformers/model_doc/bert",
+      "tooltip": "BERT on HuggingFace",
+      "style": null,
+      "parent": null,
+      "original_id": "T1"
+    },
+    {
+      "id": "s6_b6_T2",
+      "label": "GPT",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/transformers/model_doc/gpt2",
+      "tooltip": "GPT-2 on HuggingFace",
+      "style": null,
+      "parent": null,
+      "original_id": "T2"
+    },
+    {
+      "id": "s6_b6_T3",
+      "label": "ViT",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/transformers/model_doc/vit",
+      "tooltip": "ViT on HuggingFace",
+      "style": null,
+      "parent": null,
+      "original_id": "T3"
+    },
+    {
+      "id": "s6_b6_G1",
+      "label": "GAN",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://developers.google.com/machine-learning/gan",
+      "tooltip": "Google GAN Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "G1"
+    },
+    {
+      "id": "s6_b6_G2",
+      "label": "Diffusion",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://huggingface.co/docs/diffusers/",
+      "tooltip": "HuggingFace Diffusers",
+      "style": null,
+      "parent": null,
+      "original_id": "G2"
+    },
+    {
+      "id": "s6_b6_G3",
+      "label": "VAE",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://keras.io/examples/generative/vae/",
+      "tooltip": "VAE Tutorial",
+      "style": null,
+      "parent": null,
+      "original_id": "G3"
+    },
+    {
+      "id": "s6_b6_SD",
+      "label": "Stable Diffusion",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://stability.ai/",
+      "tooltip": "Stability AI",
+      "style": null,
+      "parent": null,
+      "original_id": "SD"
+    },
+    {
+      "id": "s6_b6_DALLE",
+      "label": "DALL-E",
+      "type": "node",
+      "section_id": 6,
+      "block_id": 6,
+      "url": "https://openai.com/dall-e-3",
+      "tooltip": "DALL-E 3",
+      "style": null,
+      "parent": null,
+      "original_id": "DALLE"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_CNN",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_RNN",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_TR",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_DL",
+      "target": "s6_b6_GEN",
+      "type": "thick",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_CNN",
+      "target": "s6_b6_C1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_CNN",
+      "target": "s6_b6_C2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_CNN",
+      "target": "s6_b6_C3",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_RNN",
+      "target": "s6_b6_R1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_RNN",
+      "target": "s6_b6_R2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_TR",
+      "target": "s6_b6_T1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_TR",
+      "target": "s6_b6_T2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_TR",
+      "target": "s6_b6_T3",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_GEN",
+      "target": "s6_b6_G1",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_GEN",
+      "target": "s6_b6_G2",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_GEN",
+      "target": "s6_b6_G3",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_G2",
+      "target": "s6_b6_SD",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    },
+    {
+      "source": "s6_b6_G2",
+      "target": "s6_b6_DALLE",
+      "type": "regular",
+      "section_id": 6,
+      "block_id": 6
+    }
+  ]
+}

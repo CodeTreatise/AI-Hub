@@ -1,0 +1,453 @@
+{
+  "meta": {
+    "id": 1,
+    "title": "AI History Timeline (1950-2025)",
+    "description": "Complete AI evolution journey",
+    "slug": "ai-history-timeline-1950-2025",
+    "totalNodes": 23,
+    "totalEdges": 22
+  },
+  "sections": [
+    {
+      "id": 1,
+      "title": "AI History Timeline (1950-2025)",
+      "slug": "1-ai-history-timeline-1950-2025",
+      "description": "Complete AI evolution journey",
+      "line": 51
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s1_b1_Birth",
+      "label": "\ud83c\udf82 1950s-60s: Birth of AI",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/History_of_artificial_intelligence",
+      "tooltip": "Birth of AI",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Birth"
+    },
+    {
+      "id": "s1_b1_B1",
+      "label": "1950: Turing Test",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Turing_test",
+      "tooltip": "Turing Test",
+      "style": null,
+      "parent": "s1_b1_Birth",
+      "original_id": "B1"
+    },
+    {
+      "id": "s1_b1_B2",
+      "label": "1956: Dartmouth Conference",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+      "tooltip": "Dartmouth Conference",
+      "style": null,
+      "parent": "s1_b1_Birth",
+      "original_id": "B2"
+    },
+    {
+      "id": "s1_b1_B3",
+      "label": "1958: Perceptron",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Perceptron",
+      "tooltip": "Perceptron",
+      "style": null,
+      "parent": "s1_b1_Birth",
+      "original_id": "B3"
+    },
+    {
+      "id": "s1_b1_Winter1",
+      "label": "\u2744\ufe0f 1970s-80s: First AI Winter",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/AI_winter",
+      "tooltip": "First AI Winter",
+      "style": "fill:#455A64,stroke:#263238,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Winter1"
+    },
+    {
+      "id": "s1_b1_W1",
+      "label": "1969: Perceptron Limits",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Perceptrons_(book)",
+      "tooltip": "Perceptrons Book",
+      "style": null,
+      "parent": "s1_b1_Winter1",
+      "original_id": "W1"
+    },
+    {
+      "id": "s1_b1_W2",
+      "label": "1974: Funding Cuts",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/AI_winter",
+      "tooltip": "AI Winter History",
+      "style": null,
+      "parent": "s1_b1_Winter1",
+      "original_id": "W2"
+    },
+    {
+      "id": "s1_b1_W3",
+      "label": "1980s: Expert Systems Rise",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Expert_system",
+      "tooltip": "Expert Systems",
+      "style": null,
+      "parent": "s1_b1_Winter1",
+      "original_id": "W3"
+    },
+    {
+      "id": "s1_b1_Revival",
+      "label": "\ud83c\udf31 1990s: Statistical Revival",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Machine_learning#History",
+      "tooltip": "Statistical Revival",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Revival"
+    },
+    {
+      "id": "s1_b1_R1",
+      "label": "1989: LeNet CNN",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "http://yann.lecun.com/exdb/lenet/",
+      "tooltip": "LeNet",
+      "style": null,
+      "parent": "s1_b1_Revival",
+      "original_id": "R1"
+    },
+    {
+      "id": "s1_b1_R2",
+      "label": "1997: LSTM",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+      "tooltip": "LSTM",
+      "style": null,
+      "parent": "s1_b1_Revival",
+      "original_id": "R2"
+    },
+    {
+      "id": "s1_b1_R3",
+      "label": "1997: DeepBlue Chess",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+      "tooltip": "DeepBlue",
+      "style": null,
+      "parent": "s1_b1_Revival",
+      "original_id": "R3"
+    },
+    {
+      "id": "s1_b1_DL",
+      "label": "\ud83d\ude80 2010s: Deep Learning Era",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Deep_learning",
+      "tooltip": "Deep Learning Era",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DL"
+    },
+    {
+      "id": "s1_b1_D1",
+      "label": "2012: AlexNet/ImageNet",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "tooltip": "AlexNet Paper",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D1"
+    },
+    {
+      "id": "s1_b1_D2",
+      "label": "2014: GANs, Seq2Seq",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/1406.2661",
+      "tooltip": "GANs Paper",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D2"
+    },
+    {
+      "id": "s1_b1_D3",
+      "label": "2017: Transformers",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "tooltip": "Attention Is All You Need",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D3"
+    },
+    {
+      "id": "s1_b1_D4",
+      "label": "2018: BERT, GPT",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/1810.04805",
+      "tooltip": "BERT Paper",
+      "style": null,
+      "parent": "s1_b1_DL",
+      "original_id": "D4"
+    },
+    {
+      "id": "s1_b1_GenAI",
+      "label": "\u2b50 2020s: GenAI Revolution",
+      "type": "subgraph",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence",
+      "tooltip": "GenAI Revolution",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GenAI"
+    },
+    {
+      "id": "s1_b1_G1",
+      "label": "2020: GPT-3",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://arxiv.org/abs/2005.14165",
+      "tooltip": "GPT-3 Paper",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G1"
+    },
+    {
+      "id": "s1_b1_G2",
+      "label": "2022: ChatGPT, Stable Diffusion",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://openai.com/blog/chatgpt",
+      "tooltip": "ChatGPT",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G2"
+    },
+    {
+      "id": "s1_b1_G3",
+      "label": "2023: GPT-4, Claude, Gemini",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://openai.com/gpt-4",
+      "tooltip": "GPT-4",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G3"
+    },
+    {
+      "id": "s1_b1_G4",
+      "label": "2024: Sora, Claude 3.5, Agents",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://openai.com/sora",
+      "tooltip": "Sora",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G4"
+    },
+    {
+      "id": "s1_b1_G5",
+      "label": "2025: MCP, GraphRAG, Multimodal",
+      "type": "node",
+      "section_id": 1,
+      "block_id": 1,
+      "url": "https://modelcontextprotocol.io/",
+      "tooltip": "MCP",
+      "style": null,
+      "parent": "s1_b1_GenAI",
+      "original_id": "G5"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_Winter1",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_Revival",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_DL",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_GenAI",
+      "type": "thick",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_B1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_B2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Birth",
+      "target": "s1_b1_B3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_W1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_W2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Winter1",
+      "target": "s1_b1_W3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_R1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_R2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_Revival",
+      "target": "s1_b1_R3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_DL",
+      "target": "s1_b1_D4",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G1",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G2",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G3",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G4",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    },
+    {
+      "source": "s1_b1_GenAI",
+      "target": "s1_b1_G5",
+      "type": "contains",
+      "section_id": 1,
+      "block_id": 1
+    }
+  ]
+}

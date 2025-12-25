@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "id": 21,
+    "title": "AI Cloud Platforms",
+    "description": "AWS, GCP, Azure",
+    "slug": "ai-cloud-platforms",
+    "totalNodes": 13,
+    "totalEdges": 9
+  },
+  "sections": [
+    {
+      "id": 21,
+      "title": "AI Cloud Platforms",
+      "slug": "21-ai-cloud-platforms",
+      "description": "AWS, GCP, Azure",
+      "line": 1357
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s21_b22_AWS",
+      "label": "AWS",
+      "type": "subgraph",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://aws.amazon.com/machine-learning/",
+      "tooltip": "AWS ML",
+      "style": "fill:#FF9900,stroke:#CC7A00,color:#000000",
+      "parent": null,
+      "original_id": "AWS"
+    },
+    {
+      "id": "s21_b22_S1",
+      "label": "SageMaker",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://aws.amazon.com/sagemaker/",
+      "tooltip": "AWS SageMaker",
+      "style": null,
+      "parent": "s21_b22_AWS",
+      "original_id": "S1"
+    },
+    {
+      "id": "s21_b22_S2",
+      "label": "Bedrock",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://aws.amazon.com/bedrock/",
+      "tooltip": "AWS Bedrock",
+      "style": null,
+      "parent": "s21_b22_AWS",
+      "original_id": "S2"
+    },
+    {
+      "id": "s21_b22_GCP",
+      "label": "GOOGLE CLOUD",
+      "type": "subgraph",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://cloud.google.com/ai-platform",
+      "tooltip": "Google Cloud AI",
+      "style": "fill:#4285F4,stroke:#3367D6,color:#FFFFFF",
+      "parent": null,
+      "original_id": "GCP"
+    },
+    {
+      "id": "s21_b22_G1",
+      "label": "Vertex AI",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://cloud.google.com/vertex-ai",
+      "tooltip": "Vertex AI",
+      "style": null,
+      "parent": "s21_b22_GCP",
+      "original_id": "G1"
+    },
+    {
+      "id": "s21_b22_G2",
+      "label": "Gemini API",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://ai.google.dev/",
+      "tooltip": "Google AI",
+      "style": null,
+      "parent": "s21_b22_GCP",
+      "original_id": "G2"
+    },
+    {
+      "id": "s21_b22_Azure",
+      "label": "AZURE",
+      "type": "subgraph",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://azure.microsoft.com/en-us/solutions/ai/",
+      "tooltip": "Azure AI",
+      "style": "fill:#0078D4,stroke:#005A9E,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Azure"
+    },
+    {
+      "id": "s21_b22_A1",
+      "label": "Azure ML",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://azure.microsoft.com/en-us/products/machine-learning",
+      "tooltip": "Azure ML",
+      "style": null,
+      "parent": "s21_b22_Azure",
+      "original_id": "A1"
+    },
+    {
+      "id": "s21_b22_A2",
+      "label": "OpenAI Service",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service",
+      "tooltip": "Azure OpenAI",
+      "style": null,
+      "parent": "s21_b22_Azure",
+      "original_id": "A2"
+    },
+    {
+      "id": "s21_b22_Other",
+      "label": "OTHERS",
+      "type": "subgraph",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://huggingface.co/",
+      "tooltip": "Other Cloud Platforms",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "Other"
+    },
+    {
+      "id": "s21_b22_O1",
+      "label": "Hugging Face",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://huggingface.co/",
+      "tooltip": "Hugging Face",
+      "style": null,
+      "parent": "s21_b22_Other",
+      "original_id": "O1"
+    },
+    {
+      "id": "s21_b22_O2",
+      "label": "Replicate",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://replicate.com/",
+      "tooltip": "Replicate",
+      "style": null,
+      "parent": "s21_b22_Other",
+      "original_id": "O2"
+    },
+    {
+      "id": "s21_b22_O3",
+      "label": "Modal",
+      "type": "node",
+      "section_id": 21,
+      "block_id": 22,
+      "url": "https://modal.com/",
+      "tooltip": "Modal",
+      "style": null,
+      "parent": "s21_b22_Other",
+      "original_id": "O3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s21_b22_AWS",
+      "target": "s21_b22_S1",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_AWS",
+      "target": "s21_b22_S2",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_GCP",
+      "target": "s21_b22_G1",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_GCP",
+      "target": "s21_b22_G2",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_Azure",
+      "target": "s21_b22_A1",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_Azure",
+      "target": "s21_b22_A2",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_Other",
+      "target": "s21_b22_O1",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_Other",
+      "target": "s21_b22_O2",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    },
+    {
+      "source": "s21_b22_Other",
+      "target": "s21_b22_O3",
+      "type": "contains",
+      "section_id": 21,
+      "block_id": 22
+    }
+  ]
+}

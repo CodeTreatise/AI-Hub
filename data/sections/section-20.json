@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "id": 20,
+    "title": "Multimodal AI",
+    "description": "Vision, Audio, Video models",
+    "slug": "multimodal-ai",
+    "totalNodes": 15,
+    "totalEdges": 14
+  },
+  "sections": [
+    {
+      "id": 20,
+      "title": "Multimodal AI",
+      "slug": "20-multimodal-ai",
+      "description": "Vision, Audio, Video models",
+      "line": 1306
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s20_b21_MULTI",
+      "label": "MULTIMODAL AI",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/models?pipeline_tag=image-text-to-text",
+      "tooltip": "HF Multimodal",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MULTI"
+    },
+    {
+      "id": "s20_b21_INPUT",
+      "label": "Inputs",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks",
+      "tooltip": "Input Modalities",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "INPUT"
+    },
+    {
+      "id": "s20_b21_OUTPUT",
+      "label": "Outputs",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks",
+      "tooltip": "Output Modalities",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "OUTPUT"
+    },
+    {
+      "id": "s20_b21_MODELS",
+      "label": "Models",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/models?pipeline_tag=image-text-to-text",
+      "tooltip": "Multimodal Models",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "MODELS"
+    },
+    {
+      "id": "s20_b21_TEXT",
+      "label": "Text",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Text Processing",
+      "style": null,
+      "parent": null,
+      "original_id": "TEXT"
+    },
+    {
+      "id": "s20_b21_IMG",
+      "label": "Image",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/image-to-text",
+      "tooltip": "Image Understanding",
+      "style": null,
+      "parent": null,
+      "original_id": "IMG"
+    },
+    {
+      "id": "s20_b21_AUD",
+      "label": "Audio",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/docs/transformers/model_doc/whisper",
+      "tooltip": "Whisper",
+      "style": null,
+      "parent": null,
+      "original_id": "AUD"
+    },
+    {
+      "id": "s20_b21_VID",
+      "label": "Video",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/video-classification",
+      "tooltip": "Video Processing",
+      "style": null,
+      "parent": null,
+      "original_id": "VID"
+    },
+    {
+      "id": "s20_b21_GEN_T",
+      "label": "Text Gen",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/tasks/text-generation",
+      "tooltip": "Text Generation",
+      "style": null,
+      "parent": null,
+      "original_id": "GEN_T"
+    },
+    {
+      "id": "s20_b21_GEN_I",
+      "label": "Image Gen",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/docs/diffusers/",
+      "tooltip": "Diffusers",
+      "style": null,
+      "parent": null,
+      "original_id": "GEN_I"
+    },
+    {
+      "id": "s20_b21_GEN_A",
+      "label": "Audio Gen",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://huggingface.co/docs/transformers/model_doc/bark",
+      "tooltip": "Audio Generation - Bark",
+      "style": null,
+      "parent": null,
+      "original_id": "GEN_A"
+    },
+    {
+      "id": "s20_b21_GPT4V",
+      "label": "GPT-4 Vision",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://platform.openai.com/docs/guides/vision",
+      "tooltip": "GPT-4 Vision",
+      "style": null,
+      "parent": null,
+      "original_id": "GPT4V"
+    },
+    {
+      "id": "s20_b21_GEMINI",
+      "label": "Gemini",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://ai.google.dev/",
+      "tooltip": "Google AI",
+      "style": null,
+      "parent": null,
+      "original_id": "GEMINI"
+    },
+    {
+      "id": "s20_b21_CLAUDE_V",
+      "label": "Claude Vision",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+      "tooltip": "Claude Vision",
+      "style": null,
+      "parent": null,
+      "original_id": "CLAUDE_V"
+    },
+    {
+      "id": "s20_b21_CLIP",
+      "label": "CLIP",
+      "type": "node",
+      "section_id": 20,
+      "block_id": 21,
+      "url": "https://openai.com/research/clip",
+      "tooltip": "CLIP Research",
+      "style": null,
+      "parent": null,
+      "original_id": "CLIP"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s20_b21_MULTI",
+      "target": "s20_b21_INPUT",
+      "type": "thick",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MULTI",
+      "target": "s20_b21_OUTPUT",
+      "type": "thick",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MULTI",
+      "target": "s20_b21_MODELS",
+      "type": "thick",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_TEXT",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_IMG",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_AUD",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_INPUT",
+      "target": "s20_b21_VID",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_OUTPUT",
+      "target": "s20_b21_GEN_T",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_OUTPUT",
+      "target": "s20_b21_GEN_I",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_OUTPUT",
+      "target": "s20_b21_GEN_A",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_GPT4V",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_GEMINI",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_CLAUDE_V",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    },
+    {
+      "source": "s20_b21_MODELS",
+      "target": "s20_b21_CLIP",
+      "type": "regular",
+      "section_id": 20,
+      "block_id": 21
+    }
+  ]
+}

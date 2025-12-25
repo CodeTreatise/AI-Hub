@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Function Calling</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #0f0f1a;
+        }
+        .reader-container {
+            background: #1a1a2e;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .meta-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .meta-header a { color: #58a6ff; }
+        
+        /* Content Styles */
+        h1, h2, h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        p { line-height: 1.6; color: #c9d1d9; margin-bottom: 1rem; }
+        ul, ol { color: #c9d1d9; margin-bottom: 1rem; padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+        code { font-family: 'Fira Code', monospace; color: #e0e0e0; }
+        .note { background: rgba(88, 166, 255, 0.1); border-left: 4px solid #58a6ff; padding: 1rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>OpenAI Function Calling</h1>
+            <p>Source: <a href="https://platform.openai.com/docs/guides/function-calling" target="_blank">https://platform.openai.com/docs/guides/function-calling</a> (Offline Guide)</p>
+        </div>
+        <div class="content">
+            
+        <h2>Function Calling (Tool Use)</h2>
+        <p>Function calling allows the LLM to "connect" to external tools and APIs. It doesn't execute the code itself; instead, it generates the <em>arguments</em> to call a function you define.</p>
+
+        <h3>How it works</h3>
+        <ol>
+            <li><strong>Define Tools:</strong> You describe your functions (e.g., <code>get_weather(location)</code>) to the model.</li>
+            <li><strong>Model Decides:</strong> If the user asks "What's the weather in London?", the model sees your tool and returns a JSON object: <code>{ "name": "get_weather", "arguments": "{ 'location': 'London' }" }</code>.</li>
+            <li><strong>You Execute:</strong> Your code runs the actual function/API call.</li>
+            <li><strong>Return Result:</strong> You send the function's output back to the model.</li>
+            <li><strong>Final Response:</strong> The model uses that data to answer the user naturally.</li>
+        </ol>
+
+        <h3>Example Definition</h3>
+        <pre><code>tools = [{
+  "type": "function",
+  "function": {
+    "name": "get_current_weather",
+    "description": "Get the current weather in a given location",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": { "type": "string" },
+        "unit": { "type": "string", "enum": ["celsius", "fahrenheit"] }
+      },
+      "required": ["location"]
+    }
+  }
+}]</code></pre>
+        
+        </div>
+    </div>
+</body>
+</html>

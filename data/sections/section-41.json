@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "id": 41,
+    "title": "Content Provenance & Authenticity",
+    "description": "Watermarking, C2PA, Deepfake Detection",
+    "slug": "content-provenance-authenticity",
+    "totalNodes": 21,
+    "totalEdges": 20
+  },
+  "sections": [
+    {
+      "id": 41,
+      "title": "Content Provenance & Authenticity",
+      "slug": "41-content-provenance--authenticity",
+      "description": "Watermarking, C2PA, Deepfake Detection",
+      "line": 3306
+    }
+  ],
+  "nodes": [
+    {
+      "id": "s41_b49_PROV",
+      "label": "CONTENT PROVENANCE",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/",
+      "tooltip": "C2PA Standard",
+      "style": "fill:#1565C0,stroke:#0D47A1,color:#FFFFFF",
+      "parent": null,
+      "original_id": "PROV"
+    },
+    {
+      "id": "s41_b49_WATER",
+      "label": "Watermarking",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2301.10226",
+      "tooltip": "Watermarking Survey",
+      "style": "fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF",
+      "parent": null,
+      "original_id": "WATER"
+    },
+    {
+      "id": "s41_b49_CRED",
+      "label": "Content Credentials",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentauthenticity.org/",
+      "tooltip": "Content Authenticity",
+      "style": "fill:#F57C00,stroke:#E65100,color:#FFFFFF",
+      "parent": null,
+      "original_id": "CRED"
+    },
+    {
+      "id": "s41_b49_DETECT",
+      "label": "Detection",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://ai.meta.com/",
+      "tooltip": "Detection Methods",
+      "style": "fill:#C62828,stroke:#B71C1C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "DETECT"
+    },
+    {
+      "id": "s41_b49_AUDIT",
+      "label": "Audit Trail",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/specifications/",
+      "tooltip": "Audit Specifications",
+      "style": "fill:#7B1FA2,stroke:#4A148C,color:#FFFFFF",
+      "parent": null,
+      "original_id": "AUDIT"
+    },
+    {
+      "id": "s41_b49_W1",
+      "label": "Invisible Watermarks",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2301.10226",
+      "tooltip": "Invisible Watermarks",
+      "style": null,
+      "parent": null,
+      "original_id": "W1"
+    },
+    {
+      "id": "s41_b49_W2",
+      "label": "SynthID Google",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://deepmind.google/technologies/synthid/",
+      "tooltip": "Google SynthID",
+      "style": null,
+      "parent": null,
+      "original_id": "W2"
+    },
+    {
+      "id": "s41_b49_W3",
+      "label": "Stable Signature",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2303.15435",
+      "tooltip": "Stable Signature",
+      "style": null,
+      "parent": null,
+      "original_id": "W3"
+    },
+    {
+      "id": "s41_b49_W4",
+      "label": "Audio Watermarks",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2308.01187",
+      "tooltip": "AudioSeal Meta",
+      "style": null,
+      "parent": null,
+      "original_id": "W4"
+    },
+    {
+      "id": "s41_b49_CR1",
+      "label": "C2PA Standard",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/",
+      "tooltip": "C2PA Coalition",
+      "style": null,
+      "parent": null,
+      "original_id": "CR1"
+    },
+    {
+      "id": "s41_b49_CR2",
+      "label": "Content Credentials",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentcredentials.org/",
+      "tooltip": "Content Credentials",
+      "style": null,
+      "parent": null,
+      "original_id": "CR2"
+    },
+    {
+      "id": "s41_b49_CR3",
+      "label": "Adobe CAI",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentauthenticity.org/",
+      "tooltip": "Adobe CAI",
+      "style": null,
+      "parent": null,
+      "original_id": "CR3"
+    },
+    {
+      "id": "s41_b49_CR4",
+      "label": "Metadata Signing",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/specifications/specifications/1.3/specs/C2PA_Specification.html",
+      "tooltip": "C2PA Signing",
+      "style": null,
+      "parent": null,
+      "original_id": "CR4"
+    },
+    {
+      "id": "s41_b49_D1",
+      "label": "Deepfake Detection",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://ai.meta.com/",
+      "tooltip": "Deepfake Detection",
+      "style": null,
+      "parent": null,
+      "original_id": "D1"
+    },
+    {
+      "id": "s41_b49_D2",
+      "label": "AI Text Detectors",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://gptzero.me/",
+      "tooltip": "AI Text Detection",
+      "style": null,
+      "parent": null,
+      "original_id": "D2"
+    },
+    {
+      "id": "s41_b49_D3",
+      "label": "Image Forensics",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2303.14126",
+      "tooltip": "Image Forensics",
+      "style": null,
+      "parent": null,
+      "original_id": "D3"
+    },
+    {
+      "id": "s41_b49_D4",
+      "label": "Video Analysis",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://arxiv.org/abs/2006.14749",
+      "tooltip": "Video Deepfakes",
+      "style": null,
+      "parent": null,
+      "original_id": "D4"
+    },
+    {
+      "id": "s41_b49_A1",
+      "label": "Blockchain Provenance",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://www.numbersprotocol.io/",
+      "tooltip": "Numbers Protocol",
+      "style": null,
+      "parent": null,
+      "original_id": "A1"
+    },
+    {
+      "id": "s41_b49_A2",
+      "label": "Hash Chains",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://c2pa.org/specifications/",
+      "tooltip": "Hash Chain Provenance",
+      "style": null,
+      "parent": null,
+      "original_id": "A2"
+    },
+    {
+      "id": "s41_b49_A3",
+      "label": "Timestamping",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://www.rfc-editor.org/rfc/rfc3161",
+      "tooltip": "RFC 3161 Timestamp",
+      "style": null,
+      "parent": null,
+      "original_id": "A3"
+    },
+    {
+      "id": "s41_b49_A4",
+      "label": "Origin Tracking",
+      "type": "node",
+      "section_id": 41,
+      "block_id": 49,
+      "url": "https://contentauthenticity.org/how-it-works",
+      "tooltip": "Origin Tracking",
+      "style": null,
+      "parent": null,
+      "original_id": "A4"
+    }
+  ],
+  "edges": [
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_WATER",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_CRED",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_DETECT",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_PROV",
+      "target": "s41_b49_AUDIT",
+      "type": "thick",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_WATER",
+      "target": "s41_b49_W4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_CRED",
+      "target": "s41_b49_CR4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_DETECT",
+      "target": "s41_b49_D4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A1",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A2",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A3",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    },
+    {
+      "source": "s41_b49_AUDIT",
+      "target": "s41_b49_A4",
+      "type": "regular",
+      "section_id": 41,
+      "block_id": 49
+    }
+  ]
+}
