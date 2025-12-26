@@ -48,6 +48,21 @@
       "title": "Git, CLI, and Reproducibility"
     },
     {
+      "id": 104,
+      "level": 1,
+      "title": "Database & SQL"
+    },
+    {
+      "id": 105,
+      "level": 1,
+      "title": "TypeScript & Node.js"
+    },
+    {
+      "id": 106,
+      "level": 1,
+      "title": "Docker Basics"
+    },
+    {
       "id": 201,
       "level": 2,
       "title": "Core ML Concepts"
@@ -93,6 +108,21 @@
       "title": "RAG & LLM App Building"
     },
     {
+      "id": 404,
+      "level": 4,
+      "title": "Document Processing"
+    },
+    {
+      "id": 405,
+      "level": 4,
+      "title": "Vector Databases"
+    },
+    {
+      "id": 406,
+      "level": 4,
+      "title": "Reranking & Advanced Retrieval"
+    },
+    {
       "id": 501,
       "level": 5,
       "title": "Serving & Deployment"
@@ -108,6 +138,11 @@
       "title": "Governance & Safety"
     },
     {
+      "id": 504,
+      "level": 5,
+      "title": "Streaming & Real-time"
+    },
+    {
       "id": 1,
       "level": 0,
       "title": "Reference & Tools"
@@ -116,6 +151,21 @@
       "id": 2,
       "level": 0,
       "title": "Communities & News"
+    },
+    {
+      "id": 3,
+      "level": 0,
+      "title": "YouTube Channels"
+    },
+    {
+      "id": 4,
+      "level": 0,
+      "title": "Leaderboards & Comparisons"
+    },
+    {
+      "id": 5,
+      "level": 0,
+      "title": "Local AI Tools"
     }
   ],
   "nodes": [
@@ -486,6 +536,524 @@
       "hours": 1,
       "difficulty": "beginner",
       "url": "https://news.ycombinator.com/"
+    },
+
+    {
+      "id": "db-postgres-tutorial",
+      "label": "PostgreSQL Tutorial",
+      "type": "course",
+      "section_id": 104,
+      "hours": 8,
+      "difficulty": "beginner",
+      "url": "https://www.postgresqltutorial.com/",
+      "tooltip": "Comprehensive PostgreSQL tutorial from basics to advanced."
+    },
+    {
+      "id": "db-sqlbolt",
+      "label": "SQLBolt (Interactive SQL)",
+      "type": "practice",
+      "section_id": 104,
+      "hours": 4,
+      "difficulty": "beginner",
+      "url": "https://sqlbolt.com/",
+      "tooltip": "Interactive SQL lessons with hands-on exercises."
+    },
+    {
+      "id": "db-prisma",
+      "label": "Prisma Getting Started",
+      "type": "article",
+      "section_id": 104,
+      "hours": 3,
+      "difficulty": "beginner",
+      "url": "https://www.prisma.io/docs/getting-started",
+      "tooltip": "Modern TypeScript ORM for databases."
+    },
+
+    {
+      "id": "ts-handbook",
+      "label": "TypeScript Handbook",
+      "type": "book",
+      "section_id": 105,
+      "hours": 8,
+      "difficulty": "beginner",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "tooltip": "Official TypeScript documentation and handbook."
+    },
+    {
+      "id": "ts-node-express",
+      "label": "Node + TypeScript + Express Setup",
+      "type": "article",
+      "section_id": 105,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://blog.logrocket.com/how-to-set-up-node-typescript-express/",
+      "tooltip": "Complete guide to setting up a TypeScript Express server."
+    },
+    {
+      "id": "ts-zod",
+      "label": "Zod (Schema Validation)",
+      "type": "tool",
+      "section_id": 105,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://zod.dev/",
+      "tooltip": "TypeScript-first schema validation library."
+    },
+
+    {
+      "id": "docker-video",
+      "label": "Docker in 100 Seconds (Fireship)",
+      "type": "video",
+      "section_id": 106,
+      "hours": 0.5,
+      "difficulty": "beginner",
+      "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ",
+      "tooltip": "Quick intro to Docker concepts."
+    },
+    {
+      "id": "docker-compose-guide",
+      "label": "Docker Compose Getting Started",
+      "type": "article",
+      "section_id": 106,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://docs.docker.com/compose/gettingstarted/",
+      "tooltip": "Official Docker Compose tutorial."
+    },
+
+    {
+      "id": "llm-openai-docs",
+      "label": "OpenAI API Introduction",
+      "type": "article",
+      "section_id": 401,
+      "hours": 3,
+      "difficulty": "beginner",
+      "url": "https://platform.openai.com/docs/introduction",
+      "tooltip": "Official OpenAI API documentation."
+    },
+    {
+      "id": "llm-structured-outputs",
+      "label": "OpenAI Structured Outputs",
+      "type": "article",
+      "section_id": 401,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://platform.openai.com/docs/guides/structured-outputs",
+      "tooltip": "Get JSON outputs from LLMs reliably."
+    },
+    {
+      "id": "llm-function-calling",
+      "label": "OpenAI Function Calling",
+      "type": "article",
+      "section_id": 401,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://platform.openai.com/docs/guides/function-calling",
+      "tooltip": "Enable LLMs to call your functions."
+    },
+    {
+      "id": "llm-anthropic-prompting",
+      "label": "Anthropic Prompt Engineering",
+      "type": "article",
+      "section_id": 401,
+      "hours": 4,
+      "difficulty": "intermediate",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "tooltip": "Best prompt engineering guide available."
+    },
+
+    {
+      "id": "embed-video",
+      "label": "Word Embeddings Explained (video)",
+      "type": "video",
+      "section_id": 402,
+      "hours": 0.5,
+      "difficulty": "beginner",
+      "url": "https://www.youtube.com/watch?v=wjZofJX0v4M",
+      "tooltip": "Visual explanation of embeddings."
+    },
+
+    {
+      "id": "rag-video",
+      "label": "RAG Explained (video)",
+      "type": "video",
+      "section_id": 403,
+      "hours": 0.5,
+      "difficulty": "beginner",
+      "url": "https://www.youtube.com/watch?v=T-D1OfcDW1M",
+      "tooltip": "Quick intro to RAG architecture."
+    },
+    {
+      "id": "rag-pinecone-intro",
+      "label": "Pinecone: What is RAG?",
+      "type": "article",
+      "section_id": 403,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/",
+      "tooltip": "Comprehensive RAG introduction."
+    },
+    {
+      "id": "rag-langchain-tutorial",
+      "label": "LangChain RAG Tutorial",
+      "type": "course",
+      "section_id": 403,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://python.langchain.com/docs/tutorials/rag/",
+      "tooltip": "Step-by-step RAG implementation."
+    },
+    {
+      "id": "rag-prompting-guide",
+      "label": "RAG Prompting Guide",
+      "type": "article",
+      "section_id": 403,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://www.promptingguide.ai/research/rag",
+      "tooltip": "Advanced RAG prompting techniques."
+    },
+
+    {
+      "id": "doc-cheerio",
+      "label": "Cheerio (HTML parsing)",
+      "type": "tool",
+      "section_id": 404,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://cheerio.js.org/",
+      "tooltip": "jQuery-like HTML parsing for Node.js."
+    },
+    {
+      "id": "doc-readability",
+      "label": "Mozilla Readability",
+      "type": "tool",
+      "section_id": 404,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://github.com/mozilla/readability",
+      "tooltip": "Extract readable content from web pages."
+    },
+    {
+      "id": "doc-chunking",
+      "label": "Chunking Strategies (Pinecone)",
+      "type": "article",
+      "section_id": 404,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://www.pinecone.io/learn/chunking-strategies/",
+      "tooltip": "How to split documents for RAG."
+    },
+    {
+      "id": "doc-text-splitters",
+      "label": "LangChain Text Splitters",
+      "type": "article",
+      "section_id": 404,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://js.langchain.com/docs/concepts/text_splitters",
+      "tooltip": "Document chunking with LangChain."
+    },
+
+    {
+      "id": "vec-pgvector",
+      "label": "pgvector",
+      "type": "tool",
+      "section_id": 405,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://github.com/pgvector/pgvector",
+      "tooltip": "Vector similarity search for PostgreSQL."
+    },
+    {
+      "id": "vec-prisma-vectors",
+      "label": "Prisma with Vectors",
+      "type": "article",
+      "section_id": 405,
+      "hours": 1,
+      "difficulty": "intermediate",
+      "url": "https://www.prisma.io/docs/orm/prisma-schema/data-model/unsupported-database-features#scalars",
+      "tooltip": "Using pgvector with Prisma ORM."
+    },
+    {
+      "id": "vec-supabase",
+      "label": "Supabase Vector Columns",
+      "type": "article",
+      "section_id": 405,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://supabase.com/docs/guides/ai/vector-columns",
+      "tooltip": "Supabase vector storage guide."
+    },
+
+    {
+      "id": "rerank-cohere",
+      "label": "Cohere Rerank API",
+      "type": "article",
+      "section_id": 406,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://docs.cohere.com/docs/rerank",
+      "tooltip": "Reranking API for better retrieval."
+    },
+    {
+      "id": "rerank-pinecone",
+      "label": "Rerankers Explained (Pinecone)",
+      "type": "article",
+      "section_id": 406,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://www.pinecone.io/learn/series/rag/rerankers/",
+      "tooltip": "Two-stage retrieval with reranking."
+    },
+
+    {
+      "id": "eval-ragas",
+      "label": "RAGAS Metrics",
+      "type": "article",
+      "section_id": 502,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://docs.ragas.io/en/latest/concepts/metrics/",
+      "tooltip": "RAG evaluation metrics framework."
+    },
+    {
+      "id": "eval-llm-metrics",
+      "label": "LLM Evaluation Metrics Guide",
+      "type": "article",
+      "section_id": 502,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation",
+      "tooltip": "Comprehensive LLM evaluation guide."
+    },
+
+    {
+      "id": "safety-prompt-injection",
+      "label": "Prompt Injection (Simon Willison)",
+      "type": "article",
+      "section_id": 503,
+      "hours": 1,
+      "difficulty": "intermediate",
+      "url": "https://simonwillison.net/2022/Sep/12/prompt-injection/",
+      "tooltip": "Understanding prompt injection attacks."
+    },
+
+    {
+      "id": "deploy-render",
+      "label": "Render (deployment)",
+      "type": "tool",
+      "section_id": 501,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://render.com/",
+      "tooltip": "Easy cloud deployment platform."
+    },
+    {
+      "id": "deploy-railway",
+      "label": "Railway (deployment)",
+      "type": "tool",
+      "section_id": 501,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://railway.app/",
+      "tooltip": "Deploy apps from GitHub."
+    },
+    {
+      "id": "deploy-fly",
+      "label": "Fly.io (deployment)",
+      "type": "tool",
+      "section_id": 501,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://fly.io/",
+      "tooltip": "Deploy apps close to users."
+    },
+
+    {
+      "id": "stream-sse",
+      "label": "Server-Sent Events (MDN)",
+      "type": "article",
+      "section_id": 504,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events",
+      "tooltip": "Stream responses to the browser."
+    },
+    {
+      "id": "stream-readable",
+      "label": "Readable Streams API (MDN)",
+      "type": "article",
+      "section_id": 504,
+      "hours": 2,
+      "difficulty": "intermediate",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams",
+      "tooltip": "Process streaming data in JavaScript."
+    },
+
+    {
+      "id": "community-localllama",
+      "label": "r/LocalLLaMA",
+      "type": "community",
+      "section_id": 2,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://www.reddit.com/r/LocalLLaMA/",
+      "tooltip": "Community for local LLM enthusiasts."
+    },
+    {
+      "id": "community-hf-discord",
+      "label": "Hugging Face Discord",
+      "type": "community",
+      "section_id": 2,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://huggingface.co/join/discord",
+      "tooltip": "Official Hugging Face community."
+    },
+    {
+      "id": "community-langchain-discord",
+      "label": "LangChain Discord",
+      "type": "community",
+      "section_id": 2,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://discord.gg/langchain",
+      "tooltip": "LangChain community support."
+    },
+    {
+      "id": "community-openai-forum",
+      "label": "OpenAI Developer Forum",
+      "type": "community",
+      "section_id": 2,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://community.openai.com/",
+      "tooltip": "Official OpenAI developer community."
+    },
+
+    {
+      "id": "yt-fireship",
+      "label": "Fireship (YouTube)",
+      "type": "video",
+      "section_id": 3,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://www.youtube.com/@Fireship",
+      "tooltip": "Short, fast tech explainers."
+    },
+    {
+      "id": "yt-aijason",
+      "label": "AI Jason (YouTube)",
+      "type": "video",
+      "section_id": 3,
+      "hours": 3,
+      "difficulty": "intermediate",
+      "url": "https://www.youtube.com/@AIJasonZ",
+      "tooltip": "Practical RAG tutorials."
+    },
+    {
+      "id": "yt-samwitteveen",
+      "label": "Sam Witteveen (YouTube)",
+      "type": "video",
+      "section_id": 3,
+      "hours": 4,
+      "difficulty": "advanced",
+      "url": "https://www.youtube.com/@samwitteveenai",
+      "tooltip": "Deep dive RAG and agents."
+    },
+    {
+      "id": "yt-karpathy",
+      "label": "Andrej Karpathy (YouTube)",
+      "type": "video",
+      "section_id": 3,
+      "hours": 6,
+      "difficulty": "advanced",
+      "url": "https://www.youtube.com/@AndrejKarpathy",
+      "tooltip": "LLM internals and theory."
+    },
+    {
+      "id": "yt-jamesbriggs",
+      "label": "James Briggs (YouTube)",
+      "type": "video",
+      "section_id": 3,
+      "hours": 4,
+      "difficulty": "intermediate",
+      "url": "https://www.youtube.com/@jamesbriggs",
+      "tooltip": "Pinecone and RAG tutorials."
+    },
+
+    {
+      "id": "lb-mteb",
+      "label": "MTEB Leaderboard",
+      "type": "tool",
+      "section_id": 4,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://huggingface.co/spaces/mteb/leaderboard",
+      "tooltip": "Compare embedding models."
+    },
+    {
+      "id": "lb-chatbot-arena",
+      "label": "Chatbot Arena",
+      "type": "tool",
+      "section_id": 4,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://lmarena.ai/",
+      "tooltip": "LLM quality rankings."
+    },
+    {
+      "id": "lb-vectordb",
+      "label": "Vector DB Comparison",
+      "type": "article",
+      "section_id": 4,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://superlinked.com/vector-db-comparison",
+      "tooltip": "Compare vector databases."
+    },
+
+    {
+      "id": "local-ollama",
+      "label": "Ollama",
+      "type": "tool",
+      "section_id": 5,
+      "hours": 2,
+      "difficulty": "beginner",
+      "url": "https://ollama.com/",
+      "tooltip": "Run LLMs locally with ease."
+    },
+    {
+      "id": "local-ollama-library",
+      "label": "Ollama Model Library",
+      "type": "article",
+      "section_id": 5,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://ollama.com/library",
+      "tooltip": "Browse available local models."
+    },
+    {
+      "id": "local-lmstudio",
+      "label": "LM Studio",
+      "type": "tool",
+      "section_id": 5,
+      "hours": 1,
+      "difficulty": "beginner",
+      "url": "https://lmstudio.ai/",
+      "tooltip": "GUI for running local LLMs."
+    },
+
+    {
+      "id": "py-python-for-js",
+      "label": "Python for JavaScript Developers",
+      "type": "article",
+      "section_id": 101,
+      "hours": 4,
+      "difficulty": "beginner",
+      "url": "https://www.pythonforjavascriptdevelopers.com/",
+      "tooltip": "Learn Python if you know JS."
     }
   ]
 }
