@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohere Rerank API</title>
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; font-family: 'Segoe UI', system-ui, sans-serif; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+        .model-card { background: #1a2a3a; padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #58a6ff; }
+        .model-card h4 { color: #58a6ff; margin: 0 0 0.5rem 0; }
+        .model-card .specs { font-size: 0.9rem; color: #8b949e; }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>🔄 Cohere Rerank API</h1>
+            <p>Source: <a href="https://docs.cohere.com/docs/rerank" target="_blank">docs.cohere.com/docs/rerank</a></p>
+        </div>
+        <div class="content">
+            <h2>What is Reranking?</h2>
+            <p>Reranking models take a query and a list of documents, then re-score and reorder them by semantic relevance. They're used after initial retrieval (vector search) to improve result quality.</p>
+            
+            <h2>Available Models</h2>
+            
+            <div class="model-card">
+                <h4>rerank-v4.0-pro</h4>
+                <p>Best quality, multilingual, handles semi-structured data (JSON)</p>
+                <div class="specs">Best for: Complex use cases requiring state-of-the-art quality</div>
+            </div>
+            
+            <div class="model-card">
+                <h4>rerank-v4.0-fast</h4>
+                <p>Lighter version of v4.0-pro, still multilingual with JSON support</p>
+                <div class="specs">Best for: Low latency, high throughput applications</div>
+            </div>
+            
+            <div class="model-card">
+                <h4>rerank-v3.5</h4>
+                <p>Context length: 4096 tokens, multilingual</p>
+                <div class="specs">Best for: General purpose reranking</div>
+            </div>
+            
+            <h2>API Usage</h2>
+            <pre><code>import cohere
+
+co = cohere.Client('YOUR_API_KEY')
+
+# Rerank documents
+results = co.rerank(
+    model='rerank-v3.5',
+    query='What is the capital of France?',
+    documents=[
+        'Paris is the capital of France.',
+        'Berlin is the capital of Germany.',
+        'France is a country in Europe.'
+    ],
+    top_n=2  # Return top 2 most relevant
+)
+
+for result in results.results:
+    print(f"Score: {result.relevance_score:.3f}")
+    print(f"Document: {result.document.text}")</code></pre>
+            
+            <h2>TypeScript/Node.js Usage</h2>
+            <pre><code>import { CohereClient } from 'cohere-ai';
+
+const cohere = new CohereClient({ token: 'YOUR_API_KEY' });
+
+const response = await cohere.rerank({
+    model: 'rerank-v3.5',
+    query: 'What is RAG?',
+    documents: retrievedChunks.map(c => c.content),
+    topN: 5
+});
+
+// Get reranked document indices
+const rerankedIndices = response.results.map(r => r.index);</code></pre>
+            
+            <h2>Two-Stage Retrieval Pattern</h2>
+            <pre><code>// 1. First stage: Fast vector search (retrieve many)
+const candidates = await vectorSearch(query, { topK: 25 });
+
+// 2. Second stage: Rerank (filter to best)
+const reranked = await cohere.rerank({
+    query,
+    documents: candidates.map(c => c.content),
+    topN: 5
+});
+
+// 3. Use top 5 reranked docs for LLM context
+const context = reranked.results
+    .map(r => candidates[r.index].content)
+    .join('\n\n');</code></pre>
+            
+            <h2>Key Benefits</h2>
+            <ul>
+                <li><strong>Better relevance:</strong> Cross-encoders understand query-document relationships better than embeddings</li>
+                <li><strong>Handles long documents:</strong> Auto-chunks documents exceeding context limit</li>
+                <li><strong>Multilingual:</strong> Works across 100+ languages</li>
+                <li><strong>JSON support:</strong> Can rerank semi-structured data</li>
+            </ul>
+            
+            <h2>Pricing</h2>
+            <p>Cohere charges per "rerank unit" based on the number of documents and their lengths. Check <a href="https://cohere.com/pricing" target="_blank">cohere.com/pricing</a> for current rates.</p>
+        </div>
+    </div>
+</body>
+</html>

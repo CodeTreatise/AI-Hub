@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rerankers and Two-Stage Retrieval</title>
+    <style>
+        body { max-width: 900px; margin: 0 auto; padding: 2rem; background-color: #0f0f1a; font-family: 'Segoe UI', system-ui, sans-serif; }
+        .reader-container { background: #1a1a2e; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .meta-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #30363d; }
+        .meta-header h1 { color: #e0e0e0; margin: 0 0 1rem 0; }
+        .meta-header a { color: #58a6ff; }
+        .content { color: #c9d1d9; line-height: 1.7; }
+        .content h2 { color: #e0e0e0; margin-top: 2rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+        .content h3 { color: #e0e0e0; margin-top: 1.5rem; }
+        .content ul { margin: 1rem 0; padding-left: 1.5rem; }
+        .content li { margin: 0.5rem 0; }
+        .content code { background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; }
+        .content pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+        .content pre code { padding: 0; background: none; }
+        .concept { background: #1a2a3a; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #58a6ff; }
+        .concept h4 { color: #58a6ff; margin: 0 0 0.75rem 0; }
+        .warning { background: #3a2a1a; border-left: 4px solid #d29922; padding: 1rem; border-radius: 4px; margin: 1rem 0; }
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+        .comparison > div { background: #0d1117; padding: 1rem; border-radius: 6px; }
+        @media (max-width: 600px) { .comparison { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="reader-container">
+        <div class="meta-header">
+            <h1>🎯 Rerankers and Two-Stage Retrieval</h1>
+            <p>Source: <a href="https://www.pinecone.io/learn/series/rag/rerankers/" target="_blank">pinecone.io/learn/series/rag/rerankers</a></p>
+        </div>
+        <div class="content">
+            <h2>The Problem: Recall vs Context Windows</h2>
+            <p>RAG has a fundamental tension:</p>
+            <ul>
+                <li><strong>Retrieval recall:</strong> You want to retrieve MANY documents to ensure you don't miss relevant info</li>
+                <li><strong>LLM context limits:</strong> You can only pass a LIMITED number of tokens to the LLM</li>
+                <li><strong>LLM recall degradation:</strong> Research shows LLMs lose information when context is stuffed (especially in the middle)</li>
+            </ul>
+            
+            <div class="warning">
+                <strong>⚠️ Context stuffing hurts performance!</strong><br>
+                Studies show LLMs struggle to recall information placed in the middle of long contexts. More isn't always better.
+            </div>
+            
+            <h2>The Solution: Two-Stage Retrieval</h2>
+            <div class="concept">
+                <h4>Stage 1: Fast Vector Search (High Recall)</h4>
+                <p>Retrieve many candidates quickly using embeddings (bi-encoder)</p>
+                <code>top_k = 25-100 documents</code>
+            </div>
+            
+            <div class="concept">
+                <h4>Stage 2: Reranking (High Precision)</h4>
+                <p>Use a reranker (cross-encoder) to score and filter to the best documents</p>
+                <code>top_n = 3-5 documents for LLM</code>
+            </div>
+            
+            <h2>Bi-Encoders vs Cross-Encoders</h2>
+            <div class="comparison">
+                <div>
+                    <h4 style="color: #58a6ff; margin-top: 0;">Bi-Encoder (Embeddings)</h4>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+                        <li>Encodes query and docs separately</li>
+                        <li>Compresses meaning into single vector</li>
+                        <li>⚡ Very fast (pre-computed)</li>
+                        <li>📉 Some information loss</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #a371f7; margin-top: 0;">Cross-Encoder (Reranker)</h4>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+                        <li>Processes query + doc together</li>
+                        <li>Full transformer attention</li>
+                        <li>🐢 Slower (runs at query time)</li>
+                        <li>📈 Much more accurate</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Why Rerankers Are More Accurate</h2>
+            <ul>
+                <li><strong>No compression:</strong> Raw text goes through transformer, not compressed vectors</li>
+                <li><strong>Query-aware:</strong> Scores relevance specific to THIS query, not generic similarity</li>
+                <li><strong>Cross-attention:</strong> Query and document tokens attend to each other directly</li>
+            </ul>
+            
+            <h2>Implementation Pattern</h2>
+            <pre><code>// Two-stage retrieval with reranking
+async function retrieveWithRerank(query: string) {
+    // Stage 1: Cast a wide net with vector search
+    const candidates = await vectorDB.search({
+        embedding: await embed(query),
+        topK: 25  // Get many candidates
+    });
+    
+    // Stage 2: Rerank to find the best
+    const reranked = await reranker.rerank({
+        query: query,
+        documents: candidates.map(c => c.text),
+        topN: 5  // Keep only the best
+    });
+    
+    // Return reordered documents
+    return reranked.map(r => candidates[r.index]);
+}</code></pre>
+            
+            <h2>Performance Impact</h2>
+            <p>In the Pinecone tutorial example:</p>
+            <ul>
+                <li>Vector search returned relevant docs at positions 0, 1, 2...</li>
+                <li>After reranking, docs from positions 14 and 23 moved to top 3</li>
+                <li>These "buried" docs contained the most relevant information</li>
+            </ul>
+            
+            <h2>When to Use Reranking</h2>
+            <ul>
+                <li>✅ Production RAG systems needing high accuracy</li>
+                <li>✅ When vector search returns "close but not perfect" results</li>
+                <li>✅ Complex queries where semantic nuance matters</li>
+                <li>❌ Not needed for simple keyword matching</li>
+                <li>❌ Overkill for small document sets (&lt;100 docs)</li>
+            </ul>
+            
+            <h2>Popular Reranking Options</h2>
+            <ul>
+                <li><strong>Cohere Rerank:</strong> API-based, easy to use, multilingual</li>
+                <li><strong>Pinecone Rerank:</strong> Built into Pinecone, uses BGE-reranker</li>
+                <li><strong>Cross-encoder models:</strong> Self-hosted (ms-marco-MiniLM, BGE-reranker)</li>
+                <li><strong>Jina Reranker:</strong> Open weights, good performance</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
